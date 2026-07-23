@@ -1,0 +1,41 @@
+{
+  "name": "justicecenterid",
+  "version": "0.1.0",
+  "private": true,
+  "description": "JusticeCenterID — an independent global knowledge center explaining justice systems, law enforcement, public safety, and their history.",
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "serve": "npx --yes serve@14 out --listen 4173 --no-clipboard",
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "verify:output": "node scripts/verify-output.mjs",
+    "validate": "npm run format:check && npm run lint && npm run typecheck && npm run test && npm run build && npm run verify:output"
+  },
+  "dependencies": {
+    "next": "16.2.11",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.61.1",
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^20.19.9",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "eslint": "^9.39.1",
+    "eslint-config-next": "16.2.11",
+    "prettier": "^3.9.6",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.10"
+  }
+}
