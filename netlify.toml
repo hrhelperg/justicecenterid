@@ -1,0 +1,74 @@
+#  JusticeCenterID — Netlify configuration
+#
+#  NOT DEPLOYED. This file is committed configuration only; no Netlify site has been
+#  created, linked, or deployed. See docs/deployment/netlify-strategy.md for the full
+#  strategy and the pre-connection checklist.
+#
+#  Deployment model: Next.js static export. `next build` writes `out/`, which Netlify
+#  publishes directly. @netlify/plugin-nextjs is intentionally NOT installed — it adapts
+#  Next.js into Netlify Functions, which conflicts with a fully exported build.
+
+[build]
+  command = "npm run build"
+  publish = "out"
+
+[build.environment]
+  NODE_VERSION = "22"
+  NPM_FLAGS = "--no-audit --no-fund"
+
+# Next has already produced final hashed, minified assets. Post-processing them adds
+# nothing and risks breaking asset integrity.
+[build.processing]
+  skip_processing = true
+
+# ---------------------------------------------------------------------------
+# Redirects
+# ---------------------------------------------------------------------------
+# Canonical host is the apex. Slug-change redirects are added here in the same commit
+# as the slug change, and are never removed.
+
+[[redirects]]
+  from = "https://www.justicecenterid.com/*"
+  to = "https://justicecenterid.com/:splat"
+  status = 301
+  force = true
+
+# ---------------------------------------------------------------------------
+# Headers
+# ---------------------------------------------------------------------------
+# `headers()` in next.config.ts is ignored under static export, so security headers are
+# declared here. A strict CSP is achievable because the site loads nothing from a third
+# party: no font CDN, no analytics, no embeds.
+#
+# Strict-Transport-Security is deliberately NOT set yet. It should be enabled only after
+# the domain is live and confirmed HTTPS-only.
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+    Cross-Origin-Opener-Policy = "same-origin"
+    Content-Security-Policy = "default-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; font-src 'self'; connect-src 'self'; object-src 'none'; upgrade-insecure-requests"
+
+[[headers]]
+  for = "/_next/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/feed.xml"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
