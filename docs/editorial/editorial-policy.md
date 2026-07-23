@@ -44,16 +44,16 @@ how they developed historically.
 commission → research → draft → editorial review → fact check → safety review → publish → re-review
 ```
 
-| Stage | `status` | `review` | Exit condition |
-| --- | --- | --- | --- |
-| Commission | `draft` | `unreviewed` | Scope, section, audience, and the questions the page must answer are written down. |
-| Research | `research` | `unreviewed` | Sources gathered and recorded as `SourceRecord`s with the scope each supports. |
-| Draft | `draft` | `unreviewed` | All required blocks present. |
-| Editorial review | `review` | `editorial-review` | Structure, neutrality, accessibility, and internal linking checked. |
-| Fact check | `review` | `fact-checked` | Every factual claim traced to a source at the claimed level of specificity. |
-| Safety review | `review` | `fact-checked` | `safetyReview: 'cleared'`. Mandatory for investigations, forensics, law-enforcement, and public-safety content. |
-| Publish | `published` | `fact-checked` | Passes the publication gate in the validation suite. |
-| Re-review | `published` | `needs-update` if stale | See §8. |
+| Stage            | `status`    | `review`                | Exit condition                                                                                                  |
+| ---------------- | ----------- | ----------------------- | --------------------------------------------------------------------------------------------------------------- |
+| Commission       | `draft`     | `unreviewed`            | Scope, section, audience, and the questions the page must answer are written down.                              |
+| Research         | `research`  | `unreviewed`            | Sources gathered and recorded as `SourceRecord`s with the scope each supports.                                  |
+| Draft            | `draft`     | `unreviewed`            | All required blocks present.                                                                                    |
+| Editorial review | `review`    | `editorial-review`      | Structure, neutrality, accessibility, and internal linking checked.                                             |
+| Fact check       | `review`    | `fact-checked`          | Every factual claim traced to a source at the claimed level of specificity.                                     |
+| Safety review    | `review`    | `fact-checked`          | `safetyReview: 'cleared'`. Mandatory for investigations, forensics, law-enforcement, and public-safety content. |
+| Publish          | `published` | `fact-checked`          | Passes the publication gate in the validation suite.                                                            |
+| Re-review        | `published` | `needs-update` if stale | See §8.                                                                                                         |
 
 A page cannot be published as `unreviewed`. This is enforced by validation, not by process
 discipline.
@@ -66,12 +66,12 @@ A page is commissioned by writing down, before research begins:
 
 1. The reader question it answers, in the reader's words.
 2. The section it belongs to and the entity type it is.
-3. What it will *not* cover, and where that content lives instead.
+3. What it will _not_ cover, and where that content lives instead.
 4. The jurisdictional scope of its claims.
 5. Whether it is safety-sensitive.
 
 Topics are not commissioned because of a current news event, a political controversy, or
-search volume alone. Search demand may inform *how* a question is phrased; it does not decide
+search volume alone. Search demand may inform _how_ a question is phrased; it does not decide
 whether a topic is worth explaining.
 
 ---
@@ -98,11 +98,11 @@ accountability. Deviating from that order requires a reason; omitting a block is
 
 A claim must be scoped to the jurisdictions the source actually covers.
 
-| Not acceptable | Acceptable |
-| --- | --- |
-| "Police must caution a suspect before questioning." | "In England and Wales, a suspect must be cautioned before questioning under PACE Code C." |
-| "Prosecutors are independent of government." | "The degree of prosecutorial independence from the executive varies substantially; in some systems the prosecution service is formally part of the ministry of justice, in others it is constitutionally separate." |
-| "Courts are adversarial." | "Common-law systems are typically adversarial and civil-law systems typically inquisitorial, though the distinction is a spectrum rather than a binary and most systems mix elements of both." |
+| Not acceptable                                      | Acceptable                                                                                                                                                                                                          |
+| --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| "Police must caution a suspect before questioning." | "In England and Wales, a suspect must be cautioned before questioning under PACE Code C."                                                                                                                           |
+| "Prosecutors are independent of government."        | "The degree of prosecutorial independence from the executive varies substantially; in some systems the prosecution service is formally part of the ministry of justice, in others it is constitutionally separate." |
+| "Courts are adversarial."                           | "Common-law systems are typically adversarial and civil-law systems typically inquisitorial, though the distinction is a spectrum rather than a binary and most systems mix elements of both."                      |
 
 Where we genuinely cannot scope a claim, we do not make it.
 

@@ -5,31 +5,31 @@
 Sources are ranked. Higher tiers are preferred; lower tiers may not substitute for higher
 tiers on the claim types reserved to them.
 
-| Tier | `SourceType` | Examples | What it can support |
-| --- | --- | --- | --- |
-| 1 | `legislation` | Statutes, codes, constitutions, statutory instruments, official consolidated texts | What the law says. The only acceptable support for a claim about legal rules. |
-| 2 | `government` | Ministry publications, official statistics agencies, published inspection and inquiry reports, official organisational charts | Institutional structure, official process, published official data. |
-| 3 | `court-record` | Judgments, official case reports, published court procedure rules | What a court decided, and court procedure. |
-| 4 | `international-organization` | UN, Council of Europe, OSCE, INTERPOL, UNODC, EU institutions, regional courts | Cross-national comparison, treaty obligations, international standards. |
-| 5 | `academic` | Peer-reviewed journals, university presses, systematic reviews | Comparative analysis, historical interpretation, methodological limits. |
-| 6 | `archive`, `museum` | National archives, university and museum collections, official institutional histories | Historical fact and provenance. |
-| 7 | `book` | Recognised reference works and scholarly monographs | Historical and comparative background. |
-| 8 | `institutional` | An institution's own website and published material | What an institution says about itself — always attributed as such. |
-| 9 | `journalism` | Established news organisations with editorial standards | Contemporary context and reporting of events **only**. Never the sole support for a structural, legal, or historical claim. |
-| — | `other` | Anything else | Requires an explicit note justifying its use. |
+| Tier | `SourceType`                 | Examples                                                                                                                      | What it can support                                                                                                         |
+| ---- | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| 1    | `legislation`                | Statutes, codes, constitutions, statutory instruments, official consolidated texts                                            | What the law says. The only acceptable support for a claim about legal rules.                                               |
+| 2    | `government`                 | Ministry publications, official statistics agencies, published inspection and inquiry reports, official organisational charts | Institutional structure, official process, published official data.                                                         |
+| 3    | `court-record`               | Judgments, official case reports, published court procedure rules                                                             | What a court decided, and court procedure.                                                                                  |
+| 4    | `international-organization` | UN, Council of Europe, OSCE, INTERPOL, UNODC, EU institutions, regional courts                                                | Cross-national comparison, treaty obligations, international standards.                                                     |
+| 5    | `academic`                   | Peer-reviewed journals, university presses, systematic reviews                                                                | Comparative analysis, historical interpretation, methodological limits.                                                     |
+| 6    | `archive`, `museum`          | National archives, university and museum collections, official institutional histories                                        | Historical fact and provenance.                                                                                             |
+| 7    | `book`                       | Recognised reference works and scholarly monographs                                                                           | Historical and comparative background.                                                                                      |
+| 8    | `institutional`              | An institution's own website and published material                                                                           | What an institution says about itself — always attributed as such.                                                          |
+| 9    | `journalism`                 | Established news organisations with editorial standards                                                                       | Contemporary context and reporting of events **only**. Never the sole support for a structural, legal, or historical claim. |
+| —    | `other`                      | Anything else                                                                                                                 | Requires an explicit note justifying its use.                                                                               |
 
 ## Claim-to-tier requirements
 
-| Claim type | Minimum acceptable support |
-| --- | --- |
-| What the law requires or permits | Tier 1. An institution's summary of the law is Tier 8 and does not suffice alone. |
-| How an institution is formally structured | Tier 1 or 2. |
-| What a court decided | Tier 3. |
-| Official statistics of any kind | Tier 2 or 4, with the collection date and the definition used. |
-| Cross-national comparison | Tier 4 or 5, or Tier 1/2 sources for each jurisdiction compared. |
-| Historical fact | Tier 1, 2, 3, 6, or 7. |
-| Institutional self-description | Tier 8, attributed in the text as the institution's own account. |
-| Contemporary events | Tier 9, with the outlet named in the text. |
+| Claim type                                                                                                                                                                  | Minimum acceptable support                                                                                             |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| What the law requires or permits                                                                                                                                            | Tier 1. An institution's summary of the law is Tier 8 and does not suffice alone.                                      |
+| How an institution is formally structured                                                                                                                                   | Tier 1 or 2.                                                                                                           |
+| What a court decided                                                                                                                                                        | Tier 3.                                                                                                                |
+| Official statistics of any kind                                                                                                                                             | Tier 2 or 4, with the collection date and the definition used.                                                         |
+| Cross-national comparison                                                                                                                                                   | Tier 4 or 5, or Tier 1/2 sources for each jurisdiction compared.                                                       |
+| Historical fact                                                                                                                                                             | Tier 1, 2, 3, 6, or 7.                                                                                                 |
+| Institutional self-description                                                                                                                                              | Tier 8, attributed in the text as the institution's own account.                                                       |
+| Contemporary events                                                                                                                                                         | Tier 9, with the outlet named in the text.                                                                             |
 | The nine restricted claim types (crime levels, corruption, effectiveness, public trust, officer mortality, staffing, political control, human-rights performance, salaries) | Tier 1, 2, or 4 **with a collection date**, and the measurement definition stated. Absent that, the claim is not made. |
 
 ## Source records

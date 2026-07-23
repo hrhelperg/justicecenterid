@@ -12,23 +12,23 @@ history.
 
 ## What counts as an error
 
-| Class | Examples | Handling |
-| --- | --- | --- |
-| **Factual error** | Wrong date, wrong institutional name, wrong legal provision, a claim the cited source does not support, a structure described as current that has changed. | Corrected and logged. Correction notice on the page. |
-| **Sourcing error** | A citation that does not exist, points to the wrong document, or has been misattributed. | Corrected and logged. Treated as severe — see below. |
-| **Scope error** | A claim stated more broadly than its sources support; one jurisdiction's rule presented as general. | Rescoped and logged. |
-| **Framing error** | Loss of neutrality; analysis presented as fact; an institution described only by its powers or only by its failures. | Rewritten and logged. |
-| **Omission** | A material qualification, limitation, or oversight mechanism left out such that the page misleads. | Added and logged. |
-| **Staleness** | Accurate when written, no longer accurate. | Updated; page carries a dated update note. Logged if the change alters meaning. |
-| **Presentation defect** | Typography, formatting, broken layout, dead internal link. | Fixed. Not logged. |
+| Class                   | Examples                                                                                                                                                   | Handling                                                                        |
+| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| **Factual error**       | Wrong date, wrong institutional name, wrong legal provision, a claim the cited source does not support, a structure described as current that has changed. | Corrected and logged. Correction notice on the page.                            |
+| **Sourcing error**      | A citation that does not exist, points to the wrong document, or has been misattributed.                                                                   | Corrected and logged. Treated as severe — see below.                            |
+| **Scope error**         | A claim stated more broadly than its sources support; one jurisdiction's rule presented as general.                                                        | Rescoped and logged.                                                            |
+| **Framing error**       | Loss of neutrality; analysis presented as fact; an institution described only by its powers or only by its failures.                                       | Rewritten and logged.                                                           |
+| **Omission**            | A material qualification, limitation, or oversight mechanism left out such that the page misleads.                                                         | Added and logged.                                                               |
+| **Staleness**           | Accurate when written, no longer accurate.                                                                                                                 | Updated; page carries a dated update note. Logged if the change alters meaning. |
+| **Presentation defect** | Typography, formatting, broken layout, dead internal link.                                                                                                 | Fixed. Not logged.                                                              |
 
 ## Severity and response time
 
-| Severity | Definition | Target |
-| --- | --- | --- |
-| **Critical** | The error could mislead a reader about their rights, about what the law requires, or about whether we are an official body; or a fabricated or misattributed citation. | Page set to `needs-update` or unpublished the same day the error is confirmed; corrected within 3 working days. |
-| **Substantive** | Changes the meaning of a claim but does not meet the critical threshold. | Corrected within 10 working days. |
-| **Minor** | Does not change meaning. | Corrected at the next scheduled review of the entity. |
+| Severity        | Definition                                                                                                                                                             | Target                                                                                                          |
+| --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| **Critical**    | The error could mislead a reader about their rights, about what the law requires, or about whether we are an official body; or a fabricated or misattributed citation. | Page set to `needs-update` or unpublished the same day the error is confirmed; corrected within 3 working days. |
+| **Substantive** | Changes the meaning of a claim but does not meet the critical threshold.                                                                                               | Corrected within 10 working days.                                                                               |
+| **Minor**       | Does not change meaning.                                                                                                                                               | Corrected at the next scheduled review of the entity.                                                           |
 
 A fabricated or misattributed citation is always critical, regardless of how minor the
 underlying claim is, because it undermines every other citation on the site.
@@ -57,10 +57,10 @@ The reporting channel is published on `/contact` and `/corrections-policy`.
 2. **Assess** against the source records — reopen the cited sources and check what they
    actually support.
 3. **Decide** one of four outcomes:
-   - *Correction* — we were wrong. Fix, log, and notify the reporter.
-   - *Clarification* — we were not wrong but were unclear or under-scoped. Rewrite and log.
-   - *No change* — the claim is supported. Explain to the reporter which source supports it.
-   - *Under investigation* — we cannot yet establish who is right. The claim is marked as
+   - _Correction_ — we were wrong. Fix, log, and notify the reporter.
+   - _Clarification_ — we were not wrong but were unclear or under-scoped. Rewrite and log.
+   - _No change_ — the claim is supported. Explain to the reporter which source supports it.
+   - _Under investigation_ — we cannot yet establish who is right. The claim is marked as
      uncertain on the page while the question is open.
 4. **Record** the outcome in the corrections log.
 

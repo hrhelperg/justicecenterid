@@ -129,7 +129,7 @@ Validation: `id` unique; `title` and `publisher` non-empty; if `url` is present 
 absolute `https`; a source used to support a time-sensitive claim must have `publishedOn`;
 any source with a `url` must have `verifiedOn`.
 
-The `note` field is doing real work: it records *what the source actually supports*, which is
+The `note` field is doing real work: it records _what the source actually supports_, which is
 what stops a source being reused for a claim it does not cover.
 
 ### `EntityBase`
@@ -185,19 +185,23 @@ skipped.
 
 ```ts
 interface Guide extends EntityBase {
-  question: string;                  // the reader's question, used as H1 where natural
-  definition: Block[];               // required — plain-language answer, first on the page
-  whyItExists: Block[];              // required
-  howItWorks: Block[];               // required
-  misconceptions: Misconception[];   // required, min 2
-  variation: Block[];                // required — jurisdictional variation
-  rightsAndAccountability: Block[];  // required
-  furtherReading?: Block[];          // optional
-  keyTerms?: string[];               // glossary slugs defined inline on this page
+  question: string; // the reader's question, used as H1 where natural
+  definition: Block[]; // required — plain-language answer, first on the page
+  whyItExists: Block[]; // required
+  howItWorks: Block[]; // required
+  misconceptions: Misconception[]; // required, min 2
+  variation: Block[]; // required — jurisdictional variation
+  rightsAndAccountability: Block[]; // required
+  furtherReading?: Block[]; // optional
+  keyTerms?: string[]; // glossary slugs defined inline on this page
   readingTimeMinutes: number;
 }
 
-interface Misconception { claim: string; reality: string; note?: string }
+interface Misconception {
+  claim: string;
+  reality: string;
+  note?: string;
+}
 ```
 
 The required field set is a direct encoding of the brief's per-page requirements: definition,
@@ -274,7 +278,7 @@ This is enforced by `tests/content/countries.test.ts`, which fails if a country 
 
 There is deliberately no field for salary, staffing level, mortality, attrition, or entry
 requirements. Those are country-specific, time-sensitive, and the most common site of
-fabrication. When they are added, they will be added on the *country module*, where a
+fabrication. When they are added, they will be added on the _country module_, where a
 jurisdiction and a dated source are mandatory — not on the general profession record.
 
 ### `InstitutionType`
@@ -309,7 +313,7 @@ jurisdiction and a dated source are mandatory — not on the general profession 
 ```
 
 Every timeline entry requires at least one source whose URL has been verified. An entry
-without one is not published. The timeline is explicitly a *selected* set of milestones, not
+without one is not published. The timeline is explicitly a _selected_ set of milestones, not
 a chronology, and the page says so.
 
 ### `ImageRecord`
@@ -335,25 +339,25 @@ already satisfy the policy.
 
 Implemented in `tests/content/`. Each rule maps to a named test.
 
-| # | Rule | Suite |
-| --- | --- | --- |
-| 1 | Slugs are unique within an entity family and globally within routable entities. | `slugs` |
-| 2 | Every entity has a non-empty `title` and `summary`; `summary` ≤ 320 characters. | `entities` |
-| 3 | Every entity has a valid `entityType` and `section`. | `entities` |
-| 4 | Every `related` slug resolves to an existing entity. | `references` |
-| 5 | Every `sources` id resolves to a `SourceRecord`. | `references` |
-| 6 | Source records are well formed; `https` URLs; `verifiedOn` present when `url` is. | `sources` |
-| 7 | Published entities have `review !== 'unreviewed'` and a `reviewedOn` date. | `review` |
-| 8 | `temporalScope !== 'current'` requires `historicalPeriod`. | `temporal` |
-| 9 | Published entities have ≥ 1 source and ≥ 2 `related` entries. | `publication-gate` |
-| 10 | Guides have non-empty `definition`, `whyItExists`, `howItWorks`, `variation`, `rightsAndAccountability`, and ≥ 2 misconceptions. | `guides` |
-| 11 | Every internal link in every `Block` resolves to a route in the registry. | `links` |
-| 12 | No non-`published` entity appears in the route registry or sitemap. | `publication-gate` |
-| 13 | No two routes produce the same canonical URL. | `routes` |
-| 14 | Country content does not exceed the country's `coverage` state. | `countries` |
-| 15 | Entities in safety-sensitive sections are not published with `safetyReview: 'pending'`. | `safety` |
-| 16 | Timeline entries have ≥ 1 source with a `verifiedOn` date. | `timeline` |
-| 17 | Every route in the registry has a corresponding file in the exported output, and vice versa. | `scripts/verify-output.mjs` |
+| #   | Rule                                                                                                                             | Suite                       |
+| --- | -------------------------------------------------------------------------------------------------------------------------------- | --------------------------- |
+| 1   | Slugs are unique within an entity family and globally within routable entities.                                                  | `slugs`                     |
+| 2   | Every entity has a non-empty `title` and `summary`; `summary` ≤ 320 characters.                                                  | `entities`                  |
+| 3   | Every entity has a valid `entityType` and `section`.                                                                             | `entities`                  |
+| 4   | Every `related` slug resolves to an existing entity.                                                                             | `references`                |
+| 5   | Every `sources` id resolves to a `SourceRecord`.                                                                                 | `references`                |
+| 6   | Source records are well formed; `https` URLs; `verifiedOn` present when `url` is.                                                | `sources`                   |
+| 7   | Published entities have `review !== 'unreviewed'` and a `reviewedOn` date.                                                       | `review`                    |
+| 8   | `temporalScope !== 'current'` requires `historicalPeriod`.                                                                       | `temporal`                  |
+| 9   | Published entities have ≥ 1 source and ≥ 2 `related` entries.                                                                    | `publication-gate`          |
+| 10  | Guides have non-empty `definition`, `whyItExists`, `howItWorks`, `variation`, `rightsAndAccountability`, and ≥ 2 misconceptions. | `guides`                    |
+| 11  | Every internal link in every `Block` resolves to a route in the registry.                                                        | `links`                     |
+| 12  | No non-`published` entity appears in the route registry or sitemap.                                                              | `publication-gate`          |
+| 13  | No two routes produce the same canonical URL.                                                                                    | `routes`                    |
+| 14  | Country content does not exceed the country's `coverage` state.                                                                  | `countries`                 |
+| 15  | Entities in safety-sensitive sections are not published with `safetyReview: 'pending'`.                                          | `safety`                    |
+| 16  | Timeline entries have ≥ 1 source with a `verifiedOn` date.                                                                       | `timeline`                  |
+| 17  | Every route in the registry has a corresponding file in the exported output, and vice versa.                                     | `scripts/verify-output.mjs` |
 
 ---
 
@@ -362,12 +366,12 @@ Implemented in `tests/content/`. Each rule maps to a named test.
 The brief invited a better-normalised model where justified. Four additions, each with its
 reason:
 
-| Addition | Reason |
-| --- | --- |
-| `TemporalScope` | Makes "historical is never presented as current" machine-checkable rather than dependent on an author remembering to add a period. |
-| `CoverageState` + the country content ceiling | Turns "represent absence honestly" into an enforced rule instead of an aspiration. |
-| `ClaimType` on paragraphs | Moves fact/analysis separation from page level to paragraph level, which is where the confusion actually occurs. |
-| `PresenceState` | Represents "absent", "historical", and — critically — "same name, different function", which a boolean cannot. |
+| Addition                                      | Reason                                                                                                                             |
+| --------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `TemporalScope`                               | Makes "historical is never presented as current" machine-checkable rather than dependent on an author remembering to add a period. |
+| `CoverageState` + the country content ceiling | Turns "represent absence honestly" into an enforced rule instead of an aspiration.                                                 |
+| `ClaimType` on paragraphs                     | Moves fact/analysis separation from page level to paragraph level, which is where the confusion actually occurs.                   |
+| `PresenceState`                               | Represents "absent", "historical", and — critically — "same name, different function", which a boolean cannot.                     |
 
 One subtraction: no `author` field. In this phase content is not individually bylined,
 because a byline implies a named person taking responsibility and there is no editorial team

@@ -5,13 +5,13 @@
 These strings are authoritative. They are defined once in `src/lib/site.ts` and must not be
 re-typed by hand in components or content.
 
-| Field | Value |
-| --- | --- |
-| Brand name | `JusticeCenterID` |
-| Domain | `https://justicecenterid.com` |
-| Repository | `hrhelperg/justicecenterid` |
-| Short descriptor | `Understanding Justice Worldwide.` |
-| Positioning line | `An independent global knowledge center explaining justice systems, law enforcement, public safety, and their history.` |
+| Field             | Value                                                                                                                                                                                                     |
+| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Brand name        | `JusticeCenterID`                                                                                                                                                                                         |
+| Domain            | `https://justicecenterid.com`                                                                                                                                                                             |
+| Repository        | `hrhelperg/justicecenterid`                                                                                                                                                                               |
+| Short descriptor  | `Understanding Justice Worldwide.`                                                                                                                                                                        |
+| Positioning line  | `An independent global knowledge center explaining justice systems, law enforcement, public safety, and their history.`                                                                                   |
 | Mission statement | `JusticeCenterID explains how justice systems, law-enforcement institutions, courts, investigations, and public-safety organizations work, why they exist, and how they have evolved throughout history.` |
 
 ### Spelling rules
@@ -21,14 +21,14 @@ re-typed by hand in components or content.
   `Justice Center`.
 - American spelling `Center` is used in the brand. Body copy uses consistent international
   English elsewhere; where a spelling differs between variants, prefer the form used by the
-  institution being described when quoting its name (e.g. the UK *Ministry of Defence*, the
-  Irish *An Garda Síochána*).
+  institution being described when quoting its name (e.g. the UK _Ministry of Defence_, the
+  Irish _An Garda Síochána_).
 - The domain is always `justicecenterid.com`, lowercase.
 
 ### The "ID" suffix
 
 `ID` is treated as an unexpanded part of the brand. It may be allowed to suggest
-*identification*, *understanding*, and *structured knowledge*, but the site never spells out
+_identification_, _understanding_, and _structured knowledge_, but the site never spells out
 an artificial expansion such as "Justice Center Identification" or "Justice Center
 International Directory". No page, meta description, or structured-data field expands it.
 
@@ -45,14 +45,14 @@ International Directory". No page, meta description, or structured-data field ex
 **Independent educational reference platform.** Adjacent categories we are deliberately not
 in:
 
-| Adjacent category | Why we are not in it |
-| --- | --- |
-| Government / institutional portal | We have no official status and must never appear to. |
-| Legal-advice or lawyer-marketplace | We describe systems, never a reader's situation. |
-| Legal-research database (case law, statutes) | We point to primary sources; we do not host or index them. |
-| News / true crime | We explain structures, not incidents. |
-| Advocacy / reform campaigning | We describe reform debates without taking a side. |
-| Encyclopedia (general purpose) | We are narrow and comparative by design, with an explicit editorial and review process. |
+| Adjacent category                            | Why we are not in it                                                                    |
+| -------------------------------------------- | --------------------------------------------------------------------------------------- |
+| Government / institutional portal            | We have no official status and must never appear to.                                    |
+| Legal-advice or lawyer-marketplace           | We describe systems, never a reader's situation.                                        |
+| Legal-research database (case law, statutes) | We point to primary sources; we do not host or index them.                              |
+| News / true crime                            | We explain structures, not incidents.                                                   |
+| Advocacy / reform campaigning                | We describe reform debates without taking a side.                                       |
+| Encyclopedia (general purpose)               | We are narrow and comparative by design, with an explicit editorial and review process. |
 
 ## Differentiators
 
@@ -76,21 +76,21 @@ in:
 - That we are independent.
 - That we are educational.
 - That we cite our sources and show our review state.
-- That our coverage is international *in intent and architecture* — coverage breadth is
+- That our coverage is international _in intent and architecture_ — coverage breadth is
   stated as a fact only where it exists.
 
 ## Claims we may not make
 
 Prohibited until independently verifiable, with the reason:
 
-| Prohibited claim | Reason |
-| --- | --- |
-| "Covering 200 countries" / any coverage count not derived from published pages | Fabricated scale. Counts must be computed from the content registry, never written by hand. |
-| "Trusted by millions", "leading global authority", "world's largest" | Unverifiable audience/authority claims. |
-| "Revolutionising justice", "redefining law enforcement", "the ultimate platform" | Empty marketing language; also implies operational influence we do not have. |
-| "Official", "certified", "accredited", "in partnership with \<agency>" | False affiliation, unless a specific documented partnership exists and is named. |
-| "Expert legal guidance", "know your rights in your case" | Implies individualised legal advice. |
-| Any superlative about a country's institutions ("most effective police force") | Requires measurement methodology we do not have. |
+| Prohibited claim                                                                 | Reason                                                                                      |
+| -------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| "Covering 200 countries" / any coverage count not derived from published pages   | Fabricated scale. Counts must be computed from the content registry, never written by hand. |
+| "Trusted by millions", "leading global authority", "world's largest"             | Unverifiable audience/authority claims.                                                     |
+| "Revolutionising justice", "redefining law enforcement", "the ultimate platform" | Empty marketing language; also implies operational influence we do not have.                |
+| "Official", "certified", "accredited", "in partnership with \<agency>"           | False affiliation, unless a specific documented partnership exists and is named.            |
+| "Expert legal guidance", "know your rights in your case"                         | Implies individualised legal advice.                                                        |
+| Any superlative about a country's institutions ("most effective police force")   | Requires measurement methodology we do not have.                                            |
 
 Any number displayed on the site — sections covered, guides published, sources cited — is
 computed from the content registry at build time. Hand-written statistics are a content
@@ -113,9 +113,9 @@ international audience for whom English may be a second language.
 ## Naming of institutions
 
 Use the institution's own name, in its own language, with an English gloss on first use:
-*An Garda Síochána* (the national police service of Ireland). Do not translate an
-institution into the nearest foreign equivalent — do not call a *Gendarmerie* "the state
-police" or a *Staatsanwaltschaft* "the district attorney's office". Equivalence claims are
+_An Garda Síochána_ (the national police service of Ireland). Do not translate an
+institution into the nearest foreign equivalent — do not call a _Gendarmerie_ "the state
+police" or a _Staatsanwaltschaft_ "the district attorney's office". Equivalence claims are
 themselves content and require sourcing.
 
 See also: [Vision](./vision.md), [Principles](./principles.md),

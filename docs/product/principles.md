@@ -51,7 +51,7 @@ The default frame is comparative. A claim is scoped to the jurisdictions it actu
 Forbids: "the police can…", "a suspect has the right to…" without a jurisdiction; using
 US or UK procedure as the unmarked default.
 
-Enforced by: every guide includes a required *jurisdictional variation* section; validation
+Enforced by: every guide includes a required _jurisdictional variation_ section; validation
 fails a guide missing it.
 
 ---
@@ -126,7 +126,7 @@ works, in the same register and at the same depth as institutional powers.
 Forbids: relegating rights to a closing paragraph; describing a power without its
 limitations.
 
-Enforced by: guide template requires a *rights and accountability* section.
+Enforced by: guide template requires a _rights and accountability_ section.
 
 ---
 
@@ -159,7 +159,7 @@ Enforced by: content-safety rules; editorial review.
 
 ### 13. No partisan political framing
 
-See principle 3. Stated separately because it also governs *selection*: which topics we
+See principle 3. Stated separately because it also governs _selection_: which topics we
 cover, which examples we choose, and which countries we use as illustration.
 
 Forbids: an example set that consistently flatters or indicts one political tradition;

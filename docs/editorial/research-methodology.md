@@ -1,8 +1,8 @@
 # Research methodology
 
 How a JusticeCenterID page gets from a question to a publishable draft. The rules for
-*ranking* sources are in [source-policy.md](./source-policy.md); this document covers the
-*process*.
+_ranking_ sources are in [source-policy.md](./source-policy.md); this document covers the
+_process_.
 
 ---
 
@@ -23,7 +23,7 @@ Before searching, write down:
 ## 2. Establish the general shape before the specifics
 
 Comparative work fails when one jurisdiction's arrangement becomes the mental template.
-Counter it by establishing the *range* of arrangements first:
+Counter it by establishing the _range_ of arrangements first:
 
 1. Identify the function being described (e.g. "deciding whether to bring a criminal charge").
 2. Find at least two systems that perform that function through structurally different
@@ -106,7 +106,7 @@ where to work.
 
 - Never claim two institutions are equivalent without a source that makes the comparison. An
   equivalence claim is a claim.
-- Compare *functions*, then note which institution performs them, rather than starting from
+- Compare _functions_, then note which institution performs them, rather than starting from
   institution names.
 - State what is not comparable. Statistics collected under different definitions are not
   comparable, and saying so is more useful than a caveated table.
@@ -119,8 +119,8 @@ A separate pass from editorial review, performed against the source records rath
 against the author's memory of them:
 
 1. Every sentence containing a checkable claim is matched to a source id.
-2. Each source is reopened and confirmed to support the claim *at the level of specificity
-   stated*.
+2. Each source is reopened and confirmed to support the claim _at the level of specificity
+   stated_.
 3. Numbers, dates, names, and institutional titles are checked character by character.
 4. Every restricted-claim-type statement is confirmed to have a dated Tier 1/2/4 source with
    a stated measurement definition.

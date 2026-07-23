@@ -27,7 +27,7 @@ use, not only linked.
 history, and public administration; the teachers preparing their materials.
 
 **What they need.** Structure they can reuse — clear taxonomies, comparative framing, and
-above all *citable primary sources*. A teacher will not assign a page that does not show
+above all _citable primary sources_. A teacher will not assign a page that does not show
 where its claims came from.
 
 **What breaks for them.** Unsourced assertions; secondary sources presented as primary; no
@@ -43,7 +43,7 @@ policy researchers; comparative-law researchers doing an initial survey.
 
 **What they need.** Fast orientation in an unfamiliar system, correct institutional names,
 and a reliable jumping-off point to primary material. They need to know what our coverage
-does *not* include as much as what it does.
+does _not_ include as much as what it does.
 
 **What breaks for them.** False equivalence between institutions across systems; stale
 structural descriptions presented as current; hidden coverage gaps.
@@ -65,7 +65,7 @@ and risks of the work.
 requirements presented as universal; either romanticising or denigrating the work.
 
 **Design consequences.** Profession pages describe responsibilities, decision authority,
-constraints, oversight, and typical training *structures* — never invented pay, mortality,
+constraints, oversight, and typical training _structures_ — never invented pay, mortality,
 staffing, or entry statistics. Country-specific requirements appear only under a researched
 country entity.
 
@@ -93,7 +93,7 @@ Being explicit about this prevents scope drift and shapes what we refuse to publ
   detection or investigation, defeat a security or forensic control, conduct surveillance on
   another person, obtain restricted capability, or interfere with a proceeding, a witness, or
   an officer. This constrains how investigative and forensic topics are written: we explain
-  *what a discipline establishes and what its limits are*, not how to perform or defeat it.
+  _what a discipline establishes and what its limits are_, not how to perform or defeat it.
 - **Partisan campaigners.** We will not be a citation source for political messaging, and we
   write so that we are equally unusable by all of them.
 

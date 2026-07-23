@@ -42,20 +42,20 @@ In order of preference:
 
 Every image is an `ImageRecord` and cannot render without one:
 
-| Field | Required | Notes |
-| --- | --- | --- |
-| `id` | yes | Stable identifier. |
-| `title` | yes | The work's own title where it has one. |
-| `sourceUrl` | yes | The page establishing the licence, not a hotlink to the file. |
-| `creator` | yes | `Unknown` is acceptable only for genuinely anonymous archival material. |
-| `license` | yes | Specific: `CC BY-SA 4.0`, `Public domain (US, pre-1930)`, `OGL v3`. Never "free to use". |
-| `attribution` | yes | The exact attribution string to display. |
-| `originalPublishedOn` | where known | |
-| `depictedDate` | where known | Distinct from publication date, and often the more important one. |
-| `jurisdiction` | where relevant | |
-| `alt` | yes | See below. |
-| `caption` | yes | See below. |
-| `verification` | yes | `verified` required to render. |
+| Field                 | Required       | Notes                                                                                    |
+| --------------------- | -------------- | ---------------------------------------------------------------------------------------- |
+| `id`                  | yes            | Stable identifier.                                                                       |
+| `title`               | yes            | The work's own title where it has one.                                                   |
+| `sourceUrl`           | yes            | The page establishing the licence, not a hotlink to the file.                            |
+| `creator`             | yes            | `Unknown` is acceptable only for genuinely anonymous archival material.                  |
+| `license`             | yes            | Specific: `CC BY-SA 4.0`, `Public domain (US, pre-1930)`, `OGL v3`. Never "free to use". |
+| `attribution`         | yes            | The exact attribution string to display.                                                 |
+| `originalPublishedOn` | where known    |                                                                                          |
+| `depictedDate`        | where known    | Distinct from publication date, and often the more important one.                        |
+| `jurisdiction`        | where relevant |                                                                                          |
+| `alt`                 | yes            | See below.                                                                               |
+| `caption`             | yes            | See below.                                                                               |
+| `verification`        | yes            | `verified` required to render.                                                           |
 
 `verification: 'verified'` means a person opened `sourceUrl`, confirmed the licence, confirmed
 the creator, and confirmed the file is the one described. It is set by that person, never by

@@ -2,17 +2,17 @@
 
 ## Stack
 
-| Layer | Choice | Version at foundation | Why |
-| --- | --- | --- | --- |
-| Framework | Next.js, App Router | 16.2.x | Server Components by default, file-system routing, first-class metadata/sitemap/robots APIs, static export support. |
-| Language | TypeScript, `strict: true` | 5.x | The content model is the product's safety mechanism; it must be enforced at compile time. |
-| UI runtime | React | 19.2.x | Bundled with Next 16. |
-| Styling | Tailwind CSS v4 (CSS-first `@theme`) | 4.x | Design tokens live in CSS, are consumed by both utilities and raw CSS, and require no JS config file. |
-| Linting | ESLint 9 flat config + `eslint-config-next` | 9.x / 16.2.x | Matches the framework's own recommended config. |
-| Formatting | Prettier | 3.x | Single formatter, checked in CI script. |
-| Unit / validation tests | Vitest | 4.x | Runs the content-validation suite in Node, no browser needed. |
-| Browser tests | Playwright | 1.61.x | Smoke, keyboard, and layout checks against the built static output. |
-| Package manager | npm | 11.x | No prior lockfile existed in the repository; npm is the default. |
+| Layer                   | Choice                                      | Version at foundation | Why                                                                                                                 |
+| ----------------------- | ------------------------------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| Framework               | Next.js, App Router                         | 16.2.x                | Server Components by default, file-system routing, first-class metadata/sitemap/robots APIs, static export support. |
+| Language                | TypeScript, `strict: true`                  | 5.x                   | The content model is the product's safety mechanism; it must be enforced at compile time.                           |
+| UI runtime              | React                                       | 19.2.x                | Bundled with Next 16.                                                                                               |
+| Styling                 | Tailwind CSS v4 (CSS-first `@theme`)        | 4.x                   | Design tokens live in CSS, are consumed by both utilities and raw CSS, and require no JS config file.               |
+| Linting                 | ESLint 9 flat config + `eslint-config-next` | 9.x / 16.2.x          | Matches the framework's own recommended config.                                                                     |
+| Formatting              | Prettier                                    | 3.x                   | Single formatter, checked in CI script.                                                                             |
+| Unit / validation tests | Vitest                                      | 4.x                   | Runs the content-validation suite in Node, no browser needed.                                                       |
+| Browser tests           | Playwright                                  | 1.61.x                | Smoke, keyboard, and layout checks against the built static output.                                                 |
+| Package manager         | npm                                         | 11.x                  | No prior lockfile existed in the repository; npm is the default.                                                    |
 
 ### Deliberate omissions
 
@@ -35,7 +35,7 @@ structural. Enforcing them over MDX would mean parsing prose to discover whether
 sections exist; enforcing them over typed records is a compile error plus a unit test.
 
 MDX becomes justified when we need long-form narrative essays with inline custom components
-(likely in the History section). At that point it will be introduced *alongside* the typed
+(likely in the History section). At that point it will be introduced _alongside_ the typed
 model, with frontmatter validated by the same schema, not as a replacement for it.
 
 ## Rendering and deployment model
@@ -62,15 +62,15 @@ or per region. Under those conditions static export gives us:
 
 Documented rather than discovered later:
 
-| Limitation | Impact here | Mitigation |
-| --- | --- | --- |
-| `next/image` optimisation is unavailable; `images.unoptimized` must be `true`. | None in this phase — no raster content images ship. | Images arrive with the image-policy work. At that point we either pre-generate responsive derivatives at build time, or move to the Netlify Next.js runtime. Decision deferred with a documented trigger. |
-| No Route Handlers other than static `GET`. | None. `/feed.xml` and `/llms.txt` are static `GET` handlers with `dynamic = 'force-static'`. | — |
-| No `middleware.ts`. | None. No redirects, rewrites, or personalisation are needed. | Netlify `[[redirects]]` covers any future need at the CDN edge. |
-| No ISR / on-demand revalidation. | None. Content changes ship via a commit and a rebuild. | — |
-| No Draft Mode / preview. | Editors cannot preview unpublished content on the production URL. | Netlify deploy previews on the pull request cover this; unpublished entities are also excluded from the build. |
-| `headers()` / `redirects()` in `next.config.ts` are ignored. | Security headers must be declared in `netlify.toml` instead. | Done — see [netlify-strategy.md](../deployment/netlify-strategy.md). |
-| `notFound()` renders a static `404.html`. | Acceptable. | Netlify serves `404.html` for unmatched paths automatically. |
+| Limitation                                                                     | Impact here                                                                                  | Mitigation                                                                                                                                                                                                |
+| ------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `next/image` optimisation is unavailable; `images.unoptimized` must be `true`. | None in this phase — no raster content images ship.                                          | Images arrive with the image-policy work. At that point we either pre-generate responsive derivatives at build time, or move to the Netlify Next.js runtime. Decision deferred with a documented trigger. |
+| No Route Handlers other than static `GET`.                                     | None. `/feed.xml` and `/llms.txt` are static `GET` handlers with `dynamic = 'force-static'`. | —                                                                                                                                                                                                         |
+| No `middleware.ts`.                                                            | None. No redirects, rewrites, or personalisation are needed.                                 | Netlify `[[redirects]]` covers any future need at the CDN edge.                                                                                                                                           |
+| No ISR / on-demand revalidation.                                               | None. Content changes ship via a commit and a rebuild.                                       | —                                                                                                                                                                                                         |
+| No Draft Mode / preview.                                                       | Editors cannot preview unpublished content on the production URL.                            | Netlify deploy previews on the pull request cover this; unpublished entities are also excluded from the build.                                                                                            |
+| `headers()` / `redirects()` in `next.config.ts` are ignored.                   | Security headers must be declared in `netlify.toml` instead.                                 | Done — see [netlify-strategy.md](../deployment/netlify-strategy.md).                                                                                                                                      |
+| `notFound()` renders a static `404.html`.                                      | Acceptable.                                                                                  | Netlify serves `404.html` for unmatched paths automatically.                                                                                                                                              |
 
 **Reversal trigger.** If we later need request-time behaviour — image optimisation at scale,
 localisation negotiation, search that cannot be served from a prebuilt index, or on-demand
@@ -88,11 +88,12 @@ src/
   app/                         App Router: routes, layout, metadata, sitemap, robots
     (routes are documented in url-strategy.md)
   components/
-    layout/                    SiteHeader, SiteFooter, SkipLink, MobileNav, SiteShell
+    layout/                    SiteShell, SiteHeader, SiteFooter, SiteNav, SkipLink, Wordmark
     ui/                        Container, PageIntro, SectionHeading, Prose, Card,
                                Breadcrumbs, Callout, LinkButton, Badge, DefinitionList
     content/                   BlockRenderer, SourceList, ReviewMeta, RelatedTopics,
                                CoverageNotice, MisconceptionList
+    pages/                     SectionPage, GuidePage, ContentPage (shared page shells)
     seo/                       JsonLd
   content/                     Typed content records — the editorial data layer
     types.ts                   Content model (single source of truth)
@@ -134,9 +135,9 @@ is unavoidable.
 
 At the end of this phase the complete client-component inventory is:
 
-| Component | Reason |
-| --- | --- |
-| `components/layout/MobileNav.tsx` | Disclosure state for the mobile navigation panel, focus management, and `Escape` handling. |
+| Component                       | Reason                                                                                                                                                                              |
+| ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `components/layout/SiteNav.tsx` | Two browser-dependent behaviours: `usePathname` for active-navigation state and `aria-current`, and disclosure state, focus management, and `Escape` handling for the mobile panel. |
 
 Everything else — including all navigation on desktop, all content rendering, breadcrumbs,
 source lists, and structured data — is server-rendered with zero client JavaScript.
@@ -165,18 +166,18 @@ unset value.
 npm run validate   →  format:check → lint → typecheck → test → build → verify:output
 ```
 
-| Script | Command | Purpose |
-| --- | --- | --- |
-| `dev` | `next dev` | Local development. |
-| `build` | `next build` | Static export to `out/`. |
-| `start` | `npx serve out` (documented) | Serve the built artefact locally. |
-| `lint` | `eslint` | ESLint 9 flat config. |
-| `typecheck` | `tsc --noEmit` | Strict type check. |
-| `test` | `vitest run` | Content validation + unit tests. |
-| `test:e2e` | `playwright test` | Browser smoke tests against the built output. |
-| `format` / `format:check` | `prettier` | Formatting. |
-| `verify:output` | `node scripts/verify-output.mjs` | Asserts the exported `out/` tree contains every registered route, plus `sitemap.xml`, `robots.txt`, `llms.txt`, `feed.xml`, and `404.html`. |
-| `validate` | chained | Everything above, in order. |
+| Script                    | Command                          | Purpose                                                                                                                                     |
+| ------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| `dev`                     | `next dev`                       | Local development.                                                                                                                          |
+| `build`                   | `next build`                     | Static export to `out/`.                                                                                                                    |
+| `start`                   | `npx serve out` (documented)     | Serve the built artefact locally.                                                                                                           |
+| `lint`                    | `eslint`                         | ESLint 9 flat config.                                                                                                                       |
+| `typecheck`               | `tsc --noEmit`                   | Strict type check.                                                                                                                          |
+| `test`                    | `vitest run`                     | Content validation + unit tests.                                                                                                            |
+| `test:e2e`                | `playwright test`                | Browser smoke tests against the built output.                                                                                               |
+| `format` / `format:check` | `prettier`                       | Formatting.                                                                                                                                 |
+| `verify:output`           | `node scripts/verify-output.mjs` | Asserts the exported `out/` tree contains every registered route, plus `sitemap.xml`, `robots.txt`, `llms.txt`, `feed.xml`, and `404.html`. |
+| `validate`                | chained                          | Everything above, in order.                                                                                                                 |
 
 `verify:output` exists because static export failures are silent: a route that fails to
 prerender simply produces no file. Asserting the exported tree against the route registry
