@@ -52,7 +52,7 @@ implementation.
 | --------------------------- | --------- | ---------------- | --------- | ------------------------- |
 | `--color-ink`               | `#12181f` | 17.85            | 16.92     | Body text, headings       |
 | `--color-ink-muted`         | `#4a5563` | 7.58             | 7.18      | Secondary text, captions  |
-| `--color-ink-subtle`        | `#5b6675` | 5.83             | 5.53      | Metadata, labels          |
+| `--color-ink-subtle`        | `#5b6675` | 5.83             | 5.52      | Metadata, labels          |
 | `--color-ink-inverse`       | `#ffffff` | 14.99 on inverse | —         | Text on `surface-inverse` |
 | `--color-ink-inverse-muted` | `#c7d3e0` | 9.87 on inverse  | —         | Secondary text on inverse |
 

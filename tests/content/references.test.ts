@@ -85,4 +85,51 @@ describe('source records are well formed', () => {
     const orphans = SOURCES.filter((source) => !used.has(source.id)).map((s) => s.id);
     expect(orphans, 'unused sources should be removed or cited').toEqual([]);
   });
+
+  /*
+   * Block-level citations.
+   *
+   * `Block` lets a paragraph carry its own `sources`, and 28 paragraphs across the guides
+   * use it. Nothing validated them. The renderer ignores the field, so a paragraph could
+   * cite an id resolving to nothing, or an id absent from the guide's own source list — in
+   * which case the reader would never see it, because the rendered SourceList is built from
+   * the entity-level array.
+   *
+   * Both invariants hold today. These tests keep them holding instead of leaving it to luck.
+   */
+  const BLOCK_CITATIONS: (readonly [string, string])[] = ALL_GUIDES.flatMap((guide) =>
+    [
+      ...guide.definition,
+      ...guide.whyItExists,
+      ...guide.howItWorks,
+      ...guide.variation,
+      ...guide.rightsAndAccountability,
+      ...(guide.furtherReading ?? []),
+    ].flatMap((block) =>
+      block.kind === 'paragraph' && block.sources
+        ? block.sources.map((id) => [guide.slug, id] as const)
+        : [],
+    ),
+  );
+
+  it('the guides actually use block-level citations', () => {
+    // Guards the two tests below against silently becoming vacuous.
+    expect(BLOCK_CITATIONS.length).toBeGreaterThan(0);
+  });
+
+  it.each(BLOCK_CITATIONS)('block citation %s -> %s resolves to a real source', (_slug, id) => {
+    expect(getSource(id), `no source record with id "${id}"`).toBeDefined();
+  });
+
+  it.each(BLOCK_CITATIONS)(
+    'block citation %s -> %s is also in the guide source list, so a reader can see it',
+    (slug, id) => {
+      const guide = getGuide(slug);
+      expect(
+        guide?.sources.includes(id),
+        `guide "${slug}" cites "${id}" on a paragraph but omits it from its own sources ` +
+          `array, so it never reaches the rendered source list`,
+      ).toBe(true);
+    },
+  );
 });

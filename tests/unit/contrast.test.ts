@@ -45,6 +45,10 @@ const TEXT_PAIRS: [string, string, string][] = [
   ['ink-muted', 'surface', 'secondary text on the page background'],
   ['ink-muted', 'surface-raised', 'secondary text on raised surfaces'],
   ['ink-subtle', 'surface', 'metadata on the page background'],
+  // docs/design/design-system.md publishes a ratio for this pair too. It was not covered
+  // here, so the document's claim that the table "cannot drift from the implementation"
+  // did not hold for it. Covered now, so the claim is true.
+  ['ink-subtle', 'surface-raised', 'metadata on raised surfaces'],
   ['brand', 'surface', 'wordmark and eyebrows'],
   ['accent', 'surface', 'links'],
   ['accent', 'surface-raised', 'links on raised surfaces'],

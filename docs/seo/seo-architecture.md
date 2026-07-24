@@ -51,10 +51,13 @@ Duplicate canonicals across two routes are a test failure.
 - `og:type` — `website` for home and hubs, `article` for guides.
 - `og:title`, `og:description`, `og:url`, `og:site_name`, `og:locale` (`en`).
 - `article:published_time` and `article:modified_time` from the entity's dates on guides.
-- `twitter:card` — `summary_large_image`.
-- Open Graph imagery: a build-time generated card carrying the page title, the section, and
-  the wordmark on a neutral field. It contains no seal, crest, badge, flag, or emblem, for the
-  same reason the favicon does not.
+- `twitter:card` — `summary`.
+- **Open Graph imagery does not exist yet.** An earlier draft of this document described a
+  build-time generated card; none was ever implemented, and the site shipped
+  `summary_large_image` with no image, which degrades to an empty card. The card type is now
+  `summary`, which is honest about what is available. When an OG image is added it must
+  contain no seal, crest, badge, flag, or emblem, for the same reason the favicon does not,
+  and `twitter:card` moves to `summary_large_image` in the same commit — not before it.
 
 ### Robots directives
 
