@@ -1,0 +1,87 @@
+# Jurisdiction model
+
+Implementation: `src/content/types.ts` (`JurisdictionRecord`, `JurisdictionLevel`,
+`FunctionScope`) and `src/content/jurisdictions.ts` (registry + `validateJurisdiction`).
+
+## What this model is for
+
+To state, per territory and per institutional function, whether that territory has its own
+arrangement, shares one, exercises a delegated one, sits under a national one, has none at all,
+or has simply not been researched.
+
+## What it is deliberately not
+
+Not a geopolitical database, and not a universal ontology of political subdivision. A record
+exists only where it does institutional work. There is no record for each of France's 101
+departments or its 34,000+ communes.
+
+## Levels
+
+`international` · `supranational` · `country` · `federal` · `constituent-country` · `state` ·
+`province` · `region` · `department` · `county` · `municipality` · `local` · `territory` ·
+`special`
+
+A flat vocabulary, sized to the systems we can foresee needing. Adding a level later is cheap.
+
+`alsoExercisesLevels` handles a body that exercises more than one tier's competences —
+required by Martinique and Guyane, which are _collectivités territoriales uniques_.
+
+## Function scopes
+
+The heart of the model. Recorded separately for `legalSystemScope`, `policingScope`,
+`courtScope`, `prosecutionScope` and `correctionalScope`.
+
+| Scope       | Meaning                                                                      |
+| ----------- | ---------------------------------------------------------------------------- |
+| `own`       | This jurisdiction has its own distinct arrangement.                          |
+| `national`  | The function is organised nationally; this level is not where it is decided. |
+| `shared`    | Shared with, or exercised jointly with, another jurisdiction.                |
+| `delegated` | Exercised here under authority delegated from a parent.                      |
+| `none`      | The function does not exist at this level at all.                            |
+| `unknown`   | Not researched. **Never** a substitute for `none`.                           |
+
+The `none` / `unknown` distinction is the model's most important property. `none` is a
+researched finding; `unknown` is an admission. Collapsing them would let an unresearched
+territory silently inherit its parent's arrangement.
+
+## Tier records vs unit records
+
+France's tiers are legally uniform, so one record per tier states the arrangement accurately.
+A federal system is not uniform and will need one record per unit — each US state has its own
+courts, prosecution and corrections.
+
+**The choice is a research output, not a schema property.** The model supports both without
+change, and the decision must be made per country from sources, not assumed.
+
+## Validation rules
+
+Implemented as the pure function `validateJurisdiction(record, all)`, so invalid combinations
+can be exercised with synthetic records rather than only asserted against a registry that
+happens to be correct today.
+
+| #   | Rule                                                                                     |
+| --- | ---------------------------------------------------------------------------------------- |
+| 1   | Slug is lowercase kebab-case; ids unique globally; slugs unique per country.             |
+| 2   | `country`, `supranational` and `international` must have no parent.                      |
+| 3   | Every other level must have a parent.                                                    |
+| 4   | The parent must resolve, must not be the record itself, and must share its country code. |
+| 5   | The parent chain must not contain a cycle.                                               |
+| 6   | `temporalScope !== 'current'` requires `historicalPeriod`; `current` must not carry one. |
+| 7   | `alsoExercisesLevels` must not repeat the record's own level.                            |
+| 8   | Coverage `in-research`, `partial` or `established` requires at least one source.         |
+| 9   | Coverage `none` or `planned` requires **every** functional scope to be `unknown`.        |
+| 10  | A published record requires at least one source.                                         |
+
+## Scenarios the model represents
+
+| Scenario                           | How                                                                                                            |
+| ---------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| Institution absent in a country    | `PresenceState: 'absent'` on the country profile; `FunctionScope: 'none'` on the jurisdiction.                 |
+| Name exists, function differs      | `PresenceState: 'different-function'`.                                                                         |
+| Existed historically, not now      | `temporalScope: 'historical'` + required `historicalPeriod`.                                                   |
+| Function split across agencies     | Multiple institution records; scope recorded per jurisdiction rather than per agency.                          |
+| Disputed classification            | `notes` + a `disputed` claim type on the prose that describes it.                                              |
+| Incomplete research                | `coverage: 'in-research'` with `unknown` scopes.                                                               |
+| Source supporting one narrow claim | `SourceRecord.note` states the scope; tests check citations resolve.                                           |
+| Federal / regional variation       | One record per unit, `own` scopes where they differ.                                                           |
+| Reform effective from a date       | **Partially.** Recorded in source `note` and a reader-facing callout; no structured field yet. See finding F3. |
