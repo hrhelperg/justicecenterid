@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { ContentPage } from '@/components/pages/ContentPage';
+import { REVIEW_LABELS } from '@/components/content/ReviewMeta';
 import { Badge } from '@/components/ui/Badge';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { PUBLISHED_GLOSSARY } from '@/content/glossary';
+import { getSources } from '@/content/sources';
 import { definedTermSetSchema, jsonLdGraph } from '@/lib/jsonld';
 import { buildMetadata } from '@/lib/metadata';
 
@@ -39,7 +40,8 @@ export default function GlossaryPage() {
             justice system that is not your own.
           </p>
           <p className="mt-4 text-ink-muted">
-            {PUBLISHED_GLOSSARY.length} terms, each linked to the sources that support it.
+            {PUBLISHED_GLOSSARY.length} terms. Each entry lists the sources that support it and
+            its current review state.
           </p>
         </div>
 
@@ -70,14 +72,35 @@ export default function GlossaryPage() {
                       Often confused with: {term.falseFriends.join(', ')}
                     </p>
                   )}
+                  {/*
+                    Both the badge and the source list are derived from the term record.
+                    They were previously hardcoded to "Fact-checked" with a generic link to
+                    /sources, which made the page's own sourcing claim untrue: it asserted
+                    per-term sourcing while showing none, and would have asserted
+                    "Fact-checked" over a term that was not.
+                  */}
                   <p className="flex flex-wrap items-center gap-2">
-                    <Badge tone="affirm">Fact-checked</Badge>
-                    <span className="text-sm text-ink-subtle">
-                      Sourced — see{' '}
-                      <Link href="/sources" className="link-inline">
-                        research and sources
-                      </Link>
-                    </span>
+                    <Badge tone={REVIEW_LABELS[term.review].tone}>
+                      {REVIEW_LABELS[term.review].label}
+                    </Badge>
+                    {getSources(term.sources).length > 0 && (
+                      <span className="text-sm text-ink-subtle">
+                        Sources:{' '}
+                        {getSources(term.sources).map((source, index) => (
+                          <span key={source.id}>
+                            {index > 0 && ', '}
+                            {source.url ? (
+                              <a href={source.url} className="link-inline" rel="noopener">
+                                {source.title}
+                              </a>
+                            ) : (
+                              source.title
+                            )}
+                            <span className="text-ink-subtle"> ({source.publisher})</span>
+                          </span>
+                        ))}
+                      </span>
+                    )}
                   </p>
                 </dd>
               </div>
