@@ -344,6 +344,147 @@ export const SOURCES: readonly SourceRecord[] = [
     jurisdiction: 'DE',
     note: "Strasbourg, 15 December 2024, updated 24 September 2025. Data supplied by national prison administrations to the University of Lausanne research team via a questionnaire agreed by the Council for Penological Co-operation. Reference date for prison population is 31 January 2024; country population figures are as at 1 January 2024. Supports, for Germany: Table 3 — total inmates including pre-trial detainees 59,413, prison population rate 71.2 per 100,000, adjusted figures 55,916 and 67.0; Table 16 — total capacity of penal institutions 72,258 and prison density 82.2 inmates per 100 places. The report states its aim is comparable data but warns that 'any comparisons of the levels (in rates, ratios and percentages) shown by the countries according to different indicators are always problematic'. It does NOT support any Land-level figure, nor any cross-country ranking.",
   },
+
+  /* ------------------------------------------------------------------------ */
+  /* United States (multilevel country pilot) — all verified 2026-07-24       */
+  /* ------------------------------------------------------------------------ */
+  /*
+   * justice.gov, fbi.gov and several other official hosts return HTTP 403 to an automated
+   * request while serving the documents to a browser — the same bot-wall pattern documented
+   * for legifrance.gouv.fr in the France pilot. Where a primary text was needed from such a
+   * host, it was read from the United States Code on the Legal Information Institute (Cornell
+   * Law School), which reproduces the enacted statutory text verbatim. Each record states its
+   * verification method and, where the text is hosted by a secondary publisher, says so.
+   */
+  {
+    id: 'us-const-amend-10',
+    type: 'legislation',
+    title: 'Tenth Amendment to the Constitution of the United States',
+    publisher:
+      'Legal Information Institute, Cornell Law School (reproducing the enacted constitutional text)',
+    url: 'https://www.law.cornell.edu/constitution/tenth_amendment',
+    publishedOn: '1791-12-15',
+    verifiedOn: '2026-07-24',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'US',
+    note: "Verbatim text: 'The powers not delegated to the United States by the Constitution, nor prohibited by it to the states, are reserved to the states respectively, or to the people.' Supports the reserved-powers structure of US federalism — that the states, not the federal government, hold residual authority. Cornell LII reproduces the enacted text; the constitutional text itself is authoritative. Does NOT support any claim about how a particular power is allocated in practice.",
+  },
+  {
+    id: 'us-courts-comparing',
+    type: 'government',
+    title: 'Comparing Federal & State Courts',
+    publisher: 'Administrative Office of the U.S. Courts (uscourts.gov)',
+    url: 'https://www.uscourts.gov/about-federal-courts/court-role-and-structure/comparing-federal-state-courts',
+    verifiedOn: '2026-07-24',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'US',
+    note: "The federal judiciary's own account. Supports: that the federal and state governments each have their own separate court systems; the federal structure of U.S. district courts, U.S. courts of appeals and the Supreme Court created under Article III; that each state establishes its own courts through its constitution and laws and that state systems vary; and the broad division of case types (federal courts hear cases on the Constitution, federal law, disputes between states, admiralty, bankruptcy, habeas; state courts hear most criminal, contract, tort, family and probate matters). Supports court STRUCTURE only; not caseload, effectiveness or the competence thresholds within any state.",
+  },
+  {
+    id: 'us-usmarshals-duties',
+    type: 'government',
+    title: 'What We Do — Duties and Operations, U.S. Marshals Service',
+    publisher: 'United States Marshals Service (usmarshals.gov)',
+    url: 'https://www.usmarshals.gov/what-we-do',
+    verifiedOn: '2026-07-24',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'US',
+    note: "The agency's own description. Supports that the U.S. Marshals Service is the enforcement arm of the federal courts, and that its duties include protecting the federal judiciary, apprehending federal fugitives (with the broadest arrest authority among federal law-enforcement agencies), housing and transporting federal prisoners, managing seized assets and operating the Witness Security Program; and that it ASSISTS state and local agencies with fugitives rather than commanding them. Supports the federal judicial-enforcement role only; not operational detail.",
+  },
+  {
+    id: 'us-attorneys-28usc541-547',
+    type: 'legislation',
+    title: '28 U.S. Code §§ 541 and 547 (United States attorneys: appointment and duties)',
+    publisher:
+      'Legal Information Institute, Cornell Law School (reproducing the United States Code)',
+    url: 'https://www.law.cornell.edu/uscode/text/28/541',
+    verifiedOn: '2026-07-24',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'US',
+    note: "Verbatim: § 541 — 'The President shall appoint, by and with the advice and consent of the Senate, a United States attorney for each judicial district', for a four-year term, subject to removal by the President. § 547 — each U.S. attorney shall 'prosecute for all offenses against the United States' within the district. Supports that federal prosecutors are Presidentially appointed and Senate-confirmed, one per federal judicial district, prosecuting FEDERAL offences only. Does NOT support any claim about state or local prosecutors, who are separately organised.",
+  },
+  {
+    id: 'us-fbi-28usc533',
+    type: 'legislation',
+    title: '28 U.S. Code § 533 (Investigative and other officials; appointment)',
+    publisher:
+      'Legal Information Institute, Cornell Law School (reproducing the United States Code)',
+    url: 'https://www.law.cornell.edu/uscode/text/28/533',
+    verifiedOn: '2026-07-24',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'US',
+    note: "Verbatim: the Attorney General may appoint officials '(1) to detect and prosecute crimes against the United States'. The statutory basis for federal investigative authority (the FBI is established under this and related provisions). Supports that federal investigative authority is tied to crimes AGAINST THE UNITED STATES — i.e. federal offences — and preserves the investigative authority assigned by law to other agencies. Does NOT support any claim of general federal jurisdiction over all crime, nor any operational detail.",
+  },
+  {
+    id: 'us-bjs-csllea-2018',
+    type: 'government',
+    title: 'Census of State and Local Law Enforcement Agencies, 2018 — Statistical Tables',
+    publisher: 'Bureau of Justice Statistics, U.S. Department of Justice',
+    url: 'https://bjs.ojp.gov/library/publications/census-state-and-local-law-enforcement-agencies-2018-statistical-tables',
+    publishedOn: '2018',
+    verifiedOn: '2026-07-24',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'US',
+    note: "Reference date June 2018. Supports that 17,541 general-purpose state and local law-enforcement agencies performed law-enforcement functions in the United States, of which about 67% were local (municipal) police departments, 17% sheriffs' offices, and 15% primary state, tribal, special-jurisdiction agencies, constables and marshals, together employing about 1,214,000 full-time personnel. Supports the FRAGMENTATION of US policing across thousands of separately governed agencies. Does NOT support any per-state figure or any claim about a specific agency.",
+  },
+  {
+    id: 'us-bjs-agency-characteristics',
+    type: 'government',
+    title: 'Law Enforcement — Agency Characteristics',
+    publisher: 'Bureau of Justice Statistics, U.S. Department of Justice',
+    url: 'https://bjs.ojp.gov/topics/law-enforcement/agency-characteristics',
+    verifiedOn: '2026-07-24',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'US',
+    note: "Supports that 'the head of a sheriff\'s office is a sheriff who is usually an elected official', that sheriffs' offices have countywide jurisdiction, and that they are generally empowered by the state to serve counties and independent cities. Supports the elected character of the sheriff's office and its county-level jurisdiction. Does NOT support any claim that every county has a sheriff, or that sheriffs perform identical functions nationally.",
+  },
+  {
+    id: 'us-bjs-prosecutors',
+    type: 'government',
+    title: 'Prosecution (National Census of State Court Prosecutors)',
+    publisher: 'Bureau of Justice Statistics, U.S. Department of Justice',
+    url: 'https://bjs.ojp.gov/topics/courts/prosecution',
+    verifiedOn: '2026-07-24',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'US',
+    note: "Supports that the chief state-court prosecutor is 'also referred to as the district attorney, county attorney, commonwealth attorney, or state's attorney', represents the state in criminal cases, serves in the executive branch of state government, is 'answerable to the public as an elected or appointed public official', and is afforded broad charging discretion. Supports that local prosecution titles and selection methods VARY and are not uniformly 'district attorney'. Does NOT support a figure for how many are elected versus appointed.",
+  },
+  {
+    id: 'us-bia-pl280',
+    type: 'government',
+    title: 'What is Public Law 280 and where does it apply? (Frequently Asked Questions)',
+    publisher: 'Bureau of Indian Affairs, U.S. Department of the Interior',
+    url: 'https://www.bia.gov/faqs/what-public-law-280-and-where-does-it-apply',
+    publishedOn: '1953',
+    verifiedOn: '2026-07-24',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'US',
+    note: "Supports: that Congress enacted Public Law 83-280 (1953) to grant certain states criminal jurisdiction over American Indians on reservations and to allow certain civil litigation to be handled by state courts; the mandatory states (Alaska with the Metlakatla exception, California, Minnesota except Red Lake, Nebraska, Oregon except Warm Springs, and Wisconsin); that the law did NOT grant states regulatory power over tribes, trust lands, tribal hunting/fishing rights, basic tribal governmental functions, or the power to tax; and that subsequent acts, court decisions and retrocessions have strengthened tribes' jurisdiction. Supports the STRUCTURE of tribal/state/federal jurisdiction and that tribal jurisdiction was not terminated. Does NOT support any claim about a specific named tribe's institutions.",
+  },
+  {
+    id: 'us-dc-home-rule',
+    type: 'government',
+    title: 'D.C. Home Rule',
+    publisher: 'Council of the District of Columbia (dccouncil.gov)',
+    url: 'https://dccouncil.gov/dc-home-rule/',
+    publishedOn: '1973',
+    verifiedOn: '2026-07-24',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'US',
+    note: "Supports: that the District of Columbia Home Rule Act of 1973 established an elected mayor and council (first elected in 1974); that Congress reviews all legislation passed by the Council before it can become law and retains authority over the District's budget; and that the District is not a state and has no voting representation in Congress. Supports DC's status as a non-state jurisdiction under congressional plenary authority. Does NOT support any claim about DC's specific court, police or prosecution arrangements, which are distinctive and unresearched here.",
+  },
+  {
+    id: 'us-bjs-prisoners-2023',
+    type: 'government',
+    title: 'Prisoners in 2023 — Statistical Tables',
+    publisher: 'Bureau of Justice Statistics, U.S. Department of Justice',
+    url: 'https://bjs.ojp.gov/library/publications/prisoners-2023-statistical-tables',
+    publishedOn: '2025-09-30',
+    verifiedOn: '2026-07-24',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'US',
+    note: 'Reference date 31 December 2023 (yearend); published September 2025; 98th in a series begun in 1926. Supports: the US prison population under the jurisdiction of state and federal correctional authorities was 1,254,200 at yearend 2023, up 2% from 1,230,100 in 2022; persons sentenced to more than one year were 1,210,300 (96%); those under Federal Bureau of Prisons jurisdiction sentenced to more than one year were 143,300 (down 2% from 146,100). This is a PRISON count (state and federal correctional authorities); it does NOT include local jail populations, which BJS counts in a separate Jail Inmates series. It aggregates 50 separately administered state systems plus the federal system and describes none individually. Not a rate; supports no cross-jurisdiction comparison.',
+  },
 ];
 
 const SOURCE_INDEX = new Map(SOURCES.map((source) => [source.id, source]));
