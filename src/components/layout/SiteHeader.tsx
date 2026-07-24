@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Container } from '@/components/ui/Container';
+import { PRIMARY_NAV } from '@/lib/navigation';
 import { SiteNav } from './SiteNav';
 import { Wordmark } from './Wordmark';
 
@@ -15,7 +16,12 @@ export function SiteHeader() {
           >
             <Wordmark />
           </Link>
-          <SiteNav />
+          {/*
+            PRIMARY_NAV is resolved here, in a server component, and handed to the client
+            island as a prop. If SiteNav imported it directly it would pull
+            lib/navigation → content/sections into the client bundle.
+          */}
+          <SiteNav items={PRIMARY_NAV} />
         </div>
       </Container>
     </header>

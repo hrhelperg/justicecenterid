@@ -71,8 +71,9 @@ export const FOOTER_NAV: readonly NavGroup[] = [
 /**
  * A nav item is active when the current path is the item or sits beneath it.
  * `/justice` is active on `/justice/what-is-justice`; `/` is only active on `/`.
+ *
+ * The implementation lives in `./active-path` so the site's one client component can import
+ * it without dragging this module — and therefore `content/sections` — into the client
+ * bundle. Re-exported here for server-side consumers.
  */
-export function isActivePath(currentPath: string, href: string): boolean {
-  if (href === '/') return currentPath === '/';
-  return currentPath === href || currentPath.startsWith(`${href}/`);
-}
+export { isActivePath } from './active-path';
