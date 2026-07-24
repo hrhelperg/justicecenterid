@@ -11,11 +11,14 @@ import { PUBLISHED_PROFESSIONS } from '@/content/professions';
 import { SECTIONS } from '@/content/sections';
 import { SITE_STATS } from '@/lib/content';
 import { jsonLdGraph, webPageSchema } from '@/lib/jsonld';
-import { buildMetadata } from '@/lib/metadata';
+import { HOME_TITLE, buildMetadata } from '@/lib/metadata';
 import { SITE } from '@/lib/site';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Understanding Justice Worldwide',
+  // Absolute: the root layout's title.template does not apply to the root segment's own
+  // page, so without this the home page ships a title with no brand in it at all.
+  title: HOME_TITLE,
+  absoluteTitle: true,
   description: SITE.positioning,
   path: '/',
 });

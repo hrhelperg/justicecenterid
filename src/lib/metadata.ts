@@ -1,9 +1,24 @@
 import type { Metadata } from 'next';
 import { SITE, absoluteUrl } from './site';
 
+/**
+ * The home page title. Shared by `ROOT_METADATA.title.default` and `app/page.tsx` so the
+ * two cannot drift.
+ */
+export const HOME_TITLE = `${SITE.name} — Understanding Justice Worldwide`;
+
 export interface PageMetadataInput {
   /** Page title WITHOUT the brand suffix — the root layout template adds it. */
   title: string;
+  /**
+   * Emit `title` verbatim instead of letting the root template append the brand.
+   *
+   * Required for the home page. Next.js does not apply a layout's `title.template` to the
+   * page of the *same* segment, so the root template never reaches `app/page.tsx`. Before
+   * this flag the home page shipped `<title>Understanding Justice Worldwide</title>` — the
+   * single most important title on the site, with no brand in it at all.
+   */
+  absoluteTitle?: boolean;
   /** The entity summary. One string, one meaning: the reader sees the same sentence. */
   description: string;
   /** Site-relative canonical path. */
@@ -22,6 +37,7 @@ export interface PageMetadataInput {
  */
 export function buildMetadata({
   title,
+  absoluteTitle = false,
   description,
   path,
   type = 'website',
@@ -30,14 +46,15 @@ export function buildMetadata({
   section,
 }: PageMetadataInput): Metadata {
   const url = absoluteUrl(path);
+  const socialTitle = absoluteTitle ? title : `${title} — ${SITE.name}`;
 
   return {
-    title,
+    title: absoluteTitle ? { absolute: title } : title,
     description,
     alternates: { canonical: url },
     openGraph: {
       type,
-      title: `${title} — ${SITE.name}`,
+      title: socialTitle,
       description,
       url,
       siteName: SITE.name,
@@ -51,8 +68,11 @@ export function buildMetadata({
         : {}),
     },
     twitter: {
-      card: 'summary_large_image',
-      title: `${title} — ${SITE.name}`,
+      // 'summary', not 'summary_large_image': no Open Graph image is generated yet, and a
+      // large-image card that resolves to no image degrades to an empty card. Upgrade this
+      // together with the OG image, not before it.
+      card: 'summary',
+      title: socialTitle,
       description,
     },
   };
@@ -65,7 +85,7 @@ export function buildMetadata({
 export const ROOT_METADATA: Metadata = {
   metadataBase: new URL(SITE.origin),
   title: {
-    default: `${SITE.name} — Understanding Justice Worldwide`,
+    default: HOME_TITLE,
     template: `%s — ${SITE.name}`,
   },
   description: SITE.positioning,
@@ -84,15 +104,15 @@ export const ROOT_METADATA: Metadata = {
   },
   openGraph: {
     type: 'website',
-    title: `${SITE.name} — Understanding Justice Worldwide`,
+    title: HOME_TITLE,
     description: SITE.positioning,
     url: SITE.origin,
     siteName: SITE.name,
     locale: SITE.locale,
   },
   twitter: {
-    card: 'summary_large_image',
-    title: `${SITE.name} — Understanding Justice Worldwide`,
+    card: 'summary',
+    title: HOME_TITLE,
     description: SITE.positioning,
   },
   formatDetection: { telephone: false, address: false, email: false },
