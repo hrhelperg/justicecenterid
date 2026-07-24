@@ -1,9 +1,10 @@
 import { COUNTRY_MODULES, countryModulePath, countryPath } from '../country-modules';
 import type { CountryDossier, CountryModuleContent } from '../types';
 import { FRANCE } from './france';
+import { GERMANY } from './germany';
 
 /** Every country dossier. A country appears here only once it has been researched. */
-export const COUNTRY_DOSSIERS: readonly CountryDossier[] = [FRANCE];
+export const COUNTRY_DOSSIERS: readonly CountryDossier[] = [FRANCE, GERMANY];
 
 export const PUBLISHED_DOSSIERS: readonly CountryDossier[] = COUNTRY_DOSSIERS.filter(
   (d) => d.status === 'published',

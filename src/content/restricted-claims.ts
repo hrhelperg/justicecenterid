@@ -32,6 +32,13 @@ export interface RestrictedPattern {
 
 export const RESTRICTED_PATTERNS: readonly RestrictedPattern[] = [
   {
+    category: 'detention-capacity',
+    pattern:
+      /\bovercrowd\w*\b|\bprisons?\s+are\s+(?:full|at capacity)\b|\b(?:rising|falling|record)\s+prison\s+population\b|\bbeyond\s+capacity\b/i,
+    reason:
+      'A claim about prison population, capacity or overcrowding requires an official or intergovernmental statistic, its reference date, and the counting definition used.',
+  },
+  {
     category: 'compensation',
     pattern:
       /\b(?:well|poorly|badly)[- ]paid|\bsalar(?:y|ies)\s+(?:of|are|is)\b|\bearns?\s+(?:around|about|roughly)\b/i,

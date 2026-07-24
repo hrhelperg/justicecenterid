@@ -5,6 +5,7 @@ import { PUBLISHED_INSTITUTION_TYPES } from '@/content/institutions';
 import { PUBLISHED_PROFESSIONS } from '@/content/professions';
 import { COUNTRY_DOSSIERS } from '@/content/dossiers';
 import { JURISDICTIONS } from '@/content/jurisdictions';
+import { SCHEDULED_CHANGES } from '@/content/scheduled-changes';
 import { SOURCES, getSource } from '@/content/sources';
 import { TIMELINE } from '@/content/timeline';
 
@@ -28,6 +29,7 @@ const ALL_SOURCE_REFERENCES = [
     ...d.modules.flatMap((m) => (m.restrictedClaims ?? []).flatMap((c) => c.sources)),
   ]),
   ...JURISDICTIONS.flatMap((j) => j.sources),
+  ...SCHEDULED_CHANGES.flatMap((c) => c.sources),
 ];
 
 describe('cross-references resolve', () => {

@@ -57,7 +57,7 @@ Mitigations:
 
 ## Scaling
 
-12 modules × ~200 countries ≈ 2,400 potential routes. Three things keep that honest:
+12 modules x ~200 countries is ~2,400 potential routes. Two dossiers now exist — France (7 routes) and Germany (8) — and 11 of their 24 candidate modules are deferred, which is the mechanism working rather than a shortfall. Three things keep that honest:
 
 1. Routes come only from researched, published modules.
 2. `verify-output.mjs` imports the same registry, so the exported site and the sitemap are

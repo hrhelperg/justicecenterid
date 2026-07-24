@@ -34,14 +34,35 @@ import {
  * that state. The only country "identity" is its name in a heading.
  */
 
-function IndependenceNotice() {
+/*
+ * The country name is a PROP, not a literal.
+ *
+ * This notice hardcoded "a French public body" from the France pilot, so every Germany page
+ * shipped claiming independence from the wrong state. No test caught it — they checked that a
+ * disclosure was present, not what it said. A disclosure that names the wrong country is worse
+ * than none, because it reads as carelessness on exactly the point where the platform asks to
+ * be trusted.
+ */
+/**
+ * How to say "not a <country> public body" for a given dossier. Derived from the dossier so a
+ * new country cannot inherit the previous one's demonym.
+ */
+const DEMONYMS: Record<string, string> = {
+  FR: 'a French public body',
+  DE: 'a German public body',
+};
+
+function independentOfDemonym(dossier: CountryDossier): string {
+  return DEMONYMS[dossier.countryCode] ?? `a public body of ${dossier.name}`;
+}
+
+function IndependenceNotice({ demonym }: { demonym: string }) {
   return (
     <Callout variant="note" title="An independent explanation, not an official one">
-      JusticeCenterID is an independent educational publisher. It is not a French public body
-      and has no connection to any institution described on this page. These pages explain
-      general institutional structure and are not legal advice; for a specific legal matter,
-      consult a qualified professional in the relevant jurisdiction or the responsible official
-      authority.
+      JusticeCenterID is an independent educational publisher. It is not {demonym} and has no
+      connection to any institution described on this page. These pages explain general
+      institutional structure and are not legal advice; for a specific legal matter, consult a
+      qualified professional in the relevant jurisdiction or the responsible official authority.
     </Callout>
   );
 }
@@ -201,7 +222,7 @@ export function CountryHub({ dossier }: { dossier: CountryDossier }) {
       />
       <Container width="wide">
         <div className="mt-8 max-w-measure">
-          <IndependenceNotice />
+          <IndependenceNotice demonym={independentOfDemonym(dossier)} />
         </div>
 
         {dossier.factsVerifiedOn && (
@@ -226,7 +247,20 @@ export function CountryHub({ dossier }: { dossier: CountryDossier }) {
             arrangement for a function, whether the function is organised nationally, or whether
             we have simply not researched it.
           </p>
-          <div className="mt-6 overflow-x-auto">
+          {/*
+            A scrollable region must be reachable by keyboard (WCAG 2.2 SC 2.1.1). When the
+            table is wider than the viewport this container scrolls, and without tabIndex a
+            keyboard user cannot reach the columns that are off-screen. role="region" plus a
+            label means it is also announced rather than being an anonymous scroll box.
+            WCAG 1.4.10 explicitly permits two-dimensional scrolling for data tables, so the
+            table keeps its minimum width instead of collapsing into unreadable columns.
+          */}
+          <div
+            className="mt-6 overflow-x-auto"
+            tabIndex={0}
+            role="region"
+            aria-label={`Functional scope of each modelled ${dossier.name} jurisdiction`}
+          >
             <table className="w-full min-w-[46rem] border-collapse text-sm">
               <caption className="sr-only">
                 Functional scope of each modelled French jurisdiction
@@ -331,7 +365,7 @@ export function CountryModulePage({
       />
       <Container width="measure">
         <div className="mt-8">
-          <IndependenceNotice />
+          <IndependenceNotice demonym={independentOfDemonym(dossier)} />
         </div>
 
         {content.factsVerifiedOn && (

@@ -248,6 +248,102 @@ export const SOURCES: readonly SourceRecord[] = [
     jurisdiction: 'FR',
     note: "Supports: the definition of the parquet / ministère public; the 'magistrature debout' description and the siège/parquet distinction; the hierarchy from procureur général to procureur de la République; that parquet magistrates act 'sous l'autorité du ministre de la Justice' and receive 'des instructions générales du ministre de la Justice mais en aucun cas dans les dossiers judiciaires'; that they do not benefit from the guarantee of inamovibilité; and the prosecutor's direction of investigation and discretion over case outcomes. An official self-description of the formal rule. It does NOT establish that the rule is observed in practice, and cannot settle the contested question of prosecutorial independence in either direction.",
   },
+
+  /* ------------------------------------------------------------------------ */
+  /* Germany (federal country pilot) — all verified 2026-07-24                */
+  /* ------------------------------------------------------------------------ */
+  /*
+   * Translation status is recorded explicitly on each record. Two different situations
+   * appear here and they are not equivalent:
+   *   - the Basic Law English text is a named academic translation produced with the
+   *     Bundestag Language Service, offered under conditions of use;
+   *   - the StPO and GVG English texts are official BMJV translations.
+   * In every case the GERMAN text is legally authoritative and the translation may lag later
+   * amendments, so the GVG and StPO provisions below are cited from the German original.
+   */
+  {
+    id: 'de-grundgesetz',
+    type: 'legislation',
+    title: 'Basic Law for the Federal Republic of Germany (Grundgesetz), English translation',
+    publisher: 'Bundesministerium der Justiz / Bundesamt für Justiz (Gesetze im Internet)',
+    url: 'https://www.gesetze-im-internet.de/englisch_gg/englisch_gg.html',
+    publishedOn: '1949-05-23',
+    verifiedOn: '2026-07-24',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'DE',
+    note: 'Translation by Professors Christian Tomuschat, David P. Currie, Donald P. Kommers and Raymond Kerr in cooperation with the Language Service of the German Bundestag; offered subject to stated conditions of use. The page states the text reflects amendments up to 22 March 2025. THE GERMAN TEXT IS AUTHORITATIVE and the translation may lag later amendments. Supports: Art. 20(1) federal state; Art. 30 (exercise of state powers is a matter for the Länder except as otherwise provided); Art. 70 (Länder legislate unless the Basic Law confers power on the Federation; exclusive vs concurrent); Art. 73(1) no. 10 (cooperation in criminal police matters; establishment of a Federal Criminal Police Office); Art. 74(1) no. 1 (concurrent legislation over criminal law and court organisation and procedure, EXCEPT the law on pre-trial detention); Art. 83 (Länder execute federal laws in their own right); Art. 87(1) (federal law may establish Federal Border Police authorities and central police offices); Art. 92 (judicial power vested in the Federal Constitutional Court, federal courts and the courts of the Länder); Art. 95(1) (the five federal supreme courts); Art. 96 (further federal courts); Art. 97 (judicial independence); Art. 35 (mutual legal and administrative assistance). Does NOT support any claim about how a particular Land organises its institutions.',
+  },
+  {
+    id: 'de-gvg-141',
+    type: 'legislation',
+    title: 'Gerichtsverfassungsgesetz (GVG) § 141 (German original text)',
+    publisher: 'Bundesministerium der Justiz / Bundesamt für Justiz (Gesetze im Internet)',
+    url: 'https://www.gesetze-im-internet.de/gvg/__141.html',
+    verifiedOn: '2026-07-24',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'DE',
+    note: "Authoritative German text. Supports the single sentence 'Bei jedem Gericht soll eine Staatsanwaltschaft bestehen' — a public prosecution office shall exist at every court. Supports the structural pairing of prosecution offices to courts and nothing more; it does not say who staffs, funds or supervises them, and it does not describe any Land's arrangements. The page displays no Stand/version date, so currency rests on the publisher rather than a printed date.",
+  },
+  {
+    id: 'de-gvg-147',
+    type: 'legislation',
+    title: 'Gerichtsverfassungsgesetz (GVG) § 147 (German original text)',
+    publisher: 'Bundesministerium der Justiz / Bundesamt für Justiz (Gesetze im Internet)',
+    url: 'https://www.gesetze-im-internet.de/gvg/__147.html',
+    verifiedOn: '2026-07-24',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'DE',
+    note: 'Authoritative German text. Supports that the right of supervision and direction (Aufsicht und Leitung) belongs to: (1) the Federal Minister of Justice regarding the Generalbundesanwalt and the Bundesanwälte; (2) the Landesjustizverwaltung regarding all prosecution officials of the Land concerned; (3) the senior official of the prosecution office at the Oberlandesgerichte and Landgerichte regarding all prosecution officials in their district. Supports the EXISTENCE and ALLOCATION of that formal power only. It does not establish how often, or whether, the power is exercised, and it cannot settle the contested question of prosecutorial independence in either direction. The page displays no Stand/version date.',
+  },
+  {
+    id: 'de-stpo-160',
+    type: 'legislation',
+    title:
+      'Strafprozessordnung (StPO) § 160 — Pflicht zur Sachverhaltsaufklärung (German original text)',
+    publisher: 'Bundesministerium der Justiz / Bundesamt für Justiz (Gesetze im Internet)',
+    url: 'https://www.gesetze-im-internet.de/stpo/__160.html',
+    verifiedOn: '2026-07-24',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'DE',
+    note: 'Authoritative German text. Supports § 160(1): once the Staatsanwaltschaft learns of a suspected offence it must investigate the facts in order to decide whether to bring a public charge; and § 160(2): it must investigate exculpatory as well as incriminating circumstances and secure evidence. Supports the allocation of investigative responsibility and the objectivity duty. Does NOT support any description of investigative technique, thresholds, or practice.',
+  },
+  {
+    id: 'de-stpo-163',
+    type: 'legislation',
+    title:
+      'Strafprozessordnung (StPO) § 163 — Aufgaben der Polizei im Ermittlungsverfahren (German original text)',
+    publisher: 'Bundesministerium der Justiz / Bundesamt für Justiz (Gesetze im Internet)',
+    url: 'https://www.gesetze-im-internet.de/stpo/__163.html',
+    verifiedOn: '2026-07-24',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'DE',
+    note: "Authoritative German text. Supports § 163(1): the authorities and officials of the police service must investigate offences and take all measures that permit no delay in order to prevent the matter being obscured. Supports that the police hold their own statutory first-access investigative duty alongside the prosecution's direction. Does NOT support operational detail of any kind.",
+  },
+  {
+    id: 'de-destatis-strafvollzug-2024',
+    type: 'government',
+    title: 'Statistischer Bericht — Strafvollzug — 2024',
+    publisher: 'Statistisches Bundesamt (Destatis)',
+    url: 'https://www.destatis.de/DE/Themen/Staat/Justiz-Rechtspflege/Publikationen/Downloads-Strafverfolgung-Strafvollzug/statistischer-bericht-strafvollzug-2100410247005.html',
+    publishedOn: '2024-12-11',
+    verifiedOn: '2026-07-24',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'DE',
+    note: "Reference date (Stichtag) 31 March 2024; published 11 December 2024. Crucially, Destatis states 'Die Daten der Strafvollzugsstatistik werden von den Statistischen Ämtern der Länder übermittelt' — the national statistic is an AGGREGATION of data transmitted by the Länder statistical offices, not a measurement of a single national prison system. Cited here for that methodological fact and for the existence and scope of the series. The landing page publishes no headline total, so NO numeric figure is taken from this source.",
+  },
+  {
+    id: 'coe-space-i-2024',
+    type: 'international-organization',
+    title:
+      'Prison Populations — SPACE I 2024 (Council of Europe Annual Penal Statistics), PC-CP (2024) 5',
+    publisher: 'Council of Europe / University of Lausanne (Marcelo F. Aebi and Edoardo Cocco)',
+    url: 'https://wp.unil.ch/space/files/2025/09/250924_rapport-space-i-2024.pdf',
+    publishedOn: '2024-12-15',
+    verifiedOn: '2026-07-24',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'DE',
+    note: "Strasbourg, 15 December 2024, updated 24 September 2025. Data supplied by national prison administrations to the University of Lausanne research team via a questionnaire agreed by the Council for Penological Co-operation. Reference date for prison population is 31 January 2024; country population figures are as at 1 January 2024. Supports, for Germany: Table 3 — total inmates including pre-trial detainees 59,413, prison population rate 71.2 per 100,000, adjusted figures 55,916 and 67.0; Table 16 — total capacity of penal institutions 72,258 and prison density 82.2 inmates per 100 places. The report states its aim is comparable data but warns that 'any comparisons of the levels (in rates, ratios and percentages) shown by the countries according to different indicators are always problematic'. It does NOT support any Land-level figure, nor any cross-country ranking.",
+  },
 ];
 
 const SOURCE_INDEX = new Map(SOURCES.map((source) => [source.id, source]));

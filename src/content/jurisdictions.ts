@@ -331,6 +331,134 @@ export const JURISDICTIONS: readonly JurisdictionRecord[] = [
       'New Caledonia is governed by neither Article 73 nor Article 74. It has its own title of the Constitution — Title XIII, "Dispositions transitoires relatives à la Nouvelle-Calédonie". It is deliberately recorded at level `special` rather than `territory`: grouping it with the Article 74 collectivities would misstate its constitutional position. Nothing about its institutional arrangements is asserted here without dated sources.',
     status: 'published',
   },
+
+  /* ---------------------------------------------------------------------- */
+  /* Germany — federal level                                                */
+  /* ---------------------------------------------------------------------- */
+  /*
+   * LAND SELECTION (A3). Four records, chosen for what each tests, not for familiarity:
+   *   - `de`      the Bund, to test federal/Land parentage and the split between
+   *               legislative competence and administrative execution;
+   *   - `de-by`   Bavaria, a territorial Land with its own constitutional court — tests a
+   *               Land owning a court function the Bund does not supply;
+   *   - `de-be`   Berlin, a city-state — tests one body exercising Land AND municipal levels
+   *               simultaneously, reusing `alsoExercisesLevels` from the France pilot;
+   *   - `de-nw`   North Rhine-Westphalia — tests an INTERMEDIATE tier (Regierungsbezirke)
+   *               that Berlin and Hamburg do not have at all, which is the cleanest available
+   *               proof that Länder are not structurally interchangeable.
+   *
+   * No record is created for any Kreis, kreisfreie Stadt or municipality. Those tiers are not
+   * uniform across Länder — which is itself the finding — and inventing tier records for them
+   * would assert a uniformity the sources do not support.
+   */
+  {
+    id: 'de',
+    slug: 'germany',
+    name: 'Federal Republic of Germany',
+    shortName: 'Germany',
+    countryCode: 'DE',
+    level: 'federal',
+    legalSystemScope: 'own',
+    policingScope: 'shared',
+    courtScope: 'shared',
+    prosecutionScope: 'shared',
+    correctionalScope: 'none',
+    legislativeCompetence: {
+      'legal-system': 'concurrent',
+      policing: 'exclusive-subnational',
+      courts: 'concurrent',
+      prosecution: 'concurrent',
+      corrections: 'unknown',
+    },
+    temporalScope: 'current',
+    coverage: 'partial',
+    sources: ['de-grundgesetz'],
+    notes:
+      'Article 20(1) of the Basic Law describes the Federal Republic as a federal state. Article 30 provides that the exercise of state powers is a matter for the Länder except as otherwise provided, and Article 83 that the Länder execute federal laws in their own right. The federal level therefore holds broad legislative competence while administering comparatively little: policing, courts, prosecution and prisons are largely administered by the Länder. correctionalScope is `none` at federal level because no federal prison administration is established by the Basic Law; policingScope is `shared` because Article 73(1) no. 10 and Article 87(1) permit defined federal police bodies alongside Land police, not instead of them.',
+    status: 'published',
+  },
+  {
+    id: 'de-by',
+    slug: 'bayern',
+    name: 'Freistaat Bayern (Bavaria)',
+    shortName: 'Bavaria',
+    countryCode: 'DE',
+    level: 'state',
+    parentJurisdictionId: 'de',
+    legalSystemScope: 'shared',
+    policingScope: 'own',
+    courtScope: 'own',
+    prosecutionScope: 'own',
+    correctionalScope: 'own',
+    legislativeCompetence: {
+      'legal-system': 'concurrent',
+      policing: 'exclusive-subnational',
+      courts: 'concurrent',
+      prosecution: 'concurrent',
+      corrections: 'unknown',
+    },
+    temporalScope: 'current',
+    coverage: 'in-research',
+    sources: ['de-grundgesetz', 'de-gvg-147'],
+    notes:
+      "A territorial Land. Under Article 92 of the Basic Law judicial power is vested in the Federal Constitutional Court, the federal courts and the courts of the Länder, so a Land owns its own court function rather than hosting a federal one. Under § 147 no. 2 GVG the Landesjustizverwaltung holds the right of supervision and direction over all prosecution officials of that Land. Bavaria's own institutional detail — its police organisation, its constitutional court, its prison administration — has NOT been researched and nothing specific to Bavaria is asserted.",
+    status: 'published',
+  },
+  {
+    id: 'de-be',
+    slug: 'berlin',
+    name: 'Land Berlin',
+    shortName: 'Berlin',
+    countryCode: 'DE',
+    level: 'state',
+    alsoExercisesLevels: ['municipality'],
+    parentJurisdictionId: 'de',
+    legalSystemScope: 'shared',
+    policingScope: 'own',
+    courtScope: 'own',
+    prosecutionScope: 'own',
+    correctionalScope: 'own',
+    legislativeCompetence: {
+      'legal-system': 'concurrent',
+      policing: 'exclusive-subnational',
+      courts: 'concurrent',
+      prosecution: 'concurrent',
+      corrections: 'unknown',
+    },
+    temporalScope: 'current',
+    coverage: 'in-research',
+    sources: ['de-grundgesetz'],
+    notes:
+      'A city-state: a Land that is simultaneously a single municipality, so the Land and municipal levels are exercised by the same body. This is why a "German municipal police model" cannot be stated generally — in a city-state the municipal level is the Land level, and any statement about how municipalities relate to Land police means something different here than in a territorial Land. Berlin-specific institutional detail has NOT been researched.',
+    status: 'published',
+  },
+  {
+    id: 'de-nw',
+    slug: 'nordrhein-westfalen',
+    name: 'Land Nordrhein-Westfalen (North Rhine-Westphalia)',
+    shortName: 'North Rhine-Westphalia',
+    countryCode: 'DE',
+    level: 'state',
+    parentJurisdictionId: 'de',
+    legalSystemScope: 'shared',
+    policingScope: 'own',
+    courtScope: 'own',
+    prosecutionScope: 'own',
+    correctionalScope: 'own',
+    legislativeCompetence: {
+      'legal-system': 'concurrent',
+      policing: 'exclusive-subnational',
+      courts: 'concurrent',
+      prosecution: 'concurrent',
+      corrections: 'unknown',
+    },
+    temporalScope: 'current',
+    coverage: 'in-research',
+    sources: ['de-grundgesetz'],
+    notes:
+      'Included specifically because it maintains an intermediate administrative tier (Regierungsbezirke) that the city-states do not have at all. That asymmetry is the point: the German sub-national structure is not a single ladder repeated sixteen times, so a tier record of the kind used for France would misdescribe the country. No Regierungsbezirk record is created here, because their powers have not been researched and their existence varies by Land. NRW-specific institutional detail has NOT been researched.',
+    status: 'published',
+  },
 ];
 
 /* -------------------------------------------------------------------------- */
@@ -346,7 +474,18 @@ export function getJurisdictionsForCountry(countryCode: string): JurisdictionRec
 }
 
 /** Levels that may exist without a parent. Everything else must be attached to one. */
-const ROOT_LEVELS: readonly JurisdictionLevel[] = ['international', 'supranational', 'country'];
+const ROOT_LEVELS: readonly JurisdictionLevel[] = [
+  'international',
+  'supranational',
+  'country',
+  /*
+   * `federal` is a ROOT level, not a child of `country`. The Bund is the national-level record
+   * for Germany exactly as `fr` is for France; the level says how power is organised, not how
+   * deep the record sits. The France pilot never created a `federal` record, so this rule went
+   * untested — Germany is what exposed it.
+   */
+  'federal',
+];
 
 /**
  * Coverage states at which a jurisdiction may NOT assert any researched functional scope.
@@ -454,6 +593,23 @@ export function validateJurisdiction(
         );
       }
     }
+  }
+
+  /*
+   * Federal-competence rule (Germany finding). Where a record sits under a `federal` parent,
+   * who legislates and who administers are different questions, and leaving the legislative
+   * dimension blank silently implies the administrative answer covers both.
+   */
+  const parent = all.find((j) => j.id === record.parentJurisdictionId);
+  if (
+    parent?.level === 'federal' &&
+    !unresearched &&
+    (!record.legislativeCompetence || Object.keys(record.legislativeCompetence).length === 0)
+  ) {
+    problems.push(
+      'a researched sub-national record under a federal parent must declare ' +
+        'legislativeCompetence — who administers a function does not establish who legislates on it',
+    );
   }
 
   if (record.status === 'published' && record.sources.length === 0) {

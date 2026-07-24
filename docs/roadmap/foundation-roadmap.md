@@ -206,3 +206,37 @@ desktop primary navigation. Not introduced by this phase; found by its accessibi
 [france-country-pilot-qa.md](../audits/france-country-pilot-qa.md). The open schema question to
 resolve first is F3, and the highest-value test of A4 is a country whose pages carry real
 statistics.
+
+---
+
+## Phase 3 — Germany federal country pilot (delivered 2026-07-24)
+
+Branch `feat/germany-federal-country-pilot`, based on `e527d5a`.
+
+**Purpose.** Test whether the architecture can honestly represent a federal system. France is
+unitary and had exercised only half the jurisdiction model.
+
+**Part A, gated before content.** Structured `ScheduledChange` (closing France finding F3) with
+a staleness gate that breaks the build once an effective date passes un-reviewed;
+`legislativeCompetence` separating who legislates from who administers; `federal` corrected to a
+root jurisdiction level; a `detention-capacity` restricted-claim category.
+
+**Published — 8 routes.** `/countries/germany` plus justice-system, courts, law-enforcement,
+prosecution, investigations, corrections, sources.
+
+**Deferred — 5 modules.** forensics, border-and-customs, oversight, history, timeline. Oversight
+and history are deferred specifically because a single national page would imply a uniformity
+German federalism does not have.
+
+**One real restricted claim published** — prison occupancy at 31 January 2024 from SPACE I, with
+its aggregate nature, alternative count, comparability warning and capacity caveat all recorded.
+
+**Land samples.** Bund plus Bavaria, Berlin and North Rhine-Westphalia, chosen for what each
+tests. No public Land pages; no municipality records.
+
+**Also fixed.** Every Germany page had shipped disclaiming independence from _France_ — a
+hardcoded demonym no test caught, found by looking at a screenshot. And the jurisdictions table's
+scroll region is now keyboard reachable.
+
+**Next.** Country pilot three — see the recommendation in
+[germany-country-pilot-qa.md](../audits/germany-country-pilot-qa.md).

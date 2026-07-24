@@ -211,6 +211,48 @@ export const FUNCTION_SCOPES = [
 ] as const;
 export type FunctionScope = (typeof FUNCTION_SCOPES)[number];
 
+/**
+ * The five institutional functions the jurisdiction model tracks.
+ */
+export const INSTITUTIONAL_FUNCTIONS = [
+  'legal-system',
+  'policing',
+  'courts',
+  'prosecution',
+  'corrections',
+] as const;
+export type InstitutionalFunction = (typeof INSTITUTIONAL_FUNCTIONS)[number];
+
+/**
+ * WHO MAY LEGISLATE on a function — as distinct from who administers it.
+ *
+ * Forced by the Germany pilot. The Basic Law separates these two questions explicitly and
+ * they do not track each other: Article 74(1) no. 1 places criminal law and court organisation
+ * under *concurrent* legislative power, while Article 83 provides that "the Länder shall
+ * execute federal laws in their own right". Federal law, Land administration, in the same
+ * sentence of constitutional design.
+ *
+ * `FunctionScope` answers only the administration question. Recording Germany with
+ * `courtScope: 'own'` at Land level is correct and, on its own, actively misleading — it
+ * suggests the Länder also write the law of court organisation, which they largely do not.
+ * France never exposed this because a unitary state collapses the two.
+ */
+export const LEGISLATIVE_COMPETENCES = [
+  /** Only the federal/national level may legislate. */
+  'exclusive-federal',
+  /** Both levels may legislate, typically with federal law taking precedence when exercised. */
+  'concurrent',
+  /** The federal level sets a framework; the sub-national level fills it in. */
+  'framework',
+  /** Only the sub-national level may legislate. */
+  'exclusive-subnational',
+  /** No legislative competence attaches at this level. */
+  'none',
+  /** Not researched. */
+  'unknown',
+] as const;
+export type LegislativeCompetence = (typeof LEGISLATIVE_COMPETENCES)[number];
+
 export interface JurisdictionRecord {
   id: string;
   /** URL-safe segment. Unique within a country. */
@@ -231,11 +273,23 @@ export interface JurisdictionRecord {
   alsoExercisesLevels?: JurisdictionLevel[];
   /** Omitted only for `country`, `supranational` and `international` records. */
   parentJurisdictionId?: string;
+  /*
+   * The five *Scope fields answer ONE question: who administers or executes this function.
+   * They do not say who legislates on it. See `legislativeCompetence`.
+   */
   legalSystemScope: FunctionScope;
   policingScope: FunctionScope;
   courtScope: FunctionScope;
   prosecutionScope: FunctionScope;
   correctionalScope: FunctionScope;
+  /**
+   * Who may legislate on each function, where that differs from who administers it.
+   *
+   * Optional: in a unitary state the question is usually not interesting and the field is
+   * omitted. In a federal state omitting it on a sub-national record is a research gap, not a
+   * neutral default, and validation says so once coverage passes 'in-research'.
+   */
+  legislativeCompetence?: Partial<Record<InstitutionalFunction, LegislativeCompetence>>;
   temporalScope: TemporalScope;
   /** Required when temporalScope is not 'current'. */
   historicalPeriod?: string;
@@ -331,6 +385,13 @@ export interface CountryModuleDefinition {
  * from impression rather than evidence, and the most damaging when wrong.
  */
 export const RESTRICTED_CLAIM_CATEGORIES = [
+  /*
+   * Added by the Germany pilot. The original nine were derived from claims about
+   * institutions and their personnel; a claim about the *detained population* — prison
+   * numbers, capacity, occupancy, overcrowding — had no category at all, despite being one
+   * of the most frequently asserted and most frequently mis-sourced figures in this field.
+   */
+  'detention-capacity',
   'compensation',
   'crime-levels',
   'corruption',
@@ -629,4 +690,84 @@ export function isPublished(entity: { status: ContentStatus }): boolean {
 
 export function isSafetySensitive(section: SectionId): boolean {
   return SAFETY_SENSITIVE_SECTIONS.includes(section);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Scheduled change (resolves France finding F3)                              */
+/* -------------------------------------------------------------------------- */
+
+export const SCHEDULED_CHANGE_TYPES = [
+  'amendment',
+  'repeal',
+  'replacement',
+  'reorganization',
+  'transfer-of-competence',
+  'merger',
+  'dissolution',
+  'renaming',
+  'jurisdiction-change',
+  'planned',
+  'unknown',
+] as const;
+export type ScheduledChangeType = (typeof SCHEDULED_CHANGE_TYPES)[number];
+
+/**
+ * How firm the change is. The model must not assume every announced reform takes effect.
+ * Only `enacted-with-date` may be presented to a reader as something that *will* happen.
+ */
+export const CHANGE_CERTAINTIES = [
+  'enacted-with-date',
+  'announced',
+  'proposed',
+  'uncertain',
+] as const;
+export type ChangeCertainty = (typeof CHANGE_CERTAINTIES)[number];
+
+export const SCHEDULED_CHANGE_STATUSES = [
+  /** Enacted or announced, effective date still in the future. */
+  'pending',
+  /** The effective date has passed and affected content has been re-reviewed. */
+  'taken-effect',
+  /** Replaced by a later instrument before taking effect. */
+  'superseded',
+  /** Abandoned, repealed before commencement, or struck down. */
+  'cancelled',
+] as const;
+export type ScheduledChangeStatus = (typeof SCHEDULED_CHANGE_STATUSES)[number];
+
+/**
+ * A known future change to law or institutional arrangement.
+ *
+ * Deliberately NOT a legislative-tracking system. It exists to stop one specific failure:
+ * a page stating current law correctly, and still being wrong later because a repeal date was
+ * already known when the page was written.
+ *
+ * The load-bearing rule is the staleness gate. Once `effectiveOn` has passed, a `pending`
+ * change fails validation until someone records `reviewedAfterEffect` — so the build breaks
+ * rather than the site quietly describing superseded law as current.
+ */
+export interface ScheduledChange {
+  id: string;
+  changeType: ScheduledChangeType;
+  /** ISO date the change takes effect. */
+  effectiveOn: string;
+  enactedOn?: string;
+  announcedOn?: string;
+  /** Ids of entities, jurisdictions or country modules the change affects. Minimum one. */
+  affectedEntityIds: string[];
+  /** Ids of restricted claims the change affects. */
+  affectedClaimIds?: string[];
+  description: string;
+  /** Minimum one. A scheduled change without authoritative support is not published. */
+  sources: string[];
+  certainty: ChangeCertainty;
+  status: ScheduledChangeStatus;
+  /** The change this one replaces, where applicable. */
+  supersedes?: string;
+  /**
+   * ISO date on which affected content was re-reviewed against the new position. Required
+   * once `effectiveOn` is in the past and the change is still `pending`.
+   */
+  reviewedAfterEffect?: string;
+  notes?: string;
 }
