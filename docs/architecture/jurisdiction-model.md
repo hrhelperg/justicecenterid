@@ -26,6 +26,24 @@ A flat vocabulary, sized to the systems we can foresee needing. Adding a level l
 `alsoExercisesLevels` handles a body that exercises more than one tier's competences —
 required by Martinique and Guyane, which are _collectivités territoriales uniques_.
 
+## Authority basis — where power comes from, not where it sits
+
+Added by the United States pilot. The parent link had one meaning in the France and Germany
+pilots: the child derives its competences from the parent. The US breaks that, because
+geographic inclusion is not legal subordination.
+
+`authorityBasis` (optional): `delegated` (the prior default) · `reserved-powers` (US states,
+Tenth Amendment) · `inherent-sovereign` (tribal nations) · `federal-plenary` (DC) · `unknown`.
+
+The load-bearing case is `inherent-sovereign`. A tribal nation sits geographically within the
+United States and usually within a state, but its sovereignty predates the Constitution and is
+not derived from either. Its `parentJurisdictionId` therefore records **geographic containment
+only**. Two validation rules enforce the honesty: an inherent-sovereign record must explain the
+non-derivation in its notes, and it is exempt from the federal legislative-competence rule
+(inherent sovereignty is not a division of the parent's legislative competence).
+
+The field is optional; France and Germany records omit it and are unaffected.
+
 ## Function scopes
 
 The heart of the model. Recorded separately for `legalSystemScope`, `policingScope`,
