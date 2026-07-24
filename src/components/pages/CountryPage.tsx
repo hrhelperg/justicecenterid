@@ -50,10 +50,12 @@ import {
 const DEMONYMS: Record<string, string> = {
   FR: 'a French public body',
   DE: 'a German public body',
+  US: 'a United States government body',
 };
 
 function independentOfDemonym(dossier: CountryDossier): string {
-  return DEMONYMS[dossier.countryCode] ?? `a public body of ${dossier.name}`;
+  // The fallback keeps a grammatical article rather than "a public body of United States".
+  return DEMONYMS[dossier.countryCode] ?? `a government body of ${dossier.name}`;
 }
 
 function IndependenceNotice({ demonym }: { demonym: string }) {
@@ -180,6 +182,8 @@ function Uncertainty({ items }: { items?: string[] }) {
 
 export function CountryHub({ dossier }: { dossier: CountryDossier }) {
   const path = `/countries/${dossier.slug}`;
+  // Grammatical form for "...in X" contexts; some country names take a definite article.
+  const inName = dossier.articleName ?? dossier.name;
   const modules = publishedModules(dossier);
   const jurisdictions = dossier.jurisdictionIds
     .map((id) => getJurisdiction(id))
@@ -191,7 +195,7 @@ export function CountryHub({ dossier }: { dossier: CountryDossier }) {
         data={jsonLdGraph([
           collectionPageSchema({
             path,
-            title: `Justice and public safety in ${dossier.name}`,
+            title: `Justice and public safety in ${inName}`,
             description: dossier.summary,
             parts: modules.map((content) => {
               const definition = COUNTRY_MODULES.find((d) => d.id === content.moduleId);
@@ -209,7 +213,7 @@ export function CountryHub({ dossier }: { dossier: CountryDossier }) {
         width="wide"
         path={path}
         eyebrow="Country"
-        title={`Justice and public safety in ${dossier.name}`}
+        title={`Justice and public safety in ${inName}`}
         lead={dossier.summary}
         meta={
           <ReviewMeta

@@ -47,6 +47,7 @@ export const UNITED_STATES: CountryDossier = {
   countryCode: 'US',
   slug: 'united-states',
   name: 'United States',
+  articleName: 'the United States',
   officialName: 'United States of America',
   summary:
     'The United States is a federation in which the states hold reserved powers, most policing, prosecution, courts and prisons are organised below the federal level, many law-enforcement and prosecution offices are filled by local election, and tribal nations exercise inherent sovereignty.',

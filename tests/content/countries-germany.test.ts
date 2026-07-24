@@ -124,6 +124,15 @@ describe('Germany dossier', () => {
     );
     expect(germany).toMatch(/not a German public body/);
     expect(textOf(franceFile)).toMatch(/not a French public body/);
+
+    // The US demonym must be correct too, and must not fall through to the awkward default.
+    const usFile = 'out/countries/united-states/courts.html';
+    if (existsSync(usFile)) {
+      const us = textOf(usFile);
+      expect(us).toMatch(/not a United States government body/);
+      expect(us).not.toMatch(/public body of United States/);
+      expect(us).not.toMatch(/not a (?:French|German) public body/);
+    }
   });
 
   it('discloses on the hub that only sample Länder are modelled', () => {

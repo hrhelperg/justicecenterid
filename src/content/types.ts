@@ -399,6 +399,12 @@ export interface CountryDossier {
   /** URL segment: the English country name, lowercased. */
   slug: string;
   name: string;
+  /**
+   * The name as it reads after a preposition, where it takes a definite article: "the United
+   * States", "the Netherlands". Optional; falls back to `name`. Added by the US pilot, where
+   * "Justice and public safety in United States" was ungrammatical.
+   */
+  articleName?: string;
   officialName?: string;
   /** Reader-facing summary of the hub page. */
   summary: string;
