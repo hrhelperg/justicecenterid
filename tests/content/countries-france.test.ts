@@ -71,10 +71,13 @@ describe('France dossier', () => {
   });
 
   it('is one of exactly the dossiers the completed pilots created', () => {
-    // Updated by the Germany pilot. The France phase asserted France was the ONLY dossier,
-    // which was the right guard then and became false the moment a second country landed.
-    // The guard that still matters is that no pilot silently adds countries beyond its scope.
-    expect(COUNTRY_DOSSIERS.map((d) => d.slug).sort()).toEqual(['france', 'germany']);
+    // Updated per pilot. The guard that matters is that no pilot silently adds a country
+    // beyond its scope, so this list grows by exactly one slug per completed country phase.
+    expect(COUNTRY_DOSSIERS.map((d) => d.slug).sort()).toEqual([
+      'france',
+      'germany',
+      'united-states',
+    ]);
   });
 
   it('records the date its facts were verified, and it is not the build date', () => {
