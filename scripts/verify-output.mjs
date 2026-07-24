@@ -1,18 +1,7 @@
-#!/usr/bin/env node
-/**
- * Verifies the exported static output against the route registry.
- *
- * Static-export failures are silent: a route that fails to prerender simply produces no
- * file, and the sitemap happily advertises it anyway. This script turns that into a build
- * failure by asserting, in BOTH directions, that the registry and `out/` agree.
- *
- * Run after `next build`. Reads the registry out of the TypeScript source so it cannot go
- * stale — the route list is small and regular enough to extract reliably.
- */
-
 import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
+import { register } from 'node:module';
 import { join, relative, resolve } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 
 const ROOT = resolve(fileURLToPath(new URL('..', import.meta.url)));
 const OUT = join(ROOT, 'out');
@@ -25,72 +14,44 @@ function fail(message) {
 }
 
 if (!existsSync(OUT)) {
-  console.error('✖ out/ does not exist. Run `npm run build` first.');
+  console.error('\u2716 out/ does not exist. Run `npm run build` first.');
   process.exit(1);
 }
 
 /* -------------------------------------------------------------------------- */
-/* Expected routes, derived from the same sources as src/lib/routes.ts         */
+/* Expected routes, imported from the canonical registry                      */
 /* -------------------------------------------------------------------------- */
+/*
+ * This script previously re-derived the route list by regex-parsing TypeScript source. That
+ * duplicated the source of truth, and would not have survived country modules: a per-country
+ * x per-module matrix is far harder to parse than a flat list, and a parse that silently
+ * matched fewer records would have checked fewer routes while still reporting success.
+ *
+ * It now imports src/content/public-routes.ts directly. Node strips the types natively; a
+ * small resolver hook supplies the file extensions Node's ESM resolver requires. The content
+ * layer imports no React, no Next, and no browser API, which is what makes it loadable here.
+ */
 
-const read = (p) => readFileSync(join(ROOT, p), 'utf8');
+register('./ts-resolve-hook.mjs', pathToFileURL(join(ROOT, 'scripts/')));
 
-const sectionIds = [
-  ...read('src/content/types.ts')
-    .split('export const SECTION_IDS')[1]
-    .split(']')[0]
-    .matchAll(/'([a-z-]+)'/g),
-].map((m) => m[1]);
+const { PUBLIC_ROUTES } = await import(
+  pathToFileURL(join(ROOT, 'src/content/public-routes.ts')).href
+);
 
-const guideSources = [
-  'src/content/guides/justice.ts',
-  'src/content/guides/law-enforcement.ts',
-  'src/content/guides/process.ts',
-];
+const expectedRoutes = PUBLIC_ROUTES.map((route) => route.path);
 
-const guides = [];
-for (const file of guideSources) {
-  const contents = read(file);
-  // Each guide record opens with `slug:` followed later by `section:` and `status:`.
-  const records = contents.split(/\n  \{\n/).slice(1);
-  for (const record of records) {
-    const slug = record.match(/slug: '([a-z0-9-]+)'/)?.[1];
-    const section = record.match(/section: '([a-z-]+)'/)?.[1];
-    const status = record.match(/status: '([a-z-]+)'/)?.[1];
-    if (slug && section && status === 'published') guides.push(`/${section}/${slug}`);
-  }
+if (expectedRoutes.length === 0) {
+  fail('the route registry resolved to zero routes — the import is broken, not the site');
 }
 
-const hubs = [
-  '/countries',
-  '/history',
-  '/timeline',
-  '/professions',
-  '/institutions',
-  '/glossary',
-  '/comparisons',
-  '/sources',
-];
-
-const platform = [
-  '/about',
-  '/mission',
-  '/editorial-policy',
-  '/corrections-policy',
-  '/methodology',
-  '/contact',
-  '/privacy',
-  '/terms',
-  '/disclaimer',
-];
-
-const expectedRoutes = [
-  '/',
-  ...sectionIds.map((id) => `/${id}`),
-  ...guides,
-  ...hubs,
-  ...platform,
-];
+const duplicateRegistryPaths = expectedRoutes.filter(
+  (path, index) => expectedRoutes.indexOf(path) !== index,
+);
+if (duplicateRegistryPaths.length > 0) {
+  fail(
+    `the route registry contains duplicate paths: ${[...new Set(duplicateRegistryPaths)].join(', ')}`,
+  );
+}
 
 const generatedFiles = ['sitemap.xml', 'robots.txt', 'llms.txt', 'feed.xml', '404.html'];
 

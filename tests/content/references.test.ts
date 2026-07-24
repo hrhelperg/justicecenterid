@@ -3,6 +3,8 @@ import { GLOSSARY, PUBLISHED_GLOSSARY, getGlossaryTerm } from '@/content/glossar
 import { ALL_GUIDES, getGuide } from '@/content/guides';
 import { PUBLISHED_INSTITUTION_TYPES } from '@/content/institutions';
 import { PUBLISHED_PROFESSIONS } from '@/content/professions';
+import { COUNTRY_DOSSIERS } from '@/content/dossiers';
+import { JURISDICTIONS } from '@/content/jurisdictions';
 import { SOURCES, getSource } from '@/content/sources';
 import { TIMELINE } from '@/content/timeline';
 
@@ -14,6 +16,18 @@ const ALL_SOURCE_REFERENCES = [
   ...PUBLISHED_PROFESSIONS.flatMap((p) => p.sources),
   ...PUBLISHED_INSTITUTION_TYPES.flatMap((i) => i.sources),
   ...TIMELINE.flatMap((t) => t.sources),
+  /*
+   * Country dossiers and jurisdictions were added by the France pilot. Omitting them here
+   * made six genuinely-cited French sources look orphaned, which is how this gap surfaced:
+   * an "unused source" check that does not know about every content family reports the
+   * content as wrong rather than itself.
+   */
+  ...COUNTRY_DOSSIERS.flatMap((d) => [
+    ...d.sources,
+    ...d.modules.flatMap((m) => m.sources),
+    ...d.modules.flatMap((m) => (m.restrictedClaims ?? []).flatMap((c) => c.sources)),
+  ]),
+  ...JURISDICTIONS.flatMap((j) => j.sources),
 ];
 
 describe('cross-references resolve', () => {

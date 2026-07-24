@@ -165,8 +165,26 @@ test.describe('editorial surfaces', () => {
     ).toBeVisible();
   });
 
-  test('the countries hub states that nothing has been researched', async ({ page }) => {
+  test('the countries hub reports researched coverage honestly and links to it', async ({
+    page,
+  }) => {
     await page.goto('/countries');
-    await expect(page.getByText('No country has been researched yet').first()).toBeVisible();
+
+    // Coverage is derived from the registry. The France pilot made the previous literal
+    // "No country has been researched yet" false, so the assertion is now on the behaviour:
+    // the researched country is named and linked, and the rest are still marked planned.
+    await expect(page.getByRole('link', { name: 'France', exact: true }).first()).toBeVisible();
+    await expect(page.getByText(/coverage status/i).first()).toBeVisible();
+  });
+
+  test('a deferred France module is not reachable and is disclosed as a gap', async ({
+    page,
+  }) => {
+    const response = await page.goto('/countries/france/corrections');
+    expect(response?.status()).toBe(404);
+
+    await page.goto('/countries/france');
+    await expect(page.getByText('What has not been researched')).toBeVisible();
+    await expect(page.getByText('Corrections and probation').first()).toBeVisible();
   });
 });

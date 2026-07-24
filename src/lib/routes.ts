@@ -1,3 +1,5 @@
+import type { PublicRouteKind } from '@/content/public-routes';
+import { PUBLIC_ROUTES } from '@/content/public-routes';
 import { PUBLISHED_GUIDES, guidePath } from '@/content/guides';
 import { SECTIONS } from '@/content/sections';
 
@@ -9,7 +11,7 @@ import { SECTIONS } from '@/content/sections';
  * and so does the reverse.
  */
 
-export type RouteKind = 'home' | 'section' | 'guide' | 'hub' | 'platform';
+export type RouteKind = PublicRouteKind;
 
 export interface RouteRecord {
   path: string;
@@ -81,13 +83,43 @@ const GUIDE_ROUTES: readonly RouteRecord[] = PUBLISHED_GUIDES.map((guide) => ({
   parent: `/${guide.section}`,
 }));
 
-export const ROUTES: readonly RouteRecord[] = [
-  { path: '/', title: 'Home', kind: 'home', priority: 1 },
-  ...SECTION_ROUTES,
-  ...GUIDE_ROUTES,
-  ...HUB_ROUTES,
-  ...PLATFORM_ROUTES,
-];
+/**
+ * Priority reflects a real hierarchy and nothing else. It is set here rather than in the
+ * content registry because it is a presentation concern of the sitemap.
+ */
+const PRIORITY: Record<PublicRouteKind, number> = {
+  home: 1,
+  section: 0.8,
+  guide: 0.7,
+  country: 0.7,
+  'country-module': 0.6,
+  hub: 0.6,
+  platform: 0.3,
+};
+
+/*
+ * ROUTES is derived from PUBLIC_ROUTES, the canonical registry in the content layer, rather
+ * than re-declared here. The route families above (HUB_ROUTES, PLATFORM_ROUTES, ...) remain
+ * only as the source of the reader-facing titles used across breadcrumbs and navigation.
+ *
+ * The single derivation is what lets scripts/verify-output.mjs import the same registry and
+ * check the exported site against it, instead of regex-parsing this file.
+ */
+const TITLE_OVERRIDES = new Map<string, string>(
+  [...HUB_ROUTES, ...PLATFORM_ROUTES, ...SECTION_ROUTES, ...GUIDE_ROUTES].map((r) => [
+    r.path,
+    r.title,
+  ]),
+);
+
+export const ROUTES: readonly RouteRecord[] = PUBLIC_ROUTES.map((route) => ({
+  path: route.path,
+  title: TITLE_OVERRIDES.get(route.path) ?? route.title,
+  kind: route.kind,
+  priority: PRIORITY[route.kind],
+  lastModified: route.lastModified,
+  parent: route.parent,
+}));
 
 const ROUTE_INDEX = new Map(ROUTES.map((route) => [route.path, route]));
 

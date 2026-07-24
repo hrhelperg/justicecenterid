@@ -50,7 +50,13 @@ export function SiteNav({ items }: { items: readonly NavItem[] }) {
   return (
     <>
       <nav aria-label="Primary" className="hidden nav:block">
-        <ul className="flex items-center gap-1">
+        {/*
+          flex-wrap is required, not cosmetic. At 200% text size (WCAG 2.2 SC 1.4.4) the six
+          nav links exceed a 1280px viewport and pushed the whole document into horizontal
+          scroll on every page, including the home page. Wrapping only engages when the row
+          no longer fits, so normal rendering is unchanged.
+        */}
+        <ul className="flex flex-wrap items-center justify-end gap-1">
           {items.map((item) => {
             const active = isActivePath(pathname, item.href);
             return (

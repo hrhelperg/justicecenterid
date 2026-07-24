@@ -140,6 +140,8 @@ export const COUNTRY_MODULE_IDS = [
   'law-enforcement',
   'courts',
   'prosecution',
+  'investigations',
+  'forensics',
   'corrections',
   'border-and-customs',
   'history',
@@ -152,6 +154,223 @@ export const COUNTRY_MODULE_IDS = [
   'sources',
 ] as const;
 export type CountryModuleId = (typeof COUNTRY_MODULE_IDS)[number];
+
+/* -------------------------------------------------------------------------- */
+/* Jurisdictions (precondition A1)                                            */
+/* -------------------------------------------------------------------------- */
+
+/**
+ * Levels at which a jurisdiction can sit.
+ *
+ * Deliberately a flat vocabulary rather than a universal geopolitical ontology. It covers the
+ * systems we can foresee needing — France, US, UK, Germany, Canada, autonomous regions,
+ * dependent territories — and stops there. Adding a level later is cheap; unwinding an
+ * over-general ontology is not.
+ */
+export const JURISDICTION_LEVELS = [
+  'international',
+  'supranational',
+  'country',
+  'federal',
+  'constituent-country',
+  'state',
+  'province',
+  'region',
+  'department',
+  'county',
+  'municipality',
+  'local',
+  'territory',
+  'special',
+] as const;
+export type JurisdictionLevel = (typeof JURISDICTION_LEVELS)[number];
+
+/**
+ * How a jurisdiction relates to one institutional function.
+ *
+ * This exists because **a geographic subdivision is not automatically a legal jurisdiction**,
+ * and conflating the two is the commonest error in comparative writing. A French département
+ * is a real administrative territory, but it does not have its own court system — the judicial
+ * map is drawn separately and does not follow departmental boundaries. Recording that as
+ * `national` rather than `own` is the difference between an accurate page and a
+ * plausible-sounding wrong one.
+ */
+export const FUNCTION_SCOPES = [
+  /** This jurisdiction has its own distinct arrangement for this function. */
+  'own',
+  /** The function is organised nationally; this level is not where it is decided. */
+  'national',
+  /** Shared with, or exercised jointly with, another jurisdiction. */
+  'shared',
+  /** Exercised here, but under authority delegated from a parent jurisdiction. */
+  'delegated',
+  /** The function does not exist at this level at all. */
+  'none',
+  /** Not yet researched. Never a substitute for `none`. */
+  'unknown',
+] as const;
+export type FunctionScope = (typeof FUNCTION_SCOPES)[number];
+
+export interface JurisdictionRecord {
+  id: string;
+  /** URL-safe segment. Unique within a country. */
+  slug: string;
+  name: string;
+  shortName?: string;
+  /** ISO 3166-1 alpha-2, or 'INT'/'EU' for international and supranational records. */
+  countryCode: string;
+  level: JurisdictionLevel;
+  /**
+   * Additional tiers whose competences this jurisdiction also exercises.
+   *
+   * Forced by the France pilot. Martinique and Guyane are *collectivités territoriales
+   * uniques*: a single body exercising both departmental and regional competences, created
+   * under the last paragraph of Constitution Article 73. A flat `level` cannot express that,
+   * and picking either tier alone would be factually wrong.
+   */
+  alsoExercisesLevels?: JurisdictionLevel[];
+  /** Omitted only for `country`, `supranational` and `international` records. */
+  parentJurisdictionId?: string;
+  legalSystemScope: FunctionScope;
+  policingScope: FunctionScope;
+  courtScope: FunctionScope;
+  prosecutionScope: FunctionScope;
+  correctionalScope: FunctionScope;
+  temporalScope: TemporalScope;
+  /** Required when temporalScope is not 'current'. */
+  historicalPeriod?: string;
+  coverage: CoverageState;
+  sources: string[];
+  /** Structural explanation only. Not a place for unsourced narrative. */
+  notes?: string;
+  status: ContentStatus;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Country modules (precondition A2)                                          */
+/* -------------------------------------------------------------------------- */
+
+/**
+ * One module of a country dossier.
+ *
+ * `status` alone decides whether a route exists. A module that has not been researched to
+ * publication standard stays `draft`, produces no route, appears in no sitemap and no
+ * navigation, and must carry a `deferredReason` that is shown on the country hub — so a
+ * reader can see what is missing rather than inferring that it does not exist.
+ */
+export interface CountryModuleContent {
+  moduleId: CountryModuleId;
+  /** Page title. Always names the country: "Law enforcement in France". */
+  title: string;
+  /** Reader-facing summary; also the meta description. */
+  summary: string;
+  blocks: Block[];
+  sources: string[];
+  status: ContentStatus;
+  review: ReviewStatus;
+  safetyReview: SafetyReview;
+  updatedOn: string;
+  reviewedOn?: string;
+  /** ISO date the institutional facts on this module were checked against sources. */
+  factsVerifiedOn?: string;
+  temporalScope: TemporalScope;
+  restrictedClaims?: RestrictedClaim[];
+  /** Slugs of global guides this module should link to. */
+  relatedGuides?: string[];
+  uncertainty?: string[];
+  /** Required when status is not 'published'. Rendered on the country hub. */
+  deferredReason?: string;
+}
+
+export interface CountryDossier {
+  /** ISO 3166-1 alpha-2. */
+  countryCode: string;
+  /** URL segment: the English country name, lowercased. */
+  slug: string;
+  name: string;
+  officialName?: string;
+  /** Reader-facing summary of the hub page. */
+  summary: string;
+  /** The hub page body. */
+  blocks: Block[];
+  sources: string[];
+  status: ContentStatus;
+  review: ReviewStatus;
+  safetyReview: SafetyReview;
+  updatedOn: string;
+  reviewedOn?: string;
+  factsVerifiedOn?: string;
+  modules: CountryModuleContent[];
+  /** Jurisdiction record ids belonging to this country. */
+  jurisdictionIds: string[];
+  uncertainty?: string[];
+}
+
+export interface CountryModuleDefinition {
+  id: CountryModuleId;
+  /** URL segment under /countries/{country}/. Identical to `id` by rule — see the A2 review. */
+  slug: string;
+  title: string;
+  shortTitle: string;
+  /** The reader question this module answers. */
+  purpose: string;
+  /**
+   * The global Tier 1 section this module relates to, for cross-linking only. It does NOT
+   * nest the route: country modules live under /countries/{code}/, never under the global
+   * section.
+   */
+  relatedSection?: SectionId;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Restricted claims (precondition A4)                                        */
+/* -------------------------------------------------------------------------- */
+
+/**
+ * The nine claim categories the editorial policy restricts: the assertions most often made
+ * from impression rather than evidence, and the most damaging when wrong.
+ */
+export const RESTRICTED_CLAIM_CATEGORIES = [
+  'compensation',
+  'crime-levels',
+  'corruption',
+  'institutional-effectiveness',
+  'public-trust',
+  'occupational-harm',
+  'staffing',
+  'political-control',
+  'human-rights-performance',
+] as const;
+export type RestrictedClaimCategory = (typeof RESTRICTED_CLAIM_CATEGORIES)[number];
+
+/**
+ * A restricted claim may only be published as a fully specified record.
+ *
+ * Every field is required for a reason. The failure mode here is not a missing citation — it
+ * is a citation that exists but does not support the claim at the scope, jurisdiction or date
+ * asserted. `sourceScope`, `jurisdiction`, `metricPeriod` and `limitation` are what make that
+ * checkable instead of assumed.
+ */
+export interface RestrictedClaim {
+  id: string;
+  category: RestrictedClaimCategory;
+  /** The claim exactly as it is made to the reader. */
+  statement: string;
+  claimType: ClaimType;
+  /** Minimum one. Journalism alone is never sufficient for a restricted claim. */
+  sources: string[];
+  /** What the cited source actually establishes — not what the claim needs it to. */
+  sourceScope: string;
+  /** ISO 3166-1 alpha-2, or 'INT'. */
+  jurisdiction: string;
+  temporalScope: TemporalScope;
+  /** ISO date the claim was checked against the source. */
+  verifiedOn: string;
+  /** The year or period the figure describes. Required whenever the claim is a measurement. */
+  metricPeriod?: string;
+  /** Required. What the claim does not establish. */
+  limitation: string;
+}
 
 /* -------------------------------------------------------------------------- */
 /* Sources                                                                    */
@@ -172,6 +391,19 @@ export interface SourceRecord {
    * Mandatory whenever `url` is present — an unverified URL is not published.
    */
   verifiedOn?: string;
+  /**
+   * How that verification was performed.
+   *
+   * Forced by the France pilot. legifrance.gouv.fr and interieur.gouv.fr return HTTP 403 to
+   * an automated request while serving the document normally to a browser, so a status-code
+   * probe produces false negatives on exactly the most authoritative French sources — the
+   * mirror of the false positives HTTP 200 produces elsewhere. Recording the method is what
+   * keeps "verified" meaningful in both directions.
+   *
+   * `content-confirmed` is the only value meaning the document was actually read and
+   * confirmed to say what the citation claims.
+   */
+  verificationMethod?: 'content-confirmed' | 'status-probe' | 'offline';
   /** ISO 3166-1 alpha-2, or 'INT' for international instruments. */
   jurisdiction?: string;
   /**

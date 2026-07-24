@@ -1,3 +1,4 @@
+import { PUBLISHED_DOSSIERS } from '@/content/dossiers';
 import { PUBLISHED_GUIDES, guidePath } from '@/content/guides';
 import { SECTIONS } from '@/content/sections';
 import { SITE, absoluteUrl } from '@/lib/site';
@@ -67,7 +68,7 @@ ${sections}
 
 ## Reference
 
-- [Countries](${absoluteUrl('/countries')}): country model and coverage status. No country has been researched yet.
+- [Countries](${absoluteUrl('/countries')}): country model and coverage status. ${PUBLISHED_DOSSIERS.length === 0 ? 'No country has been researched yet.' : `Researched so far: ${PUBLISHED_DOSSIERS.map((d) => d.name).join(', ')}. Every other country is at coverage status 'planned' and has no page.`}
 - [Institutions](${absoluteUrl('/institutions')}): institution types and where they do and do not exist.
 - [Professions](${absoluteUrl('/professions')}): roles, decision authority, constraints, and oversight.
 - [Glossary](${absoluteUrl('/glossary')}): jurisdiction-neutral definitions, including terms commonly confused between systems.

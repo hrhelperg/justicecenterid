@@ -170,3 +170,39 @@ Stated plainly so they are not mistaken for completeness:
    not invented content.
 7. **Nothing is deployed.** Netlify compatibility rests on a local production build and local
    verification of the exported artefact — not on a deploy.
+
+---
+
+## Phase 2 — France country-model pilot (delivered 2026-07-24)
+
+Branch `feat/france-country-model-pilot`, based on `965b2cc`.
+
+**Preconditions settled first.** All four audit preconditions were implemented and passed a
+validation gate before any France content was written: the sub-national jurisdiction model (A1),
+the typed country-module registry and slug-collision review (A2), registry-derived output
+verification replacing regex parsing (A3), and automated restricted-claim enforcement (A4).
+
+**Published — 7 routes.** `/countries/france` plus six modules: justice-system, courts,
+law-enforcement, prosecution, investigations, sources.
+
+**Deliberately unpublished — 6 modules.** forensics, corrections, border-and-customs, oversight,
+history, timeline. Each produces no route and 404s on direct request; each carries a stated
+reason rendered on the country hub. This is the publication gate working, not a shortfall.
+
+**Coverage of France is partial and is not claimed otherwise.** There is no completion
+percentage anywhere in the codebase.
+
+**Model changes forced by real research:** five, documented with sources in
+[france-model-findings.md](../research/france-model-findings.md) — `FunctionScope`,
+`alsoExercisesLevels`, `SourceRecord.verificationMethod`, the jurisdiction coverage ceiling, and
+the registry boundary. Two limitations were accepted rather than fixed: no structured field for
+scheduled legal change (F3), and the lexical claim-guard's inability to distinguish use from
+mention (F7).
+
+**Also fixed:** a pre-existing sitewide horizontal overflow at 200% text size, caused by the
+desktop primary navigation. Not introduced by this phase; found by its accessibility testing.
+
+**Next.** A second country pilot — see the recommendation in
+[france-country-pilot-qa.md](../audits/france-country-pilot-qa.md). The open schema question to
+resolve first is F3, and the highest-value test of A4 is a country whose pages carry real
+statistics.

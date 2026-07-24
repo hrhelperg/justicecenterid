@@ -10,12 +10,13 @@ import {
   PRESENCE_STATE_LABELS,
   countriesByRegion,
 } from '@/content/countries';
+import { PUBLISHED_DOSSIERS, publishedModules } from '@/content/dossiers';
 import { PRESENCE_STATES } from '@/content/types';
 import { buildMetadata } from '@/lib/metadata';
 
 const PATH = '/countries';
 const DESCRIPTION =
-  'How JusticeCenterID models national justice systems, and the current coverage status. No country has been researched yet, and this page says so rather than implying otherwise.';
+  'How JusticeCenterID models national justice systems, and the current coverage status for each country.';
 
 export const metadata: Metadata = buildMetadata({
   title: 'Countries',
@@ -34,19 +35,44 @@ export default function CountriesPage() {
       lead={DESCRIPTION}
       description={DESCRIPTION}
     >
-      <CoverageNotice title="No country has been researched yet">
-        <p>
-          This page publishes the country <em>model</em> and the current coverage status — not
-          knowledge we do not have. Every country below is at coverage status{' '}
-          <strong>planned</strong>, which means it is in the research queue and nothing has been
-          written about it.
-        </p>
-        <p>
-          A country page appears when its modules have been researched and sourced to primary
-          material. Generating a page for every country by template would produce a few thousand
-          URLs and no knowledge, which is the failure mode this architecture exists to prevent.
-        </p>
-      </CoverageNotice>
+      {/*
+        Coverage is derived from the dossier registry, never written by hand. This notice
+        previously read "No country has been researched yet" as a literal string; it became
+        false the moment the France pilot published, which is exactly why counts on this
+        platform are computed.
+      */}
+      {PUBLISHED_DOSSIERS.length === 0 ? (
+        <CoverageNotice title="No country has been researched yet">
+          <p>
+            This page publishes the country <em>model</em> and the current coverage status — not
+            knowledge we do not have. Every country below is in the research queue and nothing
+            has been written about it.
+          </p>
+        </CoverageNotice>
+      ) : (
+        <CoverageNotice
+          title={`${PUBLISHED_DOSSIERS.length} of ${countriesByRegion().reduce((n, r) => n + r.countries.length, 0)} countries has researched coverage`}
+        >
+          <p>
+            Every other country below is at coverage status <strong>planned</strong>: it is in
+            the research queue and nothing has been written about it. A country page appears
+            only when its modules have been researched and sourced to primary material.
+          </p>
+          <ul className="mt-3 space-y-2">
+            {PUBLISHED_DOSSIERS.map((dossier) => (
+              <li key={dossier.slug}>
+                <Link href={`/countries/${dossier.slug}`} className="link-inline font-medium">
+                  {dossier.name}
+                </Link>{' '}
+                <span className="text-ink-muted">
+                  — {publishedModules(dossier).length} of {dossier.modules.length} modules
+                  researched and published; the rest are listed on the country page as gaps.
+                </span>
+              </li>
+            ))}
+          </ul>
+        </CoverageNotice>
+      )}
 
       <section aria-labelledby="model" className="mt-14">
         <SectionHeading
