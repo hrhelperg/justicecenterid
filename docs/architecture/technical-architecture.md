@@ -146,8 +146,12 @@ Rules:
 
 - `'use client'` requires a one-line justification comment naming the browser API or state
   that makes it necessary.
-- No client component may import from `src/content` directly; content is passed in as props
-  so it cannot be pulled into the client bundle.
+- No client component may import from `src/content`, **directly or transitively**; content is
+  passed in as props so it cannot be pulled into the client bundle. The transitive half of
+  this rule was violated in the original foundation: `SiteNav` imported `lib/navigation`,
+  which imports `content/sections`, so the entire section registry shipped in a 30 KB client
+  chunk on every page. `isActivePath` now lives in the content-free `lib/active-path`, and
+  the header passes `PRIMARY_NAV` down as a prop.
 - No component fetches at runtime. All data is resolved at build time.
 
 ## Configuration and secrets

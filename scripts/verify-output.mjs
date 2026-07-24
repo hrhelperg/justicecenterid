@@ -219,6 +219,100 @@ for (const file of exportedHtml) {
 }
 
 /* -------------------------------------------------------------------------- */
+/* 7. The deployed CSP permits the scripts the build actually emits           */
+/* -------------------------------------------------------------------------- */
+/* The original foundation shipped `script-src 'self'` while Next inlined 17            */
+/* `self.__next_f.push(...)` bootstrap scripts per page. Every one would have been      */
+/* blocked on Netlify: no hydration, dead mobile navigation, and a silent failure the   */
+/* E2E suite could not see, because `npx serve` applies no CSP. This check derives the  */
+/* requirement from the real artefact so the two cannot drift apart again.              */
+
+const netlifyToml = readFileSync(join(ROOT, 'netlify.toml'), 'utf8');
+const cspDirective = netlifyToml.match(/Content-Security-Policy\s*=\s*"([^"]+)"/)?.[1];
+
+if (!cspDirective) {
+  fail('netlify.toml declares no Content-Security-Policy');
+} else {
+  const scriptSrc = cspDirective
+    .split(';')
+    .map((d) => d.trim())
+    .find((d) => d.startsWith('script-src'));
+
+  if (!scriptSrc) {
+    fail('CSP declares no script-src directive');
+  } else {
+    let inlineExecutable = 0;
+    for (const file of exportedHtml) {
+      const html = readFileSync(join(OUT, file), 'utf8');
+      for (const match of html.matchAll(/<script([^>]*)>([\s\S]*?)<\/script>/g)) {
+        if (/\ssrc=/.test(match[1])) continue;
+        if (/type="application\/ld\+json"/.test(match[1])) continue;
+        if (match[2].trim() === '') continue;
+        inlineExecutable += 1;
+      }
+    }
+
+    const permitsInline =
+      scriptSrc.includes("'unsafe-inline'") ||
+      scriptSrc.includes("'nonce-") ||
+      scriptSrc.includes("'sha256-");
+
+    if (inlineExecutable > 0 && !permitsInline) {
+      fail(
+        `the exported output contains ${inlineExecutable} executable inline <script> ` +
+          `elements, but the deployed CSP script-src does not permit inline script ` +
+          `("${scriptSrc}"). React would never hydrate on Netlify.`,
+      );
+    }
+    notes.push(`CSP script-src permits the ${inlineExecutable} inline scripts the build emits`);
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/* 8. Every same-origin asset referenced by the output actually exists        */
+/* -------------------------------------------------------------------------- */
+/* Catches the class of defect where metadata or structured data advertises a file      */
+/* that was never created — the original build declared an Organization logo at         */
+/* /wordmark.svg on all 38 pages while no such file existed.                            */
+
+const ORIGIN = 'https://justicecenterid.com';
+const missingAssets = new Map();
+
+for (const file of exportedHtml) {
+  const html = readFileSync(join(OUT, file), 'utf8');
+  const referenced = new Set();
+
+  for (const m of html.matchAll(new RegExp(`${ORIGIN}(/[^"'\\s)]*\\.[a-z0-9]{2,5})`, 'gi'))) {
+    referenced.add(m[1]);
+  }
+  for (const m of html.matchAll(
+    /(?:href|src|content)="(\/[^"]*\.(?:svg|png|jpg|jpeg|webp|ico|avif|css|js))"/gi,
+  )) {
+    referenced.add(m[1]);
+  }
+
+  for (const raw of referenced) {
+    // Next appends a cache-busting query to generated icons (`/icon.svg?icon.abc.svg`).
+    const path = raw.split(/[?#]/)[0];
+    if (path.startsWith('/_next/')) continue;
+    if (!existsSync(join(OUT, path.slice(1)))) {
+      if (!missingAssets.has(path)) missingAssets.set(path, new Set());
+      missingAssets.get(path).add(file);
+    }
+  }
+}
+
+for (const [path, pages] of missingAssets) {
+  fail(
+    `${pages.size} page(s) reference ${path}, which does not exist in the exported ` +
+      `output (e.g. ${[...pages][0]})`,
+  );
+}
+if (missingAssets.size === 0) {
+  notes.push('every same-origin asset referenced by the output exists');
+}
+
+/* -------------------------------------------------------------------------- */
 
 console.log(
   `Checked ${expectedRoutes.length} routes and ${exportedHtml.length} exported pages.`,

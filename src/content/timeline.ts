@@ -71,7 +71,7 @@ export const TIMELINE: readonly TimelineEntry[] = [
   {
     id: 'iccpr-1966',
     year: 1966,
-    displayDate: '1966',
+    displayDate: '16 December 1966',
     title: 'International Covenant on Civil and Political Rights adopted',
     description:
       'The United Nations General Assembly adopted the International Covenant on Civil and Political Rights, converting several of the Declaration’s principles into treaty obligations, including the Article 14 fair-trial guarantees.',
@@ -81,7 +81,7 @@ export const TIMELINE: readonly TimelineEntry[] = [
     claimType: 'fact',
     sources: ['iccpr'],
     uncertainty:
-      'Sources differ on whether to give the adoption date as 16 or 19 December 1966. We give the year only rather than pick between them.',
+      'Two dates circulate for this instrument and are often reported interchangeably. They mark different steps rather than a disagreement between sources: the Covenant was adopted by General Assembly resolution 2200A (XXI) on 16 December 1966 and opened for signature on 19 December 1966, which is the date recorded in the United Nations Treaty Series volume cited here.',
   },
   {
     id: 'rome-statute-1998',

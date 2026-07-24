@@ -14,6 +14,25 @@ test.describe('skip link', () => {
     await page.keyboard.press('Enter');
     await expect(page).toHaveURL(/#main$/);
     await expect(page.locator('main#main')).toBeVisible();
+
+    /*
+     * The assertions above are necessary but NOT sufficient, and this test previously
+     * stopped there while claiming in its name to check focus. Following an in-page link
+     * updates the URL and scrolls in every browser whether or not the target can hold
+     * focus, so a hash-and-visibility check passes even when the skip link does nothing for
+     * the keyboard users it exists for. It shipped broken: <main> carried no tabIndex, so
+     * focus stayed on the skip link and the next Tab went straight back into the header.
+     */
+    await expect(page.locator('main#main')).toBeFocused();
+
+    // The decisive check: the next Tab must land inside main, not back in the header.
+    await page.keyboard.press('Tab');
+    const landedInsideMain = await page.evaluate(() => {
+      const active = document.activeElement;
+      const main = document.querySelector('main#main');
+      return Boolean(active && main && main.contains(active));
+    });
+    expect(landedInsideMain, 'after the skip link, Tab must move into main').toBe(true);
   });
 });
 

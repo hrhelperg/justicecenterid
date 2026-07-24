@@ -7,16 +7,20 @@
  *   1. `usePathname` for active-navigation state and `aria-current`.
  *   2. Disclosure state, focus management, and Escape handling for the mobile panel.
  *
- * It receives no content as props beyond the navigation registry, so no content module is
- * pulled into the client bundle.
+ * Navigation items arrive as a PROP from the server-rendered header, and `isActivePath` is
+ * imported from a content-free module. Both are deliberate: this component previously
+ * imported `@/lib/navigation`, which imports `SECTIONS` from `@/content/sections`, so the
+ * entire section content registry was bundled into the client JavaScript on every page.
+ * Nothing imported here may reach a content module.
  */
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useCallback, useEffect, useId, useRef, useState } from 'react';
-import { PRIMARY_NAV, isActivePath } from '@/lib/navigation';
+import { isActivePath } from '@/lib/active-path';
+import type { NavItem } from '@/lib/navigation';
 
-export function SiteNav() {
+export function SiteNav({ items }: { items: readonly NavItem[] }) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const panelId = useId();
@@ -47,7 +51,7 @@ export function SiteNav() {
     <>
       <nav aria-label="Primary" className="hidden nav:block">
         <ul className="flex items-center gap-1">
-          {PRIMARY_NAV.map((item) => {
+          {items.map((item) => {
             const active = isActivePath(pathname, item.href);
             return (
               <li key={item.href}>
@@ -97,7 +101,7 @@ export function SiteNav() {
       >
         <nav aria-label="Primary (mobile)" className="px-5 py-3 sm:px-8">
           <ul className="flex flex-col">
-            {PRIMARY_NAV.map((item) => {
+            {items.map((item) => {
               const active = isActivePath(pathname, item.href);
               return (
                 <li key={item.href} className="border-b border-line last:border-b-0">

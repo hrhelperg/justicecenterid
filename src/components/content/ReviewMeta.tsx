@@ -2,7 +2,12 @@ import { Badge, type BadgeTone } from '@/components/ui/Badge';
 import { formatDate } from '@/lib/content';
 import type { ReviewStatus, SafetyReview } from '@/content/types';
 
-const REVIEW_LABELS: Record<ReviewStatus, { label: string; tone: BadgeTone }> = {
+/**
+ * Exported so every surface that renders review state derives it from one place. The
+ * glossary previously hardcoded a "Fact-checked" badge on every entry regardless of the
+ * term's actual review status.
+ */
+export const REVIEW_LABELS: Record<ReviewStatus, { label: string; tone: BadgeTone }> = {
   unreviewed: { label: 'Not yet reviewed', tone: 'neutral' },
   'editorial-review': { label: 'Editorial review', tone: 'accent' },
   'fact-checked': { label: 'Fact-checked', tone: 'affirm' },
