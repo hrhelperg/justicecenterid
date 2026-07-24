@@ -101,6 +101,31 @@ describe('Germany dossier', () => {
     expect(text).toMatch(/Germany’s national police|Germany's national police/i);
   });
 
+  /*
+   * Regression guard. The independence notice hardcoded "a French public body" from the
+   * France pilot, so every Germany page disclaimed independence from the wrong state. The
+   * existing tests only checked that a disclosure existed, not what it said.
+   */
+  it('names the right country in the independence disclosure', async () => {
+    const { readFileSync, existsSync } = await import('node:fs');
+    // React splits text nodes with <!-- --> markers, so strip them before matching —
+    // asserting against raw markup would give a false pass on a broken page.
+    const textOf = (f: string) => readFileSync(f, 'utf8').replaceAll('<!-- -->', '');
+
+    const germanyFile = 'out/countries/germany/courts.html';
+    const franceFile = 'out/countries/france/courts.html';
+    if (!existsSync(germanyFile) || !existsSync(franceFile)) {
+      throw new Error('run `npm run build` before this test — it asserts on exported output');
+    }
+
+    const germany = textOf(germanyFile);
+    expect(germany, 'Germany pages must not claim independence from France').not.toMatch(
+      /not a French public body/,
+    );
+    expect(germany).toMatch(/not a German public body/);
+    expect(textOf(franceFile)).toMatch(/not a French public body/);
+  });
+
   it('discloses on the hub that only sample Länder are modelled', () => {
     const text = JSON.stringify(GERMANY!.blocks) + JSON.stringify(GERMANY!.uncertainty);
     expect(text).toMatch(/sample|Only three Länder/i);
