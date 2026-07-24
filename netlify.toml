@@ -37,8 +37,33 @@
 # Headers
 # ---------------------------------------------------------------------------
 # `headers()` in next.config.ts is ignored under static export, so security headers are
-# declared here. A strict CSP is achievable because the site loads nothing from a third
-# party: no font CDN, no analytics, no embeds.
+# declared here. The CSP is tight because the site loads nothing from a third party: no
+# font CDN, no analytics, no embeds.
+#
+# script-src MUST retain 'unsafe-inline'. This is not an oversight — it is forced by the
+# rendering model, and omitting it breaks the deployed site:
+#
+#   Next.js App Router inlines its bootstrap and RSC flight payload into every prerendered
+#   page as `<script>self.__next_f.push(...)</script>`. A production build emits 17 such
+#   inline scripts on the home page alone. Under `output: 'export'` there is no server to
+#   mint a per-request nonce, and the payload is build-specific, so subresource hashes
+#   would change on every build and silently begin blocking hydration.
+#
+#   With `script-src 'self'` alone the browser blocks all of them: React never hydrates,
+#   the mobile navigation panel is dead, and the console fills with CSP violations. The
+#   prerendered HTML still renders and every link still works, so the failure is silent —
+#   which is exactly why it survived the original build and 96 green E2E tests.
+#
+# The residual risk is bounded: the site accepts no user input, renders nothing from query
+# parameters, embeds no third-party script, and produces no dynamic HTML, so there is no
+# injection path for 'unsafe-inline' to widen. object-src 'none', base-uri 'self',
+# form-action 'self' and frame-ancestors 'none' all remain.
+#
+# Reversal criterion: if the project moves off `output: 'export'` onto the Netlify Next.js
+# runtime, switch to nonce-based script-src and drop 'unsafe-inline'.
+#
+# tests/unit/csp.test.ts asserts this directive against the inline scripts the build
+# actually emits, so the two cannot drift apart again.
 #
 # Strict-Transport-Security is deliberately NOT set yet. It should be enabled only after
 # the domain is live and confirmed HTTPS-only.
@@ -51,7 +76,7 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
     Cross-Origin-Opener-Policy = "same-origin"
-    Content-Security-Policy = "default-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; font-src 'self'; connect-src 'self'; object-src 'none'; upgrade-insecure-requests"
+    Content-Security-Policy = "default-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; font-src 'self'; connect-src 'self'; object-src 'none'; upgrade-insecure-requests"
 
 [[headers]]
   for = "/_next/static/*"
