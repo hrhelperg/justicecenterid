@@ -692,6 +692,37 @@ export const SOURCES: readonly SourceRecord[] = [
     translationStatus: 'not-a-translation',
     note: "The Ministry of Justice database's own statement of policy: the English translations it provides 'are to be used solely as reference materials to aid in the understanding of Japanese laws and regulations', and 'only the original Japanese texts have legal effect'. This is the source for the translation-status treatment applied across the Japan pages: every Japanese statute is cited in English for reference only, with Japanese authoritative. Supports the translation-authority position, not any institutional fact in itself.",
   },
+
+  /* ------------------------------------------------------------------------ */
+  /* Brazil (federal, multi-force policing pilot) — verified 2026-07-25        */
+  /* ------------------------------------------------------------------------ */
+  /*
+   * TRANSLATION INTEGRITY. Brazilian law is authoritative only in PORTUGUESE. The Presidência
+   * da República (Planalto) publishes the Constitution and the codes in Portuguese, and hosts
+   * NO official English translation; the English on these pages is a descriptive rendering, and
+   * every Brazilian source below is cited in its authoritative Portuguese. Because the sources
+   * are the originals rather than translations, translationStatus is left at its default
+   * (`not-a-translation`).
+   *
+   * ACCESS. planalto.gov.br, portal.stf.jus.br and cnj.jus.br reset or 403 an ordinary
+   * programmatic fetch, but serve the full text to a browser user-agent. Every Planalto source
+   * below (Constitution, Lei de Execução Penal, Código de Processo Penal) was retrieved with a
+   * browser user-agent and read in full, and its quotations were extracted verbatim from that
+   * text; the SISDEPEN statistic was extracted from the primary PDF. No verbatim quotation is
+   * attributed to a source that was not read in full.
+   */
+  {
+    id: 'br-cf-1988',
+    type: 'legislation',
+    title: 'Constituição da República Federativa do Brasil de 1988',
+    publisher: 'Presidência da República — Casa Civil (Planalto)',
+    url: 'https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm',
+    publishedOn: '1988-10-05',
+    verifiedOn: '2026-07-25',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'BR',
+    note: "The authoritative Portuguese text, read in full. THE backbone of the Brazil pages. Supports: the federation of the Union, the States, the Federal District and the Municipalities, 'todos autônomos' (Art. 18; Art. 1); separation of powers (Art. 2); the criminal-justice guarantees of Art. 5 — devido processo legal (LIV), contraditório e ampla defesa (LV), presumption of innocence 'ninguém será considerado culpado até o trânsito em julgado de sentença penal condenatória' (LVII), and habeas corpus (LXVIII); that penal and procedural law are the EXCLUSIVE (privativa) competence of the Union (Art. 22, I) while direito penitenciário is CONCURRENT (Art. 24, I) and the States hold the reserved/residual competences (Art. 25 §1); public security through the six órgãos of Art. 144 (I polícia federal; II rodoviária federal; III ferroviária federal; IV polícias civis; V polícias militares e corpos de bombeiros militares; VI polícias penais, added by EC 104/2019), with the polícias civis 'dirigidas por delegados de polícia de carreira' exercising 'as funções de polícia judiciária e a apuração de infrações penais, exceto as militares' (§4), the polícias militares holding 'a polícia ostensiva e a preservação da ordem pública' (§5), and both subordinate to the Governors (§6); the Judiciary organs of Art. 92 (STF, CNJ, STJ, TST, TRFs/Juízes Federais, and the labour, electoral, military and state courts), the STF as guardian of the Constitution (Art. 102), the CNJ (Art. 103-B) and state justice (Art. 125); the Ministério Público as 'instituição permanente, essencial à função jurisdicional do Estado' defending 'a ordem jurídica, o regime democrático e os interesses sociais e individuais indisponíveis', with autonomy and the principles of unidade, indivisibilidade e independência funcional (Art. 127), its structure MPU (MPF/MPT/MPM/MPDFT) + MPE (Art. 128), its functions including promoting 'privativamente, a ação penal pública' (Art. 129 I) and the inquérito civil / ação civil pública for interesses difusos e coletivos (Art. 129 III), and the CNMP (Art. 130-A); and that the Union organizes and maintains the Judiciary, Ministério Público and police of the Federal District (Art. 21, XIII–XIV). The Portuguese text alone has legal effect.",
+  },
 ];
 
 const SOURCE_INDEX = new Map(SOURCES.map((source) => [source.id, source]));

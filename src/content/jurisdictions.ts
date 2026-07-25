@@ -750,6 +750,131 @@ export const JURISDICTIONS: readonly JurisdictionRecord[] = [
       'An ordinary prefecture for policing purposes, included as the contrast to Tokyo. Osaka is a "fu" (府, one of two urban prefectures alongside Kyoto), and its police — the Osaka Prefectural Police — follows the STANDARD prefectural-police model under a Prefectural Public Safety Commission, unlike Tokyo\'s specially named Metropolitan Police Department. The structural facts are identical to Tokyo\'s (policing `own`; courts, prosecution and corrections `national`); the pair demonstrates that this pattern is the general rule across the 47 prefectures, not a Tokyo peculiarity. No Osaka-specific institutional detail beyond the national Police Act framework is asserted.',
     status: 'published',
   },
+
+  /* ---------------------------------------------------------------------- */
+  /* Brazil — federal, plus one ordinary state and the sui-generis DF        */
+  /* ---------------------------------------------------------------------- */
+  /*
+   * Brazil is a federation (Art. 18: União, Estados, Distrito Federal e Municípios, "todos
+   * autônomos"). It reuses machinery every earlier pilot built, and forces no new field:
+   *
+   *  - The LAW is unified but the INSTITUTIONS are decentralised. Penal and procedural law are
+   *    the EXCLUSIVE competence of the Union (Art. 22, I), so the states administer justice
+   *    without writing the criminal law — the Germany "federal law, sub-national administration"
+   *    split, sharpened. This is why the states' `legalSystemScope` is `national` (as Japan's
+   *    prefectures were) while policing, courts, prosecution and corrections are `own`, and why
+   *    `legislativeCompetence['legal-system']` is `exclusive-federal` (contrast the United
+   *    States, where states write their own criminal codes → `concurrent`).
+   *
+   *  - The states hold RESERVED/residual competence (Art. 25 §1), so `authorityBasis` is
+   *    `reserved-powers` — the field the US pilot added, reused unchanged.
+   *
+   *  - FUNCTION-SPLIT POLICING is INSTITUTIONAL, not a jurisdiction-scope question. A single
+   *    state runs BOTH an investigative Polícia Civil (Art. 144 §4) and a preventive Polícia
+   *    Militar (Art. 144 §5); `policingScope: 'own'` says the state administers its own policing,
+   *    and the two-force composition is described in prose, exactly as the US pilot described its
+   *    thousands of agencies under one scope. No "force" structure is invented.
+   *
+   *  - The sui-generis Distrito Federal accumulates state AND municipal competences (Art. 32 §1)
+   *    — recorded with `alsoExercisesLevels`, the field France added for Martinique — while its
+   *    police, courts and Ministério Público are organised and maintained by the UNION
+   *    (Art. 21, XIII–XIV), which is why its policing/court/prosecution scopes are `shared`.
+   *
+   * Samples: the federation, one ordinary state (São Paulo) and the Federal District. Not all
+   * 26 states; no public state pages.
+   */
+  {
+    id: 'br',
+    slug: 'brazil',
+    name: 'Federative Republic of Brazil',
+    shortName: 'Brazil',
+    countryCode: 'BR',
+    level: 'federal',
+    // The legal system is national and unified — criminal law is the Union's exclusive
+    // competence (Art. 22, I) — so, unlike the United States, legalSystemScope is `own` at the
+    // federal level and `national` at the state level, not `shared`.
+    legalSystemScope: 'own',
+    policingScope: 'shared',
+    courtScope: 'shared',
+    prosecutionScope: 'shared',
+    correctionalScope: 'shared',
+    legislativeCompetence: {
+      'legal-system': 'exclusive-federal',
+      policing: 'concurrent',
+      courts: 'concurrent',
+      prosecution: 'concurrent',
+      corrections: 'concurrent',
+    },
+    temporalScope: 'current',
+    coverage: 'partial',
+    sources: ['br-cf-1988'],
+    notes:
+      'A federation of the Union, the states, the Federal District and the municipalities, all autonomous (Art. 18). Its defining feature for this platform: the substantive criminal LAW is unified and federal — penal and procedural law are the exclusive (privativa) competence of the Union (Art. 22, I) — while the INSTITUTIONS are decentralised. Policing, courts, public prosecution and prisons all exist at both the federal and the state level, so each is `shared`: there is a federal Polícia Federal alongside state Polícias Civis and Militares; federal justice alongside state justice; the Ministério Público da União alongside the state Ministérios Públicos; and a small federal prison system alongside the state systems that hold the overwhelming majority of prisoners. legalSystemScope is `own` because the national legal order is unified rather than split between federal and state law.',
+    status: 'published',
+  },
+  {
+    id: 'br-sp',
+    slug: 'sao-paulo',
+    name: 'State of São Paulo',
+    shortName: 'São Paulo',
+    countryCode: 'BR',
+    level: 'state',
+    parentJurisdictionId: 'br',
+    authorityBasis: 'reserved-powers',
+    // The criminal law is federal (Art. 22, I), so the state has no legal system of its own.
+    legalSystemScope: 'national',
+    policingScope: 'own',
+    courtScope: 'own',
+    prosecutionScope: 'own',
+    correctionalScope: 'own',
+    legislativeCompetence: {
+      'legal-system': 'exclusive-federal',
+      policing: 'concurrent',
+      courts: 'concurrent',
+      prosecution: 'concurrent',
+      corrections: 'concurrent',
+    },
+    temporalScope: 'current',
+    coverage: 'in-research',
+    sources: ['br-cf-1988'],
+    notes:
+      "An ordinary state, the most populous, included as the standard model. Like every Brazilian state it administers its own institutions — an investigative Polícia Civil and a preventive Polícia Militar (both subordinate to the Governor, Art. 144 §6), its own court system (the Tribunal de Justiça), its own Ministério Público, and its own prison system — but it does NOT write the criminal law it enforces: penal and procedural law are the Union's exclusive competence (Art. 22, I), which is why legalSystemScope is `national` and legislativeCompetence for the legal system is `exclusive-federal`. This is the sharp contrast with a United States state, which writes its own criminal code. The two-force police structure is described on the law-enforcement page, not encoded as separate records; no São Paulo-specific institutional detail beyond this constitutional structure is asserted.",
+    status: 'published',
+  },
+  {
+    id: 'br-df',
+    slug: 'distrito-federal',
+    name: 'Federal District (Distrito Federal)',
+    shortName: 'Distrito Federal',
+    countryCode: 'BR',
+    level: 'special',
+    parentJurisdictionId: 'br',
+    // Art. 32 §1: the DF holds the legislative competences reserved to BOTH the states and the
+    // municipalities — the France `alsoExercisesLevels` case, reused.
+    alsoExercisesLevels: ['state', 'municipality'],
+    authorityBasis: 'reserved-powers',
+    legalSystemScope: 'national',
+    // Its police, courts and Ministério Público are organised and maintained by the UNION
+    // (Art. 21, XIII–XIV) even though the police answer to the DF Governor (Art. 144 §6) — a
+    // genuinely shared arrangement, hence `shared` rather than `own`.
+    policingScope: 'shared',
+    courtScope: 'shared',
+    prosecutionScope: 'shared',
+    correctionalScope: 'own',
+    legislativeCompetence: {
+      'legal-system': 'exclusive-federal',
+      policing: 'concurrent',
+      courts: 'concurrent',
+      prosecution: 'concurrent',
+      corrections: 'concurrent',
+    },
+    temporalScope: 'current',
+    coverage: 'in-research',
+    sources: ['br-cf-1988'],
+    notes:
+      "The Federal District — a sui-generis federative unit, not a state and constitutionally barred from being divided into municipalities (Art. 32). It accumulates the legislative competences reserved to both the states and the municipalities (Art. 32 §1), recorded with alsoExercisesLevels. What makes it distinctive for this platform is that its Polícia Civil, Polícia Militar and Corpo de Bombeiros, and its Judiciary and Ministério Público, are organised and maintained by the UNION (Art. 21, XIV and XIII), while the police nonetheless answer to the DF Governor (Art. 144 §6) — so policing, courts and prosecution are `shared` between the DF and the Union rather than wholly the DF's own. Its Ministério Público, the MPDFT, is a branch of the Ministério Público da União, not a state MP. No DF-specific institutional detail beyond this constitutional arrangement is asserted.",
+    status: 'published',
+  },
 ];
 
 /* -------------------------------------------------------------------------- */
