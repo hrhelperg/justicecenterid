@@ -48,6 +48,24 @@ Conditionally required:
 - `publishedOn` — mandatory for any source supporting a time-sensitive claim.
 - `accessedOn` — for sources whose content may change at the URL.
 - `note` — the scope of what this source actually supports.
+- `translationStatus` / `authoritativeLanguage` — for a source that is a **translation**. Added
+  by the Japan pilot.
+
+### Translation status (Japan pilot)
+
+When a source is cited in one language but is legally authoritative in another, that must be
+recorded, not left implicit. The Ministry of Justice's Japanese Law Translation database states
+its English texts "are to be used solely as reference materials … with only the original
+Japanese texts having legal effect", so the Constitution and the Code of Criminal Procedure are
+cited with `translationStatus: 'official-reference'` and `authoritativeLanguage: 'ja'`. The
+pages then rely on the English for what a provision does, never for its precise wording.
+
+`translationStatus` is one of `not-a-translation` (the default — an institution's own English
+description of itself, left unset), `official-reference` (an official but non-authoritative
+translation), `official-authoritative` (a translation that itself has legal effect) or
+`unofficial`. The regression suite asserts that every Japanese `legislation` source carries
+`official-reference` + `ja`, so the distinction cannot silently rot. Do not present a reference
+translation, a literal gloss, a romanization or a Western analogy as an authoritative name.
 
 ### The `note` field
 

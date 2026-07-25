@@ -310,5 +310,45 @@ and not Northern Ireland.
 date, "not about France" note, missing Ireland demonym), each shown wrongly on every country hub
 and each now regression-tested.
 
-**Next.** Country pilot six — Japan (`feat/japan-prefectural-country-pilot`) — per the programme
-sequence. Awaits human review and merge of this branch first.
+**Next.** Country pilot six — Japan (`feat/japan-prefectural-country-pilot`). This branch was
+reviewed and merged into `main` (PR #6), and Japan built on it.
+
+## Phase 6 — Japan prefectural country pilot (delivered 2026-07-25)
+
+Branch `feat/japan-prefectural-country-pilot`, based on `3bce176` (Ireland merge).
+
+**Purpose.** Test a unitary, civil-law state whose **police are administered sub-nationally**
+(the first such country), plus the **translation integrity** discipline none of the
+English/French pilots needed.
+
+**Two schema additions, both evidence-driven.** `translationStatus` + `authoritativeLanguage`
+on `SourceRecord` (A1: Japanese statutes are authoritative only in Japanese); a `prefecture`
+jurisdiction level (A3). A structured coordination/command relationship was **declined** — scope
+alone (national `policingScope: 'shared'`, prefectural `'own'`) states it honestly, consistent
+with the US finding. Each prefecture carries `legislativeCompetence: { policing: 'framework' }` —
+administered prefecturally, legislated nationally — reusing the Germany administration/legislation
+split for policing. Prefectural samples: **two** (Tokyo, the special Keishicho case; Osaka, the
+ordinary model), not all 47, no public prefecture pages.
+
+**Published — 8 routes.** hub, justice-system, law-enforcement, courts, prosecution,
+investigations, corrections, sources.
+
+**Deferred — 5 modules.** forensics, border-and-customs, oversight (unlike Ireland — no recent
+reform to anchor it), history, timeline.
+
+**No restricted claim (A4 deferred).** Japan's official prison figures are published only in
+linked spreadsheets and an oversized White Paper PDF; no scoped, verifiable statistic could be
+obtained, so the corrections page publishes none and says so.
+
+**Accessibility.** Inline Japanese script is wrapped in `<span lang="ja">` (WCAG 3.1.2) via a
+shared `ScriptText` component and `splitJapaneseRuns`; Latin-only text is byte-for-byte
+unchanged, so other country pages are unaffected.
+
+**Correctness discipline.** The NPA is never "Japan's FBI"; prefectural police are not branches
+of it; the lay judge (saiban-in) system is a mixed panel for certain serious cases only, not a
+jury and not for all trials; no Minister-of-Justice direction over prosecutors is asserted from
+an untranslated Act.
+
+**Next.** Country pilot seven — Brazil — per the programme sequence. Awaits human review and
+merge of this branch first. Recommended Brazil preconditions are in
+[japan-country-pilot-qa.md](../audits/japan-country-pilot-qa.md) and the final report.

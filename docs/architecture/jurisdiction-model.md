@@ -18,10 +18,14 @@ departments or its 34,000+ communes.
 ## Levels
 
 `international` · `supranational` · `country` · `federal` · `constituent-country` · `state` ·
-`province` · `region` · `department` · `county` · `municipality` · `local` · `territory` ·
-`special`
+`province` · `region` · `department` · `prefecture` · `county` · `municipality` · `local` ·
+`territory` · `tribal` · `special`
 
 A flat vocabulary, sized to the systems we can foresee needing. Adding a level later is cheap.
+`tribal` was added by the United States pilot (a separate sovereign, not a subdivision — see
+authority basis) and `prefecture` by the Japan pilot: a Japanese prefecture (todofuken) is the
+first-level sub-national division and, decisively for this platform, the level at which police
+are administered, so `province` would have obscured what the pilot tests.
 
 `alsoExercisesLevels` handles a body that exercises more than one tier's competences —
 required by Martinique and Guyane, which are _collectivités territoriales uniques_.
@@ -61,6 +65,17 @@ The heart of the model. Recorded separately for `legalSystemScope`, `policingSco
 The `none` / `unknown` distinction is the model's most important property. `none` is a
 researched finding; `unknown` is an admission. Collapsing them would let an unresearched
 territory silently inherit its parent's arrangement.
+
+**Coordination without command (Japan pilot).** Japan is unitary, but its police are
+administered prefecturally while courts, prosecution and corrections stay national. This is
+recorded with scope alone: the national record (`jp`) has `policingScope: 'shared'` — the
+National Police Agency coordinates and supervises on matters of national concern — while each
+prefecture (`jp-tokyo`, `jp-osaka`) has `policingScope: 'own'` and `national` for the other
+three functions. No "commands" relationship field was added; encoding one would assert an
+operational chain of command that does not exist. Each prefecture also carries
+`legislativeCompetence: { policing: 'framework' }` — police are administered prefecturally but
+legislated nationally (the Police Act), the same administration-≠-legislation split the Germany
+pilot recorded for courts, reused rather than reinvented.
 
 ## Tier records vs unit records
 
