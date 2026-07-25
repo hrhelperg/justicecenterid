@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Fragment } from 'react';
+import { ScriptText } from '@/components/content/ScriptText';
 import { Callout } from '@/components/ui/Callout';
 import { DefinitionList } from '@/components/ui/DefinitionList';
 import { parseInline } from '@/lib/content';
@@ -20,10 +21,10 @@ function InlineText({ text }: { text: string }) {
         <Fragment key={index}>
           {segment.href ? (
             <Link href={segment.href} className="link-inline">
-              {segment.text}
+              <ScriptText text={segment.text} />
             </Link>
           ) : (
-            segment.text
+            <ScriptText text={segment.text} />
           )}
         </Fragment>
       ))}

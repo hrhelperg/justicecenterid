@@ -177,6 +177,14 @@ export const JURISDICTION_LEVELS = [
   'province',
   'region',
   'department',
+  /*
+   * Added by the Japan pilot. A Japanese prefecture (todofuken) is the first-level sub-national
+   * division and, crucially for this platform, the level at which police are administered.
+   * `province` would be the nearest existing fit, but Japan's prefectures are institutionally
+   * central to the pilot (prefectural police, prefectural public safety commissions), so a
+   * `province` label would obscure exactly what the pilot is testing. Adding a level is cheap.
+   */
+  'prefecture',
   'county',
   'municipality',
   'local',
@@ -530,6 +538,27 @@ export interface SourceRecord {
   verificationMethod?: 'content-confirmed' | 'status-probe' | 'offline';
   /** ISO 3166-1 alpha-2, or 'INT' for international instruments. */
   jurisdiction?: string;
+  /**
+   * For a source that is a TRANSLATION, its status. Forced by the Japan pilot.
+   *
+   * The Japanese Law Translation database (Ministry of Justice) states that its English texts
+   * are "to be used solely as reference materials … with only the original Japanese texts
+   * having legal effect". That is a machine-checkable fact the note field could only carry as
+   * prose, and translation integrity is the whole point of the Japan phase — so the
+   * distinction earns a structured, testable field.
+   *
+   * `not-a-translation` is the default meaning for a source in its own authoritative language
+   * (most sources), and is left unset there. The value matters when a source is cited in a
+   * language other than the one whose text has legal effect.
+   */
+  translationStatus?:
+    'not-a-translation' | 'official-reference' | 'official-authoritative' | 'unofficial';
+  /**
+   * The language (BCP-47 / ISO 639) whose text has legal effect, where that differs from the
+   * language cited. Recorded alongside `translationStatus` so a reader and a test can both see
+   * that, e.g., a Japanese statute cited in English English is authoritative only in Japanese.
+   */
+  authoritativeLanguage?: string;
   /**
    * What this source actually supports, and what it does not. The most important field
    * for accuracy: it stops a source being reused for a claim it does not cover.

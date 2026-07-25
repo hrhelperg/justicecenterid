@@ -3,6 +3,7 @@ import type { CountryDossier, CountryModuleContent } from '../types';
 import { FRANCE } from './france';
 import { GERMANY } from './germany';
 import { IRELAND } from './ireland';
+import { JAPAN } from './japan';
 import { UNITED_STATES } from './united-states';
 
 /** Every country dossier. A country appears here only once it has been researched. */
@@ -11,6 +12,7 @@ export const COUNTRY_DOSSIERS: readonly CountryDossier[] = [
   GERMANY,
   UNITED_STATES,
   IRELAND,
+  JAPAN,
 ];
 
 export const PUBLISHED_DOSSIERS: readonly CountryDossier[] = COUNTRY_DOSSIERS.filter(

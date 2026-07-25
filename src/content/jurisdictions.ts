@@ -648,6 +648,108 @@ export const JURISDICTIONS: readonly JurisdictionRecord[] = [
       'The sovereign State of Ireland — a unitary, common-law state. Justice is administered nationally: a single national police service (An Garda Síochána), a single independent prosecutor (the Director of Public Prosecutions), one court system administered by the Courts Service, and one prison service. There is no sub-national tier that administers any of these separately, which is why a single country-level record states the arrangement accurately. `IE` is not the island of Ireland and not Northern Ireland; that scope distinction is stated on every Ireland page.',
     status: 'published',
   },
+
+  /* ---------------------------------------------------------------------- */
+  /* Japan — national and two prefectural samples                           */
+  /* ---------------------------------------------------------------------- */
+  /*
+   * Japan is a UNITARY state, structurally like France, with one decisive difference that the
+   * whole pilot exists to record: police are administered at the PREFECTURAL level, not the
+   * national one. So unlike Ireland (one country record, everything `own`) Japan needs the
+   * national record PLUS prefectural samples, and its national `policingScope` is `shared`
+   * rather than `own` — the national bodies coordinate, set standards and supervise matters of
+   * national concern, while the 47 prefectures administer operational policing.
+   *
+   * COORDINATION, NOT COMMAND (A2). The National Public Safety Commission and National Police
+   * Agency do NOT operationally command the prefectural police in normal times; the NPA
+   * "controls and supervises" them only "on matters of national concern" and sets general
+   * standards. That relationship is captured HONESTLY by scope alone — national `shared`,
+   * prefectural `own` — with no invented "commands" relationship. This follows the United
+   * States finding: a relationship the scope fields already express does not earn a new field.
+   *
+   * PREFECTURAL SAMPLES (A3). Two only — Tokyo (a special case, the Metropolitan Police
+   * Department / Keishichō) and Osaka (the standard prefectural-police model). Not all 47.
+   * These are STRUCTURAL records resting on the national Police Act framework the NPA report
+   * describes; no prefecture-specific institutional detail beyond that framework is asserted.
+   */
+  {
+    id: 'jp',
+    slug: 'japan',
+    name: 'Japan',
+    shortName: 'Japan',
+    countryCode: 'JP',
+    level: 'country',
+    legalSystemScope: 'own',
+    // Policing is the one function Japan does NOT decide wholly at the national level: the
+    // national bodies coordinate and supervise, the prefectures administer. Hence `shared`.
+    policingScope: 'shared',
+    courtScope: 'own',
+    prosecutionScope: 'own',
+    correctionalScope: 'own',
+    temporalScope: 'current',
+    coverage: 'partial',
+    sources: ['jp-constitution', 'jp-npa-police-of-japan-2020', 'jp-courts-judicial-system'],
+    notes:
+      'The State of Japan — a unitary, civil-law state under the 1946 Constitution. Courts, public prosecution and corrections are organised and administered nationally (courtScope, prosecutionScope and correctionalScope are `own` at this level, with no sub-national tier administering them). Policing is the exception, which is why policingScope is `shared`: the National Public Safety Commission and the National Police Agency form the national police organisation, but the Police Act empowers them to "control and supervise prefectural police forces on matters of national concern" and to set general standards — NOT to run day-to-day policing, which each of the 47 prefectures administers through its own prefectural police and prefectural public safety commission. The national/prefectural split is recorded structurally, not as a chain of command.',
+    status: 'published',
+  },
+  {
+    id: 'jp-tokyo',
+    slug: 'tokyo',
+    name: 'Tokyo Metropolis (東京都)',
+    shortName: 'Tokyo',
+    countryCode: 'JP',
+    level: 'prefecture',
+    parentJurisdictionId: 'jp',
+    // A unitary state: prefectural authority is derived within the national constitutional
+    // order (local self-government is guaranteed by the Constitution but its organisation is
+    // "fixed by law"), exactly as France's départements are treated — hence `delegated`, not
+    // `reserved-powers` (US states) and not `inherent-sovereign` (tribal nations).
+    authorityBasis: 'delegated',
+    legalSystemScope: 'national',
+    // The point of the pilot: the prefecture administers its OWN police.
+    policingScope: 'own',
+    courtScope: 'national',
+    prosecutionScope: 'national',
+    correctionalScope: 'national',
+    // Police administration is `own`, but the framework is the national Police Act — the same
+    // administration/legislation divergence the Germany pilot recorded for courts. Only the
+    // policing key is set; the other functions are national at this level and legislate nowhere
+    // here, so no competence key is asserted for them.
+    legislativeCompetence: {
+      policing: 'framework',
+    },
+    temporalScope: 'current',
+    coverage: 'in-research',
+    sources: ['jp-npa-police-of-japan-2020'],
+    notes:
+      'Tokyo is a special case among the prefectures. It is a "to" (都, metropolis), one of the four types of prefecture (to, dō, fu, ken), and its police force is the Metropolitan Police Department (Keishichō, 警視庁) — NOT a branch of the National Police Agency but the prefectural police of Tokyo, distinctive because of its size and its position in the capital. Recorded to show that a prefecture administers its own police (policingScope `own`) while courts, prosecution and prisons remain national (`national`). No Tokyo-specific institutional detail beyond this structural point is asserted; the record rests on the national Police Act framework the NPA report describes.',
+    status: 'published',
+  },
+  {
+    id: 'jp-osaka',
+    slug: 'osaka',
+    name: 'Osaka Prefecture (大阪府)',
+    shortName: 'Osaka',
+    countryCode: 'JP',
+    level: 'prefecture',
+    parentJurisdictionId: 'jp',
+    authorityBasis: 'delegated',
+    legalSystemScope: 'national',
+    policingScope: 'own',
+    courtScope: 'national',
+    prosecutionScope: 'national',
+    correctionalScope: 'national',
+    legislativeCompetence: {
+      policing: 'framework',
+    },
+    temporalScope: 'current',
+    coverage: 'in-research',
+    sources: ['jp-npa-police-of-japan-2020'],
+    notes:
+      'An ordinary prefecture for policing purposes, included as the contrast to Tokyo. Osaka is a "fu" (府, one of two urban prefectures alongside Kyoto), and its police — the Osaka Prefectural Police — follows the STANDARD prefectural-police model under a Prefectural Public Safety Commission, unlike Tokyo\'s specially named Metropolitan Police Department. The structural facts are identical to Tokyo\'s (policing `own`; courts, prosecution and corrections `national`); the pair demonstrates that this pattern is the general rule across the 47 prefectures, not a Tokyo peculiarity. No Osaka-specific institutional detail beyond the national Police Act framework is asserted.',
+    status: 'published',
+  },
 ];
 
 /* -------------------------------------------------------------------------- */

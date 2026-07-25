@@ -53,6 +53,7 @@ const DEMONYMS: Record<string, string> = {
   DE: 'a German public body',
   US: 'a United States government body',
   IE: 'an Irish government body',
+  JP: 'a Japanese government body',
 };
 
 function independentOfDemonym(dossier: CountryDossier): string {
