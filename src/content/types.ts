@@ -181,9 +181,52 @@ export const JURISDICTION_LEVELS = [
   'municipality',
   'local',
   'territory',
+  /*
+   * Added by the United States pilot. A tribal nation is not a state, a territory or a special
+   * subdivision — it is a separate sovereign. Filing it under `special` (the previous grab-bag)
+   * would group an inherent sovereign with administrative special-status regions and quietly
+   * misdescribe it. See `authorityBasis`.
+   */
+  'tribal',
   'special',
 ] as const;
 export type JurisdictionLevel = (typeof JURISDICTION_LEVELS)[number];
+
+/**
+ * Where a jurisdiction's authority comes from — as distinct from where it geographically sits.
+ *
+ * Forced by the United States pilot. The parent link (`parentJurisdictionId`) had one meaning
+ * in the France and Germany pilots: the child derives its competences from the parent (a
+ * département from the Republic, a Land from the federation, both under the national
+ * constitution). The US breaks that, because geographic inclusion is not legal subordination:
+ *
+ *   - A tribal nation sits geographically within the United States and usually within a state,
+ *     but its sovereignty is INHERENT — it predates the Constitution and is not derived from
+ *     the federal government. Recording its parent as `us` without this field would assert that
+ *     a tribe is a subdivision of the federal government, which is false and is exactly the
+ *     error the platform exists to prevent.
+ *   - The states hold RESERVED powers (Tenth Amendment): authority not delegated to the
+ *     federation is reserved to them, the inverse of a system where sub-national bodies derive
+ *     their powers from the centre.
+ *   - The District of Columbia is under Congress's PLENARY authority — neither a reserved-power
+ *     state nor an inherent sovereign.
+ *
+ * Optional. Every France and Germany record omits it and is unaffected; the default
+ * (`delegated`) is the parent-derives meaning those pilots already assumed.
+ */
+export const AUTHORITY_BASES = [
+  /** Derived from and subordinate to the parent jurisdiction. The prior default meaning. */
+  'delegated',
+  /** Powers reserved to this level; the centre holds only what is enumerated to it. */
+  'reserved-powers',
+  /** Inherent sovereignty not derived from the parent; parent link is geographic only. */
+  'inherent-sovereign',
+  /** Under the plenary authority of the national legislature; not a reserved-power unit. */
+  'federal-plenary',
+  /** Not researched. */
+  'unknown',
+] as const;
+export type AuthorityBasis = (typeof AUTHORITY_BASES)[number];
 
 /**
  * How a jurisdiction relates to one institutional function.
@@ -271,8 +314,22 @@ export interface JurisdictionRecord {
    * and picking either tier alone would be factually wrong.
    */
   alsoExercisesLevels?: JurisdictionLevel[];
-  /** Omitted only for `country`, `supranational` and `international` records. */
+  /**
+   * The parent this jurisdiction sits under.
+   *
+   * Its meaning is usually derivation — the child's competences come from the parent. But
+   * where `authorityBasis` is `inherent-sovereign`, the parent link records GEOGRAPHIC
+   * containment ONLY, not derivation of authority. A tribal nation within the United States is
+   * located within it without being a subdivision of it.
+   *
+   * Omitted only for `country`, `supranational`, `international` and `federal` records.
+   */
   parentJurisdictionId?: string;
+  /**
+   * Where this jurisdiction's authority comes from. See `AuthorityBasis`. Optional; the
+   * absence of the field means the ordinary "derived from parent" relationship.
+   */
+  authorityBasis?: AuthorityBasis;
   /*
    * The five *Scope fields answer ONE question: who administers or executes this function.
    * They do not say who legislates on it. See `legislativeCompetence`.
@@ -342,6 +399,12 @@ export interface CountryDossier {
   /** URL segment: the English country name, lowercased. */
   slug: string;
   name: string;
+  /**
+   * The name as it reads after a preposition, where it takes a definite article: "the United
+   * States", "the Netherlands". Optional; falls back to `name`. Added by the US pilot, where
+   * "Justice and public safety in United States" was ungrammatical.
+   */
+  articleName?: string;
   officialName?: string;
   /** Reader-facing summary of the hub page. */
   summary: string;

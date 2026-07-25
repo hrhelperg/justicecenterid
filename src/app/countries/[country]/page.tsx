@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: RouteParams): Promise<Metadat
   if (!dossier) return {};
 
   return buildMetadata({
-    title: `Justice and public safety in ${dossier.name}`,
+    title: `Justice and public safety in ${dossier.articleName ?? dossier.name}`,
     description: dossier.summary,
     path: `/countries/${dossier.slug}`,
   });

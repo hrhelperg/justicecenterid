@@ -240,3 +240,40 @@ scroll region is now keyboard reachable.
 
 **Next.** Country pilot three — see the recommendation in
 [germany-country-pilot-qa.md](../audits/germany-country-pilot-qa.md).
+
+---
+
+## Phase 4 — United States multilevel country pilot (delivered 2026-07-24)
+
+Branch `feat/united-states-multilevel-country-pilot`, based on `e53a8ff`.
+
+**Purpose.** The decentralisation stress test — sub-national units holding reserved rather than
+delegated powers, thousands of separately governed agencies, elected local offices, and more
+than one kind of sovereign.
+
+**One model change, evidence-forced.** `authorityBasis` distinguishes where a jurisdiction's
+authority comes from (delegated / reserved-powers / inherent-sovereign / federal-plenary) from
+where it geographically sits, so a tribal nation can be located within the United States without
+being recorded as a subdivision of it. A `tribal` level and two validation rules accompany it.
+Both `leadershipSelection` and a structured relationship field were considered and deliberately
+not added (handled in prose; the latter deferred to the Canada RCMP pilot).
+
+**Published — 8 routes.** hub, justice-system, law-enforcement, courts, prosecution,
+investigations, corrections, sources.
+
+**Deferred — 5 modules.** forensics, border-and-customs, oversight, history, timeline. History
+and oversight are deferred because a national summary would erase the state, tribal and racial
+complexity that makes them matter.
+
+**One real restricted claim** — the BJS yearend-2023 prison population (1,254,200), with the
+prison/jail distinction, the fifty-state aggregation, and the jurisdiction-not-custody basis all
+recorded.
+
+**Samples.** Federal, California, Louisiana (parishes), the District of Columbia, and tribal
+jurisdiction as a category. No public state or tribal pages.
+
+**Also fixed.** The independence-notice demonym and the "in the United States" article grammar —
+both found by reading the rendered pages, neither caught by any test.
+
+**Next.** Country pilot five — Ireland (`feat/ireland-common-law-country-pilot`) — per the
+programme sequence. Awaits human review and merge of this branch first.

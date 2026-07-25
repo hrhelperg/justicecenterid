@@ -459,6 +459,159 @@ export const JURISDICTIONS: readonly JurisdictionRecord[] = [
       'Included specifically because it maintains an intermediate administrative tier (Regierungsbezirke) that the city-states do not have at all. That asymmetry is the point: the German sub-national structure is not a single ladder repeated sixteen times, so a tier record of the kind used for France would misdescribe the country. No Regierungsbezirk record is created here, because their powers have not been researched and their existence varies by Land. NRW-specific institutional detail has NOT been researched.',
     status: 'published',
   },
+
+  /* ---------------------------------------------------------------------- */
+  /* United States — federal level                                          */
+  /* ---------------------------------------------------------------------- */
+  /*
+   * SAMPLE SELECTION. Five records, each chosen for a distinct model test, not for size:
+   *   - `us`         the federal level, to test a federation whose sub-national units hold
+   *                  RESERVED rather than delegated powers;
+   *   - `us-ca`      California, a state with elected county sheriffs and district attorneys —
+   *                  tests a state that legislates AND administers its own justice system, the
+   *                  sharp contrast with Germany where the Länder administer federal law;
+   *   - `us-la`      Louisiana, whose county-equivalent is the PARISH — tests "not every state
+   *                  has counties" and that a shared function can have a different local name;
+   *   - `us-dc`      the District of Columbia — tests a non-state jurisdiction under Congress's
+   *                  plenary authority, neither a reserved-power state nor a sovereign;
+   *   - `us-tribal`  tribal jurisdiction as a category — the reason `authorityBasis` exists.
+   *
+   * No record is created for any county, municipality or specific named tribe. The 17,541
+   * general-purpose state and local law-enforcement agencies (BJS CSLLEA 2018) are the reason
+   * a per-unit model cannot be attempted for the US at this depth; the sample tests the model
+   * without pretending to enumerate the country.
+   */
+  {
+    id: 'us',
+    slug: 'united-states',
+    name: 'United States of America',
+    shortName: 'United States',
+    countryCode: 'US',
+    level: 'federal',
+    legalSystemScope: 'shared',
+    policingScope: 'shared',
+    courtScope: 'shared',
+    prosecutionScope: 'shared',
+    correctionalScope: 'shared',
+    legislativeCompetence: {
+      'legal-system': 'concurrent',
+      policing: 'concurrent',
+      courts: 'concurrent',
+      prosecution: 'concurrent',
+      corrections: 'concurrent',
+    },
+    temporalScope: 'current',
+    coverage: 'partial',
+    sources: ['us-const-amend-10', 'us-courts-comparing'],
+    notes:
+      'A federation in which the states, not the federal government, hold residual authority. The Tenth Amendment reserves to the states (or the people) the powers not delegated to the United States. Every modelled function is `shared`: federal institutions and state institutions both police, prosecute, adjudicate and imprison, within their own spheres. There is no single national police, no single national prosecution service, and two separate court systems — federal and state — that the US Courts describe as distinct.',
+    status: 'published',
+  },
+  {
+    id: 'us-ca',
+    slug: 'california',
+    name: 'State of California',
+    shortName: 'California',
+    countryCode: 'US',
+    level: 'state',
+    parentJurisdictionId: 'us',
+    authorityBasis: 'reserved-powers',
+    legalSystemScope: 'own',
+    policingScope: 'own',
+    courtScope: 'own',
+    prosecutionScope: 'own',
+    correctionalScope: 'own',
+    legislativeCompetence: {
+      'legal-system': 'concurrent',
+      policing: 'exclusive-subnational',
+      courts: 'exclusive-subnational',
+      prosecution: 'exclusive-subnational',
+      corrections: 'exclusive-subnational',
+    },
+    temporalScope: 'current',
+    coverage: 'in-research',
+    sources: ['us-const-amend-10', 'us-courts-comparing'],
+    notes:
+      'A sample state. In the US a state both LEGISLATES and ADMINISTERS its own courts, police, prosecution and prisons — the US Courts state that each state establishes its own courts through its own constitution and laws. This is the sharp contrast with Germany, where the Länder administer courts organised by FEDERAL law: courts.legislativeCompetence is `exclusive-subnational` here and was `concurrent` for a German Land. County sheriffs and district attorneys within California are elected offices, described in prose on the law-enforcement and prosecution modules. No California-specific institutional detail beyond this structural point has been researched.',
+    status: 'published',
+  },
+  {
+    id: 'us-la',
+    slug: 'louisiana',
+    name: 'State of Louisiana',
+    shortName: 'Louisiana',
+    countryCode: 'US',
+    level: 'state',
+    parentJurisdictionId: 'us',
+    authorityBasis: 'reserved-powers',
+    legalSystemScope: 'own',
+    policingScope: 'own',
+    courtScope: 'own',
+    prosecutionScope: 'own',
+    correctionalScope: 'own',
+    legislativeCompetence: {
+      'legal-system': 'concurrent',
+      policing: 'exclusive-subnational',
+      courts: 'exclusive-subnational',
+      prosecution: 'exclusive-subnational',
+      corrections: 'exclusive-subnational',
+    },
+    temporalScope: 'current',
+    coverage: 'in-research',
+    sources: ['us-const-amend-10'],
+    notes:
+      'Included because its county-equivalent is the PARISH, not the county — the cleanest available proof that a function shared down to the local level does not carry a uniform local name or structure across states. The model handles this without a schema change: a Louisiana parish would be a `county`-level record with a note that the local name is "parish". No such sub-state record is created here, because parish institutions have not been researched.',
+    status: 'published',
+  },
+  {
+    id: 'us-dc',
+    slug: 'district-of-columbia',
+    name: 'District of Columbia',
+    shortName: 'District of Columbia',
+    countryCode: 'US',
+    level: 'special',
+    parentJurisdictionId: 'us',
+    authorityBasis: 'federal-plenary',
+    legalSystemScope: 'delegated',
+    policingScope: 'unknown',
+    courtScope: 'unknown',
+    prosecutionScope: 'unknown',
+    correctionalScope: 'unknown',
+    legislativeCompetence: {
+      'legal-system': 'framework',
+      policing: 'framework',
+      courts: 'unknown',
+      prosecution: 'unknown',
+      corrections: 'unknown',
+    },
+    temporalScope: 'current',
+    coverage: 'in-research',
+    sources: ['us-dc-home-rule'],
+    notes:
+      'Not a state. The District of Columbia Home Rule Act of 1973 created an elected mayor and council, but Congress retains plenary authority: it reviews all Council legislation before it becomes law and retains authority over the District budget. authorityBasis is `federal-plenary` — DC holds neither the reserved powers of a state nor the inherent authority of a sovereign; its local legislative power is delegated by Congress and revocable. The court and prosecution arrangements of the District are distinctive and have NOT been researched here, so those scopes are recorded as `unknown` rather than assumed.',
+    status: 'published',
+  },
+  {
+    id: 'us-tribal',
+    slug: 'tribal-jurisdiction',
+    name: 'Tribal jurisdiction (United States)',
+    shortName: 'Tribal jurisdiction',
+    countryCode: 'US',
+    level: 'tribal',
+    parentJurisdictionId: 'us',
+    authorityBasis: 'inherent-sovereign',
+    legalSystemScope: 'own',
+    policingScope: 'own',
+    courtScope: 'own',
+    prosecutionScope: 'unknown',
+    correctionalScope: 'unknown',
+    temporalScope: 'current',
+    coverage: 'in-research',
+    sources: ['us-bia-pl280'],
+    notes:
+      'A CATEGORY record, not a specific named nation. Tribal sovereignty is INHERENT: it predates the Constitution and is not derived from the federal government or from any state. The parent link to `us` therefore records geographic location within the United States ONLY, not derivation of authority — a tribe is located within the country without being a subdivision of it. The Bureau of Indian Affairs records that tribal courts exercise jurisdiction over Indian country, that Public Law 280 (1953) transferred certain criminal and civil jurisdiction to named states without terminating tribal jurisdiction, and that tribal jurisdiction may be exercised concurrently. Prosecution and corrections scopes are `unknown` because the arrangements vary by nation and by whether Public Law 280 applies, and no specific nation has been researched. No specific tribe is named or described.',
+    status: 'published',
+  },
 ];
 
 /* -------------------------------------------------------------------------- */
@@ -603,6 +756,7 @@ export function validateJurisdiction(
   const parent = all.find((j) => j.id === record.parentJurisdictionId);
   if (
     parent?.level === 'federal' &&
+    record.authorityBasis !== 'inherent-sovereign' &&
     !unresearched &&
     (!record.legislativeCompetence || Object.keys(record.legislativeCompetence).length === 0)
   ) {
@@ -610,6 +764,28 @@ export function validateJurisdiction(
       'a researched sub-national record under a federal parent must declare ' +
         'legislativeCompetence — who administers a function does not establish who legislates on it',
     );
+  }
+
+  /*
+   * Inherent-sovereign records (US finding). Their parent link is geographic containment, not
+   * derivation of authority, and that inversion must never be left implicit — a reader or a
+   * later editor could otherwise read the parent link as "subdivision of". Two guards:
+   * the record must explain the non-derivation in its notes, and the legislative-competence
+   * rule above does not apply, because inherent sovereignty is not a division of the parent's
+   * legislative competence.
+   */
+  if (record.authorityBasis === 'inherent-sovereign') {
+    if (!record.notes || record.notes.trim().length === 0) {
+      problems.push(
+        'an inherent-sovereign jurisdiction must explain in notes that its parent link is ' +
+          'geographic containment, not derivation of authority',
+      );
+    } else if (!/inherent|not derived|not a subdivision|geographic/i.test(record.notes)) {
+      problems.push(
+        'an inherent-sovereign jurisdiction must state in notes that its authority is not ' +
+          'derived from its parent (e.g. "inherent", "not derived", "geographic")',
+      );
+    }
   }
 
   if (record.status === 'published' && record.sources.length === 0) {
