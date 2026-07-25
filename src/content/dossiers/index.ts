@@ -1,5 +1,6 @@
 import { COUNTRY_MODULES, countryModulePath, countryPath } from '../country-modules';
 import type { CountryDossier, CountryModuleContent } from '../types';
+import { BRAZIL } from './brazil';
 import { FRANCE } from './france';
 import { GERMANY } from './germany';
 import { IRELAND } from './ireland';
@@ -13,6 +14,7 @@ export const COUNTRY_DOSSIERS: readonly CountryDossier[] = [
   UNITED_STATES,
   IRELAND,
   JAPAN,
+  BRAZIL,
 ];
 
 export const PUBLISHED_DOSSIERS: readonly CountryDossier[] = COUNTRY_DOSSIERS.filter(
