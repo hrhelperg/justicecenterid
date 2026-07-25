@@ -277,3 +277,38 @@ both found by reading the rendered pages, neither caught by any test.
 
 **Next.** Country pilot five — Ireland (`feat/ireland-common-law-country-pilot`) — per the
 programme sequence. Awaits human review and merge of this branch first.
+
+---
+
+## Phase 5 — Ireland common-law country pilot (delivered 2026-07-25)
+
+Branch `feat/ireland-common-law-country-pilot`, based on `68e4e85`.
+
+**Purpose.** Test a unitary common-law state, and the scope-integrity discipline the earlier
+pilots did not need.
+
+**No schema change** — and that is the finding. The model already handles a unitary state
+(France); common law versus civil law is content, not structure. Two of the brief's Ireland
+model questions (structured NI-exclusion notice; structured bilingual aliases) were considered
+and declined in favour of prose. The one structural contribution is behavioural: the first
+exercise of the `ScheduledChange` `taken-effect` lifecycle, for the 2 April 2025
+policing-oversight reform.
+
+**Published — 9 routes.** hub, justice-system, law-enforcement, courts, prosecution,
+investigations, corrections, oversight, sources.
+
+**Deferred — 4 modules.** forensics, border-and-customs (highest scope-integrity risk), history,
+timeline.
+
+**One restricted claim** — the SPACE I prison density of 105.4 per 100 places at 31 January 2024
+(above capacity), a single unitary national system.
+
+**Scope integrity** held on every page: Ireland the sovereign State, not the island of Ireland
+and not Northern Ireland.
+
+**Also fixed:** three latent hardcoded defects inherited from the France pilot (facts-verified
+date, "not about France" note, missing Ireland demonym), each shown wrongly on every country hub
+and each now regression-tested.
+
+**Next.** Country pilot six — Japan (`feat/japan-prefectural-country-pilot`) — per the programme
+sequence. Awaits human review and merge of this branch first.

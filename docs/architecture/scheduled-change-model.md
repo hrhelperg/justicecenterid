@@ -54,6 +54,16 @@ a glance rather than by inference.
 | `reviewedAfterEffect`                                    | once `effectiveOn` has passed           | The staleness gate                                                                                                                                               |
 | `announcedOn`, `supersedes`, `affectedClaimIds`, `notes` | optional                                | `notes` required for `cancelled`/`superseded`                                                                                                                    |
 
+## The taken-effect lifecycle (Ireland pilot)
+
+Germany's record exercises the `pending` path — a future change with a staleness gate. The
+Ireland pilot added the first `taken-effect` record: the policing-oversight reform that
+commenced on 2 April 2025 (GSOC reconstituted as Fiosrú; the Policing Authority and Garda
+Síochána Inspectorate merged into the Policing and Community Safety Authority). It is a completed
+transition, recorded with `reviewedAfterEffect` to attest the affected content was written with
+the post-commencement position confirmed, and it keeps the historical bodies linked to their
+current successors with a date. Both ends of the lifecycle are now exercised by real records.
+
 ## Current registry
 
 One record: `fr-recodification-2029`. Ordonnance n° 2025-1091 of 19 November 2025 repeals
