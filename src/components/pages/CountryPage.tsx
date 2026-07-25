@@ -17,6 +17,7 @@ import {
 import { getGuide } from '@/content/guides';
 import { getJurisdiction } from '@/content/jurisdictions';
 import type { CountryDossier, CountryModuleContent } from '@/content/types';
+import { formatDate } from '@/lib/content';
 import { buildBreadcrumbs } from '@/lib/breadcrumbs';
 import {
   breadcrumbSchema,
@@ -51,6 +52,7 @@ const DEMONYMS: Record<string, string> = {
   FR: 'a French public body',
   DE: 'a German public body',
   US: 'a United States government body',
+  IE: 'an Irish government body',
 };
 
 function independentOfDemonym(dossier: CountryDossier): string {
@@ -115,9 +117,9 @@ function NotResearched({ dossier }: { dossier: CountryDossier }) {
     <section className="mt-14">
       <SectionHeading id="not-researched">What has not been researched</SectionHeading>
       <p className="mt-3 max-w-measure text-ink-muted">
-        These areas have no page. That is a statement about our research, not about France: each
-        of these institutions exists, and we have simply not established enough from primary
-        sources to write about it responsibly.
+        These areas have no page. That is a statement about our research, not about{' '}
+        {dossier.articleName ?? dossier.name}: each of these institutions exists, and we have
+        simply not established enough from primary sources to write about it responsibly.
       </p>
       <dl className="mt-6 max-w-measure divide-y divide-line border-y border-line">
         {deferred.map((content) => {
@@ -232,8 +234,10 @@ export function CountryHub({ dossier }: { dossier: CountryDossier }) {
         {dossier.factsVerifiedOn && (
           <p className="mt-6 max-w-measure text-sm text-ink-subtle">
             Institutional facts on these pages were checked against their sources on{' '}
-            <time dateTime={dossier.factsVerifiedOn}>24 July 2026</time>. Where a cited
-            provision carries a scheduled change, the page states the date.
+            <time dateTime={dossier.factsVerifiedOn}>
+              {formatDate(dossier.factsVerifiedOn)}
+            </time>
+            . Where a cited provision carries a scheduled change, the page states the date.
           </p>
         )}
 
@@ -375,7 +379,10 @@ export function CountryModulePage({
         {content.factsVerifiedOn && (
           <p className="mt-6 text-sm text-ink-subtle">
             Facts on this page were checked against their sources on{' '}
-            <time dateTime={content.factsVerifiedOn}>24 July 2026</time>.
+            <time dateTime={content.factsVerifiedOn}>
+              {formatDate(content.factsVerifiedOn)}
+            </time>
+            .
           </p>
         )}
 
