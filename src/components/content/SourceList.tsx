@@ -1,4 +1,5 @@
 import { SOURCE_TYPE_LABELS, getSources } from '@/content/sources';
+import { ScriptText } from '@/components/content/ScriptText';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 
 /**
@@ -25,10 +26,10 @@ export function SourceList({
             <p className="font-medium text-ink">
               {source.url ? (
                 <a href={source.url} className="link-inline" rel="noopener">
-                  {source.title}
+                  <ScriptText text={source.title} />
                 </a>
               ) : (
-                source.title
+                <ScriptText text={source.title} />
               )}
             </p>
             <p className="mt-1 text-ink-muted">

@@ -552,10 +552,7 @@ export interface SourceRecord {
    * language other than the one whose text has legal effect.
    */
   translationStatus?:
-    | 'not-a-translation'
-    | 'official-reference'
-    | 'official-authoritative'
-    | 'unofficial';
+    'not-a-translation' | 'official-reference' | 'official-authoritative' | 'unofficial';
   /**
    * The language (BCP-47 / ISO 639) whose text has legal effect, where that differs from the
    * language cited. Recorded alongside `translationStatus` so a reader and a test can both see

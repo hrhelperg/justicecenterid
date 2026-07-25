@@ -59,6 +59,53 @@ export function parseInline(text: string): InlineSegment[] {
   return segments;
 }
 
+/**
+ * Japanese script: hiragana, katakana, the iteration mark 々, CJK ideographs (incl. Ext. A)
+ * and half-width katakana. Latin romanizations ("Keishicho", "todofuken") are NOT matched —
+ * only actual Japanese script — so this affects the Japan pages and leaves every other page
+ * untouched.
+ */
+const JAPANESE_SCRIPT = /[々぀-ゟ゠-ヿ㐀-䶿一-鿿ｦ-ﾟ]/;
+
+export interface ScriptRun {
+  text: string;
+  /** BCP-47 language tag when the run is in a script other than the page default. */
+  lang?: string;
+}
+
+/**
+ * Splits a string into consecutive runs, tagging runs of Japanese script with `lang: 'ja'`.
+ *
+ * This is what lets the renderer mark inline Japanese with `lang="ja"` for accessibility
+ * (WCAG 3.1.2, Language of Parts) without the content carrying any HTML. A string with no
+ * Japanese script returns a single untagged run, so the common case is unchanged.
+ */
+export function splitJapaneseRuns(text: string): ScriptRun[] {
+  const runs: ScriptRun[] = [];
+  let current = '';
+  let currentIsJa: boolean | undefined;
+
+  for (const char of text) {
+    const isJa = JAPANESE_SCRIPT.test(char);
+    if (currentIsJa === undefined) {
+      currentIsJa = isJa;
+      current = char;
+      continue;
+    }
+    if (isJa === currentIsJa) {
+      current += char;
+    } else {
+      runs.push(currentIsJa ? { text: current, lang: 'ja' } : { text: current });
+      current = char;
+      currentIsJa = isJa;
+    }
+  }
+  if (current.length > 0) {
+    runs.push(currentIsJa ? { text: current, lang: 'ja' } : { text: current });
+  }
+  return runs;
+}
+
 /** Every internal link target in a set of blocks. Used by the link validator. */
 export function extractInternalLinks(blocks: readonly Block[]): string[] {
   const links: string[] = [];
