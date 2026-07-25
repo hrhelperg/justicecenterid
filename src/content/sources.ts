@@ -583,6 +583,65 @@ export const SOURCES: readonly SourceRecord[] = [
     jurisdiction: 'IE',
     note: 'Official content of the statutory Citizens Information Board, obtained by search retrieval (WAF-blocked to direct fetch). Supports: that the Constitution of Ireland previously asserted a territorial claim over the whole island; that the Nineteenth Amendment (1998), giving effect to the Good Friday Agreement, replaced Articles 2 and 3 with an aspiration to a united Ireland achievable only by the consent of majorities in both jurisdictions on the island; and that Ireland (the State) and Northern Ireland are separate jurisdictions. Supports the scope distinction between Ireland, the island of Ireland, and Northern Ireland. Stated as sourced facts.',
   },
+
+  /* ------------------------------------------------------------------------ */
+  /* Japan (prefectural country pilot) — verified 2026-07-25                   */
+  /* ------------------------------------------------------------------------ */
+  /*
+   * TRANSLATION INTEGRITY. Every Japanese legal source below is cited in English but is
+   * legally authoritative only in Japanese. The Ministry of Justice's Japanese Law Translation
+   * database states its English texts are "to be used solely as reference materials … with
+   * only the original Japanese texts having legal effect". Each such record carries
+   * translationStatus: 'official-reference' and authoritativeLanguage: 'ja', so the distinction
+   * is machine-checkable rather than buried in prose. Where a source is an agency's own
+   * English publication (not a statute translation), it is 'not-a-translation' from the point
+   * of view of the institutional facts it states about itself.
+   *
+   * ACCESS. Several Japanese official sites (npa.go.jp, courts.go.jp per-page) block or truncate
+   * automated fetches; the NPA "Police of Japan 2020" figures were extracted directly from the
+   * report PDF, and other official pages were read directly or obtained by search retrieval of
+   * the exact official page and cross-corroborated. No verbatim quotation is attributed to a
+   * source not read in full.
+   */
+  {
+    id: 'jp-constitution',
+    type: 'legislation',
+    title: 'The Constitution of Japan (日本国憲法), English translation',
+    publisher: 'Ministry of Justice (Japanese Law Translation database)',
+    url: 'https://www.japaneselawtranslation.go.jp/en/laws/view/174/en',
+    publishedOn: '1946-11-03',
+    verifiedOn: '2026-07-25',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'JP',
+    translationStatus: 'official-reference',
+    authoritativeLanguage: 'ja',
+    note: "Cited from the official Japanese Law Translation database, whose stated policy is that translations are reference materials only and that the original Japanese text has sole legal effect. Supports: Article 41 ('The Diet shall be the highest organ of state power, and shall be the sole law-making organ of the State'); Article 76 (the whole judicial power vested in a Supreme Court and in inferior courts established by law; no extraordinary tribunal; all judges independent in the exercise of their conscience and bound by the Constitution and the laws); Article 92 (local self-government — the organisation and operations of local public entities fixed by law in accordance with the principle of local autonomy). Supports the unitary constitutional framework with national law-making and local self-government. The English is not authoritative; any precise legal point rests on the Japanese text.",
+  },
+  {
+    id: 'jp-courts-judicial-system',
+    type: 'government',
+    title: 'Judicial System in Japan / The Judicial System and Courts in Japan',
+    publisher: 'Supreme Court of Japan (courts.go.jp)',
+    url: 'https://www.courts.go.jp/english/judicial_sys/index.html',
+    verifiedOn: '2026-07-25',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'JP',
+    translationStatus: 'not-a-translation',
+    note: "The Supreme Court's own English account of the court system, obtained by search retrieval of the official page (courts.go.jp truncates automated fetches). Supports: the courts established under the Court Act (1947) — Supreme Court, high courts, district courts, family courts and summary courts; that the Supreme Court is the highest court and exercises judicial review only in a concrete case, not in the abstract; that family courts also handle juvenile cases; and the Saiban-in (lay judge) system — begun 21 May 2009, in which randomly selected lay judges sit WITH professional judges in the district court for certain serious criminal cases only (offences punishable by death or life imprisonment, or intentional criminal acts causing death), described as having points in common with a jury system. Supports court structure and the lay-judge scope; not caseload figures. As the Supreme Court's own institutional description its facts are stated as such; it is not a statute.",
+  },
+  {
+    id: 'jp-npa-police-of-japan-2020',
+    type: 'government',
+    title: 'Police of Japan 2020',
+    publisher: 'National Police Agency (NPA), Japan',
+    url: 'https://www.npa.go.jp/english/Police_of_Japan/2020/poj2020_full.pdf',
+    publishedOn: '2020',
+    verifiedOn: '2026-07-25',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'JP',
+    translationStatus: 'not-a-translation',
+    note: "The NPA's own English overview; figures and wording extracted directly from the report PDF. Supports: that the National Public Safety Commission (NPSC) and the National Police Agency (NPA) constitute the national police organisation and the NPSC supervises the NPA; that the Police Act empowers the national government to establish a central police organisation 'to control and supervise prefectural police forces on matters of national concern'; that the NPSC 'draws up basic policies and regulations, coordinates police administration on matters of national concern and sets general standards'; that each prefecture has 'the authority to carry out police duties'; that Regional Police Bureaus are subordinate to the NPA; that police boxes (Koban) and residential police boxes (Chuzaisho) are subordinate units of police stations; that the Tokyo Metropolitan Police Department is the prefectural police of Tokyo; and that 'the Prime Minister is not empowered to exercise direct command or control over the Commission'. CRUCIALLY, it supports national COORDINATION, STANDARDS and SUPERVISION ON MATTERS OF NATIONAL CONCERN, with operational policing carried out by the prefectures — NOT a single nationally commanded operational police force. Does not support operational detail.",
+  },
 ];
 
 const SOURCE_INDEX = new Map(SOURCES.map((source) => [source.id, source]));
