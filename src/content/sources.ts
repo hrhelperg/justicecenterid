@@ -339,10 +339,10 @@ export const SOURCES: readonly SourceRecord[] = [
     publisher: 'Council of Europe / University of Lausanne (Marcelo F. Aebi and Edoardo Cocco)',
     url: 'https://wp.unil.ch/space/files/2025/09/250924_rapport-space-i-2024.pdf',
     publishedOn: '2024-12-15',
-    verifiedOn: '2026-07-24',
+    verifiedOn: '2026-07-25',
     verificationMethod: 'content-confirmed',
-    jurisdiction: 'DE',
-    note: "Strasbourg, 15 December 2024, updated 24 September 2025. Data supplied by national prison administrations to the University of Lausanne research team via a questionnaire agreed by the Council for Penological Co-operation. Reference date for prison population is 31 January 2024; country population figures are as at 1 January 2024. Supports, for Germany: Table 3 — total inmates including pre-trial detainees 59,413, prison population rate 71.2 per 100,000, adjusted figures 55,916 and 67.0; Table 16 — total capacity of penal institutions 72,258 and prison density 82.2 inmates per 100 places. The report states its aim is comparable data but warns that 'any comparisons of the levels (in rates, ratios and percentages) shown by the countries according to different indicators are always problematic'. It does NOT support any Land-level figure, nor any cross-country ranking.",
+    jurisdiction: 'INT',
+    note: "Strasbourg, 15 December 2024, updated 24 September 2025. An international (Council of Europe) source: data are supplied by national prison administrations to the University of Lausanne research team via a questionnaire agreed by the Council for Penological Co-operation. Reference date for prison population is 31 January 2024; country population figures are as at 1 January 2024. Figures extracted directly from the report PDF. Supports, for GERMANY: Table 3 — total inmates including pre-trial detainees 59,413, rate 71.2 per 100,000, adjusted 55,916 and 67.0; Table 16 — capacity 72,258 and density 82.2 per 100 places. Supports, for IRELAND: Table 3 — total inmates including pre-trial detainees 4,808, prison population rate 90.0 per 100,000, on a country population of 5,343,805; Table 16 — total capacity 4,560 and prison density 105.4 inmates per 100 places (i.e. above capacity at the national level). The report states its aim is comparable data but warns that 'any comparisons of the levels (in rates, ratios and percentages) shown by the countries according to different indicators are always problematic'. It does NOT support any sub-national figure, nor any cross-country ranking.",
   },
 
   /* ------------------------------------------------------------------------ */
@@ -484,6 +484,104 @@ export const SOURCES: readonly SourceRecord[] = [
     verificationMethod: 'content-confirmed',
     jurisdiction: 'US',
     note: 'Reference date 31 December 2023 (yearend); published September 2025; 98th in a series begun in 1926. Supports: the US prison population under the jurisdiction of state and federal correctional authorities was 1,254,200 at yearend 2023, up 2% from 1,230,100 in 2022; persons sentenced to more than one year were 1,210,300 (96%); those under Federal Bureau of Prisons jurisdiction sentenced to more than one year were 143,300 (down 2% from 146,100). This is a PRISON count (state and federal correctional authorities); it does NOT include local jail populations, which BJS counts in a separate Jail Inmates series. It aggregates 50 separately administered state systems plus the federal system and describes none individually. Not a rate; supports no cross-jurisdiction comparison.',
+  },
+
+  /* ------------------------------------------------------------------------ */
+  /* Ireland (common-law country pilot) — verified 2026-07-25                 */
+  /* ------------------------------------------------------------------------ */
+  /*
+   * ACCESS NOTE. Irish official legal and government sites (irishstatutebook.ie,
+   * gov.ie, citizensinformation.ie, courts.ie, garda.ie) systematically return HTTP 403 to
+   * automated requests behind a web-application firewall, while serving normally to a browser.
+   * The DPP's own site (dppireland.ie) and the Police Ombudsman's own site (fiosru.ie) DID
+   * read directly. Where a WAF-blocked official page was needed, its content was obtained by
+   * search retrieval of that exact official page and cross-corroborated across sources; the
+   * master specification directs that such a blocked official source not be discarded when it
+   * is verifiable through a reader-accessible official document. Each record below records
+   * which path was used. No verbatim quotation is attributed to a source that was not read in
+   * full; search-retrieved facts are stated as sourced facts, not as verbatim quotes.
+   */
+  {
+    id: 'ie-dpp',
+    type: 'government',
+    title: 'About Us — Office of the Director of Public Prosecutions',
+    publisher: 'Office of the Director of Public Prosecutions (Ireland)',
+    url: 'https://www.dppireland.ie/about-us/',
+    verifiedOn: '2026-07-25',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'IE',
+    note: "Read directly. Supports: that the Office of the DPP was established under the Prosecution of Offences Act 1974; that the Director is 'independent in the performance of her functions'; that the DPP's principal duty is to direct and supervise public prosecutions on indictment and to give general direction and advice to An Garda Síochána on summary cases; and the division of roles — An Garda Síochána investigates, the DPP decides whether to prosecute. Supports the statutory prosecution structure and the DPP's stated independence; it does not, by itself, establish how independence operates in any individual case.",
+  },
+  {
+    id: 'ie-courts-service',
+    type: 'government',
+    title: 'The Courts System / Understanding the Courts System',
+    publisher: 'The Courts Service of Ireland (courts.ie)',
+    url: 'https://www.courts.ie/understanding-courts-system-0',
+    verifiedOn: '2026-07-25',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'IE',
+    note: 'Official content obtained by search retrieval of courts.ie (the site WAF-blocks direct automated fetch). Supports: the five courts of Ireland in hierarchy — District Court, Circuit Court, High Court, Court of Appeal, Supreme Court; that the District and Circuit Courts are courts of local and regional first instance; that the High Court has full jurisdiction including the constitutional validity of laws and, exercising criminal jurisdiction, sits as the Central Criminal Court; that the Court of Appeal was established on 28 October 2014 under the Thirty-third Amendment of the Constitution; that the Supreme Court is the court of final appeal; and that the Courts Service administers the courts. Supports court STRUCTURE only; not caseload or any figure. Stated as sourced facts, not verbatim quotation.',
+  },
+  {
+    id: 'ie-garda-act-2005',
+    type: 'legislation',
+    title: 'Garda Síochána Act 2005',
+    publisher: 'Houses of the Oireachtas (Irish Statute Book)',
+    url: 'https://www.irishstatutebook.ie/eli/2005/act/20/enacted/en/html',
+    publishedOn: '2005',
+    verifiedOn: '2026-07-25',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'IE',
+    note: "Official content obtained by search retrieval of the Irish Statute Book (WAF-blocked to direct fetch); corroborated by An Garda Síochána's own history page. Supports: that An Garda Síochána is the national police service governed by the Garda Síochána Act 2005; that its statutory function is to provide policing and security services to the State; and its origin (the Civic Guard was formed in 1922 and renamed An Garda Síochána in 1923). Supports the unitary national character of the force; it does not support any operational detail. Stated as sourced facts.",
+  },
+  {
+    id: 'ie-fiosru',
+    type: 'government',
+    title: 'Introducing Fiosrú, the Office of the Police Ombudsman',
+    publisher: 'Fiosrú — Office of the Police Ombudsman (Ireland)',
+    url: 'https://www.fiosru.ie/news-and-publications/latest-news/introducing-fiosru-the-office-of-the-police-ombudsman/',
+    publishedOn: '2025-04-02',
+    verifiedOn: '2026-07-25',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'IE',
+    note: 'Read directly. Supports: that following commencement of the Policing, Security and Community Safety Act 2024 on 2 April 2025, Fiosrú, the Office of the Police Ombudsman, opened as the new policing-oversight body replacing the Garda Síochána Ombudsman Commission (GSOC); and that Fiosrú receives and investigates complaints from the public about Garda personnel. Supports the CURRENT identity of the police complaints body and the date of transition. It does not describe the Policing and Community Safety Authority beyond what other sources establish.',
+  },
+  {
+    id: 'ie-gov-pscsa-2024',
+    type: 'government',
+    title:
+      'Minister for Justice commences the Policing, Security and Community Safety Act 2024',
+    publisher: 'Government of Ireland (gov.ie)',
+    url: 'https://www.gov.ie/en/department-of-justice-home-affairs-and-migration/press-releases/landmark-garda-reform-act-to-come-into-force/',
+    publishedOn: '2025-04-02',
+    verifiedOn: '2026-07-25',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'IE',
+    note: 'Official content obtained by search retrieval of gov.ie (WAF-blocked to direct fetch); corroborated by fiosru.ie. Supports: that the Policing, Security and Community Safety Act 2024 was commenced on 2 April 2025; that it reconstituted GSOC as Fiosrú (Office of the Police Ombudsman); and that it established the Policing and Community Safety Authority (PCSA), dissolving the Policing Authority and the Garda Síochána Inspectorate and merging their oversight and inspection functions into the PCSA. Supports the current/historical status of the oversight bodies and the transition date. Stated as sourced facts.',
+  },
+  {
+    id: 'ie-citizensinfo-scc',
+    type: 'government',
+    title: 'Special Criminal Court',
+    publisher: 'Citizens Information Board (Ireland), citizensinformation.ie',
+    url: 'https://www.citizensinformation.ie/en/justice/courts-system/special-criminal-court/',
+    verifiedOn: '2026-07-25',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'IE',
+    note: "Official content of the statutory Citizens Information Board, obtained by search retrieval (WAF-blocked to direct fetch). Supports: that the Special Criminal Court sits with three judges and no jury; that it was set up under the Offences Against the State Act 1939; that the DPP certifies when the ordinary courts are inadequate to secure the effective administration of justice; that its constitutional basis is Article 38.3; and that it was designed for emergency situations and is the subject of independent review. Supports the SCC's structure and legal basis; it is a citizens-information summary, not the primary Act. Stated as sourced facts.",
+  },
+  {
+    id: 'ie-citizensinfo-gfa',
+    type: 'government',
+    title: 'The Good Friday Agreement and the Constitution (Articles 2 and 3)',
+    publisher: 'Citizens Information Board (Ireland), citizensinformation.ie',
+    url: 'https://www.citizensinformation.ie/en/government-in-ireland/ireland-and-the-uk/good-friday-agreement/',
+    publishedOn: '1998',
+    verifiedOn: '2026-07-25',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'IE',
+    note: 'Official content of the statutory Citizens Information Board, obtained by search retrieval (WAF-blocked to direct fetch). Supports: that the Constitution of Ireland previously asserted a territorial claim over the whole island; that the Nineteenth Amendment (1998), giving effect to the Good Friday Agreement, replaced Articles 2 and 3 with an aspiration to a united Ireland achievable only by the consent of majorities in both jurisdictions on the island; and that Ireland (the State) and Northern Ireland are separate jurisdictions. Supports the scope distinction between Ireland, the island of Ireland, and Northern Ireland. Stated as sourced facts.',
   },
 ];
 
