@@ -349,6 +349,47 @@ of it; the lay judge (saiban-in) system is a mixed panel for certain serious cas
 jury and not for all trials; no Minister-of-Justice direction over prosecutors is asserted from
 an untranslated Act.
 
-**Next.** Country pilot seven — Brazil — per the programme sequence. Awaits human review and
-merge of this branch first. Recommended Brazil preconditions are in
-[japan-country-pilot-qa.md](../audits/japan-country-pilot-qa.md) and the final report.
+**Next.** Country pilot seven — Brazil. This branch was reviewed and merged into `main` (PR #7),
+and Brazil built on it.
+
+## Phase 7 — Brazil federal country pilot (delivered 2026-07-25)
+
+Branch `feat/brazil-federal-country-pilot`, based on `65a27d7` (Japan merge).
+
+**Purpose.** Test the most institutionally complex country on the platform — a federation with
+six constitutional police forces, an autonomous Ministério Público and a five-branch judiciary —
+and the first Portuguese-language country.
+
+**No new schema — and that is the finding.** Brazil reuses machinery every earlier pilot built:
+Germany's federal-law / sub-national-administration split (sharpened, because penal and
+procedural law are the Union's _exclusive_ competence, CF Art. 22 I, so state records carry
+`legalSystemScope: 'national'` and `legislativeCompetence['legal-system'] = 'exclusive-federal'`
+— the reverse of the United States); the US `authorityBasis: reserved-powers` (Art. 25 §1); and
+France's `alsoExercisesLevels` for the sui-generis Federal District (Art. 32 §1). The two hard
+questions — a state running two police forces (Polícia Civil + Polícia Militar), and the
+Ministério Público as an autonomous institution — were argued on both sides and answered in
+**prose**, per the US "institutions in prose, not typed records" rule, against a research
+critic's push for heavier structures.
+
+**Published — 8 routes.** hub, justice-system, law-enforcement, courts, prosecution,
+investigations, corrections, sources.
+
+**Deferred — 5 modules.** forensics, border-and-customs, oversight, history (the
+military-dictatorship legacy needs careful sourcing), timeline.
+
+**One restricted claim.** SISDEPEN's 31 December 2024 figure — 670,265 people in physical cells
+against 494,379 places (deficit 175,886) — aggregating 27 state/DF systems, excluding home
+detention, printing no occupancy rate, and supporting no comparison.
+
+**Verification.** Every constitutional and statutory fact was read verbatim from the
+authoritative Portuguese Planalto text (retrieved with a browser user-agent), and an independent
+adversarial pass re-checked 23 load-bearing claims against official sources with zero
+refutations.
+
+**Samples.** br (federation), br-sp (ordinary state), br-df (sui-generis Federal District, whose
+police/courts/MP are organised by the Union, Art. 21 XIII–XIV). Not all 26 states; no public
+state pages.
+
+**Next.** Country pilot eight — a candidate is Canada, whose RCMP contract policing is the clean
+forcing example, flagged since the US pilot, for whether a structured inter-institutional
+relationship field is finally earned. Awaits human review and merge of this branch first.

@@ -77,6 +77,21 @@ operational chain of command that does not exist. Each prefecture also carries
 legislated nationally (the Police Act), the same administration-≠-legislation split the Germany
 pilot recorded for courts, reused rather than reinvented.
 
+**A unified law with decentralised institutions (Brazil pilot).** Brazil forced no new field. It
+is a federation, but penal and procedural law are the _exclusive_ competence of the Union (CF
+Art. 22, I), so the states administer justice without writing the criminal law. The model
+records this with values it already had: the federal record `br` has every institutional
+function `shared` but `legalSystemScope: 'own'` (the law is unified, not split federal/state as
+in the United States, whose federal record is `shared` throughout); each state has its
+institutions `own` but `legalSystemScope: 'national'` (the same value Japan's prefectures use),
+with `legislativeCompetence['legal-system'] = 'exclusive-federal'`. Two institutional
+peculiarities stayed in prose rather than the schema — a state running _two_ police forces (an
+investigative Polícia Civil and a preventive Polícia Militar), and the Ministério Público as an
+autonomous institution — following the United States rule that institutional composition is prose,
+not typed records. The sui-generis Federal District reuses `alsoExercisesLevels: ['state',
+'municipality']` (Art. 32 §1) and records the Union's organisation of its police, courts and
+prosecution (Art. 21, XIII–XIV) as `shared` rather than `own`.
+
 ## Tier records vs unit records
 
 France's tiers are legally uniform, so one record per tier states the arrangement accurately.
