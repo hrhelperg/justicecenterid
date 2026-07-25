@@ -612,6 +612,42 @@ export const JURISDICTIONS: readonly JurisdictionRecord[] = [
       'A CATEGORY record, not a specific named nation. Tribal sovereignty is INHERENT: it predates the Constitution and is not derived from the federal government or from any state. The parent link to `us` therefore records geographic location within the United States ONLY, not derivation of authority — a tribe is located within the country without being a subdivision of it. The Bureau of Indian Affairs records that tribal courts exercise jurisdiction over Indian country, that Public Law 280 (1953) transferred certain criminal and civil jurisdiction to named states without terminating tribal jurisdiction, and that tribal jurisdiction may be exercised concurrently. Prosecution and corrections scopes are `unknown` because the arrangements vary by nation and by whether Public Law 280 applies, and no specific nation has been researched. No specific tribe is named or described.',
     status: 'published',
   },
+
+  /* ---------------------------------------------------------------------- */
+  /* Ireland — national                                                     */
+  /* ---------------------------------------------------------------------- */
+  /*
+   * One record. Ireland is a unitary state — the model handles it exactly as it handled
+   * France, at the country level, with every function `own`. No sub-national record exists
+   * because policing, prosecution, courts and prisons are all organised nationally and there
+   * is no tier below the State that administers any of them separately.
+   *
+   * SCOPE INTEGRITY. `IE` is the sovereign State of Ireland, NOT the island of Ireland and NOT
+   * Northern Ireland (which is part of the United Kingdom, a separate jurisdiction). The
+   * Constitution's territorial claim over the whole island was replaced in 1998 by the
+   * Nineteenth Amendment with an aspiration to unity achievable only by the consent of
+   * majorities in both jurisdictions. Every Ireland page states this; nothing here describes
+   * Northern Ireland.
+   */
+  {
+    id: 'ie',
+    slug: 'ireland',
+    name: 'Ireland',
+    shortName: 'Ireland',
+    countryCode: 'IE',
+    level: 'country',
+    legalSystemScope: 'own',
+    policingScope: 'own',
+    courtScope: 'own',
+    prosecutionScope: 'own',
+    correctionalScope: 'own',
+    temporalScope: 'current',
+    coverage: 'partial',
+    sources: ['ie-courts-service', 'ie-citizensinfo-gfa'],
+    notes:
+      'The sovereign State of Ireland — a unitary, common-law state. Justice is administered nationally: a single national police service (An Garda Síochána), a single independent prosecutor (the Director of Public Prosecutions), one court system administered by the Courts Service, and one prison service. There is no sub-national tier that administers any of these separately, which is why a single country-level record states the arrangement accurately. `IE` is not the island of Ireland and not Northern Ireland; that scope distinction is stated on every Ireland page.',
+    status: 'published',
+  },
 ];
 
 /* -------------------------------------------------------------------------- */

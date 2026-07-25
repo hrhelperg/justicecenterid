@@ -2,10 +2,16 @@ import { COUNTRY_MODULES, countryModulePath, countryPath } from '../country-modu
 import type { CountryDossier, CountryModuleContent } from '../types';
 import { FRANCE } from './france';
 import { GERMANY } from './germany';
+import { IRELAND } from './ireland';
 import { UNITED_STATES } from './united-states';
 
 /** Every country dossier. A country appears here only once it has been researched. */
-export const COUNTRY_DOSSIERS: readonly CountryDossier[] = [FRANCE, GERMANY, UNITED_STATES];
+export const COUNTRY_DOSSIERS: readonly CountryDossier[] = [
+  FRANCE,
+  GERMANY,
+  UNITED_STATES,
+  IRELAND,
+];
 
 export const PUBLISHED_DOSSIERS: readonly CountryDossier[] = COUNTRY_DOSSIERS.filter(
   (d) => d.status === 'published',

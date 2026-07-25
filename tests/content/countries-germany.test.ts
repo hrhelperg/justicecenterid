@@ -133,6 +133,13 @@ describe('Germany dossier', () => {
       expect(us).not.toMatch(/public body of United States/);
       expect(us).not.toMatch(/not a (?:French|German) public body/);
     }
+
+    const ieFile = 'out/countries/ireland/courts.html';
+    if (existsSync(ieFile)) {
+      const ie = textOf(ieFile);
+      expect(ie).toMatch(/not an Irish government body/);
+      expect(ie).not.toMatch(/government body of Ireland/); // no awkward fallback
+    }
   });
 
   it('discloses on the hub that only sample Länder are modelled', () => {

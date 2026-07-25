@@ -33,6 +33,29 @@ export const SCHEDULED_CHANGES: readonly ScheduledChange[] = [
     notes:
       'Recorded from the version information Légifrance publishes against each article. The replacement text has not been read, so nothing is asserted about what the law will say after the effective date — only that the cited provisions will cease to apply in their current form.',
   },
+  {
+    /*
+     * Ireland pilot. This record exercises the `taken-effect` lifecycle that the France entry
+     * (pending) does not. The reform has ALREADY happened — it commenced on 2 April 2025, which
+     * is in the past — so the model's job here is not to warn of a future change but to record
+     * a completed transition, keeping the historical bodies distinguishable from their current
+     * successors. `reviewedAfterEffect` records that the affected content was written with the
+     * post-commencement position confirmed.
+     */
+    id: 'ie-policing-oversight-reform-2025',
+    changeType: 'replacement',
+    effectiveOn: '2025-04-02',
+    enactedOn: '2024-01-01',
+    affectedEntityIds: ['ireland/oversight', 'ireland/law-enforcement'],
+    description:
+      'The Policing, Security and Community Safety Act 2024 was commenced on 2 April 2025. It reconstituted the Garda Síochána Ombudsman Commission (GSOC) as Fiosrú, the Office of the Police Ombudsman, and established the Policing and Community Safety Authority (PCSA), dissolving the Policing Authority and the Garda Síochána Inspectorate and merging their functions into the PCSA. GSOC, the Policing Authority and the Garda Síochána Inspectorate are therefore historical; Fiosrú and the PCSA are current.',
+    sources: ['ie-fiosru', 'ie-gov-pscsa-2024'],
+    certainty: 'enacted-with-date',
+    status: 'taken-effect',
+    reviewedAfterEffect: '2026-07-25',
+    notes:
+      'enactedOn is recorded as 2024 for the Act; commencement (effectiveOn) was 2 April 2025. The Ireland oversight module names Fiosrú and the PCSA as the current bodies and GSOC, the Policing Authority and the Garda Síochána Inspectorate as their historical predecessors, with this transition date.',
+  },
 ];
 
 /* -------------------------------------------------------------------------- */

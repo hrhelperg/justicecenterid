@@ -76,6 +76,7 @@ describe('France dossier', () => {
     expect(COUNTRY_DOSSIERS.map((d) => d.slug).sort()).toEqual([
       'france',
       'germany',
+      'ireland',
       'united-states',
     ]);
   });
