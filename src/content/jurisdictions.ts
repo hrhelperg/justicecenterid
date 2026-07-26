@@ -1550,6 +1550,29 @@ export const JURISDICTIONS: readonly JurisdictionRecord[] = [
       'Belgium is a FEDERAL state (Constitution art. 1, "a federal State composed of Communities and Regions") — but, unlike Germany or the United States, the four justice functions are FEDERAL competences, held and administered at the federal level, not devolved to the Communities or Regions. The Constitution establishes single national bodies "for all Belgium": one Constitutional Court (art. 142), one Court of Cassation (art. 147, rendered "Supreme Court" in the official English translation), and one High Council of Justice and constitutionally independent prosecution (art. 151). Prisons are run by the federal FPS Justice and the police are the federal-plus-local integrated service of the Law of 7 December 1998. So the jurisdiction model represents Belgium as a single `federal` record with every function `own` (federally administered) and every legislative competence `exclusive-federal` — which is the INVERSE of Germany, whose federal record is `shared` because the Länder administer justice. This is why Belgium needs NO new schema: the distinction between \'federal and justice-devolved\' (Germany, US) and \'federal but justice-centralised\' (Belgium) is carried entirely by the scope values. No Community or Region record is created, because none of them does any of the four justice functions — a record exists only where it does institutional work. Youth-justice competence has partly moved to the Communities under successive state reforms, but the current allocation was not researched and is noted only in prose.',
     status: 'published',
   },
+
+  /* -------------------------------------------------------------------------- */
+  /* Denmark (Batch A) — unitary; justice all national                          */
+  /* -------------------------------------------------------------------------- */
+  {
+    id: 'dk',
+    slug: 'denmark',
+    name: 'Denmark',
+    shortName: 'Denmark',
+    countryCode: 'DK',
+    level: 'country',
+    legalSystemScope: 'own',
+    policingScope: 'own',
+    courtScope: 'own',
+    prosecutionScope: 'own',
+    correctionalScope: 'own',
+    temporalScope: 'current',
+    coverage: 'partial',
+    sources: ['dk-constitution', 'dk-ejustice-justice'],
+    notes:
+      'Denmark (Danmark), a unitary constitutional monarchy under the 1953 Constitutional Act. All four justice functions are national, held under the Ministry of Justice: one court system culminating in the Supreme Court (Højesteret), one Prosecution Service (Anklagemyndigheden), one national police (Rigspolitiet, deconcentrated into 12 districts), and one Prison and Probation Service (Kriminalforsorgen). A single country-level record states the arrangement accurately. Two facts stay in prose: prosecution and police are INTEGRATED under a single district head — the Police Commissioner (politidirektør) is both the head of the police district and the local prosecutor, both under the Ministry of Justice — and the courts alone (no separate constitutional or administrative court) decide constitutional and administrative questions (Constitution §63). Prosecution is under the Ministry of Justice (not independent), even as the courts are constitutionally independent of the executive (§62). Scope note: this is the country of Denmark; the Faroe Islands and Greenland are self-governing within the Realm and each forms its own court and police district under statutory Home Rule/Self-Government — an asymmetric, statutory arrangement (not federalism), noted in prose and not modelled as separate records here.',
+    status: 'published',
+  },
 ];
 
 /* -------------------------------------------------------------------------- */
