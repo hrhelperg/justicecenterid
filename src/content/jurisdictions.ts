@@ -1349,6 +1349,153 @@ export const JURISDICTIONS: readonly JurisdictionRecord[] = [
       'The no-devolution case, standing for the majority of communities. Andalusia has no full autonomous police force of its own — policing is done by the national Cuerpo Nacional de Policía and Guardia Civil — and its prisons are run by the central Secretaría General de Instituciones Penitenciarias. So every modelled function is `national`: the community is a real political entity with a Statute and assembly, but it has not assumed the police or prison competences that Catalonia, the Basque Country and Navarre have. This is why the asymmetry is recorded per community, not as a single national fact.',
     status: 'published',
   },
+
+  /* ---------------------------------------------------------------------- */
+  /* Switzerland — the Confederation and three cantons, one per language     */
+  /* ---------------------------------------------------------------------- */
+  /*
+   * Switzerland is the most decentralised federation on the platform, and it forces no new field
+   * — it is Brazil's structural twin (reserved-power sub-units applying nationally unified codes)
+   * with cantonal sovereignty on top:
+   *
+   *  - The CANTONS are SOVEREIGN, exercising all rights not vested in the Confederation
+   *    (Constitution art. 3) — so `authorityBasis: 'reserved-powers'`, like the United States,
+   *    Australia and Brazil. Their legal-system scope is `national` (the civil and criminal LAW
+   *    and procedure are federal and unified — arts. 122/123 — one Civil Code, one Criminal Code,
+   *    one Criminal Procedure Code), but they ADMINISTER: police, courts, prosecution and the
+   *    execution of penalties are cantonal.
+   *
+   *  - There is NO national general police force: fedpol is a narrow federal body, not
+   *    superordinate to the cantonal police, so `policingScope: 'own'` at the canton and `shared`
+   *    at the Confederation. Prosecution is cantonal by default (Criminal Procedure Code art. 22)
+   *    with a narrow federal exception (the Office of the Attorney General), so `prosecutionScope:
+   *    'own'` at the canton. Courts are cantonal, applying the federal procedure code, under the
+   *    Federal Supreme Court apex — `courtScope: 'own'`.
+   *
+   *  - CORRECTIONS are cantonal, but the cantons POOL them through three inter-cantonal
+   *    concordats (Constitution art. 48) that jointly run correctional institutions — a PEER
+   *    arrangement, not one order procuring from another. So `correctionalScope: 'shared'`, the
+   *    value for jointly-exercised functions — NOT `contracted`. The concordats are described in
+   *    prose, not a typed entity.
+   *
+   * Samples: the Confederation and one canton per official language — Zürich (German), Geneva
+   * (French) and Ticino (Italian). Not all 26 cantons; no public canton pages.
+   */
+  {
+    id: 'ch',
+    slug: 'switzerland',
+    name: 'Swiss Confederation',
+    shortName: 'Switzerland',
+    countryCode: 'CH',
+    level: 'federal',
+    // The civil and criminal LAW is federal and unified; only the administration is cantonal —
+    // so the legal system is `own` (national/unified) at the Confederation, `national` at the
+    // canton, exactly as in Brazil.
+    legalSystemScope: 'own',
+    policingScope: 'shared',
+    courtScope: 'shared',
+    prosecutionScope: 'shared',
+    correctionalScope: 'shared',
+    legislativeCompetence: {
+      'legal-system': 'exclusive-federal',
+      policing: 'concurrent',
+      courts: 'concurrent',
+      prosecution: 'concurrent',
+      corrections: 'concurrent',
+    },
+    temporalScope: 'current',
+    coverage: 'partial',
+    sources: ['ch-constitution'],
+    notes:
+      'A federation of 26 sovereign cantons (Constitution art. 3) in which the substantive law is federal and unified — the Confederation legislates civil and criminal law and procedure (arts. 122/123), giving one Civil Code, one Criminal Code and one Criminal Procedure Code — but the administration of justice is cantonal. Every modelled function is `shared`: there is a narrow federal police (fedpol) alongside the cantonal police, the Federal Supreme Court above the cantonal courts, a federal Office of the Attorney General alongside the cantonal prosecutors, and no federal prison system at all — the execution of penalties is entirely cantonal, pooled through inter-cantonal concordats. Federal law is enacted and equally authentic in German, French and Italian.',
+    status: 'published',
+  },
+  {
+    id: 'ch-zurich',
+    slug: 'zurich',
+    name: 'Canton of Zürich',
+    shortName: 'Zürich',
+    countryCode: 'CH',
+    level: 'state',
+    parentJurisdictionId: 'ch',
+    // Sovereign canton, residual power (art. 3) — reserved-powers, like a US or Australian state.
+    authorityBasis: 'reserved-powers',
+    // The law is federal and unified, so the canton has no legal system of its own.
+    legalSystemScope: 'national',
+    policingScope: 'own',
+    courtScope: 'own',
+    prosecutionScope: 'own',
+    correctionalScope: 'shared',
+    legislativeCompetence: {
+      'legal-system': 'exclusive-federal',
+      policing: 'exclusive-subnational',
+      courts: 'concurrent',
+      prosecution: 'concurrent',
+      corrections: 'concurrent',
+    },
+    temporalScope: 'current',
+    coverage: 'in-research',
+    sources: ['ch-constitution'],
+    notes:
+      'The German-speaking sample. Like every canton, Zürich is sovereign in the powers not vested in the Confederation (art. 3), so authorityBasis is `reserved-powers`; but the civil and criminal law it applies is the federal, unified codes, so legalSystemScope is `national`. It runs its own police (the Kantonspolizei Zürich), its own courts and its own prosecution service (Staatsanwaltschaft), which apply the federal Criminal Procedure Code — so policing, courts and prosecution are `own`. Its corrections are `shared`: the execution of penalties is a cantonal task, but Zürich runs it through the Eastern Switzerland concordat, one of the three inter-cantonal concordats that pool correctional institutions under art. 48.',
+    status: 'published',
+  },
+  {
+    id: 'ch-geneva',
+    slug: 'geneva',
+    name: 'Canton of Geneva (Genève)',
+    shortName: 'Geneva',
+    countryCode: 'CH',
+    level: 'state',
+    parentJurisdictionId: 'ch',
+    authorityBasis: 'reserved-powers',
+    legalSystemScope: 'national',
+    policingScope: 'own',
+    courtScope: 'own',
+    prosecutionScope: 'own',
+    correctionalScope: 'shared',
+    legislativeCompetence: {
+      'legal-system': 'exclusive-federal',
+      policing: 'exclusive-subnational',
+      courts: 'concurrent',
+      prosecution: 'concurrent',
+      corrections: 'concurrent',
+    },
+    temporalScope: 'current',
+    coverage: 'in-research',
+    sources: ['ch-constitution'],
+    notes:
+      "The French-speaking sample, structurally identical to Zürich but naming its institutions in French — its own police (police cantonale), courts and ministère public — and, for corrections, a member of the Latin concordat (Concordat latin) rather than the Eastern one. The identical scope values across a German and a French canton show that the model represents Switzerland's uniformity of structure beneath its multilingualism; the difference is of language and concordat, recorded in prose, not of scope.",
+    status: 'published',
+  },
+  {
+    id: 'ch-ticino',
+    slug: 'ticino',
+    name: 'Canton of Ticino',
+    shortName: 'Ticino',
+    countryCode: 'CH',
+    level: 'state',
+    parentJurisdictionId: 'ch',
+    authorityBasis: 'reserved-powers',
+    legalSystemScope: 'national',
+    policingScope: 'own',
+    courtScope: 'own',
+    prosecutionScope: 'own',
+    correctionalScope: 'shared',
+    legislativeCompetence: {
+      'legal-system': 'exclusive-federal',
+      policing: 'exclusive-subnational',
+      courts: 'concurrent',
+      prosecution: 'concurrent',
+      corrections: 'concurrent',
+    },
+    temporalScope: 'current',
+    coverage: 'in-research',
+    sources: ['ch-constitution'],
+    notes:
+      "The Italian-speaking sample, the third official language. Ticino runs its own police (polizia cantonale), courts and public prosecution (ministero pubblico) applying the federal codes, and — like Geneva — belongs to the Latin concordat for the execution of penalties. Its scope values are identical to Zürich's and Geneva's, which is the point: one federal law, cantonally administered, in three languages.",
+    status: 'published',
+  },
 ];
 
 /* -------------------------------------------------------------------------- */

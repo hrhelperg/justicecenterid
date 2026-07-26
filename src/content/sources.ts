@@ -1080,6 +1080,30 @@ export const SOURCES: readonly SourceRecord[] = [
     jurisdiction: 'ES',
     note: "The decree transferring penitentiary administration to the Basque Country, read directly. Like the Catalan transfer, it devolves 'la ejecución de la legislación del Estado en materia penitenciaria' — the execution of State penitentiary legislation — effective 1 October 2021, while the legislation itself stays the State's. Establishes that the Basque Country now runs its own prison system, the second community to do so.",
   },
+
+  /* ------------------------------------------------------------------------ */
+  /* Switzerland (cantonal-federalism pilot) — verified 2026-07-26             */
+  /* ------------------------------------------------------------------------ */
+  /*
+   * MULTILINGUAL AUTHORITY. Swiss federal law is enacted and equally authentic in German, French
+   * and Italian (Federal Constitution art. 70); Romansh is a national language, official when
+   * dealing with Romansh speakers. English texts on fedlex are explicitly non-authoritative
+   * translations. Institutions are named across the languages (Bundesgericht / Tribunal fédéral /
+   * Tribunale federale); these pages cite the official English translation for readability and
+   * note that it has no legal force.
+   */
+  {
+    id: 'ch-constitution',
+    type: 'legislation',
+    title: 'Federal Constitution of the Swiss Confederation of 18 April 1999 (SR 101)',
+    publisher: 'Swiss Confederation — Fedlex (fedlex.admin.ch)',
+    url: 'https://www.fedlex.admin.ch/eli/cc/1999/404/en',
+    publishedOn: '1999-04-18',
+    verifiedOn: '2026-07-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'CH',
+    note: "The Federal Constitution, read in full from the official fedlex text (English is a non-authoritative translation; German, French and Italian are equally authentic). Supports: art. 1 (the Confederation of the People and the 26 Cantons); art. 3, 'The Cantons are sovereign except to the extent that their sovereignty is limited by the Federal Constitution. They exercise all rights that are not vested in the Confederation' — residual power with the CANTONS (like the United States and Australia); art. 46 (the Cantons implement federal law — executive federalism); art. 122 (the Confederation legislates civil law, but 'the Cantons are responsible for the organisation of the courts and the administration of justice in civil matters'); art. 123 ('The Confederation is responsible for legislation in the field of criminal law and the law of criminal procedure', while 'the Cantons are responsible for the organisation of the courts, the administration of justice in criminal cases as well as for the execution of penalties and measures') — so the law is federal and unified but the administration, including corrections, is cantonal; art. 188 (the Federal Supreme Court as the supreme judicial authority); art. 48 (inter-cantonal treaties, the basis for the corrections concordats); art. 70 (German, French and Italian as official languages); and the direct-democracy provisions (arts. 138-142: popular initiative, mandatory and optional referendums).",
+  },
 ];
 
 const SOURCE_INDEX = new Map(SOURCES.map((source) => [source.id, source]));
