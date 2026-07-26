@@ -73,3 +73,18 @@ as current law on the France pages.
 
 The practical consequence: on 1 January 2029 the France pages stop passing validation until
 someone re-reads the replacement text. That is the intended behaviour.
+
+## Exercised by a referendum-processed change (Switzerland pilot)
+
+The Switzerland pilot exercised the model against a change reached through direct democracy: the
+BEKJ (the Justitia 4.0 legal basis), which creates a joint Confederation–cantons public-law
+corporation, justitia.swiss, for electronic justice communication. It was adopted on 20 December
+2024; its OPTIONAL referendum lapsed unused, so it is enacted rather than put to a popular vote;
+and it enters into force on 1 July 2027, with the corporation provision already in force from 1
+October 2025. It is recorded as `status: pending`, `certainty: enacted-with-date` (the referendum
+deadline passed), with the staggered commencement in the notes. This showed that direct democracy
+needs NO `directDemocracy` field: the referendum step is carried by `certainty` (a change whose
+referendum could still be called would be `announced`, not `enacted-with-date`) and by the notes.
+Three lifecycles are now exercised across the pilots: France (pending, future repeal), Ireland
+(taken-effect, past commencement) and Switzerland (pending, staged commencement after a lapsed
+referendum).
