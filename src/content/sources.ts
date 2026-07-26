@@ -805,6 +805,135 @@ export const SOURCES: readonly SourceRecord[] = [
     jurisdiction: 'BR',
     note: "The official penitentiary-statistics report, read from the primary PDF (extracted locally). Reference period July–December 2024, snapshot 31 December 2024, category 'presos em cela física' (people who, regardless of daytime release for work or study, 'dormem no estabelecimento prisional' — i.e. excluding prisão domiciliar / home detention, which the report tabulates separately). Supports: state-and-DF prison population Total = 670.265; capacity of places (capacidade de vagas) Total = 494.379; deficit of places (déficit de vagas) Total = 175.886. The report does NOT print an occupancy percentage on the totals pages — any rate is a derivation, not a quoted figure. Supports the single scoped detention-capacity claim on the corrections page; supports no comparison with any other country.",
   },
+
+  /* ------------------------------------------------------------------------ */
+  /* Canada (federal, contract-policing pilot) — verified 2026-07-26           */
+  /* ------------------------------------------------------------------------ */
+  /*
+   * BILINGUAL AUTHORITY. Canadian federal law is enacted in English and French and, by the
+   * equal-authenticity rule (Charter s.18(1)), BOTH language versions are equally authoritative
+   * — neither is a translation of the other. Sources are cited in English; the French title is
+   * recorded and the equal authority noted. Quebec institutions are named in French (e.g. the
+   * Sûreté du Québec), and no official English name is invented where none exists.
+   *
+   * ACCESS. laws-lois.justice.gc.ca serves the full consolidated bilingual statutes to a browser
+   * user-agent; every Constitution/Criminal Code/statute quotation was read verbatim from it.
+   */
+  {
+    id: 'ca-constitution-1867',
+    type: 'legislation',
+    title: 'Constitution Act, 1867 (30 & 31 Victoria, c. 3 (UK))',
+    publisher: 'Government of Canada — Justice Laws Website (laws-lois.justice.gc.ca)',
+    url: 'https://laws-lois.justice.gc.ca/eng/const/index.html',
+    publishedOn: '1867-07-01',
+    verifiedOn: '2026-07-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'CA',
+    note: "The authoritative consolidated text (English; the French 'Loi constitutionnelle de 1867' is equally authoritative), read in full. THE backbone of the division of powers. Supports: s.91(27) FEDERAL exclusive authority over 'The Criminal Law, except the Constitution of Courts of Criminal Jurisdiction, but including the Procedure in Criminal Matters'; s.91(28) federal 'Penitentiaries'; the s.91 opening 'exclusive Legislative Authority' plus the residual 'Peace, Order, and good Government' power (POGG is FEDERAL — the inverse of the United States); s.92(14) PROVINCIAL exclusive authority over 'The Administration of Justice in the Province, including the Constitution, Maintenance, and Organization of Provincial Courts, both of Civil and of Criminal Jurisdiction'; s.92(6) provincial 'Public and Reformatory Prisons'; s.96 'The Governor General shall appoint the Judges of the Superior, District, and County Courts in each Province'; s.100 (Parliament fixes and pays superior-court judges' salaries); s.101 (Parliament may establish a general court of appeal and additional federal courts). Establishes the characteristic Canadian arrangement: one federal criminal law, provincially administered. Both language versions have legal effect.",
+  },
+
+  {
+    id: 'ca-charter-1982',
+    type: 'legislation',
+    title: 'Canadian Charter of Rights and Freedoms (Constitution Act, 1982, Part I)',
+    publisher: 'Government of Canada — Justice Laws Website (laws-lois.justice.gc.ca)',
+    url: 'https://laws-lois.justice.gc.ca/eng/const/page-12.html',
+    publishedOn: '1982-04-17',
+    verifiedOn: '2026-07-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'CA',
+    note: "The authoritative text (English; French equally authoritative), read in full. Supports the 'Legal Rights' (ss.7-14): s.7 'Everyone has the right to life, liberty and security of the person and the right not to be deprived thereof except in accordance with the principles of fundamental justice'; s.11(d) the right 'to be presumed innocent until proven guilty according to law in a fair and public hearing by an independent and impartial tribunal'; s.12 'Everyone has the right not to be subjected to any cruel and unusual treatment or punishment'. Also s.18(1): the statutes of Parliament are printed in English and French 'and both language versions are equally authoritative' — the equal-authenticity rule. Both versions have legal effect.",
+  },
+  {
+    id: 'ca-criminal-code',
+    type: 'legislation',
+    title: 'Criminal Code (RSC 1985, c. C-46)',
+    publisher: 'Government of Canada — Justice Laws Website (laws-lois.justice.gc.ca)',
+    url: 'https://laws-lois.justice.gc.ca/eng/acts/c-46/',
+    verifiedOn: '2026-07-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'CA',
+    note: "The single federal criminal statute for all of Canada (English; French 'Code criminel' equally authoritative), read in the relevant sections. Supports s.743.1(1): a person sentenced to imprisonment for 'life', 'a term of two years or more', or aggregated terms amounting to two years or more 'shall be sentenced to imprisonment in a penitentiary' — the statutory basis (with s.91(28)/s.92(6) of the Constitution) for the two-year federal/provincial custody split. Also s.2 (the 'Attorney General' definition that allocates prosecution). Both versions have legal effect.",
+  },
+  {
+    id: 'ca-rcmp-act',
+    type: 'legislation',
+    title: 'Royal Canadian Mounted Police Act (RSC 1985, c. R-10)',
+    publisher: 'Government of Canada — Justice Laws Website (laws-lois.justice.gc.ca)',
+    url: 'https://laws-lois.justice.gc.ca/eng/acts/R-10/',
+    verifiedOn: '2026-07-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'CA',
+    note: "The statute constituting and governing the RCMP (English; French equally authoritative), read in full for the relevant sections. Supports: s.3 'There shall continue to be a police force for Canada ... known as the Royal Canadian Mounted Police' (a FEDERAL force); s.5 the Commissioner, 'under the direction of the Minister, has the control and management of the Force' (federal governance); and s.20(1) 'The Minister may, with the approval of the Governor in Council, enter into an arrangement with the government of any province for the use or employment of the Force ... in aiding the administration of justice in the province and in carrying into effect the laws in force therein' — the statutory basis for contract policing as a SERVICE arrangement, not a transfer of ownership.",
+  },
+  {
+    id: 'ca-rcmp-contract',
+    type: 'institutional',
+    title: 'Contract policing — About',
+    publisher: 'Royal Canadian Mounted Police (rcmp.ca)',
+    url: 'https://rcmp.ca/en/contract-policing/about',
+    verifiedOn: '2026-07-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'CA',
+    note: "The RCMP's own page, read in full. Supports: 'The RCMP currently provides contract policing services to eight provinces (Ontario and Quebec have their own provincial police service), three territories and under direct contract to some 150 municipalities in Canada'; 'Provinces and territories pay 70% of RCMP costs and the federal government pays 30%' (municipalities pay 70% under 15,000 population or 90% over 15,000); the current agreements 'expire on March 31, 2032'; and 'As Canada's national police force, the RCMP maintains national standards and policies across contract policing jurisdictions' — the Force stays federal while delivering provincial/municipal policing. Establishes the provider/client/funding/term facts; the term is a maximum, terminable earlier on notice (carried in prose).",
+  },
+  {
+    id: 'ca-ppsc-about',
+    type: 'institutional',
+    title: 'About Us — Public Prosecution Service of Canada',
+    publisher: 'Public Prosecution Service of Canada (ppsc-sppc.gc.ca)',
+    url: 'https://www.ppsc-sppc.gc.ca/eng/bas/index.html',
+    verifiedOn: '2026-07-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'CA',
+    note: "The PPSC's own page, read in full. Supports that the PPSC prosecutes offences under federal statutes and that 'In the territories, we are the only prosecutors and conduct all prosecutions of offences against the Criminal Code and all federal laws/acts' — the basis for the territories' prosecutionScope being national (federal) rather than the territory's own, in contrast to the provinces, where provincial Crowns conduct most Criminal Code prosecutions.",
+  },
+  {
+    id: 'ca-dpp-act',
+    type: 'legislation',
+    title: 'Director of Public Prosecutions Act (SC 2006, c. 9, s. 121)',
+    publisher: 'Government of Canada — Justice Laws Website (laws-lois.justice.gc.ca)',
+    url: 'https://laws-lois.justice.gc.ca/eng/acts/d-2.5/',
+    verifiedOn: '2026-07-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'CA',
+    note: "The statute establishing the federal Director of Public Prosecutions (English; French equally authoritative), read for the relevant sections. Supports s.3(1): the Governor in Council 'shall, on the recommendation of the Attorney General, appoint a Director of Public Prosecutions' — the statutory head of the PPSC, which initiates and conducts prosecutions within the jurisdiction of the Attorney General of Canada. Both versions have legal effect.",
+  },
+  {
+    id: 'ca-scc-act',
+    type: 'legislation',
+    title: 'Supreme Court Act (RSC 1985, c. S-26)',
+    publisher: 'Government of Canada — Justice Laws Website (laws-lois.justice.gc.ca)',
+    url: 'https://laws-lois.justice.gc.ca/eng/acts/s-26/',
+    verifiedOn: '2026-07-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'CA',
+    note: "The statute constituting the Supreme Court of Canada (English; French equally authoritative), read for the relevant sections. Supports s.4(1): 'The Court shall consist of a chief justice to be called the Chief Justice of Canada, and eight puisne judges' (nine judges); and s.6, that at least three judges must be appointed from Quebec. Both versions have legal effect.",
+  },
+  {
+    id: 'ca-statcan-corrections',
+    type: 'government',
+    title:
+      'Table 35-10-0154-01 — Average counts of adults in provincial and territorial correctional programs',
+    publisher: 'Statistics Canada (www150.statcan.gc.ca)',
+    url: 'https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=3510015401',
+    publishedOn: '2025',
+    verifiedOn: '2026-07-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'CA',
+    note: "The official Statistics Canada data cube (English; French equally authoritative), read from the primary CSV download. Supports the corrections restricted claim: for fiscal year 2023/2024, the Provinces-and-Territories average daily count of adults in custody ('actual-in') was 25,349.8 — remand 19,334.5, sentenced 5,895.1, other 120.2. These are PROVINCIAL/TERRITORIAL counts only (they EXCLUDE federal custody, i.e. sentences of two years or more administered by Correctional Service Canada) and are average daily counts over the fiscal year, not a single-day snapshot. Supports no federal figure and no cross-country comparison.",
+  },
+  {
+    id: 'ca-sq',
+    type: 'institutional',
+    title: 'Sûreté du Québec — site officiel',
+    publisher: 'Sûreté du Québec (sq.gouv.qc.ca)',
+    url: 'https://www.sq.gouv.qc.ca/',
+    verifiedOn: '2026-07-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'CA',
+    note: "The provincial police service of Quebec's own official site, read for its name. Establishes that the force's official name is the French 'Sûreté du Québec'; no official English name is asserted. Cited to support the naming choice on the law-enforcement page (Quebec runs its own provincial police, not the RCMP).",
+  },
 ];
 
 const SOURCE_INDEX = new Map(SOURCES.map((source) => [source.id, source]));

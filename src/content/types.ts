@@ -255,6 +255,25 @@ export const FUNCTION_SCOPES = [
   'shared',
   /** Exercised here, but under authority delegated from a parent jurisdiction. */
   'delegated',
+  /**
+   * This jurisdiction holds the function but procures its DELIVERY from an institution of
+   * another order of government under an agreement — the provider stays owned and governed by
+   * the other order; the client funds the service but does not own the institution.
+   *
+   * Added by the Canada pilot. RCMP contract policing is the forcing case: policing is
+   * constitutionally the province's (Constitution Act 1867 s.92(14)), but in eight provinces
+   * and the three territories it is delivered by the Royal Canadian Mounted Police — a federal
+   * institution that remains federally governed (RCMP Act ss.3, 5) — under a cost-shared Police
+   * Service Agreement (RCMP Act s.20). None of `own` (not the province's force), `delegated`
+   * (delegation runs parent→child; here a province procures a federal service), `national` (the
+   * province decides and pays most of the cost) or `shared` (implies concurrent authority that
+   * does not exist) states this honestly. The provider's identity and the agreement's terms live
+   * in the module PROSE, not in a typed institution registry — this is a scope value, not a
+   * relationship graph. Contrast the s.96 superior courts, which the province OWNS (courtScope
+   * `own`) with federally appointed judges: that is a note on an owned institution, not procured
+   * delivery, so it stays `own`.
+   */
+  'contracted',
   /** The function does not exist at this level at all. */
   'none',
   /** Not yet researched. Never a substitute for `none`. */

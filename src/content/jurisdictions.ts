@@ -875,6 +875,192 @@ export const JURISDICTIONS: readonly JurisdictionRecord[] = [
       "The Federal District — a sui-generis federative unit, not a state and constitutionally barred from being divided into municipalities (Art. 32). It accumulates the legislative competences reserved to both the states and the municipalities (Art. 32 §1), recorded with alsoExercisesLevels. What makes it distinctive for this platform is that its Polícia Civil, Polícia Militar and Corpo de Bombeiros, and its Judiciary and Ministério Público, are organised and maintained by the UNION (Art. 21, XIV and XIII), while the police nonetheless answer to the DF Governor (Art. 144 §6) — so policing, courts and prosecution are `shared` between the DF and the Union rather than wholly the DF's own. Its Ministério Público, the MPDFT, is a branch of the Ministério Público da União, not a state MP. No DF-specific institutional detail beyond this constitutional arrangement is asserted.",
     status: 'published',
   },
+
+  /* ---------------------------------------------------------------------- */
+  /* Canada — federal, two self-policing provinces, a contract province, a   */
+  /* territory                                                               */
+  /* ---------------------------------------------------------------------- */
+  /*
+   * Canada is a federation whose defining feature for this platform is CONTRACT POLICING, and it
+   * is the country that earns the `contracted` FunctionScope value:
+   *
+   *  - The criminal LAW is federal (Constitution Act 1867 s.91(27)) — one Criminal Code — but the
+   *    ADMINISTRATION of justice is provincial (s.92(14)). This is the Germany/Brazil split, with
+   *    one difference from both Brazil and the United States: the residual power (POGG) is
+   *    FEDERAL, not provincial, so `authorityBasis: 'reserved-powers'` would INVERT Canadian
+   *    federalism and is deliberately NOT used. Provincial powers are constitutionally enumerated
+   *    and exclusive (s.92); the records leave `authorityBasis` unset (its default carries no
+   *    claim) and state the arrangement in the notes.
+   *
+   *  - POLICING is where a single scope value could not tell the truth. Ontario (Ontario
+   *    Provincial Police) and Quebec (Sûreté du Québec) run their OWN provincial police —
+   *    `policingScope: 'own'`. But eight provinces and the three territories procure their
+   *    provincial/territorial policing from the RCMP — a federal institution that stays federally
+   *    governed — under a cost-shared Police Service Agreement: `policingScope: 'contracted'`.
+   *    British Columbia and the Yukon sample that. No typed relationship graph is built; the
+   *    RCMP/OPP/SQ identities live in the law-enforcement module prose.
+   *
+   *  - TERRITORIES differ from provinces: their powers are delegated by federal statute and are
+   *    amendable by Parliament, so `authorityBasis: 'federal-plenary'` (the value the US pilot
+   *    added for the District of Columbia, reused), and prosecution in the territories is done by
+   *    the federal Public Prosecution Service of Canada, so the Yukon's `prosecutionScope` is
+   *    `national`, not `own`.
+   *
+   * Samples: Canada (federal), Ontario and Quebec (self-policing; Quebec also the bijural
+   * civil-law case), British Columbia (RCMP contract province) and the Yukon (territory). Not all
+   * provinces/territories; no public sub-national pages; no public Indigenous-jurisdiction pages
+   * (First Nations policing is described in prose only).
+   */
+  {
+    id: 'ca',
+    slug: 'canada',
+    name: 'Canada',
+    shortName: 'Canada',
+    countryCode: 'CA',
+    level: 'federal',
+    // Bijural and federal: federal criminal law coexists with provincial private law (common
+    // law, and Quebec civil law) — a shared legal order, like the United States.
+    legalSystemScope: 'shared',
+    policingScope: 'shared',
+    courtScope: 'shared',
+    prosecutionScope: 'shared',
+    correctionalScope: 'shared',
+    legislativeCompetence: {
+      'legal-system': 'concurrent',
+      policing: 'concurrent',
+      courts: 'concurrent',
+      prosecution: 'concurrent',
+      corrections: 'concurrent',
+    },
+    temporalScope: 'current',
+    coverage: 'partial',
+    sources: ['ca-constitution-1867'],
+    notes:
+      "A federation in which the criminal LAW is federal and uniform — Parliament has exclusive authority over 'The Criminal Law ... including the Procedure in Criminal Matters' (Constitution Act 1867 s.91(27)) — but the ADMINISTRATION of justice is provincial (s.92(14)). Every modelled function is therefore `shared`: a federal police force (the RCMP) alongside provincial and municipal police; federal courts alongside provincially organised courts; federal prosecution (the Public Prosecution Service of Canada) alongside provincial Crown prosecution; federal penitentiaries (sentences of two years or more) alongside provincial custody (under two years and remand). Unlike the United States and Brazil, the residual 'Peace, Order, and good Government' power is FEDERAL. Canada is bijural (common law, and civil law for private law in Quebec) and bilingual (English and French versions of federal law equally authoritative).",
+    status: 'published',
+  },
+  {
+    id: 'ca-on',
+    slug: 'ontario',
+    name: 'Ontario',
+    shortName: 'Ontario',
+    countryCode: 'CA',
+    level: 'province',
+    parentJurisdictionId: 'ca',
+    // authorityBasis deliberately unset: provincial powers are constitutionally enumerated and
+    // exclusive (s.92); `reserved-powers` would wrongly imply the residual is provincial (in
+    // Canada POGG is federal). The arrangement is stated in the notes.
+    legalSystemScope: 'own',
+    policingScope: 'own',
+    courtScope: 'own',
+    prosecutionScope: 'own',
+    correctionalScope: 'own',
+    legislativeCompetence: {
+      'legal-system': 'concurrent',
+      policing: 'concurrent',
+      courts: 'concurrent',
+      prosecution: 'concurrent',
+      corrections: 'concurrent',
+    },
+    temporalScope: 'current',
+    coverage: 'in-research',
+    sources: ['ca-constitution-1867'],
+    notes:
+      'A common-law province that runs its OWN provincial police — the Ontario Provincial Police — and does NOT contract the RCMP for provincial policing, the contrast that makes the `contracted` value meaningful. Ontario administers its own courts and prosecutes most Criminal Code offences through its Crown attorneys, and runs provincial custody for sentences under two years. Its superior-court judges are appointed and paid by the federal government (s.96, s.100) while the province constitutes and administers the courts (s.92(14)) — a hybrid recorded in prose, with courtScope `own` because the province owns the courts. Provincial powers are constitutionally enumerated and exclusive; the residual power is federal.',
+    status: 'published',
+  },
+  {
+    id: 'ca-qc',
+    slug: 'quebec',
+    name: 'Quebec (Québec)',
+    shortName: 'Quebec',
+    countryCode: 'CA',
+    level: 'province',
+    parentJurisdictionId: 'ca',
+    // Quebec has its own legal system for PRIVATE law — the civil-law tradition — so
+    // legalSystemScope is `own` in the strongest sense; criminal law remains federal.
+    legalSystemScope: 'own',
+    policingScope: 'own',
+    courtScope: 'own',
+    prosecutionScope: 'own',
+    correctionalScope: 'own',
+    legislativeCompetence: {
+      'legal-system': 'concurrent',
+      policing: 'concurrent',
+      courts: 'concurrent',
+      prosecution: 'concurrent',
+      corrections: 'concurrent',
+    },
+    temporalScope: 'current',
+    coverage: 'in-research',
+    sources: ['ca-constitution-1867'],
+    notes:
+      'The bijural case. Quebec applies the CIVIL-LAW tradition to private law (the Civil Code of Québec), while the other provinces apply the common law — but the criminal law is the same federal Criminal Code everywhere, so legalSystemScope is `own` for the distinct private-law system with criminal law federal. Quebec runs its own provincial police, the Sûreté du Québec (named in French; no official English name is asserted), prosecutes through the Directeur des poursuites criminelles et pénales, administers its own courts, and runs provincial custody. Like Ontario it does NOT contract the RCMP for provincial policing.',
+    status: 'published',
+  },
+  {
+    id: 'ca-bc',
+    slug: 'british-columbia',
+    name: 'British Columbia',
+    shortName: 'British Columbia',
+    countryCode: 'CA',
+    level: 'province',
+    parentJurisdictionId: 'ca',
+    legalSystemScope: 'own',
+    // THE contract-policing case: provincial policing is delivered by the federal RCMP under a
+    // Police Service Agreement — the province holds the responsibility but procures the service.
+    policingScope: 'contracted',
+    courtScope: 'own',
+    prosecutionScope: 'own',
+    correctionalScope: 'own',
+    legislativeCompetence: {
+      'legal-system': 'concurrent',
+      policing: 'concurrent',
+      courts: 'concurrent',
+      prosecution: 'concurrent',
+      corrections: 'concurrent',
+    },
+    temporalScope: 'current',
+    coverage: 'in-research',
+    sources: ['ca-constitution-1867'],
+    notes:
+      "A contract-policing province: the province is constitutionally responsible for policing (s.92(14)) but procures its PROVINCIAL police service from the RCMP — a federal institution that remains federally governed — under a cost-shared Police Service Agreement (RCMP Act s.20). This is why policingScope is `contracted` rather than `own`: British Columbia does not own the force policing it. Some larger municipalities run their own police (for example the Vancouver Police Department) or hold their own RCMP municipal contracts; that within-province variation is described on the law-enforcement page. British Columbia administers its own courts, prosecutes through the BC Prosecution Service (with Crown pre-charge approval), and runs provincial custody. The RCMP's identity and the agreement's terms are stated in prose, not encoded as a typed institution record.",
+    status: 'published',
+  },
+  {
+    id: 'ca-yt',
+    slug: 'yukon',
+    name: 'Yukon',
+    shortName: 'Yukon',
+    countryCode: 'CA',
+    level: 'territory',
+    parentJurisdictionId: 'ca',
+    // A territory, not a province: its legislature and powers exist by federal statute (the Yukon
+    // Act) and are amendable by Parliament — hence federal-plenary (the DC value, reused), and a
+    // `delegated` legal system.
+    authorityBasis: 'federal-plenary',
+    legalSystemScope: 'delegated',
+    policingScope: 'contracted',
+    courtScope: 'own',
+    // In the territories the federal Public Prosecution Service of Canada is the ONLY prosecutor
+    // and conducts all Criminal Code prosecutions — so prosecution is national here, not the
+    // territory's own (the sharp province/territory contrast).
+    prosecutionScope: 'national',
+    correctionalScope: 'own',
+    legislativeCompetence: {
+      'legal-system': 'exclusive-federal',
+      policing: 'framework',
+      courts: 'framework',
+      prosecution: 'exclusive-federal',
+      corrections: 'framework',
+    },
+    temporalScope: 'current',
+    coverage: 'in-research',
+    sources: ['ca-constitution-1867'],
+    notes:
+      "A territory, included to test the province/territory distinction. Unlike a province, the Yukon's legislature and legislative powers exist by federal statute (the Yukon Act) and can be amended by Parliament, so authorityBasis is `federal-plenary` (the value the United States pilot added for the District of Columbia) and its legal-system scope is `delegated`. Its policing is delivered by the RCMP under a territorial Police Service Agreement (`contracted`), and — the decisive contrast with the provinces — criminal prosecution is conducted by the FEDERAL Public Prosecution Service of Canada, which states it is 'the only' prosecutor in the territories and conducts all Criminal Code prosecutions there, so prosecutionScope is `national`. The Yukon runs its own territorial custody for shorter sentences and remand.",
+    status: 'published',
+  },
 ];
 
 /* -------------------------------------------------------------------------- */
