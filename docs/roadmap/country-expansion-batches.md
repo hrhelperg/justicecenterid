@@ -16,7 +16,14 @@ Each candidate is characterised by five neutral dimensions:
 
 No completion dates are assigned. Batches are grouped for sequencing, not priority.
 
-## Batch A — Northern and Western Europe
+## Batch A — Northern and Western Europe · SHIPPED 2026-07-26
+
+**Delivered** on `feat/batch-a-northern-western-europe` (see
+`docs/audits/batch-a-northern-western-europe-qa.md` and roadmap Phase 13). All six countries below
+are published: the Netherlands, Belgium, Denmark, Norway, Sweden and Finland, 8 modules each, no new
+schema — Belgium validated the federal-but-justice-centralised shape (inverse of Germany) and Finland
+validated the `autonomous-community` level via Åland. The characterisation below is what was
+researched; it proved accurate.
 
 Mostly civil-law unitary or lightly federal systems with excellent official sources; a low-risk
 batch that mostly exercises **reuse** and hardens the model on well-documented ground.

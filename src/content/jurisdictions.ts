@@ -1496,6 +1496,182 @@ export const JURISDICTIONS: readonly JurisdictionRecord[] = [
       "The Italian-speaking sample, the third official language. Ticino runs its own police (polizia cantonale), courts and public prosecution (ministero pubblico) applying the federal codes, and — like Geneva — belongs to the Latin concordat for the execution of penalties. Its scope values are identical to Zürich's and Geneva's, which is the point: one federal law, cantonally administered, in three languages.",
     status: 'published',
   },
+
+  /* -------------------------------------------------------------------------- */
+  /* Netherlands (Batch A) — decentralised unitary state; justice all national  */
+  /* -------------------------------------------------------------------------- */
+  {
+    id: 'nl',
+    slug: 'netherlands',
+    name: 'Netherlands',
+    shortName: 'Netherlands',
+    countryCode: 'NL',
+    level: 'country',
+    legalSystemScope: 'own',
+    policingScope: 'own',
+    courtScope: 'own',
+    prosecutionScope: 'own',
+    correctionalScope: 'own',
+    temporalScope: 'current',
+    coverage: 'partial',
+    sources: ['nl-constitution', 'nl-gov-police'],
+    notes:
+      "The country of the Netherlands, a decentralised UNITARY state — not a federation. Provinces and municipalities have autonomous administrative powers (Constitution art. 124), but the four justice functions are national competence, established by Act of Parliament under Chapter 6 of the Grondwet: one court system culminating in the Hoge Raad, one Public Prosecution Service (Openbaar Ministerie), one national police force (Politiewet 2012), and prisons run by the central Custodial Institutions Agency (DJI). A single country-level record therefore states the arrangement accurately; there is no sub-national tier that administers any of the four. Two attribute facts stay in the module prose rather than the schema: the OM is part of the judiciary but under the political responsibility of the Minister of Justice and Security (not an independent prosecutor), and art. 120 forbids judicial review of the constitutionality of statutes (there is no constitutional court). 'NL' here is the European country of the Netherlands, not the wider Kingdom (Aruba, Curaçao and Sint Maarten run their own justice systems, sharing the Hoge Raad as court of cassation) — that Kingdom asymmetry is noted in prose and not modelled here.",
+    status: 'published',
+  },
+
+  /* -------------------------------------------------------------------------- */
+  /* Belgium (Batch A) — FEDERAL state, but justice functions are FEDERAL        */
+  /* competences. The inverse of Germany: one federal record, all functions own. */
+  /* -------------------------------------------------------------------------- */
+  {
+    id: 'be',
+    slug: 'belgium',
+    name: 'Belgium',
+    shortName: 'Belgium',
+    countryCode: 'BE',
+    level: 'federal',
+    legalSystemScope: 'own',
+    policingScope: 'own',
+    courtScope: 'own',
+    prosecutionScope: 'own',
+    correctionalScope: 'own',
+    legislativeCompetence: {
+      'legal-system': 'exclusive-federal',
+      policing: 'exclusive-federal',
+      courts: 'exclusive-federal',
+      prosecution: 'exclusive-federal',
+      corrections: 'exclusive-federal',
+    },
+    temporalScope: 'current',
+    coverage: 'partial',
+    sources: ['be-constitution', 'be-police-law-1998'],
+    notes:
+      'Belgium is a FEDERAL state (Constitution art. 1, "a federal State composed of Communities and Regions") — but, unlike Germany or the United States, the four justice functions are FEDERAL competences, held and administered at the federal level, not devolved to the Communities or Regions. The Constitution establishes single national bodies "for all Belgium": one Constitutional Court (art. 142), one Court of Cassation (art. 147, rendered "Supreme Court" in the official English translation), and one High Council of Justice and constitutionally independent prosecution (art. 151). Prisons are run by the federal FPS Justice and the police are the federal-plus-local integrated service of the Law of 7 December 1998. So the jurisdiction model represents Belgium as a single `federal` record with every function `own` (federally administered) and every legislative competence `exclusive-federal` — which is the INVERSE of Germany, whose federal record is `shared` because the Länder administer justice. This is why Belgium needs NO new schema: the distinction between \'federal and justice-devolved\' (Germany, US) and \'federal but justice-centralised\' (Belgium) is carried entirely by the scope values. No Community or Region record is created, because none of them does any of the four justice functions — a record exists only where it does institutional work. Youth-justice competence has partly moved to the Communities under successive state reforms, but the current allocation was not researched and is noted only in prose.',
+    status: 'published',
+  },
+
+  /* -------------------------------------------------------------------------- */
+  /* Denmark (Batch A) — unitary; justice all national                          */
+  /* -------------------------------------------------------------------------- */
+  {
+    id: 'dk',
+    slug: 'denmark',
+    name: 'Denmark',
+    shortName: 'Denmark',
+    countryCode: 'DK',
+    level: 'country',
+    legalSystemScope: 'own',
+    policingScope: 'own',
+    courtScope: 'own',
+    prosecutionScope: 'own',
+    correctionalScope: 'own',
+    temporalScope: 'current',
+    coverage: 'partial',
+    sources: ['dk-constitution', 'dk-ejustice-justice'],
+    notes:
+      'Denmark (Danmark), a unitary constitutional monarchy under the 1953 Constitutional Act. All four justice functions are national, held under the Ministry of Justice: one court system culminating in the Supreme Court (Højesteret), one Prosecution Service (Anklagemyndigheden), one national police (Rigspolitiet, deconcentrated into 12 districts), and one Prison and Probation Service (Kriminalforsorgen). A single country-level record states the arrangement accurately. Two facts stay in prose: prosecution and police are INTEGRATED under a single district head — the Police Commissioner (politidirektør) is both the head of the police district and the local prosecutor, both under the Ministry of Justice — and the courts alone (no separate constitutional or administrative court) decide constitutional and administrative questions (Constitution §63). Prosecution is under the Ministry of Justice (not independent), even as the courts are constitutionally independent of the executive (§62). Scope note: this is the country of Denmark; the Faroe Islands and Greenland are self-governing within the Realm and each forms its own court and police district under statutory Home Rule/Self-Government — an asymmetric, statutory arrangement (not federalism), noted in prose and not modelled as separate records here.',
+    status: 'published',
+  },
+
+  /* -------------------------------------------------------------------------- */
+  /* Norway (Batch A) — unitary, non-EU; justice all national                   */
+  /* -------------------------------------------------------------------------- */
+  {
+    id: 'no',
+    slug: 'norway',
+    name: 'Norway',
+    shortName: 'Norway',
+    countryCode: 'NO',
+    level: 'country',
+    legalSystemScope: 'own',
+    policingScope: 'own',
+    courtScope: 'own',
+    prosecutionScope: 'own',
+    correctionalScope: 'own',
+    temporalScope: 'current',
+    coverage: 'partial',
+    sources: ['no-constitution', 'no-domstol-courts'],
+    notes:
+      'Norway (Norge), a unitary, decentralised (non-federal) constitutional monarchy under the 1814 Constitution, and a non-EU state (EEA/Schengen). All four justice functions are national, under the Ministry of Justice and Public Security: one court system culminating in the Supreme Court (Høyesterett), one Prosecution Authority (Påtalemyndigheten) headed by the Director of Public Prosecutions (Riksadvokaten), one national police (Politiet, in 12 districts under the National Police Directorate), and one Correctional Service (Kriminalomsorgen). Municipalities and counties exist but run none of the four. A single country-level record states the arrangement accurately. Two facts stay in prose: the prosecution is strongly INDEPENDENT — only the King in Council, not the Minister of Justice, may give it general instructions, and it directs criminal investigation, with its lowest tier embedded inside the police (police lawyers holding prosecutorial powers); and constitutional review is exercised by the ordinary courts (Constitution art. 89), so there is no separate constitutional court. The prosecutor-led, police-integrated investigation is a functional arrangement, not a territorial or federal one, and needs no new schema.',
+    status: 'published',
+  },
+
+  /* -------------------------------------------------------------------------- */
+  /* Sweden (Batch A) — unitary; constitutional agency autonomy (ministerstyre) */
+  /* -------------------------------------------------------------------------- */
+  {
+    id: 'se',
+    slug: 'sweden',
+    name: 'Sweden',
+    shortName: 'Sweden',
+    countryCode: 'SE',
+    level: 'country',
+    legalSystemScope: 'own',
+    policingScope: 'own',
+    courtScope: 'own',
+    prosecutionScope: 'own',
+    correctionalScope: 'own',
+    temporalScope: 'current',
+    coverage: 'partial',
+    sources: ['se-constitution', 'se-polisen'],
+    notes:
+      'Sweden (Sverige), a unitary constitutional monarchy governed by four fundamental laws, the central one being the Instrument of Government (Regeringsformen, 1974). All four justice functions are national, exercised by central-government administrative authorities: one Police Authority (Polismyndigheten, a single national authority with seven regions), one Prosecution Authority (Åklagarmyndigheten), one Prison and Probation Service (Kriminalvården, a unified corrections body), and two branches of courts. A single country-level record states the arrangement accurately. The defining fact stays in prose: the Instrument of Government (Ch. 12 Art. 2) prohibits ministerstyre — no public authority, including the Government or a minister, may determine how an administrative authority decides an individual case or applies the law, so the police, prosecution and prison service are constitutionally insulated from case-level ministerial direction (a stronger agency autonomy than "under the justice ministry"). Two further prose facts: the courts are in two branches, each with its own apex (the Supreme Court, Högsta domstolen, and the Supreme Administrative Court, Högsta förvaltningsdomstolen; Ch. 11 Art. 1), and there is no constitutional court — every court exercises diffuse constitutional review (Ch. 11 Art. 14). None of this needs a new schema value.',
+    status: 'published',
+  },
+
+  /* -------------------------------------------------------------------------- */
+  /* Finland (Batch A) — unitary, bilingual, EU. Mainland is national; Åland is  */
+  /* an autonomous region with policing competence (validating autonomous-       */
+  /* community by reuse), while courts/prosecution/corrections stay with the      */
+  /* State.                                                                      */
+  /* -------------------------------------------------------------------------- */
+  {
+    id: 'fi',
+    slug: 'finland',
+    name: 'Finland',
+    shortName: 'Finland',
+    countryCode: 'FI',
+    level: 'country',
+    legalSystemScope: 'own',
+    policingScope: 'own',
+    courtScope: 'own',
+    prosecutionScope: 'own',
+    correctionalScope: 'own',
+    temporalScope: 'current',
+    coverage: 'partial',
+    sources: ['fi-constitution', 'fi-intermin-police'],
+    notes:
+      "Finland (Suomi / Finland), a unitary, bilingual (Finnish and Swedish, Constitution s. 17) parliamentary republic and EU member state, under the 1999 Constitution. On the mainland all four justice functions are national. Two facts stay in prose: there are TWO supreme courts — the Supreme Court (korkein oikeus) for civil/criminal matters and the Supreme Administrative Court (korkein hallinto-oikeus) for administrative matters (s. 3, s. 99) — and no constitutional court (review is ex-ante by Parliament's Constitutional Law Committee and diffuse under s. 106); and the police sit under the Ministry of the Interior while the courts, prosecution and prisons sit under the Ministry of Justice (a split of ministries the model records in prose, not schema). The prosecution (Syyttäjälaitos) is decisionally independent but within the Ministry of Justice administrative branch. The Åland asymmetry is modelled separately (fi-aland).",
+    status: 'published',
+  },
+  {
+    id: 'fi-aland',
+    slug: 'aland',
+    name: 'Åland',
+    shortName: 'Åland',
+    countryCode: 'FI',
+    level: 'autonomous-community',
+    parentJurisdictionId: 'fi',
+    legalSystemScope: 'national',
+    policingScope: 'own',
+    courtScope: 'national',
+    prosecutionScope: 'national',
+    correctionalScope: 'national',
+    legislativeCompetence: {
+      policing: 'exclusive-subnational',
+      'legal-system': 'exclusive-federal',
+      courts: 'exclusive-federal',
+      prosecution: 'exclusive-federal',
+      corrections: 'exclusive-federal',
+    },
+    temporalScope: 'current',
+    coverage: 'in-research',
+    sources: ['fi-autonomy-act'],
+    notes:
+      'Åland (Ahvenanmaa), the Swedish-speaking autonomous region of Finland, modelled at the `autonomous-community` level minted by the Spain pilot — it is the same category of thing (an autonomous, legislature-bearing region), not a French administrative `region`. Under the Act on the Autonomy of Åland (1144/1991), Åland holds legislative competence over "public order and security", i.e. POLICING (s. 18(6), with State exceptions for firearms and rescue services), so policingScope is `own`. But criminal law, the courts, the preliminary-investigation/prosecution framework and the enforcement of sentences are reserved to the State (s. 27, subparagraphs 22–24), so courtScope, prosecutionScope and correctionalScope are `national`. This single-function devolution — one autonomous region running its own policing over a national baseline for everything else — is the Finland asymmetry, and it reuses existing values with no new schema. The Autonomy Act establishes the COMPETENCE allocation; the name and administration of a distinct Åland police organisation were not confirmed from a primary source, so only the competence is modelled and the parent-derived legislativeCompetence records that policing is legislated sub-nationally (by the Åland Lagting) while the reserved functions are legislated by the State (`exclusive-federal` here meaning the central/State level, Finland being unitary).',
+    status: 'published',
+  },
 ];
 
 /* -------------------------------------------------------------------------- */
