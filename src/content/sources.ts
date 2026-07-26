@@ -805,6 +805,32 @@ export const SOURCES: readonly SourceRecord[] = [
     jurisdiction: 'BR',
     note: "The official penitentiary-statistics report, read from the primary PDF (extracted locally). Reference period July–December 2024, snapshot 31 December 2024, category 'presos em cela física' (people who, regardless of daytime release for work or study, 'dormem no estabelecimento prisional' — i.e. excluding prisão domiciliar / home detention, which the report tabulates separately). Supports: state-and-DF prison population Total = 670.265; capacity of places (capacidade de vagas) Total = 494.379; deficit of places (déficit de vagas) Total = 175.886. The report does NOT print an occupancy percentage on the totals pages — any rate is a derivation, not a quoted figure. Supports the single scoped detention-capacity claim on the corrections page; supports no comparison with any other country.",
   },
+
+  /* ------------------------------------------------------------------------ */
+  /* Canada (federal, contract-policing pilot) — verified 2026-07-26           */
+  /* ------------------------------------------------------------------------ */
+  /*
+   * BILINGUAL AUTHORITY. Canadian federal law is enacted in English and French and, by the
+   * equal-authenticity rule (Charter s.18(1)), BOTH language versions are equally authoritative
+   * — neither is a translation of the other. Sources are cited in English; the French title is
+   * recorded and the equal authority noted. Quebec institutions are named in French (e.g. the
+   * Sûreté du Québec), and no official English name is invented where none exists.
+   *
+   * ACCESS. laws-lois.justice.gc.ca serves the full consolidated bilingual statutes to a browser
+   * user-agent; every Constitution/Criminal Code/statute quotation was read verbatim from it.
+   */
+  {
+    id: 'ca-constitution-1867',
+    type: 'legislation',
+    title: 'Constitution Act, 1867 (30 & 31 Victoria, c. 3 (UK))',
+    publisher: 'Government of Canada — Justice Laws Website (laws-lois.justice.gc.ca)',
+    url: 'https://laws-lois.justice.gc.ca/eng/const/index.html',
+    publishedOn: '1867-07-01',
+    verifiedOn: '2026-07-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'CA',
+    note: "The authoritative consolidated text (English; the French 'Loi constitutionnelle de 1867' is equally authoritative), read in full. THE backbone of the division of powers. Supports: s.91(27) FEDERAL exclusive authority over 'The Criminal Law, except the Constitution of Courts of Criminal Jurisdiction, but including the Procedure in Criminal Matters'; s.91(28) federal 'Penitentiaries'; the s.91 opening 'exclusive Legislative Authority' plus the residual 'Peace, Order, and good Government' power (POGG is FEDERAL — the inverse of the United States); s.92(14) PROVINCIAL exclusive authority over 'The Administration of Justice in the Province, including the Constitution, Maintenance, and Organization of Provincial Courts, both of Civil and of Criminal Jurisdiction'; s.92(6) provincial 'Public and Reformatory Prisons'; s.96 'The Governor General shall appoint the Judges of the Superior, District, and County Courts in each Province'; s.100 (Parliament fixes and pays superior-court judges' salaries); s.101 (Parliament may establish a general court of appeal and additional federal courts). Establishes the characteristic Canadian arrangement: one federal criminal law, provincially administered. Both language versions have legal effect.",
+  },
 ];
 
 const SOURCE_INDEX = new Map(SOURCES.map((source) => [source.id, source]));
