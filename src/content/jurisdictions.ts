@@ -1206,6 +1206,149 @@ export const JURISDICTIONS: readonly JurisdictionRecord[] = [
       'The contrast that makes `contracted` a real distinction. Like the ACT, the Northern Territory is self-governing under a Commonwealth statute (the Northern Territory (Self-Government) Act 1978), so authorityBasis is `federal-plenary`. But unlike the ACT, the NT runs its OWN police force (the Northern Territory Police Force) under its own legislation — so policingScope is `own`, not `contracted`. Two self-governing territories with the same source of power, differing only in whether they procure policing from the Commonwealth: the ACT does, the NT does not.',
     status: 'published',
   },
+
+  /* ---------------------------------------------------------------------- */
+  /* Spain — the national level and four asymmetric autonomous communities   */
+  /* ---------------------------------------------------------------------- */
+  /*
+   * Spain is a decentralised UNITARY state (its Constitution, art. 145.1, forbids federation),
+   * and it is the platform's test of ASYMMETRIC decentralisation. The model needs no new field
+   * for the asymmetry: it is a set of divergent per-function scope values across sibling
+   * autonomous-community records, which is exactly what the tier-vs-unit rule was built to carry.
+   *
+   *  - POLICING and CORRECTIONS are devolved to SOME communities and not others. Catalonia (the
+   *    Mossos d'Esquadra) and the Basque Country (the Ertzaintza) run their own ordinary police
+   *    AND their own prison systems (penitentiary administration transferred by Real Decreto
+   *    3482/1983 and Real Decreto 474/2021). Navarre runs its own police (the Policía Foral) but
+   *    NOT its own prisons. Most other communities (Andalusia stands for them here) run neither
+   *    and rely on the national forces and the central prison administration. So policingScope and
+   *    correctionalScope vary community by community — `own` where devolved, `national` where not.
+   *
+   *  - COURTS and PROSECUTION are NOT devolved to any community: the judiciary is unitary
+   *    (art. 117.5, unidad jurisdiccional) and the Ministerio Fiscal is a single national body
+   *    (art. 124). So courtScope and prosecutionScope are `national` for every community, even
+   *    those with their own police and prisons — the model discriminating within one community.
+   *
+   *  - LEGISLATION on criminal, penitentiary and procedural law is EXCLUSIVELY the State's
+   *    (art. 149.1.6); the communities only ADMINISTER. That administration/legislation split is
+   *    stated in the notes rather than the schema, and `authorityBasis` is left unset for every
+   *    community — their competences are assumed via their Statutes within the Constitution, the
+   *    default relationship, not a distinct source of authority.
+   *
+   * Samples: Spain, Catalonia and the Basque Country (own police + own prisons), Navarre (own
+   * police, central prisons) and Andalusia (neither). Not all 17 communities; no public
+   * sub-national pages.
+   */
+  {
+    id: 'es',
+    slug: 'spain',
+    name: 'Kingdom of Spain',
+    shortName: 'Spain',
+    countryCode: 'ES',
+    level: 'country',
+    legalSystemScope: 'own',
+    // Policing and corrections are partly devolved to some communities, so both are `shared`
+    // between the State and the autonomous police / prison systems; courts and prosecution stay
+    // unitary/national.
+    policingScope: 'shared',
+    courtScope: 'own',
+    prosecutionScope: 'own',
+    correctionalScope: 'shared',
+    temporalScope: 'current',
+    coverage: 'partial',
+    sources: ['es-constitution'],
+    notes:
+      "A decentralised unitary state — the Constitution (art. 145.1) forbids federation of the Autonomous Communities. Criminal, penitentiary and procedural LEGISLATION is exclusively the State's (art. 149.1.6), and the justice system is unitary (art. 117.5) with a single national prosecution service (art. 124). But the ADMINISTRATION of two functions is devolved asymmetrically: some communities run their own police (art. 149.1.29) and some run their own prison systems, so policing and corrections are `shared` between the State and the communities, while courts and prosecution remain the State's own. The national security forces are the Cuerpo Nacional de Policía and the Guardia Civil, under the Ministry of the Interior.",
+    status: 'published',
+  },
+  {
+    id: 'es-catalonia',
+    slug: 'catalonia',
+    name: 'Catalonia (Catalunya)',
+    shortName: 'Catalonia',
+    countryCode: 'ES',
+    level: 'autonomous-community',
+    parentJurisdictionId: 'es',
+    // authorityBasis deliberately unset: competences are assumed via the Statute of Autonomy
+    // within the Constitution — the ordinary relationship, not a distinct source of authority.
+    legalSystemScope: 'national',
+    // Own ordinary police (the Mossos d'Esquadra) and own prison administration (transferred).
+    policingScope: 'own',
+    courtScope: 'national',
+    prosecutionScope: 'national',
+    correctionalScope: 'own',
+    temporalScope: 'current',
+    coverage: 'in-research',
+    sources: ['es-constitution'],
+    notes:
+      "The most fully devolved community for this platform. Catalonia runs its own ordinary police — the Mossos d'Esquadra (named in Catalan) — under art. 149.1.29 and its Statute, and its own prison system: penitentiary administration was transferred by Real Decreto 3482/1983 (effective 1 January 1984). So policingScope and correctionalScope are `own`. But its courts are part of the single national judiciary (art. 117.5), topped in the community by a Tribunal Superior de Justicia (art. 152), and prosecution is the national Ministerio Fiscal — so courtScope and prosecutionScope are `national`. And the criminal and penitentiary LAW it applies is the State's (art. 149.1.6); Catalonia administers, it does not legislate the crime.",
+    status: 'published',
+  },
+  {
+    id: 'es-basque',
+    slug: 'basque-country',
+    name: 'Basque Country (Euskadi / País Vasco)',
+    shortName: 'Basque Country',
+    countryCode: 'ES',
+    level: 'autonomous-community',
+    parentJurisdictionId: 'es',
+    legalSystemScope: 'national',
+    policingScope: 'own',
+    courtScope: 'national',
+    prosecutionScope: 'national',
+    correctionalScope: 'own',
+    temporalScope: 'current',
+    coverage: 'in-research',
+    sources: ['es-constitution'],
+    notes:
+      "Like Catalonia in its devolution, on a different timeline. The Basque Country runs its own ordinary police — the Ertzaintza (named in Basque) — under the Statute of Gernika and art. 149.1.29, and it received the transfer of penitentiary administration more recently, by Real Decreto 474/2021 (effective 1 October 2021), so correctionalScope is now `own`. Its courts remain part of the unitary national judiciary and prosecution the national Ministerio Fiscal (courtScope and prosecutionScope `national`), and the criminal and penitentiary legislation is the State's (art. 149.1.6).",
+    status: 'published',
+  },
+  {
+    id: 'es-navarre',
+    slug: 'navarre',
+    name: 'Navarre (Navarra / Nafarroa)',
+    shortName: 'Navarre',
+    countryCode: 'ES',
+    level: 'autonomous-community',
+    parentJurisdictionId: 'es',
+    legalSystemScope: 'national',
+    // Its own police corps (the Policía Foral) but NOT an integral force: it SHARES ordinary
+    // policing with the national forces (its exclusive competence is essentially traffic), so
+    // `shared`, not `own` — the middle of the asymmetry gradient. And no prison transfer.
+    policingScope: 'shared',
+    courtScope: 'national',
+    prosecutionScope: 'national',
+    correctionalScope: 'national',
+    temporalScope: 'current',
+    coverage: 'in-research',
+    sources: ['es-constitution'],
+    notes:
+      "The middle case of the asymmetry gradient. Navarre has its own police corps — the Policía Foral — under its foral regime (LORAFNA) and art. 149.1.29, but unlike the Mossos d'Esquadra and the Ertzaintza it is NOT an integral force that has displaced the national police: it shares ordinary public-security duties with the Cuerpo Nacional de Policía and the Guardia Civil (its exclusive competence is essentially traffic), so policingScope is `shared`, not `own`. And it did NOT receive the transfer of penitentiary administration, so its prisons are run by the central Secretaría General de Instituciones Penitenciarias (`national`). Its courts and prosecution are the unitary national ones — shared policing, national everything else, between Catalonia/Basque (own police, own prisons) and Andalusia (national throughout).",
+    status: 'published',
+  },
+  {
+    id: 'es-andalusia',
+    slug: 'andalusia',
+    name: 'Andalusia (Andalucía)',
+    shortName: 'Andalusia',
+    countryCode: 'ES',
+    level: 'autonomous-community',
+    parentJurisdictionId: 'es',
+    legalSystemScope: 'national',
+    // No autonomous police and no transferred prisons — the national forces and central
+    // administration do the work.
+    policingScope: 'national',
+    courtScope: 'national',
+    prosecutionScope: 'national',
+    correctionalScope: 'national',
+    temporalScope: 'current',
+    coverage: 'in-research',
+    sources: ['es-constitution'],
+    notes:
+      'The no-devolution case, standing for the majority of communities. Andalusia has no full autonomous police force of its own — policing is done by the national Cuerpo Nacional de Policía and Guardia Civil — and its prisons are run by the central Secretaría General de Instituciones Penitenciarias. So every modelled function is `national`: the community is a real political entity with a Statute and assembly, but it has not assumed the police or prison competences that Catalonia, the Basque Country and Navarre have. This is why the asymmetry is recorded per community, not as a single national fact.',
+    status: 'published',
+  },
 ];
 
 /* -------------------------------------------------------------------------- */

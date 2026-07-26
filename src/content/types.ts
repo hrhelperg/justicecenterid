@@ -173,6 +173,16 @@ export const JURISDICTION_LEVELS = [
   'country',
   'federal',
   'constituent-country',
+  /*
+   * Added by the Spain pilot. A Spanish autonomous community (comunidad autónoma) is a
+   * politically autonomous region with its own Statute of Autonomy, elected assembly and
+   * devolved competences — some run their own police and prison administration. Filing it under
+   * `region` (a French-style administrative tier with no legislative power) would group two
+   * categorically different things, exactly the miscategorisation the Japan pilot avoided by
+   * adding `prefecture`. Spain is a decentralised UNITARY state, not a federation — its
+   * Constitution (art. 145.1) expressly forbids federation of the communities.
+   */
+  'autonomous-community',
   'state',
   'province',
   'region',

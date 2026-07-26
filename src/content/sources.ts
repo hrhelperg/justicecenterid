@@ -1019,6 +1019,67 @@ export const SOURCES: readonly SourceRecord[] = [
     jurisdiction: 'AU',
     note: "The official ABS point-in-time prisoner census, read directly from the release. Supports: 'As at 30 June 2025: there were 46,998 adult prisoners in Australia'; 'unsentenced prisoners increased by 10% (1,814) to 19,850, while sentenced prisoners increased by 3% (770) to 27,051.' A national count of adults in the custody of the state and territory corrective-services agencies (there is no Commonwealth prison system), at a single date. Supports the corrections restricted claim; supports no cross-country comparison.",
   },
+
+  /* ------------------------------------------------------------------------ */
+  /* Spain (asymmetric decentralisation pilot) — verified 2026-07-26           */
+  /* ------------------------------------------------------------------------ */
+  /*
+   * LANGUAGE. Castilian Spanish is the authoritative language of State law (boe.es). Catalan,
+   * Basque (Euskara) and Galician are co-official in their communities; institutions such as the
+   * Mossos d'Esquadra (Catalan) and the Ertzaintza (Basque) are named in those languages, and no
+   * English name is invented for them.
+   */
+  {
+    id: 'es-constitution',
+    type: 'legislation',
+    title: 'Constitución Española de 1978',
+    publisher: 'Boletín Oficial del Estado (boe.es), BOE-A-1978-31229',
+    url: 'https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229',
+    publishedOn: '1978-12-29',
+    verifiedOn: '2026-07-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'ES',
+    note: "The authoritative Castilian text, read in full. Supports: art. 2 (the indissoluble unity of the Spanish Nation and the right to autonomy of the nationalities and regions); art. 137 (the State organised into municipalities, provinces and Autonomous Communities); art. 145.1 ('En ningún caso se admitirá la federación de Comunidades Autónomas' — federation is constitutionally forbidden, so Spain is a decentralised UNITARY state); art. 148 (competences the Communities MAY assume) and art. 149.1 (the State's EXCLUSIVE competences), including art. 149.1.6 ('Legislación mercantil, penal y penitenciaria; legislación procesal' — criminal, penitentiary and procedural LEGISLATION is exclusively the State's), art. 149.1.5 (Administration of Justice), and art. 149.1.29 (public security, 'sin perjuicio de la posibilidad de creación de policías por las Comunidades Autónomas' — the basis for autonomous police); art. 104 (security forces under the Government); art. 117.5 ('El principio de unidad jurisdiccional es la base de la organización y funcionamiento de los Tribunales' — judicial unity); art. 122 (the Consejo General del Poder Judicial as the judiciary's governing body); art. 123 (the Tribunal Supremo, 'con jurisdicción en toda España, es el órgano jurisdiccional superior en todos los órdenes'); art. 124 (the Ministerio Fiscal, national, acting under unidad de actuación y dependencia jerárquica); art. 152.1 (a Tribunal Superior de Justicia culminating the judicial organisation in each community, without prejudice to the Supreme Court); and arts. 24-25 (due-process and penal principles).",
+  },
+
+  {
+    id: 'es-lofcs',
+    type: 'legislation',
+    title: 'Ley Orgánica 2/1986, de 13 de marzo, de Fuerzas y Cuerpos de Seguridad',
+    publisher: 'Boletín Oficial del Estado (boe.es), BOE-A-1986-6859',
+    url: 'https://www.boe.es/buscar/act.php?id=BOE-A-1986-6859',
+    publishedOn: '1986-03-13',
+    verifiedOn: '2026-07-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'ES',
+    note: "The organic law of the security forces, read in full for the relevant articles. Supports the THREE tiers of security forces: the Fuerzas y Cuerpos de Seguridad del Estado (national), the police of the Autonomous Communities, and the local police. Names the two national forces (art. 9): 'a) El Cuerpo Nacional de Policía, que es un Instituto Armado de naturaleza civil, dependiente del Ministro del Interior. b) La Guardia Civil, que es un Instituto Armado de naturaleza militar...' — so the Guardia Civil is a militarily-organised force, not merely rural police. Provides the framework within which the Autonomous Communities that so provide in their Statutes create their own police forces.",
+  },
+  {
+    id: 'es-prison-transfer-cat',
+    type: 'legislation',
+    title:
+      'Real Decreto 3482/1983, de 28 de diciembre, sobre traspaso de servicios del Estado a la Generalidad de Cataluña en materia de Administración penitenciaria',
+    publisher: 'Boletín Oficial del Estado (boe.es), BOE-A-1984-4310',
+    url: 'https://www.boe.es/buscar/doc.php?id=BOE-A-1984-4310',
+    publishedOn: '1984',
+    verifiedOn: '2026-07-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'ES',
+    note: "The decree transferring penitentiary administration to Catalonia, read directly. It transfers to the Generalitat 'la ejecución de la legislación del Estado en materia penitenciaria' — the EXECUTION of State penitentiary legislation — with the Generalitat assuming management from 1 January 1984. Establishes that Catalonia administers its own prison system while the penitentiary LAW remains the State's (art. 149.1.6). The corollary is that a central prison figure that excludes Catalonia understates the whole.",
+  },
+  {
+    id: 'es-prison-transfer-basque',
+    type: 'legislation',
+    title:
+      'Real Decreto 474/2021, de 29 de junio, de traspaso de funciones y servicios de la Administración del Estado a la Comunidad Autónoma del País Vasco en materia de ejecución de la legislación del Estado sobre ejecución penal',
+    publisher: 'Boletín Oficial del Estado (boe.es), BOE-A-2021-11239',
+    url: 'https://www.boe.es/buscar/doc.php?id=BOE-A-2021-11239',
+    publishedOn: '2021-06-29',
+    verifiedOn: '2026-07-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'ES',
+    note: "The decree transferring penitentiary administration to the Basque Country, read directly. Like the Catalan transfer, it devolves 'la ejecución de la legislación del Estado en materia penitenciaria' — the execution of State penitentiary legislation — effective 1 October 2021, while the legislation itself stays the State's. Establishes that the Basque Country now runs its own prison system, the second community to do so.",
+  },
 ];
 
 const SOURCE_INDEX = new Map(SOURCES.map((source) => [source.id, source]));

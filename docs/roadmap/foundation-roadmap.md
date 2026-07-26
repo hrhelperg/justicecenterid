@@ -441,3 +441,19 @@ inverse of Canada — and the ACT/NT are `federal-plenary` (the DC/Yukon value).
 restricted claim the ABS 30 June 2025 census (46,998 prisoners; 27,051 sentenced, 19,850
 unsentenced). Constitution s.107 and the AFP/ACT arrangement read verbatim; adversarial pass
 11/11 supported. Next in program: Spain.
+
+## Phase 10 — Spain (delivered 2026-07-26)
+
+Third country of the program branch. **One additive schema change** — an `autonomous-community`
+JurisdictionLevel — and the defining feature, ASYMMETRIC decentralisation, carried by existing
+fields: divergent per-function scope values across sibling community records. Catalonia
+(Mossos d'Esquadra) and the Basque Country (Ertzaintza) run their own police and prisons (transfers
+by RD 3482/1983 and RD 474/2021); Navarre (Policía Foral) `shared` policing / `national` prisons;
+Andalusia `national` throughout — while courts and prosecution are `national` for every community
+(judicial unity, art. 117.5; the national Ministerio Fiscal, art. 124). Spain is a decentralised
+unitary state (art. 145.1 forbids federation). Legislation on criminal/penitentiary law is
+exclusively the State's (art. 149.1.6); administration is what is devolved. No prison statistic is
+published — the official series are split by administration and could not be reconciled to one
+verified figure. Constitution and the transfer decrees read verbatim from the BOE; adversarial
+pass 9/10, with the one flagged item (Navarre's non-integral police) corrected in place. Published
+8 routes. Next in program: Switzerland.
