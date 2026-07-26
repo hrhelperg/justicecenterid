@@ -1104,6 +1104,56 @@ export const SOURCES: readonly SourceRecord[] = [
     jurisdiction: 'CH',
     note: "The Federal Constitution, read in full from the official fedlex text (English is a non-authoritative translation; German, French and Italian are equally authentic). Supports: art. 1 (the Confederation of the People and the 26 Cantons); art. 3, 'The Cantons are sovereign except to the extent that their sovereignty is limited by the Federal Constitution. They exercise all rights that are not vested in the Confederation' — residual power with the CANTONS (like the United States and Australia); art. 46 (the Cantons implement federal law — executive federalism); art. 122 (the Confederation legislates civil law, but 'the Cantons are responsible for the organisation of the courts and the administration of justice in civil matters'); art. 123 ('The Confederation is responsible for legislation in the field of criminal law and the law of criminal procedure', while 'the Cantons are responsible for the organisation of the courts, the administration of justice in criminal cases as well as for the execution of penalties and measures') — so the law is federal and unified but the administration, including corrections, is cantonal; art. 188 (the Federal Supreme Court as the supreme judicial authority); art. 48 (inter-cantonal treaties, the basis for the corrections concordats); art. 70 (German, French and Italian as official languages); and the direct-democracy provisions (arts. 138-142: popular initiative, mandatory and optional referendums).",
   },
+
+  {
+    id: 'ch-crimpc',
+    type: 'legislation',
+    title: 'Swiss Criminal Procedure Code (StPO / CPP / CPP) of 5 October 2007 (SR 312.0)',
+    publisher: 'Swiss Confederation — Fedlex (fedlex.admin.ch)',
+    url: 'https://www.fedlex.admin.ch/eli/cc/2010/267/en',
+    publishedOn: '2007-10-05',
+    verifiedOn: '2026-07-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'CH',
+    note: 'The unified federal Criminal Procedure Code (equally authentic in German, French and Italian; English is a reference translation). In force since 1 January 2011, it replaced the former 26 separate cantonal codes of criminal procedure. Supports art. 1 (it governs prosecution and adjudication by the federal AND cantonal criminal-justice authorities of offences under federal law) and art. 22 (the cantonal criminal authorities prosecute and judge federal criminal offences, subject to the legal exceptions) — the basis for prosecution being cantonal by default. Its enactment on the basis of Constitution art. 123 para 1 illustrates federal law, cantonal administration.',
+  },
+  {
+    id: 'ch-fedpol',
+    type: 'institutional',
+    title: 'National cooperation — fedpol (Federal Office of Police)',
+    publisher: 'Federal Office of Police fedpol (fedpol.admin.ch)',
+    url: 'https://www.fedpol.admin.ch/fedpol/en/home/polizei-zusammenarbeit/national.html',
+    verifiedOn: '2026-07-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'CH',
+    note: "fedpol's own account (official page, obtained by search retrieval; fedpol.admin.ch pages are reorganised behind a content system). Supports that 'Switzerland does not have a national police force', that each canton is responsible for policing its own territory and has its own police law, and that fedpol 'is not a superordinate authority, but works alongside these police forces' — with limited federal functions (federal-jurisdiction investigations, security duties, national coordination). Establishes that policing is primarily cantonal and fedpol does not command the cantonal police. Structural facts only.",
+  },
+  {
+    id: 'ch-fso-prisons',
+    type: 'government',
+    title:
+      'Number of detainees at highest recorded level — Imprisonment: January 2026 (press release and FHE survey)',
+    publisher: 'Swiss Federal Statistical Office (FSO / BFS), bfs.admin.ch',
+    url: 'https://www.bfs.admin.ch/asset/en/36577167',
+    publishedOn: '2026-05-11',
+    verifiedOn: '2026-07-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'CH',
+    note: "The official Federal Statistical Office imprisonment statistics, read from the release. Supports that 'As at 31 January 2026, the number of detainees stood at 7 119, the highest number since the survey began' (the FHE survey, from 1988). Per the FSO the detainees divide by type into roughly 63% serving a sentence or measure and roughly 31% in pre-trial or security detention, with the remainder in other forms of detention; the reference-day capacity is about 7,373 places across some 90 adult facilities. A national, single-reference-day count of adults in custody. Supports the corrections restricted claim; supports no cross-country comparison.",
+  },
+  {
+    id: 'ch-bekj',
+    type: 'legislation',
+    title:
+      'Federal Act on Platforms for Electronic Communication in the Judiciary (BEKJ) — Justitia 4.0',
+    publisher: 'Swiss Confederation / Federal Office of Justice (bj.admin.ch)',
+    url: 'https://www.bj.admin.ch/bj/de/home/staat/gesetzgebung/e-kommunikation.html',
+    publishedOn: '2024-12-20',
+    verifiedOn: '2026-07-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'CH',
+    note: 'The federal act underlying the Justitia 4.0 project, verified via the Federal Office of Justice and the official project pages. Supports the scheduled change on the Switzerland pages: the BEKJ was adopted by the Federal Assembly on 20 December 2024 and is subject to the optional referendum (which was not invoked); it is not yet fully in force, with entry into force planned for 1 July 2027 and a partial, earlier commencement of the provision establishing a new public-law corporation (öffentlich-rechtliche Körperschaft, justitia.swiss) as of 1 October 2025, which will build and operate the electronic justice-communication platform. Supports the ScheduledChange record; the exact staggered dates rest on these official pages.',
+  },
 ];
 
 const SOURCE_INDEX = new Map(SOURCES.map((source) => [source.id, source]));
