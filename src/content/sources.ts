@@ -934,6 +934,22 @@ export const SOURCES: readonly SourceRecord[] = [
     jurisdiction: 'CA',
     note: "The provincial police service of Quebec's own official site, read for its name. Establishes that the force's official name is the French 'Sûreté du Québec'; no official English name is asserted. Cited to support the naming choice on the law-enforcement page (Quebec runs its own provincial police, not the RCMP).",
   },
+
+  /* ------------------------------------------------------------------------ */
+  /* Australia (federal, AFP/ACT contract-policing test) — verified 2026-07-26 */
+  /* ------------------------------------------------------------------------ */
+  {
+    id: 'au-constitution',
+    type: 'legislation',
+    title: 'Commonwealth of Australia Constitution Act (the Australian Constitution)',
+    publisher: 'Parliament of Australia (aph.gov.au) / Federal Register of Legislation',
+    url: 'https://www.aph.gov.au/About_Parliament/Senate/Powers_practice_n_procedures/Constitution',
+    publishedOn: '1901-01-01',
+    verifiedOn: '2026-07-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'AU',
+    note: "The founding instrument, read verbatim from the official Parliament of Australia consolidated PDF. Supports: s.51, the ENUMERATED legislative powers of the Commonwealth ('The Parliament shall ... have power to make laws for the peace, order, and good government of the Commonwealth with respect to' 39 heads) — there is NO general criminal-law head; s.107 (Saving of Power of State Parliaments): 'Every power of the Parliament of a Colony which has become or becomes a State, shall, unless it is by this Constitution exclusively vested in the Parliament of the Commonwealth or withdrawn from the Parliament of the State, continue' — so residual power is RESERVED to the States (the US model, the inverse of Canada); s.71 (the judicial power of the Commonwealth vested in the High Court of Australia and other courts); s.77(iii) (the Commonwealth may invest a State court with federal jurisdiction); and s.122 (the territories power). Establishes that criminal law is largely a State/Territory matter with no national code.",
+  },
 ];
 
 const SOURCE_INDEX = new Map(SOURCES.map((source) => [source.id, source]));
