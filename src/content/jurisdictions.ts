@@ -1573,6 +1573,29 @@ export const JURISDICTIONS: readonly JurisdictionRecord[] = [
       'Denmark (Danmark), a unitary constitutional monarchy under the 1953 Constitutional Act. All four justice functions are national, held under the Ministry of Justice: one court system culminating in the Supreme Court (Højesteret), one Prosecution Service (Anklagemyndigheden), one national police (Rigspolitiet, deconcentrated into 12 districts), and one Prison and Probation Service (Kriminalforsorgen). A single country-level record states the arrangement accurately. Two facts stay in prose: prosecution and police are INTEGRATED under a single district head — the Police Commissioner (politidirektør) is both the head of the police district and the local prosecutor, both under the Ministry of Justice — and the courts alone (no separate constitutional or administrative court) decide constitutional and administrative questions (Constitution §63). Prosecution is under the Ministry of Justice (not independent), even as the courts are constitutionally independent of the executive (§62). Scope note: this is the country of Denmark; the Faroe Islands and Greenland are self-governing within the Realm and each forms its own court and police district under statutory Home Rule/Self-Government — an asymmetric, statutory arrangement (not federalism), noted in prose and not modelled as separate records here.',
     status: 'published',
   },
+
+  /* -------------------------------------------------------------------------- */
+  /* Norway (Batch A) — unitary, non-EU; justice all national                   */
+  /* -------------------------------------------------------------------------- */
+  {
+    id: 'no',
+    slug: 'norway',
+    name: 'Norway',
+    shortName: 'Norway',
+    countryCode: 'NO',
+    level: 'country',
+    legalSystemScope: 'own',
+    policingScope: 'own',
+    courtScope: 'own',
+    prosecutionScope: 'own',
+    correctionalScope: 'own',
+    temporalScope: 'current',
+    coverage: 'partial',
+    sources: ['no-constitution', 'no-domstol-courts'],
+    notes:
+      'Norway (Norge), a unitary, decentralised (non-federal) constitutional monarchy under the 1814 Constitution, and a non-EU state (EEA/Schengen). All four justice functions are national, under the Ministry of Justice and Public Security: one court system culminating in the Supreme Court (Høyesterett), one Prosecution Authority (Påtalemyndigheten) headed by the Director of Public Prosecutions (Riksadvokaten), one national police (Politiet, in 12 districts under the National Police Directorate), and one Correctional Service (Kriminalomsorgen). Municipalities and counties exist but run none of the four. A single country-level record states the arrangement accurately. Two facts stay in prose: the prosecution is strongly INDEPENDENT — only the King in Council, not the Minister of Justice, may give it general instructions, and it directs criminal investigation, with its lowest tier embedded inside the police (police lawyers holding prosecutorial powers); and constitutional review is exercised by the ordinary courts (Constitution art. 89), so there is no separate constitutional court. The prosecutor-led, police-integrated investigation is a functional arrangement, not a territorial or federal one, and needs no new schema.',
+    status: 'published',
+  },
 ];
 
 /* -------------------------------------------------------------------------- */
