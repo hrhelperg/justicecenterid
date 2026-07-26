@@ -500,3 +500,24 @@ sitemap / 120 pages).
   plan (no files, routes, or rankings).
 
 Delivered on `feat/country-scaling-framework`. Not merged, not deployed.
+
+## Phase 13 — Batch A: Northern & Western Europe (delivered 2026-07-26)
+
+The first authored country batch on the scaling framework: the Netherlands, Belgium, Denmark,
+Norway, Sweden and Finland, each 8 published modules + 4 deferred, verified from primary sources and
+an adversarial fact-check pass. Details in `docs/audits/batch-a-northern-western-europe-qa.md`.
+
+- **No new schema.** Two model-pressure countries validated existing abstractions by reuse: Belgium
+  is a federal state whose justice functions are federal (the inverse of Germany — one `federal`
+  record, all `own`), and Finland's autonomous region Åland validates the `autonomous-community`
+  level (policing own, courts/prosecution/corrections national). Everything else — the spread of
+  prosecution-independence arrangements, integrated/prosecutor-led investigation, twin-apex courts —
+  stayed in prose.
+- **Six SPACE I 2024 restricted claims** (density 83.1–112.7), extracted from the primary Council of
+  Europe PDF. **+7 jurisdiction records** (including `fi-aland`); no new scheduled changes (all Batch
+  A reforms were already completed, recorded in prose).
+- Validation: `npm run validate` exit 0; **1340 unit tests / 32 files**; **172 routes / 172 sitemap /
+  174 pages**; e2e 98 passed / 4 skipped; static-HTTP matrix clean (aliases and Åland all 404).
+
+Delivered on `feat/batch-a-northern-western-europe`, stacked on `feat/country-scaling-framework`.
+Not merged, not deployed.
