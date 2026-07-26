@@ -1019,6 +1019,28 @@ export const SOURCES: readonly SourceRecord[] = [
     jurisdiction: 'AU',
     note: "The official ABS point-in-time prisoner census, read directly from the release. Supports: 'As at 30 June 2025: there were 46,998 adult prisoners in Australia'; 'unsentenced prisoners increased by 10% (1,814) to 19,850, while sentenced prisoners increased by 3% (770) to 27,051.' A national count of adults in the custody of the state and territory corrective-services agencies (there is no Commonwealth prison system), at a single date. Supports the corrections restricted claim; supports no cross-country comparison.",
   },
+
+  /* ------------------------------------------------------------------------ */
+  /* Spain (asymmetric decentralisation pilot) — verified 2026-07-26           */
+  /* ------------------------------------------------------------------------ */
+  /*
+   * LANGUAGE. Castilian Spanish is the authoritative language of State law (boe.es). Catalan,
+   * Basque (Euskara) and Galician are co-official in their communities; institutions such as the
+   * Mossos d'Esquadra (Catalan) and the Ertzaintza (Basque) are named in those languages, and no
+   * English name is invented for them.
+   */
+  {
+    id: 'es-constitution',
+    type: 'legislation',
+    title: 'Constitución Española de 1978',
+    publisher: 'Boletín Oficial del Estado (boe.es), BOE-A-1978-31229',
+    url: 'https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229',
+    publishedOn: '1978-12-29',
+    verifiedOn: '2026-07-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'ES',
+    note: "The authoritative Castilian text, read in full. Supports: art. 2 (the indissoluble unity of the Spanish Nation and the right to autonomy of the nationalities and regions); art. 137 (the State organised into municipalities, provinces and Autonomous Communities); art. 145.1 ('En ningún caso se admitirá la federación de Comunidades Autónomas' — federation is constitutionally forbidden, so Spain is a decentralised UNITARY state); art. 148 (competences the Communities MAY assume) and art. 149.1 (the State's EXCLUSIVE competences), including art. 149.1.6 ('Legislación mercantil, penal y penitenciaria; legislación procesal' — criminal, penitentiary and procedural LEGISLATION is exclusively the State's), art. 149.1.5 (Administration of Justice), and art. 149.1.29 (public security, 'sin perjuicio de la posibilidad de creación de policías por las Comunidades Autónomas' — the basis for autonomous police); art. 104 (security forces under the Government); art. 117.5 ('El principio de unidad jurisdiccional es la base de la organización y funcionamiento de los Tribunales' — judicial unity); art. 122 (the Consejo General del Poder Judicial as the judiciary's governing body); art. 123 (the Tribunal Supremo, 'con jurisdicción en toda España, es el órgano jurisdiccional superior en todos los órdenes'); art. 124 (the Ministerio Fiscal, national, acting under unidad de actuación y dependencia jerárquica); art. 152.1 (a Tribunal Superior de Justicia culminating the judicial organisation in each community, without prejudice to the Supreme Court); and arts. 24-25 (due-process and penal principles).",
+  },
 ];
 
 const SOURCE_INDEX = new Map(SOURCES.map((source) => [source.id, source]));
