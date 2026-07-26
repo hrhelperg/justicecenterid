@@ -67,6 +67,12 @@ translation), `official-authoritative` (a translation that itself has legal effe
 `official-reference` + `ja`, so the distinction cannot silently rot. Do not present a reference
 translation, a literal gloss, a romanization or a Western analogy as an authoritative name.
 
+Where the authoritative text is cited **in its own language**, it is simply `not-a-translation`
+and the field is left unset: the Brazil pilot cites the Portuguese Constitution and codes
+directly (there is no official English translation on the Presidência da República site), so the
+translation-integrity point — Portuguese authoritative, the English on the pages descriptive —
+is carried in prose rather than in the field.
+
 ### The `note` field
 
 `note` is the most important field for accuracy. It records what the source establishes, so a
