@@ -427,3 +427,17 @@ independent adversarial pass re-checked the load-bearing claims against official
 
 **Next in program.** Australia — independently testing whether `contracted` survives the AFP/ACT
 community-policing arrangement (the repetition that would earn the abstraction, or refute it).
+
+## Phase 9 — Australia (delivered 2026-07-26)
+
+Second country of the four-country program branch. **No new schema** — Australia's job was to
+adversarially test the Canada `contracted` value, and it validated it: the Australian Capital
+Territory runs no police of its own (the Commonwealth AFP delivers its community policing "on
+behalf of the ACT Government"), so au-act `policingScope: contracted`, while the Northern
+Territory runs its own force (`own`). The value is now earned by two independent countries. The
+contrast with Canada is captured by the existing `authorityBasis`: Australian states are
+`reserved-powers` with their own criminal law (`legalSystemScope: own`) — the US pattern, the
+inverse of Canada — and the ACT/NT are `federal-plenary` (the DC/Yukon value). Published 8 routes;
+restricted claim the ABS 30 June 2025 census (46,998 prisoners; 27,051 sentenced, 19,850
+unsentenced). Constitution s.107 and the AFP/ACT arrangement read verbatim; adversarial pass
+11/11 supported. Next in program: Spain.

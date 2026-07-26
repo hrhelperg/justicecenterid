@@ -75,6 +75,15 @@ not named agencies" invariant. Provider identity (RCMP, OPP, Sûreté du Québec
 module prose, not the schema. Contrast `own`: the province owns its s.96 courts (a note), but does
 not own the police it contracts (`contracted`).
 
+The Australia pilot **validated `contracted` by repetition**: the Australian Capital Territory
+runs no police of its own, and the Commonwealth Australian Federal Police delivers its community
+policing "on behalf of the ACT Government" under a purchase arrangement — the same shape as RCMP
+contract policing, in a second, differently built federation — so the ACT is `contracted` while
+the Northern Territory (its own force) is `own`. Because the enabling law differs (Canada:
+holder-side agreement; Australia: the provider's Commonwealth statute), the value is defined
+agnostically about which order's law creates the arrangement; the enabling instrument stays in
+prose. Two independent countries now use it, which is what earns an abstraction.
+
 The `none` / `unknown` distinction is the model's most important property. `none` is a
 researched finding; `unknown` is an admission. Collapsing them would let an unresearched
 territory silently inherit its parent's arrangement.
