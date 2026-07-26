@@ -1719,6 +1719,36 @@ export const JURISDICTIONS: readonly JurisdictionRecord[] = [
       'Portugal (Portugal), a unitary state (Constitution art. 6(1), "the state is unitary") with a special insular-autonomy feature: the Azores and Madeira are autonomous regions (art. 6(2), arts. 225–234) with their own political-administrative statutes. But the four justice functions are ALL national — criminal law and the organisation of the courts and the Public Prosecution Service are reserved to Parliament (art. 165(1)(c) and (p)) and expressly excluded from regional legislation (art. 227(1)(b)), the security-forces regime is reserved (art. 164(1)(u)) with each force having "a sole organisational structure for the whole of Portuguese territory" (art. 272(4)), and prisons run under a single national directorate. So a single country-level record with all functions `own` states it accurately, and NO autonomous-region record is created — the regions hold no justice competence, the same result as Italy and the opposite of Finland\'s Åland. (The only region-adjacent element is a regional section of the national Court of Auditors, art. 214(4) — a decentralised chamber of a national court, not devolved competence.) Facts kept in prose: the Public Prosecution Service (Ministério Público) is constitutionally AUTONOMOUS, with "its own statute and autonomy" (art. 219(2)), independent of both the judiciary and the executive; there are multiple national police forces (Polícia Judiciária under the justice ministry; the militarised Guarda Nacional Republicana and the civilian Polícia de Segurança Pública under the interior ministry); and there are four top courts (the Supreme Court of Justice, the Supreme Administrative Court, the Constitutional Court and the Court of Auditors) alongside diffuse constitutional review by all courts (art. 204).',
     status: 'published',
   },
+
+  /* -------------------------------------------------------------------------- */
+  /* Austria (Batch B) — federal state, justice fully federal (Belgium-type)     */
+  /* -------------------------------------------------------------------------- */
+  {
+    id: 'at',
+    slug: 'austria',
+    name: 'Austria',
+    shortName: 'Austria',
+    countryCode: 'AT',
+    level: 'federal',
+    legalSystemScope: 'own',
+    policingScope: 'own',
+    courtScope: 'own',
+    prosecutionScope: 'own',
+    correctionalScope: 'own',
+    legislativeCompetence: {
+      'legal-system': 'exclusive-federal',
+      policing: 'exclusive-federal',
+      courts: 'exclusive-federal',
+      prosecution: 'exclusive-federal',
+      corrections: 'exclusive-federal',
+    },
+    temporalScope: 'current',
+    coverage: 'partial',
+    sources: ['at-bvg', 'at-stag'],
+    notes:
+      'Austria (Österreich) is a FEDERATION of nine Länder — but, like Belgium and unlike Germany or the United States, the four justice functions are FEDERAL competences of both legislation and execution, not devolved to the Länder. Art. 10(1) Z 6 B-VG places civil law, criminal law, "Justizpflege" (the administration of justice) and the protective institutions (the statutory basis for the prison system) in the Federation; Z 7 places the security police in the Federation save for the local security police; Art. 82(1) provides that "ordinary jurisdiction emanates from the Federation". So the model represents Austria as a single `federal` record with every function `own` (federally administered) and every core legislative competence `exclusive-federal` — the same pattern as Belgium, the INVERSE of Germany (whose Länder run courts, police and prisons). NO Land record is created: there are no Land ordinary courts, no Land criminal codes, no Land prosecution services, no Land prison systems and no separate Land police forces (the nine Landespolizeidirektionen are federal authorities under the Interior Minister, Art. 78a/78b). The only devolved judicial element is that each Land organises its own administrative court (Art. 10(1) Z 1 carve-out; Art. 129) — a minor court-organisation matter, not devolution of the core functions — and it is noted only in prose. Facts kept in prose: three co-equal apex courts (Oberster Gerichtshof, Verfassungsgerichtshof, Verwaltungsgerichtshof), none superior to the others; the prosecution (Staatsanwaltschaft) is an organ of the ordinary judiciary but is bound by instructions up a chain terminating at the Federal Minister of Justice (StAG §2(1)) — with a 2026 consultation draft, not enacted, that would replace that apex with an independent federal prosecution; and a single national police under the Interior Ministry.',
+    status: 'published',
+  },
 ];
 
 /* -------------------------------------------------------------------------- */

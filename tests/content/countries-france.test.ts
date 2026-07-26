@@ -75,6 +75,7 @@ describe('France dossier', () => {
     // beyond its scope, so this list grows by exactly one slug per completed country phase.
     expect(COUNTRY_DOSSIERS.map((d) => d.slug).sort()).toEqual([
       'australia',
+      'austria',
       'belgium',
       'brazil',
       'canada',
