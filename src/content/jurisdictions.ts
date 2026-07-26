@@ -1596,6 +1596,29 @@ export const JURISDICTIONS: readonly JurisdictionRecord[] = [
       'Norway (Norge), a unitary, decentralised (non-federal) constitutional monarchy under the 1814 Constitution, and a non-EU state (EEA/Schengen). All four justice functions are national, under the Ministry of Justice and Public Security: one court system culminating in the Supreme Court (Høyesterett), one Prosecution Authority (Påtalemyndigheten) headed by the Director of Public Prosecutions (Riksadvokaten), one national police (Politiet, in 12 districts under the National Police Directorate), and one Correctional Service (Kriminalomsorgen). Municipalities and counties exist but run none of the four. A single country-level record states the arrangement accurately. Two facts stay in prose: the prosecution is strongly INDEPENDENT — only the King in Council, not the Minister of Justice, may give it general instructions, and it directs criminal investigation, with its lowest tier embedded inside the police (police lawyers holding prosecutorial powers); and constitutional review is exercised by the ordinary courts (Constitution art. 89), so there is no separate constitutional court. The prosecutor-led, police-integrated investigation is a functional arrangement, not a territorial or federal one, and needs no new schema.',
     status: 'published',
   },
+
+  /* -------------------------------------------------------------------------- */
+  /* Sweden (Batch A) — unitary; constitutional agency autonomy (ministerstyre) */
+  /* -------------------------------------------------------------------------- */
+  {
+    id: 'se',
+    slug: 'sweden',
+    name: 'Sweden',
+    shortName: 'Sweden',
+    countryCode: 'SE',
+    level: 'country',
+    legalSystemScope: 'own',
+    policingScope: 'own',
+    courtScope: 'own',
+    prosecutionScope: 'own',
+    correctionalScope: 'own',
+    temporalScope: 'current',
+    coverage: 'partial',
+    sources: ['se-constitution', 'se-polisen'],
+    notes:
+      'Sweden (Sverige), a unitary constitutional monarchy governed by four fundamental laws, the central one being the Instrument of Government (Regeringsformen, 1974). All four justice functions are national, exercised by central-government administrative authorities: one Police Authority (Polismyndigheten, a single national authority with seven regions), one Prosecution Authority (Åklagarmyndigheten), one Prison and Probation Service (Kriminalvården, a unified corrections body), and two branches of courts. A single country-level record states the arrangement accurately. The defining fact stays in prose: the Instrument of Government (Ch. 12 Art. 2) prohibits ministerstyre — no public authority, including the Government or a minister, may determine how an administrative authority decides an individual case or applies the law, so the police, prosecution and prison service are constitutionally insulated from case-level ministerial direction (a stronger agency autonomy than "under the justice ministry"). Two further prose facts: the courts are in two branches, each with its own apex (the Supreme Court, Högsta domstolen, and the Supreme Administrative Court, Högsta förvaltningsdomstolen; Ch. 11 Art. 1), and there is no constitutional court — every court exercises diffuse constitutional review (Ch. 11 Art. 14). None of this needs a new schema value.',
+    status: 'published',
+  },
 ];
 
 /* -------------------------------------------------------------------------- */

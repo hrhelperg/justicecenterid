@@ -86,6 +86,7 @@ describe('France dossier', () => {
       'netherlands',
       'norway',
       'spain',
+      'sweden',
       'switzerland',
       'united-states',
     ]);
