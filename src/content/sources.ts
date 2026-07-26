@@ -1797,6 +1797,75 @@ export const SOURCES: readonly SourceRecord[] = [
     authoritativeLanguage: 'it',
     note: 'The official gazette publication of the constitutional bill on the separation of the careers of judging and prosecuting magistrates, read directly. It records that the text was "approvato in seconda votazione a maggioranza assoluta, ma inferiore ai due terzi dei membri di ciascuna Camera" — approved on second reading by absolute majority but below the two-thirds threshold — so under Constitution Art. 138 it is published for the purpose of a possible confirmatory referendum and is NOT yet in force. Cited to record, neutrally and by attribution, that the reform (separation of careers, two councils of the judiciary, a separate High Disciplinary Court) is enacted-but-conditional, not current law; it is described in prose, not as a scheduled change, because its entry into force is contingent on a referendum whose date is not officially fixed.',
   },
+
+  /* -------------------------------------------------------------------------- */
+  /* Portugal (Batch B) — unitary; autonomous MP; justice national              */
+  /* -------------------------------------------------------------------------- */
+  {
+    id: 'pt-constitution',
+    type: 'legislation',
+    title:
+      'Constitution of the Portuguese Republic (1976, 7th revision 2005) — official English translation',
+    publisher: 'Assembleia da República (Parliament of Portugal)',
+    url: 'https://www.parlamento.pt/sites/EN/Parliament/Documents/Constitution7th.pdf',
+    publishedOn: '1976',
+    verifiedOn: '2026-07-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'PT',
+    translationStatus: 'official-reference',
+    authoritativeLanguage: 'pt',
+    note: 'The Assembly of the Republic\'s official English translation of the Constitution (seventh revision, Constitutional Law 1/2005), fetched as a PDF and text-extracted, confirmed verbatim in both passes (the Portuguese text was also fetched). Supports Art. 6 ("the state is unitary"; the Azores and Madeira as autonomous regions), Art. 23 (the Ombudsman / Provedor de Justiça), Art. 164(u) and 165(1)(c)+(p) (the security-forces regime, criminal law, and the organisation of the courts and the Public Prosecution Service reserved to Parliament — and, via Art. 227(1)(b), excluded from regional legislation), Art. 202–204 (the courts as organs of sovereignty, independent, with diffuse constitutional review), Art. 209 (the categories of courts: Supreme Court of Justice, Supreme Administrative Court, Court of Auditors), Art. 217–218 (the High Council for the Judiciary), Art. 219–220 (the Public Prosecution Service — "its own statute and autonomy" — and the Prosecutor General\'s Office), Art. 221–222 (the Constitutional Court, thirteen judges), and Art. 272(4) ("each such force shall have a sole organisational structure for the whole of Portuguese territory").',
+  },
+  {
+    id: 'pt-loic',
+    type: 'legislation',
+    title: 'Law 49/2008 — Organisation of Criminal Investigation (LOIC), consolidated text',
+    publisher: 'Diário da República (via the Polícia Judiciária official site)',
+    url: 'https://www.policiajudiciaria.pt/wp-content/uploads/2021/12/Lei-49.2008-Lei-de-Organizacao-de-Investigacao-Criminal-DRE.pdf',
+    publishedOn: '2008-08-27',
+    verifiedOn: '2026-07-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'PT',
+    translationStatus: 'not-a-translation',
+    authoritativeLanguage: 'pt',
+    note: 'The consolidated LOIC text (an official Diário da República version hosted on the Polícia Judiciária site), fetched as a PDF and text-extracted, verified verbatim. Supports Art. 2(1) ("a direcção da investigação cabe à autoridade judiciária competente em cada fase do processo" — direction of the investigation belongs to the competent judicial authority at each stage) and Art. 2(4) (the criminal-police bodies act under the direction and functional dependence of that authority); Art. 3(1) naming the three general-competence criminal-police bodies — the Polícia Judiciária (PJ), the Guarda Nacional Republicana (GNR) and the Polícia de Segurança Pública (PSP); and Art. 7(2) reserving the most serious crimes to the Polícia Judiciária.',
+  },
+  {
+    id: 'pt-cpp',
+    type: 'legislation',
+    title: 'Code of Criminal Procedure (Código de Processo Penal), consolidated text',
+    publisher: 'Portugal — consolidated Código de Processo Penal (official-origin text)',
+    url: 'https://www.marinha.pt/conteudos_externos/LexMar2/PGPAT%20100/PGPAT%201000%20-%20Cap%C3%ADtulos/Cap%C3%ADtulo%20R%20Processo%20penal%20e%20contra-ordenacional/C%C3%B3digo%20de%20Processo%20Penal.pdf',
+    verifiedOn: '2026-07-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'PT',
+    translationStatus: 'not-a-translation',
+    authoritativeLanguage: 'pt',
+    note: 'A consolidated Code of Criminal Procedure text, fetched as a PDF and text-extracted. Supports Art. 263(1) ("a direcção do inquérito cabe ao Ministério Público, assistido pelos órgãos de polícia criminal" — the Public Prosecution Service directs the investigation phase, assisted by the criminal-police bodies) and Art. 17 (the investigating judge, juiz de instrução, conducts the optional judicial-investigation phase, the instrução, and acts as guarantor of rights). Establishes the two-phase, magistrate-directed investigation model.',
+  },
+  {
+    id: 'pt-ejustice-justice',
+    type: 'international-organization',
+    title: 'National justice systems — Portugal (European e-Justice Portal)',
+    publisher: 'European Commission (European e-Justice Portal)',
+    url: 'https://e-justice.europa.eu/topics/taking-legal-action/legal-systems-eu-and-national/national-justice-systems/pt_en',
+    verifiedOn: '2026-07-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'INT',
+    note: "The European Commission's e-Justice portal page on Portugal, read directly. Supports the court hierarchy — the Supreme Court of Justice (Supremo Tribunal de Justiça) at the apex of the judicial courts, the courts of appeal (tribunais da relação) and the district courts (tribunais de comarca), with a separate Constitutional Court, a separate Supreme Administrative Court, and the Court of Auditors. It is cited for the court hierarchy only; the autonomy of the Public Prosecution Service is anchored to Constitution Art. 219, not to this page.",
+  },
+  {
+    id: 'pt-dgrsp',
+    type: 'government',
+    title: 'Directorate-General for Reintegration and Prison Services (DGRSP)',
+    publisher:
+      'Direção-Geral de Reinserção e Serviços Prisionais (Ministério da Justiça, Portugal)',
+    url: 'https://dgrsp.justica.gov.pt/',
+    verifiedOn: '2026-07-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'PT',
+    note: "The DGRSP's own official portal, read directly. Supports that the Directorate-General for Reintegration and Prison Services, under the Ministry of Justice, is the national service responsible for the prison system, the prison establishments (estabelecimentos prisionais), the execution of custodial and community sentences, electronic monitoring, and the juvenile/educational-guardianship system. Establishes that prisons are a single national service under the justice ministry.",
+  },
 ];
 
 const SOURCE_INDEX = new Map(SOURCES.map((source) => [source.id, source]));

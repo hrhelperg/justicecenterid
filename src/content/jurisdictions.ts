@@ -1696,6 +1696,29 @@ export const JURISDICTIONS: readonly JurisdictionRecord[] = [
       'Italy (Italia), a regionalised unitary ("Regional State"), not a federation: the Republic is made of municipalities, provinces, metropolitan cities, regions and the State (Constitution art. 114), with 20 regions of which five have special autonomy (art. 116). But the four justice functions are ALL exclusive State competence and fully national — art. 117(2) reserves to the State subparagraph (l) "jurisdiction and procedural law; civil and criminal law; administrative justice", (h) "public order and security, save for local administrative police", and (d) defence; and even the maximum devolution art. 116(3) allows over "justice" is limited to the organizational requirements of the Justice of the Peace. So a single country-level record with all functions `own` states the arrangement accurately, and NO special-autonomy region record is created — the exact opposite of Finland\'s Åland, which does hold policing competence. Facts kept in prose: the prosecution (Pubblico Ministero) is part of the independent judiciary (prosecutors and judges are both magistrati under the same self-governing CSM) with mandatory prosecution (art. 112); there are MULTIPLE national police forces (Polizia di Stato, the military Arma dei Carabinieri, and the Guardia di Finanza), centrally coordinated by the Interior Ministry, with only local administrative police (polizia locale) left to the regions/municipalities; and there are three top courts — the Court of Cassation, the Constitutional Court and the Council of State.',
     status: 'published',
   },
+
+  /* -------------------------------------------------------------------------- */
+  /* Portugal (Batch B) — unitary with autonomous regions; justice national     */
+  /* -------------------------------------------------------------------------- */
+  {
+    id: 'pt',
+    slug: 'portugal',
+    name: 'Portugal',
+    shortName: 'Portugal',
+    countryCode: 'PT',
+    level: 'country',
+    legalSystemScope: 'own',
+    policingScope: 'own',
+    courtScope: 'own',
+    prosecutionScope: 'own',
+    correctionalScope: 'own',
+    temporalScope: 'current',
+    coverage: 'partial',
+    sources: ['pt-constitution', 'pt-loic'],
+    notes:
+      'Portugal (Portugal), a unitary state (Constitution art. 6(1), "the state is unitary") with a special insular-autonomy feature: the Azores and Madeira are autonomous regions (art. 6(2), arts. 225–234) with their own political-administrative statutes. But the four justice functions are ALL national — criminal law and the organisation of the courts and the Public Prosecution Service are reserved to Parliament (art. 165(1)(c) and (p)) and expressly excluded from regional legislation (art. 227(1)(b)), the security-forces regime is reserved (art. 164(1)(u)) with each force having "a sole organisational structure for the whole of Portuguese territory" (art. 272(4)), and prisons run under a single national directorate. So a single country-level record with all functions `own` states it accurately, and NO autonomous-region record is created — the regions hold no justice competence, the same result as Italy and the opposite of Finland\'s Åland. (The only region-adjacent element is a regional section of the national Court of Auditors, art. 214(4) — a decentralised chamber of a national court, not devolved competence.) Facts kept in prose: the Public Prosecution Service (Ministério Público) is constitutionally AUTONOMOUS, with "its own statute and autonomy" (art. 219(2)), independent of both the judiciary and the executive; there are multiple national police forces (Polícia Judiciária under the justice ministry; the militarised Guarda Nacional Republicana and the civilian Polícia de Segurança Pública under the interior ministry); and there are four top courts (the Supreme Court of Justice, the Supreme Administrative Court, the Constitutional Court and the Court of Auditors) alongside diffuse constitutional review by all courts (art. 204).',
+    status: 'published',
+  },
 ];
 
 /* -------------------------------------------------------------------------- */
