@@ -58,6 +58,7 @@ const DEMONYMS: Record<string, string> = {
   CA: 'a Canadian government body',
   AU: 'an Australian government body',
   ES: 'a Spanish government body',
+  CH: 'a Swiss government body',
 };
 
 function independentOfDemonym(dossier: CountryDossier): string {

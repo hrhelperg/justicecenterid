@@ -457,3 +457,18 @@ published — the official series are split by administration and could not be r
 verified figure. Constitution and the transfer decrees read verbatim from the BOE; adversarial
 pass 9/10, with the one flagged item (Navarre's non-integral police) corrected in place. Published
 8 routes. Next in program: Switzerland.
+
+## Phase 11 — Switzerland (delivered 2026-07-26)
+
+Final country of the four-country program branch, and a pure-reuse pilot: **no new field, level or
+scope value**. Swiss cantons are sovereign with residual power (Constitution art. 3) but apply
+federal unified codes (arts. 122/123) — modelled like a US/Brazil state (`reserved-powers`,
+`legalSystemScope: national`), at the existing `state` level. There is no national police (fedpol
+is narrow-federal) and no federal prison system; the cantons pool prisons through three
+inter-cantonal concordats — PEER pooling, so `correctionalScope: shared`, NOT `contracted`, which
+draws the boundary of the Canada value from the other side. Multilingual authoritative law
+(German/French/Italian, art. 70) is handled in prose. It also exercises the `ScheduledChange` model
+against a real direct-democracy change — the BEKJ (Justitia 4.0), enacted 20 Dec 2024 after a
+lapsed optional referendum, in force 1 July 2027 — with no `directDemocracy` field. Restricted
+claim: the FSO 31 Jan 2026 census of 7,119 detainees. Published 8 routes. This closes the
+Canada–Australia–Spain–Switzerland program.

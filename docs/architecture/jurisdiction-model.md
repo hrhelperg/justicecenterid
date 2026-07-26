@@ -93,6 +93,18 @@ holder-side agreement; Australia: the provider's Commonwealth statute), the valu
 agnostically about which order's law creates the arrangement; the enabling instrument stays in
 prose. Two independent countries now use it, which is what earns an abstraction.
 
+The Switzerland pilot then drew the boundary of `contracted` from the other side. Swiss cantons
+pool their prison systems through three inter-cantonal concordats (Constitution art. 48) — but
+this is PEER pooling, cantons exercising their own competence jointly, not one order procuring a
+service from another. So the concordats are `correctionalScope: 'shared'` ("exercised jointly with
+another jurisdiction"), NOT `contracted`. The vocabulary now discriminates three real arrangements
+without any relationship graph: a jurisdiction that owns its force (`own`), one that procures a
+force from another order under agreement (`contracted`), and peers that pool a function (`shared`).
+Swiss cantons are otherwise a full reuse of the reserved-powers state model (sovereign under art.
+3, applying federal codes — `legalSystemScope: 'national'`), modelled at the existing `state`
+level because `state` correctly categorises a federal constituent unit; no `canton` level is
+minted.
+
 The `none` / `unknown` distinction is the model's most important property. `none` is a
 researched finding; `unknown` is an admission. Collapsing them would let an unresearched
 territory silently inherit its parent's arrangement.

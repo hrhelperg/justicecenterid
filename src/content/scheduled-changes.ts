@@ -56,6 +56,28 @@ export const SCHEDULED_CHANGES: readonly ScheduledChange[] = [
     notes:
       'enactedOn is recorded as 2024 for the Act; commencement (effectiveOn) was 2 April 2025. The Ireland oversight module names Fiosrú and the PCSA as the current bodies and GSOC, the Policing Authority and the Garda Síochána Inspectorate as their historical predecessors, with this transition date.',
   },
+  {
+    /*
+     * Switzerland pilot. This record exercises the `pending` lifecycle against a change that
+     * went through Switzerland's direct-democracy process — an enacted federal act whose optional
+     * referendum lapsed unused, with a staggered commencement still partly in the future. It also
+     * demonstrates that direct democracy needs no `directDemocracy` field: the referendum step is
+     * recorded in the certainty (`enacted-with-date`, because the deadline passed) and the notes,
+     * not the schema.
+     */
+    id: 'ch-bekj-justitia40-2027',
+    changeType: 'reorganization',
+    effectiveOn: '2027-07-01',
+    enactedOn: '2024-12-20',
+    affectedEntityIds: ['ch', 'switzerland/courts', 'switzerland/justice-system'],
+    description:
+      'The Federal Act on Platforms for Electronic Communication in the Judiciary (BEKJ), the legal basis of the Justitia 4.0 project, was adopted by the Federal Assembly on 20 December 2024. It creates a new joint Confederation–cantons public-law corporation (öffentlich-rechtliche Körperschaft, justitia.swiss) to build and operate a national electronic platform for communication with courts and authorities. Full entry into force is planned for 1 July 2027; the provision establishing the public-law corporation came into force earlier, on 1 October 2025, and each canton then sets its own date, within one to five years, on which electronic communication via the platform becomes mandatory.',
+    sources: ['ch-bekj'],
+    certainty: 'enacted-with-date',
+    status: 'pending',
+    notes:
+      "This is the platform's test of the ScheduledChange model against a Swiss direct-democracy change: the BEKJ is a federal act subject to the OPTIONAL referendum, and the referendum deadline expired unused in April 2025, so it is enacted rather than put to a popular vote — hence certainty `enacted-with-date`. Commencement is STAGGERED: the öffentlich-rechtliche Körperschaft provision took effect on 1 October 2025 (already in the past), while the main obligations enter into force on 1 July 2027 (recorded as effectiveOn), with cantonal mandatory-use dates following between one and five years after that. Nothing is asserted about how the platform will operate; only that the institution is being created on these dates.",
+  },
 ];
 
 /* -------------------------------------------------------------------------- */
