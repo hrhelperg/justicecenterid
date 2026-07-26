@@ -3,6 +3,7 @@ import type { CountryDossier, CountryModuleContent } from '../types';
 import { AUSTRALIA } from './australia';
 import { BRAZIL } from './brazil';
 import { CANADA } from './canada';
+import { NETHERLANDS } from './netherlands';
 import { SPAIN } from './spain';
 import { SWITZERLAND } from './switzerland';
 import { FRANCE } from './france';
@@ -23,6 +24,7 @@ export const COUNTRY_DOSSIERS: readonly CountryDossier[] = [
   AUSTRALIA,
   SPAIN,
   SWITZERLAND,
+  NETHERLANDS,
 ];
 
 export const PUBLISHED_DOSSIERS: readonly CountryDossier[] = COUNTRY_DOSSIERS.filter(

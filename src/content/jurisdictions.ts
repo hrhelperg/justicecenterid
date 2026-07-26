@@ -1496,6 +1496,29 @@ export const JURISDICTIONS: readonly JurisdictionRecord[] = [
       "The Italian-speaking sample, the third official language. Ticino runs its own police (polizia cantonale), courts and public prosecution (ministero pubblico) applying the federal codes, and — like Geneva — belongs to the Latin concordat for the execution of penalties. Its scope values are identical to Zürich's and Geneva's, which is the point: one federal law, cantonally administered, in three languages.",
     status: 'published',
   },
+
+  /* -------------------------------------------------------------------------- */
+  /* Netherlands (Batch A) — decentralised unitary state; justice all national  */
+  /* -------------------------------------------------------------------------- */
+  {
+    id: 'nl',
+    slug: 'netherlands',
+    name: 'Netherlands',
+    shortName: 'Netherlands',
+    countryCode: 'NL',
+    level: 'country',
+    legalSystemScope: 'own',
+    policingScope: 'own',
+    courtScope: 'own',
+    prosecutionScope: 'own',
+    correctionalScope: 'own',
+    temporalScope: 'current',
+    coverage: 'partial',
+    sources: ['nl-constitution', 'nl-gov-police'],
+    notes:
+      "The country of the Netherlands, a decentralised UNITARY state — not a federation. Provinces and municipalities have autonomous administrative powers (Constitution art. 124), but the four justice functions are national competence, established by Act of Parliament under Chapter 6 of the Grondwet: one court system culminating in the Hoge Raad, one Public Prosecution Service (Openbaar Ministerie), one national police force (Politiewet 2012), and prisons run by the central Custodial Institutions Agency (DJI). A single country-level record therefore states the arrangement accurately; there is no sub-national tier that administers any of the four. Two attribute facts stay in the module prose rather than the schema: the OM is part of the judiciary but under the political responsibility of the Minister of Justice and Security (not an independent prosecutor), and art. 120 forbids judicial review of the constitutionality of statutes (there is no constitutional court). 'NL' here is the European country of the Netherlands, not the wider Kingdom (Aruba, Curaçao and Sint Maarten run their own justice systems, sharing the Hoge Raad as court of cassation) — that Kingdom asymmetry is noted in prose and not modelled here.",
+    status: 'published',
+  },
 ];
 
 /* -------------------------------------------------------------------------- */
