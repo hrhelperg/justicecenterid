@@ -1,4 +1,5 @@
-import { COUNTRIES } from '@/content/countries';
+import { countryCoverageTotal } from '@/content/countries';
+import { PUBLISHED_DOSSIERS } from '@/content/dossiers';
 import { PUBLISHED_GLOSSARY } from '@/content/glossary';
 import { PUBLISHED_GUIDES } from '@/content/guides';
 import { PUBLISHED_INSTITUTION_TYPES } from '@/content/institutions';
@@ -12,10 +13,13 @@ import type { Block } from '@/content/types';
  * Never hand-written. A hand-written count is how "200 countries covered" appears on a site
  * that covers none, and it is a content-validation failure by policy.
  *
- * `countriesResearched` was itself a hand-written `0` in the original foundation. It was
- * accurate on the day it was written and would have become a false claim the moment the
- * first country pilot landed — precisely the failure this comment warns about. It is now
- * derived, like every other figure here.
+ * `countriesResearched` is the number of PUBLISHED country dossiers: the researched countries
+ * are exactly the dossiers that passed the publication gate. It was previously derived from the
+ * *planning* registry (`COUNTRIES.filter(coverage !== 'planned')`), which silently reported `0`
+ * the moment the first pilot shipped — the planning entries stayed `planned`, so /about
+ * announced "0 countries researched" while dozens were live. That is the same stale-claim failure
+ * this comment warns about, only in reverse (an untrue *under*-count), so the figure now derives
+ * from `PUBLISHED_DOSSIERS` and `countries.test.ts` guards the equality.
  */
 export const SITE_STATS = {
   guides: PUBLISHED_GUIDES.length,
@@ -23,10 +27,10 @@ export const SITE_STATS = {
   sources: SOURCES.length,
   professions: PUBLISHED_PROFESSIONS.length,
   institutionTypes: PUBLISHED_INSTITUTION_TYPES.length,
-  countriesTracked: COUNTRIES.length,
-  countriesResearched: COUNTRIES.filter(
-    (country) => country.coverage === 'partial' || country.coverage === 'established',
-  ).length,
+  countriesTracked: countryCoverageTotal(
+    new Set(PUBLISHED_DOSSIERS.map((dossier) => dossier.countryCode)),
+  ),
+  countriesResearched: PUBLISHED_DOSSIERS.length,
 } as const;
 
 const INLINE_LINK = /\[([^\]]+)\]\((\/[^)\s]*)\)/g;

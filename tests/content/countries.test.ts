@@ -1,5 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { COUNTRIES } from '@/content/countries';
+import { PUBLISHED_DOSSIERS } from '@/content/dossiers';
+import { SITE_STATS } from '@/lib/content';
 
 /**
  * Rule 14: a country's rendered content may not exceed its coverage state.
@@ -55,11 +57,21 @@ describe('country coverage ceiling', () => {
     },
   );
 
-  it('no country is currently claimed as researched', () => {
-    // Guards the home and about pages, which state a researched-country count of zero.
-    const researched = COUNTRIES.filter(
-      (c) => c.coverage === 'partial' || c.coverage === 'established',
+  it('holds only unpublished, still-planned countries (no published-dossier drift)', () => {
+    // The registry is the NOT-YET-PUBLISHED queue. A published dossier's code must never linger
+    // here: that drift is what once made /about derive and announce "0 countries researched".
+    const publishedCodes = new Set(PUBLISHED_DOSSIERS.map((dossier) => dossier.countryCode));
+    const stillListed = COUNTRIES.filter((country) => publishedCodes.has(country.code)).map(
+      (country) => country.code,
     );
-    expect(researched).toEqual([]);
+    expect(stillListed, 'published country codes still in the planning registry').toEqual([]);
+    for (const country of COUNTRIES) expect(country.coverage).toBe('planned');
+  });
+
+  it('reports the researched-country count as the number of published dossiers', () => {
+    // Guards the exact figure /about renders. It must track the published dossiers, not the
+    // planning registry — deriving it from the registry silently under-reported it to zero.
+    expect(SITE_STATS.countriesResearched).toBe(PUBLISHED_DOSSIERS.length);
+    expect(SITE_STATS.countriesResearched).toBeGreaterThan(0);
   });
 });

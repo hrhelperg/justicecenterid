@@ -102,7 +102,8 @@ describe('scaffold collision + duplicate rejection', () => {
   });
 
   it('rejects a duplicate code (including planning-registry codes)', () => {
-    // NL is a planning-registry code with no dossier yet — still a collision.
+    // NL is in this fixture's existing-codes set — a collision, whether it comes from a
+    // published dossier or a planning-registry entry. planScaffold takes the set as input.
     const plan = planScaffold({ slug: 'holland', name: 'Holland', code: 'NL' }, EXISTING);
     expect(plan.ok).toBe(false);
     expect(plan.errors.join(' ')).toMatch(/code "NL" already exists/);

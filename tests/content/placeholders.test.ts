@@ -49,7 +49,7 @@ describe('placeholder / template-leak detection', () => {
     }
   });
 
-  it('the ten published dossiers contain no residue anywhere in reader-facing text', () => {
+  it('every published dossier contains no residue anywhere in reader-facing text', () => {
     for (const dossier of COUNTRY_DOSSIERS) {
       const residue = findDossierResidue(dossier);
       expect(
