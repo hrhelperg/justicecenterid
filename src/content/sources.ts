@@ -1251,6 +1251,73 @@ export const SOURCES: readonly SourceRecord[] = [
     jurisdiction: 'NL',
     note: 'Government of the Netherlands news item, read directly. Supports that a new Code of Criminal Procedure (Wetboek van Strafvordering) is planned to enter into force on 1 April 2029, replacing the 1926 code, with the first enactment act (Books 1–6) submitted to the House of Representatives in 2023 and further books to follow — i.e. it is in the legislative process, not yet fully enacted. It is procedural reform and does not restructure the courts, the OM, the national police or DJI, so it is recorded in prose rather than as a scheduled institutional change.',
   },
+
+  /* -------------------------------------------------------------------------- */
+  /* Belgium (Batch A) — federal state, but justice functions are federal       */
+  /* -------------------------------------------------------------------------- */
+  {
+    id: 'be-constitution',
+    type: 'legislation',
+    title: 'The Belgian Constitution (official English translation, coordinated text)',
+    publisher: 'Belgian House of Representatives (de Kamer / la Chambre)',
+    url: 'https://www.dekamer.be/kvvcr/pdf_sections/publications/constitution/GrondwetUK.pdf',
+    publishedOn: '1994',
+    verifiedOn: '2026-07-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'BE',
+    translationStatus: 'official-reference',
+    authoritativeLanguage: 'nl, fr, de',
+    note: 'The official English translation of the coordinated Constitution, fetched as the House of Representatives PDF and text-extracted. Verbatim: Art. 1 "Belgium is a federal State composed of Communities and Regions"; Art. 40 "Judiciary power is exercised by the courts. Court decisions are executed in the name of the King"; Art. 142 "There is for all Belgium a Constitutional Court, the composition, competences and functioning of which are established by the law"; Art. 147 "There is a Supreme Court for all Belgium. This Court has no competence over the substance of the case" (the institution named is the Court of Cassation — see be-cassation); Art. 151 §1 "Judges are independent in the exercise of their jurisdictional competences. The public prosecutor is independent in conducting individual investigations and prosecutions, without prejudice to the right of the competent minister to order prosecutions and to enact binding directives of criminal policy". The "for all Belgium" single-body wording of Arts. 142/147/151 establishes that the judiciary, the constitutional court, and prosecution are federal (national) institutions, not Community/Region ones. Authoritative texts are Dutch/French/German; this is the official English reference translation.',
+  },
+  {
+    id: 'be-cassation',
+    type: 'court-record',
+    title: 'About the Court — Court of Cassation of Belgium',
+    publisher: 'Hof van Cassatie / Cour de cassation (Court of Cassation of Belgium)',
+    url: 'https://hofvancassatie.be/en/A-propos-Over-het-Hof.html',
+    verifiedOn: '2026-07-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'BE',
+    note: 'The Court of Cassation\'s own official site, read directly. Supports the institution\'s name (Hof van Cassatie / Cour de cassation), that "there is one Court of Cassation for the whole Belgian territory" (giving effect to Constitution Art. 147), that it "is not a third degree jurisdiction" and "does not judge the dispute for a third time", and that it "analyses the legality of the rulings and does not know of the facts of the case". Resolves the translation point: the official English rendering of Art. 147 says "Supreme Court", but the institution is the Court of Cassation, which reviews legality, not facts.',
+  },
+  {
+    id: 'be-police-law-1998',
+    type: 'legislation',
+    title:
+      'Law of 7 December 1998 organising an integrated police service, structured on two levels (consolidated, Justel)',
+    publisher:
+      'Belgium — Federal Public Service Justice (ejustice.just.fgov.be / Moniteur belge)',
+    url: 'https://www.ejustice.just.fgov.be/eli/loi/1998/12/07/1998021488/justel',
+    publishedOn: '1998-12-07',
+    verifiedOn: '2026-07-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'BE',
+    translationStatus: 'not-a-translation',
+    authoritativeLanguage: 'fr',
+    note: 'The official consolidated French text on the Justel database, fetched and text-searched. Verbatim: the title "Loi organisant un service de police intégré, structuré à deux niveaux" (Law organising an integrated police service, structured on two levels), and the operative wording that the police are "structurés à deux niveaux : le niveau fédéral et le niveau local, lesquels assurent ensemble la fonction de police intégrée" (structured on two levels — the federal level and the local level — which together provide the integrated police function). The law also modifies the earlier law on the gendarmerie, confirming that this reform merged the former forces into the integrated service. Establishes the two-level (federal + local) integrated-police structure and its statutory basis; the internal directorates of the Federal Police were NOT verified (its own website was unreachable).',
+  },
+  {
+    id: 'be-ejustice-justice',
+    type: 'international-organization',
+    title: 'National justice systems — Belgium (European e-Justice Portal)',
+    publisher: 'European Commission (European e-Justice Portal)',
+    url: 'https://e-justice.europa.eu/topics/taking-legal-action/legal-systems-eu-and-national/national-justice-systems/be_en',
+    verifiedOn: '2026-07-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'INT',
+    note: 'The European Commission\'s e-Justice portal page on Belgium, read directly. Supports the ordinary-court hierarchy — courts of first instance across 12 judicial districts, five courts of appeal ("Brussels, Liege, Mons, Ghent and Antwerp"), and the Court of Cassation (Cour de cassation / Hof van Cassatie) at the apex; the prosecution as the "State Counsel\'s Office or Prosecutor\'s Office (ministère public / openbaar ministerie)", the "standing judges" (magistrature debout / staande magistratuur, the parquet / parket) distinct from the "sitting judges" who adjudicate; and Article 151(1) on the independence of judges. An intergovernmental (EU) source describing Belgium.',
+  },
+  {
+    id: 'be-ejustice-specialised',
+    type: 'international-organization',
+    title: 'National specialised courts — Belgium (European e-Justice Portal)',
+    publisher: 'European Commission (European e-Justice Portal)',
+    url: 'https://e-justice.europa.eu/topics/taking-legal-action/legal-systems-eu-and-national/national-specialised-courts/be_en',
+    verifiedOn: '2026-07-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'INT',
+    note: 'The European Commission\'s e-Justice portal page on Belgium\'s specialised courts, read directly. Supports the Constitutional Court — it "examines conformity of acts, decrees and ordinances with the Constitution", "oversees proper division of powers between the federated entities", "may annul and suspend acts, decrees and ordinances", and is "a court consisting of 12 judges" — and the Council of State (Conseil d\'État / Raad van State) as the supreme administrative court, "both an advisory and a judicial institution" that annuls administrative acts and acts as a court of cassation for the inferior administrative courts. Establishes that Belgium has, outside the ordinary apex, a separate constitutional-review court and a separate supreme administrative court.',
+  },
 ];
 
 const SOURCE_INDEX = new Map(SOURCES.map((source) => [source.id, source]));

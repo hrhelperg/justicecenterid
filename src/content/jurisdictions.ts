@@ -1519,6 +1519,37 @@ export const JURISDICTIONS: readonly JurisdictionRecord[] = [
       "The country of the Netherlands, a decentralised UNITARY state — not a federation. Provinces and municipalities have autonomous administrative powers (Constitution art. 124), but the four justice functions are national competence, established by Act of Parliament under Chapter 6 of the Grondwet: one court system culminating in the Hoge Raad, one Public Prosecution Service (Openbaar Ministerie), one national police force (Politiewet 2012), and prisons run by the central Custodial Institutions Agency (DJI). A single country-level record therefore states the arrangement accurately; there is no sub-national tier that administers any of the four. Two attribute facts stay in the module prose rather than the schema: the OM is part of the judiciary but under the political responsibility of the Minister of Justice and Security (not an independent prosecutor), and art. 120 forbids judicial review of the constitutionality of statutes (there is no constitutional court). 'NL' here is the European country of the Netherlands, not the wider Kingdom (Aruba, Curaçao and Sint Maarten run their own justice systems, sharing the Hoge Raad as court of cassation) — that Kingdom asymmetry is noted in prose and not modelled here.",
     status: 'published',
   },
+
+  /* -------------------------------------------------------------------------- */
+  /* Belgium (Batch A) — FEDERAL state, but justice functions are FEDERAL        */
+  /* competences. The inverse of Germany: one federal record, all functions own. */
+  /* -------------------------------------------------------------------------- */
+  {
+    id: 'be',
+    slug: 'belgium',
+    name: 'Belgium',
+    shortName: 'Belgium',
+    countryCode: 'BE',
+    level: 'federal',
+    legalSystemScope: 'own',
+    policingScope: 'own',
+    courtScope: 'own',
+    prosecutionScope: 'own',
+    correctionalScope: 'own',
+    legislativeCompetence: {
+      'legal-system': 'exclusive-federal',
+      policing: 'exclusive-federal',
+      courts: 'exclusive-federal',
+      prosecution: 'exclusive-federal',
+      corrections: 'exclusive-federal',
+    },
+    temporalScope: 'current',
+    coverage: 'partial',
+    sources: ['be-constitution', 'be-police-law-1998'],
+    notes:
+      'Belgium is a FEDERAL state (Constitution art. 1, "a federal State composed of Communities and Regions") — but, unlike Germany or the United States, the four justice functions are FEDERAL competences, held and administered at the federal level, not devolved to the Communities or Regions. The Constitution establishes single national bodies "for all Belgium": one Constitutional Court (art. 142), one Court of Cassation (art. 147, rendered "Supreme Court" in the official English translation), and one High Council of Justice and constitutionally independent prosecution (art. 151). Prisons are run by the federal FPS Justice and the police are the federal-plus-local integrated service of the Law of 7 December 1998. So the jurisdiction model represents Belgium as a single `federal` record with every function `own` (federally administered) and every legislative competence `exclusive-federal` — which is the INVERSE of Germany, whose federal record is `shared` because the Länder administer justice. This is why Belgium needs NO new schema: the distinction between \'federal and justice-devolved\' (Germany, US) and \'federal but justice-centralised\' (Belgium) is carried entirely by the scope values. No Community or Region record is created, because none of them does any of the four justice functions — a record exists only where it does institutional work. Youth-justice competence has partly moved to the Communities under successive state reforms, but the current allocation was not researched and is noted only in prose.',
+    status: 'published',
+  },
 ];
 
 /* -------------------------------------------------------------------------- */
