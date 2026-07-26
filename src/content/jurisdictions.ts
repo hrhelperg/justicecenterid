@@ -1749,6 +1749,29 @@ export const JURISDICTIONS: readonly JurisdictionRecord[] = [
       'Austria (Österreich) is a FEDERATION of nine Länder — but, like Belgium and unlike Germany or the United States, the four justice functions are FEDERAL competences of both legislation and execution, not devolved to the Länder. Art. 10(1) Z 6 B-VG places civil law, criminal law, "Justizpflege" (the administration of justice) and the protective institutions (the statutory basis for the prison system) in the Federation; Z 7 places the security police in the Federation save for the local security police; Art. 82(1) provides that "ordinary jurisdiction emanates from the Federation". So the model represents Austria as a single `federal` record with every function `own` (federally administered) and every core legislative competence `exclusive-federal` — the same pattern as Belgium, the INVERSE of Germany (whose Länder run courts, police and prisons). NO Land record is created: there are no Land ordinary courts, no Land criminal codes, no Land prosecution services, no Land prison systems and no separate Land police forces (the nine Landespolizeidirektionen are federal authorities under the Interior Minister, Art. 78a/78b). The only devolved judicial element is that each Land organises its own administrative court (Art. 10(1) Z 1 carve-out; Art. 129) — a minor court-organisation matter, not devolution of the core functions — and it is noted only in prose. Facts kept in prose: three co-equal apex courts (Oberster Gerichtshof, Verfassungsgerichtshof, Verwaltungsgerichtshof), none superior to the others; the prosecution (Staatsanwaltschaft) is an organ of the ordinary judiciary but is bound by instructions up a chain terminating at the Federal Minister of Justice (StAG §2(1)) — with a 2026 consultation draft, not enacted, that would replace that apex with an independent federal prosecution; and a single national police under the Interior Ministry.',
     status: 'published',
   },
+
+  /* -------------------------------------------------------------------------- */
+  /* Czechia (Batch B) — unitary; justice all national                          */
+  /* -------------------------------------------------------------------------- */
+  {
+    id: 'cz',
+    slug: 'czechia',
+    name: 'Czechia',
+    shortName: 'Czechia',
+    countryCode: 'CZ',
+    level: 'country',
+    legalSystemScope: 'own',
+    policingScope: 'own',
+    courtScope: 'own',
+    prosecutionScope: 'own',
+    correctionalScope: 'own',
+    temporalScope: 'current',
+    coverage: 'partial',
+    sources: ['cz-constitution', 'cz-ejustice'],
+    notes:
+      'Czechia (Česká republika) is a unitary state under the Constitution of 1993. It is subdivided into self-governing regions (kraje) and municipalities, but all four justice functions are national/central competences — there is no federal, regional or special-autonomy tier holding any justice power. The regional courts (krajské soudy) and the fourteen regional police directorates are named after regions but are organs of the NATIONAL judiciary and the NATIONAL police, not regional government. So a single country-level record with all functions `own` states it accurately, and NO region record is created. Facts kept in prose: there are three apex courts — the Supreme Court (Nejvyšší soud) and a separate Supreme Administrative Court (Nejvyšší správní soud), both in Brno, plus a separate Constitutional Court (Ústavní soud, fifteen Justices for ten-year terms) outside the ordinary hierarchy; the prosecution (státní zastupitelství / Public Prosecutor\'s Office) is NOT an independent branch but "a component of the executive power … part of the Ministry of Justice", headed by the Prosecutor General\'s Office; the police (Policie ČR) are a single national force under the Interior Ministry; prisons (Vězeňská služba) run under the Ministry of Justice; and there is NO national self-governing judicial council — court administration is exercised by the Ministry of Justice, with only advisory councils within individual courts.',
+    status: 'published',
+  },
 ];
 
 /* -------------------------------------------------------------------------- */
