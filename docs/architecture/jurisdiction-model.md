@@ -165,14 +165,14 @@ happens to be correct today.
 
 ## Scenarios the model represents
 
-| Scenario                           | How                                                                                                            |
-| ---------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| Institution absent in a country    | `PresenceState: 'absent'` on the country profile; `FunctionScope: 'none'` on the jurisdiction.                 |
-| Name exists, function differs      | `PresenceState: 'different-function'`.                                                                         |
-| Existed historically, not now      | `temporalScope: 'historical'` + required `historicalPeriod`.                                                   |
-| Function split across agencies     | Multiple institution records; scope recorded per jurisdiction rather than per agency.                          |
-| Disputed classification            | `notes` + a `disputed` claim type on the prose that describes it.                                              |
-| Incomplete research                | `coverage: 'in-research'` with `unknown` scopes.                                                               |
-| Source supporting one narrow claim | `SourceRecord.note` states the scope; tests check citations resolve.                                           |
-| Federal / regional variation       | One record per unit, `own` scopes where they differ.                                                           |
-| Reform effective from a date       | **Partially.** Recorded in source `note` and a reader-facing callout; no structured field yet. See finding F3. |
+| Scenario                           | How                                                                                                                                                                                             |
+| ---------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Institution absent in a country    | `PresenceState: 'absent'` on the country profile; `FunctionScope: 'none'` on the jurisdiction.                                                                                                  |
+| Name exists, function differs      | `PresenceState: 'different-function'`.                                                                                                                                                          |
+| Existed historically, not now      | `temporalScope: 'historical'` + required `historicalPeriod`.                                                                                                                                    |
+| Function split across agencies     | Multiple institution records; scope recorded per jurisdiction rather than per agency.                                                                                                           |
+| Disputed classification            | `notes` + a `disputed` claim type on the prose that describes it.                                                                                                                               |
+| Incomplete research                | `coverage: 'in-research'` with `unknown` scopes.                                                                                                                                                |
+| Source supporting one narrow claim | `SourceRecord.note` states the scope; tests check citations resolve.                                                                                                                            |
+| Federal / regional variation       | One record per unit, `own` scopes where they differ.                                                                                                                                            |
+| Reform effective from a date       | **Yes.** The `ScheduledChange` model records it with a staleness gate (see scheduled-change-model.md); the source `note` and reader-facing callout remain. This resolved the France F3 finding. |

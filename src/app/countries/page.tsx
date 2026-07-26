@@ -4,11 +4,12 @@ import { CoverageNotice } from '@/components/content/CoverageNotice';
 import { ContentPage } from '@/components/pages/ContentPage';
 import { Badge } from '@/components/ui/Badge';
 import { SectionHeading } from '@/components/ui/SectionHeading';
+import { COUNTRY_MODULES } from '@/content/country-modules';
 import {
-  COUNTRY_MODULES,
   PRESENCE_STATE_DESCRIPTIONS,
   PRESENCE_STATE_LABELS,
-  countriesByRegion,
+  countryCoverageTotal,
+  plannedCountriesByRegion,
 } from '@/content/countries';
 import { PUBLISHED_DOSSIERS, publishedModules } from '@/content/dossiers';
 import { PRESENCE_STATES } from '@/content/types';
@@ -25,7 +26,11 @@ export const metadata: Metadata = buildMetadata({
 });
 
 export default function CountriesPage() {
-  const regions = countriesByRegion();
+  // Coverage is derived from both registries so it cannot drift: the queue lists only countries
+  // WITHOUT a published dossier, and the denominator counts published + remaining-planned.
+  const publishedCodes = new Set(PUBLISHED_DOSSIERS.map((dossier) => dossier.countryCode));
+  const regions = plannedCountriesByRegion(publishedCodes);
+  const coverageTotal = countryCoverageTotal(publishedCodes);
 
   return (
     <ContentPage
@@ -51,7 +56,7 @@ export default function CountriesPage() {
         </CoverageNotice>
       ) : (
         <CoverageNotice
-          title={`${PUBLISHED_DOSSIERS.length} of ${countriesByRegion().reduce((n, r) => n + r.countries.length, 0)} countries has researched coverage`}
+          title={`${PUBLISHED_DOSSIERS.length} of ${coverageTotal} countries have researched coverage`}
         >
           <p>
             Every other country below is at coverage status <strong>planned</strong>: it is in
@@ -93,7 +98,7 @@ export default function CountriesPage() {
           {COUNTRY_MODULES.map((module) => (
             <li key={module.id}>
               <h3 className="font-semibold text-ink">{module.title}</h3>
-              <p className="text-sm text-ink-muted">{module.description}</p>
+              <p className="text-sm text-ink-muted">{module.purpose}</p>
             </li>
           ))}
         </ul>

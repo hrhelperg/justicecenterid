@@ -1,4 +1,4 @@
-import type { CountryModuleId, CountryProfile, PresenceState } from './types';
+import type { CountryProfile, PresenceState } from './types';
 
 /**
  * The country registry.
@@ -163,88 +163,13 @@ export const COUNTRIES: readonly CountryProfile[] = [
   },
 ];
 
-/** Fixed module slugs, shared across every country so URLs stay comparable. */
-export const COUNTRY_MODULES: readonly {
-  id: CountryModuleId;
-  title: string;
-  description: string;
-}[] = [
-  {
-    id: 'overview',
-    title: 'Overview',
-    description: 'How the justice system is organised, in outline.',
-  },
-  {
-    id: 'justice-system',
-    title: 'Justice system',
-    description: 'Legal traditions in force, sources of law, and the constitutional framework.',
-  },
-  {
-    id: 'law-enforcement',
-    title: 'Law enforcement',
-    description: 'Which bodies enforce law, at which level, with which powers.',
-  },
-  {
-    id: 'courts',
-    title: 'Courts',
-    description: 'Court hierarchy, who decides facts, and routes of appeal.',
-  },
-  {
-    id: 'prosecution',
-    title: 'Prosecution',
-    description: 'Where the prosecution service sits and how charging decisions are made.',
-  },
-  {
-    id: 'corrections',
-    title: 'Corrections',
-    description: 'Custodial and non-custodial arrangements, and release mechanisms.',
-  },
-  {
-    id: 'border-and-customs',
-    title: 'Border and customs',
-    description: 'Which bodies control the movement of people and of goods.',
-  },
-  {
-    id: 'history',
-    title: 'History',
-    description: 'How the present institutions came to exist, including discontinuities.',
-  },
-  {
-    id: 'ranks-and-organisation',
-    title: 'Ranks and organisation',
-    description: 'Structure and rank systems, described rather than translated.',
-  },
-  {
-    id: 'training-and-academies',
-    title: 'Training and academies',
-    description: 'Entry routes and training institutions.',
-  },
-  {
-    id: 'oversight',
-    title: 'Oversight',
-    description: 'Which bodies examine which institutions, and with what powers.',
-  },
-  {
-    id: 'professional-conditions',
-    title: 'Professional conditions',
-    description: 'Working conditions and entry requirements, only with dated official sources.',
-  },
-  {
-    id: 'museums-and-archives',
-    title: 'Museums and archives',
-    description: 'Where the documentary record is held.',
-  },
-  {
-    id: 'timeline',
-    title: 'Timeline',
-    description: 'Dated institutional milestones, each individually sourced.',
-  },
-  {
-    id: 'sources',
-    title: 'Sources',
-    description: 'Every source used for this country, in one place.',
-  },
-];
+/*
+ * The module set a country is assembled from is NOT redeclared here. It lives once, in
+ * src/content/country-modules.ts (the route registry), and the /countries page renders that
+ * canonical list. A second module array here had drifted — it omitted investigations and
+ * forensics (real published modules) and advertised five that never route — so it was removed
+ * (finding F3 of the country-scaling audit).
+ */
 
 export const PRESENCE_STATE_LABELS: Record<PresenceState, string> = {
   present: 'Present',
@@ -267,9 +192,21 @@ export const PRESENCE_STATE_DESCRIPTIONS: Record<PresenceState, string> = {
     'We researched the question and could not establish an answer from acceptable sources.',
 };
 
-export function countriesByRegion(): { region: string; countries: CountryProfile[] }[] {
+/**
+ * Planning-registry countries **that do not yet have a published dossier**, grouped by region.
+ *
+ * The exclusion is the whole point (finding F2 of the country-scaling audit): the previous
+ * version listed every planning entry, so a country that had since been published still appeared
+ * in the "Coverage status" queue badged "Planned" — right beside the link to its researched
+ * page. `publishedCodes` is passed in rather than imported from the dossier registry, so this
+ * module stays free of a content-layer cycle and the filter is testable with synthetic input.
+ */
+export function plannedCountriesByRegion(
+  publishedCodes: ReadonlySet<string> = new Set(),
+): { region: string; countries: CountryProfile[] }[] {
   const regions = new Map<string, CountryProfile[]>();
   for (const country of COUNTRIES) {
+    if (publishedCodes.has(country.code)) continue;
     const list = regions.get(country.region);
     if (list) list.push(country);
     else regions.set(country.region, [country]);
@@ -280,4 +217,16 @@ export function countriesByRegion(): { region: string; countries: CountryProfile
       countries: countries.toSorted((a, b) => a.name.localeCompare(b.name, 'en')),
     }))
     .toSorted((a, b) => a.region.localeCompare(b.region, 'en'));
+}
+
+/**
+ * The distinct number of countries the site tracks: published dossiers plus planning entries
+ * that are not yet published. This is the honest denominator for "N of M countries have
+ * researched coverage" — the old code used the raw planning-registry length, which both double
+ * counted the six already-published planning entries and ignored the four published countries
+ * their pilots had removed from the registry.
+ */
+export function countryCoverageTotal(publishedCodes: ReadonlySet<string>): number {
+  const remainingPlanned = COUNTRIES.filter((c) => !publishedCodes.has(c.code)).length;
+  return publishedCodes.size + remainingPlanned;
 }
