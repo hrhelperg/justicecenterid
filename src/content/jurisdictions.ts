@@ -1313,8 +1313,10 @@ export const JURISDICTIONS: readonly JurisdictionRecord[] = [
     level: 'autonomous-community',
     parentJurisdictionId: 'es',
     legalSystemScope: 'national',
-    // Own police (the Policía Foral) but NOT its own prisons — the partial-asymmetry case.
-    policingScope: 'own',
+    // Its own police corps (the Policía Foral) but NOT an integral force: it SHARES ordinary
+    // policing with the national forces (its exclusive competence is essentially traffic), so
+    // `shared`, not `own` — the middle of the asymmetry gradient. And no prison transfer.
+    policingScope: 'shared',
     courtScope: 'national',
     prosecutionScope: 'national',
     correctionalScope: 'national',
@@ -1322,7 +1324,7 @@ export const JURISDICTIONS: readonly JurisdictionRecord[] = [
     coverage: 'in-research',
     sources: ['es-constitution'],
     notes:
-      'The partial-asymmetry case, which shows the scope values discriminating within the set of communities that have their own police. Navarre runs its own police — the Policía Foral — under its foral regime (LORAFNA) and art. 149.1.29, so policingScope is `own`. But it did NOT receive the transfer of penitentiary administration: its prisons are run by the central Secretaría General de Instituciones Penitenciarias, so correctionalScope is `national`, unlike Catalonia and the Basque Country. Its courts and prosecution are the unitary national ones.',
+      "The middle case of the asymmetry gradient. Navarre has its own police corps — the Policía Foral — under its foral regime (LORAFNA) and art. 149.1.29, but unlike the Mossos d'Esquadra and the Ertzaintza it is NOT an integral force that has displaced the national police: it shares ordinary public-security duties with the Cuerpo Nacional de Policía and the Guardia Civil (its exclusive competence is essentially traffic), so policingScope is `shared`, not `own`. And it did NOT receive the transfer of penitentiary administration, so its prisons are run by the central Secretaría General de Instituciones Penitenciarias (`national`). Its courts and prosecution are the unitary national ones — shared policing, national everything else, between Catalonia/Basque (own police, own prisons) and Andalusia (national throughout).",
     status: 'published',
   },
   {

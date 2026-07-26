@@ -17,15 +17,24 @@ departments or its 34,000+ communes.
 
 ## Levels
 
-`international` · `supranational` · `country` · `federal` · `constituent-country` · `state` ·
-`province` · `region` · `department` · `prefecture` · `county` · `municipality` · `local` ·
-`territory` · `tribal` · `special`
+`international` · `supranational` · `country` · `federal` · `constituent-country` ·
+`autonomous-community` · `state` · `province` · `region` · `department` · `prefecture` · `county` ·
+`municipality` · `local` · `territory` · `tribal` · `special`
 
 A flat vocabulary, sized to the systems we can foresee needing. Adding a level later is cheap.
 `tribal` was added by the United States pilot (a separate sovereign, not a subdivision — see
-authority basis) and `prefecture` by the Japan pilot: a Japanese prefecture (todofuken) is the
-first-level sub-national division and, decisively for this platform, the level at which police
-are administered, so `province` would have obscured what the pilot tests.
+authority basis); `prefecture` by the Japan pilot (the level at which police are administered, so
+`province` would have obscured what the pilot tests); and `autonomous-community` by the Spain
+pilot — a comunidad autónoma has a Statute of Autonomy, an assembly and (for some) its own police
+and prisons, categorically distinct from a French administrative `region`, so filing it under
+`region` would repeat the miscategorisation the Japan pilot avoided. Spain is a decentralised
+UNITARY state (its Constitution, art. 145.1, forbids federation of the communities); its
+asymmetric autonomy is carried entirely by divergent per-function scope values across sibling
+community records — Catalonia and the Basque Country `own` police and prisons, Navarre `shared`
+policing (its Policía Foral shares duties with the national forces) and `national` prisons,
+Andalusia `national` throughout, while courts and prosecution stay `national` for every community
+(judicial unity, art. 117.5). No `autonomyLevel` score was added; the asymmetry is a set of facts,
+not a rank.
 
 `alsoExercisesLevels` handles a body that exercises more than one tier's competences —
 required by Martinique and Guyane, which are _collectivités territoriales uniques_.

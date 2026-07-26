@@ -81,8 +81,8 @@ describe('Spain asymmetric decentralisation', () => {
       expect(getJurisdiction(id)!.policingScope, `${id} policing`).toBe('own');
       expect(getJurisdiction(id)!.correctionalScope, `${id} corrections`).toBe('own');
     }
-    // Navarre: own police but NOT own prisons — the partial-asymmetry case.
-    expect(getJurisdiction('es-navarre')!.policingScope).toBe('own');
+    // Navarre: own police corps but NOT integral — shares policing with the national forces.
+    expect(getJurisdiction('es-navarre')!.policingScope).toBe('shared');
     expect(getJurisdiction('es-navarre')!.correctionalScope).toBe('national');
     // Andalusia: neither.
     expect(getJurisdiction('es-andalusia')!.policingScope).toBe('national');

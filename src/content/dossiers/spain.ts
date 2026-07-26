@@ -18,9 +18,10 @@ import type { CountryDossier } from '../types';
  *     unitary (art. 117.5).
  *
  *  2. ASYMMETRY. What is devolved differs by community. Catalonia and the Basque Country run their
- *     own police AND their own prisons; Navarre runs its own police but not its prisons; most
- *     communities run neither. These pages never say the autonomous communities have identical
- *     competences, and never say the national police command the autonomous police.
+ *     own integral police AND their own prisons; Navarre has its own police corps that SHARES
+ *     policing with the national forces, and no prison transfer; most communities run neither.
+ *     These pages never say the autonomous communities have identical competences, and never say
+ *     the national police command the autonomous police.
  */
 
 export const SPAIN: CountryDossier = {
@@ -29,7 +30,7 @@ export const SPAIN: CountryDossier = {
   name: 'Spain',
   officialName: 'Kingdom of Spain (Reino de España)',
   summary:
-    'Spain is a decentralised unitary state — not a federation — in which criminal law and the judiciary are national, but the administration of policing and prisons is devolved to the Autonomous Communities asymmetrically. Catalonia and the Basque Country run their own police and their own prisons; Navarre runs its own police only; most communities run neither and rely on the national forces.',
+    'Spain is a decentralised unitary state — not a federation — in which criminal law and the judiciary are national, but the administration of policing and prisons is devolved to the Autonomous Communities asymmetrically. Catalonia and the Basque Country run their own police and their own prisons; Navarre has its own police corps that shares duties with the national forces; most communities run neither and rely on the national forces.',
   status: 'published',
   review: 'fact-checked',
   safetyReview: 'cleared',
@@ -54,7 +55,7 @@ export const SPAIN: CountryDossier = {
       kind: 'callout',
       variant: 'analysis',
       title: 'The asymmetry — the thing to understand about Spain',
-      text: 'The communities do not all have the same powers. Two functions are devolved unevenly. Catalonia and the Basque Country run their own ordinary police (the Mossos d’Esquadra and the Ertzaintza) and their own prison systems; Navarre runs its own police (the Policía Foral) but not its prisons; and most of the seventeen communities run neither, relying on the national police forces and the central prison administration. So "who polices Spain" and "who runs its prisons" have different answers in different communities. This site records that community by community, because a single national statement would be false for some of them.',
+      text: 'The communities do not all have the same powers, and the differences are not even uniform. Catalonia and the Basque Country run their own ordinary police (the Mossos d’Esquadra and the Ertzaintza) and their own prison systems. Navarre has its own police corps (the Policía Foral) but it has not replaced the national forces — it shares ordinary policing with them — and it does not run its own prisons. Most of the seventeen communities run neither, relying on the national police forces and the central prison administration. So "who polices Spain" and "who runs its prisons" have different answers in different communities, on a gradient rather than a switch. This site records that community by community, because a single national statement would be false for some of them.',
     },
     {
       kind: 'callout',
@@ -166,7 +167,7 @@ export const SPAIN: CountryDossier = {
           kind: 'callout',
           variant: 'analysis',
           title: 'Autonomous police — and why only some communities have them',
-          text: 'Article 149.1.29 keeps public security as a State competence "without prejudice to the possibility of the Autonomous Communities creating police forces" as their Statutes provide. Three communities have created a full force that acts as the ordinary police in their territory: the Mossos d’Esquadra in Catalonia, the Ertzaintza in the Basque Country, and the Policía Foral in Navarre (each named in its own language). Where they operate, the national forces keep only reserved, supra-community responsibilities, and the national forces do NOT command the autonomous police — coordination runs through a parity body, the Junta de Seguridad, not a chain of command. Most of the other communities have no full force of their own and are policed by the national Policía Nacional and Guardia Civil.',
+          text: 'Article 149.1.29 keeps public security as a State competence "without prejudice to the possibility of the Autonomous Communities creating police forces" as their Statutes provide. But the communities that have done so are not all in the same position. Two have created an INTEGRAL force that acts as the ordinary police in their territory, having assumed nearly all the functions of the national forces: the Mossos d’Esquadra in Catalonia and the Ertzaintza in the Basque Country (each named in its own language). A third, Navarre, has its own historic corps, the Policía Foral, but it has NOT displaced the national forces: it shares ordinary public-security duties with them, its exclusive competence being essentially traffic. Others have a more limited corps still (the Canary Islands, for instance). Where an autonomous force operates, the national forces keep reserved, supra-community responsibilities, and they do NOT command the autonomous police — coordination runs through a parity body, the Junta de Seguridad, not a chain of command. Most communities have no autonomous force at all and are policed by the national Policía Nacional and Guardia Civil.',
         },
         {
           kind: 'callout',
@@ -294,7 +295,7 @@ export const SPAIN: CountryDossier = {
       blocks: [
         {
           kind: 'paragraph',
-          text: 'Which police investigate a crime in Spain depends on where it happens: in Catalonia, the Basque Country and Navarre the autonomous police (the Mossos d’Esquadra, the Ertzaintza, the Policía Foral) are the ordinary investigating police; elsewhere it is the national Cuerpo Nacional de Policía and Guardia Civil. But the criminal law and procedure they apply are the same national ones across the whole country.',
+          text: 'Which police investigate a crime in Spain depends on where it happens: in Catalonia and the Basque Country the integral autonomous police (the Mossos d’Esquadra and the Ertzaintza) are the ordinary investigating police; elsewhere, and alongside the Policía Foral in Navarre, it is the national Cuerpo Nacional de Policía and Guardia Civil. But the criminal law and procedure they apply are the same national ones across the whole country.',
           claim: 'fact',
           sources: ['es-lofcs', 'es-constitution'],
         },
