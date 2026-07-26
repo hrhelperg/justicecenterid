@@ -188,6 +188,14 @@ export const JURISDICTION_LEVELS = [
    * categorically different things, exactly the miscategorisation the Japan pilot avoided by
    * adding `prefecture`. Spain is a decentralised UNITARY state, not a federation — its
    * Constitution (art. 145.1) expressly forbids federation of the communities.
+   *
+   * VALIDATED BY REUSE (Finland pilot). Åland (Ahvenanmaa) is Finland's autonomous region, with
+   * its own legislature (the Lagting) and devolved competences under the Act on the Autonomy of
+   * Åland (1144/1991) — including legislative competence over policing (s. 18(6)), while criminal
+   * law, the courts, prosecution and the enforcement of sentences stay with the State (s. 27). It
+   * is the same category of thing as a Spanish comunidad autónoma — an autonomous, legislature-
+   * bearing region, not a French administrative `region` — so it reuses this level in a second,
+   * differently constituted unitary state. Two countries now use it, which is what earns the level.
    */
   'autonomous-community',
   'state',

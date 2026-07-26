@@ -1619,6 +1619,59 @@ export const JURISDICTIONS: readonly JurisdictionRecord[] = [
       'Sweden (Sverige), a unitary constitutional monarchy governed by four fundamental laws, the central one being the Instrument of Government (Regeringsformen, 1974). All four justice functions are national, exercised by central-government administrative authorities: one Police Authority (Polismyndigheten, a single national authority with seven regions), one Prosecution Authority (Åklagarmyndigheten), one Prison and Probation Service (Kriminalvården, a unified corrections body), and two branches of courts. A single country-level record states the arrangement accurately. The defining fact stays in prose: the Instrument of Government (Ch. 12 Art. 2) prohibits ministerstyre — no public authority, including the Government or a minister, may determine how an administrative authority decides an individual case or applies the law, so the police, prosecution and prison service are constitutionally insulated from case-level ministerial direction (a stronger agency autonomy than "under the justice ministry"). Two further prose facts: the courts are in two branches, each with its own apex (the Supreme Court, Högsta domstolen, and the Supreme Administrative Court, Högsta förvaltningsdomstolen; Ch. 11 Art. 1), and there is no constitutional court — every court exercises diffuse constitutional review (Ch. 11 Art. 14). None of this needs a new schema value.',
     status: 'published',
   },
+
+  /* -------------------------------------------------------------------------- */
+  /* Finland (Batch A) — unitary, bilingual, EU. Mainland is national; Åland is  */
+  /* an autonomous region with policing competence (validating autonomous-       */
+  /* community by reuse), while courts/prosecution/corrections stay with the      */
+  /* State.                                                                      */
+  /* -------------------------------------------------------------------------- */
+  {
+    id: 'fi',
+    slug: 'finland',
+    name: 'Finland',
+    shortName: 'Finland',
+    countryCode: 'FI',
+    level: 'country',
+    legalSystemScope: 'own',
+    policingScope: 'own',
+    courtScope: 'own',
+    prosecutionScope: 'own',
+    correctionalScope: 'own',
+    temporalScope: 'current',
+    coverage: 'partial',
+    sources: ['fi-constitution', 'fi-intermin-police'],
+    notes:
+      "Finland (Suomi / Finland), a unitary, bilingual (Finnish and Swedish, Constitution s. 17) parliamentary republic and EU member state, under the 1999 Constitution. On the mainland all four justice functions are national. Two facts stay in prose: there are TWO supreme courts — the Supreme Court (korkein oikeus) for civil/criminal matters and the Supreme Administrative Court (korkein hallinto-oikeus) for administrative matters (s. 3, s. 99) — and no constitutional court (review is ex-ante by Parliament's Constitutional Law Committee and diffuse under s. 106); and the police sit under the Ministry of the Interior while the courts, prosecution and prisons sit under the Ministry of Justice (a split of ministries the model records in prose, not schema). The prosecution (Syyttäjälaitos) is decisionally independent but within the Ministry of Justice administrative branch. The Åland asymmetry is modelled separately (fi-aland).",
+    status: 'published',
+  },
+  {
+    id: 'fi-aland',
+    slug: 'aland',
+    name: 'Åland',
+    shortName: 'Åland',
+    countryCode: 'FI',
+    level: 'autonomous-community',
+    parentJurisdictionId: 'fi',
+    legalSystemScope: 'national',
+    policingScope: 'own',
+    courtScope: 'national',
+    prosecutionScope: 'national',
+    correctionalScope: 'national',
+    legislativeCompetence: {
+      policing: 'exclusive-subnational',
+      'legal-system': 'exclusive-federal',
+      courts: 'exclusive-federal',
+      prosecution: 'exclusive-federal',
+      corrections: 'exclusive-federal',
+    },
+    temporalScope: 'current',
+    coverage: 'in-research',
+    sources: ['fi-autonomy-act'],
+    notes:
+      'Åland (Ahvenanmaa), the Swedish-speaking autonomous region of Finland, modelled at the `autonomous-community` level minted by the Spain pilot — it is the same category of thing (an autonomous, legislature-bearing region), not a French administrative `region`. Under the Act on the Autonomy of Åland (1144/1991), Åland holds legislative competence over "public order and security", i.e. POLICING (s. 18(6), with State exceptions for firearms and rescue services), so policingScope is `own`. But criminal law, the courts, the preliminary-investigation/prosecution framework and the enforcement of sentences are reserved to the State (s. 27, subparagraphs 22–24), so courtScope, prosecutionScope and correctionalScope are `national`. This single-function devolution — one autonomous region running its own policing over a national baseline for everything else — is the Finland asymmetry, and it reuses existing values with no new schema. The Autonomy Act establishes the COMPETENCE allocation; the name and administration of a distinct Åland police organisation were not confirmed from a primary source, so only the competence is modelled and the parent-derived legislativeCompetence records that policing is legislated sub-nationally (by the Åland Lagting) while the reserved functions are legislated by the State (`exclusive-federal` here meaning the central/State level, Finland being unitary).',
+    status: 'published',
+  },
 ];
 
 /* -------------------------------------------------------------------------- */
