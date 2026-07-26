@@ -37,7 +37,19 @@ batch that mostly exercises **reuse** and hardens the model on well-documented g
 | Sweden      | Unitary; prosecutor-led; strong open-government tradition                     | High                      | Swedish             | Low — reuse                                       | Agency-vs-ministry independence phrasing (restricted: political control) |
 | Finland     | Unitary; distinctive prosecutor and Chancellor of Justice/Ombudsman oversight | High                      | Finnish/Swedish     | Low–medium — oversight module                     | Two official languages in institution names                              |
 
-## Batch B — Central and Southern Europe
+## Batch B — Central and Southern Europe · SHIPPED 2026-07-26
+
+**Delivered** on `feat/batch-b-central-southern-europe` (see
+`docs/audits/batch-b-central-southern-europe-qa.md`). All six countries below are published — Italy,
+Portugal, Austria, Czechia, Poland and Greece — 8 published + 4 deferred modules each, one
+detention restricted claim each, no new schema. The batch mapped a full spectrum of prosecution
+independence (Portugal autonomous → Greece/Italy inside the judiciary → Austria under the minister →
+Czechia inside the ministry → Poland where the prosecutor-general _is_ the minister); confirmed the
+Belgium `federal`/`exclusive-federal` shape via Austria; handled Poland's contested judiciary
+governance strictly by dated attribution (with a mechanical neutrality tripwire test); reported
+Austria honestly with no density where the source gave no capacity; and authored Greece under
+bot-walled official sites with named unofficial-translation and foreign-government-secondary
+substitutions. The characterisation below is what was researched; it proved accurate.
 
 Civil-law systems, several with regional or historically layered structures; a moderate batch
 that tests decentralisation and codified-procedure variety.

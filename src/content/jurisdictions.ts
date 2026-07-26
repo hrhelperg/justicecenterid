@@ -1672,6 +1672,152 @@ export const JURISDICTIONS: readonly JurisdictionRecord[] = [
       'Åland (Ahvenanmaa), the Swedish-speaking autonomous region of Finland, modelled at the `autonomous-community` level minted by the Spain pilot — it is the same category of thing (an autonomous, legislature-bearing region), not a French administrative `region`. Under the Act on the Autonomy of Åland (1144/1991), Åland holds legislative competence over "public order and security", i.e. POLICING (s. 18(6), with State exceptions for firearms and rescue services), so policingScope is `own`. But criminal law, the courts, the preliminary-investigation/prosecution framework and the enforcement of sentences are reserved to the State (s. 27, subparagraphs 22–24), so courtScope, prosecutionScope and correctionalScope are `national`. This single-function devolution — one autonomous region running its own policing over a national baseline for everything else — is the Finland asymmetry, and it reuses existing values with no new schema. The Autonomy Act establishes the COMPETENCE allocation; the name and administration of a distinct Åland police organisation were not confirmed from a primary source, so only the competence is modelled and the parent-derived legislativeCompetence records that policing is legislated sub-nationally (by the Åland Lagting) while the reserved functions are legislated by the State (`exclusive-federal` here meaning the central/State level, Finland being unitary).',
     status: 'published',
   },
+
+  /* -------------------------------------------------------------------------- */
+  /* Italy (Batch B) — regionalised unitary; justice fully national (the         */
+  /* contrast to Finland's Åland: special-autonomy regions hold NO justice).     */
+  /* -------------------------------------------------------------------------- */
+  {
+    id: 'it',
+    slug: 'italy',
+    name: 'Italy',
+    shortName: 'Italy',
+    countryCode: 'IT',
+    level: 'country',
+    legalSystemScope: 'own',
+    policingScope: 'own',
+    courtScope: 'own',
+    prosecutionScope: 'own',
+    correctionalScope: 'own',
+    temporalScope: 'current',
+    coverage: 'partial',
+    sources: ['it-constitution', 'it-legge-121-1981'],
+    notes:
+      'Italy (Italia), a regionalised unitary ("Regional State"), not a federation: the Republic is made of municipalities, provinces, metropolitan cities, regions and the State (Constitution art. 114), with 20 regions of which five have special autonomy (art. 116). But the four justice functions are ALL exclusive State competence and fully national — art. 117(2) reserves to the State subparagraph (l) "jurisdiction and procedural law; civil and criminal law; administrative justice", (h) "public order and security, save for local administrative police", and (d) defence; and even the maximum devolution art. 116(3) allows over "justice" is limited to the organizational requirements of the Justice of the Peace. So a single country-level record with all functions `own` states the arrangement accurately, and NO special-autonomy region record is created — the exact opposite of Finland\'s Åland, which does hold policing competence. Facts kept in prose: the prosecution (Pubblico Ministero) is part of the independent judiciary (prosecutors and judges are both magistrati under the same self-governing CSM) with mandatory prosecution (art. 112); there are MULTIPLE national police forces (Polizia di Stato, the military Arma dei Carabinieri, and the Guardia di Finanza), centrally coordinated by the Interior Ministry, with only local administrative police (polizia locale) left to the regions/municipalities; and there are three top courts — the Court of Cassation, the Constitutional Court and the Council of State.',
+    status: 'published',
+  },
+
+  /* -------------------------------------------------------------------------- */
+  /* Portugal (Batch B) — unitary with autonomous regions; justice national     */
+  /* -------------------------------------------------------------------------- */
+  {
+    id: 'pt',
+    slug: 'portugal',
+    name: 'Portugal',
+    shortName: 'Portugal',
+    countryCode: 'PT',
+    level: 'country',
+    legalSystemScope: 'own',
+    policingScope: 'own',
+    courtScope: 'own',
+    prosecutionScope: 'own',
+    correctionalScope: 'own',
+    temporalScope: 'current',
+    coverage: 'partial',
+    sources: ['pt-constitution', 'pt-loic'],
+    notes:
+      'Portugal (Portugal), a unitary state (Constitution art. 6(1), "the state is unitary") with a special insular-autonomy feature: the Azores and Madeira are autonomous regions (art. 6(2), arts. 225–234) with their own political-administrative statutes. But the four justice functions are ALL national — criminal law and the organisation of the courts and the Public Prosecution Service are reserved to Parliament (art. 165(1)(c) and (p)) and expressly excluded from regional legislation (art. 227(1)(b)), the security-forces regime is reserved (art. 164(1)(u)) with each force having "a sole organisational structure for the whole of Portuguese territory" (art. 272(4)), and prisons run under a single national directorate. So a single country-level record with all functions `own` states it accurately, and NO autonomous-region record is created — the regions hold no justice competence, the same result as Italy and the opposite of Finland\'s Åland. (The only region-adjacent element is a regional section of the national Court of Auditors, art. 214(4) — a decentralised chamber of a national court, not devolved competence.) Facts kept in prose: the Public Prosecution Service (Ministério Público) is constitutionally AUTONOMOUS, with "its own statute and autonomy" (art. 219(2)), independent of both the judiciary and the executive; there are multiple national police forces (Polícia Judiciária under the justice ministry; the militarised Guarda Nacional Republicana and the civilian Polícia de Segurança Pública under the interior ministry); and there are four top courts (the Supreme Court of Justice, the Supreme Administrative Court, the Constitutional Court and the Court of Auditors) alongside diffuse constitutional review by all courts (art. 204).',
+    status: 'published',
+  },
+
+  /* -------------------------------------------------------------------------- */
+  /* Austria (Batch B) — federal state, justice fully federal (Belgium-type)     */
+  /* -------------------------------------------------------------------------- */
+  {
+    id: 'at',
+    slug: 'austria',
+    name: 'Austria',
+    shortName: 'Austria',
+    countryCode: 'AT',
+    level: 'federal',
+    legalSystemScope: 'own',
+    policingScope: 'own',
+    courtScope: 'own',
+    prosecutionScope: 'own',
+    correctionalScope: 'own',
+    legislativeCompetence: {
+      'legal-system': 'exclusive-federal',
+      policing: 'exclusive-federal',
+      courts: 'exclusive-federal',
+      prosecution: 'exclusive-federal',
+      corrections: 'exclusive-federal',
+    },
+    temporalScope: 'current',
+    coverage: 'partial',
+    sources: ['at-bvg', 'at-stag'],
+    notes:
+      'Austria (Österreich) is a FEDERATION of nine Länder — but, like Belgium and unlike Germany or the United States, the four justice functions are FEDERAL competences of both legislation and execution, not devolved to the Länder. Art. 10(1) Z 6 B-VG places civil law, criminal law, "Justizpflege" (the administration of justice) and the protective institutions (the statutory basis for the prison system) in the Federation; Z 7 places the security police in the Federation save for the local security police; Art. 82(1) provides that "ordinary jurisdiction emanates from the Federation". So the model represents Austria as a single `federal` record with every function `own` (federally administered) and every core legislative competence `exclusive-federal` — the same pattern as Belgium, the INVERSE of Germany (whose Länder run courts, police and prisons). NO Land record is created: there are no Land ordinary courts, no Land criminal codes, no Land prosecution services, no Land prison systems and no separate Land police forces (the nine Landespolizeidirektionen are federal authorities under the Interior Minister, Art. 78a/78b). The only devolved judicial element is that each Land organises its own administrative court (Art. 10(1) Z 1 carve-out; Art. 129) — a minor court-organisation matter, not devolution of the core functions — and it is noted only in prose. Facts kept in prose: three co-equal apex courts (Oberster Gerichtshof, Verfassungsgerichtshof, Verwaltungsgerichtshof), none superior to the others; the prosecution (Staatsanwaltschaft) is an organ of the ordinary judiciary but is bound by instructions up a chain terminating at the Federal Minister of Justice (StAG §2(1)) — with a 2026 consultation draft, not enacted, that would replace that apex with an independent federal prosecution; and a single national police under the Interior Ministry.',
+    status: 'published',
+  },
+
+  /* -------------------------------------------------------------------------- */
+  /* Czechia (Batch B) — unitary; justice all national                          */
+  /* -------------------------------------------------------------------------- */
+  {
+    id: 'cz',
+    slug: 'czechia',
+    name: 'Czechia',
+    shortName: 'Czechia',
+    countryCode: 'CZ',
+    level: 'country',
+    legalSystemScope: 'own',
+    policingScope: 'own',
+    courtScope: 'own',
+    prosecutionScope: 'own',
+    correctionalScope: 'own',
+    temporalScope: 'current',
+    coverage: 'partial',
+    sources: ['cz-constitution', 'cz-ejustice'],
+    notes:
+      'Czechia (Česká republika) is a unitary state under the Constitution of 1993. It is subdivided into self-governing regions (kraje) and municipalities, but all four justice functions are national/central competences — there is no federal, regional or special-autonomy tier holding any justice power. The regional courts (krajské soudy) and the fourteen regional police directorates are named after regions but are organs of the NATIONAL judiciary and the NATIONAL police, not regional government. So a single country-level record with all functions `own` states it accurately, and NO region record is created. Facts kept in prose: there are three apex courts — the Supreme Court (Nejvyšší soud) and a separate Supreme Administrative Court (Nejvyšší správní soud), both in Brno, plus a separate Constitutional Court (Ústavní soud, fifteen Justices for ten-year terms) outside the ordinary hierarchy; the prosecution (státní zastupitelství / Public Prosecutor\'s Office) is NOT an independent branch but "a component of the executive power … part of the Ministry of Justice", headed by the Prosecutor General\'s Office; the police (Policie ČR) are a single national force under the Interior Ministry; prisons (Vězeňská služba) run under the Ministry of Justice; and there is NO national self-governing judicial council — court administration is exercised by the Ministry of Justice, with only advisory councils within individual courts.',
+    status: 'published',
+  },
+
+  /* -------------------------------------------------------------------------- */
+  /* Poland (Batch B) — unitary; justice all national                           */
+  /* -------------------------------------------------------------------------- */
+  {
+    id: 'pl',
+    slug: 'poland',
+    name: 'Poland',
+    shortName: 'Poland',
+    countryCode: 'PL',
+    level: 'country',
+    legalSystemScope: 'own',
+    policingScope: 'own',
+    courtScope: 'own',
+    prosecutionScope: 'own',
+    correctionalScope: 'own',
+    temporalScope: 'current',
+    coverage: 'partial',
+    sources: ['pl-constitution', 'pl-prokuratura'],
+    notes:
+      'Poland (Rzeczpospolita Polska) is a unitary state — Constitution art. 3, "The Republic of Poland shall be a unitary State". It has three-tier territorial self-government (gmina/powiat/województwo), but the Constitution assigns it NO justice competence: the administration of justice is a State function (art. 175(1)), the prosecution, police and prison service are each single national organisations, and no subnational tier holds any justice power. So a single country-level record with all functions `own` states it accurately, and NO region record is created. The one within-central-government nuance is that executive responsibility is split across two ministries — the Minister of Justice (courts administration, the prosecution via a statutory personal union, and the prison service) and the Minister of Internal Affairs (the police) — a functional split, not a territorial one. Facts kept in prose: there are three separate top bodies — the Supreme Court (Sąd Najwyższy, art. 183), a separate supreme administrative court (Naczelny Sąd Administracyjny, art. 184; "Chief Administrative Court" in the official constitutional translation), and the Constitutional Tribunal (Trybunał Konstytucyjny, arts. 188–190); the office of Prosecutor-General is held ex officio by the Minister of Justice (Law on the Prosecutor\'s Office 2016, art. 1 § 2); the police (Policja) are one national force under the interior minister and the prosecutor directs the pre-trial investigation; and the National Council of the Judiciary (Krajowa Rada Sądownictwa, arts. 186–187) safeguards judicial independence, its judicial members\' selection method having been changed by the enacted 2017 amendment — a contested area described on the country pages only by attribution to dated official and EU sources.',
+    status: 'published',
+  },
+
+  /* -------------------------------------------------------------------------- */
+  /* Greece (Batch B) — unitary, decentralised; justice all national            */
+  /* -------------------------------------------------------------------------- */
+  {
+    id: 'gr',
+    slug: 'greece',
+    name: 'Greece',
+    shortName: 'Greece',
+    countryCode: 'GR',
+    level: 'country',
+    legalSystemScope: 'own',
+    policingScope: 'own',
+    courtScope: 'own',
+    prosecutionScope: 'own',
+    correctionalScope: 'own',
+    temporalScope: 'current',
+    coverage: 'partial',
+    sources: ['gr-constitution', 'gr-ejustice-courts'],
+    notes:
+      'Greece (Elláda) is a unitary, decentralised state (Constitution art. 101, "the administration of the State shall be organized according to the principle of decentralization"; art. 102, local government limited to local affairs) — NOT federal. All four justice functions are national/central: the courts are created by statute (art. 93(1)) with judges appointed by presidential decree (art. 88(1)); the prosecution is embedded in the national judiciary (arts. 87–88); the police (Hellenic Police) are a single national force; and the prisons are run by a central ministry. So a single country-level record with all functions `own` states it accurately, and NO region record is created. The one special-autonomy element is Mount Athos (Άγιον Όρος, art. 105) — a self-governed ecclesiastical-territorial part of the Greek State over which the State nonetheless retains EXCLUSIVE responsibility for public order and security, and whose monastic judicial power is defined by statute; it is a narrow ecclesiastical autonomy, not a general devolved justice tier, and is noted only in prose (not modelled as a region record). Facts kept in prose: there are THREE co-equal supreme courts — Άρειος Πάγος (Areios Pagos, the Supreme Civil and Criminal Court/court of cassation), Συμβούλιο της Επικρατείας (the Council of State/Supreme Administrative Court), and Ελεγκτικό Συνέδριο (the Court of Audit, art. 98(3) not subject to the Council of State) — and NO dedicated constitutional court: constitutional review is diffuse (art. 93(4), every court must decline to apply an unconstitutional statute), with a conflict-resolving Special Highest Court (art. 100); the prosecution (Εισαγγελία) is an independent part of the judiciary (the Ministry of Justice sets only its general service conditions) and directs/supervises police investigations; and, distinctively, the police AND the prisons are both under the Ministry of Citizen Protection, while the courts and prosecution fall under the Ministry of Justice for service conditions.',
+    status: 'published',
+  },
 ];
 
 /* -------------------------------------------------------------------------- */

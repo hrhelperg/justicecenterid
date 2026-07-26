@@ -1,13 +1,19 @@
 import { COUNTRY_MODULES, countryModulePath, countryPath } from '../country-modules';
 import type { CountryDossier, CountryModuleContent } from '../types';
 import { AUSTRALIA } from './australia';
+import { AUSTRIA } from './austria';
 import { BELGIUM } from './belgium';
 import { BRAZIL } from './brazil';
 import { CANADA } from './canada';
+import { CZECHIA } from './czechia';
 import { DENMARK } from './denmark';
 import { FINLAND } from './finland';
+import { GREECE } from './greece';
+import { ITALY } from './italy';
 import { NETHERLANDS } from './netherlands';
 import { NORWAY } from './norway';
+import { POLAND } from './poland';
+import { PORTUGAL } from './portugal';
 import { SPAIN } from './spain';
 import { SWEDEN } from './sweden';
 import { SWITZERLAND } from './switzerland';
@@ -35,6 +41,12 @@ export const COUNTRY_DOSSIERS: readonly CountryDossier[] = [
   NORWAY,
   SWEDEN,
   FINLAND,
+  ITALY,
+  PORTUGAL,
+  AUSTRIA,
+  CZECHIA,
+  POLAND,
+  GREECE,
 ];
 
 export const PUBLISHED_DOSSIERS: readonly CountryDossier[] = COUNTRY_DOSSIERS.filter(
