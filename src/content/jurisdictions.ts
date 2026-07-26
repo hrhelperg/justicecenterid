@@ -1061,6 +1061,151 @@ export const JURISDICTIONS: readonly JurisdictionRecord[] = [
       "A territory, included to test the province/territory distinction. Unlike a province, the Yukon's legislature and legislative powers exist by federal statute (the Yukon Act) and can be amended by Parliament, so authorityBasis is `federal-plenary` (the value the United States pilot added for the District of Columbia) and its legal-system scope is `delegated`. Its policing is delivered by the RCMP under a territorial Police Service Agreement (`contracted`), and — the decisive contrast with the provinces — criminal prosecution is conducted by the FEDERAL Public Prosecution Service of Canada, which states it is 'the only' prosecutor in the territories and conducts all Criminal Code prosecutions there, so prosecutionScope is `national`. The Yukon runs its own territorial custody for shorter sentences and remand.",
     status: 'published',
   },
+
+  /* ---------------------------------------------------------------------- */
+  /* Australia — Commonwealth, a state, and two contrasting territories      */
+  /* ---------------------------------------------------------------------- */
+  /*
+   * Australia is the SECOND independent test of the `contracted` scope, and it earns the value by
+   * repetition. The Australian Capital Territory runs no police of its own: the Commonwealth
+   * Australian Federal Police delivers ACT community policing "on behalf of the ACT Government"
+   * under a Commonwealth–ACT arrangement (a purchase agreement), so `policingScope: 'contracted'`
+   * — exactly the RCMP pattern, in a second federation with a different constitutional
+   * architecture. The Northern Territory, by contrast, runs its OWN police force, so
+   * `policingScope: 'own'`. Two self-governing territories, one contracting and one not — the
+   * discrimination the value exists to preserve.
+   *
+   * The sharp difference from Canada is NOT the scope value but the source of power, which the
+   * existing `authorityBasis` field already captures: Australian STATES retain residual power
+   * (Constitution s.107) and write their own criminal law (no national code), so they are
+   * `reserved-powers` and `legalSystemScope: 'own'`, exactly like United States states — the
+   * inverse of Canada. The TERRITORIES are self-governing under Commonwealth statute (the ACT
+   * Self-Government Act 1988, the NT Self-Government Act 1978), amendable by the Commonwealth
+   * Parliament, so they are `federal-plenary` (the DC / Yukon value, reused again).
+   *
+   * Samples: the Commonwealth, New South Wales (a large state), and the ACT and NT (the two
+   * mainland self-governing territories). Not all states/territories; no public sub-national pages.
+   */
+  {
+    id: 'au',
+    slug: 'australia',
+    name: 'Commonwealth of Australia',
+    shortName: 'Australia',
+    countryCode: 'AU',
+    level: 'federal',
+    // Criminal law is largely state, with Commonwealth offences under enumerated powers — a
+    // shared legal order like the United States, not a single federal code like Canada.
+    legalSystemScope: 'shared',
+    policingScope: 'shared',
+    courtScope: 'shared',
+    prosecutionScope: 'shared',
+    correctionalScope: 'shared',
+    legislativeCompetence: {
+      'legal-system': 'concurrent',
+      policing: 'concurrent',
+      courts: 'concurrent',
+      prosecution: 'concurrent',
+      corrections: 'concurrent',
+    },
+    temporalScope: 'current',
+    coverage: 'partial',
+    sources: ['au-constitution'],
+    notes:
+      'A federation in which the Commonwealth has only enumerated legislative powers (Constitution s.51) and the States retain the residue (s.107). There is no general Commonwealth criminal-law power and no national criminal code: each state and territory has its own criminal law, alongside Commonwealth offences for federal matters. Every modelled function is `shared` — the Commonwealth Australian Federal Police alongside state and territory police; the High Court and Federal Court alongside state and territory courts; the Commonwealth Director of Public Prosecutions alongside state and territory DPPs; and — there being no Commonwealth prison system — federal offenders held in state and territory prisons. Residual power is with the States, the inverse of Canada.',
+    status: 'published',
+  },
+  {
+    id: 'au-nsw',
+    slug: 'new-south-wales',
+    name: 'New South Wales',
+    shortName: 'New South Wales',
+    countryCode: 'AU',
+    level: 'state',
+    parentJurisdictionId: 'au',
+    // A reserved-power state: the Constitution saves its powers (s.107), the residue is the
+    // state's — exactly like a United States state (and the inverse of a Canadian province).
+    authorityBasis: 'reserved-powers',
+    legalSystemScope: 'own',
+    policingScope: 'own',
+    courtScope: 'own',
+    prosecutionScope: 'own',
+    correctionalScope: 'own',
+    legislativeCompetence: {
+      'legal-system': 'concurrent',
+      policing: 'exclusive-subnational',
+      courts: 'exclusive-subnational',
+      prosecution: 'exclusive-subnational',
+      corrections: 'exclusive-subnational',
+    },
+    temporalScope: 'current',
+    coverage: 'in-research',
+    sources: ['au-constitution'],
+    notes:
+      'A large state, the model of Australian sub-national justice. New South Wales writes its own criminal law, runs its own police (the New South Wales Police Force), its own courts, its own Director of Public Prosecutions and its own corrective services. Its powers are reserved by the Constitution (s.107), so authorityBasis is `reserved-powers` and legalSystemScope is `own` — the United States pattern, the inverse of a Canadian province, which administers a single federal Criminal Code. This is the contrast that shows the `contracted` policing value is a real discrimination, not the norm: a state runs its own force.',
+    status: 'published',
+  },
+  {
+    id: 'au-act',
+    slug: 'australian-capital-territory',
+    name: 'Australian Capital Territory',
+    shortName: 'ACT',
+    countryCode: 'AU',
+    level: 'territory',
+    parentJurisdictionId: 'au',
+    // Self-governing under a Commonwealth statute (ACT Self-Government Act 1988), amendable by
+    // the Commonwealth Parliament — federal-plenary, the DC / Yukon value reused.
+    authorityBasis: 'federal-plenary',
+    legalSystemScope: 'own',
+    // THE Australian test of `contracted`: the ACT runs no police of its own; the Commonwealth
+    // AFP delivers ACT community policing on behalf of the ACT Government under a purchase
+    // arrangement.
+    policingScope: 'contracted',
+    courtScope: 'own',
+    prosecutionScope: 'own',
+    correctionalScope: 'own',
+    legislativeCompetence: {
+      'legal-system': 'concurrent',
+      policing: 'framework',
+      courts: 'exclusive-subnational',
+      prosecution: 'exclusive-subnational',
+      corrections: 'exclusive-subnational',
+    },
+    temporalScope: 'current',
+    coverage: 'in-research',
+    sources: ['au-constitution'],
+    notes:
+      "The independent second instance of contract policing. The ACT is self-governing under the Commonwealth's Australian Capital Territory (Self-Government) Act 1988, so authorityBasis is `federal-plenary`. It makes its own criminal law and runs its own courts, Director of Public Prosecutions and corrective services — but it runs NO police force of its own: the Australian Federal Police, a Commonwealth institution, delivers ACT community policing (through its 'ACT Policing' unit) 'on behalf of the ACT Government' under a purchase arrangement. So policingScope is `contracted`, the same value the Canada pilot added for RCMP contract policing — earned here by repetition in a second, differently structured federation. The provider's identity (the AFP) and the arrangement live in the law-enforcement prose.",
+    status: 'published',
+  },
+  {
+    id: 'au-nt',
+    slug: 'northern-territory',
+    name: 'Northern Territory',
+    shortName: 'Northern Territory',
+    countryCode: 'AU',
+    level: 'territory',
+    parentJurisdictionId: 'au',
+    authorityBasis: 'federal-plenary',
+    legalSystemScope: 'own',
+    // The contrast with the ACT: the NT runs its OWN police force.
+    policingScope: 'own',
+    courtScope: 'own',
+    prosecutionScope: 'own',
+    correctionalScope: 'own',
+    legislativeCompetence: {
+      'legal-system': 'concurrent',
+      policing: 'exclusive-subnational',
+      courts: 'exclusive-subnational',
+      prosecution: 'exclusive-subnational',
+      corrections: 'exclusive-subnational',
+    },
+    temporalScope: 'current',
+    coverage: 'in-research',
+    sources: ['au-constitution'],
+    notes:
+      'The contrast that makes `contracted` a real distinction. Like the ACT, the Northern Territory is self-governing under a Commonwealth statute (the Northern Territory (Self-Government) Act 1978), so authorityBasis is `federal-plenary`. But unlike the ACT, the NT runs its OWN police force (the Northern Territory Police Force) under its own legislation — so policingScope is `own`, not `contracted`. Two self-governing territories with the same source of power, differing only in whether they procure policing from the Commonwealth: the ACT does, the NT does not.',
+    status: 'published',
+  },
 ];
 
 /* -------------------------------------------------------------------------- */

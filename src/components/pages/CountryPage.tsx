@@ -56,6 +56,7 @@ const DEMONYMS: Record<string, string> = {
   JP: 'a Japanese government body',
   BR: 'a Brazilian government body',
   CA: 'a Canadian government body',
+  AU: 'an Australian government body',
 };
 
 function independentOfDemonym(dossier: CountryDossier): string {
