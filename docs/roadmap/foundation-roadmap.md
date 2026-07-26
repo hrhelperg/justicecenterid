@@ -390,6 +390,40 @@ refutations.
 police/courts/MP are organised by the Union, Art. 21 XIII–XIV). Not all 26 states; no public
 state pages.
 
-**Next.** Country pilot eight — a candidate is Canada, whose RCMP contract policing is the clean
-forcing example, flagged since the US pilot, for whether a structured inter-institutional
-relationship field is finally earned. Awaits human review and merge of this branch first.
+**Next.** Country pilot eight — Canada. Brazil was merged into `main` (PR #24), and the
+four-country program branch (Canada, Australia, Spain, Switzerland) builds on it.
+
+## Phase 8 — Canada contract-policing pilot (delivered 2026-07-26)
+
+Program branch `feat/canada-australia-spain-switzerland-program`, based on `5f9b517` (Brazil
+merge). First country of a four-country program run.
+
+**Purpose.** Resolve the question deferred since the US pilot: does contracted service delivery
+between orders of government earn a structured inter-institutional relationship model?
+
+**One additive schema change, and a rejected one.** A new `FunctionScope` value, `contracted`,
+for RCMP contract policing (policing is the province's under Constitution Act 1867 s.92(14), but
+eight provinces and three territories procure it from the federal RCMP under a Police Service
+Agreement, RCMP Act s.20). A typed relationship graph was **rejected**: the s.96 superior courts
+(a function the province owns, with federally appointed judges) are the structural analogue and
+are modelled with scope + prose, and a named-agency registry would break the "institution types,
+not named agencies" invariant. Provider identity (RCMP, OPP, Sûreté du Québec) stays in prose.
+`authorityBasis: reserved-powers` was also rejected — Canada's residual (POGG) power is federal —
+and the territory reuses `federal-plenary` (the DC value).
+
+**Published — 8 routes.** hub, justice-system, law-enforcement, courts, prosecution,
+investigations, corrections, sources. **Deferred — 5.** forensics, border-and-customs, oversight
+(Canadian police oversight is genuinely non-uniform — CRCC for the RCMP, separate provincial
+bodies — and cannot be shown without implying national uniformity), history, timeline.
+
+**Restricted claim.** Statistics Canada FY2023/2024 provincial/territorial average daily custody
+of 25,349.8 adults, of which remand (19,334.5) exceeds sentenced custody (5,895.1) — excludes
+federal custody, no comparison.
+
+**Samples.** ca (federal), ca-on and ca-qc (self-policing provinces; Quebec also bijural), ca-bc
+(RCMP contract, `contracted`), ca-yt (territory, `federal-plenary`, national prosecution). Every
+constitutional and statutory fact read verbatim from the bilingual Justice Laws Website; an
+independent adversarial pass re-checked the load-bearing claims against official sources.
+
+**Next in program.** Australia — independently testing whether `contracted` survives the AFP/ACT
+community-policing arrangement (the repetition that would earn the abstraction, or refute it).

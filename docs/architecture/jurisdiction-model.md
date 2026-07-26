@@ -53,14 +53,27 @@ The field is optional; France and Germany records omit it and are unaffected.
 The heart of the model. Recorded separately for `legalSystemScope`, `policingScope`,
 `courtScope`, `prosecutionScope` and `correctionalScope`.
 
-| Scope       | Meaning                                                                      |
-| ----------- | ---------------------------------------------------------------------------- |
-| `own`       | This jurisdiction has its own distinct arrangement.                          |
-| `national`  | The function is organised nationally; this level is not where it is decided. |
-| `shared`    | Shared with, or exercised jointly with, another jurisdiction.                |
-| `delegated` | Exercised here under authority delegated from a parent.                      |
-| `none`      | The function does not exist at this level at all.                            |
-| `unknown`   | Not researched. **Never** a substitute for `none`.                           |
+| Scope        | Meaning                                                                                                        |
+| ------------ | -------------------------------------------------------------------------------------------------------------- |
+| `own`        | This jurisdiction has its own distinct arrangement.                                                            |
+| `national`   | The function is organised nationally; this level is not where it is decided.                                   |
+| `shared`     | Shared with, or exercised jointly with, another jurisdiction.                                                  |
+| `delegated`  | Exercised here under authority delegated from a parent.                                                        |
+| `contracted` | Held here, but its delivery is procured from an institution of another order of government under an agreement. |
+| `none`       | The function does not exist at this level at all.                                                              |
+| `unknown`    | Not researched. **Never** a substitute for `none`.                                                             |
+
+`contracted` was added by the Canada pilot for RCMP contract policing: policing is
+constitutionally the province's (Constitution Act 1867 s.92(14)), but eight provinces and the
+three territories procure it from the federal RCMP under a cost-shared Police Service Agreement
+(RCMP Act s.20). The provider stays owned and governed by the other order; the client funds the
+service but does not own the institution. It is the smallest honest fix — one enum member — and
+the pilot **rejected** a typed inter-institutional relationship graph: the s.96 superior courts
+(a function the province OWNS, with federally appointed judges) are the structural analogue and
+are modelled with scope + prose, and a named-agency registry would break the "institution types,
+not named agencies" invariant. Provider identity (RCMP, OPP, Sûreté du Québec) lives in the
+module prose, not the schema. Contrast `own`: the province owns its s.96 courts (a note), but does
+not own the police it contracts (`contracted`).
 
 The `none` / `unknown` distinction is the model's most important property. `none` is a
 researched finding; `unknown` is an admission. Collapsing them would let an unresearched
