@@ -1772,6 +1772,29 @@ export const JURISDICTIONS: readonly JurisdictionRecord[] = [
       'Czechia (Česká republika) is a unitary state under the Constitution of 1993. It is subdivided into self-governing regions (kraje) and municipalities, but all four justice functions are national/central competences — there is no federal, regional or special-autonomy tier holding any justice power. The regional courts (krajské soudy) and the fourteen regional police directorates are named after regions but are organs of the NATIONAL judiciary and the NATIONAL police, not regional government. So a single country-level record with all functions `own` states it accurately, and NO region record is created. Facts kept in prose: there are three apex courts — the Supreme Court (Nejvyšší soud) and a separate Supreme Administrative Court (Nejvyšší správní soud), both in Brno, plus a separate Constitutional Court (Ústavní soud, fifteen Justices for ten-year terms) outside the ordinary hierarchy; the prosecution (státní zastupitelství / Public Prosecutor\'s Office) is NOT an independent branch but "a component of the executive power … part of the Ministry of Justice", headed by the Prosecutor General\'s Office; the police (Policie ČR) are a single national force under the Interior Ministry; prisons (Vězeňská služba) run under the Ministry of Justice; and there is NO national self-governing judicial council — court administration is exercised by the Ministry of Justice, with only advisory councils within individual courts.',
     status: 'published',
   },
+
+  /* -------------------------------------------------------------------------- */
+  /* Poland (Batch B) — unitary; justice all national                           */
+  /* -------------------------------------------------------------------------- */
+  {
+    id: 'pl',
+    slug: 'poland',
+    name: 'Poland',
+    shortName: 'Poland',
+    countryCode: 'PL',
+    level: 'country',
+    legalSystemScope: 'own',
+    policingScope: 'own',
+    courtScope: 'own',
+    prosecutionScope: 'own',
+    correctionalScope: 'own',
+    temporalScope: 'current',
+    coverage: 'partial',
+    sources: ['pl-constitution', 'pl-prokuratura'],
+    notes:
+      'Poland (Rzeczpospolita Polska) is a unitary state — Constitution art. 3, "The Republic of Poland shall be a unitary State". It has three-tier territorial self-government (gmina/powiat/województwo), but the Constitution assigns it NO justice competence: the administration of justice is a State function (art. 175(1)), the prosecution, police and prison service are each single national organisations, and no subnational tier holds any justice power. So a single country-level record with all functions `own` states it accurately, and NO region record is created. The one within-central-government nuance is that executive responsibility is split across two ministries — the Minister of Justice (courts administration, the prosecution via a statutory personal union, and the prison service) and the Minister of Internal Affairs (the police) — a functional split, not a territorial one. Facts kept in prose: there are three separate top bodies — the Supreme Court (Sąd Najwyższy, art. 183), a separate supreme administrative court (Naczelny Sąd Administracyjny, art. 184; "Chief Administrative Court" in the official constitutional translation), and the Constitutional Tribunal (Trybunał Konstytucyjny, arts. 188–190); the office of Prosecutor-General is held ex officio by the Minister of Justice (Law on the Prosecutor\'s Office 2016, art. 1 § 2); the police (Policja) are one national force under the interior minister and the prosecutor directs the pre-trial investigation; and the National Council of the Judiciary (Krajowa Rada Sądownictwa, arts. 186–187) safeguards judicial independence, its judicial members\' selection method having been changed by the enacted 2017 amendment — a contested area described on the country pages only by attribution to dated official and EU sources.',
+    status: 'published',
+  },
 ];
 
 /* -------------------------------------------------------------------------- */
