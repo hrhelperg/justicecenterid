@@ -1672,6 +1672,30 @@ export const JURISDICTIONS: readonly JurisdictionRecord[] = [
       'Åland (Ahvenanmaa), the Swedish-speaking autonomous region of Finland, modelled at the `autonomous-community` level minted by the Spain pilot — it is the same category of thing (an autonomous, legislature-bearing region), not a French administrative `region`. Under the Act on the Autonomy of Åland (1144/1991), Åland holds legislative competence over "public order and security", i.e. POLICING (s. 18(6), with State exceptions for firearms and rescue services), so policingScope is `own`. But criminal law, the courts, the preliminary-investigation/prosecution framework and the enforcement of sentences are reserved to the State (s. 27, subparagraphs 22–24), so courtScope, prosecutionScope and correctionalScope are `national`. This single-function devolution — one autonomous region running its own policing over a national baseline for everything else — is the Finland asymmetry, and it reuses existing values with no new schema. The Autonomy Act establishes the COMPETENCE allocation; the name and administration of a distinct Åland police organisation were not confirmed from a primary source, so only the competence is modelled and the parent-derived legislativeCompetence records that policing is legislated sub-nationally (by the Åland Lagting) while the reserved functions are legislated by the State (`exclusive-federal` here meaning the central/State level, Finland being unitary).',
     status: 'published',
   },
+
+  /* -------------------------------------------------------------------------- */
+  /* Italy (Batch B) — regionalised unitary; justice fully national (the         */
+  /* contrast to Finland's Åland: special-autonomy regions hold NO justice).     */
+  /* -------------------------------------------------------------------------- */
+  {
+    id: 'it',
+    slug: 'italy',
+    name: 'Italy',
+    shortName: 'Italy',
+    countryCode: 'IT',
+    level: 'country',
+    legalSystemScope: 'own',
+    policingScope: 'own',
+    courtScope: 'own',
+    prosecutionScope: 'own',
+    correctionalScope: 'own',
+    temporalScope: 'current',
+    coverage: 'partial',
+    sources: ['it-constitution', 'it-legge-121-1981'],
+    notes:
+      'Italy (Italia), a regionalised unitary ("Regional State"), not a federation: the Republic is made of municipalities, provinces, metropolitan cities, regions and the State (Constitution art. 114), with 20 regions of which five have special autonomy (art. 116). But the four justice functions are ALL exclusive State competence and fully national — art. 117(2) reserves to the State subparagraph (l) "jurisdiction and procedural law; civil and criminal law; administrative justice", (h) "public order and security, save for local administrative police", and (d) defence; and even the maximum devolution art. 116(3) allows over "justice" is limited to the organizational requirements of the Justice of the Peace. So a single country-level record with all functions `own` states the arrangement accurately, and NO special-autonomy region record is created — the exact opposite of Finland\'s Åland, which does hold policing competence. Facts kept in prose: the prosecution (Pubblico Ministero) is part of the independent judiciary (prosecutors and judges are both magistrati under the same self-governing CSM) with mandatory prosecution (art. 112); there are MULTIPLE national police forces (Polizia di Stato, the military Arma dei Carabinieri, and the Guardia di Finanza), centrally coordinated by the Interior Ministry, with only local administrative police (polizia locale) left to the regions/municipalities; and there are three top courts — the Court of Cassation, the Constitutional Court and the Council of State.',
+    status: 'published',
+  },
 ];
 
 /* -------------------------------------------------------------------------- */
