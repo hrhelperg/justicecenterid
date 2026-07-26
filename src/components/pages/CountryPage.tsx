@@ -45,8 +45,13 @@ import {
  * be trusted.
  */
 /**
- * How to say "not a <country> public body" for a given dossier. Derived from the dossier so a
- * new country cannot inherit the previous one's demonym.
+ * How to say "not a <country> public body" for a given dossier.
+ *
+ * The preferred source is the dossier's own `independentBodyNoun` — the demonym is DATA that
+ * travels with the country, so a new country carries its own here rather than inheriting the
+ * previous one's from a component-side map (finding F4 of the country-scaling audit). This map
+ * remains only as the fallback for the ten pilot countries, which predate the field; a new
+ * country supplies the noun on its dossier and the publication gate requires it.
  */
 const DEMONYMS: Record<string, string> = {
   FR: 'a French public body',
@@ -62,8 +67,12 @@ const DEMONYMS: Record<string, string> = {
 };
 
 function independentOfDemonym(dossier: CountryDossier): string {
-  // The fallback keeps a grammatical article rather than "a public body of United States".
-  return DEMONYMS[dossier.countryCode] ?? `a government body of ${dossier.name}`;
+  // The final fallback keeps a grammatical article rather than "a public body of United States".
+  return (
+    dossier.independentBodyNoun ??
+    DEMONYMS[dossier.countryCode] ??
+    `a government body of ${dossier.name}`
+  );
 }
 
 function IndependenceNotice({ demonym }: { demonym: string }) {
@@ -277,7 +286,7 @@ export function CountryHub({ dossier }: { dossier: CountryDossier }) {
           >
             <table className="w-full min-w-[46rem] border-collapse text-sm">
               <caption className="sr-only">
-                Functional scope of each modelled French jurisdiction
+                Functional scope of each modelled {dossier.name} jurisdiction
               </caption>
               <thead>
                 <tr className="border-b border-line-strong text-left">

@@ -251,9 +251,12 @@ Recorded as an array because most real systems are mixed, and forcing a single v
 be the model itself producing an inaccuracy.
 
 `CountryModuleId`: `overview` · `justice-system` · `law-enforcement` · `courts` ·
-`prosecution` · `corrections` · `border-and-customs` · `history` · `ranks-and-organisation` ·
-`training-and-academies` · `oversight` · `professional-conditions` · `museums-and-archives` ·
-`timeline` · `sources`.
+`prosecution` · `investigations` · `forensics` · `corrections` · `border-and-customs` ·
+`oversight` · `history` · `timeline` · `sources`. Every member except `overview` (the country
+hub itself) is a routable module in `src/content/country-modules.ts`. Four aspirational members
+from the original foundation (`ranks-and-organisation`, `training-and-academies`,
+`professional-conditions`, `museums-and-archives`) were removed by the country-scaling audit —
+no dossier used them and none produced a route.
 
 **Rule:** a country's rendered content may not exceed its `coverage` state. A country at
 `planned` may show its name, region, legal-system family, and planned modules — nothing else.

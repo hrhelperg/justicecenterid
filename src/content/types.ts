@@ -134,6 +134,17 @@ export const SAFETY_SENSITIVE_SECTIONS: readonly SectionId[] = [
   'public-safety',
 ];
 
+/*
+ * The module vocabulary. Every member except `overview` is a routable module in the country
+ * module registry (src/content/country-modules.ts); `overview` is deliberately the country hub
+ * itself, not a child route, and a test pins that it is absent from the route registry.
+ *
+ * Four aspirational members from the original foundation — ranks-and-organisation,
+ * training-and-academies, professional-conditions, museums-and-archives — were removed by the
+ * country-scaling audit (finding F3): no dossier ever used them and they had no route, so they
+ * were hypothetical architecture described as current. Where such material exists it is covered
+ * inside an existing module's prose, not as a separate route.
+ */
 export const COUNTRY_MODULE_IDS = [
   'overview',
   'justice-system',
@@ -144,12 +155,8 @@ export const COUNTRY_MODULE_IDS = [
   'forensics',
   'corrections',
   'border-and-customs',
-  'history',
-  'ranks-and-organisation',
-  'training-and-academies',
   'oversight',
-  'professional-conditions',
-  'museums-and-archives',
+  'history',
   'timeline',
   'sources',
 ] as const;
@@ -443,6 +450,18 @@ export interface CountryDossier {
    */
   articleName?: string;
   officialName?: string;
+  /**
+   * How to name this state's public bodies in the independence disclosure — "a French public
+   * body", "a Swiss government body". Grammatical, not researched: it carries the correct
+   * article and demonym so the notice reads naturally.
+   *
+   * Optional, and DATA rather than a lookup inside the reusable component (the finding F4 of the
+   * country-scaling audit): a new country carries its own noun on its dossier instead of
+   * requiring an edit to a shared map. The renderer falls back to a grammatical default
+   * ("a government body of X") when it is absent, so omitting it is safe but unpolished — the
+   * publication gate and the scaffold both require it for a new country.
+   */
+  independentBodyNoun?: string;
   /** Reader-facing summary of the hub page. */
   summary: string;
   /** The hub page body. */

@@ -178,7 +178,10 @@ locality/scaling issue.
 prefers the dossier field, then the map, then the grammatical fallback — so existing behaviour is
 byte-identical and a new country can carry its own noun without touching the component.
 **Migration risk:** none (optional field; component fallback preserved).
-**Status: fixed** (dossier field added for the ten; map retained as fallback).
+**Status: fixed** — `independentBodyNoun` added to `CountryDossier`; the component prefers it,
+then the map, then the grammatical fallback. The ten pilots keep their map entries (so their
+output is byte-identical), while the scaffold emits the field and the publication gate requires
+it, so a new country is self-contained without editing the shared component.
 
 ---
 
