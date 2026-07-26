@@ -21,18 +21,20 @@ npm run dev          # http://localhost:3000
 
 ## Scripts
 
-| Script                            | Purpose                                                                    |
-| --------------------------------- | -------------------------------------------------------------------------- |
-| `npm run dev`                     | Development server.                                                        |
-| `npm run build`                   | Static export to `out/`.                                                   |
-| `npm run serve`                   | Serve the built `out/` directory on port 4173.                             |
-| `npm run lint`                    | ESLint 9 flat config.                                                      |
-| `npm run typecheck`               | `tsc --noEmit`, strict.                                                    |
-| `npm run test`                    | Vitest: content validation + unit tests.                                   |
-| `npm run test:e2e`                | Playwright, against the built `out/` directory. Run `npm run build` first. |
-| `npm run format` / `format:check` | Prettier.                                                                  |
-| `npm run verify:output`           | Asserts `out/` matches the route registry in both directions.              |
-| `npm run validate`                | format:check → lint → typecheck → test → build → verify:output.            |
+| Script                            | Purpose                                                                                          |
+| --------------------------------- | ------------------------------------------------------------------------------------------------ |
+| `npm run dev`                     | Development server.                                                                              |
+| `npm run build`                   | Static export to `out/`.                                                                         |
+| `npm run serve`                   | Serve the built `out/` directory on port 4173.                                                   |
+| `npm run lint`                    | ESLint 9 flat config.                                                                            |
+| `npm run typecheck`               | `tsc --noEmit`, strict.                                                                          |
+| `npm run test`                    | Vitest: content validation + unit tests.                                                         |
+| `npm run test:e2e`                | Playwright, against the built `out/` directory. Run `npm run build` first.                       |
+| `npm run format` / `format:check` | Prettier.                                                                                        |
+| `npm run verify:output`           | Asserts `out/` matches the route registry in both directions.                                    |
+| `npm run metrics:country`         | Registry-derived census (routes, dossiers, sources, claims). `--json` for CI.                    |
+| `npm run scaffold:country`        | Generate an UNPUBLISHED skeleton for a new country. `-- --slug … --name … --code … [--dry-run]`. |
+| `npm run validate`                | format:check → lint → typecheck → test → build → verify:output.                                  |
 
 `npm run validate` is the gate. Run it before opening a pull request.
 
@@ -47,14 +49,14 @@ so the whole validation suite runs in Node.
 
 Full documentation is in [`docs/`](./docs):
 
-| Area         | Start here                                                                                                                                                                                                                                                                                                                                   |
-| ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Product      | [vision](./docs/product/vision.md) · [positioning](./docs/product/positioning.md) · [audiences](./docs/product/audiences.md) · [principles](./docs/product/principles.md)                                                                                                                                                                    |
-| Architecture | [technical](./docs/architecture/technical-architecture.md) · [information](./docs/architecture/information-architecture.md) · [content model](./docs/architecture/content-model.md) · [URL strategy](./docs/architecture/url-strategy.md)                                                                                                    |
-| Editorial    | [editorial policy](./docs/editorial/editorial-policy.md) · [research methodology](./docs/editorial/research-methodology.md) · [source policy](./docs/editorial/source-policy.md) · [corrections](./docs/editorial/corrections-policy.md) · [images](./docs/editorial/image-policy.md) · [content safety](./docs/editorial/content-safety.md) |
-| SEO & design | [SEO architecture](./docs/seo/seo-architecture.md) · [design system](./docs/design/design-system.md)                                                                                                                                                                                                                                         |
-| Deployment   | [Netlify strategy](./docs/deployment/netlify-strategy.md)                                                                                                                                                                                                                                                                                    |
-| Roadmap      | [foundation roadmap](./docs/roadmap/foundation-roadmap.md)                                                                                                                                                                                                                                                                                   |
+| Area         | Start here                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Product      | [vision](./docs/product/vision.md) · [positioning](./docs/product/positioning.md) · [audiences](./docs/product/audiences.md) · [principles](./docs/product/principles.md)                                                                                                                                                                                                                                                                                                                                  |
+| Architecture | [technical](./docs/architecture/technical-architecture.md) · [information](./docs/architecture/information-architecture.md) · [content model](./docs/architecture/content-model.md) · [URL strategy](./docs/architecture/url-strategy.md) · [country dossier contract](./docs/architecture/country-dossier-contract.md) · [publication gate](./docs/architecture/country-publication-gate.md) · [country scaffold](./docs/architecture/country-scaffold.md)                                                |
+| Editorial    | [editorial policy](./docs/editorial/editorial-policy.md) · [research methodology](./docs/editorial/research-methodology.md) · [source policy](./docs/editorial/source-policy.md) · [country research workflow](./docs/editorial/country-research-workflow.md) · [country authoring checklist](./docs/editorial/country-authoring-checklist.md) · [corrections](./docs/editorial/corrections-policy.md) · [images](./docs/editorial/image-policy.md) · [content safety](./docs/editorial/content-safety.md) |
+| SEO & design | [SEO architecture](./docs/seo/seo-architecture.md) · [design system](./docs/design/design-system.md)                                                                                                                                                                                                                                                                                                                                                                                                       |
+| Deployment   | [Netlify strategy](./docs/deployment/netlify-strategy.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| Roadmap      | [foundation roadmap](./docs/roadmap/foundation-roadmap.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 
 ## Editorial rules that are enforced in code
 
@@ -69,6 +71,10 @@ These are not conventions — the test suite fails the build if they are broken:
 - Every internal link in content must resolve to a route in the registry.
 - Pages in safety-sensitive sections cannot be published with a pending safety review.
 - A country may not carry claims beyond its recorded coverage state.
+- A published country must pass the country publication gate — a coherent set of conditions
+  (facts date, required modules published, sourced modules, valid restricted claims, no
+  placeholder residue); flipping `status` alone cannot publish an incomplete country.
+- No published country page may contain scaffold residue or a template token.
 - No two routes may produce the same canonical URL, and the exported output must match the
   route registry in both directions.
 - Colour tokens are re-checked against WCAG 2.2 AA contrast thresholds by parsing the real
@@ -90,6 +96,11 @@ Content lives in `src/content/` as typed records:
 
 To add a guide: add a record to the relevant file in `src/content/guides/`, set
 `status: 'published'` only once it passes fact check, and run `npm run validate`.
+
+To add a country: run `npm run scaffold:country -- --slug <slug> --name "<Name>" --code <ISO2>`
+for an unpublished skeleton, then follow the
+[country authoring checklist](./docs/editorial/country-authoring-checklist.md). A country
+publishes only once `validateCountryPublication` returns no problems.
 
 ## Before launch
 

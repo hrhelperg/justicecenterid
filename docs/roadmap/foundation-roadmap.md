@@ -149,7 +149,7 @@ needs jurisdiction-aware review rather than a translation pass.
 | Images                         | Licensing, dignity, and tone questions that should not be resolved quickly.                                                                                     |
 | MDX                            | No current content need. Introduced when narrative history arrives, alongside the typed model rather than replacing it.                                         |
 | Analytics                      | No third-party script ships in this phase. Any future choice must be cookieless and disclosed before it ships.                                                  |
-| Search                         | Navigation is sufficient at 38 pages.                                                                                                                           |
+| Search                         | Navigation is sufficient at the current scale (~120 pages).                                                                                                     |
 | Named editorial board          | There is no editorial team to name, and inventing one is the exact false-authority signal the positioning forbids.                                              |
 | Newsletter, accounts, comments | Each adds a data-protection surface and a moderation obligation with no editorial benefit at this stage.                                                        |
 
@@ -472,3 +472,31 @@ against a real direct-democracy change — the BEKJ (Justitia 4.0), enacted 20 D
 lapsed optional referendum, in force 1 July 2027 — with no `directDemocracy` field. Restricted
 claim: the FSO 31 Jan 2026 census of 7,119 detainees. Published 8 routes. This closes the
 Canada–Australia–Spain–Switzerland program.
+
+## Phase 12 — Country scaling framework (delivered 2026-07-26)
+
+Converts the ten proven country pilots into a repeatable authoring system without weakening any
+control. No new country, no new public route — the public surface is unchanged (118 routes / 118
+sitemap / 120 pages).
+
+- **Ten-country audit** (`docs/audits/ten-country-consistency-audit.md`) with a reproducible
+  baseline (`docs/audits/country-scaling-baseline.md`, `scripts/country-metrics.mjs`). Four
+  verified findings, all fixed: F1 (hardcoded "French" table caption leaked onto 9 hubs), F2 (the
+  `/countries` queue showed published countries as "Planned" and mis-counted them), F3 (two
+  `COUNTRY_MODULES` registries had drifted; the public one omitted investigations/forensics and
+  advertised five phantom/dead modules), F4 (the independence demonym lived in a component, now
+  optional dossier data).
+- **The canonical dossier contract** (`docs/architecture/country-dossier-contract.md`): five typed
+  stores plus prose, required/optional fields, invariants, and anti-patterns.
+- **The publication gate** (`src/content/publication-gate.ts`): a single coherent condition set so
+  publishing cannot happen by flipping `status` alone. Plus **placeholder/template-leak detection**
+  (`src/content/placeholders.ts`) over editorial prose.
+- **The unpublished scaffold** (`scripts/scaffold-country.mjs`, `npm run scaffold:country`):
+  structure-only, publish-proof, dry-run, collision-safe, with a fictional Exampleland/`XZ` test
+  fixture that never ships.
+- **Tests**: ten-country semantic regression, gate non-vacuity (six controlled defects), scaffold,
+  and placeholder detection — 1081 unit tests total.
+- **Authoring docs**: research workflow, authoring checklist, and a proposed three-batch expansion
+  plan (no files, routes, or rankings).
+
+Delivered on `feat/country-scaling-framework`. Not merged, not deployed.
