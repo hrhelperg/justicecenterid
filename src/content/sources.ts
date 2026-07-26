@@ -2187,6 +2187,58 @@ export const SOURCES: readonly SourceRecord[] = [
     jurisdiction: 'INT',
     note: 'The European Commission\'s 2025 Rule of Law Report country chapter on Poland (SWD(2025) 921 final, 8 July 2025), fetched and read. Cited, by attribution and with its date, for two points recorded neutrally: that steps have been taken towards separating the office of the Minister of Justice from that of the Prosecutor General but "a law to that end is yet to be adopted" (so the 2016 personal union still stands), and that certain judiciary-related laws had not entered into force because they were referred to the Constitutional Tribunal by the President of the Republic. Used to distinguish enacted from proposed measures; the site takes no position of its own.',
   },
+
+  /* -------------------------------------------------------------------------- */
+  /* Greece (Batch B) — unitary; three co-equal supreme courts; diffuse review   */
+  /* -------------------------------------------------------------------------- */
+  {
+    id: 'gr-constitution',
+    type: 'legislation',
+    title: 'Constitution of Greece (1975, as amended through 2008) — English translation',
+    publisher: 'Comparative Constitutions Project (Constitute)',
+    url: 'https://www.constituteproject.org/constitution/Greece_2008.pdf?lang=en',
+    publishedOn: '1975-06-11',
+    verifiedOn: '2026-07-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'GR',
+    translationStatus: 'unofficial',
+    authoritativeLanguage: 'el',
+    note: 'The Comparative Constitutions Project (Constitute) English translation of the Greek Constitution (in force 11 June 1975, as amended through 2008), fetched as a PDF and text-extracted; load-bearing articles confirmed verbatim (Art. 93§4 and Art. 105 re-confirmed by hand at authoring time). This is an UNOFFICIAL translation — the Hellenic Parliament\'s own official English PDF returned HTTP 403 — so it is cross-checked against the current EU e-Justice portal, and the Greek text is authoritative. Supports Art. 26 (separation of powers); Art. 87–88 (judicial and prosecutorial independence, life appointment of magistrates by presidential decree); Art. 93§4 ("The courts shall be bound not to apply a statute whose content is contrary to the Constitution" — diffuse constitutional review); Art. 94–95 (the administrative courts and the Council of State as Supreme Administrative Court); Art. 96–97 (criminal, jury and military courts); Art. 98 (the Court of Audit, whose judgments are not subject to the Supreme Administrative Court — a co-equal apex); Art. 100 (the Special Highest Court — a conflict-resolving court, not a standing constitutional court); Art. 101–102 (unitary decentralisation); Art. 103§9 (the Ombudsman as an independent authority); and Art. 105 (Mount Athos as a self-governed part of the Greek State, with the State exclusively responsible for public order and security).',
+  },
+  {
+    id: 'gr-ejustice-courts',
+    type: 'international-organization',
+    title: 'National ordinary courts — Greece (European e-Justice Portal)',
+    publisher: 'European Commission (European e-Justice Portal)',
+    url: 'https://e-justice.europa.eu/topics/taking-legal-action/legal-systems-eu-and-national/national-ordinary-courts/el_en',
+    verifiedOn: '2026-07-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'INT',
+    note: 'The European Commission\'s e-Justice portal page on Greece\'s ordinary courts (content provided by Greece, updated 14 June 2024), read directly and re-confirmed. Supports the statement that "the Council of State (Symvoúlio tis Epikrateías) is one of the three highest courts in Greece (together with the Supreme Court and the Hellenic Court of Auditors (Elegktikó Synédrio))" — establishing the three co-equal supreme courts and confirming that the hierarchy contains no separate constitutional court — and enumerates the civil, criminal and administrative court ladders below them.',
+  },
+  {
+    id: 'gr-ejustice-professions',
+    type: 'international-organization',
+    title: 'Types of legal professions — Greece (European e-Justice Portal)',
+    publisher: 'European Commission (European e-Justice Portal)',
+    url: 'https://e-justice.europa.eu/topics/find-legal-professional/types-legal-professions/el_en',
+    verifiedOn: '2026-07-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'INT',
+    note: "The European Commission's e-Justice portal page on Greece's legal professions, read directly and re-confirmed. Supports that \"public prosecutor's offices (eisangelíes) belong to the 'judicial branch' of government and participate in the administration of justice\" and that \"public prosecutors (eisangeleís) enjoy operational and personal independence\"; that a prosecutor's duties include initiating criminal proceedings, supervising investigations, carrying out preliminary investigations, and supervising the law-enforcement authorities; and that \"the Ministry of Justice is responsible for public prosecutors' general conditions of service\" (service conditions only, not the direction of prosecutorial decisions).",
+  },
+  {
+    id: 'gr-state-dept-2022',
+    type: 'government',
+    title: '2022 Country Reports on Human Rights Practices: Greece',
+    publisher: 'U.S. Department of State (foreign-government report on Greece)',
+    url: 'https://www.state.gov/reports/2022-country-reports-on-human-rights-practices/greece/',
+    publishedOn: '2022',
+    verifiedOn: '2026-07-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'GR',
+    note: 'The U.S. Department of State\'s 2022 Country Report on Greece, read directly. It is a FOREIGN-GOVERNMENT report ABOUT Greece, used here only because the Greek official sites (the Hellenic Police and the Ministry of Citizen Protection) returned HTTP 403 to every fetch method; the publisher is named so the reader can see the source is not a Greek-government one. Supports the ministerial attribution: "Police are responsible for law enforcement … They are under the authority of the Ministry of Citizen Protection, which is also responsible for prison facilities … The Coast Guard … reports to the Ministry of Shipping Affairs and Island Policy … [the] armed forces are under the authority of the Ministry of National Defense", and that the Ministry of Citizen Protection runs the prisons "through the Secretariat General for Anticrime Policy". Cited for the current ministerial placement of the police and prisons; the exact instrument and date transferring corrections to Citizen Protection are not established from a primary source.',
+  },
 ];
 
 const SOURCE_INDEX = new Map(SOURCES.map((source) => [source.id, source]));

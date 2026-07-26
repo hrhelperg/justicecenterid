@@ -1795,6 +1795,29 @@ export const JURISDICTIONS: readonly JurisdictionRecord[] = [
       'Poland (Rzeczpospolita Polska) is a unitary state — Constitution art. 3, "The Republic of Poland shall be a unitary State". It has three-tier territorial self-government (gmina/powiat/województwo), but the Constitution assigns it NO justice competence: the administration of justice is a State function (art. 175(1)), the prosecution, police and prison service are each single national organisations, and no subnational tier holds any justice power. So a single country-level record with all functions `own` states it accurately, and NO region record is created. The one within-central-government nuance is that executive responsibility is split across two ministries — the Minister of Justice (courts administration, the prosecution via a statutory personal union, and the prison service) and the Minister of Internal Affairs (the police) — a functional split, not a territorial one. Facts kept in prose: there are three separate top bodies — the Supreme Court (Sąd Najwyższy, art. 183), a separate supreme administrative court (Naczelny Sąd Administracyjny, art. 184; "Chief Administrative Court" in the official constitutional translation), and the Constitutional Tribunal (Trybunał Konstytucyjny, arts. 188–190); the office of Prosecutor-General is held ex officio by the Minister of Justice (Law on the Prosecutor\'s Office 2016, art. 1 § 2); the police (Policja) are one national force under the interior minister and the prosecutor directs the pre-trial investigation; and the National Council of the Judiciary (Krajowa Rada Sądownictwa, arts. 186–187) safeguards judicial independence, its judicial members\' selection method having been changed by the enacted 2017 amendment — a contested area described on the country pages only by attribution to dated official and EU sources.',
     status: 'published',
   },
+
+  /* -------------------------------------------------------------------------- */
+  /* Greece (Batch B) — unitary, decentralised; justice all national            */
+  /* -------------------------------------------------------------------------- */
+  {
+    id: 'gr',
+    slug: 'greece',
+    name: 'Greece',
+    shortName: 'Greece',
+    countryCode: 'GR',
+    level: 'country',
+    legalSystemScope: 'own',
+    policingScope: 'own',
+    courtScope: 'own',
+    prosecutionScope: 'own',
+    correctionalScope: 'own',
+    temporalScope: 'current',
+    coverage: 'partial',
+    sources: ['gr-constitution', 'gr-ejustice-courts'],
+    notes:
+      'Greece (Elláda) is a unitary, decentralised state (Constitution art. 101, "the administration of the State shall be organized according to the principle of decentralization"; art. 102, local government limited to local affairs) — NOT federal. All four justice functions are national/central: the courts are created by statute (art. 93(1)) with judges appointed by presidential decree (art. 88(1)); the prosecution is embedded in the national judiciary (arts. 87–88); the police (Hellenic Police) are a single national force; and the prisons are run by a central ministry. So a single country-level record with all functions `own` states it accurately, and NO region record is created. The one special-autonomy element is Mount Athos (Άγιον Όρος, art. 105) — a self-governed ecclesiastical-territorial part of the Greek State over which the State nonetheless retains EXCLUSIVE responsibility for public order and security, and whose monastic judicial power is defined by statute; it is a narrow ecclesiastical autonomy, not a general devolved justice tier, and is noted only in prose (not modelled as a region record). Facts kept in prose: there are THREE co-equal supreme courts — Άρειος Πάγος (Areios Pagos, the Supreme Civil and Criminal Court/court of cassation), Συμβούλιο της Επικρατείας (the Council of State/Supreme Administrative Court), and Ελεγκτικό Συνέδριο (the Court of Audit, art. 98(3) not subject to the Council of State) — and NO dedicated constitutional court: constitutional review is diffuse (art. 93(4), every court must decline to apply an unconstitutional statute), with a conflict-resolving Special Highest Court (art. 100); the prosecution (Εισαγγελία) is an independent part of the judiciary (the Ministry of Justice sets only its general service conditions) and directs/supervises police investigations; and, distinctively, the police AND the prisons are both under the Ministry of Citizen Protection, while the courts and prosecution fall under the Ministry of Justice for service conditions.',
+    status: 'published',
+  },
 ];
 
 /* -------------------------------------------------------------------------- */
