@@ -13,6 +13,7 @@ import { GREECE } from './greece';
 import { INDIA } from './india';
 import { INDONESIA } from './indonesia';
 import { ITALY } from './italy';
+import { KENYA } from './kenya';
 import { MEXICO } from './mexico';
 import { NETHERLANDS } from './netherlands';
 import { NEW_ZEALAND } from './new-zealand';
@@ -63,6 +64,7 @@ export const COUNTRY_DOSSIERS: readonly CountryDossier[] = [
   MEXICO,
   ARGENTINA,
   SOUTH_AFRICA,
+  KENYA,
 ];
 
 export const PUBLISHED_DOSSIERS: readonly CountryDossier[] = COUNTRY_DOSSIERS.filter(

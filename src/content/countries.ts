@@ -28,15 +28,6 @@ export const COUNTRIES: readonly CountryProfile[] = [
     plannedModules: [],
     sources: [],
   },
-  {
-    code: 'KE',
-    name: 'Kenya',
-    region: 'Africa',
-    legalSystemFamilies: [],
-    coverage: 'planned',
-    plannedModules: [],
-    sources: [],
-  },
 ];
 
 /*

@@ -2822,6 +2822,47 @@ export const SOURCES: readonly SourceRecord[] = [
     jurisdiction: 'ZA',
     note: 'The World Prison Brief country page for South Africa (compiled by ICPR from the Minister of Correctional Services figures), read directly and re-confirmed by hand. Supports: prison administration by the Department of Correctional Services; a total prison population of 168,672 including remand detainees at 26 February 2026; a rate of 267 per 100,000 (estimated national population 63.16 million, Statistics South Africa); an official capacity of 107,067 at the same date; and an occupancy level of 157.5% at 26 February 2026 — well above capacity, population and capacity carrying the same date.',
   },
+
+  /* -------------------------------------------------------------------------- */
+  /* Kenya (Batch C) — devolved unitary, but justice national; independent ODPP  */
+  /* -------------------------------------------------------------------------- */
+  {
+    id: 'ke-constitution',
+    type: 'legislation',
+    title: 'Constitution of Kenya, 2010',
+    publisher: 'National Council for Law Reporting (Kenya Law), for the Republic of Kenya',
+    url: 'https://new.kenyalaw.org/akn/ke/act/2010/constitution/eng@2010-09-03',
+    publishedOn: '2010',
+    verifiedOn: '2026-07-27',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'KE',
+    translationStatus: 'not-a-translation',
+    authoritativeLanguage: 'en',
+    note: "The Constitution of Kenya, 2010 (in force 27 August 2010), retrieved as the full official Kenya Law (National Council for Law Reporting) text and confirmed verbatim in two independent passes, including a direct read of the Fourth Schedule. Supports: Art. 1–2 (sovereignty of the people; the Constitution is supreme and any inconsistent law void); Art. 59 (the Kenya National Human Rights and Equality Commission, and 59(4) allowing legislation to restructure it into separate commissions — the hook for the KNCHR/NGEC/CAJ split, and 59(2)(h) the ombudsman-type function); Art. 156 (the Attorney-General as principal legal adviser, who does not conduct criminal prosecutions); Art. 157 (the Director of Public Prosecutions — 157(4) power to direct the Inspector-General to investigate; 157(5) a single non-renewable eight-year term; 157(10) not requiring any person's consent and not under the direction or control of any person or authority); Art. 160 (judicial independence — courts subject only to the Constitution and the law); Art. 162–163 (the superior courts and the Supreme Court as apex, bound-by rule 163(7)); Art. 165 (the High Court — 165(3)(a) unlimited original jurisdiction, 165(3)(d) jurisdiction to determine whether any law is inconsistent with the Constitution — diffuse constitutional review); Art. 170 (the Kadhis' courts, limited to Muslim personal-status matters where all parties profess Islam); Art. 171–172 (the Judicial Service Commission); Art. 243–246 (the National Police Service as one national service throughout Kenya, the two services, the Inspector-General's independent command under 245(2)(b), the direction firewall under 245(4), and the National Police Service Commission); and the Fourth Schedule Part 1 items 7 (police services, criminal law and correctional services) and 8 (courts), which place all four justice functions in the national government. Establishes constitutional supremacy and that, despite devolution to 47 counties, courts, prosecution, police and prisons are all national functions.",
+  },
+  {
+    id: 'ke-odpp',
+    type: 'government',
+    title: 'Office of the Director of Public Prosecutions (Kenya)',
+    publisher: 'Office of the Director of Public Prosecutions (Kenya)',
+    url: 'https://www.odpp.go.ke/',
+    verifiedOn: '2026-07-27',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'KE',
+    note: 'The Office of the Director of Public Prosecutions, retrieved and confirmed. Corroborates that the ODPP is the independent national prosecuting office established by Article 157 of the Constitution, de-linked from the Attorney-General, which decides on and conducts criminal prosecutions. Cited only for the existence and mandate of the office, in support of the constitutional text.',
+  },
+  {
+    id: 'wpb-kenya',
+    type: 'academic',
+    title: 'World Prison Brief — Kenya',
+    publisher:
+      'Institute for Crime & Justice Policy Research (ICPR), Birkbeck, University of London',
+    url: 'https://www.prisonstudies.org/country/kenya',
+    verifiedOn: '2026-07-27',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'KE',
+    note: 'The World Prison Brief country page for Kenya (compiled by ICPR), read directly and re-confirmed by hand. Supports: prison administration by the Kenya Prisons Service under the State Department for Correctional Services; a prison population of 60,740 as an average over 2025 (attributed to the national statistics bureau); a rate of 101 per 100,000 based on an estimated national population of 59.98 million at mid-2025 (from United Nations figures); an official capacity of 34,000 dated December 2023; and an occupancy level of about 176.5% dated December 2023. The population figure is a 2025 annual average while the capacity and occupancy carry a December 2023 date, so the figures do not share a single reference date.',
+  },
 ];
 
 const SOURCE_INDEX = new Map(SOURCES.map((source) => [source.id, source]));
