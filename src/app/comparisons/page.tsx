@@ -26,9 +26,10 @@ export default function ComparisonsPage() {
     >
       <CoverageNotice title="No comparisons have been published">
         <p>
-          A comparison requires researched, sourced material on both sides. No country has been
-          researched yet, so there is nothing honest to compare. This page publishes the
-          standard a comparison will have to meet.
+          A comparison requires researched, sourced material on both sides and must meet the
+          standard set out below. Individual country dossiers now exist, but no side-by-side
+          comparison has yet been published — this page states the standard one will have to
+          meet, and points to the researched country pages any comparison would draw on.
         </p>
         <p>
           See the{' '}

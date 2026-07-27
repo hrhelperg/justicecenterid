@@ -1,58 +1,24 @@
 import type { CountryProfile, PresenceState } from './types';
 
 /**
- * The country registry.
+ * The country PLANNING registry — countries that do NOT yet have a published dossier.
  *
- * IMPORTANT: at this stage this is a *planning* registry, not a knowledge base. No country
- * has been researched, so every entry is at coverage `planned` and the fields that are
- * themselves factual claims — `legalSystemFamilies` and `institutionPresence` — are left
- * empty on purpose.
+ * This is a *planning* registry, not a knowledge base. A country appears here only until its
+ * pilot ships; once its dossier is published it is REMOVED from this list and lives in the
+ * dossier registry (`src/content/dossiers`) instead. So every entry here is genuinely at
+ * coverage `planned`, and the fields that are themselves factual claims — `legalSystemFamilies`
+ * and `institutionPresence` — are left empty on purpose.
  *
- * Classifying a country's legal-system family, or recording whether an institution type
- * exists there, is a research output requiring sources. Populating those fields from general
- * impression would be exactly the kind of plausible-but-unsourced content the content model
- * exists to prevent, and `tests/content/countries.test.ts` fails the build if a country below
- * `partial` coverage carries narrative content.
+ * Classifying a country's legal-system family, or recording whether an institution type exists
+ * there, is a research output requiring sources. Populating those fields from general impression
+ * would be exactly the kind of plausible-but-unsourced content the content model exists to
+ * prevent, and `tests/content/countries.test.ts` fails the build if a country below `partial`
+ * coverage carries narrative content — or if a published dossier's code is still listed here (the
+ * drift that once made /about announce "0 countries researched" while dozens were live).
  *
  * See docs/architecture/content-model.md and docs/roadmap/foundation-roadmap.md.
  */
 export const COUNTRIES: readonly CountryProfile[] = [
-  {
-    code: 'BR',
-    name: 'Brazil',
-    region: 'South America',
-    legalSystemFamilies: [],
-    coverage: 'planned',
-    plannedModules: [],
-    sources: [],
-  },
-  {
-    code: 'CA',
-    name: 'Canada',
-    region: 'North America',
-    legalSystemFamilies: [],
-    coverage: 'planned',
-    plannedModules: [],
-    sources: [],
-  },
-  {
-    code: 'DE',
-    name: 'Germany',
-    region: 'Europe',
-    legalSystemFamilies: [],
-    coverage: 'planned',
-    plannedModules: [],
-    sources: [],
-  },
-  {
-    code: 'FR',
-    name: 'France',
-    region: 'Europe',
-    legalSystemFamilies: [],
-    coverage: 'planned',
-    plannedModules: [],
-    sources: [],
-  },
   {
     code: 'GH',
     name: 'Ghana',
@@ -72,26 +38,8 @@ export const COUNTRIES: readonly CountryProfile[] = [
     sources: [],
   },
   {
-    code: 'IE',
-    name: 'Ireland',
-    region: 'Europe',
-    legalSystemFamilies: [],
-    coverage: 'planned',
-    plannedModules: [],
-    sources: [],
-  },
-  {
     code: 'IN',
     name: 'India',
-    region: 'Asia',
-    legalSystemFamilies: [],
-    coverage: 'planned',
-    plannedModules: [],
-    sources: [],
-  },
-  {
-    code: 'JP',
-    name: 'Japan',
     region: 'Asia',
     legalSystemFamilies: [],
     coverage: 'planned',
@@ -117,36 +65,9 @@ export const COUNTRIES: readonly CountryProfile[] = [
     sources: [],
   },
   {
-    code: 'NL',
-    name: 'Netherlands',
-    region: 'Europe',
-    legalSystemFamilies: [],
-    coverage: 'planned',
-    plannedModules: [],
-    sources: [],
-  },
-  {
     code: 'NZ',
     name: 'New Zealand',
     region: 'Oceania',
-    legalSystemFamilies: [],
-    coverage: 'planned',
-    plannedModules: [],
-    sources: [],
-  },
-  {
-    code: 'PL',
-    name: 'Poland',
-    region: 'Europe',
-    legalSystemFamilies: [],
-    coverage: 'planned',
-    plannedModules: [],
-    sources: [],
-  },
-  {
-    code: 'SE',
-    name: 'Sweden',
-    region: 'Europe',
     legalSystemFamilies: [],
     coverage: 'planned',
     plannedModules: [],
