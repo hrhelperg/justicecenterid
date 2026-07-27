@@ -2696,6 +2696,77 @@ export const SOURCES: readonly SourceRecord[] = [
     jurisdiction: 'MX',
     note: 'The World Prison Brief country page for Mexico (compiled by ICPR from the national prison administration), read directly and re-confirmed by hand on the day of authoring — its figures had updated since the research pass, so the current values are used. Supports a total prison population of 268,245 including pre-trial detainees at 31 May 2026 (source: the national prison administration); a rate of 197 per 100,000 (UN population estimate); an official capacity of 227,658 at the same date; and an occupancy level of 117.8% at 31 May 2026 — above capacity, population and capacity carrying the same date. The page names the administering body as the Órgano Administrativo Desconcentrado de Prevención y Readaptación Social; its "ministry responsible" label ("Comisión Nacional de Seguridad") is out of date (that body was dissolved in 2018).',
   },
+
+  /* -------------------------------------------------------------------------- */
+  /* Argentina (Batch C) — federation; national codes, provincial administration */
+  /* -------------------------------------------------------------------------- */
+  {
+    id: 'ar-constitution',
+    type: 'legislation',
+    title: 'Constitution of the Argentine Nation (1853, reformed 1994)',
+    publisher:
+      'Political Database of the Americas (Georgetown University) — official constitutional text',
+    url: 'https://pdba.georgetown.edu/Constitutions/Argentina/argen94.html',
+    publishedOn: '1853',
+    verifiedOn: '2026-07-27',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'AR',
+    translationStatus: 'not-a-translation',
+    authoritativeLanguage: 'es',
+    note: 'The Constitution of the Argentine Nation (1853, comprehensively reformed 1994), confirmed verbatim in two independent passes. Supports Art. 5 (each province shall enact its own constitution and guarantee its own administration of justice); Art. 75 inc. 12 (Congress enacts the national codes — Civil, Commercial, Criminal, etc. — "without such codes altering the local jurisdictions", their application corresponding to the federal or provincial courts by subject-matter); Art. 108 (the judicial power of the Nation is exercised by a Supreme Court of Justice and inferior tribunals); Art. 110 (life tenure during good behaviour and irreducible compensation — judicial independence); Art. 114 (the Council of the Magistracy selects judges and administers the judiciary); Art. 120 (the Public Ministry is an independent organ with functional autonomy and financial self-governance — a fourth, extra-branch body); Art. 121 (the provinces keep all power not delegated to the federal Government — the reserved-powers clause); and Art. 86 (the Ombudsman, Defensor del Pueblo). Establishes the federation, the national codes applied by provincial courts, the autonomous Public Ministry, and the reserved-powers rule.',
+  },
+  {
+    id: 'ar-forces',
+    type: 'government',
+    title: 'Argentina — the federal security forces (Ministry of Security)',
+    publisher: 'Government of Argentina (argentina.gob.ar)',
+    url: 'https://www.argentina.gob.ar/policia-aeroportuaria/fuerzas-de-seguridad',
+    verifiedOn: '2026-07-27',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'AR',
+    note: "The Government of Argentina's page on the federal security forces, read directly. Supports that the four national forces — the Argentine Federal Police (PFA), the National Gendarmerie (GNA), the Naval Prefecture (PNA) and the Airport Security Police (PSA) — sit under the national Ministry of Security. Establishes the federal police tier (each of the provinces additionally has its own provincial police under the reserved-powers rule).",
+  },
+  {
+    id: 'ar-cppf',
+    type: 'legislation',
+    title: 'Federal Code of Criminal Procedure (CPPF) — accusatory system (Law 27.482)',
+    publisher: 'Ministerio Público Fiscal / InfoLEG (Argentina)',
+    url: 'https://www.mpf.gob.ar/',
+    publishedOn: '2019-01-07',
+    verifiedOn: '2026-07-27',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'AR',
+    translationStatus: 'not-a-translation',
+    authoritativeLanguage: 'es',
+    note: 'The Federal Code of Criminal Procedure (originally Law 27.063, reformed and renamed by Law 27.482, published in the Official Gazette on 7 January 2019), confirmed in two independent passes via the Public Prosecution Service and InfoLEG. Supports that the federal criminal process moved from an inquisitorial to an accusatory/adversarial system in which the Public Prosecution Service (Ministerio Público Fiscal) directs the criminal investigation, with the police acting as auxiliaries; and that the system is being implemented in phases across the federal jurisdictions.',
+  },
+  {
+    id: 'ar-spf-decreto',
+    type: 'legislation',
+    title:
+      'Decree 8/2024 — transfer of the Federal Penitentiary Service to the Ministry of Security',
+    publisher: 'Boletín Oficial de la República Argentina',
+    url: 'https://www.boletinoficial.gob.ar/',
+    publishedOn: '2024-01-03',
+    verifiedOn: '2026-07-27',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'AR',
+    translationStatus: 'not-a-translation',
+    authoritativeLanguage: 'es',
+    note: 'Decree 8/2024 (Official Gazette, early January 2024), confirmed in two independent passes via the Official Gazette. Supports that by its Article 2 the Federal Penitentiary Service (Servicio Penitenciario Federal), a decentralised body of the Ministry of Justice, was transferred to the Ministry of Security — so that both the federal police forces and the federal prison service now sit under the Ministry of Security. Cited for the current ministerial placement of the federal prison service.',
+  },
+  {
+    id: 'wpb-argentina',
+    type: 'academic',
+    title: 'World Prison Brief — Argentina',
+    publisher:
+      'Institute for Crime & Justice Policy Research (ICPR), Birkbeck, University of London',
+    url: 'https://www.prisonstudies.org/country/argentina',
+    verifiedOn: '2026-07-27',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'AR',
+    note: 'The World Prison Brief country page for Argentina (compiled by ICPR from the Ministry of Justice SNEEP data), read directly and re-confirmed by hand. Supports a total prison population of 133,585 at 31 December 2024 — a figure that includes 12,885 people held in police lock-ups (comisarías) — a rate of 284 per 100,000, and an official capacity of 98,199 (not including police lock-ups) at the same date, giving an occupancy level of 122.9% for the prison system proper. Prisons are run at both the federal (Servicio Penitenciario Federal) and provincial levels, so this is a national aggregate; the occupancy compares the prison-system population and capacity, both excluding the police lock-ups that the total includes.',
+  },
 ];
 
 const SOURCE_INDEX = new Map(SOURCES.map((source) => [source.id, source]));

@@ -74,6 +74,7 @@ describe('France dossier', () => {
     // Updated per pilot. The guard that matters is that no pilot silently adds a country
     // beyond its scope, so this list grows by exactly one slug per completed country phase.
     expect(COUNTRY_DOSSIERS.map((d) => d.slug).sort()).toEqual([
+      'argentina',
       'australia',
       'austria',
       'belgium',
