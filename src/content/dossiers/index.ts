@@ -9,6 +9,7 @@ import { CZECHIA } from './czechia';
 import { DENMARK } from './denmark';
 import { FINLAND } from './finland';
 import { GREECE } from './greece';
+import { INDIA } from './india';
 import { ITALY } from './italy';
 import { NETHERLANDS } from './netherlands';
 import { NEW_ZEALAND } from './new-zealand';
@@ -53,6 +54,7 @@ export const COUNTRY_DOSSIERS: readonly CountryDossier[] = [
   NEW_ZEALAND,
   SOUTH_KOREA,
   SINGAPORE,
+  INDIA,
 ];
 
 export const PUBLISHED_DOSSIERS: readonly CountryDossier[] = COUNTRY_DOSSIERS.filter(

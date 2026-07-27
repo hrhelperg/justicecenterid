@@ -2483,6 +2483,49 @@ export const SOURCES: readonly SourceRecord[] = [
     jurisdiction: 'SG',
     note: 'The World Prison Brief country page for Singapore (compiled by ICPR from national sources), read directly and re-confirmed by hand. Supports: prison administration by the Singapore Prison Service under the Ministry of Home Affairs; a total prison population of 10,792 including pre-trial detainees at 31 December 2024 (source: the national prison administration); a rate of 178 per 100,000 based on an estimated national population of 6.06 million (UN figures); and an official capacity of 16,249 dated September 2013. The capacity is more than a decade older than the population figure, so no current occupancy level is taken from the page.',
   },
+
+  /* -------------------------------------------------------------------------- */
+  /* India (Batch C) — federation; police/prosecution/prisons are STATE subjects */
+  /* -------------------------------------------------------------------------- */
+  {
+    id: 'in-constitution',
+    type: 'legislation',
+    title: 'The Constitution of India (as on 1 May 2024)',
+    publisher: 'Government of India, Ministry of Law and Justice (Legislative Department)',
+    url: 'https://cdnbbsr.s3waas.gov.in/s380537a945c7aaa788ccfcdf1b99b5d8f/uploads/2024/07/20240716890312078.pdf',
+    publishedOn: '1950-01-26',
+    verifiedOn: '2026-07-27',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'IN',
+    translationStatus: 'not-a-translation',
+    authoritativeLanguage: 'en',
+    note: 'The official Constitution of India PDF (Ministry of Law and Justice, "As on 1st May, 2024"), fetched and text-extracted; the Seventh Schedule entries and the cited articles were re-confirmed verbatim in two independent passes. Supports the federal division of legislative power under the Seventh Schedule (Article 246): List II (State List) Entry 1 "Public order", Entry 2 "Police (including railway and village police)", Entry 4 "Prisons, reformatories, Borstal institutions… and persons detained therein" — so police, public order and prisons are exclusive STATE subjects; List III (Concurrent List) Entry 1 "Criminal law…", Entry 2 "Criminal procedure…", Entry 11A "Administration of Justice; constitution and organisation of all courts, except the Supreme Court and the High Courts" — so the criminal codes and subordinate-court organisation are concurrent (national); and List I (Union List) Entry 8 "Central Bureau of Intelligence and Investigation". Also supports Article 50 (separation of the judiciary from the executive), Article 124 (the Supreme Court of India), Article 141 (Supreme Court law binding on all courts), Article 214 ("There shall be a High Court for each State"), and Article 235 (High Court control over district and subordinate courts).',
+  },
+  {
+    id: 'in-pib-criminal-laws',
+    type: 'government',
+    title:
+      'Press Information Bureau (Government of India) — the three new criminal laws (BNS, BNSS, BSA)',
+    publisher: 'Press Information Bureau, Government of India',
+    url: 'https://www.pib.gov.in/PressReleasePage.aspx?PRID=2039055',
+    publishedOn: '2024-07-30',
+    verifiedOn: '2026-07-27',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'IN',
+    note: 'The Government of India\'s Press Information Bureau release (PRID 2039055), fetched and re-confirmed by curl. Supports that the Bharatiya Nyaya Sanhita 2023 (BNS), the Bharatiya Nagarik Suraksha Sanhita 2023 (BNSS) and the Bharatiya Sakshya Adhiniyam 2023 (BSA) "were notified in the Gazette of India on 25th December, 2023" and came into force "from 1st of July, 2024" (with a narrow exception), replacing the Indian Penal Code 1860, the Code of Criminal Procedure 1973 and the Indian Evidence Act 1872. Establishes the enacted, in-force national criminal codes.',
+  },
+  {
+    id: 'wpb-india',
+    type: 'academic',
+    title: 'World Prison Brief — India',
+    publisher:
+      'Institute for Crime & Justice Policy Research (ICPR), Birkbeck, University of London',
+    url: 'https://www.prisonstudies.org/country/india',
+    verifiedOn: '2026-07-27',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'IN',
+    note: 'The World Prison Brief country page for India (compiled by ICPR from the National Crime Records Bureau\'s Prison Statistics India), read directly and re-confirmed by hand. Supports: prison administration by "Governments of States and Union Territories" (corroborating that prisons are a State function); a total prison population of 511,542 including pre-trial detainees at 31 December 2024 (source: the National Crime Records Bureau); a rate of 36 per 100,000; an official capacity of 453,769 at the same date; and an occupancy level of 112.7% at 31 December 2024 — above capacity.',
+  },
 ];
 
 const SOURCE_INDEX = new Map(SOURCES.map((source) => [source.id, source]));
