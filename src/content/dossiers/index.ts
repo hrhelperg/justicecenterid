@@ -1,5 +1,6 @@
 import { COUNTRY_MODULES, countryModulePath, countryPath } from '../country-modules';
 import type { CountryDossier, CountryModuleContent } from '../types';
+import { ARGENTINA } from './argentina';
 import { AUSTRALIA } from './australia';
 import { AUSTRIA } from './austria';
 import { BELGIUM } from './belgium';
@@ -9,11 +10,20 @@ import { CZECHIA } from './czechia';
 import { DENMARK } from './denmark';
 import { FINLAND } from './finland';
 import { GREECE } from './greece';
+import { INDIA } from './india';
+import { INDONESIA } from './indonesia';
 import { ITALY } from './italy';
+import { KENYA } from './kenya';
+import { MEXICO } from './mexico';
 import { NETHERLANDS } from './netherlands';
+import { NEW_ZEALAND } from './new-zealand';
+import { NIGERIA } from './nigeria';
 import { NORWAY } from './norway';
 import { POLAND } from './poland';
 import { PORTUGAL } from './portugal';
+import { SINGAPORE } from './singapore';
+import { SOUTH_AFRICA } from './south-africa';
+import { SOUTH_KOREA } from './south-korea';
 import { SPAIN } from './spain';
 import { SWEDEN } from './sweden';
 import { SWITZERLAND } from './switzerland';
@@ -47,6 +57,16 @@ export const COUNTRY_DOSSIERS: readonly CountryDossier[] = [
   CZECHIA,
   POLAND,
   GREECE,
+  NEW_ZEALAND,
+  SOUTH_KOREA,
+  SINGAPORE,
+  INDIA,
+  INDONESIA,
+  MEXICO,
+  ARGENTINA,
+  SOUTH_AFRICA,
+  KENYA,
+  NIGERIA,
 ];
 
 export const PUBLISHED_DOSSIERS: readonly CountryDossier[] = COUNTRY_DOSSIERS.filter(

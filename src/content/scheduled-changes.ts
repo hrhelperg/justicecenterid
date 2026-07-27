@@ -78,6 +78,28 @@ export const SCHEDULED_CHANGES: readonly ScheduledChange[] = [
     notes:
       "This is the platform's test of the ScheduledChange model against a Swiss direct-democracy change: the BEKJ is a federal act subject to the OPTIONAL referendum, and the referendum deadline expired unused in April 2025, so it is enacted rather than put to a popular vote — hence certainty `enacted-with-date`. Commencement is STAGGERED: the öffentlich-rechtliche Körperschaft provision took effect on 1 October 2025 (already in the past), while the main obligations enter into force on 1 July 2027 (recorded as effectiveOn), with cantonal mandatory-use dates following between one and five years after that. Nothing is asserted about how the platform will operate; only that the institution is being created on these dates.",
   },
+  {
+    /*
+     * South Korea pilot (Batch C). The first non-European scheduled change, and a genuine
+     * `pending` one: unlike the Italy separation-of-careers bill and the Austria
+     * Bundesstaatsanwaltschaft draft (both only proposals, so kept in prose, not here), the
+     * Korean restructuring is ENACTED with a fixed commencement — an amendment to the Government
+     * Organization Act, Cabinet-approved on 30 September 2025 and gazetted, with the Supreme
+     * Prosecutors' Office abolished on 1 October 2026 — so it meets the certainty gate.
+     */
+    id: 'kr-prosecution-restructuring-2026',
+    changeType: 'reorganization',
+    effectiveOn: '2026-10-02',
+    enactedOn: '2025-10-01',
+    affectedEntityIds: ['kr', 'south-korea/prosecution', 'south-korea/investigations'],
+    description:
+      "An amendment to the Government Organization Act (정부조직법), approved by the Cabinet on 30 September 2025 and gazetted, restructures the prosecution: the Supreme Prosecutors' Office is to be abolished on 1 October 2026 after a one-year grace period, and its powers split — the power to investigate moving to a new investigative agency under the Ministry of the Interior and Safety, and the power to indict to a new indictment office within the Ministry of Justice — with the new agencies beginning the following day, 2 October 2026 (recorded as effectiveOn). This separates the power to investigate from the power to indict.",
+    sources: ['kr-koreaherald-prosecution-2025'],
+    certainty: 'enacted-with-date',
+    status: 'pending',
+    notes:
+      "Recorded neutrally and by attribution to Korea Herald reporting (the primary gazette and the implementing statutes — a Serious Crime Investigation Agency Act and an Indictment Office Act, issued as legislative notices in early 2026 — were not fetchable; the Library of Congress Global Legal Monitor page was bot-walled). The framework amendment is enacted with a fixed commencement, so it sits here as `pending`; the current prosecution arrangement (the Prosecution Service under the Ministry of Justice, headed by the Prosecutor General) remains in force until the effective date, and nothing is asserted about how the successor agencies will operate. Proponents present the split as curbing the concentration of prosecutorial power; its constitutionality has been contested — each assessment attributed to its dated source on the country pages, not stated in the site's voice.",
+  },
 ];
 
 /* -------------------------------------------------------------------------- */
