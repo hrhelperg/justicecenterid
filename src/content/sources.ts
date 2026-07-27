@@ -2863,6 +2863,63 @@ export const SOURCES: readonly SourceRecord[] = [
     jurisdiction: 'KE',
     note: 'The World Prison Brief country page for Kenya (compiled by ICPR), read directly and re-confirmed by hand. Supports: prison administration by the Kenya Prisons Service under the State Department for Correctional Services; a prison population of 60,740 as an average over 2025 (attributed to the national statistics bureau); a rate of 101 per 100,000 based on an estimated national population of 59.98 million at mid-2025 (from United Nations figures); an official capacity of 34,000 dated December 2023; and an occupancy level of about 176.5% dated December 2023. The population figure is a 2025 annual average while the capacity and occupancy carry a December 2023 date, so the figures do not share a single reference date.',
   },
+
+  /* -------------------------------------------------------------------------- */
+  /* Nigeria (Batch C) — a federation with federal police and prisons, but        */
+  /* state courts, prosecution and criminal law                                  */
+  /* -------------------------------------------------------------------------- */
+  {
+    id: 'ng-constitution',
+    type: 'legislation',
+    title: 'Constitution of the Federal Republic of Nigeria, 1999 (as amended)',
+    publisher: 'National Human Rights Commission of Nigeria (official text host)',
+    url: 'https://nigeriarights.gov.ng/files/constitution.pdf',
+    publishedOn: '1999',
+    verifiedOn: '2026-07-27',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'NG',
+    translationStatus: 'not-a-translation',
+    authoritativeLanguage: 'en',
+    note: 'The Constitution of the Federal Republic of Nigeria 1999 (as amended, the copy carrying amendments through 2011), downloaded as the full official PDF (775,326 bytes, 137 pages) and confirmed verbatim in two independent passes. Supports: s 4 and the Second Schedule (the division of legislative power — the Exclusive Legislative List for the Federation, the Concurrent List for both, and residual matters for the States under s 4(7)); Exclusive List item 45 and s 214(1) ("There shall be a police force for Nigeria … no other police force shall be established for the Federation or any part thereof" — a single national police); Exclusive List item 48 ("Prisons" — federal corrections); s 6(5) (the superior courts of record — the federal Supreme Court, Court of Appeal, Federal High Court and FCT High Court, and the State High Courts, Sharia Courts of Appeal and Customary Courts of Appeal); s 230/233/235 (the Supreme Court as apex, its decisions final); s 237 (the Court of Appeal); s 275/280 (State Sharia and Customary Courts of Appeal, headed by a Grand Kadi); s 150/174 (the Attorney-General of the Federation, a Minister and Chief Law Officer, with power to institute, take over or discontinue federal prosecutions) and s 195/211 (each State Attorney-General with the mirror power for state offences); s 215 (the Inspector-General commanding the Nigeria Police Force, with the President\'s lawful-directions power); s 153 and the Third Schedule (the National Judicial Council, the Police Service Commission and the Nigeria Police Council); and s 81(3)/292 (judicial funding through the NJC and security of tenure). Establishes that Nigeria is a federation in which police and prisons are federal, while courts, prosecution and (residually) criminal law operate at both the federal and state levels.',
+  },
+  {
+    id: 'ng-hrw-sharia',
+    type: 'institutional',
+    title:
+      'Human Rights Watch — "Political Shari\'a"? Human Rights and Islamic Law in Northern Nigeria (2004): the extension of Shari\'a to criminal law',
+    publisher: 'Human Rights Watch',
+    url: 'https://www.hrw.org/reports/2004/nigeria0904/4.htm',
+    publishedOn: '2004',
+    verifiedOn: '2026-07-27',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'NG',
+    note: "The chapter of the 2004 Human Rights Watch report describing how Shari'a was extended to criminal law in northern Nigeria, read directly. Supports, by dated attribution, that from 1999 to 2001 twelve northern states adopted Shari'a criminal legislation (the report: \"By 2002, twelve states had adopted some form of Shari'a into their criminal legislation\" — Zamfara first, the Governor introducing Shari'a for criminal law within a year of 1999). Cited for the fact and dating of the sub-national criminal-law variant; the report's own assessments of that legislation's human-rights effects are contested and are not asserted here as fact.",
+  },
+  {
+    id: 'ng-naltf',
+    type: 'government',
+    title:
+      'National Assembly Library Trust Fund — "Momentum builds for Nigerian state-police reform" (26 June 2026)',
+    publisher: 'National Assembly Library Trust Fund (Nigeria)',
+    url: 'https://naltf.gov.ng/moentum-builds-for-nigerian-state-police-reform-as-36-state-speakers-and-governors-back-constitutional-amendment/',
+    publishedOn: '2026-06-26',
+    verifiedOn: '2026-07-27',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'NG',
+    note: 'The National Assembly Library Trust Fund report of 26 June 2026 on the Constitution (Alteration) (State Police) Bill, read directly. Supports, by dated attribution, that the bill had passed both chambers of the National Assembly and — verbatim — "To become law, the bill must now be ratified by at least 24 State Houses of Assembly before being transmitted to President Bola Tinubu for his assent," i.e. it was not yet law as of that date. Cited only for the status and procedural next steps of a pending reform; the debate over whether its safeguards are sufficient is attributed to its proponents and critics, not stated as fact.',
+  },
+  {
+    id: 'wpb-nigeria',
+    type: 'academic',
+    title: 'World Prison Brief — Nigeria',
+    publisher:
+      'Institute for Crime & Justice Policy Research (ICPR), Birkbeck, University of London',
+    url: 'https://www.prisonstudies.org/country/nigeria',
+    verifiedOn: '2026-07-27',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'NG',
+    note: 'The World Prison Brief country page for Nigeria (compiled by ICPR from the national prison administration, the Nigerian Correctional Service), read directly and re-confirmed by hand. Supports: a total prison population of 81,902 including pre-trial detainees at 22 June 2026; a rate of 34 per 100,000 based on an estimated national population of 238.95 million at mid-2026 (UN figures); an official capacity of 65,035 dated 30 June 2025; and an occupancy level of 125.6% dated 30 June 2025. The population figure is dated June 2026 while the capacity and occupancy carry a June 2025 date, so the figures do not share a single reference date.',
+  },
 ];
 
 const SOURCE_INDEX = new Map(SOURCES.map((source) => [source.id, source]));
