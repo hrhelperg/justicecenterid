@@ -2625,6 +2625,77 @@ export const SOURCES: readonly SourceRecord[] = [
     jurisdiction: 'ID',
     note: 'The World Prison Brief country page for Indonesia (compiled by ICPR from the national prison administration), read directly and re-confirmed by hand on the day of authoring — its figures had been updated since the research pass, so the current values are used. Supports a total prison population of 287,571 including pre-trial detainees at 30 June 2026 (source: the national prison administration); a rate of 99 per 100,000 (UN population estimate); an official capacity of 152,707 at the same date; and an occupancy level of 188.3% at 30 June 2026 — severe overcrowding, with population and capacity carrying the same reference date. The page\'s "ministry responsible" label ("Ministry of Justice and Human Rights") is out of date; the current ministry is recorded separately.',
   },
+
+  /* -------------------------------------------------------------------------- */
+  /* Mexico (Batch C) — federation, all four functions dual; 2024 judicial reform */
+  /* -------------------------------------------------------------------------- */
+  {
+    id: 'mx-constitution',
+    type: 'legislation',
+    title: 'Political Constitution of the United Mexican States (1917, current text)',
+    publisher: 'Suprema Corte de Justicia de la Nación / official constitutional text',
+    url: 'https://www.scjn.gob.mx/constitucion-politica-de-los-estados-unidos-mexicanos',
+    publishedOn: '1917-02-05',
+    verifiedOn: '2026-07-27',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'MX',
+    translationStatus: 'not-a-translation',
+    authoritativeLanguage: 'es',
+    note: "The Political Constitution of the United Mexican States (1917), confirmed against the Supreme Court's per-article texts and a current-text mirror in two independent passes (the consolidated official PDF at diputados.gob.mx was unreachable). Supports Art. 17 (federal and local laws shall guarantee the independence of the courts); Art. 40 (a representative, democratic, secular and federal Republic of free and sovereign States and Mexico City); Art. 124 (residual powers reserved to the States or Mexico City); Art. 73-XXI (Congress legislates federal crimes and organized crime, and enacts a single national code of criminal procedure, sentence execution and juvenile justice governing both the federal and the common order); Art. 94 (the Supreme Court of nine Ministers, plus a judicial-administration body and a Judicial Discipline Tribunal); Art. 102-A (the Public Prosecution of the Federation is organised as an autonomous public body, the Fiscalía General de la República); Art. 21 (public security is a shared function of the Federation, the states and the municipalities; the investigation of crimes corresponds to the Public Prosecutor with the police under its conduct and command); Art. 18 (the penitentiary system, organised for social reinsertion); Art. 96 and Art. 116-III (judges elected by direct citizen vote — see the 2024 reform); and Art. 102-B (the human-rights commissions and their non-binding recommendations).",
+  },
+  {
+    id: 'mx-dof-judicial-reform-2024',
+    type: 'legislation',
+    title:
+      'Decree reforming the Constitution on the Judicial Power (judicial reform), DOF 15 September 2024',
+    publisher: 'Diario Oficial de la Federación (Mexico)',
+    url: 'https://www.dof.gob.mx/nota_detalle.php?codigo=5738985&fecha=15/09/2024',
+    publishedOn: '2024-09-15',
+    verifiedOn: '2026-07-27',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'MX',
+    translationStatus: 'not-a-translation',
+    authoritativeLanguage: 'es',
+    note: 'The official gazette (Diario Oficial de la Federación) publication of the 2024 constitutional decree "en materia de reforma del Poder Judicial", read directly and re-confirmed. Cited, with its date, for the enacted facts of the judicial reform: judges of the Supreme Court, circuit magistrates and district judges are to be "elegidos de manera libre, directa y secreta por la ciudadanía" (Art. 96); the model is imposed on the state judiciaries, which must provide for election by direct citizen vote and create a Judicial Discipline Tribunal and a judicial-administration body (Art. 116-III); and the Supreme Court is reduced to nine Ministers with the Council of the Federal Judiciary replaced by the two new bodies (Art. 94). Recorded neutrally as enacted law with its date; assessments of the reform are attributed separately to the IACHR and the OAS observation mission.',
+  },
+  {
+    id: 'mx-iachr-2024',
+    type: 'international-organization',
+    title:
+      'IACHR — press release 213/2024 on the judicial reform in Mexico (12 September 2024)',
+    publisher: 'Inter-American Commission on Human Rights (OAS)',
+    url: 'https://www.oas.org/en/iachr/jsForm/?File=/en/iachr/media_center/preleases/2024/213.asp',
+    publishedOn: '2024-09-12',
+    verifiedOn: '2026-07-27',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'INT',
+    note: 'The Inter-American Commission on Human Rights\' press release 213/2024 (12 September 2024), confirmed by title and content in two passes. Cited, by attribution and with its date, that the IACHR "expresses concerns over judiciary reform in Mexico and warns of threats to judicial independence, access to justice, and the rule of law", including concerns about the design of the disciplinary court and the speed of the legislative process. Used to record a named intergovernmental assessment of the contested reform, not as the site\'s own view.',
+  },
+  {
+    id: 'mx-oas-eom-2025',
+    type: 'international-organization',
+    title:
+      "OAS Electoral Observation Mission — preliminary report on Mexico's judicial elections (June 2025)",
+    publisher: 'Organization of American States (OAS)',
+    url: 'https://www.oas.org/en/media_center/press_release.asp?sCodigo=E-047/25',
+    publishedOn: '2025-06',
+    verifiedOn: '2026-07-27',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'INT',
+    note: 'The OAS Electoral Observation Mission\'s preliminary report on the June 2025 judicial elections (mission chaired by Heraldo Muñoz), confirmed in two passes. Cited, by attribution and with its date, that the Mission reported a turnout of about 13% ("one of the lowest turnout levels in the region"), described the process as "extremely complex" and "polarizing", and concluded that it does not recommend this model of judge selection be replicated in other countries in the region. Used to record a named intergovernmental assessment, not the site\'s own view.',
+  },
+  {
+    id: 'wpb-mexico',
+    type: 'academic',
+    title: 'World Prison Brief — Mexico',
+    publisher:
+      'Institute for Crime & Justice Policy Research (ICPR), Birkbeck, University of London',
+    url: 'https://www.prisonstudies.org/country/mexico',
+    verifiedOn: '2026-07-27',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'MX',
+    note: 'The World Prison Brief country page for Mexico (compiled by ICPR from the national prison administration), read directly and re-confirmed by hand on the day of authoring — its figures had updated since the research pass, so the current values are used. Supports a total prison population of 268,245 including pre-trial detainees at 31 May 2026 (source: the national prison administration); a rate of 197 per 100,000 (UN population estimate); an official capacity of 227,658 at the same date; and an occupancy level of 117.8% at 31 May 2026 — above capacity, population and capacity carrying the same date. The page names the administering body as the Órgano Administrativo Desconcentrado de Prevención y Readaptación Social; its "ministry responsible" label ("Comisión Nacional de Seguridad") is out of date (that body was dissolved in 2018).',
+  },
 ];
 
 const SOURCE_INDEX = new Map(SOURCES.map((source) => [source.id, source]));

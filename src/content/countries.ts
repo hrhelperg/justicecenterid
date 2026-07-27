@@ -38,15 +38,6 @@ export const COUNTRIES: readonly CountryProfile[] = [
     sources: [],
   },
   {
-    code: 'MX',
-    name: 'Mexico',
-    region: 'North America',
-    legalSystemFamilies: [],
-    coverage: 'planned',
-    plannedModules: [],
-    sources: [],
-  },
-  {
     code: 'ZA',
     name: 'South Africa',
     region: 'Africa',
