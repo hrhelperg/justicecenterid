@@ -20,6 +20,7 @@ import { NORWAY } from './norway';
 import { POLAND } from './poland';
 import { PORTUGAL } from './portugal';
 import { SINGAPORE } from './singapore';
+import { SOUTH_AFRICA } from './south-africa';
 import { SOUTH_KOREA } from './south-korea';
 import { SPAIN } from './spain';
 import { SWEDEN } from './sweden';
@@ -61,6 +62,7 @@ export const COUNTRY_DOSSIERS: readonly CountryDossier[] = [
   INDONESIA,
   MEXICO,
   ARGENTINA,
+  SOUTH_AFRICA,
 ];
 
 export const PUBLISHED_DOSSIERS: readonly CountryDossier[] = COUNTRY_DOSSIERS.filter(

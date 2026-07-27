@@ -2767,6 +2767,61 @@ export const SOURCES: readonly SourceRecord[] = [
     jurisdiction: 'AR',
     note: 'The World Prison Brief country page for Argentina (compiled by ICPR from the Ministry of Justice SNEEP data), read directly and re-confirmed by hand. Supports a total prison population of 133,585 at 31 December 2024 — a figure that includes 12,885 people held in police lock-ups (comisarías) — a rate of 284 per 100,000, and an official capacity of 98,199 (not including police lock-ups) at the same date, giving an occupancy level of 122.9% for the prison system proper. Prisons are run at both the federal (Servicio Penitenciario Federal) and provincial levels, so this is a national aggregate; the occupancy compares the prison-system population and capacity, both excluding the police lock-ups that the total includes.',
   },
+
+  /* -------------------------------------------------------------------------- */
+  /* South Africa (Batch C) — constitutional supremacy; justice national         */
+  /* -------------------------------------------------------------------------- */
+  {
+    id: 'za-constitution',
+    type: 'legislation',
+    title: 'Constitution of the Republic of South Africa, 1996',
+    publisher: 'Government of South Africa (gov.za)',
+    url: 'https://www.gov.za/documents/constitution-republic-south-africa-1996',
+    publishedOn: '1996',
+    verifiedOn: '2026-07-27',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'ZA',
+    translationStatus: 'not-a-translation',
+    authoritativeLanguage: 'en',
+    note: 'The Constitution of the Republic of South Africa, 1996 (in force 4 February 1997), fetched from the official gov.za chapters and schedules and confirmed verbatim in two independent passes. Supports s 1(c) and s 2 (constitutional supremacy — "This Constitution is the supreme law of the Republic; law or conduct inconsistent with it is invalid"); s 165 (judicial authority vested in independent courts); s 166 (the courts: the Constitutional Court, the Supreme Court of Appeal, the High Court and the Magistrates\' Courts); s 167(3) (the Constitutional Court is "the highest court of the Republic", the apex for all matters since the Seventeenth Amendment); s 178 (the Judicial Service Commission); s 179 (a "single national prosecuting authority", headed by the National Director appointed by the President, exercising its functions without fear, favour or prejudice, with the Justice Minister exercising "final responsibility"); s 181 (the Chapter 9 institutions — the Public Protector, the Human Rights Commission and others); s 205–207 (a single national police service, the Minister determining national policing policy, the National Commissioner controlling the service, provinces limited to oversight); and Schedules 4 and 5 (which contain no provincial competence over courts, prosecution, prisons or criminal law, only police "to the extent that Chapter 11 confers"). Establishes constitutional supremacy and that all four justice functions are national.',
+  },
+  {
+    id: 'za-ipid',
+    type: 'legislation',
+    title: 'Independent Police Investigative Directorate Act 1 of 2011 (South Africa)',
+    publisher: 'Government of South Africa (gov.za)',
+    url: 'https://www.gov.za/documents/acts/independent-police-investigative-directorate-act-1-2011-16-may-2011',
+    publishedOn: '2011',
+    verifiedOn: '2026-07-27',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'ZA',
+    note: 'The Independent Police Investigative Directorate Act 1 of 2011 (commenced 1 April 2012), from gov.za. Supports the establishment of the Independent Police Investigative Directorate (IPID) as the independent body that investigates certain serious matters involving the police — deaths in custody or as a result of police action, the discharge of official firearms, and allegations of torture, assault or corruption by police officers. Establishes the external police-complaints/investigation body.',
+  },
+  {
+    id: 'za-npa-idac',
+    type: 'government',
+    title:
+      'National Prosecuting Authority (South Africa) — the Investigating Directorate Against Corruption (IDAC)',
+    publisher: 'National Prosecuting Authority (South Africa)',
+    url: 'https://www.npa.gov.za/',
+    publishedOn: '2024-08-19',
+    verifiedOn: '2026-07-27',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'ZA',
+    note: "The National Prosecuting Authority's account of the Investigating Directorate Against Corruption, confirmed in two passes (NPA Amendment Act 10 of 2024, commenced 19 August 2024). Supports that the temporary Investigating Directorate was converted into a permanent Investigating Directorate Against Corruption (IDAC) inside the NPA, with its own investigators for serious corruption. Cited, by attribution, for the enacted change; commentary on whether IDAC is sufficiently independent is contested and attributed to its sources, not stated as fact.",
+  },
+  {
+    id: 'wpb-south-africa',
+    type: 'academic',
+    title: 'World Prison Brief — South Africa',
+    publisher:
+      'Institute for Crime & Justice Policy Research (ICPR), Birkbeck, University of London',
+    url: 'https://www.prisonstudies.org/country/south-africa',
+    verifiedOn: '2026-07-27',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'ZA',
+    note: 'The World Prison Brief country page for South Africa (compiled by ICPR from the Minister of Correctional Services figures), read directly and re-confirmed by hand. Supports: prison administration by the Department of Correctional Services; a total prison population of 168,672 including remand detainees at 26 February 2026; a rate of 267 per 100,000 (estimated national population 63.16 million, Statistics South Africa); an official capacity of 107,067 at the same date; and an occupancy level of 157.5% at 26 February 2026 — well above capacity, population and capacity carrying the same date.',
+  },
 ];
 
 const SOURCE_INDEX = new Map(SOURCES.map((source) => [source.id, source]));

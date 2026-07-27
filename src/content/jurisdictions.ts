@@ -2189,6 +2189,30 @@ export const JURISDICTIONS: readonly JurisdictionRecord[] = [
       "A second representative Province, modelled for the same reason as Buenos Aires: Córdoba runs its own courts, prosecution, provincial police and penitentiary service for ordinary crime, applying the national codes under its own procedural code (Córdoba was an early adopter of an accusatory provincial process). Córdoba's specific institutional detail has NOT been researched.",
     status: 'published',
   },
+
+  /* -------------------------------------------------------------------------- */
+  /* South Africa (Batch C) — constitutional supremacy; quasi-federal but        */
+  /* justice national                                                            */
+  /* -------------------------------------------------------------------------- */
+  {
+    id: 'za',
+    slug: 'south-africa',
+    name: 'Republic of South Africa',
+    shortName: 'South Africa',
+    countryCode: 'ZA',
+    level: 'country',
+    legalSystemScope: 'own',
+    policingScope: 'own',
+    courtScope: 'own',
+    prosecutionScope: 'own',
+    correctionalScope: 'own',
+    temporalScope: 'current',
+    coverage: 'partial',
+    sources: ['za-constitution', 'wpb-south-africa'],
+    notes:
+      'South Africa is a QUASI-FEDERAL / decentralised unitary state (one sovereign state with nine provinces) under a SUPREME Constitution (1996) — NOT parliamentary sovereignty: s 2, "This Constitution is the supreme law of the Republic; law or conduct inconsistent with it is invalid". Despite the nine provinces, all four justice functions are NATIONAL: courts, prosecution, prisons and criminal law appear in NEITHER Schedule 4 (concurrent) NOR Schedule 5 (exclusive provincial), so they fall to the national sphere by residual competence; the only provincial justice-adjacent competence is police "to the extent that Chapter 11 confers", which s 206(3) limits to OVERSIGHT/monitoring, not command of a force. So a single country-level record with all functions `own` states it accurately, and — unlike Mexico, Argentina or India — NO sub-national record is created (the provinces run none of the four functions). Facts kept in prose: the APEX is the Constitutional Court, the highest court for ALL matters since the Seventeenth Amendment of 2012 (s 167(3)), with the Supreme Court of Appeal below it — an apex-court model of constitutional review under which courts CAN strike down statutes (the opposite of New Zealand); prosecution is a "single national prosecuting authority" (the NPA, s 179), headed by a National Director appointed by the President, exercising its functions without fear/favour/prejudice but with the Justice Minister holding "final responsibility"; the police are the single national South African Police Service (s 205–207) with the National Commissioner in command and provinces limited to oversight; prisons run under the national Department of Correctional Services; and oversight is unusually rich — the Chapter 9 institutions (the Public Protector, the Human Rights Commission), the Judicial Service Commission (s 178), the Independent Police Investigative Directorate (IPID), and the Judicial Inspectorate for Correctional Services.',
+    status: 'published',
+  },
 ];
 
 /* -------------------------------------------------------------------------- */
