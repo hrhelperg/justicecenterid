@@ -1998,6 +1998,29 @@ export const JURISDICTIONS: readonly JurisdictionRecord[] = [
       "A third representative State (India's most populous), modelled to show the per-State pattern is not confined to one region: police, prosecution and prisons are State-run (Seventh Schedule), with the subordinate courts administered under the Allahabad High Court. Uttar Pradesh's specific institutional detail has NOT been researched.",
     status: 'published',
   },
+
+  /* -------------------------------------------------------------------------- */
+  /* Indonesia (Batch C) — unitary decentralised; all justice national          */
+  /* -------------------------------------------------------------------------- */
+  {
+    id: 'id',
+    slug: 'indonesia',
+    name: 'Republic of Indonesia',
+    shortName: 'Indonesia',
+    countryCode: 'ID',
+    level: 'country',
+    legalSystemScope: 'own',
+    policingScope: 'own',
+    courtScope: 'own',
+    prosecutionScope: 'own',
+    correctionalScope: 'own',
+    temporalScope: 'current',
+    coverage: 'partial',
+    sources: ['id-constitution', 'id-polri-law'],
+    notes:
+      'Indonesia (Republik Indonesia) is a unitary DECENTRALISED state, NOT a federation — Pasal 1(1) UUD 1945, "the State of Indonesia is a unitary state in the form of a Republic"; Pasal 18 divides it into provinces, regencies and cities with regional governments, but none of the four justice functions is a provincial subject. All four are national: a single national judiciary, the single national Prosecution Service (Kejaksaan), the single national police (POLRI) and a national prison service — so a single country-level record with all functions `own` states it accurately, and NO federal-style sub-national record is created. Facts kept in prose: there are TWO apex courts — the Mahkamah Agung (Supreme Court) at the head of four court environments (general, religious, military and administrative) and a separate Mahkamah Konstitusi (Constitutional Court, 2003) with concentrated review of statutes against the Constitution (Pasal 24(2), 24C); the police (POLRI) are a single national force that reports DIRECTLY TO THE PRESIDENT, not a ministry (UU 2/2002 Pasal 8) — a distinctive reporting line; the prosecution (Kejaksaan) is within the executive but functionally independent (UU 11/2021), and is dominus litis (master of the case) over the prosecution while the police investigate; new national codes — the KUHP (Law 1/2023) and a new KUHAP (Law 20/2025) — came into force on 2 January 2026, replacing the Dutch-colonial penal code; and prisons are run by the new Ministry of Immigration and Corrections (Perpres 157/2024). The one bounded special-autonomy feature is Aceh, which applies Islamic criminal law (qanun jinayat) to Muslims through Sharia courts (Mahkamah Syar\'iyah) — but those courts sit within the national religious-court system under the Supreme Court, so Aceh is described in prose, not modelled as a separate justice jurisdiction.',
+    status: 'published',
+  },
 ];
 
 /* -------------------------------------------------------------------------- */

@@ -29,15 +29,6 @@ export const COUNTRIES: readonly CountryProfile[] = [
     sources: [],
   },
   {
-    code: 'ID',
-    name: 'Indonesia',
-    region: 'Asia',
-    legalSystemFamilies: [],
-    coverage: 'planned',
-    plannedModules: [],
-    sources: [],
-  },
-  {
     code: 'KE',
     name: 'Kenya',
     region: 'Africa',
