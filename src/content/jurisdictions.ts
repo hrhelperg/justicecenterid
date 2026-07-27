@@ -1864,6 +1864,29 @@ export const JURISDICTIONS: readonly JurisdictionRecord[] = [
       'South Korea (대한민국, Daehanmin-guk) is a unitary state, NOT a federation (Constitution art. 3, a single indivisible territory; arts. 117–118 confine local self-government to local administrative/welfare matters, not justice). All four justice functions are national — a national judiciary, a single national Prosecution Service, the Korean National Police Agency, and the Korea Correctional Service — so a single country-level record with all functions `own` states it accurately, and NO sub-national record is created. The one genuine sub-national nuance is a 2021 autonomous-police (자치경찰) layer of metropolitan/provincial commissions for community policing, but the officers remain part of the single national force — administrative decentralisation, captured in prose, not a separate record. Facts kept in prose: there are TWO apex bodies — the Supreme Court (대법원, fourteen Justices) for the ordinary three-tier judiciary and a SEPARATE Constitutional Court (헌법재판소, nine adjudicators) with concentrated constitutional review (art. 107, a court refers a constitutionality question to it); the prosecution (검찰청) is under the executive (the Ministry of Justice), headed by the Prosecutor General; a 2020–2021 reform rebalanced investigative power so the police now lead most investigations while prosecutors retain warrant-request, supplementary-investigation and indictment roles; and an enacted 2025 restructuring (recorded as a scheduled change) is to abolish the Prosecution Service on 1 October 2026 and split it into an investigative agency under the Ministry of the Interior and Safety and an indictment office under the Ministry of Justice.',
     status: 'published',
   },
+
+  /* -------------------------------------------------------------------------- */
+  /* Singapore (Batch C) — unitary common-law city-state                        */
+  /* -------------------------------------------------------------------------- */
+  {
+    id: 'sg',
+    slug: 'singapore',
+    name: 'Singapore',
+    shortName: 'Singapore',
+    countryCode: 'SG',
+    level: 'country',
+    legalSystemScope: 'own',
+    policingScope: 'own',
+    courtScope: 'own',
+    prosecutionScope: 'own',
+    correctionalScope: 'own',
+    temporalScope: 'current',
+    coverage: 'partial',
+    sources: ['sg-constitution', 'sg-cpc'],
+    notes:
+      "Singapore is a unitary common-law sovereign city-state — there is NO federal, state or provincial tier: the Constitution vests judicial power in a single Supreme Court and subordinate courts (art. 93) and establishes one Legislature (art. 38), with no distribution-of-powers lists. All four justice functions sit at the national level — one national judiciary, one national Public Prosecutor, the single Singapore Police Force, and the single Singapore Prison Service — so a single country-level record with all functions `own` states it accurately, and NO sub-national record is created. Facts kept in prose: the apex court is the Court of Appeal, with the High Court split (since a 2019/2021 restructuring) into an Appellate Division and a General Division (art. 94); constitutional review is diffuse, with NO dedicated constitutional court. The most distinctive feature is that the Attorney-General is BOTH the Government's legal adviser (art. 35(7)) AND the Public Prosecutor with discretionary power to institute, conduct or discontinue any prosecution (art. 35(8); Criminal Procedure Code s 11) — a deliberate fusion of adviser and prosecutor in one constitutional officer, who is not a Cabinet minister and is removable only via a judicial tribunal. The police (and specialist agencies) investigate and the Public Prosecutor decides charges (police-led, common-law investigation). Both the Singapore Police Force and the Singapore Prison Service are under the Ministry of Home Affairs. Honestly recorded absences: Singapore has no general public-sector ombudsman, no Paris-Principles national human-rights institution, and no dedicated independent police-complaints commission — these are stated as researched negatives, not gaps, with corruption handled by the Corrupt Practices Investigation Bureau in the Prime Minister's Office.",
+    status: 'published',
+  },
 ];
 
 /* -------------------------------------------------------------------------- */
