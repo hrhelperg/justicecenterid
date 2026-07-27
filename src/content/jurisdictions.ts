@@ -1818,6 +1818,29 @@ export const JURISDICTIONS: readonly JurisdictionRecord[] = [
       'Greece (Elláda) is a unitary, decentralised state (Constitution art. 101, "the administration of the State shall be organized according to the principle of decentralization"; art. 102, local government limited to local affairs) — NOT federal. All four justice functions are national/central: the courts are created by statute (art. 93(1)) with judges appointed by presidential decree (art. 88(1)); the prosecution is embedded in the national judiciary (arts. 87–88); the police (Hellenic Police) are a single national force; and the prisons are run by a central ministry. So a single country-level record with all functions `own` states it accurately, and NO region record is created. The one special-autonomy element is Mount Athos (Άγιον Όρος, art. 105) — a self-governed ecclesiastical-territorial part of the Greek State over which the State nonetheless retains EXCLUSIVE responsibility for public order and security, and whose monastic judicial power is defined by statute; it is a narrow ecclesiastical autonomy, not a general devolved justice tier, and is noted only in prose (not modelled as a region record). Facts kept in prose: there are THREE co-equal supreme courts — Άρειος Πάγος (Areios Pagos, the Supreme Civil and Criminal Court/court of cassation), Συμβούλιο της Επικρατείας (the Council of State/Supreme Administrative Court), and Ελεγκτικό Συνέδριο (the Court of Audit, art. 98(3) not subject to the Council of State) — and NO dedicated constitutional court: constitutional review is diffuse (art. 93(4), every court must decline to apply an unconstitutional statute), with a conflict-resolving Special Highest Court (art. 100); the prosecution (Εισαγγελία) is an independent part of the judiciary (the Ministry of Justice sets only its general service conditions) and directs/supervises police investigations; and, distinctively, the police AND the prisons are both under the Ministry of Citizen Protection, while the courts and prosecution fall under the Ministry of Justice for service conditions.',
     status: 'published',
   },
+
+  /* -------------------------------------------------------------------------- */
+  /* New Zealand (Batch C) — unitary common-law; single national bodies          */
+  /* -------------------------------------------------------------------------- */
+  {
+    id: 'nz',
+    slug: 'new-zealand',
+    name: 'New Zealand',
+    shortName: 'New Zealand',
+    countryCode: 'NZ',
+    level: 'country',
+    legalSystemScope: 'own',
+    policingScope: 'own',
+    courtScope: 'own',
+    prosecutionScope: 'own',
+    correctionalScope: 'own',
+    temporalScope: 'current',
+    coverage: 'partial',
+    sources: ['nz-constitution-act', 'nz-courts'],
+    notes:
+      'New Zealand (Aotearoa) is a unitary common-law state, NOT a federation: it has no states or provinces with justice competence, and local government (regional and district councils) runs none of the four functions. So all four are national, exercised by single national bodies — a unified court system topped by the Supreme Court, the Crown Law Office / Solicitor-General and Crown Solicitors for prosecution, the single New Zealand Police force, and the Department of Corrections — and a single country-level record with all functions `own` states it accurately; NO sub-national record is created. Distinctive features kept in prose (not new schema): the constitution is UNCODIFIED (the Constitution Act 1986 plus convention, common law and the Treaty of Waitangi / Te Tiriti o Waitangi), so Parliament is sovereign and the courts cannot strike down primary legislation — constitutional review is diffuse, and under the New Zealand Bill of Rights Act 1990 the courts may issue declarations of inconsistency but Parliament keeps the last word; tikanga Māori is a recognised source of law (the Supreme Court in Ellis v R [2022] NZSC 114 accepted it "was the first law of Aotearoa New Zealand"); the prosecution is a Law-Officer model (Attorney-General + Solicitor-General + private-practice Crown Solicitors), not a standalone Director of Public Prosecutions; and, in the common-law manner, the Police investigate and prosecutors do not direct investigations (Policing Act 2008 s 16(2) makes the Commissioner act independently of ministers on the investigation and prosecution of offences).',
+    status: 'published',
+  },
 ];
 
 /* -------------------------------------------------------------------------- */
