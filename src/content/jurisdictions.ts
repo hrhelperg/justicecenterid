@@ -1841,6 +1841,29 @@ export const JURISDICTIONS: readonly JurisdictionRecord[] = [
       'New Zealand (Aotearoa) is a unitary common-law state, NOT a federation: it has no states or provinces with justice competence, and local government (regional and district councils) runs none of the four functions. So all four are national, exercised by single national bodies — a unified court system topped by the Supreme Court, the Crown Law Office / Solicitor-General and Crown Solicitors for prosecution, the single New Zealand Police force, and the Department of Corrections — and a single country-level record with all functions `own` states it accurately; NO sub-national record is created. Distinctive features kept in prose (not new schema): the constitution is UNCODIFIED (the Constitution Act 1986 plus convention, common law and the Treaty of Waitangi / Te Tiriti o Waitangi), so Parliament is sovereign and the courts cannot strike down primary legislation — constitutional review is diffuse, and under the New Zealand Bill of Rights Act 1990 the courts may issue declarations of inconsistency but Parliament keeps the last word; tikanga Māori is a recognised source of law (the Supreme Court in Ellis v R [2022] NZSC 114 accepted it "was the first law of Aotearoa New Zealand"); the prosecution is a Law-Officer model (Attorney-General + Solicitor-General + private-practice Crown Solicitors), not a standalone Director of Public Prosecutions; and, in the common-law manner, the Police investigate and prosecutors do not direct investigations (Policing Act 2008 s 16(2) makes the Commissioner act independently of ministers on the investigation and prosecution of offences).',
     status: 'published',
   },
+
+  /* -------------------------------------------------------------------------- */
+  /* South Korea (Batch C) — unitary civil-law; dual apex; prosecution in flux   */
+  /* -------------------------------------------------------------------------- */
+  {
+    id: 'kr',
+    slug: 'south-korea',
+    name: 'South Korea',
+    shortName: 'South Korea',
+    countryCode: 'KR',
+    level: 'country',
+    legalSystemScope: 'own',
+    policingScope: 'own',
+    courtScope: 'own',
+    prosecutionScope: 'own',
+    correctionalScope: 'own',
+    temporalScope: 'current',
+    coverage: 'partial',
+    sources: ['kr-constitution', 'kr-fjc-judiciary'],
+    notes:
+      'South Korea (대한민국, Daehanmin-guk) is a unitary state, NOT a federation (Constitution art. 3, a single indivisible territory; arts. 117–118 confine local self-government to local administrative/welfare matters, not justice). All four justice functions are national — a national judiciary, a single national Prosecution Service, the Korean National Police Agency, and the Korea Correctional Service — so a single country-level record with all functions `own` states it accurately, and NO sub-national record is created. The one genuine sub-national nuance is a 2021 autonomous-police (자치경찰) layer of metropolitan/provincial commissions for community policing, but the officers remain part of the single national force — administrative decentralisation, captured in prose, not a separate record. Facts kept in prose: there are TWO apex bodies — the Supreme Court (대법원, fourteen Justices) for the ordinary three-tier judiciary and a SEPARATE Constitutional Court (헌법재판소, nine adjudicators) with concentrated constitutional review (art. 107, a court refers a constitutionality question to it); the prosecution (검찰청) is under the executive (the Ministry of Justice), headed by the Prosecutor General; a 2020–2021 reform rebalanced investigative power so the police now lead most investigations while prosecutors retain warrant-request, supplementary-investigation and indictment roles; and an enacted 2025 restructuring (recorded as a scheduled change) is to abolish the Prosecution Service on 1 October 2026 and split it into an investigative agency under the Ministry of the Interior and Safety and an indictment office under the Ministry of Justice.',
+    status: 'published',
+  },
 ];
 
 /* -------------------------------------------------------------------------- */

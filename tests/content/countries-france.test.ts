@@ -93,6 +93,7 @@ describe('France dossier', () => {
       'norway',
       'poland',
       'portugal',
+      'south-korea',
       'spain',
       'sweden',
       'switzerland',

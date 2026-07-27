@@ -2339,6 +2339,72 @@ export const SOURCES: readonly SourceRecord[] = [
     jurisdiction: 'NZ',
     note: 'The World Prison Brief country page for New Zealand (compiled by ICPR from national sources), read directly and re-confirmed by hand. Supports: prison administration by the Department of Corrections; a total prison population of 11,255 including pre-trial detainees at 31 March 2026 (source: Ministry of Justice); a rate of 211 per 100,000 based on an estimated national population of 5.34 million; and an official operational capacity of 10,633 dated 30 June 2019. The capacity figure is seven years older than the population figure, so no current occupancy level is taken from the page. Cited only for these figures and the administering department.',
   },
+
+  /* -------------------------------------------------------------------------- */
+  /* South Korea (Batch C) — unitary civil-law; dual apex; prosecution reform    */
+  /* -------------------------------------------------------------------------- */
+  {
+    id: 'kr-constitution',
+    type: 'legislation',
+    title:
+      'Constitution of the Republic of Korea (1948, wholly revised 1987) — English translation',
+    publisher: 'Comparative Constitutions Project (Constitute)',
+    url: 'https://www.constituteproject.org/constitution/Republic_of_Korea_1987',
+    publishedOn: '1987',
+    verifiedOn: '2026-07-27',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'KR',
+    translationStatus: 'unofficial',
+    authoritativeLanguage: 'ko',
+    note: 'The Comparative Constitutions Project (Constitute) English translation of the Constitution of the Republic of Korea (originally 1948, wholly revised in the ninth amendment of 1987, in force from 25 February 1988), read directly and re-confirmed. An UNOFFICIAL translation; the Korean text is authoritative. Supports Art. 3 (the territory is the Korean peninsula and its adjacent islands — a single indivisible unitary state); Art. 12 (warrants issued by a judge "upon the request of a prosecutor"); Art. 101 (judicial power vested in courts); Art. 103 ("Judges shall rule independently according to their conscience and in conformity with the Constitution and law"); Art. 106 (tenure — removal only by impeachment or criminal punishment); Art. 107 (a court doubting a statute\'s constitutionality refers the question to the Constitutional Court — concentrated review); Arts. 111–113 (the Constitutional Court\'s jurisdiction, nine adjudicators, and the six-vote requirement); and Arts. 117–118 (local self-government limited to local administrative/welfare matters, not justice).',
+  },
+  {
+    id: 'kr-fjc-judiciary',
+    type: 'government',
+    title: 'Judiciaries Worldwide — Republic of Korea (U.S. Federal Judicial Center)',
+    publisher: 'U.S. Federal Judicial Center (foreign-government reference on Korea)',
+    url: 'https://judiciariesworldwide.fjc.gov/country-profile/republic-korea',
+    verifiedOn: '2026-07-27',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'KR',
+    note: 'The U.S. Federal Judicial Center\'s Judiciaries Worldwide profile of the Republic of Korea, read directly. A FOREIGN-GOVERNMENT reference (the research/education arm of the U.S. federal judiciary), named as such. Supports the three-tier ordinary court system (18 district courts → high courts → Supreme Court), the Supreme Court as court of final appeal with fourteen Justices including the Chief Justice, and that "the Constitutional Court is an independent entity and not part of Korea\'s three tier court system" with exclusive jurisdiction over constitutional matters; and that court administration runs through the National Court Administration, "under the jurisdiction of the Supreme Court", with authority "delegated by the Chief Justice" (i.e. no European-style external judicial council).',
+  },
+  {
+    id: 'kr-spo',
+    type: 'government',
+    title: "Supreme Prosecutors' Office of the Republic of Korea — official site (English)",
+    publisher: "Supreme Prosecutors' Office (검찰청, Republic of Korea)",
+    url: 'https://www.spo.go.kr/site/eng/01/10104000000002018120605.jsp',
+    verifiedOn: '2026-07-27',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'KR',
+    note: "The Prosecution Service's own English site, read directly. Supports that the Prosecutor General (검찰총장, Geomchal Chongjang) \"handles all affairs and directs all staff members of the Prosecutors' Offices\", and the structure of \"1 Supreme Prosecutors' Office, 6 High Prosecutors' Offices, 18 District Prosecutors' Offices and 42 Branch Prosecutors' Offices\". The placement of the service under the Ministry of Justice is established from the Government Organization Act / Prosecutors' Office Act (this page does not itself state it).",
+  },
+  {
+    id: 'kr-koreaherald-prosecution-2025',
+    type: 'journalism',
+    title:
+      'Korea Herald — Cabinet approves bill to dismantle the Prosecution Service by October 2026',
+    publisher: 'The Korea Herald',
+    url: 'https://www.koreaherald.com/article/10586902',
+    publishedOn: '2025-09-30',
+    verifiedOn: '2026-07-27',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'KR',
+    note: 'Korea Herald reporting, read directly and independently re-fetched in verification, on the enacted 2025 restructuring of the prosecution. Cited, by attribution and with dates, that the Cabinet approved on 30 September 2025 an amendment to the Government Organization Act splitting the Prosecution Service\'s powers into an investigative agency under the Ministry of the Interior and Safety and a separate indictment office within the Ministry of Justice; that the Supreme Prosecutors\' Office would be abolished on 1 October 2026 after a one-year grace period, with the new agencies beginning the following day; and that this ends the service "some 78 years after its establishment". Used to record the reform neutrally as enacted-but-not-yet-effective; the primary gazette and implementing statutes were not fetchable (the Library of Congress Global Legal Monitor page was bot-walled).',
+  },
+  {
+    id: 'wpb-south-korea',
+    type: 'academic',
+    title: 'World Prison Brief — Republic of (South) Korea',
+    publisher:
+      'Institute for Crime & Justice Policy Research (ICPR), Birkbeck, University of London',
+    url: 'https://www.prisonstudies.org/country/republic-south-korea',
+    verifiedOn: '2026-07-27',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'KR',
+    note: 'The World Prison Brief country page for the Republic of (South) Korea (compiled by ICPR from national sources), read directly and re-confirmed by hand. Supports: prison administration by the Korea Correctional Service under the Ministry of Justice; a total prison population of 65,279 including pre-trial detainees at 29 January 2026 (source: the national prison administration); an official capacity of 50,614 at the same date; and an occupancy level of 129.0% at 29 January 2026 — above capacity — with both the population and the capacity carrying the same reference date.',
+  },
 ];
 
 const SOURCE_INDEX = new Map(SOURCES.map((source) => [source.id, source]));

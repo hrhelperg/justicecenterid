@@ -15,6 +15,7 @@ import { NEW_ZEALAND } from './new-zealand';
 import { NORWAY } from './norway';
 import { POLAND } from './poland';
 import { PORTUGAL } from './portugal';
+import { SOUTH_KOREA } from './south-korea';
 import { SPAIN } from './spain';
 import { SWEDEN } from './sweden';
 import { SWITZERLAND } from './switzerland';
@@ -49,6 +50,7 @@ export const COUNTRY_DOSSIERS: readonly CountryDossier[] = [
   POLAND,
   GREECE,
   NEW_ZEALAND,
+  SOUTH_KOREA,
 ];
 
 export const PUBLISHED_DOSSIERS: readonly CountryDossier[] = COUNTRY_DOSSIERS.filter(
