@@ -1251,7 +1251,7 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [why police accountability matters](/law-enforcement/why-police-accountability-matters), [police use of force](/law-enforcement/police-use-of-force), and [the institution types reference](/institutions).',
+        text: 'Related: [why police accountability matters](/law-enforcement/why-police-accountability-matters), [who investigates the police](/law-enforcement/who-investigates-police), and [independent police complaints bodies](/institutions/independent-police-complaints-body).',
       },
     ],
   },
@@ -2455,6 +2455,206 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
       {
         kind: 'paragraph',
         text: 'Related: [what police jurisdiction means](/law-enforcement/police-jurisdiction), [municipal police](/institutions/municipal-police), and [the United States dossier](/countries/united-states).',
+      },
+    ],
+  },
+
+  /* ==========================================================================
+     WAVE 5 — who does the investigating (2026-08-10).
+     ========================================================================== */
+
+  {
+    slug: 'who-investigates-police',
+    title: 'Who investigates the police?',
+    shortTitle: 'Who investigates police',
+    question: 'When a police officer is accused of wrongdoing, who investigates?',
+    summary:
+      'There is no single answer, and the differences matter. This guide sets out the arrangements that recur — internal units, external statutory bodies, prosecutors, and bodies that investigate and prosecute at once — and the systems that use none of them.',
+    entityType: 'concept',
+    section: 'law-enforcement',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'how-police-are-held-to-account',
+      'why-police-accountability-matters',
+      'police-command-and-coordination',
+    ],
+    relatedInstitutions: [
+      'independent-police-complaints-body',
+      'ombuds-and-rights-institution',
+      'prosecution-service',
+    ],
+    sources: [
+      'unodc-e4j-police-accountability',
+      'no-spesialenheten',
+      'za-ipid',
+      'cz-gibs',
+      'nz-ipca',
+      'ng-constitution',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-08-10',
+    publishedOn: '2026-08-10',
+    reviewedOn: '2026-08-10',
+    factsVerifiedOn: '2026-08-10',
+    readingTimeMinutes: 8,
+    keyTerms: ['police', 'accountability', 'oversight'],
+    uncertainty: [
+      'This guide describes arrangements that recur across the systems this platform has researched. It does not establish who investigates police in any country not named here, and it makes no claim that any arrangement produces better outcomes than another.',
+    ],
+    countryExamples: [
+      {
+        countrySlug: 'norway',
+        note: 'Norway places both functions in one external body: the Bureau for the Investigation of Police Affairs is a national investigation and prosecution agency for offences by police and prosecuting-authority employees, sitting outside the ordinary police and prosecution chain.',
+      },
+      {
+        countrySlug: 'south-africa',
+        note: 'South Africa uses an external statutory investigator with a bounded remit — the Independent Police Investigative Directorate, created by Act 1 of 2011, for deaths in custody or resulting from police action, discharge of official firearms, and allegations of torture, assault or corruption.',
+      },
+      {
+        countrySlug: 'czechia',
+        note: 'Czechia’s General Inspection of Security Forces investigates suspected crimes by officers of the Police, the Prison Service and the Customs Administration and opens their criminal prosecutions — an external investigator whose remit is wider than policing.',
+      },
+      {
+        countrySlug: 'new-zealand',
+        note: 'New Zealand separates the watching from the prosecuting: the Independent Police Conduct Authority, established by Parliament in 1989, is not part of the New Zealand Police and receives and investigates complaints, while criminal decisions rest elsewhere.',
+      },
+    ],
+    counterExamples: [
+      {
+        countrySlug: 'nigeria',
+        note: 'Nigeria has constitutional police oversight and no body of this kind: the Police Service Commission appoints, promotes and disciplines officers other than the Inspector-General, and the Nigeria Police Council handles policy and general supervision, with no separate independent police-complaints board. A country can take oversight seriously in its constitution and still have no external investigator.',
+      },
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'When a police officer is accused of wrongdoing, the investigation may be conducted by the officer’s own service, by a different police service, by a dedicated external body, by a prosecutor, or by a body that investigates and prosecutes at once. Which of these applies is set nationally, and the answer changes what the process can produce.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This explains institutional arrangements. It is not legal advice, it does not describe how to make a complaint in any particular country, and it does not assess how well any of these arrangements works.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'The difficulty is structural rather than moral. An organisation investigating its own members has an interest in the result, and the people conducting the investigation share an employer, a culture and often a workplace with the person under investigation. None of that requires bad faith to be a problem: it is enough that the findings are hard for an outsider to rely on.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Every arrangement below is an attempt to introduce distance. They differ in how much distance, at what cost, and for which categories of allegation.',
+        claim: 'analysis',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'United Nations guidance treats internal control as the first degree of control in any police accountability system, operating preventively as well as reactively. It is the layer everything else is built on top of, not an alternative to external scrutiny.',
+        claim: 'fact',
+        sources: ['unodc-e4j-police-accountability'],
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'The service investigates itself',
+            description:
+              'An internal unit conducts the investigation. Fastest access to records and personnel, and the arrangement with the least distance from the subject.',
+          },
+          {
+            term: 'Another police service investigates',
+            description:
+              'A neighbouring or national force is asked to investigate. More distance than an internal unit, and still an investigation by police of police.',
+          },
+          {
+            term: 'An external statutory body investigates',
+            description:
+              'A body outside the police, created by statute, investigates defined categories of matter. The remit is usually narrower than the name suggests — South Africa’s Directorate is confined to deaths, firearm discharges and allegations of torture, assault or corruption.',
+          },
+          {
+            term: 'An external body investigates and prosecutes',
+            description:
+              'The strongest form of separation. Norway’s Bureau is a national investigation and prosecution agency for offences by police and prosecuting-authority employees.',
+          },
+          {
+            term: 'A prosecutor or investigating judge directs',
+            description:
+              'Where prosecutors lead investigations generally, they lead these too, and the separation comes from the ordinary criminal process rather than from a dedicated body.',
+          },
+        ],
+      },
+      {
+        kind: 'paragraph',
+        text: 'The categories are not mutually exclusive. Czechia’s General Inspection of Security Forces investigates suspected crimes by officers of the police, the prison service and the customs administration and opens their criminal prosecutions — an external investigator whose remit extends beyond policing.',
+        claim: 'fact',
+        sources: ['cz-gibs'],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Every country has an independent body that investigates the police.',
+        reality:
+          'Many do not. Nigeria has constitutional police oversight through the Police Service Commission and the Nigeria Police Council, and no separate independent police-complaints board.',
+      },
+      {
+        claim: 'An external body investigates every complaint against the police.',
+        reality:
+          'Most are confined by statute to defined categories — commonly deaths, serious injury and alleged criminality — and everyday conduct complaints return to the police service.',
+      },
+      {
+        claim: 'Investigating is the same as being able to act on the result.',
+        reality:
+          'Investigation, discipline and prosecution are separate powers held by different bodies in most systems. A body may establish what happened and have no authority to do anything about it beyond reporting.',
+      },
+      {
+        claim: 'An independent investigator means the process is effective.',
+        reality:
+          'The existence of a body is a fact about institutional design. Whether it works is a separate, empirical question that depends on powers, resourcing and access, and this platform does not infer one from the other.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'list',
+        items: [
+          'Whether a dedicated external body exists at all is the first and largest difference.',
+          'Where one exists, its remit may be a short statutory list rather than all police conduct.',
+          'Whether it can compel evidence and testimony, and from whom, differs and is rarely apparent from the body’s name.',
+          'Whether it prosecutes, refers to a prosecutor, or only reports is a fundamental difference in what an investigation can lead to.',
+          'Some bodies cover several security services rather than police alone.',
+        ],
+      },
+      {
+        kind: 'paragraph',
+        text: 'New Zealand illustrates the separation of watching from prosecuting: the Independent Police Conduct Authority was established by Parliament in 1989, states that it is not part of the New Zealand Police, and receives and investigates complaints.',
+        claim: 'fact',
+        sources: ['nz-ipca'],
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'For a person making a complaint, the practical questions are narrow: which body receives it, whether that body can investigate this category of matter, and what it is able to do with a finding. The three have different answers in most systems, and the third is the one most often assumed.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Where a matter is criminal, it normally enters the ordinary criminal process regardless of which body investigated, which is why the relationship between the investigating body and the prosecution service is worth establishing in any specific system.',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Our reading',
+        text: 'Public debate treats the existence of an independent investigator as the question. The institutional evidence suggests the more informative questions are narrower: what may it investigate, what may it compel, and what happens to its findings. A body with a broad name and a short statutory list does less than a narrowly named body that can compel evidence and prosecute — and the names give no reliable indication of which is which.',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [how police are held to account](/law-enforcement/how-police-are-held-to-account), [independent police complaints bodies](/institutions/independent-police-complaints-body), and [ombuds and rights institutions](/institutions/ombuds-and-rights-institution).',
       },
     ],
   },

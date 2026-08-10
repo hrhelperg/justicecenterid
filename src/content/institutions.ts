@@ -660,6 +660,200 @@ export const INSTITUTION_TYPES: readonly InstitutionType[] = [
   },
 
   /* ------------------------------------------------------------------------
+     Wave 5 — oversight and accountability institutions.
+
+     The platform already explains WHY police accountability matters and HOW
+     police may be held to account. What was missing is institutional: which
+     kinds of body actually do the examining.
+
+     Two types are published, and the number is the evidence talking rather than
+     a target being met. The source registry contains six national police-
+     oversight bodies and five ombuds/rights institutions, all verified in
+     earlier waves — and NO internal-affairs or police-inspectorate source at
+     all. Internal affairs, professional standards, police inspectorates,
+     integrity commissions, anti-corruption bodies, data-protection authorities
+     and audit institutions are therefore deferred, not published thin.
+
+     A note on the word "independent". It is used here only where a source
+     establishes a statutory or constitutional basis for it. `oversightPosture`
+     records POSITION — inside or outside the police organisation — which is a
+     different and weaker claim, and the one that can be made about every body
+     here.
+     ------------------------------------------------------------------------ */
+  {
+    slug: 'independent-police-complaints-body',
+    title: 'Independent police complaints body',
+    shortTitle: 'Police complaints body',
+    question: 'What is an independent police complaints body, and what can it actually do?',
+    summary:
+      'An external body, outside the police organisation, that receives complaints about police conduct and in many systems investigates them. Its powers vary enormously — some investigate crime and prosecute it, some are limited to the most serious incidents.',
+    section: 'law-enforcement',
+    oversightPosture: 'external',
+    purpose:
+      'A police service investigating itself has an interest in the outcome, and everyone involved knows it. An external body exists to remove that interest — not because internal investigation is assumed to be dishonest, but because its findings are hard to rely on when the investigator and the investigated share an employer.',
+    distinguishingFeatures: [
+      'Sits outside the police organisation, with its own staff and its own statutory basis',
+      'Receives complaints from the public directly, rather than through the police service',
+      'Powers set by its founding statute, and narrower than the name usually suggests',
+    ],
+    typicalMandate: [
+      'Receiving and triaging complaints about police conduct',
+      'Investigating some categories of matter directly — commonly deaths, serious injury and allegations of criminality',
+      'Referring, recommending or, in a minority of systems, prosecuting',
+    ],
+    commonConfusions: [
+      'That such a body investigates every complaint. Several are confined by statute to defined serious categories and refer the rest back to the police.',
+      'That being outside the police makes a body independent. Position and independence are different claims; independence rests on statutory basis, appointment, removal and budget.',
+      'With a general ombuds or rights institution, whose mandate covers public administration broadly rather than police specifically.',
+      'That every country has one. Several do not, and route complaints through commissions, courts or the police themselves.',
+    ],
+    governanceNote:
+      'Statutory basis is what distinguishes these bodies from an internal unit with an external-sounding name. New Zealand’s Independent Police Conduct Authority was set up by Parliament in 1989 and states that it is not part of the New Zealand Police and is fully independent under law; South Africa’s Independent Police Investigative Directorate was created by Act 1 of 2011; Czechia’s General Inspection of Security Forces rests on Act No. 341/2011 Coll.; Denmark’s Police Complaints Authority was enacted in 2010 and became operational in 2012, with its council chaired by a High Court judge and standing independent of both the police and the prosecution service.',
+    accountabilityNote:
+      'The powers question is the one that matters and the one most often skipped. Investigating is not the same as recommending; recommending is not the same as disciplining; and disciplining is not the same as prosecuting. Norway’s Bureau for the Investigation of Police Affairs is a national investigation AND prosecution agency for offences by police and prosecution employees, which is at the strong end. South Africa’s Directorate investigates a defined list — deaths in custody or resulting from police action, discharge of official firearms, and allegations of torture, assault or corruption — which is a different and narrower thing. Neither arrangement is a template for the other.',
+    presenceNote:
+      'Present in many but not all systems, under many names, and with mandates that do not correspond. Where no such body exists, complaints may run to a constitutional commission, to the ordinary courts, to a prosecutor, or to the police service itself.',
+    historyNote:
+      'These bodies are replaced and reconstituted more often than most institutions, which makes naming the current one a live problem rather than a formality. Ireland is the clearest recent case: on 2 April 2025 the Policing, Security and Community Safety Act 2024 was commenced, and the Garda Síochána Ombudsman Commission became Fiosrú, the Office of the Police Ombudsman. A page naming GSOC as the current complaints body would now be wrong.',
+    countryExamples: [
+      {
+        countrySlug: 'new-zealand',
+        note: 'The Independent Police Conduct Authority was established by Parliament in 1989 and states that it is not part of the New Zealand Police and is fully independent under law. It receives and investigates complaints against the Police — the clearest statutory statement of external position on this page.',
+      },
+      {
+        countrySlug: 'south-africa',
+        note: 'The Independent Police Investigative Directorate, created by Act 1 of 2011, investigates a defined list of serious matters: deaths in custody or as a result of police action, discharge of official firearms, and allegations of torture, assault or corruption. A powerful body with a deliberately bounded remit.',
+      },
+      {
+        countrySlug: 'norway',
+        note: 'The Norwegian Bureau for the Investigation of Police Affairs is a national investigation and prosecution agency for cases where police or prosecuting-authority employees are suspected of criminal offences in the course of duty — investigation and prosecution in one body, outside the ordinary police and prosecution chain.',
+      },
+      {
+        countrySlug: 'czechia',
+        note: 'The General Inspection of Security Forces, under Act No. 341/2011 Coll., investigates suspected crimes by officers of the Police, the Prison Service and the Customs Administration, and opens their criminal prosecutions — a reminder that these bodies are not always police-only.',
+      },
+      {
+        countrySlug: 'denmark',
+        note: 'The Police Complaints Authority, enacted in 2010 and operational from 2012, investigates criminal cases against police and prosecution personnel, handles conduct complaints, and investigates deaths and serious injuries during police interventions or in custody. It is independent of both the police and the prosecution service, and its council is chaired by a High Court judge.',
+      },
+      {
+        countrySlug: 'ireland',
+        note: 'Fiosrú, the Office of the Police Ombudsman, opened on 2 April 2025 and receives and investigates complaints from the public about Garda personnel. It replaced the Garda Síochána Ombudsman Commission, which is historical from that date.',
+      },
+    ],
+    counterExamples: [
+      {
+        countrySlug: 'nigeria',
+        note: 'Nigeria splits police oversight between two constitutional bodies under section 153 and the Third Schedule — the Police Service Commission, which appoints, promotes and disciplines officers other than the Inspector-General, and the Nigeria Police Council for policy and general supervision. There is no separate independent police-complaints board. A country can have constitutional police oversight and no body of this type at all.',
+      },
+    ],
+    relatedProfessions: ['patrol-officer'],
+    relatedInstitutions: [
+      'ombuds-and-rights-institution',
+      'national-police',
+      'prosecution-service',
+    ],
+    uncertainty: [
+      'This page describes a recurring institutional form. It does not establish that any of these bodies is effective, and it makes no comparison between them: the existence of an independent body is a fact about design, not about outcomes.',
+      'Mandates differ so much that the shared label is the weakest thing these bodies have in common. Nothing here should be read across from one country to another.',
+    ],
+    temporalScope: 'current',
+    sources: [
+      'nz-ipca',
+      'za-ipid',
+      'no-spesialenheten',
+      'cz-gibs',
+      'dk-police-complaints',
+      'ie-fiosru',
+      'ng-constitution',
+      'unodc-e4j-police-accountability',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    updatedOn: '2026-08-10',
+    reviewedOn: '2026-08-10',
+    factsVerifiedOn: '2026-08-10',
+  },
+  {
+    slug: 'ombuds-and-rights-institution',
+    title: 'Ombuds and rights institutions',
+    shortTitle: 'Ombuds and rights institutions',
+    question:
+      'How do ombuds and human-rights bodies oversee police, and are they police bodies?',
+    summary:
+      'General-mandate bodies — parliamentary ombuds, public defenders of rights, national human-rights institutions — whose remit covers public administration broadly. Police fall inside that remit without these being police bodies.',
+    section: 'justice',
+    oversightPosture: 'external',
+    purpose:
+      'Some scrutiny of the state should not depend on which part of the state is being scrutinised. An ombuds institution exists to give a person a route of complaint against public administration generally, and it reaches police because police are public administration — not because it was built for them.',
+    distinguishingFeatures: [
+      'A general mandate over public administration, of which policing is one part',
+      'Frequently appointed by and reporting to a parliament rather than a government',
+      'Powers commonly to investigate, inspect and recommend rather than to discipline',
+    ],
+    typicalMandate: [
+      'Complaints of maladministration against public authorities',
+      'Inspection of places where people are deprived of liberty, including police custody',
+      'Reporting to a parliament, and publishing findings',
+    ],
+    commonConfusions: [
+      'With a police complaints body. A general ombuds is not a police-specific mandate, and treating it as one overstates what it was created to do.',
+      'That an ombuds can discipline an officer. These bodies typically recommend and report; the disciplinary power normally stays elsewhere.',
+      'That every national human-rights institution handles police complaints. Whether police conduct falls within the mandate is a question about that body’s founding instrument.',
+    ],
+    governanceNote:
+      'The reporting line is the structural feature worth noticing: several of these bodies answer to a parliament rather than to a government. Sweden’s Parliamentary Ombudsmen are appointed by the Riksdag to ensure that public authorities and their staff comply with the law, on a constitutional basis in the Instrument of Government. Norway’s Parliamentary Ombud is elected by the Storting and is an independent body. Austria’s Ombudsman Board is a constitutional body under Article 148a B-VG to which anyone may complain of alleged maladministration in federal administration.',
+    accountabilityNote:
+      'A distinctive and often-missed function is preventive rather than reactive. Norway’s Parliamentary Ombud hosts the country’s National Preventive Mechanism under OPCAT and visits police custody facilities, prisons and psychiatric institutions; Austria’s Ombudsman Board serves the same role with human-rights commissions; Czechia’s Public Defender of Rights conducts inspections of places where people are deprived of liberty. That is systemic, ex-ante oversight of conditions, not case-by-case adjudication of complaints.',
+    presenceNote:
+      'Widespread, under many names — ombudsman, public defender of rights, parliamentary ombud, ombudsman board, human-rights commission — and with mandates that differ. Presence tells you a general complaints route exists; it does not tell you that police conduct is within it.',
+    countryExamples: [
+      {
+        countrySlug: 'sweden',
+        note: 'The Parliamentary Ombudsmen are appointed by the Riksdag to ensure that public authorities and their staff comply with the laws governing their actions — an oversight body under the parliament rather than the government, with a constitutional basis in the Instrument of Government.',
+      },
+      {
+        countrySlug: 'norway',
+        note: 'The Parliamentary Ombud is elected by the Storting to safeguard the rights of individuals in dealings with the public administration, and hosts Norway’s National Preventive Mechanism under OPCAT — visiting police custody facilities, prisons and psychiatric institutions.',
+      },
+      {
+        countrySlug: 'austria',
+        note: 'The Volksanwaltschaft is a constitutional body under Article 148a B-VG to which anyone may complain of alleged maladministration in federal administration, and it serves as Austria’s National Preventive Mechanism with human-rights commissions.',
+      },
+      {
+        countrySlug: 'czechia',
+        note: 'The Public Defender of Rights handles complaints against the conduct or inaction of public authorities, inspects places where people are deprived of liberty, and acts as the national equality body — three distinct functions in one institution.',
+      },
+    ],
+    counterExamples: [
+      {
+        countrySlug: 'south-africa',
+        note: 'South Africa routes serious police matters to a police-specific statutory body instead: the Independent Police Investigative Directorate, created by Act 1 of 2011 for deaths in custody, deaths resulting from police action, firearm discharges and allegations of torture, assault or corruption. A general rights institution is not the police-complaints route everywhere, and where a dedicated body exists the two are not interchangeable.',
+      },
+    ],
+    relatedProfessions: ['judge'],
+    relatedInstitutions: ['independent-police-complaints-body', 'correctional-service'],
+    uncertainty: [
+      'Whether police conduct falls inside a given ombuds or rights institution’s mandate depends on that body’s founding instrument, and this page does not establish it for any country not named here.',
+      'The bodies described here are cited for their mandate and structure. Nothing on this page assesses how any of them performs.',
+    ],
+    temporalScope: 'current',
+    sources: [
+      'se-jo',
+      'no-sivilombudet',
+      'at-volksanwaltschaft',
+      'cz-ochrance',
+      'za-ipid',
+      'mandela-rules',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    updatedOn: '2026-08-10',
+    reviewedOn: '2026-08-10',
+    factsVerifiedOn: '2026-08-10',
+  },
+
+  /* ------------------------------------------------------------------------
      HUB-ONLY records: published summaries, deliberately not routed.
 
      The source registry contains no border, customs, coast-guard or maritime

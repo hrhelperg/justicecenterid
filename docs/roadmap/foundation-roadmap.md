@@ -648,3 +648,31 @@ place. Details in `docs/audits/knowledge-expansion-wave-4-qa.md`.
   passed / 4 skipped; route matrix 395/395.
 
 Delivered on `feat/knowledge-expansion-wave-4`. Not merged, not deployed.
+
+## Phase 19 — Knowledge Expansion Wave 5 (delivered 2026-08-10)
+
+Police oversight and accountability institutions: which kinds of body examine police, and
+what they can actually do. Details in `docs/audits/knowledge-expansion-wave-5-qa.md`.
+
+- **18 candidates → 2 institution types + 1 guide.** 5 merged, 2 aliased, 8 deferred, 2
+  rejected as entities. The number is the evidence: the corpus holds six national
+  police-oversight bodies and five ombuds/rights institutions, and **no internal-affairs or
+  police-inspectorate source at all**.
+- **The corpus did not match the brief's expected countries.** Nine of twelve suggested had no
+  oversight sourcing; the countries that did — New Zealand, Norway, Czechia, Denmark, Sweden,
+  Austria — were not on the list. The pages follow the corpus.
+- **Position is not independence.** A new `oversightPosture` field records inside/outside;
+  independence is claimed only alongside a statutory or constitutional basis, and comparative
+  or superlative independence language is forbidden by test.
+- **Powers are not flattened.** Norway investigates and prosecutes; South Africa is confined
+  by statute to deaths, firearm discharges and torture/assault/corruption allegations;
+  Czechia covers police, prison service and customs. "The shared label is the weakest thing
+  these bodies have in common" is on the page.
+- **Ireland exercised the temporal rule**: Fiosrú current, GSOC historical from 2 April 2025,
+  bound by test to the ScheduledChange already modelled. No new ScheduledChange was needed.
+- **Kenya's IPOA was excluded** despite being a strong example, because the dossier records
+  that its establishing Act was not verified in detail — the `note` field doing its job.
+- Validation: 2584 unit tests / 57 files; **352 routes / 352 sitemap / 354 pages**; e2e 357
+  passed / 4 skipped; route matrix 406/406. **Zero JS delta, zero CSS delta, no new sources.**
+
+Delivered on `feat/knowledge-expansion-wave-5`. Not merged, not deployed.

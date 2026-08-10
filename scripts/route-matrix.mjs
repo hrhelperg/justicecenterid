@@ -95,6 +95,15 @@ const MUST_404 = [
   '/law-enforcement/campus-police-jurisdiction',
   '/law-enforcement/transport-police-jurisdiction',
   '/law-enforcement/special-purpose-police-agencies',
+  // Wave 5 oversight candidates deferred or rejected.
+  '/institutions/internal-affairs',
+  '/institutions/police-inspectorate',
+  '/institutions/police-ombudsman',
+  '/institutions/anti-corruption-commission',
+  '/institutions/data-protection-authority',
+  '/institutions/judicial-oversight',
+  '/law-enforcement/internal-vs-external-police-oversight',
+  '/law-enforcement/how-police-complaints-are-investigated',
   // ISO codes are not URL segments; the slug is the English name.
   '/countries/fr',
   '/countries/us',
