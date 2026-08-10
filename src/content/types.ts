@@ -915,6 +915,19 @@ export interface InstitutionType {
   accountabilityNote?: string;
   /** Required. Where this type does and does not exist. */
   presenceNote: string;
+  /**
+   * Where an OVERSIGHT body sits relative to the institution it examines (Wave 5).
+   *
+   * Optional, and present only on oversight types. It exists because "internal" and
+   * "external" is the first question worth asking about any body that reviews police, and
+   * because leaving it in prose makes it unassertable: a page can describe a body at
+   * length without ever saying whether it is part of the organisation it scrutinises.
+   *
+   * It records POSITION, not independence. A body can be external and still not be
+   * independent — independence is a claim about statutory basis, appointment, removal and
+   * budget, and it is made only where a source establishes it.
+   */
+  oversightPosture?: 'internal' | 'external' | 'mixed';
   /** Historical background, where it is sourced. Never inferred from the present. */
   historyNote?: string;
   countryExamples?: CountryExample[];
