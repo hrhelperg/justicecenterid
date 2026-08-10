@@ -770,11 +770,41 @@ export interface CountryProfile {
   sources: string[];
 }
 
+/**
+ * A worked example drawn from a researched country dossier.
+ *
+ * Added by Wave 2, and the field that does the most work on an institution or profession
+ * page. The global pages describe a recurring institutional PATTERN; a country dossier
+ * describes one state's actual arrangement. Without a typed link between them the reader
+ * has no way to tell which is which, and the writer has every temptation to promote one
+ * country's implementation into a general rule — the exact error the source-reuse rule
+ * exists to prevent ("France has a gendarmerie" is not evidence about all gendarmeries).
+ *
+ * `countrySlug` must resolve to a PUBLISHED dossier; validation enforces it, so an example
+ * can never point at a country the platform has not actually researched.
+ */
+export interface CountryExample {
+  /** The dossier slug, e.g. 'france'. Must be published. */
+  countrySlug: string;
+  /**
+   * What this country shows about the pattern — including where it DIVERGES from it.
+   * Never a restatement of the general description with a country name attached.
+   */
+  note: string;
+}
+
 export interface Profession {
   slug: string;
   title: string;
+  shortTitle?: string;
   summary: string;
   section: SectionId;
+  /** The reader's question, in the reader's words. Required for a routed page. */
+  question?: string;
+  /** Why the role exists at all, as distinct from what it does day to day. */
+  purpose?: string;
+  /** Where the role sits: which institutions employ it and under whose authority. */
+  institutionalContext?: string;
   responsibilities: string[];
   /** What the role can decide, and on whose authority. */
   decisionAuthority: string[];
@@ -782,32 +812,70 @@ export interface Profession {
   oversight: string[];
   /** Structural description only — never country-specific entry requirements. */
   trainingRouteShape: string[];
+  /** Professional ethics: the standards the role is held to beyond the law. */
+  ethicsNote?: string;
   commonMisunderstandings?: string[];
   /** Required. Roles vary enormously between systems. */
   jurisdictionNote: string;
+  /** Institution-type slugs this role works within. */
+  relatedInstitutions?: string[];
+  /** Other profession slugs it is worked alongside or confused with. */
+  relatedProfessions?: string[];
+  countryExamples?: CountryExample[];
+  /** What we could not establish. Rendered to the reader. */
+  uncertainty?: string[];
   sources: string[];
   status: ContentStatus;
   review: ReviewStatus;
   updatedOn: string;
+  reviewedOn?: string;
+  /** ISO date the institutional facts were checked against sources. */
+  factsVerifiedOn?: string;
 }
 
 export interface InstitutionType {
   slug: string;
   title: string;
+  shortTitle?: string;
   summary: string;
   section: SectionId;
+  /** The reader's question, in the reader's words. Required for a routed page. */
+  question?: string;
+  /** Why societies create this kind of body, as distinct from what it does. */
+  purpose?: string;
   /** What makes this type not the adjacent type. */
   distinguishingFeatures: string[];
   typicalMandate: string[];
   commonConfusions: string[];
+  /**
+   * How authority reaches this body: who governs it, who funds it, who may direct it.
+   * Separate from `presenceNote` because "where it exists" and "who controls it" are
+   * different questions, and conflating them is how a page implies that every body
+   * bearing the same name answers to the same kind of authority.
+   */
+  governanceNote?: string;
+  /** Which mechanisms examine this type of body, and the limits of that examination. */
+  accountabilityNote?: string;
   /** Required. Where this type does and does not exist. */
   presenceNote: string;
+  /** Historical background, where it is sourced. Never inferred from the present. */
+  historyNote?: string;
+  countryExamples?: CountryExample[];
+  /** Profession slugs typically found inside this institution type. */
+  relatedProfessions?: string[];
+  /** Other institution-type slugs it is adjacent to or confused with. */
+  relatedInstitutions?: string[];
+  /** What we could not establish. Rendered to the reader. */
+  uncertainty?: string[];
   temporalScope: TemporalScope;
   historicalPeriod?: string;
   sources: string[];
   status: ContentStatus;
   review: ReviewStatus;
   updatedOn: string;
+  reviewedOn?: string;
+  /** ISO date the institutional facts were checked against sources. */
+  factsVerifiedOn?: string;
 }
 
 export interface TimelineEntry {

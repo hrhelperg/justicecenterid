@@ -2987,6 +2987,21 @@ export const SOURCES: readonly SourceRecord[] = [
     jurisdiction: 'GB',
     note: 'The official revised text of the Act, read directly at its table of contents, which sets out its Parts: powers to stop and search (Part I), powers of entry, search and seizure (Part II), arrest (Part III), detention (Part IV), questioning and treatment of persons by police (Part V), and codes of practice (Part VI). Cited on this platform for ONE purpose: as a worked example that police powers are conferred and bounded by a named domestic statute with associated codes of practice, rather than existing as general authority. It supports the existence and structure of that statute in England and Wales. It supports nothing about Scotland or Northern Ireland, which have separate arrangements, and nothing whatever about any other country — it appears precisely to show that these thresholds are jurisdiction-bound.',
   },
+
+  /* ------------------------------------------------------------------------
+     Knowledge Expansion Wave 2 (2026-08-10).
+     ------------------------------------------------------------------------ */
+  {
+    id: 'tna-police-records',
+    type: 'archive',
+    title: 'Police — research guide',
+    publisher: 'The National Archives (United Kingdom)',
+    url: 'https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/police/',
+    verifiedOn: '2026-08-10',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'GB',
+    note: "The National Archives' own research guide to police records, read directly. Supports: that TNA holds police records only for the Metropolitan Police, the Royal Irish Constabulary, the Palestine Police and the transport police, and that records of other British forces are held elsewhere; that a police force specifically for transport began with the railways and the first railway police force in Britain was formed in 1830; that from as early as 1826 men were employed as \"Policemen\" on the railways whose role was to 'police' or direct trains, like a signalman, so their records sit among railway staff records; that before nationalisation the four largest railway companies each had their own force under a Chief of Police; that the British Transport Commission Police was created in 1949, incorporating the former railway forces together with several minor canal and dock forces; and that the London Transport Police was absorbed into the British Transport Police in 1958. A finding aid describing holdings and the administrative history behind them — it supports these British institutional facts and dates, and supports nothing about transport policing in any other country.",
+  },
 ];
 
 const SOURCE_INDEX = new Map(SOURCES.map((source) => [source.id, source]));

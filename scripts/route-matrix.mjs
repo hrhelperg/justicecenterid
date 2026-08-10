@@ -60,6 +60,20 @@ const MUST_404 = [
   // Routes assessed and deliberately not created.
   '/ecosystem',
   '/cookie-policy',
+  // Wave 2 reference records that are published SUMMARIES but not routed pages: the
+  // source registry holds no border, customs, coast-guard or maritime source.
+  '/institutions/border-and-customs-authority',
+  '/institutions/coast-guard',
+  // Wave 2 candidates merged, aliased or rejected by the cannibalization matrix.
+  '/institutions/police',
+  '/institutions/local-police',
+  '/institutions/federal-police',
+  '/institutions/highway-patrol',
+  '/institutions/marshal-service',
+  '/professions/police-officer',
+  '/professions/criminal-investigator',
+  '/professions/gendarme',
+  '/professions/sheriff',
   // ISO codes are not URL segments; the slug is the English name.
   '/countries/fr',
   '/countries/us',
