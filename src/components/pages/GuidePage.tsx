@@ -6,6 +6,8 @@ import { MisconceptionList } from '@/components/content/MisconceptionList';
 import { RelatedTopics } from '@/components/content/RelatedTopics';
 import { ReviewMeta } from '@/components/content/ReviewMeta';
 import { SourceList } from '@/components/content/SourceList';
+import { getDossier } from '@/content/dossiers';
+import type { CountryExample } from '@/content/types';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { Callout } from '@/components/ui/Callout';
 import { Container } from '@/components/ui/Container';
@@ -143,6 +145,20 @@ export async function GuidePage({
               <BlockRenderer blocks={guide.variation} />
             </section>
 
+            <CountryEvidence
+              id="examples"
+              heading="Worked examples"
+              description="Systems this platform has researched. Each example links to the dossier it draws on."
+              examples={guide.countryExamples}
+            />
+
+            <CountryEvidence
+              id="counterexamples"
+              heading="Where the pattern does not hold"
+              description="Systems at the same level that arrange this differently. The pattern above is a pattern, not a rule."
+              examples={guide.counterExamples}
+            />
+
             <section aria-labelledby="rights" className="mt-12">
               <SectionHeading id="rights">Rights and accountability</SectionHeading>
               <BlockRenderer blocks={guide.rightsAndAccountability} />
@@ -178,5 +194,53 @@ export async function GuidePage({
         </div>
       </Container>
     </>
+  );
+}
+
+/**
+ * Country evidence on a relationship guide (Wave 4).
+ *
+ * Shared by the examples and counterexamples sections, which differ only in framing. The
+ * counterexample section exists because a comparative page's characteristic failure is a
+ * reader taking the pattern for a rule — giving it its own heading is what stops it being
+ * skimmed past as a caveat inside the prose.
+ *
+ * An example whose dossier is not published renders nothing rather than a dead link.
+ */
+function CountryEvidence({
+  id,
+  heading,
+  description,
+  examples,
+}: {
+  id: string;
+  heading: string;
+  description: string;
+  examples?: CountryExample[];
+}) {
+  const resolved = (examples ?? [])
+    .map((example) => ({ example, dossier: getDossier(example.countrySlug) }))
+    .filter((entry) => entry.dossier !== undefined);
+
+  if (resolved.length === 0) return null;
+
+  return (
+    <section aria-labelledby={id} className="mt-12">
+      <SectionHeading id={id} description={description}>
+        {heading}
+      </SectionHeading>
+      <dl className="max-w-measure space-y-5">
+        {resolved.map(({ example, dossier }) => (
+          <div key={example.countrySlug}>
+            <dt className="font-semibold text-ink">
+              <Link href={`/countries/${example.countrySlug}`} className="link-inline">
+                {dossier!.name}
+              </Link>
+            </dt>
+            <dd className="mt-1 text-ink-muted">{example.note}</dd>
+          </div>
+        ))}
+      </dl>
+    </section>
   );
 }

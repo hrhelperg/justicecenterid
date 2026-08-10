@@ -1255,4 +1255,1201 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
       },
     ],
   },
+
+  /* ==========================================================================
+     WAVE 4 — the jurisdiction relationship cluster (2026-08-10).
+
+     These are RELATIONSHIP guides, not institution pages. An institution page
+     answers "what is a municipal police force?"; these answer "how does it
+     relate to the national one, who controls it, and what happens when two
+     agencies both have authority in the same street?".
+
+     The characteristic failure of a comparative page in this area is
+     generalising one country's arrangement into a rule, so every guide here
+     carries typed countryExamples and counterExamples, each backed by a source
+     scoped to that country.
+
+     Scope decisions are in docs/research/local-municipal-policing-cluster-plan.md
+     and docs/seo/knowledge-expansion-wave-4-cannibalization.md.
+     ========================================================================== */
+
+  {
+    slug: 'police-jurisdiction',
+    title: 'What does police jurisdiction mean?',
+    shortTitle: 'Police jurisdiction',
+    question: 'What does police jurisdiction mean, and can two agencies have it at once?',
+    summary:
+      'Jurisdiction is several different things at once — where an agency may act, what it may act on, and under whose authority. This guide separates them, and explains why two agencies can both hold valid authority in the same place.',
+    entityType: 'concept',
+    section: 'law-enforcement',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'how-policing-is-divided-between-levels',
+      'police-command-and-coordination',
+      'police-and-law-enforcement-difference',
+    ],
+    relatedInstitutions: [
+      'municipal-police',
+      'national-police',
+      'federal-investigative-agency',
+    ],
+    sources: ['us-bjs-csllea-2018', 'ch-fedpol', 'fr-csi-l511-1', 'unodc-cpcj'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-08-10',
+    publishedOn: '2026-08-10',
+    reviewedOn: '2026-08-10',
+    factsVerifiedOn: '2026-08-10',
+    readingTimeMinutes: 8,
+    keyTerms: ['jurisdiction', 'police', 'law-enforcement'],
+    countryExamples: [
+      {
+        countrySlug: 'united-states',
+        note: 'The United States shows territorial jurisdiction at its most fragmented: 17,541 general-purpose state and local law-enforcement agencies, about 67% of them local police departments and 17% sheriffs offices, each separately governed. Overlap is not an anomaly there; it is the ordinary condition.',
+      },
+      {
+        countrySlug: 'switzerland',
+        note: 'Switzerland has no national police force. Each canton polices its own territory under its own police law, and the federal office works alongside the cantonal forces rather than above them — jurisdiction distributed without a hierarchy to resolve it.',
+      },
+    ],
+    counterExamples: [
+      {
+        countrySlug: 'kenya',
+        note: 'Kenya devolved substantial government to 47 counties and kept policing national: the Constitution places police services, criminal law and correctional services with the national government. Sub-national government does not create sub-national police jurisdiction.',
+      },
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Jurisdiction is one word doing at least three jobs. It can mean the territory an agency may act in, the subject matter it may act on, or the legal authority under which it acts at all. Most confusion about policing comes from collapsing them.',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'Territorial jurisdiction',
+            description:
+              'Where the agency may act — a city, a county, a state, a whole country, or a defined network such as a railway.',
+          },
+          {
+            term: 'Subject-matter jurisdiction',
+            description:
+              'What it may act on. A federal investigative agency is usually defined this way: its authority follows a list of offences rather than a boundary on a map.',
+          },
+          {
+            term: 'Legal competence',
+            description:
+              'The instrument that creates the power in the first place — a constitution, a statute, a regional statute of autonomy. Two agencies in the same street may derive authority from different instruments.',
+          },
+          {
+            term: 'Administrative responsibility',
+            description:
+              'Who funds, staffs and directs the organisation. Distinct from who wrote the law it enforces.',
+          },
+          {
+            term: 'Operational responsibility',
+            description:
+              'Who actually attends and does the work, which is not always the body that holds the competence — see contract policing.',
+          },
+          {
+            term: 'Command authority',
+            description:
+              'Who may give an order. The most commonly assumed and least commonly present of these. Jurisdiction rarely implies command over anyone else.',
+          },
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is not',
+        text: 'This is an explanation of how authority is structured, not guidance for any encounter, and it is not legal advice. It does not describe how boundaries between agencies could be used to any person’s advantage, and it does not state the law of any country.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'Societies rarely design policing once. They add layers — a city force, then a state or provincial one, then a national body for offences that cross boundaries, then specialised agencies for networks and functions. Each layer is created by a different instrument for a different reason, and the result is not a hierarchy so much as an accumulation.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The alternative to overlap is worse. A boundary that no one may cross is a boundary an offence can be organised around, and a single agency with authority over everything is the arrangement most systems have deliberately avoided.',
+        claim: 'analysis',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'Two agencies can hold valid authority in the same place because their authority comes from different sources and covers different things. That is concurrent jurisdiction, and it is a design feature rather than a defect.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'A municipal force and a national force may both act in a city, one under local competence and the other under general national competence.',
+          'A federal agency may act anywhere in the country, but only on the offences its statute names.',
+          'A transport or network force may hold authority defined by infrastructure that crosses every local boundary on its route.',
+          'Where several agencies may act, which one does is normally settled by protocol, seniority of offence, or agreement — not by one commanding the other.',
+        ],
+      },
+      {
+        kind: 'paragraph',
+        text: 'The scale of this is easy to underestimate. In the United States there were 17,541 general-purpose state and local law-enforcement agencies at the 2018 census — roughly two-thirds local police departments and a sixth sheriffs offices — each separately governed rather than branches of one organisation.',
+        claim: 'fact',
+        sources: ['us-bjs-csllea-2018'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Switzerland shows the same plurality without a federal apex: the country has no national police force, each canton polices its own territory under its own police law, and the federal office of police states that it is not a superordinate authority but works alongside the cantonal forces.',
+        claim: 'fact',
+        sources: ['ch-fedpol'],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Only one agency can have jurisdiction in a given place.',
+        reality:
+          'Concurrent jurisdiction is normal. Several agencies may each hold valid authority over the same location for different matters, derived from different instruments.',
+      },
+      {
+        claim: 'The agency with the widest jurisdiction is in charge.',
+        reality:
+          'Breadth of jurisdiction is not seniority. A national agency may have authority over a narrow list of offences and none at all over the matter actually in front of a local officer.',
+      },
+      {
+        claim: 'Jurisdiction means the right to give orders to other agencies.',
+        reality:
+          'It almost never does. Authority to act and authority to command are separate, and most systems keep them separate deliberately.',
+      },
+      {
+        claim: 'Sub-national government implies sub-national police.',
+        reality:
+          'It does not. Kenya devolved substantial powers to 47 counties while keeping policing national, and Nigeria is a federation whose constitution forbids any police force other than the national one.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'list',
+        items: [
+          'Whether local government may create a police force at all is a constitutional question answered differently by different states.',
+          'Whether a national force has general competence everywhere, or only where no local force operates, varies.',
+          'France divides the question by authority rather than by map: municipal police agents act under the mayor for prevention and surveillance of public order, expressly without prejudice to the general competence of the national police.',
+          'Where several forces operate in one territory, the rules on which takes primacy for which offence are national and are not portable between countries.',
+        ],
+      },
+      {
+        kind: 'paragraph',
+        text: 'The French provision is a useful model of how these boundaries are actually drawn: the municipal tier is defined as an addition to national policing rather than a local replacement for it.',
+        claim: 'fact',
+        sources: ['fr-csi-l511-1'],
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'For a person affected by police action, the practical consequence of all this is narrow and important: the oversight body that can examine what happened follows the agency, not the place.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Establishing which agency acted comes before any complaint, and in a fragmented system it is genuinely hard.',
+          'A complaints body for one force commonly has no jurisdiction over another operating in the same street.',
+          'Where an agency acts outside its jurisdiction, the consequence is usually litigated as a question about the validity of what was done rather than as a disciplinary matter alone.',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Our reading',
+        text: 'Overlapping jurisdiction is usually discussed as inefficiency. Structurally it is closer to redundancy: several bodies with independent authority and no single point at which all of it can be switched off. That has real costs in coordination, and it is also the reason no one office can quietly stop a matter being pursued at all.',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [how policing is divided between levels of government](/law-enforcement/how-policing-is-divided-between-levels), [police command and coordination](/law-enforcement/police-command-and-coordination), and the [institution types reference](/institutions).',
+      },
+    ],
+  },
+
+  {
+    slug: 'how-policing-is-divided-between-levels',
+    title: 'How is policing divided between levels of government?',
+    shortTitle: 'Policing across levels of government',
+    question: 'How is policing divided between national, regional and local government?',
+    summary:
+      'Federations and unitary states allocate policing very differently, and having a level of government tells you nothing about whether it polices. This guide sets out the main patterns and the countries that break them.',
+    entityType: 'concept',
+    section: 'law-enforcement',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: ['police-jurisdiction', 'contract-policing', 'municipal-and-national-police'],
+    relatedInstitutions: ['state-police', 'national-police', 'federal-investigative-agency'],
+    sources: [
+      'us-bjs-csllea-2018',
+      'br-cf-1988',
+      'de-grundgesetz',
+      'ng-constitution',
+      'ke-constitution',
+      'unodc-cpcj',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-08-10',
+    publishedOn: '2026-08-10',
+    reviewedOn: '2026-08-10',
+    factsVerifiedOn: '2026-08-10',
+    readingTimeMinutes: 9,
+    keyTerms: ['police', 'law-enforcement', 'jurisdiction'],
+    uncertainty: [
+      'This guide describes allocation patterns, not a ranking. It does not claim that any distribution of policing is better than another, and it does not describe how any country performs.',
+    ],
+    countryExamples: [
+      {
+        countrySlug: 'united-states',
+        note: 'Policing is dispersed across 17,541 general-purpose state and local agencies, about two-thirds of them municipal police departments — with federal authority tied to federal offences by statute rather than sitting above them as a general tier.',
+      },
+      {
+        countrySlug: 'brazil',
+        note: 'Article 144 of the 1988 Constitution divides state policing by FUNCTION rather than by place: the polícias civis exercise judicial-police functions and investigate offences, the polícias militares hold ostensive policing and preservation of public order, and both answer to the state Governors.',
+      },
+      {
+        countrySlug: 'germany',
+        note: 'Germany separates who legislates from who administers. Criminal law and court organisation sit under concurrent legislative power while the Länder execute federal law in their own right — so state-level policing does not imply state-level criminal law.',
+      },
+    ],
+    counterExamples: [
+      {
+        countrySlug: 'nigeria',
+        note: 'Nigeria is a federation of 36 states whose constitution forecloses state police in terms: section 214(1) provides that "There shall be a police force for Nigeria … no other police force shall be established for the Federation or any part thereof".',
+      },
+      {
+        countrySlug: 'kenya',
+        note: 'Kenya devolved substantial competences to 47 counties and did not devolve policing: the Fourth Schedule keeps police services, criminal law and correctional services with the national government.',
+      },
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Every state has to decide which level of government is responsible for policing. The answer is set by constitutional design rather than by the size of the country, and it varies more than almost any other part of a justice system.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The single most useful thing to know is negative: **having a level of government does not imply that the level polices.** A federation may keep policing entirely national. A strongly devolved unitary state may keep it national too.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'A comparative page, not a national one',
+        text: 'The patterns below are drawn from several systems deliberately. Terms such as "federal", "state" and "local" mean materially different things between countries, and a page built on one country’s vocabulary would misdescribe the others.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'Policing is coercive, local in delivery and national in consequence, and the allocation question is really about which of those pressures a constitution chose to prioritise. Placing it locally ties decisions to the people affected; placing it nationally produces consistency of standards and powers.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Most systems answer with a mixture, and the mixture is rarely tidy — which is why the terminology travels so badly.',
+        claim: 'analysis',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'Four patterns recur, and several countries use more than one at once.',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'Dispersed sub-national policing',
+            description:
+              'Policing belongs to states or provinces and to municipalities, with a national body limited to specified offences. The United States is the clearest case, with 17,541 general-purpose state and local agencies at the 2018 census.',
+          },
+          {
+            term: 'Functional division at one level',
+            description:
+              'Sub-national policing exists but is split by function rather than territory. Brazil divides state policing between the polícias civis and the polícias militares under Article 144.',
+          },
+          {
+            term: 'National framework, sub-national administration',
+            description:
+              'One legal system, administered locally. Japan is the standard example: prefectural forces under a national framework, with no sub-national criminal law.',
+          },
+          {
+            term: 'Wholly national policing',
+            description:
+              'Policing stays with the centre regardless of how much else is devolved. Kenya and Nigeria are the clearest cases, and both are constitutionally explicit.',
+          },
+        ],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Germany adds a distinction the others obscure: the Basic Law separates who may legislate from who administers, placing criminal law and court organisation under concurrent legislative power while providing that the Länder execute federal laws in their own right.',
+        claim: 'fact',
+        sources: ['de-grundgesetz'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Brazil fixes the division in the constitutional text itself, listing the organs of public security and assigning the polícias civis judicial-police functions and the polícias militares ostensive policing and preservation of public order, both subordinate to the Governors.',
+        claim: 'fact',
+        sources: ['br-cf-1988'],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Federations always have sub-national police.',
+        reality:
+          'Nigeria is a federation of 36 states whose constitution provides that no police force other than the national one shall be established for any part of the Federation.',
+      },
+      {
+        claim: 'Devolution decentralises policing.',
+        reality:
+          'Kenya devolved substantial government to 47 counties while keeping police services, criminal law and corrections national. The two are separable and are frequently separated.',
+      },
+      {
+        claim: 'A national agency sits above local police.',
+        reality:
+          'Usually it holds different jurisdiction rather than superior authority. Where a national body does have a general supervisory role, that is a specific national arrangement rather than a consequence of being national.',
+      },
+      {
+        claim: '"State police" means the same thing in every federation.',
+        reality:
+          'It does not. Brazilian state policing is divided between two constitutionally distinct forces with different functions; American state policing is a single general force per state alongside county and municipal agencies.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'list',
+        items: [
+          'Whether criminal law itself is national or sub-national is a separate question from who polices, and the two do not track each other.',
+          'Whether a municipality may create its own force is set nationally, and in some countries it is prohibited.',
+          'Federal or national investigative bodies vary enormously in the breadth of the offence list that defines them.',
+          'Some systems place a coordinating body above the sub-national forces; others explicitly do not.',
+        ],
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'Allocation determines oversight. Where policing is sub-national, the complaints and inspection bodies usually are too — which means a country can contain many separate regimes with no common standard between them, and a route that exists in one region may not exist in the next.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Where policing is national, the oversight is normally national as well, which produces the opposite trade-off: one standard, and one body whose independence carries the whole weight.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Our reading',
+        text: 'Debate about centralised versus decentralised policing usually proceeds as though one is obviously more accountable. Neither is. Dispersion multiplies the number of bodies that can examine a force and the number of places a complaint can fail; centralisation does the reverse. What matters in a specific system is which bodies actually hold powers, not how many levels the map has.',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [what police jurisdiction means](/law-enforcement/police-jurisdiction), [contract policing](/law-enforcement/contract-policing), and [state police](/institutions/state-police).',
+      },
+    ],
+  },
+
+  {
+    slug: 'contract-policing',
+    title: 'What is contract policing?',
+    shortTitle: 'Contract policing',
+    question:
+      'What is contract policing, and does it mean the local government owns the force?',
+    summary:
+      'A government responsible for policing can deliver it by buying the service from another order of government. This guide explains the provider/client distinction, why it is not ownership, and how it differs from shared services.',
+    entityType: 'concept',
+    section: 'law-enforcement',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'how-policing-is-divided-between-levels',
+      'police-command-and-coordination',
+      'police-jurisdiction',
+    ],
+    relatedInstitutions: ['provincial-police', 'national-police'],
+    sources: ['ca-rcmp-contract', 'au-afp-actpolicing', 'ch-fedpol', 'unodc-cpcj'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-08-10',
+    publishedOn: '2026-08-10',
+    reviewedOn: '2026-08-10',
+    factsVerifiedOn: '2026-08-10',
+    readingTimeMinutes: 8,
+    keyTerms: ['police', 'jurisdiction', 'accountability'],
+    countryExamples: [
+      {
+        countrySlug: 'canada',
+        note: 'The canonical case. The RCMP provides contract policing to eight provinces (Ontario and Quebec have their own provincial services), three territories, and around 150 municipalities. Provinces and territories pay 70% of costs and the federal government 30%; municipalities pay 70% below 15,000 population and 90% above. The current agreements run to 31 March 2032, and the RCMP maintains national standards and policies across contract jurisdictions — the Force stays federal throughout.',
+      },
+      {
+        countrySlug: 'australia',
+        note: 'ACT Policing is the community policing arm of the Australian Federal Police, providing policing services to the Australian Capital Territory on behalf of the ACT Government. The Territory runs no force of its own, which is the same arrangement reached from a different constitutional starting point.',
+      },
+    ],
+    counterExamples: [
+      {
+        countrySlug: 'switzerland',
+        note: 'Switzerland is the contrast that makes the category clear. There is no national police force; each canton polices its own territory under its own police law, and the federal office states it is not a superordinate authority but works alongside the cantonal forces. That is cooperation between peers, not a service bought from a provider — shared, not contracted.',
+      },
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Contract policing is an arrangement in which the government responsible for policing does not run a force itself, but purchases the service from an institution belonging to another order of government under an agreement.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Three things stay separate throughout, and conflating them is the whole difficulty: who holds the RESPONSIBILITY, who OWNS the institution, and who DELIVERS the service.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'A service agreement, not a transfer',
+        text: 'A client government that contracts policing does not acquire the provider force. The provider remains owned, governed and disciplined by its own order of government, and it retains its own standards. The client funds and directs the service it has bought.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'Running a police force is expensive and specialised, and a small jurisdiction may hold the constitutional responsibility without having the scale to discharge it well. Contracting lets the responsibility stay where the constitution put it while the delivery comes from an organisation large enough to sustain training, forensics and specialist units.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The cost is a genuine one and is not hidden: the client buys a service governed by someone else, and the room to shape how that service works is narrower than owning a force would allow.',
+        claim: 'analysis',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'Client jurisdiction',
+            description:
+              'The government that holds the policing responsibility and buys the service. It sets local priorities and pays most of the cost.',
+          },
+          {
+            term: 'Provider institution',
+            description:
+              'The force that delivers. It remains part of, and governed by, its own order of government — which is why its national standards continue to apply inside the client jurisdiction.',
+          },
+          {
+            term: 'The agreement',
+            description:
+              'A funded, time-limited contract setting scope, cost-sharing and duration. In Canada the split is 70/30 between province or territory and the federal government, with municipalities paying 70% below 15,000 population and 90% above, under agreements running to 31 March 2032.',
+          },
+          {
+            term: 'What does not transfer',
+            description:
+              'Institutional ownership, discipline, and the provider’s own chain of command. The client is buying policing, not acquiring a police force.',
+          },
+        ],
+      },
+      {
+        kind: 'paragraph',
+        text: 'The Canadian arrangement states the provider/client split explicitly: the RCMP provides contract policing to eight provinces, three territories and some 150 municipalities, and as the national police force it maintains national standards and policies across those contract jurisdictions.',
+        claim: 'fact',
+        sources: ['ca-rcmp-contract'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Australia reaches the same shape differently: ACT Policing is described by the Australian Federal Police as its community policing arm, providing policing services to the Australian Capital Territory on behalf of the ACT Government.',
+        claim: 'fact',
+        sources: ['au-afp-actpolicing'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Contracted is not shared',
+        text: 'A shared service is one several jurisdictions run together as peers; a contracted service is one jurisdiction buying from another. Switzerland is the clearest contrast — no national force, cantonal policing under cantonal law, and a federal office that expressly works alongside rather than above.',
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'A province or city that contracts policing has its own police force.',
+        reality:
+          'It has policing. The force belongs to the provider and remains governed by it, which is why the provider’s national standards continue to apply.',
+      },
+      {
+        claim: 'Contract policing means the national government has taken over local policing.',
+        reality:
+          'The responsibility stays with the client government, which holds the competence, sets priorities and pays the larger share. What it has bought is delivery.',
+      },
+      {
+        claim: 'Contracted and shared arrangements are the same thing.',
+        reality:
+          'They are structurally opposite. Shared services are run jointly between peers; contracted services have a provider and a client, and a bill.',
+      },
+      {
+        claim: 'Every province or territory in a country arranges this the same way.',
+        reality:
+          'Canada is asymmetric: Ontario and Quebec run their own provincial services while eight provinces contract. Assuming uniformity within one country is the commonest error here.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'list',
+        items: [
+          'Whether contracting is available at all depends on there being a national or regional force willing and legally able to provide it.',
+          'Cost-sharing formulas differ, and in Canada they differ by population band within one country.',
+          'Agreements are time-limited, so the arrangement is periodically renegotiable rather than permanent.',
+          'Whether the oversight body examining the contracted service is the client’s or the provider’s is a national question, and the answer is frequently the provider’s.',
+        ],
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'Contract policing splits the thing a complainant needs to identify. The service is local; the institution is not. Where a resident of a contracted jurisdiction complains, the body with jurisdiction is commonly the provider’s national one rather than a local body.',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Our reading',
+        text: 'Contract policing is often described as a jurisdiction "having" a national force, and both halves of that are wrong: it does not have it, and what it has bought is a service. The arrangement is best read as a purchase, which is also why the funding split and the expiry date are the most informative facts about it — they are the terms on which a government’s policing can be renegotiated.',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [provincial police](/institutions/provincial-police), [how policing is divided between levels of government](/law-enforcement/how-policing-is-divided-between-levels), and [Canada](/countries/canada).',
+      },
+    ],
+  },
+
+  {
+    slug: 'police-command-and-coordination',
+    title: 'Command and coordination between police agencies',
+    shortTitle: 'Command and coordination',
+    question: 'When police agencies work together, is one of them in charge?',
+    summary:
+      'Cooperation between agencies is routinely mistaken for hierarchy. This guide separates command from coordination, and explains why a national body can set standards for forces it cannot give orders to.',
+    entityType: 'concept',
+    section: 'law-enforcement',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: ['police-jurisdiction', 'contract-policing', 'how-police-are-held-to-account'],
+    relatedInstitutions: [
+      'national-police',
+      'prefectural-police',
+      'federal-investigative-agency',
+    ],
+    sources: ['jp-npa-police-of-japan-2020', 'ch-fedpol', 'au-afp-act', 'unodc-cpcj'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-08-10',
+    publishedOn: '2026-08-10',
+    reviewedOn: '2026-08-10',
+    factsVerifiedOn: '2026-08-10',
+    readingTimeMinutes: 8,
+    keyTerms: ['police', 'accountability', 'oversight'],
+    countryExamples: [
+      {
+        countrySlug: 'japan',
+        note: 'The National Public Safety Commission and the National Police Agency form the national police organisation, the Commission supervising the Agency, while operational policing is administered by the prefectures. National coordination and standard-setting, exercised through a civilian commission, is not the same thing as commanding each operational act.',
+      },
+      {
+        countrySlug: 'switzerland',
+        note: 'The federal office of police states plainly that it is not a superordinate authority but works alongside the cantonal forces, each canton policing its own territory under its own police law. Cooperation between peers, with no apex to appeal to.',
+      },
+    ],
+    counterExamples: [
+      {
+        countrySlug: 'france',
+        note: 'France is the contrast: a national police force with a single chain of command under national authority, alongside a gendarmerie defined by statute as an armed force instituted to ensure the execution of the laws. Where a system genuinely is hierarchical, command really does run downwards — which is why hierarchy has to be established for a given system rather than assumed from the existence of a national body.',
+      },
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Command is the authority to give an order that must be obeyed. Coordination is the arrangement by which separate bodies align what they do without any of them acquiring that authority. Both look like cooperation from outside, and they are not the same.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'Why the distinction matters to a reader',
+        text: 'It decides who is answerable. If two agencies coordinate, each remains responsible for its own decisions. If one commands the other, responsibility travels up the chain. Describing coordination as command misplaces accountability, and describing command as coordination hides it.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'Offences cross the boundaries that jurisdiction draws, so systems need some way for separate forces to act coherently. What they mostly build is coordination, because the alternative — giving one force authority over the others — would undo the reason the forces were separated in the first place.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The result is a set of arrangements that produce cooperation without concentrating authority: shared standards, shared information, mutual assistance, and temporary command structures created for a specific operation and dissolved afterwards.',
+        claim: 'analysis',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'Standard-setting',
+            description:
+              'A national body defines training, procedure or equipment standards that separate forces adopt. Influence over how policing is done, without authority over any particular decision.',
+          },
+          {
+            term: 'Information sharing',
+            description:
+              'Access to records and intelligence. Frequently the most consequential form of cooperation, and it confers no command at all.',
+          },
+          {
+            term: 'Mutual assistance',
+            description:
+              'One force supports another on request. The requesting force normally retains responsibility for the operation.',
+          },
+          {
+            term: 'Joint operations',
+            description:
+              'A temporary command structure created for a specific operation, under which officers of several forces work. It ends with the operation; the underlying legal authority of each force is unchanged.',
+          },
+          {
+            term: 'Supervision',
+            description:
+              'A body reviewing another’s conduct after the fact. Distinct from command, which is contemporaneous and directive.',
+          },
+        ],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Japan is the clearest worked example of coordination that is not command: the National Public Safety Commission supervises the National Police Agency, which together constitute the national police organisation, while policing itself is administered at prefectural level.',
+        claim: 'fact',
+        sources: ['jp-npa-police-of-japan-2020'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Switzerland states the negative directly. The country has no national police force, each canton is responsible for policing its own territory under its own police law, and the federal office of police is not a superordinate authority but works alongside those forces.',
+        claim: 'fact',
+        sources: ['ch-fedpol'],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'If a national agency assists a local force, it has taken over the case.',
+        reality:
+          'Assistance is normally provided on request, with the requesting force retaining responsibility. Which body leads is settled by law and protocol, not by which is larger.',
+      },
+      {
+        claim: 'National standards mean national command.',
+        reality:
+          'A body can set training and procedural standards for forces it has no authority to direct. Japan’s national organisation coordinates and supervises while prefectures administer the policing.',
+      },
+      {
+        claim: 'Sharing information means one agency controls the other.',
+        reality:
+          'Information sharing is the most common form of cooperation and confers no authority whatsoever over another force’s decisions.',
+      },
+      {
+        claim: 'A federal police force is the boss of local police.',
+        reality:
+          'In most systems it holds different jurisdiction rather than superior authority — and in Switzerland the federal office says in terms that it is not superordinate.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'list',
+        items: [
+          'Some systems place a national body with genuine directive powers over sub-national forces; most do not, and the difference must be established rather than assumed.',
+          'Where a prosecutor or investigating judge directs investigations, a form of command exists that is judicial rather than police.',
+          'Joint operation arrangements differ in whether a single commander is appointed and what happens to officers’ home-force powers while seconded.',
+          'A unitary state with one national force may have genuine hierarchical command throughout, which is a different situation from any of the above.',
+        ],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Australia illustrates a federal force whose own authority is statutory and bounded rather than supervisory over the state forces.',
+        claim: 'fact',
+        sources: ['au-afp-act'],
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'Because responsibility follows command, the question "who was in charge?" is the first thing an oversight body has to settle after a joint operation — and it is frequently contested precisely because coordination leaves each force answerable for its own part.',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Our reading',
+        text: 'Coverage of multi-agency policing tends to describe cooperation as though a hierarchy were operating quietly in the background. Usually there is none, and that is deliberate: the arrangements exist to produce coherence without producing a single authority over all of it. The cost is coordination failure; the benefit is that no single office can direct every force at once.',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [what police jurisdiction means](/law-enforcement/police-jurisdiction), [prefectural police](/institutions/prefectural-police), and [how police are held to account](/law-enforcement/how-police-are-held-to-account).',
+      },
+    ],
+  },
+
+  {
+    slug: 'municipal-and-national-police',
+    title: 'How municipal and national police relate',
+    shortTitle: 'Municipal and national police',
+    question: 'If a city has its own police, what does the national force still do there?',
+    summary:
+      'A municipal force is normally an addition to national policing rather than a local replacement for it. This guide explains how the two tiers divide work, and why the division is by authority rather than by map.',
+    entityType: 'concept',
+    section: 'law-enforcement',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'police-jurisdiction',
+      'how-policing-is-divided-between-levels',
+      'local-police-governance',
+    ],
+    relatedInstitutions: ['municipal-police', 'national-police', 'autonomous-community-police'],
+    sources: ['fr-csi-l511-1', 'es-lofcs', 'jp-npa-police-of-japan-2020', 'unodc-cpcj'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-08-10',
+    publishedOn: '2026-08-10',
+    reviewedOn: '2026-08-10',
+    factsVerifiedOn: '2026-08-10',
+    readingTimeMinutes: 7,
+    keyTerms: ['police', 'jurisdiction', 'public-safety'],
+    countryExamples: [
+      {
+        countrySlug: 'france',
+        note: 'Article L511-1 of the Code de la sécurité intérieure places municipal police agents under the mayor’s authority for prevention and surveillance of public order, tranquillity, security and public health — and opens by preserving the general competence of the national police. The municipal tier is defined in law as an addition, not a substitute.',
+      },
+      {
+        countrySlug: 'spain',
+        note: 'Organic Law 2/1986 structures policing in three tiers — state security forces, the police of the autonomous communities, and local police — so a Spanish city force operates in a territory where a regional force may also be present. Three tiers, not two.',
+      },
+    ],
+    counterExamples: [
+      {
+        countrySlug: 'japan',
+        note: 'Japanese municipalities do not own ordinary police forces. Policing is administered at prefectural level under a national framework, so the presence of city government implies nothing about a city police department. "Municipality" and "municipal police" are not linked.',
+      },
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Where both exist, a municipal force and a national force are not two halves of one organisation. They are separate bodies with different powers, different employers and different accountability, operating in the same streets.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The division between them is usually drawn by AUTHORITY and SUBJECT rather than by territory. The national force does not stop at the city limit; the municipal force is added inside it, with a narrower set of powers.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'Some policing problems are irreducibly local — markets, noise, parking, licensed premises, neighbourhood disorder — and a national force has little reason to prioritise them. A municipal tier ties those decisions to the authority that answers to the people affected.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'What that tier is not given is the serious end of criminal policing, which almost everywhere stays national or regional. That is why municipal forces so often hold narrower powers rather than the same powers in a smaller area.',
+        claim: 'analysis',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'The French provision is unusually explicit about the relationship and is worth reading closely: municipal police agents act under the authority of the mayor on tasks within the mayor’s competence relating to prevention and surveillance of public order, tranquillity, security and public health — expressly without prejudice to the general competence of the national police.',
+        claim: 'fact',
+        sources: ['fr-csi-l511-1'],
+      },
+      {
+        kind: 'list',
+        items: [
+          'The national force keeps general competence everywhere, including inside the municipality.',
+          'The municipal force is defined by the mayor’s competences, which are narrower than the criminal law.',
+          'Serious criminal investigation normally sits with the national or regional force regardless of where the offence occurred.',
+          'Where a third tier exists, as in Spain, the picture is not two forces dividing work but three bodies with distinct legal bases.',
+        ],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Spain sets that three-tier structure out in its organic law on security forces, naming state security forces, the police of the autonomous communities, and local police.',
+        claim: 'fact',
+        sources: ['es-lofcs'],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'A city police force replaces the national police inside the city.',
+        reality:
+          'It does not. In France the provision creating municipal police expressly preserves the general competence of the national police in the same territory.',
+      },
+      {
+        claim: 'Municipal officers have the same powers as national officers.',
+        reality:
+          'Municipal powers are normally narrower, defined by the local authority’s competences rather than by the criminal law.',
+      },
+      {
+        claim: 'Every country with municipalities has municipal police.',
+        reality:
+          'Japan administers policing at prefectural level and its municipalities do not own ordinary police forces. The existence of city government implies nothing about a city force.',
+      },
+      {
+        claim: 'Where two forces operate, one is a junior branch of the other.',
+        reality:
+          'They answer to different authorities. A municipal agent answers to the mayor, not to the national force operating in the same street.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'list',
+        items: [
+          'Whether a municipality may create a force at all is set nationally, and in many countries it may not.',
+          'The powers available to municipal officers vary from full police powers to a narrow regulatory set.',
+          'Whether municipal officers are armed is a national policy question answered differently across neighbouring countries.',
+          'A third regional tier may exist between municipal and national, as in Spain, which changes the relationship entirely.',
+        ],
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'The practical consequence is the one that recurs across this cluster: the complaint route follows the force. A municipal officer and a national officer standing in the same street may be answerable to entirely different bodies, and the person affected frequently cannot tell them apart.',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Our reading',
+        text: 'The phrase "local police" invites a reader to imagine a small version of the national force. The French drafting suggests a better model: a distinct authority created for the mayor’s responsibilities, sharing streets with a national force that never left. Two tiers occupying one place is the normal case, not an anomaly.',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [municipal police](/institutions/municipal-police), [local police governance](/law-enforcement/local-police-governance), and [France](/countries/france).',
+      },
+    ],
+  },
+
+  {
+    slug: 'local-police-governance',
+    title: 'Who controls local police?',
+    shortTitle: 'Local police governance',
+    question: 'Who controls local police — a mayor, a council, a commission, or a ministry?',
+    summary:
+      'There is no general answer, and that is the answer. This guide sets out the arrangements that actually recur, and why "local police report to the mayor" is true in some countries and false in most.',
+    entityType: 'concept',
+    section: 'law-enforcement',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'municipal-and-national-police',
+      'police-command-and-coordination',
+      'how-police-are-held-to-account',
+    ],
+    relatedInstitutions: ['municipal-police', 'prefectural-police', 'national-police'],
+    sources: [
+      'fr-csi-l511-1',
+      'jp-npa-police-of-japan-2020',
+      'es-lofcs',
+      'unodc-e4j-police-accountability',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-08-10',
+    publishedOn: '2026-08-10',
+    reviewedOn: '2026-08-10',
+    factsVerifiedOn: '2026-08-10',
+    readingTimeMinutes: 7,
+    keyTerms: ['police', 'accountability', 'oversight'],
+    uncertainty: [
+      'Governance arrangements are among the most nationally specific parts of any policing system, and this guide describes recurring patterns rather than a comparative survey. It does not establish who controls the police in any country not named here.',
+    ],
+    countryExamples: [
+      {
+        countrySlug: 'france',
+        note: 'Municipal police agents act under the authority of the mayor, on tasks within the mayor’s competence relating to prevention and surveillance of public order, tranquillity, security and public health — an unusually direct statutory link between an elected local official and a police body.',
+      },
+      {
+        countrySlug: 'japan',
+        note: 'Japan interposes a civilian commission rather than a politician: the National Public Safety Commission supervises the National Police Agency, and policing is administered at prefectural level. Control is exercised through a commission structure, not by a mayor.',
+      },
+    ],
+    counterExamples: [
+      {
+        countrySlug: 'spain',
+        note: 'Spain shows that "local" control is not a single relationship either: local police sit in a three-tier structure alongside autonomous-community police and state security forces, so the question "who controls the police here?" has up to three simultaneous answers depending on which force is meant.',
+      },
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Control of a police force is several things: who appoints its head, who sets its priorities, who funds it, and who may examine what it did. Different bodies frequently hold different pieces, and the arrangement is set nationally.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'No universal rule, on purpose',
+        text: 'Statements such as "local police report to the mayor" are true in some systems and simply wrong in others. This page describes patterns that recur and names the countries they are drawn from; it does not offer a rule to apply to an unfamiliar system.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'Police hold coercive power, so someone has to answer for how it is used — and whoever that is acquires influence over policing itself. Every governance design is a judgement about how close that person should be to elected politics.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Placing control with an elected official makes policing answerable to voters and exposes it to electoral pressure. Placing it with a commission or a ministry does the reverse. Neither is neutral, and the international guidance treats the accountability framework as something to be designed rather than assumed.',
+        claim: 'analysis',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'Direct authority of an elected local official',
+            description:
+              'A mayor or equivalent directs the force within that official’s own competences. France states this arrangement in statute for municipal police.',
+          },
+          {
+            term: 'Civilian commission',
+            description:
+              'A standing body interposed between the police organisation and the government of the day. Japan uses public safety commissions at national and prefectural level.',
+          },
+          {
+            term: 'Ministerial control',
+            description:
+              'A national or regional ministry directs the force. Common where policing is national.',
+          },
+          {
+            term: 'Board or council',
+            description:
+              'A mixed body, sometimes including elected members, holding appointment and budget powers without day-to-day direction.',
+          },
+        ],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Whatever the arrangement, United Nations guidance frames control as only one part of accountability, which it treats as operating before, during and after the act — through professional standards and codes of conduct as much as through whoever sits at the top.',
+        claim: 'fact',
+        sources: ['unodc-e4j-police-accountability'],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Local police everywhere report to the mayor.',
+        reality:
+          'This is a French-style arrangement, not a general one. Japan places supervision with a civilian commission; in many countries local forces do not exist at all.',
+      },
+      {
+        claim: 'Whoever pays for a force controls it.',
+        reality:
+          'Funding, appointment, direction and review are frequently held by different bodies — and under contract policing the funder is not the owner.',
+      },
+      {
+        claim: 'Political control means political interference.',
+        reality:
+          'Democratic control of policing is a deliberate design feature in many systems. The relevant question is what the controlling body may and may not direct, not whether control exists.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'list',
+        items: [
+          'Whether the head of a force is appointed, elected, or a career officer promoted internally differs fundamentally.',
+          'Whether the controlling body may direct operations, or only set priorities and budgets, is the distinction that matters most and is rarely visible from the title of the body.',
+          'Where several tiers of police exist, each may answer to a different order of government in the same city.',
+        ],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Spain’s three-tier structure is the clearest illustration that "local control" can mean several different relationships operating simultaneously in one territory.',
+        claim: 'fact',
+        sources: ['es-lofcs'],
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'Control and oversight are not the same thing, and conflating them is common. The body that directs a force is frequently not the body that can investigate a complaint against it — and where it is both, that is itself a structural weakness worth noticing.',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Our reading',
+        text: 'Because governance arrangements are so various, the useful question about an unfamiliar system is not "who is in charge?" but "what may that body actually direct?". A commission that appoints a chief and approves a budget has real power and no ability to change what happens on a street corner; a minister with directive authority is a different object entirely, and both are routinely described with the same word.',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [how municipal and national police relate](/law-enforcement/municipal-and-national-police), [how police are held to account](/law-enforcement/how-police-are-held-to-account), and [municipal police](/institutions/municipal-police).',
+      },
+    ],
+  },
+
+  {
+    slug: 'sheriffs-and-city-police',
+    title: 'Sheriffs and city police in the United States',
+    shortTitle: 'Sheriffs and city police (US)',
+    question: 'What is the difference between a sheriff’s office and a city police department?',
+    summary:
+      'A United States page, deliberately. The sheriff/city-police distinction is a feature of American county government with no general equivalent elsewhere, and even inside the country the office varies by state.',
+    entityType: 'concept',
+    section: 'law-enforcement',
+    jurisdiction: ['US'],
+    temporalScope: 'current',
+    related: [
+      'police-jurisdiction',
+      'how-policing-is-divided-between-levels',
+      'police-and-law-enforcement-difference',
+    ],
+    relatedInstitutions: ['municipal-police', 'state-police'],
+    sources: ['us-bjs-agency-characteristics', 'us-bjs-csllea-2018', 'fr-csi-l511-1'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-08-10',
+    publishedOn: '2026-08-10',
+    reviewedOn: '2026-08-10',
+    factsVerifiedOn: '2026-08-10',
+    readingTimeMinutes: 7,
+    keyTerms: ['police', 'law-enforcement', 'jurisdiction'],
+    uncertainty: [
+      'The functions of a sheriff’s office are set by state law and vary between states. This page states what the national statistical sources support — that the head of a sheriff’s office is usually elected and that the office has countywide jurisdiction — and does not assert that every county has a sheriff or that sheriffs perform identical functions nationally.',
+    ],
+    countryExamples: [
+      {
+        countrySlug: 'united-states',
+        note: 'At the 2018 census there were 17,541 general-purpose state and local law-enforcement agencies: about 67% local police departments, 17% sheriffs offices, and 15% primary state, tribal, special-jurisdiction agencies, constables and marshals. City police departments are the largest category by count; sheriffs offices are the second.',
+      },
+    ],
+    counterExamples: [
+      {
+        countrySlug: 'france',
+        note: 'France has no analogue. Local policing there is the municipal police agent acting under the mayor’s authority, and there is no elected county-level law-enforcement office. The sheriff/city-police distinction does not travel — it is a feature of American county government rather than a general category of local policing.',
+      },
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'A city police department is created by a municipality and polices that municipality. A sheriff’s office is a county-level body, and in the United States its head is usually an elected official rather than an appointed chief.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The most useful structural difference is the basis of the office. A police chief is appointed by and answerable to a city government; a sheriff is generally empowered by the state to serve the county, and where the office is elective, answers to county voters.',
+        claim: 'fact',
+        sources: ['us-bjs-agency-characteristics'],
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'A United States page, and not a global one',
+        text: 'This page is scoped to the United States on purpose. "Sheriff" names categorically different offices in different countries — a court officer, a judicial office, a ceremonial position — and treating the American office as the general case is one of the commonest errors in comparative writing about policing.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'American policing was built from the county and the municipality upwards rather than from a national force downwards, and both offices survive from that history. The result is that two bodies with different legal bases and different constituencies frequently police overlapping ground.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'That overlap is the ordinary condition rather than an anomaly: with 17,541 general-purpose state and local agencies, a single county can contain a sheriff’s office, several municipal departments, and state and special-jurisdiction agencies as well.',
+        claim: 'fact',
+        sources: ['us-bjs-csllea-2018'],
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'Territory',
+            description:
+              'A sheriff’s office has countywide jurisdiction; a city department polices the municipality. Where a city sits inside a county, both may have authority in the same streets.',
+          },
+          {
+            term: 'How the head of the agency holds office',
+            description:
+              'The head of a sheriff’s office is usually an elected official. A municipal chief is normally appointed by the city government.',
+          },
+          {
+            term: 'Legal basis',
+            description:
+              'Sheriffs offices are generally empowered by the state to serve counties and independent cities; municipal departments are created under municipal authority.',
+          },
+          {
+            term: 'Functions',
+            description:
+              'These vary by state and are the part most often over-generalised. Jail operation, court security, service of process, patrol and criminal investigation are distributed differently between the two offices in different states.',
+          },
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'uncertainty',
+        title: 'What the national sources do not establish',
+        text: 'The statistical sources cited here support the elected character of the office and its county-level jurisdiction. They do not support a claim that every county has a sheriff, that all sheriffs run jails or provide court security, or that the office performs identical functions from state to state. Those are matters of state law, and this page does not assert them.',
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'All sheriffs run jails and provide court security.',
+        reality:
+          'These functions are assigned by state law and are distributed differently between sheriffs offices, municipal departments and separate corrections agencies depending on the state.',
+      },
+      {
+        claim: 'A sheriff outranks a city police chief.',
+        reality:
+          'They head separate agencies with different legal bases and different constituencies. Neither commands the other.',
+      },
+      {
+        claim: 'Every county has a sheriff and every city has a police department.',
+        reality:
+          'Neither is universal. Arrangements differ by state, and some municipalities are policed by a county or state agency rather than by a department of their own.',
+      },
+      {
+        claim: 'The sheriff/city-police split is how local policing works generally.',
+        reality:
+          'It is an American arrangement. France, for example, has no equivalent elected county-level office — local policing there is the municipal agent under the mayor.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'list',
+        items: [
+          'State law determines what a sheriff’s office does, so the office differs across the fifty states.',
+          'Some states place jail operation with the sheriff; others with a separate corrections agency.',
+          'Whether the sheriff is elected, and for how long, is set by state law and in some places by county charter.',
+          'Where a municipality has no department of its own, county or state agencies police it directly.',
+        ],
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'The accountability routes differ with the office. An elected sheriff answers to county voters at an election and to the courts in law; an appointed chief answers to the city government that appointed them. Neither route is a substitute for the other, and a complaint sent to the wrong agency is simply returned.',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Our reading',
+        text: 'The elective character of most sheriffs is usually discussed as a question about politics. Structurally it is a question about who may remove the office-holder: an appointed chief can be dismissed by the appointing authority, and an elected sheriff generally cannot be, between elections. That single difference explains more about how the two offices behave than any list of duties.',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [what police jurisdiction means](/law-enforcement/police-jurisdiction), [municipal police](/institutions/municipal-police), and [the United States dossier](/countries/united-states).',
+      },
+    ],
+  },
 ];
