@@ -753,6 +753,39 @@ export interface GlossaryTerm {
   review: ReviewStatus;
   updatedOn: string;
   reviewedOn?: string;
+
+  /* ------------------------------------------------------------------------
+     Wave 3 additions. Present ONLY on terms that carry a standalone route.
+     ------------------------------------------------------------------------
+     A glossary entry and a glossary PAGE are different objects. An entry is a
+     definition a reader meets in passing; a page asserts that this platform has
+     something to say about the concept. Most of the 32 terms are one or two
+     sentences resting on a single source — correct for a glossary, and not a
+     page. These fields are what a term must acquire to earn a route, and
+     `validateGlossaryPublication` is what checks it acquired them.
+     ------------------------------------------------------------------------ */
+
+  /** The reader's question, in the reader's words. */
+  question?: string;
+  /**
+   * Where the concept actually operates: the institutional and legal machinery
+   * that gives it effect, as distinct from what the words mean.
+   */
+  context?: string;
+  /**
+   * Why the concept exists — the problem it was invented to solve. Kept separate
+   * from `definition` so a page never has to pad the definition to feel complete.
+   */
+  purpose?: string;
+  countryExamples?: CountryExample[];
+  /** Institution-type slugs where this concept does its work. */
+  relatedInstitutions?: string[];
+  /** Profession slugs that apply or are bound by it. */
+  relatedProfessions?: string[];
+  /** What we could not establish. Rendered to the reader. */
+  uncertainty?: string[];
+  /** ISO date the institutional facts were checked against sources. */
+  factsVerifiedOn?: string;
 }
 
 export interface CountryProfile {
@@ -861,6 +894,20 @@ export interface InstitutionType {
   /** Historical background, where it is sourced. Never inferred from the present. */
   historyNote?: string;
   countryExamples?: CountryExample[];
+  /**
+   * Countries at the SAME geographic level that do NOT own this function.
+   *
+   * Added by Wave 3 for the sub-national policing cluster, where the failure mode is
+   * specific and severe: a reader who sees "state police" explained with American,
+   * Brazilian and Australian examples will conclude that having states implies having
+   * state police. Nigeria has 36 states and no state police forces; Kenya has 47 counties
+   * and policing is a national function. Those facts are not a footnote to the pattern —
+   * they are what shows it is a pattern rather than a rule.
+   *
+   * Typed separately from `countryExamples` so the distinction survives editing and can be
+   * asserted by test, rather than depending on a reader noticing a "but" in the prose.
+   */
+  counterExamples?: CountryExample[];
   /** Profession slugs typically found inside this institution type. */
   relatedProfessions?: string[];
   /** Other institution-type slugs it is adjacent to or confused with. */

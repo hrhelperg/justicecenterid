@@ -74,6 +74,16 @@ const MUST_404 = [
   '/professions/criminal-investigator',
   '/professions/gendarme',
   '/professions/sheriff',
+  // Wave 3: glossary terms that are entries, not pages (owned elsewhere or too thin).
+  '/glossary/due-process',
+  '/glossary/rule-of-law',
+  '/glossary/gendarmerie',
+  '/glossary/public-safety',
+  '/glossary/evidence',
+  '/glossary/warrant',
+  // Wave 3 sub-national candidates merged, aliased or rejected.
+  '/institutions/regional-police',
+  '/institutions/territorial-police',
   // ISO codes are not URL segments; the slug is the English name.
   '/countries/fr',
   '/countries/us',

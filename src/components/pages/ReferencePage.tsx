@@ -8,7 +8,15 @@ import { ContentPage } from './ContentPage';
 import { getDossier } from '@/content/dossiers';
 import { getInstitutionType, institutionPath } from '@/content/institutions';
 import { getProfession, professionPath } from '@/content/professions';
-import type { CountryExample, InstitutionType, Profession } from '@/content/types';
+import { glossaryPath } from '@/content/glossary';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { definedTermSchema } from '@/lib/jsonld';
+import type {
+  CountryExample,
+  GlossaryTerm,
+  InstitutionType,
+  Profession,
+} from '@/content/types';
 
 /**
  * The shared template for the two Wave 2 reference families: institution types and
@@ -243,6 +251,7 @@ export function InstitutionTypePage({ institution }: { institution: InstitutionT
       ) : null}
 
       <CountryExamples examples={[...(institution.countryExamples ?? [])]} />
+      <CounterExamples examples={[...(institution.counterExamples ?? [])]} />
       <Connections
         institutions={institution.relatedInstitutions}
         professions={institution.relatedProfessions}
@@ -346,6 +355,131 @@ export function ProfessionPage({ profession }: { profession: Profession }) {
       />
       <Uncertainty items={profession.uncertainty} />
       <SourceList ids={profession.sources} />
+    </ContentPage>
+  );
+}
+
+/* -------------------------------------------------------------------------- */
+/* Counterexamples                                                            */
+/* -------------------------------------------------------------------------- */
+
+/**
+ * Countries at the same level that do NOT own the function.
+ *
+ * Rendered as its own section rather than folded into the examples, because the whole
+ * point is that a reader should not be able to skim the examples and conclude the pattern
+ * is a rule. Given its own heading, it is the section that answers "so does every
+ * federation have state police?" — and the answer is no.
+ */
+function CounterExamples({ examples }: { examples: CountryExample[] }) {
+  const resolved = examples
+    .map((example) => ({ example, dossier: getDossier(example.countrySlug) }))
+    .filter((entry) => entry.dossier !== undefined);
+
+  if (resolved.length === 0) return null;
+
+  return (
+    <section aria-labelledby="counterexamples" className="mt-10">
+      <SectionHeading
+        id="counterexamples"
+        description="Countries with government at the same level that do not own this function. The pattern above is a pattern, not a rule."
+      >
+        Where the pattern does not hold
+      </SectionHeading>
+      <dl className="max-w-measure space-y-5">
+        {resolved.map(({ example, dossier }) => (
+          <div key={example.countrySlug}>
+            <dt className="font-semibold text-ink">
+              <Link href={`/countries/${example.countrySlug}`} className="link-inline">
+                {dossier!.name}
+              </Link>
+            </dt>
+            <dd className="mt-1 text-ink-muted">{example.note}</dd>
+          </div>
+        ))}
+      </dl>
+    </section>
+  );
+}
+
+/* -------------------------------------------------------------------------- */
+/* Glossary term                                                              */
+/* -------------------------------------------------------------------------- */
+
+/**
+ * A routed glossary term.
+ *
+ * Deliberately the shortest of the three templates. A term page answers one question and
+ * stops; it is not a guide, and padding it to feel like one is how a glossary becomes an
+ * SEO essay farm. Definition first, then why the concept exists, then where it actually
+ * operates, then how far it travels between systems.
+ */
+export function GlossaryTermPage({ term }: { term: GlossaryTerm }) {
+  const path = glossaryPath(term);
+
+  return (
+    <ContentPage
+      path={path}
+      eyebrow="Glossary"
+      title={term.term}
+      lead={term.definition}
+      description={term.definition}
+      width="measure"
+      meta={
+        <ReviewMeta
+          review={term.review}
+          updatedOn={term.updatedOn}
+          reviewedOn={term.reviewedOn}
+        />
+      }
+    >
+      <JsonLd data={definedTermSchema(term, path)} />
+
+      {term.alternateTerms && term.alternateTerms.length > 0 ? (
+        <p className="max-w-measure text-ink-muted">
+          Also called: {term.alternateTerms.join(', ')}.
+        </p>
+      ) : null}
+
+      {term.purpose ? (
+        <Prose id="purpose" heading="Why the concept exists">
+          <p>{term.purpose}</p>
+        </Prose>
+      ) : null}
+
+      {term.context ? (
+        <Prose id="context" heading="Where it operates">
+          <p>{term.context}</p>
+        </Prose>
+      ) : null}
+
+      {term.expandedNote ? (
+        <Prose id="note" heading="Worth knowing">
+          <p>{term.expandedNote}</p>
+        </Prose>
+      ) : null}
+
+      {term.jurisdictionNote ? (
+        <Prose id="variation" heading="How far it travels">
+          <p>{term.jurisdictionNote}</p>
+        </Prose>
+      ) : null}
+
+      {term.falseFriends && term.falseFriends.length > 0 ? (
+        <Bullets
+          id="false-friends"
+          heading="Commonly confused with"
+          items={[...term.falseFriends]}
+        />
+      ) : null}
+
+      <CountryExamples examples={[...(term.countryExamples ?? [])]} />
+      <Connections
+        institutions={term.relatedInstitutions}
+        professions={term.relatedProfessions}
+      />
+      <Uncertainty items={term.uncertainty} />
+      <SourceList ids={term.sources} />
     </ContentPage>
   );
 }

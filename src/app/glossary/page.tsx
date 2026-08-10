@@ -1,10 +1,12 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { ContentPage } from '@/components/pages/ContentPage';
 import { REVIEW_LABELS } from '@/components/content/ReviewMeta';
 import { Badge } from '@/components/ui/Badge';
 import { SectionHeading } from '@/components/ui/SectionHeading';
-import { PUBLISHED_GLOSSARY } from '@/content/glossary';
+import { PUBLISHED_GLOSSARY, glossaryPath } from '@/content/glossary';
+import { ROUTED_GLOSSARY } from '@/content/glossary-routes';
 import { getSources } from '@/content/sources';
 import { definedTermSetSchema, jsonLdGraph } from '@/lib/jsonld';
 import { buildMetadata } from '@/lib/metadata';
@@ -20,6 +22,8 @@ export const metadata: Metadata = buildMetadata({
 });
 
 export default function GlossaryPage() {
+  const routedSlugs = new Set(ROUTED_GLOSSARY.map((term) => term.slug));
+
   return (
     <>
       <JsonLd data={jsonLdGraph([definedTermSetSchema(PUBLISHED_GLOSSARY, PATH)])} />
@@ -43,6 +47,12 @@ export default function GlossaryPage() {
             {PUBLISHED_GLOSSARY.length} terms. Each entry lists the sources that support it and
             its current review state.
           </p>
+          <p className="mt-4 text-ink-muted">
+            {routedSlugs.size} of them have a page of their own, linked from the term. The rest
+            are entries rather than pages — either because a longer guide on this site already
+            answers the same question, or because the term is a definition and does not have
+            more to say. We would rather tell you that than pad a definition into an article.
+          </p>
         </div>
 
         <div className="mt-12 max-w-measure">
@@ -51,7 +61,16 @@ export default function GlossaryPage() {
             {PUBLISHED_GLOSSARY.map((term) => (
               <div key={term.slug} id={term.slug} className="py-6">
                 <dt className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-                  <span className="text-lg font-semibold text-ink">{term.term}</span>
+                  {routedSlugs.has(term.slug) ? (
+                    <Link
+                      href={glossaryPath(term)}
+                      className="link-inline text-lg font-semibold"
+                    >
+                      {term.term}
+                    </Link>
+                  ) : (
+                    <span className="text-lg font-semibold text-ink">{term.term}</span>
+                  )}
                   {term.alternateTerms && term.alternateTerms.length > 0 && (
                     <span className="text-sm text-ink-subtle">
                       also: {term.alternateTerms.join(', ')}

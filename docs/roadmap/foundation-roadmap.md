@@ -592,3 +592,32 @@ that fix. Details in `docs/audits/knowledge-expansion-wave-2-qa.md`.
   passed / 4 skipped; route matrix 361/361. **Client JS +65 bytes** for thirteen pages.
 
 Delivered on `feat/knowledge-expansion-wave-2`. Not merged, not deployed.
+
+## Phase 17 — Knowledge Expansion Wave 3 (delivered 2026-08-10)
+
+Routes the glossary and closes the sub-national policing gap Wave 2 identified. Details in
+`docs/audits/knowledge-expansion-wave-3-qa.md`.
+
+- **40 candidates assessed → 9 routes.** Five glossary terms, four sub-national institution
+  types; 3 merged or aliased, 27 hub-only, 1 rejected.
+- **Glossary routing is derived from the gate, not declared by a flag.** All 32 terms are
+  already `fact-checked`, so the Wave 2 discriminator carries no information here. A term is
+  routed if and only if `validateGlossaryPublication` passes — there is no field an author
+  can set to publish a page.
+- **27 terms stay hub-only, and that is the correct result.** Fifteen restate a page that
+  already exists (`due-process`, `rule-of-law`, `gendarmerie`, `public-safety` and more —
+  `prosecutor` is owned twice); twelve are one-sentence definitions on a single source. The
+  ownership map is itself tested: every guide it names must actually exist.
+- **The sub-national tier carries typed counterexamples.** Nigeria's constitution forbids
+  any police force other than the national one; Kenya's Fourth Schedule keeps policing
+  national despite 47 counties; France has administrative tiers that police nothing. Typed
+  rather than prose so the distinction survives editing and is asserted by test.
+- **Both critical invariants mutation-tested**, and two adversarial findings fixed by
+  strengthening: the Nigeria counterexample now quotes s 214(1) verbatim, and the Brazil
+  example now states Article 144's actual division between _polícias civis_ and _polícias
+  militares_.
+- Validation: 2347 unit tests / 55 files; **342 routes / 342 sitemap / 344 pages**; e2e 280
+  passed / 4 skipped; route matrix 378/378. **Client JS +29 bytes**, CSS unchanged, and no
+  new sources required.
+
+Delivered on `feat/knowledge-expansion-wave-3`. Not merged, not deployed.

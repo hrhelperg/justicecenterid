@@ -99,6 +99,8 @@ const PRIORITY: Record<PublicRouteKind, number> = {
    */
   institution: 0.6,
   profession: 0.6,
+  /* A definition page sits below a topic guide in the hierarchy it explains. */
+  'glossary-term': 0.5,
   'country-module': 0.6,
   hub: 0.6,
   platform: 0.3,
