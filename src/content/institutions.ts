@@ -454,7 +454,7 @@ export const INSTITUTION_TYPES: readonly InstitutionType[] = [
       },
       {
         countrySlug: 'brazil',
-        note: 'The 1988 Constitution establishes the federation of Union, States, Federal District and Municipalities as autonomous entities and fixes policing competences in the constitutional text. Brazilian state policing is divided by function between distinct bodies, which is why "state police" should not be read as a single organisation on the American model.',
+        note: 'Article 144 of the 1988 Constitution lists the organs of public security and divides state policing by FUNCTION between two distinct bodies subordinate to the state Governors: the polícias civis, which exercise judicial-police functions and investigate criminal offences, and the polícias militares, which hold ostensive policing and the preservation of public order. "State police" in Brazil therefore names two institutions with different work, not one force on the American model.',
       },
       {
         countrySlug: 'australia',
@@ -464,7 +464,7 @@ export const INSTITUTION_TYPES: readonly InstitutionType[] = [
     counterExamples: [
       {
         countrySlug: 'nigeria',
-        note: 'Nigeria is a federation of 36 states, and its states do not operate their own police forces: policing is constitutionally a federal function. Having states plainly does not imply having state police.',
+        note: 'Nigeria is a federation of 36 states whose constitution forecloses state police in terms: section 214(1) provides that "There shall be a police force for Nigeria … no other police force shall be established for the Federation or any part thereof". Having states does not imply having state police — here it is expressly prohibited.',
       },
     ],
     relatedProfessions: ['patrol-officer', 'detective'],
