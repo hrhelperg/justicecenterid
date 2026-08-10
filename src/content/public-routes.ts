@@ -20,6 +20,8 @@
 import { COUNTRY_MODULES } from './country-modules';
 import { PUBLISHED_DOSSIERS, publishedModules } from './dossiers';
 import { PUBLISHED_GUIDES, guidePath } from './guides';
+import { glossaryPath } from './glossary';
+import { ROUTED_GLOSSARY } from './glossary-routes';
 import { ROUTED_INSTITUTION_TYPES, institutionPath } from './institutions';
 import { ROUTED_PROFESSIONS, professionPath } from './professions';
 import { SECTIONS } from './sections';
@@ -33,7 +35,8 @@ export type PublicRouteKind =
   | 'country'
   | 'country-module'
   | 'institution'
-  | 'profession';
+  | 'profession'
+  | 'glossary-term';
 
 export interface PublicRoute {
   path: string;
@@ -109,6 +112,21 @@ function buildRoutes(): PublicRoute[] {
       title: institution.shortTitle ?? institution.title,
       lastModified: institution.updatedOn,
       parent: '/institutions',
+    });
+  }
+
+  /*
+   * Glossary detail routes (Wave 3). ROUTED_GLOSSARY is derived from the publication gate
+   * rather than from a flag — see src/content/glossary-routes.ts — so a term appears here
+   * only if it actually carries the substance a page needs.
+   */
+  for (const term of ROUTED_GLOSSARY) {
+    routes.push({
+      path: glossaryPath(term),
+      kind: 'glossary-term',
+      title: term.term,
+      lastModified: term.updatedOn,
+      parent: '/glossary',
     });
   }
 

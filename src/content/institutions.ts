@@ -402,6 +402,264 @@ export const INSTITUTION_TYPES: readonly InstitutionType[] = [
   },
 
   /* ------------------------------------------------------------------------
+     Wave 3 — the sub-national policing tier.
+
+     Wave 2 deferred this whole family, and it was the largest genuine gap in the
+     institution taxonomy. It is also the family where false universalisation does
+     the most damage, because English supplies one word for arrangements that are
+     constitutionally unalike: a US state police force, a Brazilian Polícia Civil,
+     a Japanese prefectural force and a Catalan force answer to different orders of
+     government under different constitutional theories.
+
+     Every record here therefore carries `counterExamples` — countries at the same
+     geographic level that do NOT own the function — because the useful thing to
+     know about sub-national policing is that having sub-national government does
+     not imply having sub-national police.
+     ------------------------------------------------------------------------ */
+  {
+    slug: 'state-police',
+    title: 'State police',
+    shortTitle: 'State police',
+    question: 'What is a state police force, and does every federation have one?',
+    summary:
+      'A police force established by and accountable to a constituent state of a federation, rather than to the federal government or a municipality.',
+    section: 'law-enforcement',
+    purpose:
+      'In a federation, policing has to sit somewhere. Where the constitution leaves it to the constituent states, each state builds its own force, and the result is a police landscape that is genuinely plural rather than a single national service with regional offices. The arrangement follows from how competence was divided at the founding, not from a judgement about what size a police force ought to be.',
+    distinguishingFeatures: [
+      'Established under the law of a constituent state, not of the federation',
+      'Accountable to a state government or a state-level authority rather than to a national ministry',
+      'General policing jurisdiction within the state, alongside municipal forces where those exist',
+    ],
+    typicalMandate: [
+      'General policing across the state, frequently with a rural and inter-urban emphasis where municipal forces cover the cities',
+      'Traffic and highway policing on state road networks',
+      'State-level investigative and specialist capabilities',
+    ],
+    commonConfusions: [
+      'With a federal agency, which holds jurisdiction over specified offences nationwide rather than general policing of one state',
+      'With a highway patrol. Some states run a single force doing both; others separate general policing from traffic enforcement into distinct organisations; others use neither term.',
+      'That the English phrase denotes one arrangement. Brazil’s state-level Polícia Civil and Polícia Militar are constitutionally distinct bodies with different functions, and neither maps onto the American usage.',
+    ],
+    governanceNote:
+      'Authority runs to the state, and the constitutional route matters. In the United States the states hold reserved powers, so state policing is an exercise of authority never given to the federation. In Brazil the 1988 Constitution is explicit about the federation of Union, States, Federal District and Municipalities as autonomous entities and sets out policing competences in the constitutional text itself, so the boundary between federal and state policing is a constitutional question rather than a statutory one.',
+    accountabilityNote:
+      'Oversight is normally state-level too, which means a federation can contain many separate complaints and inspection regimes with no single national standard between them. That is a structural consequence of the design rather than a defect in it, and it is why a complaint route that works in one state may not exist in the next.',
+    presenceNote:
+      'Present in some federations and absent from others. A federation may place policing with the states, with the federation, or split it by function — and the existence of state governments tells you nothing about which. See the counterexamples.',
+    countryExamples: [
+      {
+        countrySlug: 'united-states',
+        note: 'Policing is dispersed across thousands of separate agencies, with state-level forces sitting alongside county and municipal ones; federal authority is tied to federal offences by statute rather than being a superior tier of general policing.',
+      },
+      {
+        countrySlug: 'brazil',
+        note: 'The 1988 Constitution establishes the federation of Union, States, Federal District and Municipalities as autonomous entities and fixes policing competences in the constitutional text. Brazilian state policing is divided by function between distinct bodies, which is why "state police" should not be read as a single organisation on the American model.',
+      },
+      {
+        countrySlug: 'australia',
+        note: 'The states and the Northern Territory run their own forces — the Northern Territory Police Force is the Territory’s own — while the Australian Capital Territory’s policing is delivered by the federal police under arrangement. One country, both models.',
+      },
+    ],
+    counterExamples: [
+      {
+        countrySlug: 'nigeria',
+        note: 'Nigeria is a federation of 36 states, and its states do not operate their own police forces: policing is constitutionally a federal function. Having states plainly does not imply having state police.',
+      },
+    ],
+    relatedProfessions: ['patrol-officer', 'detective'],
+    relatedInstitutions: [
+      'municipal-police',
+      'federal-investigative-agency',
+      'provincial-police',
+    ],
+    uncertainty: [
+      'This page describes a pattern of constitutional allocation, not a shared institutional model. The American, Brazilian and Australian forces cited here differ in function, command and oversight, and none is a template for the others.',
+    ],
+    temporalScope: 'current',
+    sources: [
+      'us-bjs-csllea-2018',
+      'br-cf-1988',
+      'au-nt-police',
+      'ng-constitution',
+      'unodc-cpcj',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    updatedOn: '2026-08-10',
+    reviewedOn: '2026-08-10',
+    factsVerifiedOn: '2026-08-10',
+  },
+  {
+    slug: 'provincial-police',
+    title: 'Provincial police',
+    shortTitle: 'Provincial police',
+    question: 'What is a provincial police force, and does every province have one?',
+    summary:
+      'A police force belonging to a province, in systems where policing is a provincial responsibility — a responsibility a province may discharge by running a force or by buying the service from another order of government.',
+    section: 'law-enforcement',
+    purpose:
+      'Where a constitution assigns policing to the provinces, each province must decide how to deliver it. Owning a force is one answer. Contracting the service from a national force is another, and it is the answer most Canadian provinces have chosen — which is why this category is about who holds the RESPONSIBILITY, not about who wears the uniform.',
+    distinguishingFeatures: [
+      'Policing is a provincial competence under the constitution or a founding statute',
+      'The province may own a force, contract delivery, or combine both across its territory',
+      'Municipal forces frequently operate inside the same province under separate arrangements',
+    ],
+    typicalMandate: [
+      'General policing outside municipalities that maintain their own forces',
+      'Provincial highways and inter-municipal matters',
+      'Provincial investigative and specialist capabilities',
+    ],
+    commonConfusions: [
+      'That a national force policing a province makes the province’s policing national. Where the province holds the competence and buys the service, the responsibility remains provincial.',
+      'That every province in a country is arranged the same way. Provincial policing is frequently asymmetric within one country.',
+      'With regional police in unitary states, where a region administers a service it does not constitutionally own.',
+    ],
+    governanceNote:
+      'Canada is the clearest worked case. Policing is a provincial responsibility under the Constitution Act 1867, and the Royal Canadian Mounted Police delivers it under contract to eight provinces, three territories and around 150 municipalities — while Ontario and Quebec maintain their own provincial services. The contracted force remains federally governed; the province funds and directs the service without owning the institution.',
+    accountabilityNote:
+      'Asymmetry inside one country produces asymmetric oversight. Where a province owns its force, provincial complaint and inspection bodies apply; where it contracts a national force, the reviewing body may be a federal one. A resident cannot infer the route from the province they live in without checking.',
+    presenceNote:
+      'Present where a constitution assigns policing to provinces. Provinces that hold the competence may still not own a force, and provinces in unitary states may have no policing competence at all.',
+    countryExamples: [
+      {
+        countrySlug: 'canada',
+        note: 'Quebec maintains its own provincial service, the Sûreté du Québec, while eight provinces and three territories receive policing from the RCMP under cost-shared agreements — the competence is provincial in every case, the delivery is not.',
+      },
+    ],
+    counterExamples: [
+      {
+        countrySlug: 'kenya',
+        note: 'Kenya devolved substantial government to 47 counties, and policing was not among the devolved functions: the Constitution’s Fourth Schedule places police services, criminal law and correctional services with the national government. Strong sub-national government without sub-national police.',
+      },
+    ],
+    relatedProfessions: ['patrol-officer'],
+    relatedInstitutions: ['state-police', 'municipal-police', 'national-police'],
+    temporalScope: 'current',
+    sources: [
+      'ca-sq',
+      'ca-rcmp-contract',
+      'ca-constitution-1867',
+      'ke-constitution',
+      'unodc-cpcj',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    updatedOn: '2026-08-10',
+    reviewedOn: '2026-08-10',
+    factsVerifiedOn: '2026-08-10',
+  },
+  {
+    slug: 'prefectural-police',
+    title: 'Prefectural police',
+    shortTitle: 'Prefectural police',
+    question: 'What is prefectural policing, and is it the same as state police?',
+    summary:
+      'Policing administered at the prefectural level within a unitary state, under a single national legal framework rather than under separate sub-national law.',
+    section: 'law-enforcement',
+    purpose:
+      'A unitary state can still decentralise administration without dividing sovereignty. Prefectural policing does exactly that: officers are employed and deployed locally, while the law they enforce, the standards they meet and the coordination between forces remain national. It is decentralised delivery of a national function, not a federal division of authority.',
+    distinguishingFeatures: [
+      'Administered at prefectural level inside a unitary state, so there is no separate sub-national criminal law',
+      'A national body coordinates standards, training and inter-prefectural matters',
+      'Civilian supervision exercised through public safety commissions rather than by a minister directly',
+    ],
+    typicalMandate: [
+      'General policing within the prefecture',
+      'Investigation, traffic and public order under nationally set law',
+    ],
+    commonConfusions: [
+      'With state police in a federation. This is the most consequential confusion on this page: prefectures are not sovereign, they hold no legislative power over criminal law, and prefectural forces are not the counterpart of American or Brazilian state forces.',
+      'That national coordination means national command of day-to-day policing',
+    ],
+    governanceNote:
+      'Japan interposes commissions rather than ministers. The National Public Safety Commission and the National Police Agency constitute the national police organisation, with the Commission supervising the Agency, while operational policing is administered by the prefectures. The arrangement is national framework, local administration, civilian supervision — three separate ideas that a single phrase like "prefectural police" tends to collapse.',
+    accountabilityNote:
+      'Supervision through a commission is itself an accountability design: it puts a civilian body between the police organisation and the government of the day. Whether that produces more or less effective oversight than a ministerial model is an empirical question this platform does not answer, and the design is described here rather than assessed.',
+    presenceNote:
+      'A specific arrangement rather than a general category. Terms such as prefecture, department and province name administrative tiers in many countries without implying that policing is administered at that tier.',
+    countryExamples: [
+      {
+        countrySlug: 'japan',
+        note: 'The National Public Safety Commission and the National Police Agency form the national organisation, the Commission supervising the Agency, while the prefectures administer operational policing — one national legal system with local administration, and nothing like state-by-state legal variation.',
+      },
+    ],
+    counterExamples: [
+      {
+        countrySlug: 'france',
+        note: 'France also has strong sub-national administrative tiers, and they do not administer general policing: the national police holds general competence, while municipal agents act under the mayor with narrower powers under the Code de la sécurité intérieure. A comparable administrative geography producing a completely different policing arrangement.',
+      },
+    ],
+    relatedProfessions: ['patrol-officer'],
+    relatedInstitutions: ['national-police', 'state-police'],
+    uncertainty: [
+      'Prefectural policing is described here from the Japanese case, which is the system this platform has researched. The term is not asserted to describe arrangements in any other country that uses the word prefecture.',
+    ],
+    temporalScope: 'current',
+    sources: ['jp-npa-police-of-japan-2020', 'fr-csi-l511-1', 'unodc-cpcj'],
+    status: 'published',
+    review: 'fact-checked',
+    updatedOn: '2026-08-10',
+    reviewedOn: '2026-08-10',
+    factsVerifiedOn: '2026-08-10',
+  },
+  {
+    slug: 'autonomous-community-police',
+    title: 'Autonomous-community police',
+    shortTitle: 'Autonomous-community police',
+    question: 'What is an autonomous-community police force, and does every region have one?',
+    summary:
+      'A police force belonging to an autonomous region of a decentralised unitary state, created where the region’s own statute of autonomy provides for one.',
+    section: 'law-enforcement',
+    purpose:
+      'A decentralised unitary state can grant a region genuine competences without becoming a federation. Where policing is among them, the region may create its own force — but the competence flows from that region’s statute of autonomy, which is why the arrangement is asymmetric by design rather than by accident.',
+    distinguishingFeatures: [
+      'Created under a region’s own statute of autonomy, not under a uniform national rule',
+      'Coexists with national security forces operating in the same territory',
+      'Asymmetric: regions of the same state may have full forces, limited bodies, or none',
+    ],
+    typicalMandate: [
+      'General policing within the community, where the statute so provides',
+      'Functions shared or divided with the national forces under national framework law',
+    ],
+    commonConfusions: [
+      'That every autonomous community has an equivalent force. It does not, and assuming so is the single commonest error about Spanish policing.',
+      'With federal state police. The state remains unitary; the competence is devolved rather than reserved.',
+      'With municipal or local police, which sit at a different tier again.',
+    ],
+    governanceNote:
+      'Spain’s Organic Law 2/1986 structures security forces in three tiers — the state security forces, the police of the autonomous communities, and local police — and provides for autonomous communities to create their own forces where their statutes so provide. The Constitution frames the same asymmetry, recognising the right to autonomy of nationalities and regions within the indissoluble unity of the Spanish nation.',
+    accountabilityNote:
+      'Where several forces operate in one territory under different orders of government, identifying which body acted is the precondition for using any complaint route at all — and it is harder here than in a two-tier system. Oversight follows the force rather than the place.',
+    presenceNote:
+      'Specific to decentralised unitary states whose regions hold devolved policing competence. The existence of an autonomous or devolved region implies nothing about whether it polices.',
+    countryExamples: [
+      {
+        countrySlug: 'spain',
+        note: 'Organic Law 2/1986 names three tiers and provides for the autonomous communities that so provide in their statutes to create their own police forces — the conditional wording is the point, and it is why Spanish policing is asymmetric across communities.',
+      },
+    ],
+    counterExamples: [
+      {
+        countrySlug: 'kenya',
+        note: 'Kenya’s 47 counties hold substantial devolved competences, and policing is not one of them — the Fourth Schedule keeps police services national. Devolution and policing competence are separable, and in Kenya they are separated.',
+      },
+    ],
+    relatedProfessions: ['patrol-officer'],
+    relatedInstitutions: ['national-police', 'municipal-police', 'gendarmerie'],
+    uncertainty: [
+      'This page describes the Spanish arrangement, which is the decentralised unitary system this platform has researched. It does not establish how devolved policing works in any other state, and it makes no claim about which Spanish communities currently operate which bodies beyond the framework the cited law sets out.',
+    ],
+    temporalScope: 'current',
+    sources: ['es-lofcs', 'es-constitution', 'ke-constitution', 'unodc-cpcj'],
+    status: 'published',
+    review: 'fact-checked',
+    updatedOn: '2026-08-10',
+    reviewedOn: '2026-08-10',
+    factsVerifiedOn: '2026-08-10',
+  },
+
+  /* ------------------------------------------------------------------------
      HUB-ONLY records: published summaries, deliberately not routed.
 
      The source registry contains no border, customs, coast-guard or maritime

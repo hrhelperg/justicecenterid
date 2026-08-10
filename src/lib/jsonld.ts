@@ -173,3 +173,29 @@ export function jsonLdGraph(nodes: (JsonLdObject | null)[]): JsonLdObject {
     '@graph': nodes.filter((node): node is JsonLdObject => node !== null),
   };
 }
+
+/**
+ * A single glossary term as its own DefinedTerm node (Wave 3).
+ *
+ * Distinct from `definedTermSetSchema`, which describes the whole glossary on the hub. A
+ * routed term needs a node whose `@id` is its own URL, and it declares `inDefinedTermSet`
+ * so the relationship to the hub survives — the term page and the hub describe the same
+ * object at different scopes rather than competing for it.
+ *
+ * Deliberately minimal: name, description, url, the set it belongs to. No invented
+ * relationships, and nothing that would imply this platform is an official body.
+ */
+export function definedTermSchema(term: GlossaryTerm, path: string): JsonLdObject {
+  return {
+    '@type': 'DefinedTerm',
+    '@id': `${absoluteUrl(path)}#term`,
+    name: term.term,
+    description: term.definition,
+    url: absoluteUrl(path),
+    inLanguage: SITE.locale,
+    inDefinedTermSet: { '@id': `${absoluteUrl('/glossary')}#glossary` },
+    ...(term.alternateTerms && term.alternateTerms.length > 0
+      ? { alternateName: term.alternateTerms }
+      : {}),
+  };
+}

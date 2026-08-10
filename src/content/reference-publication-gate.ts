@@ -1,4 +1,4 @@
-import type { CountryExample, InstitutionType, Profession } from './types';
+import type { CountryExample, GlossaryTerm, InstitutionType, Profession } from './types';
 
 /**
  * The publication gate for routed reference pages — institution types and professions.
@@ -174,6 +174,111 @@ export function validateProfessionPublication(
   }
   if ((profession.relatedInstitutions ?? []).length === 0) {
     problems.push('links to no institution, so the knowledge graph has a dead end');
+  }
+
+  return problems;
+}
+
+/**
+ * The glossary gate (Wave 3).
+ *
+ * Unlike institutions and professions, glossary routing is NOT decided by a `review`
+ * flag — every one of the 32 terms is already `fact-checked`, so a flag would carry no
+ * information. Routing is instead **derived from this function**: a term is routed if and
+ * only if it satisfies every condition below.
+ *
+ * That inverts the usual relationship in a useful way. There is no field an author can set
+ * to publish a page; the only way to route a term is to give it the substance the gate
+ * asks for. The Wave 3 audit found that 27 of 32 terms do not have it, and the honest
+ * consequence is that they stay on the hub.
+ *
+ * `duplicateOfGuideSlugs` is the condition that does the most work. Roughly a third of the
+ * glossary restates a published long-form guide — `due-process`, `rule-of-law`, `justice`,
+ * `criminal-investigation`, `forensic-science` and more. Routing those would put two URLs
+ * on this platform competing for one query, which is the failure the cannibalization
+ * matrices exist to prevent.
+ */
+export interface GlossaryPublicationContext extends ReferencePublicationContext {
+  /**
+   * Slugs of terms whose intent is already owned by a published long-form guide,
+   * an institution page, a profession page, or a section route. Supplied by the caller
+   * so the gate stays pure data and the ownership map lives with the glossary.
+   */
+  ownedElsewhere: readonly string[];
+}
+
+export function validateGlossaryPublication(
+  term: GlossaryTerm,
+  ctx: GlossaryPublicationContext,
+): string[] {
+  const problems: string[] = [];
+
+  if (ctx.ownedElsewhere.includes(term.slug)) {
+    problems.push('its intent is already owned by another published route');
+  }
+
+  if (term.definition.trim().length === 0) {
+    problems.push('has no definition');
+  }
+
+  /*
+   * A one-sentence definition is a glossary entry, not a page. The brief is explicit that
+   * such terms must not be routed, and this is where that is enforced rather than judged.
+   */
+  if (!term.context || term.context.trim().length === 0) {
+    problems.push('has no institutional context, so it is a definition rather than a page');
+  }
+  if (!term.purpose || term.purpose.trim().length === 0) {
+    problems.push('does not state what problem the concept solves');
+  }
+  if (!term.question || term.question.trim().length === 0) {
+    problems.push('has no reader question');
+  }
+  if (!term.jurisdictionNote || term.jurisdictionNote.trim().length === 0) {
+    problems.push('has no jurisdiction note, and every routed concept varies by system');
+  }
+
+  if (term.sources.length < 2) {
+    problems.push(`cites ${term.sources.length} source(s); a routed page needs at least 2`);
+  }
+  for (const id of term.sources) {
+    if (!ctx.knownSourceIds.includes(id)) {
+      problems.push(`cites unknown source "${id}"`);
+    }
+  }
+
+  if (term.related.length < 2) {
+    problems.push('relates to fewer than two other concepts');
+  }
+
+  if (term.review !== 'fact-checked') {
+    problems.push(`is "${term.review}" rather than fact-checked`);
+  }
+  if (!term.reviewedOn || !ISO_DATE.test(term.reviewedOn)) {
+    problems.push('has no ISO reviewedOn date');
+  }
+  if (!term.factsVerifiedOn || !ISO_DATE.test(term.factsVerifiedOn)) {
+    problems.push('has no ISO factsVerifiedOn date');
+  }
+
+  const examples = term.countryExamples ?? [];
+  if (examples.length === 0) {
+    problems.push('has no country example, so the concept is never anchored to a real system');
+  }
+  for (const example of examples) {
+    if (!ctx.publishedCountrySlugs.includes(example.countrySlug)) {
+      problems.push(`country example "${example.countrySlug}" is not a published dossier`);
+    }
+    if (example.note.trim().length === 0) {
+      problems.push(`country example "${example.countrySlug}" has no note`);
+    }
+  }
+
+  if (ctx.routePaths) {
+    const path = `/glossary/${term.slug}`;
+    if (!ctx.routePaths.includes(path)) {
+      problems.push(`published but has no registered route (${path})`);
+    }
   }
 
   return problems;
