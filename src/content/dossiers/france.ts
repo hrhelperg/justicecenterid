@@ -445,9 +445,9 @@ export const FRANCE: CountryDossier = {
       status: 'published',
       review: 'fact-checked',
       safetyReview: 'not-required',
-      updatedOn: '2026-07-24',
-      reviewedOn: '2026-07-24',
-      factsVerifiedOn: '2026-07-24',
+      updatedOn: '2026-08-10',
+      reviewedOn: '2026-08-10',
+      factsVerifiedOn: '2026-08-10',
       temporalScope: 'current',
       sources: [
         'fr-constitution-1958',
@@ -456,24 +456,137 @@ export const FRANCE: CountryDossier = {
         'fr-csi-l511-1',
         'fr-justice-courts',
         'fr-justice-parquet',
+        'fr-decret-2013-784-igpn',
+        'fr-arrete-2013-igpn-organisation',
+        'fr-igpn-signalement',
+        'fr-code-defense-iggn',
+        'fr-arrete-2025-iggn',
+        'fr-loi-organique-2011-333',
+        'fr-ddd-deontologie-securite',
+        'fr-loi-2007-1545-cglpl',
+        'fr-cglpl-role',
+        'fr-csi-r434-1',
       ],
       blocks: [
         {
           kind: 'paragraph',
-          text: 'The France pages rest on six sources: the Constitution, three legislative provisions, and two official Ministry of Justice pages. Every one was read directly and confirmed to say what it is cited for, on 24 July 2026.',
+          text: 'The France pages rest on sixteen sources: the Constitution, ten legislative or regulatory instruments, and five official government or institutional pages. Every one was read directly and confirmed to say what it is cited for. The first six were verified on 24 July 2026; the oversight sources, and a re-verification of the Constitution for Articles 65 and 71-1, on 10 August 2026.',
           claim: 'fact',
         },
         {
           kind: 'callout',
           variant: 'note',
           title: 'Why "it returned HTTP 200" is not verification',
-          text: 'Two of these sources sit on hosts that refuse automated requests: legifrance.gouv.fr and the interior ministry return an error to a script while serving the document normally to a reader. A status-code check would have wrongly rejected the most authoritative French legal sources available, just as a status-code check elsewhere wrongly accepts a page that no longer contains the cited text. Each source below records how it was verified, and only "content confirmed" means the document was actually read.',
+          text: 'Most of these sources sit on hosts that refuse automated requests: legifrance.gouv.fr and the interior ministry return an error to a script while serving the document normally to a reader. A status-code check would have wrongly rejected the most authoritative French legal sources available, just as a status-code check elsewhere wrongly accepts a page that no longer contains the cited text. The rule that follows is applied strictly: an automated refusal is not evidence against a source, and nothing is cited from a page that could not actually be read. Each source below records how it was verified, and only "content confirmed" means the document was read.',
         },
         {
           kind: 'paragraph',
           text: 'The full register, including the precise scope and the stated limitations of each source, is published in the repository at docs/research/france-source-register.md. Limitations are recorded there in the same detail as the claims, because a source used beyond its scope is the failure mode this platform is built to avoid.',
           claim: 'fact',
         },
+      ],
+    },
+    {
+      moduleId: 'oversight',
+      title: 'Oversight and accountability in France',
+      summary:
+        'Who examines the police nationale and the gendarmerie nationale — two inspections general inside the forces, and two independent authorities outside them — and why position and power run in opposite directions.',
+      status: 'published',
+      review: 'fact-checked',
+      safetyReview: 'not-required',
+      updatedOn: '2026-08-10',
+      reviewedOn: '2026-08-10',
+      factsVerifiedOn: '2026-08-10',
+      temporalScope: 'current',
+      sources: [
+        'fr-decret-2013-784-igpn',
+        'fr-arrete-2013-igpn-organisation',
+        'fr-igpn-signalement',
+        'fr-code-defense-iggn',
+        'fr-arrete-2025-iggn',
+        'fr-loi-organique-2011-333',
+        'fr-ddd-deontologie-securite',
+        'fr-loi-2007-1545-cglpl',
+        'fr-cglpl-role',
+        'fr-csi-r434-1',
+        'fr-constitution-1958',
+      ],
+      relatedGuides: ['who-investigates-police', 'how-police-are-held-to-account'],
+      blocks: [
+        {
+          kind: 'callout',
+          variant: 'scope',
+          title: 'This page is about oversight of the police, and it uses French categories',
+          text: 'It covers the bodies that examine the police nationale and the gendarmerie nationale. The French names are used first and translated second, because the closest English words — internal affairs, inspectorate, oversight body — describe institutions that are not the same shape as these. Discipline of judges and prosecutors is a separate system and is named here only to mark the boundary.',
+        },
+        {
+          kind: 'paragraph',
+          text: "France's arrangement has a feature that is easy to state and easy to get backwards: the bodies inside the police hold the investigative powers, and the bodies outside it do not. The two inspections générales are services of the forces they examine, and one of them can open a criminal investigation on its own initiative. The two independent authorities sit wholly outside the police, and neither can investigate a crime or impose a sanction. Being outside is not the same as being more powerful.",
+          claim: 'analysis',
+        },
+        {
+          kind: 'definitionList',
+          items: [
+            {
+              term: 'IGPN — Inspection générale de la Police nationale (internal)',
+              description:
+                'Under the décret of 28 August 2013, in the version in force since 1 July 2023, the IGPN "est un service actif de la direction générale de la police nationale" — a service of the force it examines, headed by a directeur des services actifs. It covers the services of the direction générale de la police nationale, the préfecture de police and, under conditions, the DGSI. It carries a general mission of inspection, study, audit and advice; it conducts judicial investigations "d\'initiative ou sur instruction de l\'autorité judiciaire"; it receives "les plaintes et dénonciations"; and it conducts administrative investigations on the instruction of the Minister of the Interior, the director general, the DGSI or the préfet de police.',
+            },
+            {
+              term: 'IGGN — Inspection générale de la Gendarmerie nationale (internal)',
+              description:
+                'The Code de la défense provides that "Le directeur général de la gendarmerie nationale dispose de l\'inspection générale de la gendarmerie nationale". Its current attributions come from the arrêté of 23 April 2025, which abrogated the arrêté of 15 January 2019. It inspects, audits, studies and evaluates across the whole administration of the force; it is charged with observance of the deontology rules; it opens administrative investigations "sur instruction ou d\'initiative"; it informs the judicial authority where the failings found may constitute a criminal offence; it conducts the judicial investigations entrusted to it; and it collects and handles "les doléances que lui adressent les particuliers".',
+            },
+            {
+              term: 'Défenseur des droits — Defender of Rights (external, general mandate)',
+              description:
+                'Established by Article 71-1 of the Constitution, appointed by the President of the Republic for a single non-renewable six-year term, and reporting on his activity to the President and to Parliament. The organic law of 29 March 2011 describes him as an "autorité administrative indépendante" who "ne reçoit et ne sollicite, dans l\'exercice de ses attributions, aucune instruction". Security deontology is one of five mandates, and it covers security activity generally rather than policing specifically — national and municipal police, gendarmes, prison staff, customs officers, public-transport surveillance agents, stewarding services and private security employees are all inside it. He may require explanations and documents, carry out verifications on premises, recommend, enjoin, publish a special report where an injunction is not followed, refer facts to the authority holding the disciplinary power, and inform the procureur de la République. He cannot impose a sanction.',
+            },
+            {
+              term: 'CGLPL — Contrôleur général des lieux de privation de liberté (external, general mandate)',
+              description:
+                'Created by the law of 30 October 2007 as an independent authority receiving instructions from no authority, charged with verifying the conditions in which people deprived of liberty are held and transferred. He may visit "à tout moment" any place where a public authority deprives someone of liberty, and the institution\'s own account of its remit includes police, gendarmerie and customs custody premises. Any person may bring facts to his attention. He issues opinions and recommendations and publishes an annual report, and has no power to sanction. This is the only external body here with a standing right of physical access to police custody.',
+            },
+          ],
+        },
+        {
+          kind: 'callout',
+          variant: 'analysis',
+          title: 'An “inspection générale” is not an “inspectorate”',
+          text: 'The words look like cognates and the institutions are not the same category. Where English-speaking systems use “inspectorate” they usually mean a body outside the police that inspects it. A French inspection générale is a directorate inside the force, belonging to its director general. Reading the French term through the English one inverts the single most important fact about it.',
+        },
+        {
+          kind: 'paragraph',
+          text: 'The two inspections are also not copies of each other, and the difference runs in opposite directions depending on the kind of case. The IGPN may open a criminal investigation on its own initiative, but needs an instruction to open an administrative one. The IGGN may open an administrative investigation on its own initiative, but conducts only the judicial investigations entrusted to it. Two national forces in one country, with internal inspections whose freedom to act is mirrored rather than shared.',
+          claim: 'fact',
+        },
+        {
+          kind: 'paragraph',
+          text: "For a member of the public the routes are separate and not interchangeable. The IGPN operates an online reporting platform open to any person, victim or witness, wherever they live. The state describes it precisely: \"Il ne s'agit ni d'un service d'urgence, ni d'un service d'enquête, ni d'un service de plainte\" — its staff route the report to the competent hierarchy or to an IGPN delegation. A criminal complaint is a different act. A referral to the Défenseur des droits is a third route, free and open to victims and witnesses, and it leads to recommendations rather than sanctions. Reports about a municipal police officer go to the mairie of the place concerned.",
+          claim: 'fact',
+        },
+        {
+          kind: 'paragraph',
+          text: 'Both national forces are held to one regulatory standard. Article R434-1 of the Code de la sécurité intérieure provides that the chapter "constituent le code de déontologie de la police nationale et de la gendarmerie nationale pour l\'exécution de leurs missions de sécurité intérieure", and Article R434-2 adds that the two are subject to common deontological rules and to rules specific to each — a force of civil status and an armed force under one shared code.',
+          claim: 'fact',
+        },
+        {
+          kind: 'paragraph',
+          text: 'The boundary with judicial discipline: Article 65 of the Constitution establishes the Conseil supérieur de la magistrature, whose siège formation sits as the disciplinary council for sitting judges and whose parquet formation gives its opinion on disciplinary sanctions concerning prosecutors. It is named here so a reader can place it. It disciplines magistrates, not police, and this page does not describe it further.',
+          claim: 'fact',
+        },
+        {
+          kind: 'callout',
+          variant: 'scope',
+          title: 'What this page does not do',
+          text: "It states what these bodies are, where each sits, and what its founding texts allow it to do. It does not assess how well any of them works. No caseload, outcome, substantiation rate or public-confidence figure appears here, and none should be inferred: the existence of an oversight body is a fact about institutional design, not evidence about results. France is also not a template — the arrangement described here is one country's, and reading it across to another would be the error this page is written to prevent.",
+        },
+      ],
+      uncertainty: [
+        "Whether the IGPN carries an express deontology mandate is not established by the instruments read here. The IGGN's arrêté says so in terms; the IGPN's décret and arrêté do not. Both forces are bound by the same code, so this may be an artefact of which texts were read, and it is recorded as unestablished rather than as an absence.",
+        'The relationship between the IGPN and the procureur de la République in the texts read is one of direction — it investigates on judicial instruction — rather than of referral. No separate duty to report offences to the prosecutor was established from those texts.',
+        'The powers of the Conseil supérieur de la magistrature, and the ordinary courts’ review of police action, were not researched beyond the constitutional text cited.',
+        'Nothing here establishes how any of these bodies performs, and no comparison is made between them or with the bodies of any other country.',
       ],
     },
 
@@ -521,20 +634,6 @@ export const FRANCE: CountryDossier = {
       blocks: [],
       deferredReason:
         'The division of competence between customs, border policing and maritime authorities has not been established from primary sources, and the Schengen and EU dimension has not been researched. Collapsing these into a single "border force" is precisely the error the module exists to prevent, so it is better absent than approximated.',
-    },
-    {
-      moduleId: 'oversight',
-      title: 'Oversight and accountability in France',
-      summary: 'Not yet researched.',
-      status: 'draft',
-      review: 'unreviewed',
-      safetyReview: 'not-required',
-      updatedOn: '2026-07-24',
-      temporalScope: 'current',
-      sources: [],
-      blocks: [],
-      deferredReason:
-        'Several relevant bodies were identified — the Conseil supérieur de la magistrature, the Contrôleur général des lieux de privation de liberté, the Défenseur des droits, and the internal inspectorates — but their legal bases, mandates and powers were not confirmed from primary sources within this pilot. An oversight page that lists bodies without establishing what each can actually do would imply effective accountability without evidence, which the editorial policy specifically prohibits.',
     },
     {
       moduleId: 'history',
