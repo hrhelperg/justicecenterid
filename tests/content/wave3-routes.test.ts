@@ -13,11 +13,7 @@ import {
   glossaryRoutingContext,
 } from '@/content/glossary-routes';
 import { validateGlossaryPublication } from '@/content/reference-publication-gate';
-import {
-  ROUTED_INSTITUTION_TYPES,
-  getInstitutionType,
-  institutionPath,
-} from '@/content/institutions';
+import { getInstitutionType } from '@/content/institutions';
 import { PUBLISHED_DOSSIERS } from '@/content/dossiers';
 import { PUBLISHED_GUIDES, guidePath } from '@/content/guides';
 import { getSource } from '@/content/sources';
