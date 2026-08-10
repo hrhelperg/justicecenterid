@@ -32,6 +32,7 @@ npm run dev          # http://localhost:3000
 | `npm run test:e2e`                | Playwright, against the built `out/` directory. Run `npm run build` first.                       |
 | `npm run format` / `format:check` | Prettier.                                                                                        |
 | `npm run verify:output`           | Asserts `out/` matches the route registry in both directions.                                    |
+| `npm run verify:production`       | Registry-derived route matrix against a live origin. `-- https://justicecenterid.com`            |
 | `npm run metrics:country`         | Registry-derived census (routes, dossiers, sources, claims). `--json` for CI.                    |
 | `npm run scaffold:country`        | Generate an UNPUBLISHED skeleton for a new country. `-- --slug … --name … --code … [--dry-run]`. |
 | `npm run validate`                | format:check → lint → typecheck → test → build → verify:output.                                  |
