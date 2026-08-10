@@ -265,10 +265,39 @@ Beyond `llms.txt`:
 
 ## 13. Measurement
 
-No analytics vendor is installed in this phase — no third-party script, no cookie, no
-consent banner required, nothing to disclose beyond hosting logs in the privacy policy.
+No analytics vendor is installed — no third-party script and no cookie. No consent banner
+is therefore displayed, because consent is required for storing or accessing information on
+a device and this site does neither.
 
-When measurement is added, the constraints are: privacy-preserving, no cookies, no
-cross-site identifiers, disclosed in the privacy policy before it ships. Search Console and
-Bing Webmaster Tools are the intended first instruments, since they require no client-side
-code at all — only DNS or file verification, which is a launch task, not a foundation task.
+The **consent architecture** now exists regardless, armed and waiting: a centralised gate,
+a versioned identifier-free record, a preferences panel, and a persistent footer control.
+Registering one entry in `src/content/optional-technologies.ts` displays the banner with no
+component change. See `docs/privacy/cookie-consent-architecture.md`.
+
+When measurement is added, the constraints are: privacy-preserving, no cross-site
+identifiers, loaded **only** through `whenConsented()` so it cannot execute before consent,
+and disclosed in the privacy policy before it ships. Adding a provider origin will fail
+`tests/unit/csp.test.ts` until `netlify.toml` is updated too, which is deliberate. Search
+Console and Bing Webmaster Tools are the intended first instruments, since they require no
+client-side code at all — only DNS or file verification, which is a launch task.
+
+---
+
+## 14. Cluster planning and cannibalization
+
+Topic clusters are scoped before they are written, and the collision analysis is a
+deliverable rather than a review step. The law-enforcement cluster is the worked example:
+`docs/research/law-enforcement-cluster-plan.md` classifies every candidate
+(publish-now / merge / defer / reject), and
+`docs/seo/law-enforcement-cluster-cannibalization.md` records the verdict for each
+overlapping pair.
+
+Two findings there generalise to every future cluster:
+
+- **Guide-vs-section collisions are the dangerous class.** A guide titled "What is public
+  safety?" competes with `/public-safety`, which is already the canonical answer to that
+  query. Comparing guides only against other guides will never surface it.
+- **Check the other content families first.** Institution types and professions are already
+  modelled as typed records rendered on their hubs. Writing guides about the same objects
+  would have produced 28 duplicate pages in a second family with different fields. The fix
+  is to route the existing records, not to restate them.
