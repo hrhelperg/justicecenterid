@@ -41,11 +41,12 @@ npm run dev          # http://localhost:3000
 ## Architecture in one paragraph
 
 Next.js 16 App Router, TypeScript strict, Tailwind CSS v4, React Server Components
-throughout with a single client component (`SiteNav`). `output: 'export'` produces a static
-`out/` directory that Netlify publishes directly — no serverless function, no runtime
-adapter, no database, no environment variables, no third-party script. Content is authored
-as typed TypeScript records in `src/content/`, which knows nothing about React or routing,
-so the whole validation suite runs in Node.
+throughout with three client components (`SiteNav`, the ecosystem drawer, and the consent
+boundary). `output: 'export'` produces a static `out/` directory that Netlify publishes
+directly — no serverless function, no runtime adapter, no database, no environment
+variables, no third-party script. Content is authored as typed TypeScript records in
+`src/content/`, which knows nothing about React or routing, so the whole validation suite
+runs in Node.
 
 Full documentation is in [`docs/`](./docs):
 
@@ -54,8 +55,10 @@ Full documentation is in [`docs/`](./docs):
 | Product      | [vision](./docs/product/vision.md) · [positioning](./docs/product/positioning.md) · [audiences](./docs/product/audiences.md) · [principles](./docs/product/principles.md)                                                                                                                                                                                                                                                                                                                                  |
 | Architecture | [technical](./docs/architecture/technical-architecture.md) · [information](./docs/architecture/information-architecture.md) · [content model](./docs/architecture/content-model.md) · [URL strategy](./docs/architecture/url-strategy.md) · [country dossier contract](./docs/architecture/country-dossier-contract.md) · [publication gate](./docs/architecture/country-publication-gate.md) · [country scaffold](./docs/architecture/country-scaffold.md)                                                |
 | Editorial    | [editorial policy](./docs/editorial/editorial-policy.md) · [research methodology](./docs/editorial/research-methodology.md) · [source policy](./docs/editorial/source-policy.md) · [country research workflow](./docs/editorial/country-research-workflow.md) · [country authoring checklist](./docs/editorial/country-authoring-checklist.md) · [corrections](./docs/editorial/corrections-policy.md) · [images](./docs/editorial/image-policy.md) · [content safety](./docs/editorial/content-safety.md) |
-| SEO & design | [SEO architecture](./docs/seo/seo-architecture.md) · [design system](./docs/design/design-system.md)                                                                                                                                                                                                                                                                                                                                                                                                       |
-| Deployment   | [Netlify strategy](./docs/deployment/netlify-strategy.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| SEO & design | [SEO architecture](./docs/seo/seo-architecture.md) · [design system](./docs/design/design-system.md) · [overlay hierarchy](./docs/architecture/overlay-hierarchy.md) · [law-enforcement cannibalization matrix](./docs/seo/law-enforcement-cluster-cannibalization.md)                                                                                                                                                                                                                                     |
+| Privacy      | [cookie consent architecture](./docs/privacy/cookie-consent-architecture.md)                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| Ecosystem    | [HELPERG ecosystem banner](./docs/architecture/ecosystem-banner.md)                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| Deployment   | [Netlify strategy](./docs/deployment/netlify-strategy.md) · [pre-deployment readiness audit](./docs/deployment/predeployment-readiness-audit.md) · [first production deployment runbook](./docs/deployment/first-production-deployment.md)                                                                                                                                                                                                                                                                 |
 | Roadmap      | [foundation roadmap](./docs/roadmap/foundation-roadmap.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 
 ## Editorial rules that are enforced in code
@@ -79,6 +82,14 @@ These are not conventions — the test suite fails the build if they are broken:
   route registry in both directions.
 - Colour tokens are re-checked against WCAG 2.2 AA contrast thresholds by parsing the real
   stylesheet.
+- Every `z-*` utility in application source must resolve to a declared stacking-layer
+  token; a bare number or an arbitrary value fails the build.
+- The deployed Content-Security-Policy may not name an external origin in any fetch
+  directive, and `connect-src` stays `'self'`.
+- Consent defaults to necessary-only on every failure path — no record, corrupt record,
+  disabled storage, or a record from an older consent version.
+- An ecosystem product whose URL could not be verified renders as text, never as a link,
+  and the current product may not declare its own canonical URL.
 
 ## Content authoring
 

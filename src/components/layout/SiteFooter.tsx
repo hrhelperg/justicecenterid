@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { CookieSettingsLink } from '@/components/consent/CookieSettingsLink';
 import { Container } from '@/components/ui/Container';
 import { FOOTER_NAV } from '@/lib/navigation';
 import { SITE } from '@/lib/site';
@@ -23,6 +24,17 @@ export function SiteFooter() {
                       </Link>
                     </li>
                   ))}
+                  {/*
+                    Consent must be reopenable from anywhere on the site, so the control
+                    sits in the Legal group on every page. It is a button rather than a
+                    link because it opens a dialog instead of navigating — see
+                    CookieSettingsLink.
+                  */}
+                  {group.heading === 'Legal' ? (
+                    <li>
+                      <CookieSettingsLink />
+                    </li>
+                  ) : null}
                 </ul>
               </nav>
             ))}

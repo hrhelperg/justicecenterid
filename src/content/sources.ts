@@ -2920,6 +2920,73 @@ export const SOURCES: readonly SourceRecord[] = [
     jurisdiction: 'NG',
     note: 'The World Prison Brief country page for Nigeria (compiled by ICPR from the national prison administration, the Nigerian Correctional Service), read directly and re-confirmed by hand. Supports: a total prison population of 81,902 including pre-trial detainees at 22 June 2026; a rate of 34 per 100,000 based on an estimated national population of 238.95 million at mid-2026 (UN figures); an official capacity of 65,035 dated 30 June 2025; and an occupancy level of 125.6% dated 30 June 2025. The population figure is dated June 2026 while the capacity and occupancy carry a June 2025 date, so the figures do not share a single reference date.',
   },
+
+  /* ------------------------------------------------------------------------
+     Law-enforcement cluster, Wave 1 (2026-08-10).
+
+     A note on what is NOT here. The primary UN instruments for this cluster —
+     the 1979 Code of Conduct and the 1990 Basic Principles on the Use of Force
+     — are published by OHCHR, and ohchr.org returns HTTP 403 to automated
+     requests, as do echr.coe.int and rm.coe.int. Under the rule at the top of
+     this file, a document whose identity could not be confirmed is not listed,
+     so those pages are absent even though the instruments plainly exist.
+
+     The cluster instead cites the UNODC Education for Justice module series —
+     a UN publication that QUOTES those instruments verbatim and was read
+     directly. Where a guide reproduces treaty language it is reproducing what
+     UNODC quotes, and the notes below record exactly which passages were
+     confirmed. That is a weaker claim than citing the instrument itself, and
+     it is the claim actually supported.
+     ------------------------------------------------------------------------ */
+  {
+    id: 'un-code-of-conduct-1979',
+    type: 'international-organization',
+    title:
+      'Code of Conduct for Law Enforcement Officials: resolution adopted by the General Assembly (A/RES/34/169, 17 December 1979)',
+    publisher: 'United Nations (UN Digital Library)',
+    url: 'https://digitallibrary.un.org/record/623792?ln=en',
+    publishedOn: '1979-12-17',
+    verifiedOn: '2026-08-10',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'INT',
+    note: "The official United Nations Digital Library catalogue record for General Assembly resolution 34/169, read directly: it confirms the instrument's title, its adopting body and its date of 17 December 1979. Supports that the Code of Conduct exists as a General Assembly resolution of that date. It does NOT by itself supply the operative text — the article wording used on this platform is taken from the UNODC module that quotes it (`unodc-e4j-use-of-force`). A General Assembly resolution is not a treaty: it creates no binding obligation on any state, and this record supports nothing about how any country applies the Code.",
+  },
+  {
+    id: 'unodc-e4j-use-of-force',
+    type: 'international-organization',
+    title:
+      'E4J University Module Series — Crime Prevention and Criminal Justice, Module 4, Topic 3: The general principles of use of force in law enforcement',
+    publisher: 'United Nations Office on Drugs and Crime (Education for Justice)',
+    url: 'https://www.unodc.org/e4j/en/crime-prevention-criminal-justice/module-4/key-issues/3--the-general-principles-of-use-of-force-in-law-enforcement.html',
+    verifiedOn: '2026-08-10',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'INT',
+    note: 'The UNODC teaching module on use of force, read directly. Supports: that the governing principles are necessity, proportionality and precaution; and that necessity has three interrelated elements — the duty to use non-violent means wherever possible, the duty to use force only for a legitimate law-enforcement purpose, and the duty to use only the minimum force reasonable in the prevailing circumstances. It quotes verbatim Principle 4 of the 1990 Basic Principles ("Law enforcement officials, in carrying out their duty, shall, as far as possible, apply non-violent means before resorting to the use of force and firearms. They may use force and firearms only if other means remain ineffective or without any promise of achieving the intended result"); Principle 3 on self-defensive equipment such as shields, helmets and bulletproof vests; Article 3 of the 1979 Code of Conduct (force only "to the extent required for the performance of their duty") together with its official commentary ("as is reasonably necessary under the circumstances"); and the 2001 European Code of Police Ethics at para. 37 (force "only when strictly necessary and only to the extent required to obtain a legitimate objective"). It further supports that force must not be used vindictively, as extrajudicial punishment, in a discriminatory manner, against a person offering no resistance, or once the need has passed, and that officers are themselves entitled to state protection of their rights to life and bodily integrity. Teaching material citing the instruments, not the instruments themselves; it establishes no state\'s practice.',
+  },
+  {
+    id: 'unodc-e4j-police-accountability',
+    type: 'international-organization',
+    title:
+      'E4J University Module Series — Crime Prevention and Criminal Justice, Module 5 (Police Accountability, Integrity and Oversight), Topic 2: Key mechanisms and actors in police accountability and oversight',
+    publisher: 'United Nations Office on Drugs and Crime (Education for Justice)',
+    url: 'https://www.unodc.org/e4j/en/crime-prevention-criminal-justice/module-5/key-issues/2--key-mechanisms-and-actors-in-police-accountability-and-oversight.html',
+    verifiedOn: '2026-08-10',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'INT',
+    note: "The UNODC teaching module on police accountability mechanisms, read directly. Supports UNODC's own conceptual framework of accountability 'before, during and after the act' (ex-ante, ongoing and ex-post oversight); that internal control within the police service is the first degree of control in any police accountability system and works both preventively and reactively; that legal provisions alone are often insufficient for the day-to-day exercise of police powers, so services need comprehensive professional standards and codes of conduct giving practical guidance — the module's own worked example is guidance on arrest and detention procedures; and that because officers hold wide discretion and meet ethical dilemmas (the module instances bending laws for perceived greater law-enforcement objectives, and deceptive interrogation tactics used to extract a confession) services also need a code of ethics built on impartiality, fairness, equality, justice and honesty. Describes how accountability systems are DESIGNED. It does not establish that any particular system works, and no effectiveness or public-trust claim on this platform rests on it.",
+  },
+  {
+    id: 'uk-pace-1984',
+    type: 'legislation',
+    title: 'Police and Criminal Evidence Act 1984 (1984 c. 60)',
+    publisher: 'The National Archives (legislation.gov.uk)',
+    url: 'https://www.legislation.gov.uk/ukpga/1984/60/contents',
+    publishedOn: '1984',
+    verifiedOn: '2026-08-10',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'GB',
+    note: 'The official revised text of the Act, read directly at its table of contents, which sets out its Parts: powers to stop and search (Part I), powers of entry, search and seizure (Part II), arrest (Part III), detention (Part IV), questioning and treatment of persons by police (Part V), and codes of practice (Part VI). Cited on this platform for ONE purpose: as a worked example that police powers are conferred and bounded by a named domestic statute with associated codes of practice, rather than existing as general authority. It supports the existence and structure of that statute in England and Wales. It supports nothing about Scotland or Northern Ireland, which have separate arrangements, and nothing whatever about any other country — it appears precisely to show that these thresholds are jurisdiction-bound.',
+  },
 ];
 
 const SOURCE_INDEX = new Map(SOURCES.map((source) => [source.id, source]));

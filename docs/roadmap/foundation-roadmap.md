@@ -521,3 +521,41 @@ an adversarial fact-check pass. Details in `docs/audits/batch-a-northern-western
 
 Delivered on `feat/batch-a-northern-western-europe`, stacked on `feat/country-scaling-framework`.
 Not merged, not deployed.
+
+## Phase 15 — Pre-deployment expansion (delivered 2026-08-10)
+
+The first major **non-country** cluster, plus the two global UI layers the site needs before it
+can be public, plus the pre-deployment audit. Details in
+`docs/audits/law-enforcement-wave-1-qa.md`.
+
+- **Law-enforcement Wave 1.** 92 candidates assessed → **4 published**, 20 merged, 63 deferred,
+  5 rejected (`docs/research/law-enforcement-cluster-plan.md`,
+  `docs/seo/law-enforcement-cluster-cannibalization.md`). The brief targeted 30–45 and required
+  the count to be evidence-driven; the evidence drove it down. Two whole candidate groups
+  (28 items: institution types and professions) are **already-modelled content families** whose
+  correct fix is to route the existing records, not to duplicate them as guides; the 14 history
+  candidates fail the brief's own archive/museum source gate; OHCHR, ECHR and the Council of
+  Europe all return 403 to automated requests, so the powers pages are built on a UN body that
+  quotes those instruments — disclosed on every page and enforced by test; and the
+  statistics-heavy candidates are restricted claims without dated, jurisdiction-scoped sources.
+- **Consent layer, armed but not shown.** Full GDPR/ePrivacy architecture — centralised gate,
+  versioned identifier-free record, preferences panel, persistent footer control — with **no
+  banner**, because the site stores nothing on a device. Registering one optional technology arms
+  it with no component change. `docs/privacy/cookie-consent-architecture.md`.
+- **HELPERG ecosystem banner.** 29 owner-supplied products, all 35 URLs content-confirmed by
+  reading back each page title. Neutral status vocabulary with no `active` member, no authored
+  descriptions, order rather than invented dates, and no link for an unverified record. The
+  current product declares no `canonicalUrl` and resolves from `SITE.origin`.
+  `docs/architecture/ecosystem-banner.md`.
+- **Six named stacking layers** and a reference-counted overlay coordinator enforcing one modal
+  at a time. `docs/architecture/overlay-hierarchy.md`.
+- **Three defects found by the new tests**: a 51px horizontal overflow at 200% text size (a media
+  query resolves `rem` against the browser's initial font size, so the rail's breakpoint never
+  moved), a `netlify.toml` claim about a CSP test file that did not exist, and a `/privacy` page
+  that became inaccurate the moment consent could store anything. All fixed.
+- Validation: `npm run validate` exit 0; **2219 unit tests / 53 files**; **320 routes / 320
+  sitemap / 322 pages**; e2e **158 passed / 4 skipped** on desktop and mobile; static-HTTP matrix
+  clean across 24 paths with no SPA fallback. Client JS +24,346 B (+3.8%) into an immutably
+  cached chunk.
+
+Delivered on `feat/law-enforcement-cluster-and-predeployment-ui`. Not merged, not deployed.

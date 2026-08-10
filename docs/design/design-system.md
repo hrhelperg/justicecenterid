@@ -275,3 +275,38 @@ Skip-link focus and activation · keyboard reachability of primary navigation ·
 open, focus move, `Escape` close, and focus restoration · single `h1` and heading order on
 representative pages · no horizontal overflow at 320 px · presence of the not-legal-advice
 statement on content pages.
+
+## Stacking layers
+
+Six named layers are declared as `@theme` tokens in `src/app/globals.css`, so no component
+invents a z-index:
+
+| Token                 | Value | What sits here                                  |
+| --------------------- | ----- | ----------------------------------------------- |
+| `--z-index-content`   | 0     | Page content, in normal flow                    |
+| `--z-index-nav`       | 40    | The sticky site header                          |
+| `--z-index-ecosystem` | 50    | The HELPERG utility bar                         |
+| `--z-index-consent`   | 60    | The consent banner (bottom-anchored, non-modal) |
+| `--z-index-overlay`   | 70    | Modal dialogs and their backdrops               |
+| `--z-index-skip`      | 80    | The skip link                                   |
+
+`tests/unit/layers.test.ts` greps application source and fails on any `z-*` utility that is
+not one of these names — a bare number or an arbitrary value is a test failure, not a style
+choice. It also asserts the order and that the skip link outranks everything, which it must:
+the skip link renders top-left, exactly where the ecosystem bar sits, and at any lower layer
+it would be focusable but painted behind the chrome.
+
+Full rationale, the one-modal rule, and the scroll-lock reference counting are in
+[the overlay hierarchy](../architecture/overlay-hierarchy.md).
+
+> Two gotchas worth knowing before touching this system.
+>
+> **Tailwind scans comments.** Naming a utility inside a comment is enough to emit its CSS
+> rule; a doc comment mentioning a hard-coded value produced a dead `z-index: 50`
+> declaration in the stylesheet. Refer to layers by name in prose.
+>
+> **Media queries do not scale with text size.** A media query resolves `rem` against the
+> browser's _initial_ font size, not the root element's computed size, so a breakpoint does
+> not move at 200% text. Hiding something at a breakpoint is not a reflow strategy — this
+> caused a 51px sitewide horizontal overflow that shipped past code review and was caught
+> only by an automated 200% check.

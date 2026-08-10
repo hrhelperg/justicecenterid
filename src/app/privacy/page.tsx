@@ -31,7 +31,9 @@ export default function PrivacyPage() {
           This site sets no cookies, contains no analytics or tracking code, loads no fonts,
           scripts, or images from other companies, and has no forms, accounts, or newsletter.
           The only data created by your visit is the standard server log kept by our hosting
-          provider.
+          provider. The one thing this site can store on your device is a record of a choice you
+          make yourself in <strong>Cookie settings</strong>, and nothing is stored unless you
+          make one.
         </Callout>
 
         <section aria-labelledby="collect">
@@ -46,10 +48,33 @@ export default function PrivacyPage() {
         <section aria-labelledby="cookies">
           <SectionHeading id="cookies">Cookies and local storage</SectionHeading>
           <p className="text-ink-muted">
-            None. This site sets no cookies of any kind — not for analytics, not for
-            preferences, not for anything else — and stores nothing in your browser&rsquo;s
-            local storage. That is why you have not been shown a cookie banner: there is nothing
-            to consent to.
+            This site sets no cookies of any kind — not for analytics, not for advertising, not
+            for anything else. No analytics or marketing technology is active, so there is
+            currently nothing to consent to, and that is why you are not shown a consent banner.
+            Asking permission for something we do not do would be misleading rather than
+            careful.
+          </p>
+          <p className="mt-4 text-ink-muted">
+            There is one exception, and it exists only because you asked for it. If you open{' '}
+            <strong>Cookie settings</strong> in the footer and record a preference, this site
+            saves that preference in your browser&rsquo;s local storage so it can be honoured on
+            your next visit. It is stored under a single key,{' '}
+            <code className="font-mono text-sm">jcid-consent</code>, and contains only three
+            true/false values, a version number, and the date you made the choice. It contains
+            no name, no identifier, no session token, and nothing that could be used to
+            recognise you here or anywhere else.
+          </p>
+          <p className="mt-4 text-ink-muted">
+            Nothing is written until you act. Reading these pages, following links, and using
+            the navigation all store nothing. You can change your choice at any time from{' '}
+            <strong>Cookie settings</strong>, and clearing your browser&rsquo;s site data
+            removes the record entirely.
+          </p>
+          <p className="mt-4 text-ink-muted">
+            The consent mechanism is built and ready so that if measurement is ever added, it
+            cannot run before you have agreed to it. Optional categories are switched off by
+            default and stay off unless you turn them on — declining is never assumed from
+            silence, and it is not something we can change without changing this page first.
           </p>
         </section>
 
@@ -59,6 +84,12 @@ export default function PrivacyPage() {
             The site loads no resource from any third party. Specifically, there is no analytics
             provider, no tag manager, no advertising network, no font content delivery network,
             no embedded video or map, no social-media widget, and no error-reporting service.
+          </p>
+          <p className="mt-4 text-ink-muted">
+            The bar at the top of every page identifies JusticeCenterID as one product in the
+            HELPERG ecosystem and links to the others. Those are ordinary links: nothing is
+            loaded from any of those sites while you are here, and following one is a normal
+            navigation to a site with its own privacy terms.
           </p>
           <p className="mt-4 text-ink-muted">
             Typography uses fonts already present on your device. Every script, stylesheet, and

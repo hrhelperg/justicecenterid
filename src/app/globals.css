@@ -79,6 +79,37 @@
   /* Navigation switches to the disclosure panel below this width. */
   --breakpoint-nav: 56rem;
 
+  /* ------------------------------------------------------------------------
+     Stacking layers.
+
+     Declared as named tokens so no component invents a magic number. Every
+     `z-*` utility in application source must resolve to one of these names,
+     and tests/unit/layers.test.ts greps the source to enforce it — an
+     arbitrary `z-[9999]` is a test failure, not a style choice.
+
+     The order encodes the overlay hierarchy documented in
+     docs/architecture/overlay-hierarchy.md:
+
+       content    page content, in flow.
+       nav        the sticky site header.
+       ecosystem  the HELPERG utility bar. Outermost chrome, above the header
+                  because the header scrolls up and docks beneath it.
+       consent    the consent banner. Bottom-anchored and non-modal, so it
+                  outranks both bars without ever covering them — they are
+                  top-anchored and the two never occupy the same space.
+       overlay    modal dialogs and their backdrops: the ecosystem drawer and
+                  the consent preferences panel. Only ONE may be open at a
+                  time, which is what stops two focus traps from fighting.
+       skip       the skip link. Must outrank every layer above to remain the
+                  first reachable control on the page (WCAG 2.2 SC 2.4.1).
+     ------------------------------------------------------------------------ */
+  --z-index-content: 0;
+  --z-index-nav: 40;
+  --z-index-ecosystem: 50;
+  --z-index-consent: 60;
+  --z-index-overlay: 70;
+  --z-index-skip: 80;
+
   --radius-sm: 4px;
   --radius-md: 6px;
   --radius-lg: 10px;
