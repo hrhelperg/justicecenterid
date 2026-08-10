@@ -559,3 +559,36 @@ can be public, plus the pre-deployment audit. Details in
   cached chunk.
 
 Delivered on `feat/law-enforcement-cluster-and-predeployment-ui`. Not merged, not deployed.
+
+## Phase 16 — Knowledge Expansion Wave 2 (delivered 2026-08-10)
+
+Converts two existing content registries into a routed knowledge graph. Wave 1 deferred 28
+candidates on the ground that institution types and professions were already-modelled families
+whose correct fix was to route the existing records rather than write parallel guides; this is
+that fix. Details in `docs/audits/knowledge-expansion-wave-2-qa.md`.
+
+- **55 candidates assessed → 13 routes.** Seven institution types, six professions, no history
+  pages. Merged or aliased 11, deferred 29, rejected 4
+  (`docs/seo/knowledge-expansion-wave-2-cannibalization.md`).
+- **Routing alone was not enough.** Neither model carried country examples, related roles,
+  governance or accountability — four of the twelve required page-contract items. Both were
+  extended, and the new `CountryExample` type is the load-bearing addition: it ties a global
+  pattern to dossiers the platform has actually researched, and validation rejects an example
+  naming an unpublished country.
+- **Two institution types are deliberately unrouted.** The source registry holds no border,
+  customs, coast-guard or maritime source at all, so those remain hub summaries. `review`
+  decides routing and `validateInstitutionPublication` checks the substance behind it.
+- **Both hubs became indexes**, resolving the largest collision in the phase — one the routing
+  work created rather than any new content.
+- **Adversarial QA found a systematic P1**: several country examples asserted facts about a
+  named country while the page cited nothing scoped to it. Fixed by attaching the supporting
+  country source to each, and prevented from recurring by a mutation-tested invariant.
+- **Part C shipped nothing, with the corpus tested host by host.** National Archives, British
+  Library, Library of Congress and Historic Hansard reachable; Smithsonian, Met Police,
+  Gendarmerie nationale, parliament.uk and Britannica 403. Hansard has no 1829 sittings
+  indexed, so the "nine Peelian principles" provenance could not be settled and no Peel page
+  was written.
+- Validation: 2289 unit tests / 54 files; **333 routes / 333 sitemap / 335 pages**; e2e 216
+  passed / 4 skipped; route matrix 361/361. **Client JS +65 bytes** for thirteen pages.
+
+Delivered on `feat/knowledge-expansion-wave-2`. Not merged, not deployed.
