@@ -92,6 +92,13 @@ const PRIORITY: Record<PublicRouteKind, number> = {
   section: 0.8,
   guide: 0.7,
   country: 0.7,
+  /*
+   * Reference detail pages sit with country modules rather than with guides: like a
+   * module, each answers one narrow question beneath a hub, and the hub is the entry
+   * point a reader arrives at first.
+   */
+  institution: 0.6,
+  profession: 0.6,
   'country-module': 0.6,
   hub: 0.6,
   platform: 0.3,

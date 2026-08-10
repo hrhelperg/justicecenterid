@@ -20,10 +20,20 @@
 import { COUNTRY_MODULES } from './country-modules';
 import { PUBLISHED_DOSSIERS, publishedModules } from './dossiers';
 import { PUBLISHED_GUIDES, guidePath } from './guides';
+import { ROUTED_INSTITUTION_TYPES, institutionPath } from './institutions';
+import { ROUTED_PROFESSIONS, professionPath } from './professions';
 import { SECTIONS } from './sections';
 
 export type PublicRouteKind =
-  'home' | 'section' | 'guide' | 'hub' | 'platform' | 'country' | 'country-module';
+  | 'home'
+  | 'section'
+  | 'guide'
+  | 'hub'
+  | 'platform'
+  | 'country'
+  | 'country-module'
+  | 'institution'
+  | 'profession';
 
 export interface PublicRoute {
   path: string;
@@ -85,6 +95,31 @@ function buildRoutes(): PublicRoute[] {
 
   for (const [slug, title] of PLATFORM_SLUGS) {
     routes.push({ path: `/${slug}`, kind: 'platform', title, parent: '/' });
+  }
+
+  /*
+   * Reference detail routes (Wave 2). Only records marked `fact-checked` are routed —
+   * `editorial-review` records remain summaries on their hub and produce nothing here,
+   * which is how two unsourceable institution types stay off the sitemap.
+   */
+  for (const institution of ROUTED_INSTITUTION_TYPES) {
+    routes.push({
+      path: institutionPath(institution),
+      kind: 'institution',
+      title: institution.shortTitle ?? institution.title,
+      lastModified: institution.updatedOn,
+      parent: '/institutions',
+    });
+  }
+
+  for (const profession of ROUTED_PROFESSIONS) {
+    routes.push({
+      path: professionPath(profession),
+      kind: 'profession',
+      title: profession.shortTitle ?? profession.title,
+      lastModified: profession.updatedOn,
+      parent: '/professions',
+    });
   }
 
   /*

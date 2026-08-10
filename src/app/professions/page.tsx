@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { ContentPage } from '@/components/pages/ContentPage';
 import { SectionHeading } from '@/components/ui/SectionHeading';
-import { PUBLISHED_PROFESSIONS } from '@/content/professions';
+import { ROUTED_PROFESSIONS, professionPath } from '@/content/professions';
 import { buildMetadata } from '@/lib/metadata';
 
 const PATH = '/professions';
@@ -14,6 +15,10 @@ export const metadata: Metadata = buildMetadata({
   path: PATH,
 });
 
+/**
+ * An index, for the same reason as the institutions hub: the detail now lives on the
+ * per-role pages, and repeating it here would make the hub compete with every one of them.
+ */
 export default function ProfessionsPage() {
   return (
     <ContentPage
@@ -22,6 +27,7 @@ export default function ProfessionsPage() {
       title="Professions"
       lead={DESCRIPTION}
       description={DESCRIPTION}
+      schemaType="CollectionPage"
     >
       <div className="max-w-measure">
         <p className="text-ink-muted">
@@ -32,89 +38,30 @@ export default function ProfessionsPage() {
         </p>
         <p className="mt-4 text-ink-muted">
           There are deliberately no pay figures, staffing levels, attrition rates, or entry
-          requirements on this page. Those are country-specific and time-sensitive, and they are
-          the most common site of invented detail in writing about these roles. They will appear
-          on country pages, with a jurisdiction and a dated official source, or not at all.
+          requirements on these pages. Those are country-specific and time-sensitive, and they
+          are the most common site of invented detail in writing about these roles. They will
+          appear on{' '}
+          <Link href="/countries" className="link-inline">
+            country pages
+          </Link>
+          , with a jurisdiction and a dated official source, or not at all.
         </p>
       </div>
 
-      <div className="mt-12 space-y-12">
-        {PUBLISHED_PROFESSIONS.map((profession) => (
-          <section key={profession.slug} aria-labelledby={profession.slug}>
-            <SectionHeading id={profession.slug} description={profession.summary}>
-              {profession.title}
-            </SectionHeading>
-
-            <div className="grid gap-8 lg:grid-cols-2">
-              <div>
-                <h4 className="text-sm font-semibold tracking-wide text-ink-muted uppercase">
-                  Responsibilities
-                </h4>
-                <ul className="mt-2 list-disc space-y-1 pl-6 text-ink-muted">
-                  {profession.responsibilities.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-
-                <h4 className="mt-6 text-sm font-semibold tracking-wide text-ink-muted uppercase">
-                  What the role decides
-                </h4>
-                <ul className="mt-2 list-disc space-y-1 pl-6 text-ink-muted">
-                  {profession.decisionAuthority.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-
-                <h4 className="mt-6 text-sm font-semibold tracking-wide text-ink-muted uppercase">
-                  Training route (structure only)
-                </h4>
-                <ul className="mt-2 list-disc space-y-1 pl-6 text-ink-muted">
-                  {profession.trainingRouteShape.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-              </div>
-
-              <div>
-                <h4 className="text-sm font-semibold tracking-wide text-ink-muted uppercase">
-                  Constraints on that authority
-                </h4>
-                <ul className="mt-2 list-disc space-y-1 pl-6 text-ink-muted">
-                  {profession.constraints.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-
-                <h4 className="mt-6 text-sm font-semibold tracking-wide text-ink-muted uppercase">
-                  Who reviews the role
-                </h4>
-                <ul className="mt-2 list-disc space-y-1 pl-6 text-ink-muted">
-                  {profession.oversight.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-
-                {profession.commonMisunderstandings && (
-                  <>
-                    <h4 className="mt-6 text-sm font-semibold tracking-wide text-ink-muted uppercase">
-                      Commonly misunderstood
-                    </h4>
-                    <ul className="mt-2 list-disc space-y-1 pl-6 text-ink-muted">
-                      {profession.commonMisunderstandings.map((item) => (
-                        <li key={item}>{item}</li>
-                      ))}
-                    </ul>
-                  </>
-                )}
-              </div>
+      <div className="mt-12">
+        <SectionHeading id="roles">Roles</SectionHeading>
+        <dl className="max-w-measure space-y-6">
+          {ROUTED_PROFESSIONS.map((profession) => (
+            <div key={profession.slug}>
+              <dt className="text-lg font-semibold">
+                <Link href={professionPath(profession)} className="link-inline">
+                  {profession.title}
+                </Link>
+              </dt>
+              <dd className="mt-1 text-ink-muted">{profession.summary}</dd>
             </div>
-
-            <p className="mt-6 max-w-measure rounded-md border border-line bg-surface-raised p-4 text-sm text-ink-muted">
-              <span className="font-semibold text-ink">Across jurisdictions: </span>
-              {profession.jurisdictionNote}
-            </p>
-          </section>
-        ))}
+          ))}
+        </dl>
       </div>
     </ContentPage>
   );
