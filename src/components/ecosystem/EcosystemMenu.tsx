@@ -5,8 +5,12 @@
  *
  * Everything else about the banner — the identity, the timeline rail, the current-product
  * indicator — is server-rendered static HTML. This island exists solely because a
- * disclosure needs open/closed state, and it receives its data as a prop so no content
- * module is pulled into the client bundle (the rule SiteNav documents).
+ * disclosure needs open/closed state.
+ *
+ * It derives its product list by IMPORTING the registry rather than receiving it as a
+ * prop. That inverts the rule SiteNav documents, deliberately and with measurements: see
+ * ./product-view for why a prop costs ~6 MB across this 318-route static export while the
+ * import costs 11 KB once in the immutably-cached chunk.
  *
  * Modal semantics are real, not decorative: the drawer takes `role="dialog"` with
  * `aria-modal`, traps Tab, closes on Escape, restores focus to the control that opened

@@ -50,9 +50,17 @@ export function EcosystemBar() {
             The ordered rail. `hidden nav:block` keeps it off small screens entirely — the
             brief's "no horizontally overflowing timeline on mobile" is met by not
             rendering a rail there, rather than by letting one scroll sideways.
+
+            `min-w-0` + `flex-wrap` handle the case that hiding cannot. A CSS media query
+            resolves `rem` against the browser's INITIAL font size, not the root element's
+            computed size, so the `nav:` breakpoint does not move when a reader sets 200%
+            text (WCAG 2.2 SC 1.4.4): the rail stays rendered and, at double size, pushed
+            the whole document into horizontal scroll by 51px. Wrapping lets the bar grow
+            downwards instead — the same choice its outer row already makes — and keeps
+            every node visible and focusable rather than clipping them out of reach.
           */}
-          <nav aria-label="HELPERG ecosystem" className="hidden nav:block">
-            <ol className="flex items-center">
+          <nav aria-label="HELPERG ecosystem" className="hidden min-w-0 nav:block">
+            <ol className="flex flex-wrap items-center justify-end">
               {rail.map((product, index) => (
                 <li key={product.id} className="flex items-center">
                   {index > 0 ? (
