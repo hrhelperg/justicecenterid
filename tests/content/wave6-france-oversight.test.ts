@@ -23,20 +23,20 @@ const OVERSIGHT_PATH = countryModulePath(FRANCE, 'oversight');
 function franceOversight(): CountryModuleContent {
   const dossier = getDossier(FRANCE);
   if (!dossier) throw new Error('France dossier missing');
-  const module = getModule(dossier, 'oversight');
-  if (!module) throw new Error('France oversight module missing');
-  return module;
+  const mod = getModule(dossier, 'oversight');
+  if (!mod) throw new Error('France oversight module missing');
+  return mod;
 }
 
 /** Prose a reader actually sees, excluding field names and metadata. */
-function moduleProse(module: CountryModuleContent): string {
-  const parts = module.blocks.flatMap((block: Block) => {
+function moduleProse(mod: CountryModuleContent): string {
+  const parts = mod.blocks.flatMap((block: Block) => {
     if (block.kind === 'paragraph') return [block.text];
     if (block.kind === 'list') return block.items;
     if (block.kind === 'callout') return [block.title, block.text];
     return block.items.flatMap((i) => [i.term, i.description]);
   });
-  return [module.title, module.summary, ...parts, ...(module.uncertainty ?? [])].join('\n');
+  return [mod.title, mod.summary, ...parts, ...(mod.uncertainty ?? [])].join('\n');
 }
 
 function inst(slug: string): InstitutionType {
@@ -51,9 +51,9 @@ function inst(slug: string): InstitutionType {
 
 describe('the France oversight module', () => {
   it('is published and routed', () => {
-    const module = franceOversight();
-    expect(module.status).toBe('published');
-    expect(module.review).toBe('fact-checked');
+    const mod = franceOversight();
+    expect(mod.status).toBe('published');
+    expect(mod.review).toBe('fact-checked');
     expect(PUBLIC_ROUTE_PATHS).toContain(OVERSIGHT_PATH);
   });
 
@@ -80,10 +80,10 @@ describe('France sourcing', () => {
    * `fr-decret-2013-784-igpn` from the module's sources.
    */
   it('cites only sources that exist and are scoped to France', () => {
-    const module = franceOversight();
-    expect(module.sources.length).toBeGreaterThanOrEqual(10);
+    const mod = franceOversight();
+    expect(mod.sources.length).toBeGreaterThanOrEqual(10);
 
-    for (const id of module.sources) {
+    for (const id of mod.sources) {
       const source = getSource(id);
       expect(source, `unknown source ${id}`).toBeDefined();
       expect(source!.jurisdiction, `${id} is not scoped to France`).toBe('FR');
@@ -93,7 +93,7 @@ describe('France sourcing', () => {
 
   it('rests on the specific instruments the claims come from', () => {
     /* Named individually: a count would survive swapping one instrument for another. */
-    const module = franceOversight();
+    const mod = franceOversight();
     for (const id of [
       'fr-decret-2013-784-igpn',
       'fr-code-defense-iggn',
@@ -102,7 +102,7 @@ describe('France sourcing', () => {
       'fr-igpn-signalement',
       'fr-csi-r434-1',
     ]) {
-      expect(module.sources, `missing instrument ${id}`).toContain(id);
+      expect(mod.sources, `missing instrument ${id}`).toContain(id);
     }
   });
 
@@ -150,8 +150,8 @@ describe('position of each body', () => {
   });
 
   it('never describes either inspection générale as independent or external', () => {
-    const module = franceOversight();
-    const internalEntries = module.blocks.flatMap((block: Block) =>
+    const mod = franceOversight();
+    const internalEntries = mod.blocks.flatMap((block: Block) =>
       block.kind === 'definitionList'
         ? block.items.filter((i) => i.term.startsWith('IGPN') || i.term.startsWith('IGGN'))
         : [],
@@ -164,8 +164,8 @@ describe('position of each body', () => {
   });
 
   it('keeps the two external authorities marked external and general-mandate', () => {
-    const module = franceOversight();
-    const external = module.blocks.flatMap((block: Block) =>
+    const mod = franceOversight();
+    const external = mod.blocks.flatMap((block: Block) =>
       block.kind === 'definitionList'
         ? block.items.filter((i) => i.term.includes('external'))
         : [],
@@ -225,7 +225,9 @@ describe('temporal integrity of the French instruments', () => {
   });
 
   it('keeps the source notes honest about which version was read', () => {
-    expect(getSource('fr-arrete-2025-iggn')?.note).toMatch(/abrogates the arrêté of 15 January 2019/i);
+    expect(getSource('fr-arrete-2025-iggn')?.note).toMatch(
+      /abrogates the arrêté of 15 January 2019/i,
+    );
     expect(getSource('fr-decret-2013-784-igpn')?.note).toMatch(/1 July 2023/);
   });
 });
@@ -270,8 +272,8 @@ describe('taxonomy is not forced onto the French institutions', () => {
   });
 
   it('does not call the Défenseur des droits a police complaints body', () => {
-    const module = franceOversight();
-    const ddd = module.blocks.flatMap((block: Block) =>
+    const mod = franceOversight();
+    const ddd = mod.blocks.flatMap((block: Block) =>
       block.kind === 'definitionList'
         ? block.items.filter((i) => i.term.includes('Défenseur des droits'))
         : [],
