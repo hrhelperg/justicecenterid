@@ -60,40 +60,6 @@ function allText(g: Guide): string {
   ].join('\n');
 }
 
-/**
- * The text the page ASSERTS, excluding misconception claims.
- *
- * A misconception's `claim` field is a false statement quoted in order to be refuted, so
- * searching it for forbidden assertions produces false positives — "All sheriffs run jails"
- * appears on the page precisely because the page says it is wrong. Tests about what a page
- * claims must read what it claims.
- */
-function assertedText(g: Guide): string {
-  const blocks: Block[] = [
-    ...g.definition,
-    ...g.whyItExists,
-    ...g.howItWorks,
-    ...g.variation,
-    ...g.rightsAndAccountability,
-    ...(g.furtherReading ?? []),
-  ];
-  const parts = blocks.flatMap((block) => {
-    if (block.kind === 'paragraph') return [block.text];
-    if (block.kind === 'list') return block.items;
-    if (block.kind === 'callout') return [block.title, block.text];
-    return block.items.flatMap((item) => [item.term, item.description]);
-  });
-  return [
-    g.title,
-    g.summary,
-    ...parts,
-    ...g.misconceptions.map((m) => m.reality),
-    ...(g.countryExamples ?? []).map((e) => e.note),
-    ...(g.counterExamples ?? []).map((e) => e.note),
-    ...(g.uncertainty ?? []),
-  ].join('\n');
-}
-
 /* -------------------------------------------------------------------------- */
 /* Routes                                                                     */
 /* -------------------------------------------------------------------------- */
