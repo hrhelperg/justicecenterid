@@ -84,6 +84,17 @@ const MUST_404 = [
   // Wave 3 sub-national candidates merged, aliased or rejected.
   '/institutions/regional-police',
   '/institutions/territorial-police',
+  // Wave 4 relationship candidates merged or rejected.
+  '/law-enforcement/overlapping-police-jurisdiction',
+  '/law-enforcement/police-agency-coordination',
+  '/law-enforcement/shared-policing-services',
+  '/law-enforcement/who-controls-local-police',
+  '/law-enforcement/county-law-enforcement',
+  '/law-enforcement/city-police-and-municipal-government',
+  '/law-enforcement/state-police-vs-local-police',
+  '/law-enforcement/campus-police-jurisdiction',
+  '/law-enforcement/transport-police-jurisdiction',
+  '/law-enforcement/special-purpose-police-agencies',
   // ISO codes are not URL segments; the slug is the English name.
   '/countries/fr',
   '/countries/us',

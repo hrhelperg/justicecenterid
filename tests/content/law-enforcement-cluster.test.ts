@@ -54,13 +54,27 @@ function allText(g: Guide): string {
 }
 
 describe('Wave 1 shipped what the plan says it shipped', () => {
-  it('publishes exactly the four planned pages', () => {
+  it('publishes the four planned pages alongside the three that preceded them', () => {
     const published = LAW_ENFORCEMENT_GUIDES.filter((g) => g.status === 'published').map(
       (g) => g.slug,
     );
     for (const slug of WAVE_1) expect(published).toContain(slug);
-    /* Three pre-existing guides plus four new ones. */
-    expect(published).toHaveLength(7);
+
+    /*
+     * The three guides that predate Wave 1. Asserted by NAME rather than by a total count.
+     *
+     * This previously pinned the section at exactly seven guides, which made it a
+     * tripwire for every later wave rather than a check on Wave 1: adding the Wave 4
+     * relationship cluster broke it without anything being wrong. Naming the records
+     * this test is actually about keeps it meaningful and lets the section grow.
+     */
+    for (const slug of [
+      'why-societies-need-law-enforcement',
+      'police-and-law-enforcement-difference',
+      'how-policing-institutions-changed',
+    ]) {
+      expect(published).toContain(slug);
+    }
   });
 
   it('registers a unique route for each, and only for published guides', () => {

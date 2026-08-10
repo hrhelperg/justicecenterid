@@ -733,6 +733,30 @@ export interface Guide extends EntityBase {
   /** Glossary slugs defined inline on this page. */
   keyTerms?: string[];
   readingTimeMinutes: number;
+
+  /* ------------------------------------------------------------------------
+     Wave 4 additions, for RELATIONSHIP guides.
+     ------------------------------------------------------------------------
+     A relationship guide explains how levels of policing relate to one another,
+     and its characteristic failure is generalising one country's arrangement
+     into a rule. Typed examples make that checkable: the same `CountryExample`
+     shape the institution registry uses, validated the same way, so a guide
+     cannot assert a fact about a country the page cites no source for.
+
+     `counterExamples` is the load-bearing one. "Federal country" does not imply
+     "sub-national police", and "municipality" does not imply "municipal police
+     force" — a comparative page that omits that is not merely incomplete, it is
+     misleading in a specific and predictable direction.
+     ------------------------------------------------------------------------ */
+
+  /** Systems where the pattern this guide describes does operate. */
+  countryExamples?: CountryExample[];
+  /** Systems at the same level where it does NOT. Sourced, never rhetorical. */
+  counterExamples?: CountryExample[];
+  /** Institution-type slugs this guide explains the relationships between. */
+  relatedInstitutions?: string[];
+  /** ISO date the institutional facts were checked against sources. */
+  factsVerifiedOn?: string;
 }
 
 export interface GlossaryTerm {
