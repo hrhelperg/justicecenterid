@@ -4,9 +4,16 @@ import { PRIMARY_NAV } from '@/lib/navigation';
 import { SiteNav } from './SiteNav';
 import { Wordmark } from './Wordmark';
 
+/*
+ * Positioning moved to the shared sticky wrapper in SiteShell, which now carries both this
+ * header and the ecosystem bar as one block. Keeping `sticky top-0` here as well would pin
+ * the header to the top of that wrapper — i.e. underneath the bar — instead of below it.
+ * `relative z-nav` keeps the mobile disclosure panel above page content without
+ * reintroducing a second sticky context.
+ */
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-40 border-b border-line bg-surface/95 backdrop-blur">
+    <header className="relative z-nav border-b border-line bg-surface/95 backdrop-blur">
       <Container width="shell">
         <div className="relative flex min-h-16 items-center justify-between gap-4">
           <Link
