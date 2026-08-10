@@ -224,6 +224,27 @@ describe('sourcing', () => {
    * example about that country; it must not be the only thing a global page rests on. Every
    * routed record therefore cites at least one source that is international in scope.
    */
+  /*
+   * The inverse rule, and the one the Wave 2 adversarial pass had to introduce.
+   *
+   * A worked example makes a factual claim about a named country. The page must therefore
+   * cite a source scoped to that country — otherwise the example is an assertion the page's
+   * own citations cannot support, which is exactly the failure mode the source registry's
+   * `note` field exists to prevent. Several examples failed this on first write.
+   */
+  it('backs every country example with a source scoped to that country', () => {
+    for (const record of [...ROUTED_INSTITUTION_TYPES, ...ROUTED_PROFESSIONS]) {
+      const scopes = new Set(record.sources.map((id) => getSource(id)!.jurisdiction));
+      for (const example of record.countryExamples ?? []) {
+        const dossier = PUBLISHED_DOSSIERS.find((d) => d.slug === example.countrySlug)!;
+        expect(
+          scopes.has(dossier.countryCode),
+          `${record.slug} cites ${example.countrySlug} but no source scoped to ${dossier.countryCode}`,
+        ).toBe(true);
+      }
+    }
+  });
+
   it('never rests a global page solely on country-scoped sources', () => {
     for (const record of [...ROUTED_INSTITUTION_TYPES, ...ROUTED_PROFESSIONS]) {
       const scopes = record.sources.map((id) => getSource(id)!.jurisdiction);
