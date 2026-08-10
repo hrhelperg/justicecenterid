@@ -621,3 +621,30 @@ Routes the glossary and closes the sub-national policing gap Wave 2 identified. 
   new sources required.
 
 Delivered on `feat/knowledge-expansion-wave-3`. Not merged, not deployed.
+
+## Phase 18 — Knowledge Expansion Wave 4 (delivered 2026-08-10)
+
+The jurisdiction relationship cluster: how policing responsibilities are distributed between
+levels of government, and what that means when several agencies hold authority in the same
+place. Details in `docs/audits/knowledge-expansion-wave-4-qa.md`.
+
+- **18 candidates → 7 published**, 8 merged, 3 deferred, 0 rejected. Eleven of eighteen were
+  the same reader question in different words; merging them is the work.
+- **Relationship pages, not institution pages.** No institution record was added and none
+  rewritten. Every page is a `Guide` at `/law-enforcement/{slug}` — the first wave in four to
+  add pages without adding a route family.
+- **Zero JS delta, zero CSS delta.** No client code, no relationship engine, no graph library,
+  and no new sources: all seven pages rest on the 225 records verified earlier.
+- **Typed vocabulary assessed and declined.** The distinctions are the subject of the prose,
+  not metadata about it; an enum whose values only appear in a test does not justify reversing
+  the project's earlier rejection of a relationship graph. No architecture document created.
+- **Counterexamples on six of seven pages**, typed and sourced: Nigeria (s 214(1) forbids any
+  other police force), Kenya (Fourth Schedule), Japan (municipalities own no ordinary police),
+  Switzerland (shared, not contracted), France (where hierarchy genuinely does run downwards).
+- **Three mutation proofs**, two of which exposed weak tests rather than weak content — including
+  a contracted-vs-shared assertion that a paraphrase could satisfy, and a safety test that
+  failed on the page's own disclaimer.
+- Validation: 2527 unit tests / 56 files; **349 routes / 349 sitemap / 351 pages**; e2e 342
+  passed / 4 skipped; route matrix 395/395.
+
+Delivered on `feat/knowledge-expansion-wave-4`. Not merged, not deployed.
