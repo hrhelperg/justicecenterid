@@ -772,3 +772,47 @@ statutes rather than from English labels. Details in
   intended reason. **Zero JS delta, zero CSS delta.**
 
 Delivered on `feat/knowledge-expansion-wave-7`. Not merged, not deployed.
+
+## Phase 22 — Knowledge Expansion Wave 8 (delivered 2026-08-25)
+
+The criminal-investigation pillar opens. Fourteen jurisdictions, six routes, no new institution
+family. Details in `docs/audits/knowledge-expansion-wave-8-qa.md`.
+
+- **No new architecture was needed.** `/investigations/[slug]` was already wired to every guide
+  carrying `section: 'investigations'`, and the section already had an `outOfScope` list naming
+  investigative technique, surveillance and evasion. Wave 8 added six guide records and no route
+  file, no hub and no parallel taxonomy — and inherited the safety boundary rather than inventing
+  one.
+- **The wave nearly shipped an error and the research caught it.** The working hypothesis was
+  that Germany, as an archetypal civil-law system, has no investigating judge. Section 162 StPO
+  disproved it: Germany has an office its own ministry's English translation calls an
+  _investigating judge_. What differs is function — § 162(1) has the prosecution submit
+  applications, and § 162(2) requires the court to examine only "ob die beantragte Handlung nach
+  den Umständen des Falles gesetzlich zulässig ist". **Two incompatible offices share one English
+  name**, and that became the spine of the page.
+- **Zero new institution routes, and that is the finding.** The one candidate with real
+  cross-jurisdiction recurrence is judicial police — and its evidence shows it is not one
+  institution: a legal _function_ in France (CPP Art. 12), an institutional _role_ under a
+  delegado in Brazil (CPP Art. 4), a personnel _status_ in Italy (Const. Art. 109). It ships as a
+  guide about the terminology, which is what the evidence supports.
+- **The common-law / civil-law dichotomy is refuted on the corpus's own sources.** Japan applies a
+  civil-law-derived code with police doing most investigation; Kenya is a common-law system whose
+  DPP may constitutionally direct a specific police investigation under Art. 157(4) while Art.
+  245(4) bars everyone else; Germany places the duty on the prosecution under § 160(1) while
+  § 163(1) gives police their own. A test forbids the dichotomy being asserted anywhere.
+- **Sources were reused, not multiplied.** All 32 dossiers already carried a verified
+  `investigations` module, so 244 → 246: two German sources, each added because a claim was made
+  that no existing source carried.
+- **Safety patterns are proved non-vacuous.** Twelve operational patterns — evasion, evidence
+  destruction, forensic defeat, warrant avoidance, jurisdiction exploitation, witness interference,
+  threshold exploitation and more — are each asserted to match a fixture sentence, so a typo
+  cannot silently disable one. Four candidates were deferred on safety grounds, suspect interviews
+  deliberately among them.
+- **The adversarial pass found a real editorial imbalance.** The cluster stated the constraint side
+  of the platform's editorial principle 58 times and the capacity side twice. A capacity passage
+  and a "both halves are the design" callout were added and locked by a test.
+- Validation: 2882 unit tests / 60 files; **362 routes / 362 sitemap / 364 pages**; e2e 506 passed
+  / 4 skipped; route matrix 439/439. Six mutation proofs, each observed failing for its intended
+  reason. **Zero JS delta, zero CSS delta.**
+
+Delivered on `feat/knowledge-expansion-wave-8`. Not merged, not deployed.
