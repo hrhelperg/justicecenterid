@@ -890,6 +890,102 @@ export interface Profession {
   factsVerifiedOn?: string;
 }
 
+/**
+ * The powers an oversight body may hold over the organisation it examines (Wave 7).
+ *
+ * These are the distinctions the Wave 7 function matrix showed are actually separable in law,
+ * and separable is the point: Norway's Spesialenheten investigates crime and prosecutes it but
+ * must reject a report disclosing no offence, so it holds `investigates-crime` and `prosecutes`
+ * and not `receives-complaints`. New Zealand's IPCA holds `receives-complaints`,
+ * `investigates-misconduct` and `recommends` and is forbidden by s 27 from `disciplines` and
+ * `prosecutes`. A page that renders the union of those is wrong about both.
+ *
+ * The list is deliberately short. It is not a legal ontology — it is the set of claims that
+ * oversight pages were found to overstate, each of which a scoped source can settle.
+ */
+export const OVERSIGHT_POWERS = [
+  'receives-complaints',
+  'investigates-misconduct',
+  'investigates-crime',
+  'prosecutes',
+  'disciplines',
+  'recommends',
+  'inspects',
+  'audits',
+  'refers',
+] as const;
+export type OversightPower = (typeof OVERSIGHT_POWERS)[number];
+
+/**
+ * How well a power is established for a body.
+ *
+ * `not-established` is the value that earns this type its existence. It means the wave did not
+ * reach a source, and it must NEVER be collapsed into `no` — "the statute withholds this" and
+ * "we did not check" are different facts, and only one of them can be published as a limit on a
+ * body's powers. A test asserts the two are rendered differently.
+ */
+export const POWER_SUPPORT_VALUES = [
+  'yes',
+  'no',
+  'conditional',
+  'partial',
+  'not-established',
+] as const;
+export type PowerSupport = (typeof POWER_SUPPORT_VALUES)[number];
+
+/**
+ * How a non-English institution name reaches the reader (Wave 7).
+ *
+ * Forced by Denmark and Czechia. The Danish body's own English pages call it "the Police
+ * Complaints Authority" while its Danish name carries "Uafhængige"; the Czech body's name
+ * contains no word meaning "police" at all. Recording which of the three kinds of name is being
+ * shown is what stops a convenient English phrase becoming the institution's identity.
+ */
+export type InstitutionNameStatus =
+  /** The body's working language is English; there is nothing to translate. */
+  | 'not-a-translation'
+  /** The body itself publishes this English name. */
+  | 'official-english'
+  /** No official English name exists; this rendering explains rather than translates. */
+  | 'explanatory';
+
+/**
+ * One oversight body, as evidence for an institution-family page (Wave 7).
+ *
+ * `CountryExample` carries prose. This carries the assertable facts behind the prose, so that a
+ * test can check the page against the sources rather than against itself: whether each claimed
+ * power has a source scoped to that body's own country, whether a historical body is being shown
+ * as current, and whether the body's position matches what the page says about it.
+ */
+export interface OversightBodyProfile {
+  /** Stable id, unique across the corpus. */
+  id: string;
+  /** The name in the body's own language, always rendered first. */
+  nameOriginal: string;
+  /** The English name, where one is shown. */
+  nameEnglish?: string;
+  nameStatus: InstitutionNameStatus;
+  /** Why the English name could mislead, where it could. Rendered to the reader. */
+  terminologyCaveat?: string;
+  /** Dossier slug. Must be a published country. */
+  countrySlug: string;
+  /** ISO 3166-1 alpha-2, used to check that supporting sources are country-scoped. */
+  jurisdiction: string;
+  /** Inside or outside the organisation it examines. Position only, never independence. */
+  posture: 'internal' | 'external';
+  /** Whether its remit is policing, or something broader that includes policing. */
+  policeSpecific: boolean;
+  temporalScope: TemporalScope;
+  /** Required when temporalScope is not 'current'. The body that replaced it. */
+  supersededBy?: string;
+  /** Required when temporalScope is not 'current'. ISO date. */
+  supersededOn?: string;
+  /** Powers, as established. Absent means the same as `not-established`. */
+  powers: Partial<Record<OversightPower, PowerSupport>>;
+  /** Source ids establishing the above. At least one must be scoped to `jurisdiction`. */
+  sources: string[];
+}
+
 export interface InstitutionType {
   slug: string;
   title: string;
@@ -928,6 +1024,14 @@ export interface InstitutionType {
    * budget, and it is made only where a source establishes it.
    */
   oversightPosture?: 'internal' | 'external' | 'mixed';
+  /**
+   * The bodies this family is evidenced by (Wave 7).
+   *
+   * Present only on oversight families. Where it is present, the page's country examples and
+   * its powers prose are checked against it, which is what makes an overstated power a test
+   * failure rather than an editing question.
+   */
+  oversightBodies?: OversightBodyProfile[];
   /** Historical background, where it is sourced. Never inferred from the present. */
   historyNote?: string;
   countryExamples?: CountryExample[];
