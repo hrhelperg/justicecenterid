@@ -1090,7 +1090,17 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
       'police-use-of-force',
       'police-and-law-enforcement-difference',
     ],
-    sources: ['unodc-e4j-police-accountability', 'udhr', 'unodc-cpcj'],
+    sources: [
+      'unodc-e4j-police-accountability',
+      'udhr',
+      'unodc-cpcj',
+      'nz-ipca-legislative-functions',
+      'za-ipid-act-gazette',
+      'ke-ipoa-act-cap86',
+      'ke-nps-act-cap84-iau',
+      'no-pataleinstruksen-kap34',
+      'ie-pscsa-2024-act',
+    ],
     status: 'published',
     review: 'fact-checked',
     safetyReview: 'cleared',
@@ -1247,6 +1257,37 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
         title: 'Our reading',
         text: 'Debate about police oversight tends to concentrate on independence, as though independence alone determined whether a mechanism works. Powers matter at least as much: an independent body that can only review a file the police assembled is differently constrained from an internal unit that can compel testimony and seize records. Both facts belong in any honest description, and a system is best judged on the combination rather than on the label.',
       },
+      {
+        kind: 'paragraph',
+        text: 'One question recurs often enough to be worth answering directly: who actually disciplines a police officer? Across the oversight bodies researched for this cluster, the answer is almost never the oversight body.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'The police hierarchy decides, in nearly every case',
+            description:
+              'New Zealand’s Independent Police Conduct Authority is denied the power to take disciplinary action by section 27 of its Act. Kenya’s Independent Policing Oversight Authority recommends disciplinary action. Ireland’s Fiosrú refers. Norway’s bureau sends a case to the officer’s own commander where it calls for an administrative response. Four external bodies, four referrals.',
+          },
+          {
+            term: 'A duty to act is not a power to decide',
+            description:
+              'South Africa comes closest to an exception and is the case worth stating precisely. Under section 30 of the Independent Police Investigative Directorate Act, the Commissioner who receives a disciplinary recommendation must initiate proceedings within 30 days and report quarterly to the Minister. The Directorate can compel the process to start. It cannot determine the outcome.',
+          },
+          {
+            term: 'The one conditional exception found is internal',
+            description:
+              'Kenya’s Internal Affairs Unit, established by section 87 of the National Police Service Act, recommends disciplinary action to the Inspector-General — and the Inspector-General may in exceptional cases authorise the Unit to conduct disciplinary proceedings itself. An internal unit, acting on the head of service’s authority.',
+          },
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Why oversight bodies usually cannot discipline',
+        text: 'Discipline is an employer’s power over an employee, exercised under the employment relationship. A body outside the organisation has no such relationship, so giving it a disciplinary power would mean giving an external body authority over another organisation’s staff. Most systems have chosen instead to give it the power to establish facts and to require the employer to respond. Whether that is sufficient is a real question; this page does not answer it.',
+      },
     ],
     furtherReading: [
       {
@@ -1273,6 +1314,429 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
      and docs/seo/knowledge-expansion-wave-4-cannibalization.md.
      ========================================================================== */
 
+  {
+    slug: 'internal-vs-external-police-oversight',
+    title: 'Internal and external police oversight',
+    shortTitle: 'Internal vs external oversight',
+    question:
+      'What is the difference between internal and external police oversight, and does external mean independent?',
+    summary:
+      'Internal bodies sit inside the police; external ones sit outside. The distinction is real and worth knowing, but it does not tell you which body is independent, and in several countries it does not tell you which one holds the stronger powers.',
+    entityType: 'concept',
+    section: 'law-enforcement',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'how-police-are-held-to-account',
+      'who-investigates-police',
+      'police-complaints-vs-criminal-investigation',
+    ],
+    relatedInstitutions: [
+      'independent-police-complaints-body',
+      'independent-police-investigative-body',
+      'ombuds-and-rights-institution',
+    ],
+    sources: [
+      'se-polisen-sarskilda-utredningar',
+      'ke-nps-act-cap84-iau',
+      'ke-ipoa-act-cap86',
+      'fr-decret-2013-784-igpn',
+      'fr-code-defense-iggn',
+      'fr-ddd-deontologie-securite',
+      'za-ipid-act-gazette',
+      'nz-ipca-legislative-functions',
+      'no-pataleinstruksen-kap34',
+      'unodc-e4j-police-accountability',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-08-25',
+    publishedOn: '2026-08-25',
+    reviewedOn: '2026-08-25',
+    factsVerifiedOn: '2026-08-25',
+    readingTimeMinutes: 8,
+    keyTerms: ['police', 'oversight', 'accountability', 'inspectorate'],
+    uncertainty: [
+      'This page describes where bodies sit and what their founding instruments give them. It establishes nothing about whether internal or external arrangements work better, and no such comparison is made.',
+      'Independence is treated here as a claim about statute — basis, appointment, removal, budget and freedom from instruction. Whether a body is independent in practice is a different question, and not one this page answers.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'An internal oversight body is part of the police organisation it examines. Its staff are usually police, its budget usually comes from the force, and its head usually answers to the force’s own leadership. An external body sits outside that organisation, with its own statutory basis and its own staff.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'That is the whole of the distinction. It describes POSITION, and position alone. It does not say who is independent, who has more power, or whose findings carry further — and in each of those three cases there is a country where the obvious guess is wrong.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This explains a structural distinction between kinds of oversight body. It is not legal advice, it does not tell you where to take a complaint in any country, and it does not rank internal against external arrangements.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'Both kinds exist because they answer different questions. An organisation needs to know whether its own rules were followed, and it is the only body that can act on the answer by disciplining an employee. The public needs to know whether the account it is given is reliable, and an organisation reporting on itself cannot settle that no matter how honestly it works.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'So most systems run both, and the interesting question is not which one is better but what each is for and where the boundary between them is drawn.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'Internal — inside the organisation',
+            description:
+              'Internal affairs units, professional standards units, internal inspectorates and the ordinary disciplinary hierarchy. These bodies can reach an employee directly. France’s Inspection générale de la Police nationale is, by the décret that created it, "un service actif de la direction générale de la police nationale" — a service of the force it examines. Kenya’s Internal Affairs Unit is established by section 87 of the National Police Service Act and reports through an assistant Inspector-General to the Inspector-General.',
+          },
+          {
+            term: 'External — outside the organisation',
+            description:
+              'Independent complaints bodies, dedicated investigative bodies, prosecutors, courts and ombuds institutions. These bodies can say what happened without the organisation’s permission, and most of them cannot make the organisation do anything about it. New Zealand’s Independent Police Conduct Authority is an Independent Crown Entity accountable only to Parliament, and section 27 of its Act denies it the power to lay charges or take disciplinary action.',
+          },
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'External does not mean independent, and internal does not mean captured',
+        text: 'Sweden’s Department for Special Investigations is described by the police authority itself as "en oberoende avdelning inom Polismyndigheten, avskild från övrig polisverksamhet" — an independent department INSIDE the Police Authority, separated from other police activity. Kenya’s Internal Affairs Unit is internal, and its statute provides that it "shall not be subject to the control, direction or command of the Kenya Police, Administration Police or the Directorate". Two internal bodies, both carrying a statutory insulation from police command. Whether either is independent is a question about their statutes, and it is not answered by the word "internal".',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The assumption fails in the other direction too. South Africa’s Act states that the Independent Police Investigative Directorate "functions independently from the South African Police Service" — independence from the Service, stated in those words, with nothing equivalent said about the Minister who nominates its Executive Director and may remove them. Norway’s bureau sits wholly outside the police, and the Director of Public Prosecutions may order it to open an investigation, to carry it out, and to stop it. External position and freedom from direction are separate facts, and the instruments keep them separate.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'France inverts the power assumption entirely',
+        text: 'In France the bodies inside the police hold the investigative powers and the bodies outside it do not. The IGPN conducts judicial investigations "d’initiative ou sur instruction de l’autorité judiciaire" — on its own initiative. The Défenseur des droits, an autorité administrative indépendante that receives no instructions, may require explanations, carry out verifications, recommend, enjoin, publish a special report and refer facts to a prosecutor — and cannot impose a sanction or investigate a crime. Note what that external body is, though: security deontology is one of five mandates, and it covers security activity generally — national and municipal police, gendarmes, prison staff, customs officers, transport surveillance agents and private security employees alike. It is not a police body. Being outside is not the same as being stronger.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'A third arrangement belongs to neither column cleanly. Sweden has no external police-oversight body at all: suspected crimes by police employees are investigated by that ring-fenced department inside the police authority, and a prosecutor at the Särskilda åklagarkammaren — inside the prosecution service, outside the police — always leads the preliminary investigation. The oversight is external to the police and internal to the state, which is a shape neither word describes.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Where both kinds exist, the relationship between them is often set out in the statute. Kenya’s Independent Policing Oversight Authority is required to monitor, review and audit the Internal Affairs Unit’s own investigations, may refer a complaint back to that Unit for redress, and may take over an internal investigation that is inordinately delayed or manifestly unreasonable. That is an external body whose job includes checking the internal one — which only works if both exist.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Where the line between internal and external falls is itself a national choice, and three of the countries here draw it in a place the others do not.',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'Both, with the external body auditing the internal one',
+            description:
+              'Kenya. The Internal Affairs Unit under section 87 of the National Police Service Act sits inside the Service; the Independent Policing Oversight Authority sits outside it and is required by section 6(d) of its Act to monitor, review and audit the Unit’s investigations and to keep a record of complaints regardless of where they were first reported.',
+          },
+          {
+            term: 'Internal bodies holding the criminal powers',
+            description:
+              'France. The inspections générales belong to the forces they examine and conduct judicial investigations; the external authorities — both of which hold general mandates rather than police-specific ones — have no criminal-investigation power and no power to sanction.',
+          },
+          {
+            term: 'No external police body at all',
+            description:
+              'Sweden. The investigating department is inside the police authority and the prosecutor who directs it is inside the prosecution service. Nothing in the arrangement sits outside the state’s law-enforcement structures, and the police authority still describes the department as independent.',
+          },
+          {
+            term: 'External, statutory, and deliberately limited',
+            description:
+              'New Zealand. An Independent Crown Entity accountable only to Parliament, which must reach a finding on whether police conduct was unlawful, unreasonable, unjustified, unfair or undesirable, and which section 27 forbids to lay charges or take disciplinary action.',
+          },
+        ],
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'For a reader trying to work out what a particular body can do, the position of the body is the wrong place to start. The founding instrument is the right place, and four questions in it settle most of what matters: what triggers the body, what powers it has once triggered, what it must do with its findings, and who may give it instructions.',
+      },
+      {
+        kind: 'callout',
+        variant: 'uncertainty',
+        title: 'What this distinction cannot tell you',
+        text: 'That a country has both internal and external oversight establishes nothing about whether either functions. This page describes design. The existence of a body is a fact about a statute, and no inference about outcomes follows from it.',
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'External oversight is independent oversight.',
+        reality:
+          'Position and independence are different claims. Independence rests on statutory basis, appointment, removal, budget and freedom from instruction, and an external body can be weak on all five. Norway’s external bureau can be ordered to stop an investigation by the Director of Public Prosecutions.',
+      },
+      {
+        claim: 'Internal oversight means the police marking their own homework.',
+        reality:
+          'Sometimes, and sometimes not. Sweden’s and Kenya’s internal units both carry statutory separation from ordinary police command. Whether that separation is sufficient is a real question; assuming it is absent because the body is internal is not an answer to it.',
+      },
+      {
+        claim: 'External bodies have more power than internal ones.',
+        reality:
+          'In France the reverse is true: the internal inspections can open criminal investigations, and the external authorities cannot investigate a crime or impose a sanction.',
+      },
+      {
+        claim: 'Every country has both.',
+        reality:
+          'Sweden has no dedicated external police-oversight body. The function is divided between a department inside the police and a chamber inside the prosecution service.',
+      },
+    ],
+    countryExamples: [
+      {
+        countrySlug: 'sweden',
+        note: 'The clearest evidence that independent and external are different words. The Department for Special Investigations is an independent department inside the Police Authority, separated from other police activity, and a prosecutor from outside the police always leads its cases.',
+      },
+      {
+        countrySlug: 'kenya',
+        note: 'The only country here with both halves named in statute. The Internal Affairs Unit sits inside the National Police Service under section 87 of the National Police Service Act, insulated by law from the operational commands; the Independent Policing Oversight Authority sits outside and is required to audit it.',
+      },
+      {
+        countrySlug: 'france',
+        note: 'The inversion. The two inspections générales belong to the forces they examine and hold criminal-investigation powers; the Défenseur des droits and the Contrôleur général are outside the police and can recommend, enjoin, verify and publish, but not sanction.',
+      },
+      {
+        countrySlug: 'new-zealand',
+        note: 'External and statutorily independent, and still unable to act on its own findings. The Independent Police Conduct Authority is an Independent Crown Entity accountable only to Parliament, and section 27 of its Act withholds the power to lay charges or take disciplinary action.',
+      },
+    ],
+    counterExamples: [
+      {
+        countrySlug: 'south-africa',
+        note: 'Shows how precisely these claims need reading. Section 4(1) of the Act states that the Directorate "functions independently from the South African Police Service" — that is independence from the Service, and the Act makes no equivalent statement about the Minister, who nominates the Executive Director and may remove them on stated grounds.',
+      },
+    ],
+  },
+  {
+    slug: 'police-complaints-vs-criminal-investigation',
+    title: 'Complaints, investigations and prosecutions are not the same thing',
+    shortTitle: 'Complaints vs criminal investigation',
+    question:
+      'What is the difference between a police complaint, a misconduct investigation and a criminal investigation?',
+    summary:
+      'Five things get called "an investigation into the police": complaint intake, misconduct investigation, disciplinary investigation, criminal investigation and prosecution. They are separate stages held by different bodies, and some bodies hold one without the others.',
+    entityType: 'concept',
+    section: 'law-enforcement',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'who-investigates-police',
+      'how-police-are-held-to-account',
+      'internal-vs-external-police-oversight',
+    ],
+    relatedInstitutions: [
+      'independent-police-investigative-body',
+      'independent-police-complaints-body',
+      'prosecution-service',
+    ],
+    sources: [
+      'no-pataleinstruksen-kap34',
+      'cz-act-341-2011-consolidated',
+      'za-ipid-act-gazette',
+      'ke-ipoa-act-cap86',
+      'ie-pscsa-2024-act',
+      'nz-ipca-legislative-functions',
+      'dk-politiklagemyndighed-about',
+      'unodc-e4j-police-accountability',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-08-25',
+    publishedOn: '2026-08-25',
+    reviewedOn: '2026-08-25',
+    factsVerifiedOn: '2026-08-25',
+    readingTimeMinutes: 9,
+    keyTerms: ['police', 'criminal-investigation', 'prosecutor', 'accountability'],
+    uncertainty: [
+      'The five stages described here are drawn from the instruments of the countries researched. They are a way of reading those instruments accurately, not a universal legal scheme, and a system may divide the same ground differently.',
+      'This page does not describe how to make a complaint anywhere, and it does not say what outcome any stage should produce.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'A single phrase — "the police are being investigated" — covers five different things. Keeping them apart is the difference between understanding what a body can do and assuming it can do everything.',
+      },
+      {
+        kind: 'list',
+        ordered: true,
+        items: [
+          'Complaint intake: someone tells a body that something was wrong. The body records it and decides whether it is admissible and who should handle it.',
+          'Misconduct investigation: establishing what happened, measured against standards of conduct rather than against the criminal law.',
+          'Disciplinary investigation: establishing whether an employee broke the organisation’s rules, in a process that can end in a sanction against them.',
+          'Criminal investigation: establishing whether an offence was committed, under criminal procedure and with the powers that go with it.',
+          'Prosecution: the decision to bring a criminal charge, and the conduct of the case in court.',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This explains how oversight systems divide the work. It is not legal advice, it does not describe any country’s complaint procedure, and it does not assess outcomes.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'The stages exist separately because they answer different questions to different standards. Whether an officer was rude, whether an officer broke a workplace rule, and whether an officer committed an assault are three questions, and the third one carries a criminal standard of proof and a set of procedural protections the first two do not.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'This is why a complaint can be upheld while no one is prosecuted, and why an acquittal does not mean a complaint was baseless. Different findings on different standards by different bodies is a coherent result, not a contradiction.',
+        claim: 'analysis',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'The clearest proof that the stages are genuinely separable is that some bodies are required to refuse the ones they do not hold.',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'A body that must turn away non-criminal complaints',
+            description:
+              'Norway’s Spesialenheten for politisaker investigates and prosecutes criminal acts committed in the course of duty by police and prosecution employees. Chapter 34 of the prosecution instruction requires its chief to reject cases outside that competence, "for eksempel fordi det anmeldte forhold ikke er straffbart" — for example because the reported matter is not criminal. A complaint that alleges no offence is not refused because the body is unwilling; it is outside the body’s statutory competence.',
+          },
+          {
+            term: 'A body with no complaint procedure at all',
+            description:
+              'Czechia’s General Inspection of Security Forces investigates crimes by officers of the police, the customs administration and the prison service. Its Act provides no complaints mechanism for those forces. A member of the public may alert the inspection to conduct by another force’s officer only where that conduct amounts to a CRIMINAL offence — while for the inspection’s own members the same provision extends to administrative and disciplinary offences. The asymmetry is written into the statute.',
+          },
+          {
+            term: 'A body that investigates and cannot charge',
+            description:
+              'New Zealand’s Independent Police Conduct Authority receives complaints, investigates incidents causing death or serious bodily harm with the powers of a Commission of Inquiry, and must determine whether police conduct was unlawful, unreasonable, unjustified, unfair or undesirable. Section 27 of its Act denies it the power to lay criminal charges or take disciplinary action. It reaches a finding and hands the decision on.',
+          },
+          {
+            term: 'A body that investigates and prosecutes',
+            description:
+              'Norway’s bureau again, at the other end. Its chief decides the prosecution question except where that belongs to the Director of Public Prosecutions, and where the unit indicts, a lawyer from the unit conducts the case in court. Investigation and prosecution in one body is the exception in this set, not the pattern.',
+          },
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Complaint intake is a routing decision, not a promise to investigate',
+        text: 'Ireland’s 2024 Act routes defined categories of admissible complaint back to An Garda Síochána for resolution rather than to the Ombudsman. South Africa’s Act sends ordinary service complaints about the police to the police service and, where appropriate, the Secretariat — the Directorate’s own list is deaths, firearm discharges, rape, torture, assault and corruption. Kenya’s Authority may refer a complaint back to the Service’s Internal Affairs Unit for redress. In each case the complaint was received by the external body and handled by the police, which is a normal design and not a failure of one.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The last two stages separate almost everywhere. Of the bodies researched for this cluster, one prosecutes; the rest must refer to a prosecution service — the National Prosecuting Authority in South Africa, the Director of Public Prosecutions in Kenya and Ireland, the state prosecutor in Czechia. And the disciplinary decision belongs to the police in every single case. South Africa comes closest to an exception and is worth stating precisely: on a disciplinary recommendation the Commissioner must begin proceedings within 30 days and report quarterly to the Minister. That is a duty on the police to act. It is not a power in the oversight body to decide.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Some bodies do hold several stages at once, and the page would be misleading if it implied a clean division. Denmark’s authority handles conduct complaint cases and investigates criminal cases against police and prosecution personnel. Ireland’s Fiosrú takes complaints and investigates with powers equivalent to a Garda member. Kenya’s Authority investigates disciplinary and criminal offences alike, inspects police premises and audits the internal unit. The stages are separable, which is not the same as always separated.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Systems differ less in whether they recognise these stages than in how many of them they put in one body, and where they place the boundary between complaint and crime.',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'Criminal stages only',
+            description:
+              'Norway and Czechia. Both bodies investigate crimes by officers and neither takes conduct complaints; Norway’s must refuse them by statute and Czechia’s Act does not provide for them.',
+          },
+          {
+            term: 'Complaint and misconduct stages, without the criminal decision',
+            description:
+              'New Zealand. The Authority receives complaints, investigates, and determines whether conduct was unlawful, unreasonable, unjustified, unfair or undesirable — and cannot lay a charge or impose a sanction.',
+          },
+          {
+            term: 'Complaint and criminal stages together',
+            description:
+              'Denmark and Ireland. Denmark’s authority handles conduct complaints and investigates criminal cases against police and prosecution personnel. Ireland’s Fiosrú determines admissibility, investigates with police-equivalent powers, and refers to the Director of Public Prosecutions.',
+          },
+          {
+            term: 'The widest mandate found, still without the final decisions',
+            description:
+              'Kenya. Complaints from the public and from officers, disciplinary and criminal investigation, inspection of police premises, audit of the internal unit, and the power to take over a delayed internal investigation — with prosecution recommended to the Director of Public Prosecutions and discipline recommended to the Service.',
+          },
+        ],
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'The practical consequence of these distinctions is that "who investigates the police" has no single answer even inside one country, because it depends on which stage is meant. The same incident may produce a complaint handled by the police under a statutory arrangement, a criminal investigation by an external body, a prosecution decision by a prosecutor, and a disciplinary process run by the force — four processes, four bodies, four standards.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'uncertainty',
+        title: 'Separable, not ranked',
+        text: 'Nothing here says that a body holding more stages is better, or that separating them is a weakness. Combining investigation and prosecution removes a step and concentrates a decision; separating them adds a check and adds a handover. Both trade-offs are real and this page takes no position on them.',
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'If a body is independent, it can investigate any complaint about the police.',
+        reality:
+          'Two bodies in this cluster that sit wholly outside the police cannot. Norway’s must reject a report disclosing no offence, and Czechia’s Act contains no complaint procedure for the forces it investigates.',
+      },
+      {
+        claim: 'An investigation that finds wrongdoing leads to a prosecution.',
+        reality:
+          'In most systems the investigating body refers the file to a prosecutor, who takes the charging decision. Kenya’s Authority may require the Director of Public Prosecutions to respond to its recommendation, which is a duty to answer, not a duty to charge.',
+      },
+      {
+        claim: 'Oversight bodies discipline officers.',
+        reality:
+          'Almost none do. Across the bodies researched, discipline is referred to the police hierarchy. The one conditional exception found is an internal unit — Kenya’s — and only where the Inspector-General authorises it.',
+      },
+      {
+        claim: 'A complaint sent back to the police has been dismissed.',
+        reality:
+          'Several statutes route defined categories to the police deliberately, with arrangements for how they must be handled. Referral is a step in the process, not the end of it.',
+      },
+    ],
+    countryExamples: [
+      {
+        countrySlug: 'norway',
+        note: 'Holds criminal investigation and prosecution and neither of the complaint stages. Its chief must reject a report that discloses no criminal offence, and where a case calls for an administrative response it goes to the officer’s own commander.',
+      },
+      {
+        countrySlug: 'czechia',
+        note: 'Holds criminal investigation only. The Act gives the public a right to alert the inspection to an officer’s CRIMINAL conduct, and no complaint procedure beyond it — while the same provision covers administrative and disciplinary offences when the person complained of belongs to the inspection itself.',
+      },
+      {
+        countrySlug: 'ireland',
+        note: 'Shows intake and investigation as separate decisions. Fiosrú determines admissibility, routes defined categories back to An Garda Síochána for resolution, investigates the rest with powers equivalent to a Garda member, and refers to the Director of Public Prosecutions.',
+      },
+      {
+        countrySlug: 'south-africa',
+        note: 'Shows the disciplinary boundary at its sharpest. The Directorate recommends; the Commissioner must initiate proceedings within 30 days and report quarterly to the Minister; the disciplinary decision remains the police service’s.',
+      },
+    ],
+    counterExamples: [
+      {
+        countrySlug: 'denmark',
+        note: 'Holds the complaint and criminal stages together in one body, which is why the stages should be read as separable rather than always separate. The authority handles conduct complaint cases and investigates criminal cases against police and prosecution personnel alike.',
+      },
+    ],
+  },
   {
     slug: 'police-jurisdiction',
     title: 'What does police jurisdiction mean?',

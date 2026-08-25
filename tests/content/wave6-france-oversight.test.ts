@@ -258,9 +258,33 @@ describe('taxonomy is not forced onto the French institutions', () => {
     }
   });
 
-  it('adds no institution route at all in this wave', () => {
-    /* Wave 6 strengthens existing pages. 13 routed types is the Wave 5 end state. */
-    expect(ROUTED_INSTITUTION_TYPES).toHaveLength(13);
+  it('leaves the institution routes Wave 6 inherited exactly as it found them', () => {
+    /*
+     * Wave 6 strengthened existing pages and added no institution route of its own. That
+     * intent used to be expressed as a count of routed types, which made every LATER wave
+     * fail a Wave 6 test for doing legitimate work. The intent is the same and the guard is
+     * no weaker: the thirteen types Wave 6 inherited must all still be routed, and — asserted
+     * by the test above — none of the families Wave 6 rejected may be.
+     */
+    const inheritedAtWave6 = [
+      'municipal-police',
+      'national-police',
+      'gendarmerie',
+      'federal-investigative-agency',
+      'transport-police',
+      'prosecution-service',
+      'correctional-service',
+      'state-police',
+      'provincial-police',
+      'prefectural-police',
+      'autonomous-community-police',
+      'independent-police-complaints-body',
+      'ombuds-and-rights-institution',
+    ];
+    const routed = ROUTED_INSTITUTION_TYPES.map((i) => i.slug);
+    for (const slug of inheritedAtWave6) {
+      expect(routed, `${slug} stopped being routed after Wave 6`).toContain(slug);
+    }
   });
 
   it('warns the reader that inspection générale and inspectorate are not the same thing', () => {

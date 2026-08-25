@@ -721,3 +721,54 @@ Details in `docs/audits/knowledge-expansion-wave-6-qa.md`.
   intended reason. **Zero JS delta**, CSS +219 B.
 
 Delivered on `feat/knowledge-expansion-wave-6`. Not merged, not deployed.
+
+## Phase 21 — Knowledge Expansion Wave 7 (delivered 2026-08-25)
+
+Police oversight institutions, phase 2. Ten jurisdictions researched function-first, from
+statutes rather than from English labels. Details in
+`docs/audits/knowledge-expansion-wave-7-qa.md`.
+
+- **The merge gate stopped the wave once.** Wave 6 was pushed but unmerged, and `main` still
+  carried the deferred France oversight module. Building on `main` would have recreated Wave 6's
+  French research; building on the branch would have stacked on unmerged work. The wave resumed
+  only after Wave 6 was merged, from base SHA `de2b757`.
+- **Wave 6's open question is closed.** It made reopening `police-inspectorate` conditional on
+  whether the internal and external forms are one type or two. They are **two**: France's
+  inspections belong to the forces they examine and investigate individuals; Ireland's Policing
+  and Community Safety Authority is external, statutory and investigates nobody. The route stays
+  deferred, now with the question answered.
+- **One institution family published**: `/institutions/independent-police-investigative-body`,
+  on six jurisdictions. It exists because of a negative statutory finding — Norway's chief
+  **must reject** a report disclosing no offence, and the Czech Act contains **no complaint
+  procedure** for the forces it investigates. A body required to turn away complaints is not a
+  complaints body.
+- **An existing false equivalence was corrected.** Wave 5 listed Norway and Czechia as country
+  examples of `independent-police-complaints-body`. Neither takes complaints. Both are now
+  rendered as limits on that page, with tests pinning the correction.
+- **Two guides published**, both reversing or extending earlier decisions on new evidence:
+  `internal-vs-external-police-oversight` — deferred by Wave 5 as a restatement, reopened
+  because Sweden's police authority calls its investigating department "en oberoende avdelning
+  **inom** Polismyndigheten" and section 87 of Kenya's National Police Service Act insulates an
+  **internal** unit from police command by statute; and
+  `police-complaints-vs-criminal-investigation`, which separates the five stages that get called
+  "an investigation".
+- **The finding of the wave: almost nothing disciplines.** Across sixteen current bodies the
+  disciplinary-decision column is `no` or `conditional` everywhere, and the one conditional is an
+  _internal_ unit. The strongest arrangement found is South Africa's § 30, which compels a
+  Commissioner to _begin_ proceedings within 30 days — a duty on the police to act, not a power
+  in the oversight body to decide.
+- **Powers are now structured, not prose.** `OversightBodyProfile` records position,
+  police-specificity, temporal state, successor linkage, translation status and a nine-power map
+  with five support values — including `not-established`, which a test forbids being rendered as
+  `no`. `oversightPosture` was deliberately left unchanged: the failure mode it was tempting to
+  extend for is a claim problem, not a posture problem.
+- **The independence check keys on predication, not vocabulary.** A substring block would forbid
+  "being outside the police is not the same as being independent", which is the thesis of one of
+  the new pages. It carries its own non-vacuity guard.
+- **Nine new sources**, 235 → 244, all content-confirmed. Four legal-information systems refused
+  automated requests and nothing was cited from any document that was not read.
+- Validation: 2724 unit tests / 59 files; **356 routes / 356 sitemap / 358 pages**; e2e 442
+  passed / 4 skipped; route matrix 420/420. Six mutation proofs, each observed failing for its
+  intended reason. **Zero JS delta, zero CSS delta.**
+
+Delivered on `feat/knowledge-expansion-wave-7`. Not merged, not deployed.

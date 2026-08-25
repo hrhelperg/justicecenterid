@@ -102,7 +102,10 @@ const MUST_404 = [
   '/institutions/anti-corruption-commission',
   '/institutions/data-protection-authority',
   '/institutions/judicial-oversight',
-  '/law-enforcement/internal-vs-external-police-oversight',
+  // `/law-enforcement/internal-vs-external-police-oversight` was here until Wave 7, which
+  // reversed the Wave 5 deferral on new statutory evidence — Sweden's "oberoende avdelning
+  // inom Polismyndigheten" and section 87 of Kenya's National Police Service Act. It is now a
+  // published route, asserted by tests/content/wave5-oversight.test.ts.
   '/law-enforcement/how-police-complaints-are-investigated',
   // Wave 6: English labels tested against French evidence and rejected. The French
   // inspections générales are INSIDE the forces they examine, so "inspectorate" would
@@ -112,6 +115,15 @@ const MUST_404 = [
   '/institutions/police-integrity-commission',
   '/institutions/police-standards-commission',
   '/countries/france/inspections',
+  // Wave 7: families assessed against ten jurisdictions and not published. Two were MERGED
+  // into pages that already exist (conduct authority, police ombudsman), three failed on
+  // recurrence, one is an invented label, and one is a position rather than a family.
+  '/institutions/police-conduct-authority',
+  '/institutions/police-complaints-commissioner',
+  '/institutions/civilian-police-review-board',
+  '/institutions/external-police-oversight-authority',
+  '/law-enforcement/who-disciplines-police',
+  '/law-enforcement/independent-police-investigations',
   // ISO codes are not URL segments; the slug is the English name.
   '/countries/fr',
   '/countries/us',

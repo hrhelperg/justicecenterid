@@ -87,11 +87,38 @@ describe('routes', () => {
       '/institutions/judicial-oversight',
       '/institutions/prosecutorial-oversight',
       '/institutions/civilian-police-review-board',
-      '/law-enforcement/internal-vs-external-police-oversight',
       '/law-enforcement/how-police-complaints-are-investigated',
     ]) {
       expect(PUBLIC_ROUTE_PATHS, `${path} was deferred or rejected`).not.toContain(path);
     }
+  });
+
+  /*
+   * `/law-enforcement/internal-vs-external-police-oversight` was on the list above until
+   * Wave 7. Wave 5 deferred it as a restatement of `how-police-are-held-to-account`, which was
+   * correct on Wave 5's evidence: that evidence established which bodies exist and what each
+   * can do, and a page about the internal/external split would have added a heading and no
+   * fact.
+   *
+   * Wave 7 reversed it on new evidence, not on a change of view. Sweden's police authority
+   * describes its investigating department as "en oberoende avdelning INOM Polismyndigheten",
+   * and section 87 of Kenya's National Police Service Act insulates an INTERNAL unit from
+   * police command by statute. Those two clauses make "external means independent" a
+   * demonstrably false proposition rather than an imprecise one, and that proposition is not
+   * addressed anywhere in `how-police-are-held-to-account`.
+   *
+   * The reversal is asserted here rather than deleted silently, so that the guide cannot be
+   * unpublished without someone reading why it was published.
+   */
+  it('publishes internal-vs-external only while the evidence that reversed Wave 5 is present', () => {
+    const path = '/law-enforcement/internal-vs-external-police-oversight';
+    if (!PUBLIC_ROUTE_PATHS.includes(path)) return;
+    const guide = LAW_ENFORCEMENT_GUIDES.find(
+      (g) => g.slug === 'internal-vs-external-police-oversight',
+    );
+    expect(guide, 'the route exists but the guide does not').toBeDefined();
+    expect(guide?.sources).toContain('se-polisen-sarskilda-utredningar');
+    expect(guide?.sources).toContain('ke-nps-act-cap84-iau');
   });
 });
 
