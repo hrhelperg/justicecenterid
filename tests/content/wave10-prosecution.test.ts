@@ -665,6 +665,34 @@ describe('every country-specific claim rests on a country-scoped source', () => 
     }
   });
 
+  it('uses the federal prosecution examples the corpus actually carries', () => {
+    /*
+     * An adversarial pass found four jurisdictions with verified prosecution modules that the
+     * first draft did not use — and an uncertainty note that wrongly said three of them had not
+     * been researched. Australia and Canada are the two clearest cases in the corpus of several
+     * public prosecution services inside one federation with no chain of command between them,
+     * and omitting them left the organisation page thinner than the evidence allowed.
+     */
+    const p = prose(guide('how-prosecution-systems-are-organised'));
+    for (const marker of [/Australia/, /Canada/, /Switzerland/, /Japan/]) {
+      expect(p, `federal example missing: ${marker}`).toMatch(marker);
+    }
+    expect(p).toMatch(/whoever made the law that was broken/i);
+    expect(p).toMatch(/Governor in Council/);
+    expect(p).toMatch(/article 22|Article 22/);
+  });
+
+  it('never implies a federal prosecutor supervises sub-national ones', () => {
+    for (const pattern of [
+      /Commonwealth DPP supervises/i,
+      /PPSC supervises the provincial/i,
+      /federal prosecutors? (?:supervise|oversee) (?:the )?state prosecutors/i,
+    ]) {
+      expect(ALL_ASSERTED, `federal supervision claim: ${pattern}`).not.toMatch(pattern);
+    }
+    expect(ALL_PROSE).toMatch(/Parallel services, not a chain of command/i);
+  });
+
   it('the rule still rejects a generic instrument standing in for a country', () => {
     for (const [country, iso] of Object.entries(WITH_US)) {
       expect(

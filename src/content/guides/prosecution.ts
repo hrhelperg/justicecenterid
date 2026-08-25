@@ -422,6 +422,8 @@ export const PROSECUTION_GUIDES: readonly Guide[] = [
       'us-bjs-prosecutors',
       'ke-constitution',
       'es-constitution',
+      'jp-code-criminal-procedure',
+      'jp-moj-prosecutors',
       'un-prosecutors-guidelines',
     ],
     status: 'published',
@@ -431,7 +433,7 @@ export const PROSECUTION_GUIDES: readonly Guide[] = [
     publishedOn: '2026-08-26',
     reviewedOn: '2026-08-26',
     factsVerifiedOn: '2026-08-26',
-    readingTimeMinutes: 8,
+    readingTimeMinutes: 9,
     keyTerms: ['prosecutor'],
     uncertainty: [
       'Only Germany’s legality provisions and the United States position on local prosecutorial discretion are established from sources in this corpus. Other systems are named on this page only where a source supports the specific statement made.',
@@ -491,6 +493,12 @@ export const PROSECUTION_GUIDES: readonly Guide[] = [
         text: 'Where discretion exists, its breadth still varies. The Bureau of Justice Statistics records that the chief local prosecutor in the United States holds broad discretion over who is charged, and that most are answerable to the public as elected officials — a form of control over discretion that no other system in this corpus uses.',
         claim: 'fact',
         sources: ['us-bjs-prosecutors'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Japan is a useful third position, because the discretion is located in the office itself. Under the Code of Criminal Procedure prosecution is instituted by a public prosecutor, and the charging decision belongs to the prosecutor, who also holds the discretion whether to prosecute at all. The decision sits with the prosecutor rather than with the investigating police — which is a separation of function as much as a grant of discretion.',
+        claim: 'fact',
+        sources: ['jp-code-criminal-procedure'],
       },
       {
         kind: 'paragraph',
@@ -1318,6 +1326,13 @@ export const PROSECUTION_GUIDES: readonly Guide[] = [
       'ke-constitution',
       'ie-dpp',
       'fr-justice-parquet',
+      'au-cdpp',
+      'au-constitution',
+      'ca-dpp-act',
+      'ca-ppsc-about',
+      'ch-crimpc',
+      'ch-constitution',
+      'jp-moj-prosecutors',
     ],
     status: 'published',
     review: 'fact-checked',
@@ -1326,11 +1341,11 @@ export const PROSECUTION_GUIDES: readonly Guide[] = [
     publishedOn: '2026-08-26',
     reviewedOn: '2026-08-26',
     factsVerifiedOn: '2026-08-26',
-    readingTimeMinutes: 9,
+    readingTimeMinutes: 10,
     keyTerms: ['prosecutor', 'jurisdiction'],
     uncertainty: [
       'This page describes how prosecuting authority is distributed. It does not describe any individual American state’s, German Land’s or Nigerian state’s prosecution arrangements, which would require that jurisdiction’s own sources.',
-      'Switzerland’s, Canada’s and Australia’s prosecution structures were not researched from primary sources for this wave and are not described. Their absence is a gap in the research rather than a finding.',
+      'Where a country is described below, the description is limited to what its source establishes. Several dossiers record the relationship between a prosecuting office and the government that appoints it as unresearched — Canada’s, Australia’s, Switzerland’s and Japan’s among them — and those relationships are not described here.',
     ],
     definition: [
       {
@@ -1384,6 +1399,26 @@ export const PROSECUTION_GUIDES: readonly Guide[] = [
             description:
               'The Ministério Público holds the public criminal action exclusively and sits outside the executive, the legislature and the judiciary, with functional and administrative autonomy.',
           },
+          {
+            term: 'Allocated by who made the law — Australia',
+            description:
+              'The logic follows the division of legislative power: whoever made the law that was broken provides the prosecutor. Because there is no national criminal code, the everyday work of criminal prosecution is done by the state and territory Directors of Public Prosecutions, while the Commonwealth DPP handles federal offences. Several public prosecution services operate inside one federation, and none of them supervises the others.',
+          },
+          {
+            term: 'Split by offence and by geography — Canada',
+            description:
+              'Federally, the Public Prosecution Service of Canada is headed by a Director of Public Prosecutions whom "the Governor in Council shall, on the recommendation of the Attorney General, appoint" under section 3(1) of the Director of Public Prosecutions Act. The PPSC prosecutes offences under federal statutes, while in the provinces the great majority of Criminal Code offences are prosecuted by the provincial Crown services — and in the territories the PPSC states that it is the only prosecutor. Two axes at once, which no other system here uses.',
+          },
+          {
+            term: 'Cantonal by default — Switzerland',
+            description:
+              'Article 22 of the Swiss Criminal Procedure Code provides that the cantonal criminal-justice authorities prosecute and judge federal criminal offences, subject to the legal exceptions. Each canton has its own public prosecution service handling the great majority of crime. A unified national procedure code does not entail a unified national prosecution service, and Switzerland has the first without the second.',
+          },
+          {
+            term: 'Offices attached to courts, but not part of them — Japan',
+            description:
+              'The Ministry of Justice describes four types of Public Prosecutors’ Office — Supreme, high, district and local — located to correspond to the courts they appear before. The offices are attached to the courts and are not part of them, an arrangement that resembles Germany’s section 141 GVG without sharing its federal structure.',
+          },
         ],
       },
       {
@@ -1414,6 +1449,16 @@ export const PROSECUTION_GUIDES: readonly Guide[] = [
         claim: 'Decentralised countries have decentralised prosecution.',
         reality:
           'Spain is the counter-case. Policing and prisons are asymmetric across the Autonomous Communities; the Ministerio Fiscal is a single national body under Article 124.',
+      },
+      {
+        claim: 'A federal DPP supervises the state or provincial prosecutors.',
+        reality:
+          'In Australia the Commonwealth DPP handles federal offences while the state and territory DPPs handle the rest, allocated by which legislature made the law. In Canada the PPSC prosecutes federal-statute offences while provincial Crown services prosecute most Criminal Code offences. Parallel services, not a chain of command.',
+      },
+      {
+        claim: '"Crown prosecutor" is the general term across common-law countries.',
+        reality:
+          'It describes the provincial services in Canada, alongside a federal Public Prosecution Service headed by a Director of Public Prosecutions. It does not describe Australia’s DPPs, Ireland’s DPP, Kenya’s ODPP, or any American prosecutor.',
       },
       {
         claim: '"District attorney" is the American word for prosecutor.',
