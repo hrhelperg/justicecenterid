@@ -13,7 +13,14 @@ export const PROCESS_GUIDES: readonly Guide[] = [
     section: 'courts',
     jurisdiction: ['INT'],
     temporalScope: 'current',
-    related: ['what-is-due-process', 'what-does-a-prosecutor-do', 'what-is-the-rule-of-law'],
+    related: [
+      'why-courts-matter',
+      'court-hierarchy',
+      'why-judicial-independence-matters',
+      'what-is-due-process',
+      'what-does-a-prosecutor-do',
+      'what-is-the-rule-of-law',
+    ],
     sources: ['iccpr', 'udhr', 'rome-statute'],
     status: 'published',
     review: 'fact-checked',
@@ -154,7 +161,7 @@ export const PROCESS_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [due process](/justice/what-is-due-process), [what a prosecutor does](/prosecution/what-does-a-prosecutor-do), and [the rule of law](/justice/what-is-the-rule-of-law).',
+        text: 'This guide explains what courts do. How court systems are STRUCTURED, and how much they differ, is covered by [court hierarchy](/courts/court-hierarchy), [why courts matter](/courts/why-courts-matter) and [why judicial independence matters](/courts/why-judicial-independence-matters). Related: [due process](/justice/what-is-due-process), [what a prosecutor does](/prosecution/what-does-a-prosecutor-do), and [the rule of law](/justice/what-is-the-rule-of-law).',
       },
     ],
   },
