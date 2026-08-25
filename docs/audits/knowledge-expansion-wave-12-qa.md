@@ -5,18 +5,18 @@ routes published, one new source, three existing constitutional notes extended.
 
 ## Routes published
 
-| Route | Owns |
-| --- | --- |
-| `/justice/why-government-is-bound-by-law` | Four different constitutional techniques for binding public power |
-| `/justice/limits-on-public-power` | The four recurring limits: prior legal basis, hearing, review, absolute prohibitions |
-| `/justice/legality-and-non-retroactivity` | No crime without prior law, and the one permitted direction of retroactivity |
-| `/justice/legal-certainty` | Vested rights, perfect juridical acts, res judicata, and the temporal dimension |
-| `/justice/equality-before-the-law` | Equality of application versus equal protection and benefit |
-| `/justice/access-to-justice` | Access as a right in itself, and access as distinct from outcome |
-| `/justice/effective-remedy` | What a forum can actually give, including compensation for judicial error |
-| `/justice/procedural-fairness-and-its-many-names` | The comparative terminology question |
-| `/justice/why-courts-must-be-respected` | What respect requires and what it does not |
-| `/justice/appeal-and-the-rule-of-law` | Why a system builds machinery to say it was wrong |
+| Route                                             | Owns                                                                                 |
+| ------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| `/justice/why-government-is-bound-by-law`         | Four different constitutional techniques for binding public power                    |
+| `/justice/limits-on-public-power`                 | The four recurring limits: prior legal basis, hearing, review, absolute prohibitions |
+| `/justice/legality-and-non-retroactivity`         | No crime without prior law, and the one permitted direction of retroactivity         |
+| `/justice/legal-certainty`                        | Vested rights, perfect juridical acts, res judicata, and the temporal dimension      |
+| `/justice/equality-before-the-law`                | Equality of application versus equal protection and benefit                          |
+| `/justice/access-to-justice`                      | Access as a right in itself, and access as distinct from outcome                     |
+| `/justice/effective-remedy`                       | What a forum can actually give, including compensation for judicial error            |
+| `/justice/procedural-fairness-and-its-many-names` | The comparative terminology question                                                 |
+| `/justice/why-courts-must-be-respected`           | What respect requires and what it does not                                           |
+| `/justice/appeal-and-the-rule-of-law`             | Why a system builds machinery to say it was wrong                                    |
 
 ## Candidate decisions
 
@@ -54,7 +54,7 @@ page holds both halves, and the tests assert both: no page may call due process 
 page may call it exclusively American.
 
 Three other systems reach comparable ground under names that are not translations of it —
-Germany's *rechtliches Gehör*, South Africa's "lawful, reasonable and procedurally fair", Kenya's
+Germany's _rechtliches Gehör_, South Africa's "lawful, reasonable and procedurally fair", Kenya's
 "fair hearing" — and they differ in scope as well as name.
 
 ## Jurisdictional diversity
@@ -78,36 +78,36 @@ corroborated against gov.za's chapter pages, and the rejection is recorded in th
 
 ## Cicero — Wave 9's correction preserved
 
-Wave 9 established the full sentence at *Pro Cluentio* § 146 and corrected the popular truncation.
+Wave 9 established the full sentence at _Pro Cluentio_ § 146 and corrected the popular truncation.
 `/courts/why-courts-matter` owns that material. **Wave 12 does not re-quote the passage at all** —
 three tests assert the truncated form appears nowhere, that the passage is not re-quoted, and that
 the courts page still carries the full sentence.
 
 ## Validation
 
-| Gate | Result |
-| --- | --- |
-| typecheck / lint / format | pass |
-| `npm test` | 3705 passed / 64 files |
-| build | exit 0 |
-| `verify:output` | 398 routes / 400 pages / 398 sitemap |
+| Gate                      | Result                               |
+| ------------------------- | ------------------------------------ |
+| typecheck / lint / format | pass                                 |
+| `npm test`                | 3705 passed / 64 files               |
+| build                     | exit 0                               |
+| `verify:output`           | 398 routes / 400 pages / 398 sitemap |
 
 ## Mutation proofs
 
-| # | Mutation | Observed |
-| --- | --- | --- |
-| W12-M1 | Remove `za-constitution` from a page naming South Africa | FAIL — 2 tests |
-| W12-M2 | Assert due process is universal | FAIL |
+| #      | Mutation                                                                   | Observed                     |
+| ------ | -------------------------------------------------------------------------- | ---------------------------- |
+| W12-M1 | Remove `za-constitution` from a page naming South Africa                   | FAIL — 2 tests               |
+| W12-M2 | Assert due process is universal                                            | FAIL                         |
 | W12-M3 | "Courts must never be criticised and their judgments are beyond criticism" | **PASSED twice — see below** |
-| W12-M4 | Frame appeal as undermining courts | FAIL — 2 tests |
-| W12-M5 | Reintroduce the Cicero truncation | FAIL — 2 tests |
+| W12-M4 | Frame appeal as undermining courts                                         | FAIL — 2 tests               |
+| W12-M5 | Reintroduce the Cicero truncation                                          | FAIL — 2 tests               |
 
 ### W12-M3 exposed a real flaw, and then a second one
 
 **First failure of the test, not the content.** The sentence-level neutrality check asked whether
 the sentence containing a flagged claim also contained a negation. Several tripwire patterns carry
 a negation in their own text — "courts must **never** be criticised" — so the claim satisfied the
-denial check *by being itself*. An inserted absolutist statement survived.
+denial check _by being itself_. An inserted absolutist statement survived.
 
 The fix removes the matched span before looking for a denial, so the negation has to come from the
 surrounding sentence and actually operate on the claim. A non-vacuity test proves a bare claim is
@@ -124,11 +124,11 @@ no-opped.** Conditional edits to test files are how a safeguard silently reverts
 
 ## Adversarial findings
 
-| # | Finding | Severity | Resolution |
-| --- | --- | --- | --- |
-| 1 | The legal-advice check fired on scope callouts saying "does not describe how to bring a claim" | P2 | Made denial-aware, with a live-catch test proving an actual instruction is still caught |
-| 2 | Four pages deep-dive rule-of-law sub-elements with no guard against restatement | **P1** | Verbatim-reproduction test plus a requirement that each deep dive carry constitutional text |
-| 3 | The neutrality denial check could be satisfied by a negation inside the claim | **P1** | Tightened; see W12-M3 |
-| 4 | The tightening silently failed to apply to the absolutist block | **P1** | Re-applied with a hard assertion |
+| #   | Finding                                                                                        | Severity | Resolution                                                                                  |
+| --- | ---------------------------------------------------------------------------------------------- | -------- | ------------------------------------------------------------------------------------------- |
+| 1   | The legal-advice check fired on scope callouts saying "does not describe how to bring a claim" | P2       | Made denial-aware, with a live-catch test proving an actual instruction is still caught     |
+| 2   | Four pages deep-dive rule-of-law sub-elements with no guard against restatement                | **P1**   | Verbatim-reproduction test plus a requirement that each deep dive carry constitutional text |
+| 3   | The neutrality denial check could be satisfied by a negation inside the claim                  | **P1**   | Tightened; see W12-M3                                                                       |
+| 4   | The tightening silently failed to apply to the absolutist block                                | **P1**   | Re-applied with a hard assertion                                                            |
 
 No P0.

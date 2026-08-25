@@ -139,6 +139,13 @@ export const SAFETY_SENSITIVE_SECTIONS: readonly SectionId[] = [
    * A safety review is therefore mandatory before anything in `/defence` can publish.
    */
   'defence',
+  /*
+   * Added by Wave 13, on the same reasoning that put `defence` on this list. Material
+   * describing how custody, supervision, licence conditions and release decisions operate is
+   * one step from material describing how to defeat them. A safety review is therefore
+   * mandatory before anything in `/corrections` can publish.
+   */
+  'corrections',
 ];
 
 /*

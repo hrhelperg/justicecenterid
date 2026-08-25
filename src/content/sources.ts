@@ -3464,6 +3464,88 @@ export const SOURCES: readonly SourceRecord[] = [
     authoritativeLanguage: 'de',
     note: 'The authoritative German text of four Basic Law articles, each fetched at its own address on gesetze-im-internet.de and read directly. Supports, verbatim: Art. 3(1) "Alle Menschen sind vor dem Gesetz gleich" — all persons are equal before the law. Art. 19(4) "Wird jemand durch die öffentliche Gewalt in seinen Rechten verletzt, so steht ihm der Rechtsweg offen" — where a person\'s rights are violated by public authority, recourse to the courts is open to them, with the ordinary courts available where no other jurisdiction is established. Art. 20(2), that state authority is exercised through specific organs of legislation, executive power and adjudication; and Art. 20(3) "Die Gesetzgebung ist an die verfassungsmäßige Ordnung, die vollziehende Gewalt und die Rechtsprechung sind an Gesetz und Recht gebunden" — legislation is bound by the constitutional order, and the executive and the judiciary are bound by law and justice. Art. 103(1) "Vor Gericht hat jedermann Anspruch auf rechtliches Gehör" — before a court everyone is entitled to a hearing in accordance with law; Art. 103(2) "Eine Tat kann nur bestraft werden, wenn die Strafbarkeit gesetzlich bestimmt war, bevor die Tat begangen wurde" — an act may be punished only if its punishability was determined by law before the act was committed; Art. 103(3) ne bis in idem under the general criminal laws. Cited for equality before the law, the guarantee of recourse against public authority, the binding of the executive and judiciary to law, the right to be heard, and the legality and non-retroactivity of criminal punishment. It establishes no proportionality test — the German proportionality doctrine is judicial rather than textual and was not researched.',
   },
+
+  /* ---------------------------------------------------------------------- */
+  /* Wave 13 — corrections, sentencing and reintegration                     */
+  /* ---------------------------------------------------------------------- */
+
+  {
+    id: 'uk-sentencing-act-2020-s57',
+    type: 'legislation',
+    title: 'Sentencing Act 2020 (2020 c. 17), section 57 — Purposes of sentencing: adults',
+    publisher: 'The National Archives (legislation.gov.uk)',
+    url: 'https://www.legislation.gov.uk/ukpga/2020/17/section/57',
+    publishedOn: '2020',
+    verifiedOn: '2026-08-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'GB',
+    note: 'The official revised text of section 57, read directly. Supports: that where a court is dealing with an offender aged 18 or over when convicted, "the court must have regard to the following purposes of sentencing" — "(a) the punishment of offenders, (b) the reduction of crime (including its reduction by deterrence), (c) the reform and rehabilitation of offenders, (d) the protection of the public [(including victims of crime)], and (e) the making of reparation by offenders to persons affected by their offences". The bracketed words in (d) were inserted on 22 March 2026 by the Sentencing Act 2026 (c. 2), ss. 4(1), 49(4), and the revised text carries that amendment. Supports also the exclusions in subsection (3): the section does not apply to an offence in relation to which a mandatory sentence requirement applies (see section 399), nor in relation to the making of a hospital order, interim hospital order, hospital direction or limitation direction under Part 3 of the Mental Health Act 1983. Section 57 came into force on 1 December 2020 (S.I. 2020/1236, reg. 2). This is the law of ENGLAND AND WALES — the provision is territorially extent-marked "E+W" in the Act. It supports nothing about Scotland or Northern Ireland, which have separate sentencing law, and nothing about any other country. It states purposes a court must have regard to; it establishes no sentence length for any offence and supports no prediction of any outcome.',
+  },
+  {
+    id: 'ca-criminal-code-718',
+    type: 'legislation',
+    title:
+      'Criminal Code (R.S.C., 1985, c. C-46), sections 718, 718.1 and 718.2 — Purpose and Principles of Sentencing',
+    publisher: 'Department of Justice Canada (laws-lois.justice.gc.ca)',
+    url: 'https://laws-lois.justice.gc.ca/eng/acts/C-46/section-718.html',
+    verifiedOn: '2026-08-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'CA',
+    note: 'The consolidated federal text on the Justice Laws Website, read directly (English; the French text is equally authoritative). Supports s. 718: "The fundamental purpose of sentencing is to protect society and to contribute, along with crime prevention initiatives, to respect for the law and the maintenance of a just, peaceful and safe society by imposing just sanctions that have one or more of the following objectives" — denouncing unlawful conduct and the harm done to victims or the community (a); deterring the offender and other persons (b); separating offenders from society, where necessary (c); assisting in rehabilitating offenders (d); providing reparations for harm done to victims or to the community (e); and promoting a sense of responsibility in offenders, and acknowledgment of the harm done (f). Supports s. 718.1, marginal-noted "Fundamental principle": "A sentence must be proportionate to the gravity of the offence and the degree of responsibility of the offender." Supports s. 718.2 principles, including that a sentence should be increased or reduced for aggravating or mitigating circumstances with an enumerated list of deemed aggravating circumstances (a); that "a sentence should be similar to sentences imposed on similar offenders for similar offences committed in similar circumstances" (b); that where consecutive sentences are imposed "the combined sentence should not be unduly long or harsh" (c); that "an offender should not be deprived of liberty, if less restrictive sanctions may be appropriate in the circumstances" (d); and that "all available sanctions, other than imprisonment, that are reasonable in the circumstances and consistent with the harm done to victims or to the community should be considered for all offenders, with particular attention to the circumstances of Aboriginal offenders" (e). Criminal law is federal in Canada and this text applies across the country. It establishes no sentence length for any offence, supports no prediction of any outcome, and describes no other system.',
+  },
+  {
+    id: 'de-stvollzg-2-vollzugsziel',
+    type: 'legislation',
+    title: 'Strafvollzugsgesetz (StVollzG) § 2 — Aufgaben des Vollzuges (German original text)',
+    publisher: 'Bundesministerium der Justiz / Bundesamt für Justiz (Gesetze im Internet)',
+    url: 'https://www.gesetze-im-internet.de/stvollzg/__2.html',
+    verifiedOn: '2026-08-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'DE',
+    translationStatus: 'not-a-translation',
+    authoritativeLanguage: 'de',
+    note: 'The authoritative German text of § 2 of the Prison Act, headed "Aufgaben des Vollzuges" — the tasks of execution — read directly. Supports verbatim: "Im Vollzug der Freiheitsstrafe soll der Gefangene fähig werden, künftig in sozialer Verantwortung ein Leben ohne Straftaten zu führen (Vollzugsziel). Der Vollzug der Freiheitsstrafe dient auch dem Schutz der Allgemeinheit vor weiteren Straftaten." In the execution of a custodial sentence the prisoner shall become capable of leading a life in social responsibility without offences — this is named as THE Vollzugsziel, the goal of execution — and execution ALSO serves the protection of the general public from further offences. Cited for the fact that a statute can state the purposes of imprisonment expressly, and for the specific two-purpose structure Germany states. It supports no claim about whether the goal is achieved, no claim about any other country, and no normative theory of punishment. Note also that since the 2006 federalism reform prison law is substantially a Land competence and the Länder have enacted their own execution statutes; this federal provision is cited for what it states, not as a description of every German prison regime.',
+  },
+  {
+    id: 'de-stgb-46-strafzumessung',
+    type: 'legislation',
+    title: 'Strafgesetzbuch (StGB) § 46 — Grundsätze der Strafzumessung (German original text)',
+    publisher: 'Bundesministerium der Justiz / Bundesamt für Justiz (Gesetze im Internet)',
+    url: 'https://www.gesetze-im-internet.de/stgb/__46.html',
+    verifiedOn: '2026-08-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'DE',
+    translationStatus: 'not-a-translation',
+    authoritativeLanguage: 'de',
+    note: "The authoritative German text, read directly. Supports § 46(1): \"Die Schuld des Täters ist Grundlage für die Zumessung der Strafe\" — the offender's guilt is the basis for determining the sentence — and that the effects to be expected from the sentence for the offender's future life in society are to be taken into account. And § 46(2): in determining sentence the court weighs the circumstances speaking for and against the offender, considering in particular the motives and aims of the offender (expressly including racist, xenophobic, antisemitic, gender-specific, anti-sexual-orientation or otherwise dehumanising motives), the attitude expressed by the act and the will applied to it, the degree of breach of duty, the manner of execution and the culpable effects of the act, the offender's prior life and personal and economic circumstances, and conduct after the act — particularly efforts to make good the damage and to achieve a settlement with the victim. Cited for the German sentencing framework being culpability-based with named factors. It establishes no sentence length for any offence, supports no prediction of any outcome, and describes no other system.",
+  },
+  {
+    id: 'de-stgb-56-strafaussetzung',
+    type: 'legislation',
+    title: 'Strafgesetzbuch (StGB) § 56 — Strafaussetzung (German original text)',
+    publisher: 'Bundesministerium der Justiz / Bundesamt für Justiz (Gesetze im Internet)',
+    url: 'https://www.gesetze-im-internet.de/stgb/__56.html',
+    verifiedOn: '2026-08-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'DE',
+    translationStatus: 'not-a-translation',
+    authoritativeLanguage: 'de',
+    note: 'The authoritative German text, read directly. Supports § 56(1): on a conviction to a custodial sentence of not more than one year the court suspends execution of the sentence on probation ("setzt … die Vollstreckung der Strafe zur Bewährung aus") where it is to be expected that the convicted person will let the conviction itself serve as a warning and will commit no further offences even without the influence of imprisonment, having regard in particular to the personality of the convicted person, their prior life, the circumstances of the act, conduct after the act, their circumstances of life, and the effects to be expected from suspension. And § 56(2): the court may suspend a higher custodial sentence not exceeding two years where, on an overall appraisal of the act and the personality of the convicted person, special circumstances are present, with the convicted person\'s efforts to make good the damage caused expressly among the considerations. Cited for the existence and structure of suspended sentences in German law. It establishes no practice, no frequency, and nothing about any other system.',
+  },
+  {
+    id: 'de-stgb-57-reststrafe',
+    type: 'legislation',
+    title:
+      'Strafgesetzbuch (StGB) § 57 — Aussetzung des Strafrestes bei zeitiger Freiheitsstrafe (German original text)',
+    publisher: 'Bundesministerium der Justiz / Bundesamt für Justiz (Gesetze im Internet)',
+    url: 'https://www.gesetze-im-internet.de/stgb/__57.html',
+    verifiedOn: '2026-08-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'DE',
+    translationStatus: 'not-a-translation',
+    authoritativeLanguage: 'de',
+    note: 'The authoritative German text, read directly. Supports § 57(1): the court suspends execution of the remainder of a fixed-term custodial sentence on probation where (1) two-thirds of the sentence imposed, but at least two months, have been served; (2) this can be justified taking account of the security interest of the general public ("unter Berücksichtigung des Sicherheitsinteresses der Allgemeinheit verantwortet werden kann"); and (3) the convicted person consents — with the decision taking into account in particular their personality, prior life, the circumstances of the act, the weight of the legal interest endangered in the event of relapse, their conduct during execution, their circumstances of life, and the effects to be expected from suspension. And § 57(2): after half of a fixed-term sentence, but at least six months, where the convicted person is serving a custodial sentence for the first time and it does not exceed two years, among the stated conditions. Cited for the fact that release before the end of a custodial sentence is a judicial decision on stated statutory criteria, including the convicted person\'s consent. It supports no claim about release rates, about outcomes after release, or about any other system.',
+  },
 ];
 
 const SOURCE_INDEX = new Map(SOURCES.map((source) => [source.id, source]));
