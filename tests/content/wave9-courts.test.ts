@@ -3,7 +3,7 @@ import { COURTS_GUIDES } from '@/content/guides/courts';
 import { ALL_GUIDES, getGuide, guidePath } from '@/content/guides';
 import { getInstitutionType, ROUTED_INSTITUTION_TYPES } from '@/content/institutions';
 import { PUBLISHED_GLOSSARY } from '@/content/glossary';
-import { getProfession } from '@/content/professions';
+import { getProfession, PUBLISHED_PROFESSIONS } from '@/content/professions';
 import { getSource } from '@/content/sources';
 import { getDossier } from '@/content/dossiers';
 import { PUBLIC_ROUTE_PATHS } from '@/content/public-routes';
@@ -245,6 +245,31 @@ describe('the glossary and the judge profession keep what they own', () => {
     ]) {
       expect(ALL_PROSE, `judicial-role material: ${pattern}`).not.toMatch(pattern);
     }
+  });
+
+  it('shares no question with any profession route', () => {
+    /*
+     * Forced by mutation proof M7. The duplicate-question test above compares Wave 9 against
+     * other GUIDES, which left the profession routes unguarded — and `/professions/judge`
+     * already asks how a judge can be accountable and independent at once, which is the
+     * question a court-independence page is most likely to drift into.
+     */
+    const professionQuestions = PUBLISHED_PROFESSIONS.map((p) =>
+      (p.question ?? '').toLowerCase().trim(),
+    ).filter(Boolean);
+    expect(
+      professionQuestions.length,
+      'no profession questions to compare against',
+    ).toBeGreaterThan(0);
+    for (const slug of WAVE_9) {
+      expect(
+        professionQuestions,
+        `${slug} restates a profession route's question`,
+      ).not.toContain(guide(slug).question.toLowerCase().trim());
+    }
+    expect(professionQuestions).not.toContain(
+      (inst(CONSTITUTIONAL_COURT).question ?? '').toLowerCase().trim(),
+    );
   });
 
   it('links to the judge profession rather than restating it', () => {
