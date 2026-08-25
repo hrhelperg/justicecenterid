@@ -440,6 +440,16 @@ describe('confidentiality and privilege are distinguished, and neither is absolu
   });
 
   it('never claims absolute protection', () => {
+    /*
+     * Tightened after mutation proof M7 applied cleanly and passed. The first version read a
+     * 300-character window around each hit for any negation, which a neighbouring sentence
+     * containing "cannot" was enough to satisfy — so an inserted absolute claim survived
+     * because the sentence AFTER it happened to contain a negative.
+     *
+     * The denial must now be in the SAME sentence as the claim, which is the only place it can
+     * actually qualify it.
+     */
+    const sentences = ALL_ASSERTED.split(/\n+/).flatMap((line) => line.split(/(?<=[.!?])\s+/));
     for (const pattern of [
       /absolutely protected/i,
       /always protected/i,
@@ -447,12 +457,24 @@ describe('confidentiality and privilege are distinguished, and neither is absolu
       /nothing said to a lawyer can/i,
       /privilege is absolute/i,
     ]) {
-      const hits = [...ALL_ASSERTED.matchAll(new RegExp(pattern.source, 'gi'))];
-      for (const h of hits) {
-        const around = ALL_ASSERTED.slice(Math.max(0, h.index! - 180), h.index! + 120);
-        expect(around, `absolute-privilege claim: ${h[0]}`).toMatch(/not|never|no system/i);
+      for (const sentence of sentences) {
+        if (!pattern.test(sentence)) continue;
+        expect(
+          sentence,
+          `absolute-privilege claim asserted without qualification: ${sentence}`,
+        ).toMatch(/\bnot\b|\bnever\b|\bno system\b|\bnowhere\b/i);
       }
     }
+  });
+
+  it('the absolute-privilege check rejects a claim whose denial is only nearby', () => {
+    /* Non-vacuity for the tightening above: a negation in the next sentence must not save it. */
+    const sentences = 'Privilege is absolute. A person cannot rely on that.'
+      .split(/\n+/)
+      .flatMap((line) => line.split(/(?<=[.!?])\s+/));
+    const offending = sentences.filter((s) => /privilege is absolute/i.test(s));
+    expect(offending).toHaveLength(1);
+    expect(offending[0]).not.toMatch(/\bnot\b|\bnever\b|\bno system\b|\bnowhere\b/i);
   });
 
   it('carries the absolute claim as a corrected misconception', () => {
