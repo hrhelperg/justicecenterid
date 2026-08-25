@@ -127,7 +127,7 @@ export const SECTIONS: readonly SectionDefinition[] = [
       },
     ],
     variationNote:
-      'Court structures, the role of the judge, the use of juries or lay judges, and the availability of appeal differ profoundly between legal traditions and between countries within the same tradition.',
+      'Court structures, the role of the judge, the use of juries or lay judges, and the availability of appeal differ profoundly between legal traditions and between countries within the same tradition. The single most common structural error is to assume one pyramid rising to one supreme court: Germany’s Basic Law vests judicial power in three distinct categories and names five federal supreme courts, and France runs two separate court orders chosen by the nature of the dispute.',
     outOfScope: [
       'Coverage of individual cases or outcomes',
       'Profiles of individual judges',

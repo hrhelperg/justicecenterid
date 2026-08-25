@@ -816,3 +816,44 @@ family. Details in `docs/audits/knowledge-expansion-wave-8-qa.md`.
   reason. **Zero JS delta, zero CSS delta.**
 
 Delivered on `feat/knowledge-expansion-wave-8`. Not merged, not deployed.
+
+## Phase 23 — Knowledge Expansion Wave 9 (delivered 2026-08-25)
+
+The courts pillar opens. Twelve jurisdictions, ten routes, one source added. Details in
+`docs/audits/knowledge-expansion-wave-9-qa.md`.
+
+- **No new architecture was needed, for the third wave running.** `/courts/[slug]` was already
+  wired to guides carrying `section: 'courts'`. Wave 9 added nine guide records and one
+  institution record — no route file, no competing hub.
+- **The finding of the wave: there is no single court pyramid.** Article 92 of the German Basic
+  Law vests judicial power in three distinct categories, and Article 95(1) names **five** federal
+  supreme courts each heading a separate branch. France runs two court orders chosen by the nature
+  of the dispute. The Netherlands routes administrative law away from its apex entirely. Brazil
+  runs three specialised hierarchies alongside federal and state justice. Six of twelve systems
+  have more than one hierarchy, and a test forbids the pyramid being asserted.
+- **Constitutional court and supreme court are separate institutions, the same one, or neither.**
+  Germany, Spain and Belgium keep them apart; Brazil and Japan merge them; Ireland disperses the
+  function to the High Court; **Article 120 of the Netherlands Constitution forbids the courts
+  from reviewing the constitutionality of Acts of Parliament**, and the place a constitutional
+  court occupies elsewhere is deliberately empty.
+- **One institution route.** Only the constitutional court recurs structurally. "Supreme court"
+  was rejected as an institution family because the label covers four different things; it ships
+  as a guide about that variation instead.
+- **The Cicero verification changed what was published.** The brief supplied the maxim in its
+  common form. Reading _Pro Cluentio_ LIII showed that form is a truncation which drops `omnes`
+  and both clauses naming **magistrates and judges** as bound by law — and that the sentences
+  immediately after ask the presiding judge and jurors what entitles them to sit at all. Read
+  whole, the passage is about the authority of courts being derived from and limited by law, not
+  about citizen obedience. The site publishes the full sentence and names the truncation.
+- **A mutation proof was rejected and then earned.** M7 initially reported a passing suite because
+  its anchor had been reflowed and the mutation never applied. Applied correctly it exposed a real
+  hole — the duplicate-question test compared only against other guides, leaving
+  `/professions/judge` unguarded. A test was added, and M7 then failed for its intended reason.
+- **Sources were reused, not multiplied.** All 32 dossiers already carried verified `courts`
+  modules, so 246 → 247: the Latin text of Pro Cluentio, added because no record carried it.
+- **Open justice and precedent were deferred**, both for want of sourced material rather than for
+  want of interest.
+- Validation: 3088 unit tests / 61 files; **372 routes / 372 sitemap / 374 pages**; e2e 610 passed
+  / 4 skipped; route matrix 467/467. Seven mutation proofs. **Zero JS delta, zero CSS delta.**
+
+Delivered on `feat/knowledge-expansion-wave-9`. Not merged, not deployed.
