@@ -289,7 +289,7 @@ export const DEFENCE_GUIDES: readonly Guide[] = [
     whyItExists: [
       {
         kind: 'paragraph',
-        text: 'The three rights answer different problems. Consultation answers the problem of a person facing a legal process they do not understand. Appointment answers the problem of a person who does not know how to find a lawyer, or is detained and cannot. Payment answers the problem of a person who cannot afford one.',
+        text: 'The three rights answer different problems. Consultation answers the problem of a person facing a legal process they do not understand. Appointment answers the problem of a person with no practical means of obtaining one, or who is detained and cannot. Payment answers the problem of a person who cannot afford one.',
       },
       {
         kind: 'paragraph',
@@ -769,6 +769,7 @@ export const DEFENCE_GUIDES: readonly Guide[] = [
       'de-stpo-137-verteidiger',
       'br-cf-1988',
       'br-mpu-institucional',
+      'fr-justice-parquet',
       'un-prosecutors-guidelines',
       'iccpr',
     ],
