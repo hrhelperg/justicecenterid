@@ -901,3 +901,48 @@ jurisdictions, eight routes, three sources. Details in
   / 4 skipped; route matrix 492/492. Eight mutation proofs. **Zero JS delta, zero CSS delta.**
 
 Delivered on `feat/knowledge-expansion-wave-10`. Not merged, not deployed.
+
+## Phase 25 — Knowledge Expansion Wave 11 (delivered 2026-08-26)
+
+The defence pillar opens, completing the central institutional triangle: prosecution, court and
+defence. A new top-level section, three jurisdictions, seven routes. Details in
+`docs/audits/knowledge-expansion-wave-11-qa.md`.
+
+- **The first wave to need a new section, and the hub name was decided against the brief's
+  preference.** The brief proposed `/defense` and required the choice be made on route conventions,
+  terminology and international neutrality rather than preference — which is what produced
+  `/defence`. The corpus is consistently British English: `defence` appears 39 times in prose,
+  `defense` 14 times and **every one a French proper noun**. Every section is a bare function noun,
+  so `defence` is the exact parallel to `prosecution`. Added through `SECTION_IDS`, `sections.ts`,
+  the router, the registry and the sitemap — and marked **safety-sensitive**, so nothing in it can
+  publish without a safety review.
+- **The forcing question was answered no.** Brazil's Defensoria Pública is not a public defender
+  office. Article 134 gives it the constitutional formula Article 127 uses for the Ministério
+  Público, a mandate covering human-rights promotion and collective and extrajudicial matters,
+  members holding _inamovibilidade_, and a bar on private practice. Fourth consecutive wave to find
+  that the recurring thing is a function whose institutional embodiments differ in kind — so **zero
+  institution routes** again.
+- **"Right to counsel" is three rights, and no system grants all three to everyone.** Germany's
+  § 137 gives assistance at any stage to any accused; § 140 triggers mandatory defence on the
+  **seriousness of the case, not on means**; France means-tests aid and pays "tout ou partie" of a
+  private avocat's fees; Brazil requires proof of insufficient resources. Publicly organised
+  defence is not everywhere a poverty programme.
+- **The ECHR could not be read from an authoritative source** — 403 on three Council of Europe
+  paths, scanned images on two mirrors. A search summary supplied Article 6(3)(c)'s wording and
+  **nothing was quoted from it**; the equality-of-arms page was deferred as a direct consequence.
+- **A mutation proof was rejected as invalid and another exposed a weak test.** M5's first attempt
+  broke the build — a mutation that stops the module parsing proves nothing — and was redone. M7
+  passed because the absolute-privilege check read a 300-character window and a neighbouring
+  sentence's "cannot" satisfied it; the check now requires the denial in the same sentence.
+- **Wave 10's guard caught Wave 11's content.** The corpus-wide markdown-in-misconception test,
+  added one wave earlier after that defect shipped to readers, caught three new instances before
+  they did.
+- **An adversarial sweep found one false friend, and it was published.** Czechia's _Veřejný
+  ochránce práv_ — the "Public Defender of Rights" — is the Ombudsman, not a defence institution.
+  It now appears on the funding page as a terminology warning rather than being quietly avoided.
+- Validation: 3490 unit tests / 63 files; **388 routes / 388 sitemap / 390 pages**; e2e 782 passed
+  / 4 skipped; route matrix 519/519. Ten mutation proofs. **JS +28 B, CSS +30 B** — the first
+  non-zero delta, attributable to a new top-level route entering the build manifest, and reported
+  as measured rather than rounded.
+
+Delivered on `feat/knowledge-expansion-wave-11`. Not merged, not deployed.

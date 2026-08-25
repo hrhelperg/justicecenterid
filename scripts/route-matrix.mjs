@@ -189,6 +189,30 @@ const MUST_404 = [
   '/institutions/director-of-public-prosecutions',
   '/institutions/prosecutor-general-office',
   '/institutions/special-prosecutor',
+  // Wave 11: the defence hub was chosen on evidence as /defence — the corpus is consistently
+  // British English (defence 39 in prose, defense 14 and all French proper nouns), and every
+  // section is a bare function noun. Both rejected spellings must stay absent.
+  '/defense',
+  '/legal-defence',
+  '/legal-defense',
+  // Candidates merged or deferred in docs/seo/knowledge-expansion-wave-11-cannibalization.md.
+  // Nine of these failed only on source feasibility, not on intent.
+  '/defence/public-defender',
+  '/defence/legal-aid',
+  '/defence/court-appointed-counsel',
+  '/defence/private-defence-lawyer',
+  '/defence/attorney-client-privilege',
+  '/defence/equality-of-arms',
+  '/defence/self-representation',
+  '/defence/right-to-challenge-evidence',
+  '/defence/right-to-examine-witnesses',
+  '/defence/defence-rights-at-trial',
+  '/defence/defence-rights-on-appeal',
+  '/defence/effective-assistance-of-counsel',
+  '/institutions/public-defender-office',
+  '/institutions/legal-aid-authority',
+  '/professions/defence-lawyer',
+  '/professions/public-defender',
   // A parallel prosecution taxonomy was considered and rejected; the existing hub is used.
   '/prosecutors',
   // A parallel courts taxonomy was considered and rejected; the existing hub is used.
