@@ -131,6 +131,24 @@ const MUST_404 = [
   // A country that does not exist, and nested nonsense beneath a real one.
   '/countries/atlantis',
   '/countries/france/not-a-module',
+  // Wave 8: investigation candidates that were merged, deferred or rejected in
+  // docs/seo/knowledge-expansion-wave-8-cannibalization.md. Chain of custody and warrants are
+  // owned by the glossary; interviews and crime-scene work are deferred on safety grounds; the
+  // institution candidates failed the recurrence rule that Wave 7 established.
+  '/investigations/chain-of-custody',
+  '/investigations/crime-scene-investigation',
+  '/investigations/suspect-interviews',
+  '/investigations/witness-interviews',
+  '/investigations/search-warrants',
+  '/investigations/arrest-warrants',
+  '/investigations/investigative-oversight',
+  '/investigations/specialized-investigations',
+  '/institutions/criminal-investigation-agency',
+  '/institutions/judicial-police',
+  '/institutions/national-investigative-agency',
+  '/institutions/financial-investigation-unit',
+  // A parallel investigation taxonomy was considered and rejected; the existing hub is used.
+  '/criminal-investigation',
   // Arbitrary paths.
   '/definitely-not-a-page',
   '/law-enforcement/police-use-of-force/extra',
