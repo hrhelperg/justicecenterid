@@ -166,7 +166,7 @@ export const SECTIONS: readonly SectionDefinition[] = [
       },
     ],
     variationNote:
-      'The prosecution function is one of the most structurally variable parts of any justice system. Terminology from one country rarely transfers safely to another.',
+      'The prosecution function is one of the most structurally variable parts of any justice system. Terminology from one country rarely transfers safely to another. Several countries have no national prosecution service at all: Germany places an office at every court, and the United States runs federal prosecution alongside separately organised state and local prosecution. Nor is there a universal charging test — Germany’s code obliges its prosecutors to act on sufficient factual indications and asks nothing about the prospects of conviction.',
     outOfScope: [
       'Commentary on live or recent cases',
       'Named prosecutions or prosecutors',

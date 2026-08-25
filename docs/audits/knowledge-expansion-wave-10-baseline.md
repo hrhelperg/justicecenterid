@@ -4,16 +4,16 @@ Measured directly from `main` immediately before the Wave 10 branch was cut.
 
 ## Provenance
 
-| Field | Value |
-| --- | --- |
-| Repository | `hrhelperg/justicecenterid` |
-| Base branch | `main` |
-| Base SHA | `5fcd0f01d8e07d53487dacea1dc15de8ec8ee500` |
-| Base commit | Merge pull request #27 from `feat/knowledge-expansion-wave-9` |
-| Working tree at measurement | clean |
-| Wave branch | `feat/knowledge-expansion-wave-10` (local only) |
-| Measured on | 2026-08-25 |
-| Node / npm | v24.15.0 / 11.12.1 |
+| Field                       | Value                                                         |
+| --------------------------- | ------------------------------------------------------------- |
+| Repository                  | `hrhelperg/justicecenterid`                                   |
+| Base branch                 | `main`                                                        |
+| Base SHA                    | `5fcd0f01d8e07d53487dacea1dc15de8ec8ee500`                    |
+| Base commit                 | Merge pull request #27 from `feat/knowledge-expansion-wave-9` |
+| Working tree at measurement | clean                                                         |
+| Wave branch                 | `feat/knowledge-expansion-wave-10` (local only)               |
+| Measured on                 | 2026-08-25                                                    |
+| Node / npm                  | v24.15.0 / 11.12.1                                            |
 
 ## Merge-gate result
 
@@ -39,36 +39,36 @@ goes into `/prosecution` and is never pulled back into `/courts` or `/investigat
 
 ## Build and route metrics
 
-| Metric | Baseline | Command |
-| --- | --- | --- |
-| Routes in registry | 372 | `npm run verify:output` |
-| Exported pages | 374 | `npm run verify:output` |
-| Sitemap URLs | 372 | `npm run verify:output` |
-| HTML files in `out/` | 374 | `find out -name '*.html' \| wc -l` |
+| Metric               | Baseline | Command                            |
+| -------------------- | -------- | ---------------------------------- |
+| Routes in registry   | 372      | `npm run verify:output`            |
+| Exported pages       | 374      | `npm run verify:output`            |
+| Sitemap URLs         | 372      | `npm run verify:output`            |
+| HTML files in `out/` | 374      | `find out -name '*.html' \| wc -l` |
 
 ## Test metrics
 
-| Metric | Baseline | Command |
-| --- | --- | --- |
-| Unit test files | 61 | `npm test` |
-| Unit tests | 3088 | `npm test` |
-| Playwright spec files | 11 | `npx playwright test --list` |
-| Playwright tests | 614 | `npx playwright test --list` |
+| Metric                | Baseline | Command                      |
+| --------------------- | -------- | ---------------------------- |
+| Unit test files       | 61       | `npm test`                   |
+| Unit tests            | 3088     | `npm test`                   |
+| Playwright spec files | 11       | `npx playwright test --list` |
+| Playwright tests      | 614      | `npx playwright test --list` |
 
 ## Content records
 
-| Record type | Baseline | Note |
-| --- | --- | --- |
-| **Prosecution routes** | **1** | `what-does-a-prosecutor-do` |
-| Courts routes | 10 | Wave 9 |
-| Investigation routes | 7 | Wave 8 |
-| Institution routes | 15 | none is a prosecution type |
-| Profession routes | 6 | includes `prosecutor` |
-| Glossary routes | 5 | `appeal`, `chain-of-custody`, `disclosure`, `judicial-independence`, `judicial-review` |
-| Country dossiers | 32 | **all 32 carry a `prosecution` module** |
-| Source records | 247 | |
-| Restricted claims | 10 | |
-| ScheduledChange records | 4 | |
+| Record type             | Baseline | Note                                                                                   |
+| ----------------------- | -------- | -------------------------------------------------------------------------------------- |
+| **Prosecution routes**  | **1**    | `what-does-a-prosecutor-do`                                                            |
+| Courts routes           | 10       | Wave 9                                                                                 |
+| Investigation routes    | 7        | Wave 8                                                                                 |
+| Institution routes      | 15       | none is a prosecution type                                                             |
+| Profession routes       | 6        | includes `prosecutor`                                                                  |
+| Glossary routes         | 5        | `appeal`, `chain-of-custody`, `disclosure`, `judicial-independence`, `judicial-review` |
+| Country dossiers        | 32       | **all 32 carry a `prosecution` module**                                                |
+| Source records          | 247      |                                                                                        |
+| Restricted claims       | 10       |                                                                                        |
+| ScheduledChange records | 4        |                                                                                        |
 
 ### Prosecution-related glossary terms
 
@@ -101,8 +101,8 @@ prospect of conviction". Its entire source list is two international instruments
 
 That is a **structural claim about national prosecution services resting on no country-scoped
 source**, and the formulation is the England-and-Wales Full Code Test presented as a general
-pattern. Germany's § 152(2) StPO obliges the prosecution to act on *sufficient factual
-indications* and does not ask about prospects of conviction at all.
+pattern. Germany's § 152(2) StPO obliges the prosecution to act on _sufficient factual
+indications_ and does not ask about prospects of conviction at all.
 
 Part A therefore resolves to **EXPAND AND CORRECT**, and Part E's warning about the
 "reasonable prospect of conviction" standard is not hypothetical here — the site already carries
@@ -110,11 +110,11 @@ a version of it.
 
 ## Bundle and output size
 
-| Metric | Baseline | Command |
-| --- | --- | --- |
-| JS bytes (`out/_next`) | 663,403 B | `find out/_next -name '*.js' -exec stat -f%z {} +` |
-| CSS bytes (`out/_next`) | 29,625 B | `find out/_next -name '*.css' -exec stat -f%z {} +` |
-| Total `out/` size | 88,324 KB | `du -sk out` (clean rebuild) |
+| Metric                  | Baseline  | Command                                             |
+| ----------------------- | --------- | --------------------------------------------------- |
+| JS bytes (`out/_next`)  | 663,403 B | `find out/_next -name '*.js' -exec stat -f%z {} +`  |
+| CSS bytes (`out/_next`) | 29,625 B  | `find out/_next -name '*.css' -exec stat -f%z {} +` |
+| Total `out/` size       | 88,324 KB | `du -sk out` (clean rebuild)                        |
 
 Wave 10 adds no client runtime, no visualization framework and no charging calculator. The JS
 figure is expected to move by zero.

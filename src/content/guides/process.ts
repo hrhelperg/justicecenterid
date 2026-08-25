@@ -178,11 +178,21 @@ export const PROCESS_GUIDES: readonly Guide[] = [
     jurisdiction: ['INT'],
     temporalScope: 'current',
     related: [
+      'why-public-prosecution-exists',
+      'how-charging-decisions-work',
+      'prosecutorial-objectivity',
+
       'what-do-courts-do',
       'what-is-a-criminal-investigation',
       'what-is-the-presumption-of-innocence',
     ],
-    sources: ['un-prosecutors-guidelines', 'iccpr'],
+    sources: [
+      'un-prosecutors-guidelines',
+      'iccpr',
+      'de-stpo-152-legalitaetsgrundsatz',
+      'de-stpo-153-geringfuegigkeit',
+      'de-stpo-170-anklageerhebung',
+    ],
     status: 'published',
     review: 'fact-checked',
     safetyReview: 'not-required',
@@ -220,7 +230,7 @@ export const PROCESS_GUIDES: readonly Guide[] = [
     howItWorks: [
       {
         kind: 'paragraph',
-        text: 'Prosecution services typically apply a two-stage test to the charging decision. The order matters: a case that fails the evidential stage is not saved by being important.',
+        text: 'Several prosecution services — including those in the common-law systems whose published guidance uses this vocabulary — apply a two-stage test to the charging decision, in which the order matters: a case that fails the evidential stage is not saved by being important. This is not a universal structure. Germany’s Code of Criminal Procedure takes a different approach entirely: under § 152(2) StPO the prosecution is OBLIGED to act on all prosecutable offences where sufficient factual indications are present, and the provision asks nothing about the prospects of conviction. Where a system uses the two-stage vocabulary below, that is a fact about that system. [How charging decisions work](/prosecution/how-charging-decisions-work) sets out the comparison.',
       },
       {
         kind: 'definitionList',
@@ -228,12 +238,12 @@ export const PROCESS_GUIDES: readonly Guide[] = [
           {
             term: 'The evidential stage',
             description:
-              'Is there sufficient admissible, reliable evidence to provide a realistic prospect of conviction? This is an objective assessment of the evidence, not a view about whether the person did it.',
+              'In the services that apply this test: is there sufficient admissible, reliable evidence to provide a realistic prospect of conviction? This is an objective assessment of the evidence, not a view about whether the person did it — and the phrase belongs to the systems that adopted it rather than to prosecution generally.',
           },
           {
             term: 'The public-interest stage',
             description:
-              'Even where the evidence is sufficient, is a prosecution the right response? Factors commonly include seriousness, harm, the suspect’s age and circumstances, the impact on the victim, and whether an alternative disposal is more appropriate.',
+              'In those same services: even where the evidence is sufficient, is a prosecution the right response? Factors commonly include seriousness, harm, the suspect’s age and circumstances, the impact on the victim, and whether an alternative disposal is more appropriate. Under a principle of legality this question is not a general second stage at all — in Germany a public-interest judgement enters through defined statutory exceptions such as § 153 StPO.',
           },
         ],
       },
