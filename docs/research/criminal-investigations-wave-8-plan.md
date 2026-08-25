@@ -5,11 +5,11 @@
 Wave 8 opens the criminal-investigation pillar. Three neighbouring clusters are explicitly
 reserved and were treated as boundaries, not as material:
 
-| Reserved for | Owned today by | Wave 8's permitted contact |
-| --- | --- | --- |
-| Prosecution (a later wave) | `/prosecution/what-does-a-prosecutor-do` | Prosecutors appear only as actors *in* investigation. Charging standards, discretion, plea bargaining, prosecution ethics and prosecution independence are untouched |
-| Courts (Wave 9) | `/courts/what-do-courts-do` | Judges appear only where they authorise, direct or review investigative acts. No court taxonomy |
-| Forensics / evidence | `/forensics/what-is-forensic-science`, `/glossary/chain-of-custody`, `/glossary/evidence` | Named and linked, never re-explained |
+| Reserved for               | Owned today by                                                                            | Wave 8's permitted contact                                                                                                                                           |
+| -------------------------- | ----------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Prosecution (a later wave) | `/prosecution/what-does-a-prosecutor-do`                                                  | Prosecutors appear only as actors _in_ investigation. Charging standards, discretion, plea bargaining, prosecution ethics and prosecution independence are untouched |
+| Courts (Wave 9)            | `/courts/what-do-courts-do`                                                               | Judges appear only where they authorise, direct or review investigative acts. No court taxonomy                                                                      |
+| Forensics / evidence       | `/forensics/what-is-forensic-science`, `/glossary/chain-of-custody`, `/glossary/evidence` | Named and linked, never re-explained                                                                                                                                 |
 
 ## The architecture already exists
 
@@ -31,22 +31,22 @@ The decisive finding of the source survey: **all 32 country dossiers already car
 `investigations` module**, each with country-scoped, content-confirmed sources. The comparative
 material this wave needs is largely already verified.
 
-| Country | Existing investigation sources | Supports |
-| --- | --- | --- |
-| France | `fr-cpp-art-12`, `fr-justice-parquet` | CPP Art. 12; police judiciaire as a legal *function*; prosecutor direction; referral to an investigating judge |
-| Germany | `de-stpo-160`, `de-stpo-163` | § 160(1)–(2) prosecution's duty incl. exculpatory; § 163(1) police's own duty |
-| Ireland | `ie-garda-act-2005`, `ie-dpp` | Garda investigation; DPP charging decision on indictment |
-| Japan | `jp-code-criminal-procedure`, `jp-npa-police-of-japan-2020` | Police as judicial police officials; prosecutor may investigate; prosecutor alone charges |
-| Brazil | `br-cpp-1941`, `br-cf-1988`, `br-pf-competencias` | CPP Art. 4 polícia judiciária; Art. 12 inquérito; Const. Art. 129 I |
-| Spain | `es-constitution`, `es-lofcs` | Which force investigates where; judicial and prosecutorial direction |
-| Italy | `it-constitution`, `it-legge-121-1981` | Const. Art. 109; Law 121/1981 Art. 17; GIP |
-| Belgium | `be-constitution`, `be-ejustice-justice` | Two-track: prosecutor enquiry, investigating judge for intrusive measures |
-| Portugal | `pt-cpp`, `pt-loic` | Two-phase inquérito / instrução |
-| Argentina | `ar-cppf` | Accusatory reform replacing the investigating-judge model |
-| Kenya | `ke-constitution` | Art. 157(4) DPP may direct the IG; Art. 245(4) no one else may |
-| United States | `us-fbi-28usc533`, `us-bjs-csllea-2018`, `us-usmarshals-duties`, `us-const-amend-10` | Fragmentation; enumerated federal competence |
-| New Zealand | `nz-policing-act`, `nz-crown-law` | Police-led investigation, separate prosecution |
-| Netherlands | `nl-gov-police`, `nl-ejustice-professions` | Investigating judge noted, powers not researched |
+| Country       | Existing investigation sources                                                       | Supports                                                                                                       |
+| ------------- | ------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------- |
+| France        | `fr-cpp-art-12`, `fr-justice-parquet`                                                | CPP Art. 12; police judiciaire as a legal _function_; prosecutor direction; referral to an investigating judge |
+| Germany       | `de-stpo-160`, `de-stpo-163`                                                         | § 160(1)–(2) prosecution's duty incl. exculpatory; § 163(1) police's own duty                                  |
+| Ireland       | `ie-garda-act-2005`, `ie-dpp`                                                        | Garda investigation; DPP charging decision on indictment                                                       |
+| Japan         | `jp-code-criminal-procedure`, `jp-npa-police-of-japan-2020`                          | Police as judicial police officials; prosecutor may investigate; prosecutor alone charges                      |
+| Brazil        | `br-cpp-1941`, `br-cf-1988`, `br-pf-competencias`                                    | CPP Art. 4 polícia judiciária; Art. 12 inquérito; Const. Art. 129 I                                            |
+| Spain         | `es-constitution`, `es-lofcs`                                                        | Which force investigates where; judicial and prosecutorial direction                                           |
+| Italy         | `it-constitution`, `it-legge-121-1981`                                               | Const. Art. 109; Law 121/1981 Art. 17; GIP                                                                     |
+| Belgium       | `be-constitution`, `be-ejustice-justice`                                             | Two-track: prosecutor enquiry, investigating judge for intrusive measures                                      |
+| Portugal      | `pt-cpp`, `pt-loic`                                                                  | Two-phase inquérito / instrução                                                                                |
+| Argentina     | `ar-cppf`                                                                            | Accusatory reform replacing the investigating-judge model                                                      |
+| Kenya         | `ke-constitution`                                                                    | Art. 157(4) DPP may direct the IG; Art. 245(4) no one else may                                                 |
+| United States | `us-fbi-28usc533`, `us-bjs-csllea-2018`, `us-usmarshals-duties`, `us-const-amend-10` | Fragmentation; enumerated federal competence                                                                   |
+| New Zealand   | `nz-policing-act`, `nz-crown-law`                                                    | Police-led investigation, separate prosecution                                                                 |
+| Netherlands   | `nl-gov-police`, `nl-ejustice-professions`                                           | Investigating judge noted, powers not researched                                                               |
 
 **Reuse over addition was the correct answer here**, and the brief's instruction to prefer
 existing verified sources is what this wave followed. Two sources were added, both because a
@@ -55,7 +55,7 @@ claim was made that no existing source carried.
 ## The two new sources, and why each was necessary
 
 1. **`de-stpo-162-ermittlungsrichter`** — the authoritative German text of § 162 StPO, headed
-   *Ermittlungsrichter*. Needed because the investigating-judge page makes a claim about what the
+   _Ermittlungsrichter_. Needed because the investigating-judge page makes a claim about what the
    German judge does (acts on the prosecution's application; examines legal permissibility) that
    `de-stpo-160` and `de-stpo-163` do not cover.
 2. **`de-stpo-english-translation`** — the Ministry's own English rendering, cited for one narrow
@@ -69,8 +69,8 @@ investigating judge — which would have been a clean proof that the label is no
 civil-law systems.
 
 Reading § 162 disproved it. Germany does have an office the Ministry's own English text calls an
-*investigating judge*. What differs is not existence but **function**: § 162(1) has the
-prosecution *submit applications* to the court, and § 162(2) requires the court only to examine
+_investigating judge_. What differs is not existence but **function**: § 162(1) has the
+prosecution _submit applications_ to the court, and § 162(2) requires the court only to examine
 "ob die beantragte Handlung nach den Umständen des Falles gesetzlich zulässig ist" — whether the
 requested act is legally permissible. The German judge checks legality on application. The French
 and Belgian judge conducts the investigation.

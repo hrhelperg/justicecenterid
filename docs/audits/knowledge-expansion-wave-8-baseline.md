@@ -5,16 +5,16 @@ was produced by running the command named beside it against this exact tree.
 
 ## Provenance
 
-| Field | Value |
-| --- | --- |
-| Repository | `hrhelperg/justicecenterid` |
-| Base branch | `main` |
-| Base SHA | `46ce9872aac1e87405115b77083481f37a65ebf9` |
-| Base commit | Merge pull request #25 from `feat/knowledge-expansion-wave-7` |
-| Working tree at measurement | clean |
-| Wave branch | `feat/knowledge-expansion-wave-8` (local only) |
-| Measured on | 2026-08-25 |
-| Node / npm | v24.15.0 / 11.12.1 |
+| Field                       | Value                                                         |
+| --------------------------- | ------------------------------------------------------------- |
+| Repository                  | `hrhelperg/justicecenterid`                                   |
+| Base branch                 | `main`                                                        |
+| Base SHA                    | `46ce9872aac1e87405115b77083481f37a65ebf9`                    |
+| Base commit                 | Merge pull request #25 from `feat/knowledge-expansion-wave-7` |
+| Working tree at measurement | clean                                                         |
+| Wave branch                 | `feat/knowledge-expansion-wave-8` (local only)                |
+| Measured on                 | 2026-08-25                                                    |
+| Node / npm                  | v24.15.0 / 11.12.1                                            |
 
 ## Merge-gate result
 
@@ -35,34 +35,34 @@ Wave 7 is substantively present in `main`, verified by content rather than by me
 
 ## Build and route metrics
 
-| Metric | Baseline | Command |
-| --- | --- | --- |
-| Routes in registry | 356 | `npm run verify:output` |
-| Exported pages | 358 | `npm run verify:output` |
-| Sitemap URLs | 356 | `npm run verify:output` |
-| HTML files in `out/` | 358 | `find out -name '*.html' \| wc -l` |
+| Metric               | Baseline | Command                            |
+| -------------------- | -------- | ---------------------------------- |
+| Routes in registry   | 356      | `npm run verify:output`            |
+| Exported pages       | 358      | `npm run verify:output`            |
+| Sitemap URLs         | 356      | `npm run verify:output`            |
+| HTML files in `out/` | 358      | `find out -name '*.html' \| wc -l` |
 
 ## Test metrics
 
-| Metric | Baseline | Command |
-| --- | --- | --- |
-| Unit test files | 59 | `npm test` |
-| Unit tests | 2724 | `npm test` |
-| Playwright spec files | 9 | `npx playwright test --list` |
-| Playwright tests | 446 | `npx playwright test --list` |
+| Metric                | Baseline | Command                      |
+| --------------------- | -------- | ---------------------------- |
+| Unit test files       | 59       | `npm test`                   |
+| Unit tests            | 2724     | `npm test`                   |
+| Playwright spec files | 9        | `npx playwright test --list` |
+| Playwright tests      | 446      | `npx playwright test --list` |
 
 ## Content records
 
-| Record type | Baseline | Command |
-| --- | --- | --- |
-| **Investigation routes** | **1** | one guide carries `section: 'investigations'` |
-| Institution routes | 16 records, 14 routed | `institutions.ts` |
-| Profession routes | 6 | `professions.ts` |
-| Glossary routes | 32 | `glossary.ts` |
-| Country dossiers | 32 | `ls src/content/dossiers/*.ts` |
-| Source records | 244 | `grep -cE "^  \{" src/content/sources.ts` |
-| Restricted claims | 10 | `restricted-claims.ts` |
-| ScheduledChange records | 4 | `scheduled-changes.ts` |
+| Record type              | Baseline              | Command                                       |
+| ------------------------ | --------------------- | --------------------------------------------- |
+| **Investigation routes** | **1**                 | one guide carries `section: 'investigations'` |
+| Institution routes       | 16 records, 14 routed | `institutions.ts`                             |
+| Profession routes        | 6                     | `professions.ts`                              |
+| Glossary routes          | 32                    | `glossary.ts`                                 |
+| Country dossiers         | 32                    | `ls src/content/dossiers/*.ts`                |
+| Source records           | 244                   | `grep -cE "^  \{" src/content/sources.ts`     |
+| Restricted claims        | 10                    | `restricted-claims.ts`                        |
+| ScheduledChange records  | 4                     | `scheduled-changes.ts`                        |
 
 ### The existing investigations area
 
@@ -87,10 +87,10 @@ against, not the total of 244.
 
 ## Bundle and output size
 
-| Metric | Baseline | Command |
-| --- | --- | --- |
-| JS bytes (`out/_next`) | 663,403 B | `find out/_next -name '*.js' -exec stat -f%z {} +` |
-| CSS bytes (`out/_next`) | 29,625 B | `find out/_next -name '*.css' -exec stat -f%z {} +` |
-| Total `out/` size | 82,684 KB | `du -sk out` (clean rebuild) |
+| Metric                  | Baseline  | Command                                             |
+| ----------------------- | --------- | --------------------------------------------------- |
+| JS bytes (`out/_next`)  | 663,403 B | `find out/_next -name '*.js' -exec stat -f%z {} +`  |
+| CSS bytes (`out/_next`) | 29,625 B  | `find out/_next -name '*.css' -exec stat -f%z {} +` |
+| Total `out/` size       | 82,684 KB | `du -sk out` (clean rebuild)                        |
 
 Wave 8 adds no client runtime. The JS figure is expected to move by zero.
