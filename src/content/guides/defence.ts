@@ -421,6 +421,7 @@ export const DEFENCE_GUIDES: readonly Guide[] = [
       'br-mpu-institucional',
       'fr-service-public-aide-juridictionnelle',
       'us-bjs-prosecutors',
+      'cz-ochrance',
     ],
     status: 'published',
     review: 'fact-checked',
@@ -506,6 +507,12 @@ export const DEFENCE_GUIDES: readonly Guide[] = [
         variant: 'analysis',
         title: 'Court-appointed does not mean government-employed',
         text: 'This is the single most common error in the vocabulary. Germany’s Pflichtverteidiger is appointed by operation of the code and is a private Rechtsanwalt. France’s aid pays a private avocat. Appointment is a procedure that assigns a lawyer to a case; employment is a relationship between a lawyer and an employer. Only Brazil, among the systems reached here, has the second — and it reached it by creating a constitutional institution rather than by appointing anyone.',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'A false friend worth knowing about',
+        text: 'Czechia has an office called the Public Defender of Rights (Veřejný ochránce práv). It is the Ombudsman: it handles complaints against the conduct or inaction of public authorities, inspects places where people are deprived of liberty, and acts as the national equality body. It is not a criminal defence institution and has nothing to do with representing accused people. The English words are a near-perfect trap, and a page about public defenders that swept it in would be wrong about the office and about the country.',
       },
       {
         kind: 'paragraph',

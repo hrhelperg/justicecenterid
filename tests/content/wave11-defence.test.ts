@@ -378,6 +378,19 @@ describe('legal aid, public defence and appointment are not conflated', () => {
     expect(p).toMatch(/private practitioner/i);
   });
 
+  it('warns about the Czech false friend', () => {
+    /*
+     * Found by an adversarial sweep of the corpus for overlooked defence material. The only hit
+     * was Czechia's Veřejný ochránce práv — the "Public Defender of Rights", which is the
+     * Ombudsman and not a defence institution at all. A page about public defenders that swept
+     * it in would be wrong twice, and the trap is worth publishing rather than merely avoiding.
+     */
+    const p = prose(guide('how-defence-is-funded'));
+    expect(p).toMatch(/Veřejný ochránce práv/);
+    expect(p).toMatch(/is the Ombudsman|not a criminal defence institution/i);
+    expect(guide('how-defence-is-funded').sources).toContain('cz-ochrance');
+  });
+
   it('does not universalise the public defender model', () => {
     for (const pattern of [
       /every country has a public defender/i,
