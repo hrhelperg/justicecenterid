@@ -327,6 +327,8 @@ export const PROCESS_GUIDES: readonly Guide[] = [
     jurisdiction: ['INT'],
     temporalScope: 'current',
     related: [
+      'who-investigates-crime',
+      'police-vs-prosecutor-investigation',
       'what-does-a-prosecutor-do',
       'what-is-forensic-science',
       'why-societies-need-law-enforcement',
@@ -484,7 +486,7 @@ export const PROCESS_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [what a prosecutor does](/prosecution/what-does-a-prosecutor-do), [what forensic science is](/forensics/what-is-forensic-science), and [why justice systems need oversight](/justice/why-justice-systems-need-oversight).',
+        text: 'This guide explains what an investigation is. Who is legally competent to run one, and how systems differ, is covered by [who investigates crime](/investigations/who-investigates-crime), [police and prosecutor investigation](/investigations/police-vs-prosecutor-investigation) and [the investigating judge](/investigations/investigating-judge). Also related: [what a prosecutor does](/prosecution/what-does-a-prosecutor-do), [what forensic science is](/forensics/what-is-forensic-science), and [why justice systems need oversight](/justice/why-justice-systems-need-oversight).',
       },
     ],
   },

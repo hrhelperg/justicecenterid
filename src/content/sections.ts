@@ -205,7 +205,7 @@ export const SECTIONS: readonly SectionDefinition[] = [
       },
     ],
     variationNote:
-      'Who leads an investigation differs fundamentally between systems: police-led with prosecutorial oversight, prosecutor-led, or supervised by an investigating judge. The rest of the process follows from that difference.',
+      'Who leads an investigation differs fundamentally between systems: police-led with prosecutorial oversight, prosecutor-led, or supervised by an investigating judge. The rest of the process follows from that difference. The difference does not track legal families — Germany, an archetypal civil-law system, has no judge who leads an investigation, and its prosecution carries the legal responsibility that police in other systems hold.',
     outOfScope: [
       'Investigative technique at operational specificity',
       'Surveillance capability, thresholds, or detection detail',
