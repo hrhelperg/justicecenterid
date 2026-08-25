@@ -857,3 +857,47 @@ The courts pillar opens. Twelve jurisdictions, ten routes, one source added. Det
   / 4 skipped; route matrix 467/467. Seven mutation proofs. **Zero JS delta, zero CSS delta.**
 
 Delivered on `feat/knowledge-expansion-wave-9`. Not merged, not deployed.
+
+## Phase 24 — Knowledge Expansion Wave 10 (delivered 2026-08-26)
+
+The prosecution pillar opens, completing the investigation → prosecution → court chain. Twelve
+jurisdictions, eight routes, three sources. Details in
+`docs/audits/knowledge-expansion-wave-10-qa.md`.
+
+- **The wave corrected an existing accuracy defect before adding anything.**
+  `what-does-a-prosecutor-do` said prosecution services "typically apply a two-stage test" with an
+  evidential stage asking about a "realistic prospect of conviction" — resting on two
+  international instruments and **no country-scoped source**. § 152(2) StPO obliges the German
+  prosecution to act on _zureichende tatsächliche Anhaltspunkte_ and asks nothing about prospects
+  of conviction. The passage is now attributed to the systems that use it, and the page carries
+  country-scoped sources it previously lacked.
+- **The legality/opportunity binary fails on its own archetype.** Germany is the standard legality
+  example, and § 153 StPO lets its prosecutors decline minor matters where there is no public
+  interest — with the court's consent in the general case. A discretionary judgement inside a
+  mandatory framework, and the legal family predicts neither half.
+- **Eight different answers to "is the prosecution independent".** A constitutional bar on
+  direction (Kenya, Art. 157(10)); functional autonomy outside all three branches (Brazil,
+  Art. 127); an office's own statement (Ireland); ministerial authority with instructions barred
+  from individual files (France); supervision allocated by statute (Germany, § 147 GVG);
+  constitutional _dependencia jerárquica_ (Spain, Art. 124); a serving Minister (Nigeria); and
+  mostly elected local officials (United States). Two of them are openly contested and the site
+  says so rather than resolving them.
+- **Zero institution routes, for the third wave running.** The prosecuting function recurs
+  everywhere and the institution does not, so it ships as guides.
+- **A latent rendering defect was found and fixed corpus-wide.** `Misconception.reality` renders as
+  plain text rather than through the internal-link resolver, so markdown links there reach readers
+  as raw `[text](/url)` syntax. Two new instances and **one pre-existing one on a law-enforcement
+  guide** were corrected, and a corpus-wide test now forbids it.
+- **A mutation proof exposed a missing test again.** M6 — "prosecutors never investigate directly"
+  — applied cleanly and passed. The cluster had no guard, and was itself nearly silent on a fact
+  four of this site's own pages establish. Acknowledgement added, guards added, M6 re-run and
+  observed failing.
+- **An adversarial pass found four unused jurisdictions and a false uncertainty note.** Australia,
+  Canada, Switzerland and Japan all had verified prosecution modules, and the organisation page
+  claimed three of them had not been researched. All four added; Australia's "whoever made the law
+  that was broken provides the prosecutor" and Canada's two-axis split are now the clearest federal
+  examples in the cluster.
+- Validation: 3308 unit tests / 62 files; **380 routes / 380 sitemap / 382 pages**; e2e 696 passed
+  / 4 skipped; route matrix 492/492. Eight mutation proofs. **Zero JS delta, zero CSS delta.**
+
+Delivered on `feat/knowledge-expansion-wave-10`. Not merged, not deployed.

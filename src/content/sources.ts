@@ -3310,6 +3310,53 @@ export const SOURCES: readonly SourceRecord[] = [
     authoritativeLanguage: 'la',
     note: 'The Latin text of Pro Cluentio, read directly and located at chapter LIII. Supports the wording of the sentence at § 146 verbatim: "Legum ministri magistratus, legum interpretes iudices, legum denique idcirco omnes servi sumus ut liberi esse possimus." Also supports the immediately preceding clause "hoc fundamentum libertatis, hic fons aequitatis" and the immediately FOLLOWING sentences at § 147, in which Cicero asks the presiding judge and the jurors by what authority they sit and judge — "Quid est, Q. Naso, cur tu in isto loco sedeas?" and "Vos autem, iudices, quam ob rem ex tanta multitudine civium tam pauci de hominum fortunis sententiam fertis?". Cited for two facts: the full wording, and the context that makes the sentence an argument about the authority of MAGISTRATES AND JUDGES being derived from law. It does not support the common truncated rendering "Legum servi sumus ut liberi esse possimus", which omits "omnes" and both preceding clauses, and it supports no claim about any modern legal system.',
   },
+
+  /* ---------------------------------------------------------------------- */
+  /* Wave 10 — prosecution systems                                           */
+  /* ---------------------------------------------------------------------- */
+
+  {
+    id: 'de-stpo-152-legalitaetsgrundsatz',
+    type: 'legislation',
+    title:
+      'Strafprozessordnung (StPO) § 152 — Anklagebehörde; Legalitätsgrundsatz (German original text)',
+    publisher: 'Bundesministerium der Justiz / Bundesamt für Justiz (Gesetze im Internet)',
+    url: 'https://www.gesetze-im-internet.de/stpo/__152.html',
+    verifiedOn: '2026-08-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'DE',
+    translationStatus: 'not-a-translation',
+    authoritativeLanguage: 'de',
+    note: 'The authoritative German text of § 152 StPO, headed "Anklagebehörde; Legalitätsgrundsatz", read directly. Supports § 152(1): "Zur Erhebung der öffentlichen Klage ist die Staatsanwaltschaft berufen" — the public prosecution office is the body called upon to bring the public charge. And § 152(2) verbatim: "Sie ist, soweit nicht gesetzlich ein anderes bestimmt ist, verpflichtet, wegen aller verfolgbaren Straftaten einzuschreiten, sofern zureichende tatsächliche Anhaltspunkte vorliegen" — it is OBLIGED, unless the law provides otherwise, to take action in respect of all prosecutable offences, provided sufficient factual indications are present. Cited for the German principle of legality, for the fact that acting is a DUTY rather than a choice, and for the threshold being sufficient factual indications. It establishes no test framed in terms of the prospects of conviction, and it supports no claim about any other country.',
+  },
+  {
+    id: 'de-stpo-170-anklageerhebung',
+    type: 'legislation',
+    title:
+      'Strafprozessordnung (StPO) § 170 — Entscheidung über eine Anklageerhebung (German original text)',
+    publisher: 'Bundesministerium der Justiz / Bundesamt für Justiz (Gesetze im Internet)',
+    url: 'https://www.gesetze-im-internet.de/stpo/__170.html',
+    verifiedOn: '2026-08-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'DE',
+    translationStatus: 'not-a-translation',
+    authoritativeLanguage: 'de',
+    note: 'The authoritative German text of § 170 StPO, read directly. Supports § 170(1): where the investigations offer "genügenden Anlaß zur Erhebung der öffentlichen Klage" — sufficient reason to bring the public charge — the prosecution brings it by filing an indictment with the competent court. And § 170(2): otherwise the prosecution terminates the proceedings, notifying the accused where he has been questioned as such, where a warrant of arrest had been issued against him, where he has asked for a decision, or where a particular interest in notification is apparent. Cited for the German charging threshold and for the fact that a decision not to charge is a defined statutory outcome with its own notification duties. It supports no claim about the frequency of either outcome.',
+  },
+  {
+    id: 'de-stpo-153-geringfuegigkeit',
+    type: 'legislation',
+    title:
+      'Strafprozessordnung (StPO) § 153 — Absehen von der Verfolgung bei Geringfügigkeit (German original text)',
+    publisher: 'Bundesministerium der Justiz / Bundesamt für Justiz (Gesetze im Internet)',
+    url: 'https://www.gesetze-im-internet.de/stpo/__153.html',
+    verifiedOn: '2026-08-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'DE',
+    translationStatus: 'not-a-translation',
+    authoritativeLanguage: 'de',
+    note: "The authoritative German text of § 153 StPO, read directly. Supports § 153(1): where the proceedings concern a Vergehen, the prosecution \"kann … mit Zustimmung des für die Eröffnung des Hauptverfahrens zuständigen Gerichts von der Verfolgung absehen, wenn die Schuld des Täters als gering anzusehen wäre und kein öffentliches Interesse an der Verfolgung besteht\" — may, with the consent of the court competent to open the main proceedings, refrain from prosecution where the offender's guilt would be regarded as minor and there is no public interest in prosecution; and that the court's consent is not required for a Vergehen not carrying an increased minimum penalty where the consequences caused are minor. Cited for the fact that Germany's legality principle carries express statutory exceptions involving a public-interest judgement, which is why the legality/opportunity distinction is not a binary. It supports no claim about how often the provision is used.",
+  },
 ];
 
 const SOURCE_INDEX = new Map(SOURCES.map((source) => [source.id, source]));
