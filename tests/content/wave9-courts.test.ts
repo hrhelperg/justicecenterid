@@ -612,10 +612,23 @@ describe('the cluster does not consume the reserved clusters', () => {
   });
 
   it('acknowledges defence rights without explaining how defence works', () => {
-    /* Part Y: acknowledge, do not build. */
-    expect(ALL_PROSE).toMatch(
-      /legal help|right to answer|challenge the evidence|test the evidence/i,
-    );
+    /*
+     * Part Y: acknowledge, do not build. It names five rights that court pages should
+     * acknowledge, and an adversarial pass found only three present — which left the page
+     * explaining why courts matter without the two that most directly answer "matter to whom".
+     */
+    for (const right of [
+      /legal help|counsel/i,
+      /test the evidence|challenge the evidence/i,
+      /be heard before a decision/i,
+      /presumption of innocence/i,
+      /to appeal/i,
+    ]) {
+      expect(
+        prose(guide('why-courts-matter')),
+        `defence right not acknowledged: ${right}`,
+      ).toMatch(right);
+    }
     for (const pattern of [
       /how to (instruct|choose|find) (a )?(lawyer|counsel|solicitor)/i,
       /legal aid (is available|application)/i,

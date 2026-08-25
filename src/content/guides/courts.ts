@@ -111,7 +111,7 @@ export const COURTS_GUIDES: readonly Guide[] = [
       },
       {
         kind: 'paragraph',
-        text: 'Those conditions also explain what the defence is for, which is a subject this site will develop separately. A person facing the state’s case needs to be able to answer it: to know what is alleged, to have legal help, to test the evidence, and where the law provides for it, to appeal. Those rights are not obstacles to the court’s work. They are the conditions under which its conclusion means anything.',
+        text: 'Those conditions also explain what the defence is for, which is a subject this site will develop separately. A person facing the state’s case needs to be able to answer it: to know what is alleged, to have legal help, to be heard before a decision is made, to test the evidence against them, and where the law provides for it, to appeal. They are also entitled to be treated as innocent until the case is proved — the presumption of innocence is not a courtesy extended to the accused but a statement about where the burden lies. None of these rights is an obstacle to the court’s work. They are the conditions under which its conclusion means anything.',
         claim: 'analysis',
       },
       {
