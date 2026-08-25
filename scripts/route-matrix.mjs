@@ -147,6 +147,30 @@ const MUST_404 = [
   '/institutions/judicial-police',
   '/institutions/national-investigative-agency',
   '/institutions/financial-investigation-unit',
+  // Wave 9: court candidates merged, deferred or rejected in
+  // docs/seo/knowledge-expansion-wave-9-cannibalization.md. Seven court-related terms are owned
+  // by the glossary and the judicial role by /professions/judge; open justice and precedent are
+  // deferred for want of sourced material. Only the constitutional court recurs structurally
+  // enough to be an institution family.
+  '/courts/what-is-a-court',
+  '/courts/what-is-an-appeal',
+  '/courts/what-is-judicial-independence',
+  '/courts/judicial-review-explained',
+  '/courts/why-appeals-matter',
+  '/courts/judicial-appointments',
+  '/courts/judicial-tenure',
+  '/courts/court-accountability',
+  '/courts/open-justice',
+  '/courts/court-decisions-and-precedent',
+  '/courts/courts-of-cassation',
+  '/courts/constitutional-courts',
+  '/institutions/supreme-court',
+  '/institutions/trial-court',
+  '/institutions/appellate-court',
+  '/institutions/court-of-cassation',
+  '/institutions/administrative-court',
+  // A parallel courts taxonomy was considered and rejected; the existing hub is used.
+  '/judiciary',
   // A parallel investigation taxonomy was considered and rejected; the existing hub is used.
   '/criminal-investigation',
   // Arbitrary paths.
