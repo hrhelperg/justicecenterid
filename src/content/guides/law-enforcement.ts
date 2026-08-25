@@ -1419,7 +1419,7 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
         kind: 'callout',
         variant: 'analysis',
         title: 'France inverts the power assumption entirely',
-        text: 'In France the bodies inside the police hold the investigative powers and the bodies outside it do not. The IGPN conducts judicial investigations "d’initiative ou sur instruction de l’autorité judiciaire" — on its own initiative. The Défenseur des droits, an autorité administrative indépendante that receives no instructions, may require explanations, carry out verifications, recommend, enjoin, publish a special report and refer facts to a prosecutor — and cannot impose a sanction or investigate a crime. Being outside is not the same as being stronger.',
+        text: 'In France the bodies inside the police hold the investigative powers and the bodies outside it do not. The IGPN conducts judicial investigations "d’initiative ou sur instruction de l’autorité judiciaire" — on its own initiative. The Défenseur des droits, an autorité administrative indépendante that receives no instructions, may require explanations, carry out verifications, recommend, enjoin, publish a special report and refer facts to a prosecutor — and cannot impose a sanction or investigate a crime. Note what that external body is, though: security deontology is one of five mandates, and it covers security activity generally — national and municipal police, gendarmes, prison staff, customs officers, transport surveillance agents and private security employees alike. It is not a police body. Being outside is not the same as being stronger.',
       },
       {
         kind: 'paragraph',
@@ -1447,7 +1447,7 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
           {
             term: 'Internal bodies holding the criminal powers',
             description:
-              'France. The inspections générales belong to the forces they examine and conduct judicial investigations; the external authorities have no criminal-investigation power and no power to sanction.',
+              'France. The inspections générales belong to the forces they examine and conduct judicial investigations; the external authorities — both of which hold general mandates rather than police-specific ones — have no criminal-investigation power and no power to sanction.',
           },
           {
             term: 'No external police body at all',

@@ -339,6 +339,18 @@ describe('position is recorded separately from independence', () => {
     expect(claims).toMatch(/external oversight is independent oversight/i);
   });
 
+  it('never lets a general-mandate body read as a police-specific one', () => {
+    /*
+     * Adversarial question 11. The Défenseur des droits appears on the internal/external guide
+     * as an example of an external body with few powers. Shown without its scope, that reads
+     * as a French police-oversight body, which it is not: security deontology is one of five
+     * mandates and covers security activity generally.
+     */
+    const prose = guideProse(guide(INTERNAL_EXTERNAL_GUIDE));
+    expect(prose).toMatch(/Défenseur des droits/);
+    expect(prose).toMatch(/one of five mandates|general mandates|not a police body/i);
+  });
+
   it('records Czechia as not police-specific, because its remit is three forces', () => {
     expect(body(INVESTIGATIVE_BODY, 'cz-gibs-body').policeSpecific).toBe(false);
   });
