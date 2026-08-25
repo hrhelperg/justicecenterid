@@ -3260,6 +3260,37 @@ export const SOURCES: readonly SourceRecord[] = [
     authoritativeLanguage: 'da',
     note: 'The Authority’s own English page, read directly and re-confirmed for Wave 7. Supports: that the body handles conduct complaint cases AND investigates criminal cases concerning police personnel, prosecutors, other police and prosecution personnel performing police or law-enforcement tasks, and defence personnel assisting the police; that it initiates investigations where a person has died or been seriously injured as a result of police intervention or in police custody; that it "is independent of both the police and the prosecution service"; that it is governed by the Police Complaints Council, its supreme governing body, chaired by a High Court judge, with day-to-day management by a chief executive and around 40 staff; and that its legal basis is Act no. 404 of 21 April 2010 (in force 1 January 2012) and Act no. 1172 of 8 June 2021 (in force 1 July 2021 and 1 January 2022), with the provisions carried in the Administration of Justice Act. Note for translation integrity: the body’s own English name is "the Police Complaints Authority", without the "Uafhængige" (independent) that its Danish name carries. Whether it holds prosecuting authority was NOT established and is not claimed.',
   },
+
+  /* ---------------------------------------------------------------------- */
+  /* Wave 8 — criminal investigations                                        */
+  /* ---------------------------------------------------------------------- */
+
+  {
+    id: 'de-stpo-162-ermittlungsrichter',
+    type: 'legislation',
+    title: 'Strafprozessordnung (StPO) § 162 — Ermittlungsrichter (German original text)',
+    publisher: 'Bundesministerium der Justiz / Bundesamt für Justiz (Gesetze im Internet)',
+    url: 'https://www.gesetze-im-internet.de/stpo/__162.html',
+    verifiedOn: '2026-08-25',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'DE',
+    translationStatus: 'not-a-translation',
+    authoritativeLanguage: 'de',
+    note: 'The authoritative German text of § 162 StPO, headed "Ermittlungsrichter", read directly. Supports § 162(1): where the Staatsanwaltschaft considers a judicial investigative act ("die Vornahme einer gerichtlichen Untersuchungshandlung") necessary, it SUBMITS ITS APPLICATIONS ("stellt sie ihre Anträge") to the Amtsgericht before public charges are preferred; and § 162(2): "Das Gericht hat zu prüfen, ob die beantragte Handlung nach den Umständen des Falles gesetzlich zulässig ist" — the court must examine whether the requested act is legally permissible in the circumstances of the case. Cited for the finding that the German Ermittlungsrichter acts ON APPLICATION and reviews LEGALITY, and does not direct or conduct the investigation, which § 160 places with the prosecution. It does not support any claim that Germany has a juge d\'instruction-style judge who leads an investigation, and it establishes no investigative technique or threshold.',
+  },
+  {
+    id: 'de-stpo-english-translation',
+    type: 'legislation',
+    title: 'Code of Criminal Procedure (Strafprozessordnung) — official English translation',
+    publisher: 'Bundesministerium der Justiz / Bundesamt für Justiz (Gesetze im Internet)',
+    url: 'https://www.gesetze-im-internet.de/englisch_stpo/englisch_stpo.html',
+    verifiedOn: '2026-08-25',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'DE',
+    translationStatus: 'official-reference',
+    authoritativeLanguage: 'de',
+    note: 'The Federal Ministry of Justice\'s own English rendering of the StPO, read directly. Cited for ONE narrow and important fact: this official translation renders the heading of § 162 as "Investigating judge", and § 169 likewise refers to "investigating judges". That is the evidence that the English phrase "investigating judge" is applied, by an official source, to a German office whose function differs fundamentally from the French juge d\'instruction — which is the terminology finding the investigating-judge page rests on. The German text is authoritative; this translation is cited as evidence of official English USAGE, not as a substitute for the German wording, which is quoted from the original.',
+  },
 ];
 
 const SOURCE_INDEX = new Map(SOURCES.map((source) => [source.id, source]));
