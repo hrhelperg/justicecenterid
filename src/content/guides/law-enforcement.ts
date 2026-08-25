@@ -2491,6 +2491,8 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
       'cz-gibs',
       'nz-ipca',
       'ng-constitution',
+      'fr-decret-2013-784-igpn',
+      'fr-arrete-2025-iggn',
     ],
     status: 'published',
     review: 'fact-checked',
@@ -2520,6 +2522,10 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
       {
         countrySlug: 'new-zealand',
         note: 'New Zealand separates the watching from the prosecuting: the Independent Police Conduct Authority, established by Parliament in 1989, is not part of the New Zealand Police and receives and investigates complaints, while criminal decisions rest elsewhere.',
+      },
+      {
+        countrySlug: 'france',
+        note: 'France shows two of these categories operating at once, which is why they are not mutually exclusive. Each national force has its own inspection générale, and each is inside the force it examines — the IGPN is by décret “un service actif de la direction générale de la police nationale”. Those internal bodies also act as judicial police: the IGPN conducts criminal investigations “d’initiative ou sur instruction de l’autorité judiciaire”, and the gendarmerie’s inspection conducts those entrusted to it and informs the judicial authority where the failings found may amount to an offence. So the service investigates itself and a prosecutor directs, in the same arrangement.',
       },
     ],
     counterExamples: [

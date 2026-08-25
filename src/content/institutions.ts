@@ -746,6 +746,10 @@ export const INSTITUTION_TYPES: readonly InstitutionType[] = [
         countrySlug: 'nigeria',
         note: 'Nigeria splits police oversight between two constitutional bodies under section 153 and the Third Schedule — the Police Service Commission, which appoints, promotes and disciplines officers other than the Inspector-General, and the Nigeria Police Council for policy and general supervision. There is no separate independent police-complaints board. A country can have constitutional police oversight and no body of this type at all.',
       },
+      {
+        countrySlug: 'france',
+        note: 'France divides the two halves of this page’s definition between different bodies, and no French body holds both. The police-specific bodies are internal: the Inspection générale de la Police nationale is, by its founding décret, “un service actif de la direction générale de la police nationale”, and the Code de la défense has the director general of the gendarmerie “dispose” of its inspection générale. The external bodies are general-mandate: the Défenseur des droits reviews security deontology across national and municipal police, gendarmes, prison staff, customs officers, transport surveillance agents and private security employees alike. No external, police-specific complaints body appears in the French instruments read for this page. France also inverts the assumption that external means stronger — the internal IGPN conducts criminal investigations on its own initiative, while the external Défenseur des droits can recommend, enjoin and refer, but not sanction.',
+      },
     ],
     relatedProfessions: ['patrol-officer'],
     relatedInstitutions: [
@@ -766,6 +770,9 @@ export const INSTITUTION_TYPES: readonly InstitutionType[] = [
       'dk-police-complaints',
       'ie-fiosru',
       'ng-constitution',
+      'fr-decret-2013-784-igpn',
+      'fr-code-defense-iggn',
+      'fr-ddd-deontologie-securite',
       'unodc-e4j-police-accountability',
     ],
     status: 'published',
@@ -824,6 +831,10 @@ export const INSTITUTION_TYPES: readonly InstitutionType[] = [
         countrySlug: 'czechia',
         note: 'The Public Defender of Rights handles complaints against the conduct or inaction of public authorities, inspects places where people are deprived of liberty, and acts as the national equality body — three distinct functions in one institution.',
       },
+      {
+        countrySlug: 'france',
+        note: 'The Défenseur des droits is established by Article 71-1 of the Constitution, appointed for a single non-renewable six-year term, and reports on his activity to the President of the Republic and to Parliament; the organic law of 2011 describes him as an independent administrative authority who neither receives nor seeks any instruction. Oversight of security conduct is one of five mandates and is not police-specific — it reaches municipal police, prison staff, customs officers and private security employees as well. He may require explanations and documents, verify on premises, recommend, enjoin, publish a special report where an injunction is not followed, and refer facts to the authority holding the disciplinary power. He cannot impose a sanction, which is the general shape of this institutional type stated in one country’s law.',
+      },
     ],
     counterExamples: [
       {
@@ -844,6 +855,9 @@ export const INSTITUTION_TYPES: readonly InstitutionType[] = [
       'at-volksanwaltschaft',
       'cz-ochrance',
       'za-ipid',
+      'fr-constitution-1958',
+      'fr-loi-organique-2011-333',
+      'fr-ddd-deontologie-securite',
       'mandela-rules',
     ],
     status: 'published',

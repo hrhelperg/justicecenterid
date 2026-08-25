@@ -104,6 +104,14 @@ const MUST_404 = [
   '/institutions/judicial-oversight',
   '/law-enforcement/internal-vs-external-police-oversight',
   '/law-enforcement/how-police-complaints-are-investigated',
+  // Wave 6: English labels tested against French evidence and rejected. The French
+  // inspections générales are INSIDE the forces they examine, so "inspectorate" would
+  // invert the fact that matters most, and one country is not recurrence in any case.
+  '/institutions/internal-affairs-unit',
+  '/institutions/professional-standards-unit',
+  '/institutions/police-integrity-commission',
+  '/institutions/police-standards-commission',
+  '/countries/france/inspections',
   // ISO codes are not URL segments; the slug is the English name.
   '/countries/fr',
   '/countries/us',

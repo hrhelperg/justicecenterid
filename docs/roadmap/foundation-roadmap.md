@@ -676,3 +676,48 @@ what they can actually do. Details in `docs/audits/knowledge-expansion-wave-5-qa
   passed / 4 skipped; route matrix 406/406. **Zero JS delta, zero CSS delta, no new sources.**
 
 Delivered on `feat/knowledge-expansion-wave-5`. Not merged, not deployed.
+
+## Phase 20 — Knowledge Expansion Wave 6 (delivered 2026-08-10)
+
+France oversight deepening: the police inspectorates, internal oversight and external rights
+review, researched from French primary instruments before any English label was applied.
+Details in `docs/audits/knowledge-expansion-wave-6-qa.md`.
+
+- **The rule was followed literally.** The brief forbade starting from English labels and
+  forcing French institutions into them. The research read the décret, the Code de la défense,
+  the arrêtés, the loi organique and the Constitution in French first, and the labels were
+  tested afterwards. `docs/research/france-oversight-function-matrix.md` records the result
+  cell by cell.
+- **Every candidate English label failed.** _Internal affairs_ fails because the IGPN conducts
+  criminal investigations on its own initiative and both bodies carry a wide organisational
+  audit remit. _Inspectorate_ fails on the axis that matters most: an `inspection générale` is
+  a service **inside** the force, and the corpus's only inspectorate — Ireland's, dissolved
+  2 April 2025 — was external. _Professional standards_ fails because France sets standards by
+  a code binding both forces, not by a unit.
+- **Zero new institution routes.** `police-inspectorate`, `internal-affairs` and
+  `professional-standards` remain deferred — now for reasons rather than for want of sources,
+  which is the substantive change Wave 6 makes to Wave 5's verdicts.
+- **The finding of the wave: position and power run in opposite directions.** The internal
+  IGPN can open a criminal investigation on its own initiative; the external, constitutionally
+  established Défenseur des droits cannot investigate a crime or impose a sanction. This is the
+  clearest demonstration in the corpus of why `oversightPosture` records position and stops
+  there.
+- **One route published**: `/countries/france/oversight`, deferred since the France pilot. Its
+  `deferredReason` named four bodies whose legal bases were unconfirmed; all four were read
+  from primary sources, and the module ships with the Conseil supérieur de la magistrature
+  present only as a boundary marker.
+- **Three existing pages strengthened**: France as a **counterexample** on
+  `independent-police-complaints-body` (no external police-specific body exists), as an example
+  on `ombuds-and-rights-institution` (Défenseur des droits), and as an example on
+  `who-investigates-police` (two arrangements operating at once).
+- **A distinction the labels would have destroyed**: the IGPN's public reporting platform is
+  expressly "ni un service d'enquête, ni un service de plainte". A signalement is not a plainte,
+  and the page says so.
+- **Unlike Wave 5, this wave added sources**: 225 → 235, all France-scoped, all
+  content-confirmed. Two ministry prose pages returned HTTP 403 to automated requests and
+  nothing was cited from them.
+- Validation: 2620 unit tests / 58 files; **353 routes / 353 sitemap / 355 pages**; e2e 402
+  passed / 4 skipped; route matrix 412/412. Four mutation proofs, each observed failing for its
+  intended reason. **Zero JS delta**, CSS +219 B.
+
+Delivered on `feat/knowledge-expansion-wave-6`. Not merged, not deployed.
