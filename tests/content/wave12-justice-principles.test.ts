@@ -353,9 +353,10 @@ describe('neutrality tripwires fire on claims, not on vocabulary', () => {
        * A sentence may CONTAIN the shape while denying it. The denial must be in the SAME
        * sentence — a neighbouring negation does not rescue an assertion.
        */
-      expect(sentence, `absolutist claim asserted without denial: ${sentence}`).toMatch(
-        /\bnot\b|\bnever\b|\bno\b|\bnothing\b|\bdoes not\b|\bcontradicts\b/i,
-      );
+      expect(
+        deniesClaim(sentence, pattern),
+        `absolutist claim asserted without denial: ${sentence}`,
+      ).toBe(true);
     }
   });
 
