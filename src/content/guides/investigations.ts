@@ -82,7 +82,17 @@ export const INVESTIGATIONS_GUIDES: readonly Guide[] = [
     whyItExists: [
       {
         kind: 'paragraph',
-        text: 'The allocation exists because investigating is a coercive activity carried out against people who are, at that stage, only suspected. Someone has to be answerable for it in law, and systems differ on whether that someone should be inside the police, inside the prosecution service, or on the bench.',
+        text: 'A society that cannot investigate crime cannot answer the question of what happened, and cannot offer anyone harmed by an offence a process that takes it seriously. Investigative capacity is not a concession a legal system makes; it is one of the things a legal system is for. The institutions on this page exist because that capacity has to be located somewhere identifiable.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The allocation exists because investigating is at the same time a coercive activity carried out against people who are, at that stage, only suspected. Someone has to be answerable for it in law, and systems differ on whether that someone should be inside the police, inside the prosecution service, or on the bench.',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Both halves are the design',
+        text: 'The safeguards described across this cluster are not restraints imposed on investigation from outside it. Authorisation requirements, duties to pursue exculpatory material and separated charging decisions are what allow an investigation’s conclusions to be relied on afterwards. A system with no capacity to investigate fails the people it was built to protect; a system whose investigations cannot be checked produces findings no one has reason to accept. Every arrangement here is an attempt at both.',
       },
       {
         kind: 'paragraph',

@@ -637,6 +637,20 @@ describe('no model is ranked and no effectiveness is inferred', () => {
     ).toBeGreaterThanOrEqual(2);
   });
 
+  it('states the capacity side of the editorial principle, not only the constraint side', () => {
+    /*
+     * Adversarial finding. An investigations cluster written entirely in terms of limits reads
+     * as though investigative capacity were a regrettable necessity. The platform's editorial
+     * principle requires both halves: societies need institutions able to investigate, AND that
+     * authority must be constrained. This asserts the first half is actually present.
+     */
+    const p = prose(guide('who-investigates-crime'));
+    expect(p).toMatch(
+      /cannot investigate crime cannot answer|capacity is not a concession|one of the things a legal system is for/i,
+    );
+    expect(p).toMatch(/fails the people it was built to protect|no one has reason to accept/i);
+  });
+
   it('does not frame safeguards as obstacles to policing', () => {
     for (const pattern of [
       /hamper(s|ed|ing)? (the )?police/i,
