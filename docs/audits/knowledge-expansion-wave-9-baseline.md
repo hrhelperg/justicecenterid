@@ -4,16 +4,16 @@ Measured directly from `main` immediately before the Wave 9 branch was cut.
 
 ## Provenance
 
-| Field | Value |
-| --- | --- |
-| Repository | `hrhelperg/justicecenterid` |
-| Base branch | `main` |
-| Base SHA | `3f5795a9e151f7b04ab8bb1f99905eefd767292b` |
-| Base commit | Merge pull request #26 from `feat/knowledge-expansion-wave-8` |
-| Working tree at measurement | clean |
-| Wave branch | `feat/knowledge-expansion-wave-9` (local only) |
-| Measured on | 2026-08-25 |
-| Node / npm | v24.15.0 / 11.12.1 |
+| Field                       | Value                                                         |
+| --------------------------- | ------------------------------------------------------------- |
+| Repository                  | `hrhelperg/justicecenterid`                                   |
+| Base branch                 | `main`                                                        |
+| Base SHA                    | `3f5795a9e151f7b04ab8bb1f99905eefd767292b`                    |
+| Base commit                 | Merge pull request #26 from `feat/knowledge-expansion-wave-8` |
+| Working tree at measurement | clean                                                         |
+| Wave branch                 | `feat/knowledge-expansion-wave-9` (local only)                |
+| Measured on                 | 2026-08-25                                                    |
+| Node / npm                  | v24.15.0 / 11.12.1                                            |
 
 ## Merge-gate result
 
@@ -36,34 +36,34 @@ courts content without pulling it back into the investigations cluster.
 
 ## Build and route metrics
 
-| Metric | Baseline | Command |
-| --- | --- | --- |
-| Routes in registry | 362 | `npm run verify:output` |
-| Exported pages | 364 | `npm run verify:output` |
-| Sitemap URLs | 362 | `npm run verify:output` |
-| HTML files in `out/` | 364 | `find out -name '*.html' \| wc -l` |
+| Metric               | Baseline | Command                            |
+| -------------------- | -------- | ---------------------------------- |
+| Routes in registry   | 362      | `npm run verify:output`            |
+| Exported pages       | 364      | `npm run verify:output`            |
+| Sitemap URLs         | 362      | `npm run verify:output`            |
+| HTML files in `out/` | 364      | `find out -name '*.html' \| wc -l` |
 
 ## Test metrics
 
-| Metric | Baseline | Command |
-| --- | --- | --- |
-| Unit test files | 60 | `npm test` |
-| Unit tests | 2882 | `npm test` |
-| Playwright spec files | 10 | `npx playwright test --list` |
-| Playwright tests | 510 | `npx playwright test --list` |
+| Metric                | Baseline | Command                      |
+| --------------------- | -------- | ---------------------------- |
+| Unit test files       | 60       | `npm test`                   |
+| Unit tests            | 2882     | `npm test`                   |
+| Playwright spec files | 10       | `npx playwright test --list` |
+| Playwright tests      | 510      | `npx playwright test --list` |
 
 ## Content records
 
-| Record type | Baseline | Note |
-| --- | --- | --- |
-| **Courts routes** | **1** | one guide carries `section: 'courts'` — `what-do-courts-do` |
-| **Court-related glossary routes** | **7** | `court`, `judicial-independence`, `judicial-review`, `appeal`, `jurisdiction`, `due-process`, `rule-of-law` |
-| Institution records | 16 records, 14 routed | none is a court type |
-| Profession routes | 6 | includes `judge` |
-| Country dossiers | 32 | **all 32 carry a `courts` module** |
-| Source records | 246 | |
-| Restricted claims | 10 | |
-| ScheduledChange records | 4 | |
+| Record type                       | Baseline              | Note                                                                                                        |
+| --------------------------------- | --------------------- | ----------------------------------------------------------------------------------------------------------- |
+| **Courts routes**                 | **1**                 | one guide carries `section: 'courts'` — `what-do-courts-do`                                                 |
+| **Court-related glossary routes** | **7**                 | `court`, `judicial-independence`, `judicial-review`, `appeal`, `jurisdiction`, `due-process`, `rule-of-law` |
+| Institution records               | 16 records, 14 routed | none is a court type                                                                                        |
+| Profession routes                 | 6                     | includes `judge`                                                                                            |
+| Country dossiers                  | 32                    | **all 32 carry a `courts` module**                                                                          |
+| Source records                    | 246                   |                                                                                                             |
+| Restricted claims                 | 10                    |                                                                                                             |
+| ScheduledChange records           | 4                     |                                                                                                             |
 
 ### Court-related sources at baseline
 
@@ -83,8 +83,8 @@ hub.
 ### The cannibalization constraint, stated up front
 
 Seven of the twenty-eight Part B candidates map directly onto glossary terms that already exist:
-*court*, *judicial independence*, *judicial review*, *appeal*, *jurisdiction*, *due process* and
-*rule of law*. `/professions/judge` owns the judicial role. `what-do-courts-do` owns the
+_court_, _judicial independence_, _judicial review_, _appeal_, _jurisdiction_, _due process_ and
+_rule of law_. `/professions/judge` owns the judicial role. `what-do-courts-do` owns the
 function question.
 
 The space left for Wave 9 is therefore **institutional and comparative** — how court systems are
@@ -93,11 +93,11 @@ any term the glossary already holds.
 
 ## Bundle and output size
 
-| Metric | Baseline | Command |
-| --- | --- | --- |
-| JS bytes (`out/_next`) | 663,403 B | `find out/_next -name '*.js' -exec stat -f%z {} +` |
-| CSS bytes (`out/_next`) | 29,625 B | `find out/_next -name '*.css' -exec stat -f%z {} +` |
-| Total `out/` size | 84,928 KB | `du -sk out` (clean rebuild) |
+| Metric                  | Baseline  | Command                                             |
+| ----------------------- | --------- | --------------------------------------------------- |
+| JS bytes (`out/_next`)  | 663,403 B | `find out/_next -name '*.js' -exec stat -f%z {} +`  |
+| CSS bytes (`out/_next`) | 29,625 B  | `find out/_next -name '*.css' -exec stat -f%z {} +` |
+| Total `out/` size       | 84,928 KB | `du -sk out` (clean rebuild)                        |
 
 Wave 9 adds no client runtime, no chart library and no hierarchy engine. The JS figure is expected
 to move by zero.

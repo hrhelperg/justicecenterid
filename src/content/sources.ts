@@ -3291,6 +3291,25 @@ export const SOURCES: readonly SourceRecord[] = [
     authoritativeLanguage: 'de',
     note: 'The Federal Ministry of Justice\'s own English rendering of the StPO, read directly. Cited for ONE narrow and important fact: this official translation renders the heading of § 162 as "Investigating judge", and § 169 likewise refers to "investigating judges". That is the evidence that the English phrase "investigating judge" is applied, by an official source, to a German office whose function differs fundamentally from the French juge d\'instruction — which is the terminology finding the investigating-judge page rests on. The German text is authoritative; this translation is cited as evidence of official English USAGE, not as a substitute for the German wording, which is quoted from the original.',
   },
+
+  /* ---------------------------------------------------------------------- */
+  /* Wave 9 — courts and judicial systems                                    */
+  /* ---------------------------------------------------------------------- */
+
+  {
+    id: 'cicero-pro-cluentio-146',
+    type: 'book',
+    title: 'Cicero, Pro Cluentio LIII (§§ 146–147) — Latin text',
+    publisher: 'The Latin Library (text repository)',
+    url: 'https://www.thelatinlibrary.com/cicero/cluentio.shtml',
+    publishedOn: '-66',
+    verifiedOn: '2026-08-25',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'INT',
+    translationStatus: 'not-a-translation',
+    authoritativeLanguage: 'la',
+    note: 'The Latin text of Pro Cluentio, read directly and located at chapter LIII. Supports the wording of the sentence at § 146 verbatim: "Legum ministri magistratus, legum interpretes iudices, legum denique idcirco omnes servi sumus ut liberi esse possimus." Also supports the immediately preceding clause "hoc fundamentum libertatis, hic fons aequitatis" and the immediately FOLLOWING sentences at § 147, in which Cicero asks the presiding judge and the jurors by what authority they sit and judge — "Quid est, Q. Naso, cur tu in isto loco sedeas?" and "Vos autem, iudices, quam ob rem ex tanta multitudine civium tam pauci de hominum fortunis sententiam fertis?". Cited for two facts: the full wording, and the context that makes the sentence an argument about the authority of MAGISTRATES AND JUDGES being derived from law. It does not support the common truncated rendering "Legum servi sumus ut liberi esse possimus", which omits "omnes" and both preceding clauses, and it supports no claim about any modern legal system.',
+  },
 ];
 
 const SOURCE_INDEX = new Map(SOURCES.map((source) => [source.id, source]));

@@ -1062,6 +1062,97 @@ export const INSTITUTION_TYPES: readonly InstitutionType[] = [
     factsVerifiedOn: '2026-08-25',
   },
   {
+    slug: 'constitutional-court',
+    title: 'Constitutional court',
+    shortTitle: 'Constitutional court',
+    question: 'What is a constitutional court, and is it the same as a supreme court?',
+    summary:
+      'A body with authority to decide whether law and state action conform to the constitution. In several systems it sits outside the ordinary judiciary and is not its highest court. In others no such body exists, and in one the function is forbidden entirely.',
+    section: 'courts',
+    purpose:
+      'A constitution binds the institutions that make and apply law, which raises the question of who decides when they have exceeded it. Leaving that to the body being measured answers it in advance. Several systems concluded that the question needs a court whose only subject is the constitution, and placed it deliberately outside the hierarchy whose decisions it may review.',
+    distinguishingFeatures: [
+      'Its subject is conformity with the constitution, not the correctness of ordinary law',
+      'Where it exists as a separate body, it sits outside the ordinary judiciary rather than at the top of it',
+      'Its composition and appointment are usually set out separately from those of the ordinary courts',
+    ],
+    typicalMandate: [
+      'Deciding whether legislation conforms to the constitution',
+      'Deciding constitutional-rights questions',
+      'In federal systems, deciding disputes about the division of powers between levels of government',
+    ],
+    commonConfusions: [
+      'With the supreme court. In Germany, Spain and Belgium these are different institutions; in Brazil and Japan they are the same court; in Ireland the function belongs to the High Court.',
+      'That every constitution has one. The Netherlands has none by design, and Japan has none as a separate body.',
+      'That constitutional review is always abstract. Japan’s Supreme Court exercises it only when deciding an actual case; Brazil’s STF does both.',
+      'With administrative courts, whose subject is the legality of decisions by public authorities rather than conformity with the constitution.',
+    ],
+    governanceNote:
+      'Where a separate court exists, its constitutional position is usually stated in the constitution itself rather than left to ordinary law. Germany’s Basic Law names the Federal Constitutional Court in Article 92 alongside — and distinct from — the federal courts and the courts of the Länder, and does not include it among the five federal supreme courts of Article 95(1). Spain regulates its Constitutional Court in Title IX and by its own organic law, outside the ordinary judiciary. Belgium’s Constitutional Court has twelve judges, composed equally of Dutch-speaking and French-speaking judges, which is a structural reflection of the federal state within an otherwise unitary judiciary.',
+    accountabilityNote:
+      'These courts sit at the end of the process by definition: there is no appeal from a constitutional determination within the system. That is why their composition, appointment and published reasoning attract the scrutiny they do, and why several systems fix the number of judges and the manner of appointment in the constitution rather than in ordinary legislation that a majority could amend.',
+    presenceNote:
+      'Present as a separate body in a minority of the systems researched. Elsewhere the function is held by the apex court, dispersed to a court of first instance, or absent altogether. The existence of constitutional review and the existence of a constitutional court are different questions, and only the second is what this page describes.',
+    historyNote:
+      'The separate constitutional court is a comparatively recent institutional form, and its adoption is usually recorded in a constitution rather than developed through case law. Where a system has one, the constitution generally establishes it expressly; where a system does not, that is generally also a decision the constitution records.',
+    countryExamples: [
+      {
+        countrySlug: 'germany',
+        note: 'The clearest case of separateness. Article 92 of the Basic Law vests judicial power "in the Federal Constitutional Court, in the federal courts provided for in this Basic Law, and in the courts of the Länder" — three distinct categories. Article 95(1) then names five federal supreme courts, and the Bundesverfassungsgericht is not among them. It is named separately and exercises constitutional jurisdiction. Calling it the German supreme court is wrong twice: it is not one of the five, and the five are not one court.',
+      },
+      {
+        countrySlug: 'spain',
+        note: 'A separate body outside the ordinary judiciary, regulated in Title IX and by its own organic law, and the supreme interpreter of the Constitution. Article 123 makes the Tribunal Supremo the highest judicial organ in all orders EXCEPT in matters of constitutional guarantees, which belong to the Constitutional Court. The exception is written into the article establishing the ordinary apex, and the corpus records that the Constitutional Court is not the top of the court system.',
+      },
+      {
+        countrySlug: 'belgium',
+        note: 'A separate court of twelve judges that examines the conformity of acts, decrees and ordinances with the Constitution and oversees the proper division of powers between the federated entities. It may annul and suspend legislation. Its equal composition of Dutch-speaking and French-speaking judges makes it a structural reflection of the federal state inside a unitary judiciary.',
+      },
+    ],
+    counterExamples: [
+      {
+        countrySlug: 'netherlands',
+        note: 'The strongest counterexample available: the function is not merely absent but prohibited. Article 120 of the Constitution forbids the courts from reviewing the constitutionality of Acts of Parliament, and the place a constitutional court occupies in other systems is deliberately empty. The Dutch courts are not thereby less courts — they retain an ordinary apex in the Hoge Raad and three separate highest administrative courts.',
+      },
+      {
+        countrySlug: 'brazil',
+        note: 'No separate constitutional court, because the apex court is one. The Supremo Tribunal Federal’s primary role is "a guarda da Constituição" under Article 102, and it is both the highest court and the constitutional court, exercising review in the abstract — through the ação direta de inconstitucionalidade and the ação declaratória de constitucionalidade — and in concrete cases. A system can have full constitutional review and no separate court.',
+      },
+      {
+        countrySlug: 'japan',
+        note: 'The Supreme Court holds the power of constitutional review but exercises it only when deciding an actual case before it, not by ruling on a law in the abstract. There is no separate constitutional court. Japan shows that the mode of review is a separate variable from whether a dedicated court exists.',
+      },
+      {
+        countrySlug: 'ireland',
+        note: 'The function sits at first instance rather than at the apex or in a separate court. The High Court has full original jurisdiction in all matters, civil or criminal, and jurisdiction to determine the validity of any law having regard to the Constitution. Constitutional review does not have to belong to a single specialised body, or to the highest court.',
+      },
+    ],
+    relatedProfessions: ['judge'],
+    relatedInstitutions: ['prosecution-service', 'ombuds-and-rights-institution'],
+    uncertainty: [
+      'This page describes a recurring institutional form. It establishes nothing about whether any of these courts is effective or independent in practice, and it makes no comparison between them.',
+      'The composition, appointment and detailed jurisdiction of these courts were researched only as far as the constitutional outline recorded in this corpus. Several dossiers record those details as unresearched, and they are not described.',
+      'Whether a system without a separate constitutional court has weaker constitutional protection is not addressed and is not claimed. Brazil and Japan have full or bounded review without one; the Netherlands has none by constitutional choice.',
+    ],
+    temporalScope: 'current',
+    sources: [
+      'de-grundgesetz',
+      'es-constitution',
+      'be-constitution',
+      'be-ejustice-justice',
+      'nl-constitution',
+      'nl-rechtspraak',
+      'br-cf-1988',
+      'jp-courts-judicial-system',
+      'ie-courts-service',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    updatedOn: '2026-08-25',
+    reviewedOn: '2026-08-25',
+    factsVerifiedOn: '2026-08-25',
+  },
+  {
     slug: 'ombuds-and-rights-institution',
     title: 'Ombuds and rights institutions',
     shortTitle: 'Ombuds and rights institutions',
