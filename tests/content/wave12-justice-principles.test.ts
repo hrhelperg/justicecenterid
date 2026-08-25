@@ -103,6 +103,24 @@ function sentences(text: string): string[] {
     .filter(Boolean);
 }
 
+/**
+ * Does `sentence` deny the claim that `pattern` matched?
+ *
+ * Forced by mutation proof W12-M3, which applied cleanly and PASSED. The first version asked
+ * whether the sentence contained a negation anywhere — and several tripwire patterns contain a
+ * negation in their own text ("courts must NEVER be criticised"). The claim therefore satisfied
+ * the denial check by being itself, and an inserted absolutist statement survived.
+ *
+ * The matched span is now removed before looking for the denial, so the negation has to come
+ * from the surrounding sentence and actually operate on the claim.
+ */
+function deniesClaim(sentence: string, pattern: RegExp): boolean {
+  const remainder = sentence.replace(new RegExp(pattern.source, 'gi'), ' ');
+  return /\bnot\b|\bnever\b|\bno\b|\bnothing\b|\bdoes not\b|\bcontradicts\b|\bwrong\b/i.test(
+    remainder,
+  );
+}
+
 const ALL_PROSE = WAVE_12.map((s) => prose(guide(s))).join('\n');
 const ALL_ASSERTED = WAVE_12.map((s) => asserted(guide(s))).join('\n');
 const ASSERTED_SENTENCES = sentences(ALL_ASSERTED);
@@ -344,10 +362,24 @@ describe('neutrality tripwires fire on claims, not on vocabulary', () => {
   it.each(DELEGITIMISING_CLAIMS)('asserts no delegitimising claim: %s', (_label, pattern) => {
     for (const sentence of ASSERTED_SENTENCES) {
       if (!pattern.test(sentence)) continue;
-      expect(sentence, `delegitimising claim asserted: ${sentence}`).toMatch(
-        /\bnot\b|\bnever\b|\bno\b|\bdoes not\b/i,
+      expect(deniesClaim(sentence, pattern), `delegitimising claim asserted: ${sentence}`).toBe(
+        true,
       );
     }
+  });
+
+  it('a negation inside the claim does not count as denying it', () => {
+    /* Non-vacuity for the fix above — this is exactly what W12-M3 exploited. */
+    const pattern = /courts? must never be criticised/i;
+    const bare = 'Courts must never be criticised.';
+    const corrected = 'Institutional respect does not mean courts must never be criticised.';
+    expect(deniesClaim(bare, pattern), 'a bare absolutist claim was treated as denied').toBe(
+      false,
+    );
+    expect(
+      deniesClaim(corrected, pattern),
+      'a genuine correction was treated as an assertion',
+    ).toBe(true);
   });
 
   it('the tripwires distinguish an assertion from its correction', () => {
