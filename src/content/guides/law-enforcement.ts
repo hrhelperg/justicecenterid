@@ -848,7 +848,7 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
       {
         claim: 'Being arrested means being charged.',
         reality:
-          'In most systems arrest is an investigative step, not an accusation that has been tested. Whether a charge follows is usually a separate decision, frequently taken by a different person — in many countries a [prosecutor](/prosecution/what-does-a-prosecutor-do) rather than the arresting body.',
+          'In most systems arrest is an investigative step, not an accusation that has been tested. Whether a charge follows is usually a separate decision, frequently taken by a different person — in many countries a prosecutor rather than the arresting body.',
       },
       {
         claim: 'The thresholds are the same everywhere, just translated differently.',

@@ -163,7 +163,7 @@ export const PROSECUTION_GUIDES: readonly Guide[] = [
       {
         claim: 'Prosecutors work for the police.',
         reality:
-          'They are different institutions with different functions, and in several systems the direction runs the other way. Who controls an investigation is a separate question, covered by [police and prosecutor investigation](/investigations/police-vs-prosecutor-investigation).',
+          'They are different institutions with different functions, and in several systems the direction runs the other way. Who controls an investigation is a separate question, and this site covers it under police and prosecutor investigation.',
       },
       {
         claim: 'Every country has a national prosecution service.',
@@ -216,7 +216,7 @@ export const PROSECUTION_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [what a prosecutor does](/prosecution/what-does-a-prosecutor-do), [how charging decisions work](/prosecution/how-charging-decisions-work), and [from investigation to prosecution](/investigations/investigation-to-prosecution).',
+        text: 'Related: [what a prosecutor does](/prosecution/what-does-a-prosecutor-do), [how charging decisions work](/prosecution/how-charging-decisions-work), and [police and prosecutor investigation](/investigations/police-vs-prosecutor-investigation).',
       },
     ],
   },
@@ -731,7 +731,7 @@ export const PROSECUTION_GUIDES: readonly Guide[] = [
       {
         claim: 'Independence means a prosecution service answers to no one.',
         reality:
-          'The arrangements here coexist with reporting duties, hierarchies, court consent requirements and, for most chief local prosecutors in the United States, election. What independence protects against is improper direction, not being answerable — the subject of [prosecutorial accountability](/prosecution/prosecutorial-accountability).',
+          'The arrangements described on this site coexist with reporting duties, hierarchies, court consent requirements and, for most chief local prosecutors in the United States, election. What independence protects against is improper direction, not being answerable, which the prosecutorial accountability page sets out.',
       },
       {
         claim: 'Prosecutorial independence works the same way as judicial independence.',

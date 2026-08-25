@@ -232,6 +232,34 @@ describe('the profession route and the glossary keep what they own', () => {
 /* Role: prosecutor is not police, not judge, and prosecution is not conviction */
 /* -------------------------------------------------------------------------- */
 
+describe('misconception fields never carry markdown links', () => {
+  it('no guide anywhere puts a markdown link in a misconception', () => {
+    /*
+     * Found by a Wave 10 e2e assertion that failed for an unexpected reason. `Misconception`
+     * claim and reality are rendered as PLAIN TEXT — unlike `Block` prose, they do not pass
+     * through the internal-link resolver — so a markdown link there reaches the reader as raw
+     * "[text](/url)" syntax on the page.
+     *
+     * The check is corpus-wide rather than Wave 10 only, because the failure that surfaced it
+     * also existed on an older law-enforcement guide, where it had been rendering raw markdown
+     * to readers. Links belong in prose blocks, where they resolve.
+     */
+    const offenders: string[] = [];
+    for (const g of ALL_GUIDES) {
+      for (const m of g.misconceptions) {
+        if (/\]\(\//.test(m.claim)) offenders.push(`${g.slug}: claim`);
+        if (/\]\(\//.test(m.reality)) offenders.push(`${g.slug}: reality`);
+      }
+    }
+    expect(offenders, 'markdown links render as raw syntax in misconceptions').toEqual([]);
+  });
+
+  it('the check is not vacuous — it detects the shape it forbids', () => {
+    expect(/\]\(\//.test('see [the guide](/courts/court-hierarchy) for more')).toBe(true);
+    expect(/\]\(\//.test('a sentence with no link at all')).toBe(false);
+  });
+});
+
 describe('the prosecuting role is kept distinct from policing and adjudication', () => {
   it('states that prosecution is separate from the investigation and from the court', () => {
     const p = prose(guide('why-public-prosecution-exists'));
