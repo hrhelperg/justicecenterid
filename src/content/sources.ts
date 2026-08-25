@@ -3357,6 +3357,94 @@ export const SOURCES: readonly SourceRecord[] = [
     authoritativeLanguage: 'de',
     note: "The authoritative German text of § 153 StPO, read directly. Supports § 153(1): where the proceedings concern a Vergehen, the prosecution \"kann … mit Zustimmung des für die Eröffnung des Hauptverfahrens zuständigen Gerichts von der Verfolgung absehen, wenn die Schuld des Täters als gering anzusehen wäre und kein öffentliches Interesse an der Verfolgung besteht\" — may, with the consent of the court competent to open the main proceedings, refrain from prosecution where the offender's guilt would be regarded as minor and there is no public interest in prosecution; and that the court's consent is not required for a Vergehen not carrying an increased minimum penalty where the consequences caused are minor. Cited for the fact that Germany's legality principle carries express statutory exceptions involving a public-interest judgement, which is why the legality/opportunity distinction is not a binary. It supports no claim about how often the provision is used.",
   },
+
+  /* ---------------------------------------------------------------------- */
+  /* Wave 11 — right to defence and legal representation                     */
+  /* ---------------------------------------------------------------------- */
+
+  {
+    id: 'de-stpo-137-verteidiger',
+    type: 'legislation',
+    title:
+      'Strafprozessordnung (StPO) § 137 — Recht des Beschuldigten auf Hinzuziehung eines Verteidigers',
+    publisher: 'Bundesministerium der Justiz / Bundesamt für Justiz (Gesetze im Internet)',
+    url: 'https://www.gesetze-im-internet.de/stpo/__137.html',
+    verifiedOn: '2026-08-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'DE',
+    translationStatus: 'not-a-translation',
+    authoritativeLanguage: 'de',
+    note: 'The authoritative German text, read directly. Supports § 137(1) verbatim: "Der Beschuldigte kann sich in jeder Lage des Verfahrens des Beistandes eines Verteidigers bedienen" — the accused may avail himself of the assistance of defence counsel AT ANY STAGE of the proceedings — and that the number of chosen counsel may not exceed three. Cited for the existence and timing of the right to counsel in Germany. It says nothing about who pays, nothing about appointment, and nothing about any other country.',
+  },
+  {
+    id: 'de-stpo-140-notwendige-verteidigung',
+    type: 'legislation',
+    title: 'Strafprozessordnung (StPO) § 140 — Notwendige Verteidigung',
+    publisher: 'Bundesministerium der Justiz / Bundesamt für Justiz (Gesetze im Internet)',
+    url: 'https://www.gesetze-im-internet.de/stpo/__140.html',
+    verifiedOn: '2026-08-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'DE',
+    translationStatus: 'not-a-translation',
+    authoritativeLanguage: 'de',
+    note: "The authoritative German text, read directly. Supports that § 140(1) enumerates the situations constituting a case of necessary defence, including where the first-instance trial is expected before the Oberlandesgericht, Landgericht or Schöffengericht; where a Verbrechen is charged; where the proceedings may lead to a professional ban; where the accused is to be brought before a court on detention or provisional placement; where he is held in an institution by judicial order or with judicial permission; where placement for a psychiatric assessment is in question; and further defined cases. Cited for the central comparative fact that the German trigger is the SERIOUSNESS OF THE MATTER AND THE ACCUSED'S SITUATION, not the accused's means. It establishes no means test, and it is not evidence about any other system.",
+  },
+  {
+    id: 'de-stpo-141-pflichtverteidiger',
+    type: 'legislation',
+    title:
+      'Strafprozessordnung (StPO) § 141 — Zeitpunkt der Bestellung eines Pflichtverteidigers',
+    publisher: 'Bundesministerium der Justiz / Bundesamt für Justiz (Gesetze im Internet)',
+    url: 'https://www.gesetze-im-internet.de/stpo/__141.html',
+    verifiedOn: '2026-08-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'DE',
+    translationStatus: 'not-a-translation',
+    authoritativeLanguage: 'de',
+    note: 'The authoritative German text, read directly. Supports § 141(1): in cases of necessary defence, a Pflichtverteidiger is appointed without delay ("unverzüglich") to an accused who has been informed of the allegation and has no counsel, where he expressly requests it after instruction, and the request is to be decided at the latest before any questioning of the accused or confrontation with him. And § 141(2): appointment occurs INDEPENDENTLY OF ANY REQUEST once he is to be brought before a court on detention or provisional placement, once it becomes known he is held in an institution, where it is apparent in the preliminary proceedings that he cannot defend himself, or where he has been called on to respond to the indictment. Cited for the timing and mechanics of APPOINTMENT. The provision concerns appointment, not employment: the appointed defender is a Rechtsanwalt, and nothing here supports describing a Pflichtverteidiger as a state employee or as a public defender in the United States sense.',
+  },
+  {
+    id: 'de-stpo-147-akteneinsicht',
+    type: 'legislation',
+    title:
+      'Strafprozessordnung (StPO) § 147 — Akteneinsichtsrecht, Besichtigungsrecht; Auskunftsrecht des Beschuldigten',
+    publisher: 'Bundesministerium der Justiz / Bundesamt für Justiz (Gesetze im Internet)',
+    url: 'https://www.gesetze-im-internet.de/stpo/__147.html',
+    verifiedOn: '2026-08-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'DE',
+    translationStatus: 'not-a-translation',
+    authoritativeLanguage: 'de',
+    note: 'The authoritative German text, read directly. Supports § 147(1): defence counsel is entitled to inspect the files that are before the court, or that would be submitted to it on the preferment of charges, and to view officially held items of evidence. § 147(2): where the conclusion of the investigation is not yet noted in the files, inspection of the files or parts of them may be REFUSED so far as this may endanger the purpose of the investigation — and where those conditions apply and the accused is in remand detention, or it has been applied for on provisional arrest, the information essential for assessing the lawfulness of the deprivation of liberty must be made accessible in a suitable manner, access to the files being granted as a rule ("in der Regel ist insoweit Akteneinsicht zu gewähren"). Cited for the right, its limit, and the limit on that limit. It supports no claim about how access operates in practice, and none about any other country.',
+  },
+  {
+    id: 'de-stpo-148-verkehr-verteidiger',
+    type: 'legislation',
+    title:
+      'Strafprozessordnung (StPO) § 148 — Kommunikation des Beschuldigten mit dem Verteidiger',
+    publisher: 'Bundesministerium der Justiz / Bundesamt für Justiz (Gesetze im Internet)',
+    url: 'https://www.gesetze-im-internet.de/stpo/__148.html',
+    verifiedOn: '2026-08-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'DE',
+    translationStatus: 'not-a-translation',
+    authoritativeLanguage: 'de',
+    note: 'The authoritative German text, read directly. Supports § 148(1): the accused is permitted written and oral communication with defence counsel, "auch wenn er sich nicht auf freiem Fuß befindet" — even when he is not at liberty. And that § 148(2) creates a narrow exception where a detained accused is strongly suspected of an offence under § 129a StGB (also in conjunction with § 129b(1)), under which a court is to order that documents and other objects be rejected unless the sender agrees to their being first submitted to the court competent under § 148a. Cited for the existence of the right, and for the fact that it is bounded by a statutory exception that is confined to named offences and routed through a court. Deliberately NOT cited for any operational detail of how the exception is administered, and it supports no claim about any other country or about evidentiary privilege, which is a different concept.',
+  },
+  {
+    id: 'fr-service-public-aide-juridictionnelle',
+    type: 'government',
+    title: 'Aide juridictionnelle — conditions et démarches (service-public.fr)',
+    publisher:
+      'Direction de l’information légale et administrative (Premier ministre), service-public.fr',
+    url: 'https://www.service-public.fr/particuliers/vosdroits/F18074',
+    verifiedOn: '2026-08-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'FR',
+    translationStatus: 'not-a-translation',
+    authoritativeLanguage: 'fr',
+    note: 'The French government’s official public-information service, read directly in French. Supports that where a person must assert their rights in court but lacks the financial resources, the State takes charge of "tout ou partie" — all or part — of their legal costs and of their AVOCAT\'S FEES; that aid is granted on three conditions relating to nationality or habitual residence, to the costs not being covered by insurance, and to resources not exceeding the admission ceilings; that the amount varies with the applicant\'s reference tax income and household size; and that the habitual-residence condition does not apply to minors, to beneficiaries of a protection order, or to persons involved in criminal proceedings. Cited for the fact that French publicly funded defence is MEANS-TESTED, GRADUATED, AND PAYS A PRIVATE PRACTITIONER. It does not establish the underlying procedural right to counsel in French criminal procedure, which was not researched, and it supports no claim about any other country. The specific financial ceilings are deliberately not reproduced, as they change.',
+  },
 ];
 
 const SOURCE_INDEX = new Map(SOURCES.map((source) => [source.id, source]));

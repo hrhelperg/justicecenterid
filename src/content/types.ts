@@ -116,6 +116,7 @@ export const SECTION_IDS = [
   'law-enforcement',
   'courts',
   'prosecution',
+  'defence',
   'investigations',
   'forensics',
   'corrections',
@@ -132,6 +133,12 @@ export const SAFETY_SENSITIVE_SECTIONS: readonly SectionId[] = [
   'investigations',
   'forensics',
   'public-safety',
+  /*
+   * Added by Wave 11. The defence cluster's risk profile is the same shape as the others on this
+   * list: material about answering a criminal case is one step from material about evading one.
+   * A safety review is therefore mandatory before anything in `/defence` can publish.
+   */
+  'defence',
 ];
 
 /*

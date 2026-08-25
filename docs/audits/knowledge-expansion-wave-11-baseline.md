@@ -4,16 +4,16 @@ Measured directly from `main` immediately before the Wave 11 branch was cut.
 
 ## Provenance
 
-| Field | Value |
-| --- | --- |
-| Repository | `hrhelperg/justicecenterid` |
-| Base branch | `main` |
-| Base SHA | `2a01b1dcd180886d572e108467916cc3fa16a3eb` |
-| Base commit | Merge pull request #28 from `feat/knowledge-expansion-wave-10` |
-| Working tree at measurement | clean |
-| Wave branch | `feat/knowledge-expansion-wave-11` (local only) |
-| Measured on | 2026-08-26 |
-| Node / npm | v24.15.0 / 11.12.1 |
+| Field                       | Value                                                          |
+| --------------------------- | -------------------------------------------------------------- |
+| Repository                  | `hrhelperg/justicecenterid`                                    |
+| Base branch                 | `main`                                                         |
+| Base SHA                    | `2a01b1dcd180886d572e108467916cc3fa16a3eb`                     |
+| Base commit                 | Merge pull request #28 from `feat/knowledge-expansion-wave-10` |
+| Working tree at measurement | clean                                                          |
+| Wave branch                 | `feat/knowledge-expansion-wave-11` (local only)                |
+| Measured on                 | 2026-08-26                                                     |
+| Node / npm                  | v24.15.0 / 11.12.1                                             |
 
 ## Merge-gate result
 
@@ -36,37 +36,37 @@ section and does not pull it back into `/prosecution`.
 
 ## Build and route metrics
 
-| Metric | Baseline | Command |
-| --- | --- | --- |
-| Routes in registry | 380 | `npm run verify:output` |
-| Exported pages | 382 | `npm run verify:output` |
-| Sitemap URLs | 380 | `npm run verify:output` |
-| HTML files in `out/` | 382 | `find out -name '*.html' \| wc -l` |
+| Metric               | Baseline | Command                            |
+| -------------------- | -------- | ---------------------------------- |
+| Routes in registry   | 380      | `npm run verify:output`            |
+| Exported pages       | 382      | `npm run verify:output`            |
+| Sitemap URLs         | 380      | `npm run verify:output`            |
+| HTML files in `out/` | 382      | `find out -name '*.html' \| wc -l` |
 
 ## Test metrics
 
-| Metric | Baseline | Command |
-| --- | --- | --- |
-| Unit test files | 62 | `npm test` |
-| Unit tests | 3308 | `npm test` |
-| Playwright spec files | 12 | `npx playwright test --list` |
-| Playwright tests | 700 | `npx playwright test --list` |
+| Metric                | Baseline | Command                      |
+| --------------------- | -------- | ---------------------------- |
+| Unit test files       | 62       | `npm test`                   |
+| Unit tests            | 3308     | `npm test`                   |
+| Playwright spec files | 12       | `npx playwright test --list` |
+| Playwright tests      | 700      | `npx playwright test --list` |
 
 ## Content records
 
-| Record type | Baseline | Note |
-| --- | --- | --- |
-| **Defence-related routes** | **0** | no defence section exists |
-| Prosecution routes | 9 | Wave 10 |
-| Courts routes | 10 | Wave 9 |
-| Investigation routes | 7 | Wave 8 |
-| Institution routes | 15 | none is a defence institution |
-| Profession routes | 6 | `corrections-officer`, `detective`, `forensic-scientist`, `judge`, `patrol-officer`, `prosecutor` — **no defence lawyer** |
-| Glossary routes | 5 | `appeal`, `chain-of-custody`, `disclosure`, `judicial-independence`, `judicial-review` |
-| Country dossiers | 32 | |
-| Source records | 250 | |
-| Restricted claims | 10 | |
-| ScheduledChange records | 4 | |
+| Record type                | Baseline | Note                                                                                                                      |
+| -------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------- |
+| **Defence-related routes** | **0**    | no defence section exists                                                                                                 |
+| Prosecution routes         | 9        | Wave 10                                                                                                                   |
+| Courts routes              | 10       | Wave 9                                                                                                                    |
+| Investigation routes       | 7        | Wave 8                                                                                                                    |
+| Institution routes         | 15       | none is a defence institution                                                                                             |
+| Profession routes          | 6        | `corrections-officer`, `detective`, `forensic-scientist`, `judge`, `patrol-officer`, `prosecutor` — **no defence lawyer** |
+| Glossary routes            | 5        | `appeal`, `chain-of-custody`, `disclosure`, `judicial-independence`, `judicial-review`                                    |
+| Country dossiers           | 32       |                                                                                                                           |
+| Source records             | 250      |                                                                                                                           |
+| Restricted claims          | 10       |                                                                                                                           |
+| ScheduledChange records    | 4        |                                                                                                                           |
 
 ### Defence-related sources at baseline
 
@@ -89,12 +89,12 @@ extensibility rather than preference. On that instruction the evidence points el
 
 **Spelling convention.** The corpus is consistently British English:
 
-| Form | Occurrences in `src/content/` |
-| --- | --- |
-| `defence` | **39** |
-| `defense` | 14 — **all of them French proper nouns**: the `fr-code-defense-*` source ids for the *Code de la défense*, and the `defenseurdesdroits.fr` URL. **Zero uses as English prose.** |
-| `organisation` / `organization` | 212 / 36 |
-| `recognised` / `recognized` | 6 / 0 |
+| Form                            | Occurrences in `src/content/`                                                                                                                                                   |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `defence`                       | **39**                                                                                                                                                                          |
+| `defense`                       | 14 — **all of them French proper nouns**: the `fr-code-defense-*` source ids for the _Code de la défense_, and the `defenseurdesdroits.fr` URL. **Zero uses as English prose.** |
+| `organisation` / `organization` | 212 / 36                                                                                                                                                                        |
+| `recognised` / `recognized`     | 6 / 0                                                                                                                                                                           |
 
 `SITE.htmlLang` is the neutral `'en'`, so the locale does not settle it; the prose does.
 
@@ -124,11 +124,11 @@ list**, so a safety review is mandatory before any page in it can publish.
 
 ## Bundle and output size
 
-| Metric | Baseline | Command |
-| --- | --- | --- |
-| JS bytes (`out/_next`) | 663,403 B | `find out/_next -name '*.js' -exec stat -f%z {} +` |
-| CSS bytes (`out/_next`) | 29,625 B | `find out/_next -name '*.css' -exec stat -f%z {} +` |
-| Total `out/` size | 91,268 KB | `du -sk out` (clean rebuild) |
+| Metric                  | Baseline  | Command                                             |
+| ----------------------- | --------- | --------------------------------------------------- |
+| JS bytes (`out/_next`)  | 663,403 B | `find out/_next -name '*.js' -exec stat -f%z {} +`  |
+| CSS bytes (`out/_next`) | 29,625 B  | `find out/_next -name '*.css' -exec stat -f%z {} +` |
+| Total `out/` size       | 91,268 KB | `du -sk out` (clean rebuild)                        |
 
 Wave 11 adds no client runtime, no eligibility tool and no lawyer matching. The JS figure is
 expected to move by zero.

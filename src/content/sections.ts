@@ -175,6 +175,46 @@ export const SECTIONS: readonly SectionDefinition[] = [
     relatedSections: ['courts', 'investigations', 'justice'],
   },
   {
+    id: 'defence',
+    title: 'Defence',
+    shortTitle: 'Defence',
+    summary:
+      'What the right to defend against a criminal accusation means, who may have a lawyer and from when, how representation is paid for, and how those arrangements differ between legal systems.',
+    intro:
+      'This section covers the defence function: the right to answer a criminal case, the right to legal assistance and its limits, the different ways states provide and pay for representation, and what defence counsel may see and say. It explains institutions and rights, not tactics.',
+    keyIdeas: [
+      {
+        title: 'Answering the case is part of the structure, not an obstacle to it',
+        body: 'A system that can accuse but not be answered turns an accusation into a punishment. Defence rights are among the conditions that let a conviction mean something, which is why the same systems that prosecute vigorously also provide for the defence.',
+      },
+      {
+        title: '“Right to counsel” names three different rights',
+        body: 'The right to consult a lawyer, the right to have one appointed, and the right to have the state pay are distinct, and systems grant them separately and on different conditions. A sentence about a universal right to a free lawyer is wrong about most systems.',
+      },
+      {
+        title: 'Publicly funded does not mean publicly employed',
+        body: 'Germany appoints a private Rechtsanwalt; France pays a private avocat’s fees. Only some systems employ their defenders. Court appointment, state funding and state employment are three separate facts about an arrangement.',
+      },
+      {
+        title: 'Defence rights are bounded in the instruments that grant them',
+        body: 'The German code gives defence counsel access to the file and then limits it, and gives the accused communication with counsel and then carves a narrow exception. A claim of absolute privilege or unlimited access contradicts the statute it would cite.',
+      },
+      {
+        title: 'Defence, prosecution and court are three roles in one process',
+        body: 'They are not opposing camps. The prosecution puts the public case, the defence protects the accused person’s legal interests, and the court decides. Each is doing a job the process requires, and none of them is the adversary of justice.',
+      },
+    ],
+    variationNote:
+      'How states provide defence differs more than almost any other part of a justice system, and the vocabulary travels worse than the structures. Brazil’s Defensoria Pública is a permanent constitutional institution whose members may not practise privately; Germany operates a statutory appointment scheme triggered by the seriousness of the case rather than by means; France operates a means-tested funding scheme paying private lawyers. Legal aid, public defence and court appointment are not synonyms.',
+    outOfScope: [
+      'Advice to anyone facing a charge, arrest or investigation',
+      'Defence tactics, including anything about answering questions, evidence, or witnesses',
+      'Guidance that would help a person obstruct, evade or frustrate a lawful process',
+      'Lawyer selection, fees, or any commercial or referral content',
+    ],
+    relatedSections: ['prosecution', 'courts', 'justice'],
+  },
+  {
     id: 'investigations',
     title: 'Investigations',
     shortTitle: 'Investigations',
