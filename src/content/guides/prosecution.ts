@@ -86,7 +86,7 @@ export const PROSECUTION_GUIDES: readonly Guide[] = [
           {
             term: 'Separate from the investigation',
             description:
-              'A team that has spent months building a theory is not well placed to judge whether the theory holds. Placing the decision with someone who did not build it inserts a check between the body that formed a view and the court that will test it — which is the argument the site makes at greater length under [investigation to prosecution](/investigations/investigation-to-prosecution).',
+              'A team that has spent months building a theory is not well placed to judge whether the theory holds. Placing the decision with someone who did not build it inserts a check between the body that formed a view and the court that will test it — which is the argument the site makes at greater length under [investigation to prosecution](/investigations/investigation-to-prosecution). Separate does not mean distant, and in several systems it does not mean uninvolved: German law places legal responsibility for the investigation on the prosecution itself, French law has the police judiciaire exercised under the direction of the procureur, and Japanese prosecutors may investigate an offence themselves. What is separated is the decision to charge from the work of building the case, and how far apart those sit is a national choice.',
           },
           {
             term: 'Separate from the person harmed',

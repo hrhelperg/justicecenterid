@@ -256,6 +256,37 @@ describe('the prosecuting role is kept distinct from policing and adjudication',
     expect(hit?.reality).toMatch(/according to law|decide whether/i);
   });
 
+  it('never claims prosecutors do not investigate', () => {
+    /*
+     * Forced by mutation proof M6, which applied cleanly and did not fail — the suite had no
+     * guard here. Wave 8 established from primary sources that German law places legal
+     * responsibility for the investigation on the prosecution (§ 160 StPO), that French law has
+     * the police judiciaire exercised under the direction of the procureur (CPP Art. 12), and
+     * that a Japanese public prosecutor may investigate an offence himself. A prosecution
+     * cluster implying investigation is always someone else's work would contradict the site's
+     * own sourced material.
+     */
+    for (const pattern of [
+      /prosecutors? never investigate/i,
+      /investigation is always the work of the police/i,
+      /prosecutors? do not investigate/i,
+      /prosecutors? are not involved in (?:the )?investigation/i,
+    ]) {
+      expect(ALL_ASSERTED, `denies prosecutorial investigation: ${pattern}`).not.toMatch(
+        pattern,
+      );
+    }
+  });
+
+  it('positively acknowledges that prosecutors direct or conduct investigations somewhere', () => {
+    const p = prose(guide('why-public-prosecution-exists'));
+    expect(p).toMatch(
+      /legal responsibility for the investigation on the prosecution|under the direction of the procureur|may investigate an offence themselves/i,
+    );
+    /* And hands the subject to the wave that owns it rather than restating it. */
+    expect(ALL_PROSE).toContain('/investigations/police-vs-prosecutor-investigation');
+  });
+
   it('never describes prosecutors as working for the police', () => {
     expect(ALL_ASSERTED).not.toMatch(/prosecutors? work for the police/i);
   });
