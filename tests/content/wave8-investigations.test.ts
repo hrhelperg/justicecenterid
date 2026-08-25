@@ -694,7 +694,9 @@ describe('the cluster is connected without link spam', () => {
 
   it('does not spam links — no page repeats the same internal target excessively', () => {
     for (const slug of WAVE_8) {
-      const links = [...prose(guide(slug)).matchAll(/\]\((\/[a-z0-9/-]+)\)/g)].map((m) => m[1]);
+      const links = [...prose(guide(slug)).matchAll(/\]\((\/[a-z0-9/-]+)\)/g)]
+        .map((m) => m[1])
+        .filter((target): target is string => Boolean(target));
       const counts = new Map<string, number>();
       for (const l of links) counts.set(l, (counts.get(l) ?? 0) + 1);
       for (const [target, n] of counts) {
