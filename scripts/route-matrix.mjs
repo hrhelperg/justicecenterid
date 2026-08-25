@@ -169,6 +169,28 @@ const MUST_404 = [
   '/institutions/appellate-court',
   '/institutions/court-of-cassation',
   '/institutions/administrative-court',
+  // Wave 10: prosecution candidates merged, deferred or rejected in
+  // docs/seo/knowledge-expansion-wave-10-cannibalization.md. The profession route and the
+  // glossary own the role and the terms; Wave 8 owns investigative control; and no prosecution
+  // institution family survived the recurrence test.
+  '/prosecution/public-prosecutor-explained',
+  '/prosecution/prosecutor-vs-police',
+  '/prosecution/prosecutor-vs-judge',
+  '/prosecution/prosecution-vs-investigation',
+  '/prosecution/federal-vs-state-prosecution',
+  '/prosecution/hierarchical-prosecution-systems',
+  '/prosecution/prosecutorial-ethics',
+  '/prosecution/prosecutorial-immunity',
+  '/prosecution/private-prosecution',
+  '/prosecution/special-prosecutors',
+  '/prosecution/prosecutors-and-plea-agreements',
+  '/prosecution/decision-not-to-prosecute',
+  '/institutions/public-prosecution-service',
+  '/institutions/director-of-public-prosecutions',
+  '/institutions/prosecutor-general-office',
+  '/institutions/special-prosecutor',
+  // A parallel prosecution taxonomy was considered and rejected; the existing hub is used.
+  '/prosecutors',
   // A parallel courts taxonomy was considered and rejected; the existing hub is used.
   '/judiciary',
   // A parallel investigation taxonomy was considered and rejected; the existing hub is used.
