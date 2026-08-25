@@ -1090,7 +1090,17 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
       'police-use-of-force',
       'police-and-law-enforcement-difference',
     ],
-    sources: ['unodc-e4j-police-accountability', 'udhr', 'unodc-cpcj'],
+    sources: [
+      'unodc-e4j-police-accountability',
+      'udhr',
+      'unodc-cpcj',
+      'nz-ipca-legislative-functions',
+      'za-ipid-act-gazette',
+      'ke-ipoa-act-cap86',
+      'ke-nps-act-cap84-iau',
+      'no-pataleinstruksen-kap34',
+      'ie-pscsa-2024-act',
+    ],
     status: 'published',
     review: 'fact-checked',
     safetyReview: 'cleared',
@@ -1246,6 +1256,37 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
         variant: 'analysis',
         title: 'Our reading',
         text: 'Debate about police oversight tends to concentrate on independence, as though independence alone determined whether a mechanism works. Powers matter at least as much: an independent body that can only review a file the police assembled is differently constrained from an internal unit that can compel testimony and seize records. Both facts belong in any honest description, and a system is best judged on the combination rather than on the label.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'One question recurs often enough to be worth answering directly: who actually disciplines a police officer? Across the oversight bodies researched for this cluster, the answer is almost never the oversight body.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'The police hierarchy decides, in nearly every case',
+            description:
+              'New Zealand’s Independent Police Conduct Authority is denied the power to take disciplinary action by section 27 of its Act. Kenya’s Independent Policing Oversight Authority recommends disciplinary action. Ireland’s Fiosrú refers. Norway’s bureau sends a case to the officer’s own commander where it calls for an administrative response. Four external bodies, four referrals.',
+          },
+          {
+            term: 'A duty to act is not a power to decide',
+            description:
+              'South Africa comes closest to an exception and is the case worth stating precisely. Under section 30 of the Independent Police Investigative Directorate Act, the Commissioner who receives a disciplinary recommendation must initiate proceedings within 30 days and report quarterly to the Minister. The Directorate can compel the process to start. It cannot determine the outcome.',
+          },
+          {
+            term: 'The one conditional exception found is internal',
+            description:
+              'Kenya’s Internal Affairs Unit, established by section 87 of the National Police Service Act, recommends disciplinary action to the Inspector-General — and the Inspector-General may in exceptional cases authorise the Unit to conduct disciplinary proceedings itself. An internal unit, acting on the head of service’s authority.',
+          },
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Why oversight bodies usually cannot discipline',
+        text: 'Discipline is an employer’s power over an employee, exercised under the employment relationship. A body outside the organisation has no such relationship, so giving it a disciplinary power would mean giving an external body authority over another organisation’s staff. Most systems have chosen instead to give it the power to establish facts and to require the employer to respond. Whether that is sufficient is a real question; this page does not answer it.',
       },
     ],
     furtherReading: [

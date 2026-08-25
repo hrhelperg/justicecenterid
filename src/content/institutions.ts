@@ -706,6 +706,7 @@ export const INSTITUTION_TYPES: readonly InstitutionType[] = [
       'That being outside the police makes a body independent. Position and independence are different claims; independence rests on statutory basis, appointment, removal and budget.',
       'With a general ombuds or rights institution, whose mandate covers public administration broadly rather than police specifically.',
       'That every country has one. Several do not, and route complaints through commissions, courts or the police themselves.',
+      'With a body whose mandate is criminal only. Norway’s and Czechia’s bodies investigate offences by officers and take no conduct complaints — the first by a statutory duty to reject them, the second because its Act provides for none. Those belong to a different family.',
     ],
     governanceNote:
       'Statutory basis is what distinguishes these bodies from an internal unit with an external-sounding name. New Zealand’s Independent Police Conduct Authority was set up by Parliament in 1989 and states that it is not part of the New Zealand Police and is fully independent under law; South Africa’s Independent Police Investigative Directorate was created by Act 1 of 2011; Czechia’s General Inspection of Security Forces rests on Act No. 341/2011 Coll.; Denmark’s Police Complaints Authority was enacted in 2010 and became operational in 2012, with its council chaired by a High Court judge and standing independent of both the police and the prosecution service.',
@@ -718,23 +719,23 @@ export const INSTITUTION_TYPES: readonly InstitutionType[] = [
     countryExamples: [
       {
         countrySlug: 'new-zealand',
-        note: 'The Independent Police Conduct Authority was established by Parliament in 1989 and states that it is not part of the New Zealand Police and is fully independent under law. It receives and investigates complaints against the Police — the clearest statutory statement of external position on this page.',
+        note: 'The Independent Police Conduct Authority was established by Parliament in 1989, is an Independent Crown Entity accountable only to Parliament, and states that it is not part of the New Zealand Police and is fully independent under law. Under section 12 it receives complaints of misconduct or neglect of duty and complaints about police practice, policy or procedure, and investigates incidents causing death or serious bodily harm; under sections 27 and 28 it must determine whether police conduct was unlawful, unreasonable, unjustified, unfair or undesirable — and section 27 denies it the power to lay criminal charges or take disciplinary action. The clearest statutory statement of external position on this page, and a clear statement of its limits in the same Act.',
       },
       {
         countrySlug: 'south-africa',
-        note: 'The Independent Police Investigative Directorate, created by Act 1 of 2011, investigates a defined list of serious matters: deaths in custody or as a result of police action, discharge of official firearms, and allegations of torture, assault or corruption. A powerful body with a deliberately bounded remit.',
+        note: 'The Independent Police Investigative Directorate, created by Act 1 of 2011, investigates a defined list under section 28(1): deaths in custody, deaths as a result of police action, discharge of an official firearm, rape by an officer or of a person in custody, torture or assault in the execution of duty, and corruption within the police. Section 35(6)(b) sends ordinary service complaints about the police to the police service instead. A powerful body with a deliberately bounded remit, and not the destination for every complaint against the police.',
       },
       {
         countrySlug: 'norway',
-        note: 'The Norwegian Bureau for the Investigation of Police Affairs is a national investigation and prosecution agency for cases where police or prosecuting-authority employees are suspected of criminal offences in the course of duty — investigation and prosecution in one body, outside the ordinary police and prosecution chain.',
+        note: 'A body that belongs on this page only as a limit to it. The Norwegian Bureau for the Investigation of Police Affairs investigates and prosecutes criminal offences committed in the course of duty by police and prosecuting-authority employees — and chapter 34 of the prosecution instruction requires its chief to REJECT a report falling outside that, expressly including one where the reported matter is not criminal. It is not a complaints body, and is covered by [independent police investigative bodies](/institutions/independent-police-investigative-body).',
       },
       {
         countrySlug: 'czechia',
-        note: 'The General Inspection of Security Forces, under Act No. 341/2011 Coll., investigates suspected crimes by officers of the Police, the Prison Service and the Customs Administration, and opens their criminal prosecutions — a reminder that these bodies are not always police-only.',
+        note: 'The other limit. The General Inspection of Security Forces investigates suspected crimes by officers of the Police, the Prison Service and the Customs Administration — and Act No. 341/2011 Coll. contains no complaint procedure for those forces at all. A member of the public may alert it to an officer’s conduct only where that conduct amounts to a criminal offence. It is an [independent police investigative body](/institutions/independent-police-investigative-body), and it is not police-only.',
       },
       {
         countrySlug: 'denmark',
-        note: 'The Police Complaints Authority, enacted in 2010 and operational from 2012, investigates criminal cases against police and prosecution personnel, handles conduct complaints, and investigates deaths and serious injuries during police interventions or in custody. It is independent of both the police and the prosecution service, and its council is chaired by a High Court judge.',
+        note: 'Den Uafhængige Politiklagemyndighed, whose own English name is the Police Complaints Authority, holds both mandates at once: it handles conduct complaint cases AND investigates criminal cases against police and prosecution personnel, and it opens investigations where a person dies or is seriously injured in a police intervention or in custody. It is independent of both the police and the prosecution service, and its governing council is chaired by a High Court judge. It appears on this page and on [independent police investigative bodies](/institutions/independent-police-investigative-body) because it genuinely does both.',
       },
       {
         countrySlug: 'ireland',
@@ -753,6 +754,7 @@ export const INSTITUTION_TYPES: readonly InstitutionType[] = [
     ],
     relatedProfessions: ['patrol-officer'],
     relatedInstitutions: [
+      'independent-police-investigative-body',
       'ombuds-and-rights-institution',
       'national-police',
       'prosecution-service',
@@ -769,6 +771,12 @@ export const INSTITUTION_TYPES: readonly InstitutionType[] = [
       'cz-gibs',
       'dk-police-complaints',
       'ie-fiosru',
+      'ie-pscsa-2024-act',
+      'nz-ipca-legislative-functions',
+      'za-ipid-act-gazette',
+      'no-pataleinstruksen-kap34',
+      'cz-act-341-2011-consolidated',
+      'dk-politiklagemyndighed-about',
       'ng-constitution',
       'fr-decret-2013-784-igpn',
       'fr-code-defense-iggn',
@@ -777,9 +785,9 @@ export const INSTITUTION_TYPES: readonly InstitutionType[] = [
     ],
     status: 'published',
     review: 'fact-checked',
-    updatedOn: '2026-08-10',
-    reviewedOn: '2026-08-10',
-    factsVerifiedOn: '2026-08-10',
+    updatedOn: '2026-08-25',
+    reviewedOn: '2026-08-25',
+    factsVerifiedOn: '2026-08-25',
   },
   {
     slug: 'independent-police-investigative-body',
