@@ -57,22 +57,22 @@ added to the existing page instead.
 
 ---
 
-## 3. Police inspectorate — **FALSE EQUIVALENCE. DEFER.** *(Wave 6's open question, now answered)*
+## 3. Police inspectorate — **FALSE EQUIVALENCE. DEFER.** _(Wave 6's open question, now answered)_
 
 Wave 6 asked whether the internal and external forms are one type or two, and made the answer the
 condition for reopening the page. The answer from Wave 7 evidence is **two**, and they are not
 close.
 
-| | Internal form | External form |
-| --- | --- | --- |
-| Instances | IGPN, IGGN (FR) | PCSA Chapter 4 (IE); IPOA § 6(e) (KE) |
-| Belongs to | The force's own director general | Parliament / statute |
-| Investigates individuals | Yes — including criminal investigation | No |
-| Inspects the organisation | Yes | Yes |
-| Can be directed by the force | Yes | No |
+|                              | Internal form                          | External form                         |
+| ---------------------------- | -------------------------------------- | ------------------------------------- |
+| Instances                    | IGPN, IGGN (FR)                        | PCSA Chapter 4 (IE); IPOA § 6(e) (KE) |
+| Belongs to                   | The force's own director general       | Parliament / statute                  |
+| Investigates individuals     | Yes — including criminal investigation | No                                    |
+| Inspects the organisation    | Yes                                    | Yes                                   |
+| Can be directed by the force | Yes                                    | No                                    |
 
 The only column they share is "inspects the organisation". On every other axis they are
-opposites. A single page called *police inspectorate* would have to state that an inspectorate
+opposites. A single page called _police inspectorate_ would have to state that an inspectorate
 both is and is not part of the police, both does and does not investigate officers — which is not
 a description of an institution family but of a word.
 
@@ -93,8 +93,8 @@ functions, its own reporting line to the Inspector-General, and a statutory clau
 from the operational commands.
 
 That is one jurisdiction. The functionally equivalent bodies elsewhere are not called this and
-should not be renamed to fit: Sweden's is an *Avdelningen för särskilda utredningar*, France's are
-*inspections générales*. Calling all three "internal affairs" would be the same error as calling
+should not be renamed to fit: Sweden's is an _Avdelningen för särskilda utredningar_, France's are
+_inspections générales_. Calling all three "internal affairs" would be the same error as calling
 Denmark's authority a conduct authority.
 
 So the position has moved without the verdict changing. Wave 6 deferred this because no sourced
@@ -125,7 +125,7 @@ commissioner rather than a board or authority) was not established anywhere in t
 
 No instance in the researched set. The bodies that are civilian in composition — Kenya, New
 Zealand, Ireland, South Africa — are investigative authorities, not review boards, and they
-investigate rather than review the police's own investigations. Kenya's § 6(d) *audit* of the
+investigate rather than review the police's own investigations. Kenya's § 6(d) _audit_ of the
 Internal Affairs Unit is the closest thing found, and it is a function of an investigative
 authority.
 
@@ -134,7 +134,7 @@ authority.
 ## 8. Police ombudsman — **MERGE INTO EXISTING.**
 
 Ireland's Fiosrú is the Office of the Police Ombudsman, and it is the only instance established in
-this wave. The ombuds *form* is already covered by `ombuds-and-rights-institution`, and the
+this wave. The ombuds _form_ is already covered by `ombuds-and-rights-institution`, and the
 police-specific complaint function by `independent-police-complaints-body`. A third page between
 them would divide the same material three ways.
 
@@ -146,14 +146,14 @@ them would divide the same material three ways.
 
 No researched jurisdiction has a body of this name, and the brief's warning was well aimed: the
 phrase is convenient for taxonomy precisely because it is vague enough to cover anything.
-Applying it as a *translation* of a body whose own name means something else would manufacture an
+Applying it as a _translation_ of a body whose own name means something else would manufacture an
 institution. Nothing in this wave is rendered with this label.
 
 ---
 
 ## 10. External police oversight authority — **REJECT AS A ROUTE.**
 
-The category is real but it is a *position*, not an institution family. Its members are the
+The category is real but it is a _position_, not an institution family. Its members are the
 complaints bodies, the investigative bodies, the ombuds institutions, the prosecutors and the
 courts — four of which already have pages. A page under this name would be a container whose
 contents are all published elsewhere, and its only distinctive claim — that being external does
@@ -166,32 +166,32 @@ not make a body independent — is a conceptual point that belongs in a guide.
 
 ## Result
 
-| Candidate | Wave 6 | Wave 7 | Basis |
-| --- | --- | --- | --- |
-| Independent police investigative body | not assessed | **SUPPORTED — published** | 6 jurisdictions; 2 with a criminal-only mandate |
-| Police conduct authority | not assessed | **MERGE** | Function recurs, name does not |
-| Police inspectorate | DEFER | **FALSE EQUIVALENCE — DEFER** | Internal and external forms are two types |
-| Internal affairs | DEFER | **DEFER** | One sourced instance, under one country's label |
-| Professional standards unit | DEFER | **DEFER** | No instance |
-| Police complaints commissioner | not assessed | **INSUFFICIENT RECURRENCE** | No instance |
-| Civilian police review board | not assessed | **INSUFFICIENT RECURRENCE** | No instance |
-| Police ombudsman | not assessed | **MERGE** | One instance; form already covered |
-| Police integrity commission | DEFER | **REJECT** | Invented label |
-| External police oversight authority | not assessed | **REJECT as route** | A position, not a family |
+| Candidate                             | Wave 6       | Wave 7                        | Basis                                           |
+| ------------------------------------- | ------------ | ----------------------------- | ----------------------------------------------- |
+| Independent police investigative body | not assessed | **SUPPORTED — published**     | 6 jurisdictions; 2 with a criminal-only mandate |
+| Police conduct authority              | not assessed | **MERGE**                     | Function recurs, name does not                  |
+| Police inspectorate                   | DEFER        | **FALSE EQUIVALENCE — DEFER** | Internal and external forms are two types       |
+| Internal affairs                      | DEFER        | **DEFER**                     | One sourced instance, under one country's label |
+| Professional standards unit           | DEFER        | **DEFER**                     | No instance                                     |
+| Police complaints commissioner        | not assessed | **INSUFFICIENT RECURRENCE**   | No instance                                     |
+| Civilian police review board          | not assessed | **INSUFFICIENT RECURRENCE**   | No instance                                     |
+| Police ombudsman                      | not assessed | **MERGE**                     | One instance; form already covered              |
+| Police integrity commission           | DEFER        | **REJECT**                    | Invented label                                  |
+| External police oversight authority   | not assessed | **REJECT as route**           | A position, not a family                        |
 
 ## Guides
 
-| Candidate | Decision | Basis |
-| --- | --- | --- |
-| `internal-vs-external-police-oversight` | **PUBLISH** | Sweden's and Kenya's statutory insulation clauses, plus France's inversion, make "external = independent" demonstrably false |
-| `police-complaints-vs-criminal-investigation` | **PUBLISH** | Norway § 34-5 and the Czech Act prove the stages are separable, not merely distinguishable |
-| `who-disciplines-police` | **MERGE** into `how-police-are-held-to-account` | That guide already states that the disciplinary question belongs to the organisation; the new evidence enriches it rather than justifying a second page |
-| `independent-police-investigations` | **REJECT** | `who-investigates-police` already covers internal units, external bodies, prosecutors and investigate-and-prosecute bodies |
+| Candidate                                     | Decision                                        | Basis                                                                                                                                                   |
+| --------------------------------------------- | ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `internal-vs-external-police-oversight`       | **PUBLISH**                                     | Sweden's and Kenya's statutory insulation clauses, plus France's inversion, make "external = independent" demonstrably false                            |
+| `police-complaints-vs-criminal-investigation` | **PUBLISH**                                     | Norway § 34-5 and the Czech Act prove the stages are separable, not merely distinguishable                                                              |
+| `who-disciplines-police`                      | **MERGE** into `how-police-are-held-to-account` | That guide already states that the disciplinary question belongs to the organisation; the new evidence enriches it rather than justifying a second page |
+| `independent-police-investigations`           | **REJECT**                                      | `who-investigates-police` already covers internal units, external bodies, prosecutors and investigate-and-prosecute bodies                              |
 
 ## Where a future wave should look
 
 To reopen **external police inspectorate** as a type, a wave needs at least two bodies whose
-*type* is inspection — not two bodies that hold an inspection power among others. Ireland's PCSA
+_type_ is inspection — not two bodies that hold an inspection power among others. Ireland's PCSA
 is one. Scotland's HMICS and England and Wales's HMICFRS were not researched here and are the
 obvious next candidates; neither is named as evidence until read.
 

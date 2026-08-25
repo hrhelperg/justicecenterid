@@ -1694,12 +1694,12 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
       {
         claim: 'If a body is independent, it can investigate any complaint about the police.',
         reality:
-          'Two of the most independent bodies in this cluster cannot. Norway’s must reject a report disclosing no offence, and Czechia’s Act contains no complaint procedure for the forces it investigates.',
+          'Two bodies in this cluster that sit wholly outside the police cannot. Norway’s must reject a report disclosing no offence, and Czechia’s Act contains no complaint procedure for the forces it investigates.',
       },
       {
         claim: 'An investigation that finds wrongdoing leads to a prosecution.',
         reality:
-          'In most systems the investigating body refers the file to a prosecutor who decides independently. Kenya’s Authority may require the Director of Public Prosecutions to respond to its recommendation, which is a duty to answer, not a duty to charge.',
+          'In most systems the investigating body refers the file to a prosecutor, who takes the charging decision. Kenya’s Authority may require the Director of Public Prosecutions to respond to its recommendation, which is a duty to answer, not a duty to charge.',
       },
       {
         claim: 'Oversight bodies discipline officers.',

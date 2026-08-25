@@ -814,7 +814,7 @@ export const INSTITUTION_TYPES: readonly InstitutionType[] = [
     commonConfusions: [
       'That this is the same thing as a police complaints body. Some systems combine them; Norway and Czechia do not, and both are required to turn away matters that disclose no criminal offence.',
       'That such a body can discipline the officers it investigates. None of the bodies researched for this page can. Discipline runs through the police hierarchy, sometimes under a statutory duty to act on a recommendation.',
-      'That investigating crime implies prosecuting it. One of the bodies here prosecutes; the rest must refer to a prosecution service that decides independently of them.',
+      'That investigating crime implies prosecuting it. One of the bodies here prosecutes; the rest must refer to a prosecution service, which takes the charging decision itself.',
       'That the remit is always police-only. Czechia’s body covers the police, the customs administration and the prison service alike.',
     ],
     governanceNote:

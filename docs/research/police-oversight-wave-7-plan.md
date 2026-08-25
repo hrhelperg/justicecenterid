@@ -42,18 +42,18 @@ Ten were mandated. All ten were researched. France was carried forward from Wave
 re-researched, because Wave 6 established its four bodies from Légifrance and re-deriving them
 would be recreating prior work.
 
-| Jurisdiction | Bodies researched | Tier-1 instrument reached |
-| --- | --- | --- |
-| France | IGPN, IGGN, Défenseur des droits, CGLPL | Yes (Wave 6 — décret, Code de la défense, organic law) |
-| Ireland | Fiosrú, Policing and Community Safety Authority; historical GSOC, Policing Authority, Garda Síochána Inspectorate | Yes — Policing, Security and Community Safety Act 2024 |
-| South Africa | IPID | Yes — IPID Act 1 of 2011, Government Gazette No. 34298 |
-| Kenya | IPOA, Internal Affairs Unit | Yes — IPOA Act Cap. 86; National Police Service Act Cap. 84 s. 87 |
-| Czechia | GIBS | Yes — Act No. 341/2011 Coll., consolidated |
-| Norway | Spesialenheten for politisaker | Yes — påtaleinstruksen ch. 34 |
-| New Zealand | IPCA | Partial — the Authority's own statement of its functions by section; legislation.govt.nz refused automated requests |
-| Denmark | Den Uafhængige Politiklagemyndighed | Partial — the Authority's own English statement of jurisdiction and legal basis |
-| Sweden | Avdelningen för särskilda utredningar (SU), Särskilda åklagarkammaren | Partial — Polismyndigheten's own statement, in Swedish |
-| Austria | Volksanwaltschaft | Yes (already in corpus — B-VG Art. 148a via RIS) |
+| Jurisdiction | Bodies researched                                                                                                 | Tier-1 instrument reached                                                                                           |
+| ------------ | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| France       | IGPN, IGGN, Défenseur des droits, CGLPL                                                                           | Yes (Wave 6 — décret, Code de la défense, organic law)                                                              |
+| Ireland      | Fiosrú, Policing and Community Safety Authority; historical GSOC, Policing Authority, Garda Síochána Inspectorate | Yes — Policing, Security and Community Safety Act 2024                                                              |
+| South Africa | IPID                                                                                                              | Yes — IPID Act 1 of 2011, Government Gazette No. 34298                                                              |
+| Kenya        | IPOA, Internal Affairs Unit                                                                                       | Yes — IPOA Act Cap. 86; National Police Service Act Cap. 84 s. 87                                                   |
+| Czechia      | GIBS                                                                                                              | Yes — Act No. 341/2011 Coll., consolidated                                                                          |
+| Norway       | Spesialenheten for politisaker                                                                                    | Yes — påtaleinstruksen ch. 34                                                                                       |
+| New Zealand  | IPCA                                                                                                              | Partial — the Authority's own statement of its functions by section; legislation.govt.nz refused automated requests |
+| Denmark      | Den Uafhængige Politiklagemyndighed                                                                               | Partial — the Authority's own English statement of jurisdiction and legal basis                                     |
+| Sweden       | Avdelningen för särskilda utredningar (SU), Särskilda åklagarkammaren                                             | Partial — Polismyndigheten's own statement, in Swedish                                                              |
+| Austria      | Volksanwaltschaft                                                                                                 | Yes (already in corpus — B-VG Art. 148a via RIS)                                                                    |
 
 ## What the wave was watching for
 

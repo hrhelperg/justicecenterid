@@ -3197,7 +3197,8 @@ export const SOURCES: readonly SourceRecord[] = [
   {
     id: 'ke-nps-act-cap84-iau',
     type: 'legislation',
-    title: 'National Police Service Act (Cap. 84), Laws of Kenya — section 87, Internal Affairs Unit',
+    title:
+      'National Police Service Act (Cap. 84), Laws of Kenya — section 87, Internal Affairs Unit',
     publisher: 'National Council for Law Reporting (Kenya Law)',
     url: 'https://new.kenyalaw.org/akn/ke/act/2011/11a/eng@2023-09-15',
     publishedOn: '2011',

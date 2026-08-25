@@ -12,7 +12,7 @@ negative finding.
 version in force from 15 August 2025.
 
 - **§ 34-1.** In cases concerning whether an employee of the police or the prosecuting authority
-  has committed a criminal act *in the course of duty*, the investigation "skal … foretas og
+  has committed a criminal act _in the course of duty_, the investigation "skal … foretas og
   ledes av et eget sentralt organ, Spesialenheten for politisaker". The unit is a "riksdekkende
   etterforskings- og påtalemyndighet" — a nationwide investigating **and prosecuting** authority.
 - **§ 34-1.** Persons employed or holding office in the unit may not simultaneously be employed
@@ -22,7 +22,7 @@ version in force from 15 August 2025.
 - **§ 34-3.** The Chief decides the prosecution question except where it belongs to the
   riksadvokaten. Where the unit brings an indictment, the case in court is conducted by the
   Chief, the assistant chief, or another member holding a law degree. **It prosecutes.**
-- **§ 34-5.** Reports are of a *criminal act* (anmeldelse). The Chief **must reject** cases
+- **§ 34-5.** Reports are of a _criminal act_ (anmeldelse). The Chief **must reject** cases
   falling outside the unit's subject-matter competence, "for eksempel fordi det anmeldte forhold
   ikke er straffbart" — for example because the reported matter is not criminal. **A conduct
   complaint that alleges no offence is not this body's business.**
@@ -59,8 +59,8 @@ version in force from 15 August 2025.
 - **§ 10, § 11, §§ 23–27.** It may restrict personal liberty, detain, and use coercive means and
   weapons — police powers, exercised by an inspection with police-type authority.
 - **Complaints.** The Act contains no complaint procedure. It provides instead that anyone may
-  **alert** (upozornit) the inspection to shortcomings in its own activity, to conduct by *its
-  own* members amounting to a criminal, administrative **or disciplinary** offence, or to conduct
+  **alert** (upozornit) the inspection to shortcomings in its own activity, to conduct by _its
+  own_ members amounting to a criminal, administrative **or disciplinary** offence, or to conduct
   by a member of another security force amounting to a **criminal offence only**. GIBS must
   accept the alert and inform the person within 30 days. The asymmetry is in the statute: a
   non-criminal complaint about a police officer is not within it.
@@ -259,8 +259,8 @@ why "the Irish police inspectorate" no longer names a body that exists.
 **Instrument:** Polismyndigheten's own statement of the department's position, in Swedish.
 
 - **Avdelningen för särskilda utredningar (SU)** is "en **oberoende avdelning inom
-  Polismyndigheten**, avskild från övrig polisverksamhet" — an *independent department inside the
-  Police Authority*, separated from other police activity.
+  Polismyndigheten**, avskild från övrig polisverksamhet" — an _independent department inside the
+  Police Authority_, separated from other police activity.
 - It investigates suspected crimes by, among others, police employees, police students, **judges
   and prosecutors**.
 - "det är alltid en åklagare vid **Särskilda åklagarkammaren**, SÅK, som är
@@ -272,7 +272,7 @@ Sweden has no standalone external police-oversight body. The function is split b
 ring-fenced department inside the police and a specialised chamber inside the prosecution
 service. Sweden is the counterexample that stops the dedicated-body taxonomy being stated as a
 rule — and the phrase "oberoende avdelning **inom** Polismyndigheten" is the clearest evidence in
-the wave that *independent* and *external* are different claims.
+the wave that _independent_ and _external_ are different claims.
 
 ---
 
