@@ -554,7 +554,7 @@ export const PUBLIC_SAFETY_GUIDES: Guide[] = [
       {
         claim: 'The police are in charge of emergencies.',
         reality:
-          'Only where a statute says so, and even then conditionally. Norway’s § 27 gives the police the lead unless another authority is charged with it and until another takes over; in Czechia’s integrated system the police are the fourth of four basic components.',
+          'Not as a general rule, and not unconditionally where they do hold the lead. Norway’s § 27 gives the police the lead unless another authority is charged with it and until another takes over; in Czechia’s integrated system the police are the fourth of four basic components.',
       },
       {
         claim: 'When soldiers arrive at a disaster, they take over.',
