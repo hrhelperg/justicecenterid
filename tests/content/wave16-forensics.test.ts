@@ -270,6 +270,43 @@ describe('no page teaches how to defeat a forensic process', () => {
     }
   });
 
+  /*
+   * Both halves of the direction check, exercised separately.
+   *
+   * Forced by mutation proof W16-M2, which disabled `negatedForwards` entirely and the suite
+   * still passed: all three planted disclaimers happened to carry disclaimer vocabulary, so the
+   * `disclaims` half was catching every one and the negation half was never exercised. An
+   * untested branch of a safety guard is an unproven branch.
+   */
+  it('clears a refusal that negates forwards but uses no disclaimer vocabulary', () => {
+    const sentence =
+      'Nothing in this section explains how to wipe a device before examination.';
+    const matches = ANTI_FORENSIC_TOPICS.filter((p) =>
+      new RegExp(p.source, 'i').test(sentence),
+    );
+    expect(matches.length, 'the sentence does not exercise any topic pattern').toBeGreaterThan(
+      0,
+    );
+    expect(
+      matches.some((p) => isOperationalInstruction(sentence, p)),
+      'a forward negation did not clear the sentence, so that half of the check is inert',
+    ).toBe(false);
+  });
+
+  it('clears a refusal that uses disclaimer vocabulary but no forward negation', () => {
+    const sentence = 'How to contaminate the scene is out of scope for this platform.';
+    const matches = ANTI_FORENSIC_TOPICS.filter((p) =>
+      new RegExp(p.source, 'i').test(sentence),
+    );
+    expect(matches.length, 'the sentence does not exercise any topic pattern').toBeGreaterThan(
+      0,
+    );
+    expect(
+      matches.some((p) => isOperationalInstruction(sentence, p)),
+      'disclaimer vocabulary did not clear the sentence, so that half of the check is inert',
+    ).toBe(false);
+  });
+
   it('is not vacuous — the disclaimers really do match the topic patterns', () => {
     const disclaimer =
       'Nothing here describes how to contaminate the scene or defeat a chain-of-custody record.';
@@ -484,9 +521,22 @@ describe('the terminology differences are preserved', () => {
     }
   });
 
-  it('says why no forensic-laboratory institution record follows', () => {
+  /*
+   * Both halves of the reason, required together.
+   *
+   * Forced by mutation proof W16-M10, which inverted "These are not two designs of one
+   * institution" into "These ARE two designs of one institution" and the suite passed: the
+   * assertion accepted either phrase, so deleting one left the other matching — and the page was
+   * left contradicting itself inside a single callout. A reason with two limbs needs both.
+   */
+  it('says why no forensic-laboratory institution record follows, in both limbs', () => {
     const text = prose(guide('what-forensic-laboratories-do'));
-    expect(text).toMatch(/no "?forensic laboratory"? institution page|not two designs of one/i);
+    expect(text, 'the page no longer says the arrangements are not one institution').toMatch(
+      /not two designs of one institution/i,
+    );
+    expect(text, 'the page no longer says that no institution record follows').toMatch(
+      /publishes no "?forensic laboratory"? institution page/i,
+    );
   });
 });
 
