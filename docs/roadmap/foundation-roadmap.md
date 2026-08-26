@@ -1339,7 +1339,7 @@ Details in `docs/research/knowledge-expansion-wave-20-qa.md`.
   Portuguese constitutional quotation no record carried, Czech excerpts stored with their
   diacritics stripped, and a quotation that had silently dropped a word — and no scope sentence
   may understate its own page's coverage.
-- Validation: 6152 tests / 76 files; 928 Playwright tests / 14 specs; **462 routes**, 464 pages,
+- Validation: 6152 tests / 75 files; 924 Playwright tests passing and 4 skipped across 14 specs; **462 routes**, 464 pages,
   462 sitemap URLs; 325 sources; 0 orphans, 0 weakly linked, 0 dead ends. **10/10 mutation proofs
   valid**, two of them on a second run. Adversarial QA: 52 findings and 35 refutations across
   twenty lenses, every P0 and P1 independently reproduced before being acted on.

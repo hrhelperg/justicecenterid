@@ -54,7 +54,7 @@ The section split is the thesis made architectural: `/public-safety` carries cap
 | Exported pages           | 452        | **464**       | +12       |
 | Published guides         | 109        | **121**       | +12       |
 | Source records           | 289        | **325**       | +36       |
-| Vitest files / tests     | 74 / 5559  | **76 / 6152** | +2 / +593 |
+| Vitest files / tests     | 74 / 5559  | **75 / 6152** | +1 / +593 |
 | Playwright specs / tests | 13 / 800   | **14 / 928**  | +1 / +128 |
 | **Client JS bytes**      | 663,491    | **663,525**   | **+34**   |
 | CSS bytes                | 29,961     | **29,961**    | **0**     |
@@ -254,11 +254,11 @@ Every command run to completion on the final tree, exit codes read directly.
 | `npm run format:check`                                | 0    | all files match Prettier style                                 |
 | `npm run lint`                                        | 0    | clean                                                          |
 | `npm run typecheck`                                   | 0    | clean                                                          |
-| `npm test`                                            | 0    | **6152 passed, 76 files**                                      |
+| `npm test`                                            | 0    | **6152 passed, 75 files**                                      |
 | `npm run build`                                       | 0    | static export                                                  |
 | `npm run verify:output`                               | 0    | **462 routes / 464 pages / 462 sitemap URLs**                  |
 | `node scripts/route-matrix.mjs http://127.0.0.1:4173` | 0    | all registered routes 200, canonical-correct; must-404 set 404 |
-| `npm run test:e2e`                                    | 0    | **928 passed, 4 skipped**                                      |
+| `npm run test:e2e`                                    | 0    | **924 passed, 4 skipped (928 total)**                          |
 | `node scripts/link-graph-audit.mjs`                   | 0    | **0 orphans, 0 weakly linked, 0 dead ends**                    |
 | `findRestrictedPhrasing` over all twelve pages        | —    | **0 hits**                                                     |
 
