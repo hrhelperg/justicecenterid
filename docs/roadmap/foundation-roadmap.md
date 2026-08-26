@@ -1021,3 +1021,51 @@ institution record and a profession record — and **zero guides**. Details in
 - Validation: 4120 tests / 65 files; **410 routes / 410 sitemap / 412 pages**. Ten mutation proofs,
   10/10 valid, none surviving. Six defects found and fixed during the wave, four of them by the new
   guards on their first run.
+
+## Phase 28 — Knowledge Expansion Wave 14 (delivered 2026-08-26)
+
+Access to justice and legal institutions. Eight routes across three existing sections plus the
+first new profession record since the pilot. Details in
+`docs/audits/knowledge-expansion-wave-14-qa.md`.
+
+- **Reading the corpus first reshaped the wave.** Most of the brief's candidate routes already
+  existed — `/justice/access-to-justice` and `/justice/effective-remedy` from Wave 12,
+  `/defence/right-to-counsel` and `/defence/how-defence-is-funded` from Wave 11. The funding page
+  already asks "What is the difference between legal aid, a public defender and court-appointed
+  counsel?" and already carries the Defensoria Pública finding the brief asks to preserve, so two
+  whole brief sections describe work that is done. The wave spent its routes on the **mechanics**
+  of access instead, which nothing covered: language, participation, cost, court administration,
+  who may act as a lawyer, whether you may act without one, and where victims stand.
+- **Which way the language accommodation runs is the finding.** South Africa gives the right to be
+  **tried in** a language the accused understands, interpreting only if that is not practicable.
+  Germany fixes the court language absolutely — "Die Gerichtssprache ist deutsch", with one named
+  exception, the Sorbian guarantee — and translates the person into it. Canada covers any party or
+  witness in any proceedings and names deafness in the same clause. Kenya makes the interpreter
+  free. Reporting all four as "the right to an interpreter" erases the difference.
+- **One access mechanism changes another.** GVG § 187(2) lets an oral translation replace the
+  written translation of indictments and judgments where procedural rights are preserved — as a
+  rule to be assumed **where the accused has defence counsel**. Having a lawyer alters what the
+  court must translate.
+- **What Brazil makes free is not random.** Habeas corpus and habeas data are free
+  unconditionally; birth and death certificates only for the recognisedly poor. And Lei 8.906
+  excludes the habeas corpus petition from the activities exclusive to advocacia — the one thing
+  anyone may do without a lawyer is challenge a detention.
+- **The defence-lawyer gate was applied, not assumed.** Six of seven schema fields are carried by
+  primary text; `trainingRouteShape` is not, because no qualification-route source was obtained
+  anywhere. The field stays structural, the gap is stated, and a mutation proves the guard.
+- **Seventh consecutive wave with no new institution record.** Germany and Brazil vest admission
+  in a professional body; England and Wales reserves six _activities_ and constitutes lawyers as
+  no status at all. There is no third member of the family, so the comparison stays in prose.
+- **Two test-design findings, both from mutations that survived.** `deniesClaim` is wrong for
+  directives — an incidental "cannot" was clearing genuine advice — so advice and evasion
+  tripwires now only accept a negation that _precedes_ the match. And presence-anywhere is not a
+  guard: "Sorb" and "where the accused has defence counsel" each appear twice, so deleting the
+  statement of the rule left the restatement and the check passed. Both are now co-location
+  assertions on a single block, which is where Wave 13 landed for statutory quantities.
+- **A Wave 11 test was narrowed, not deleted.** It asserted `/professions/defence-lawyer` does not
+  exist, which was true when written. `defence-lawyer` comes off the list because the evidence now
+  exists; every institution slug stays on it, `bar-association` is added, and a new test requires
+  the route to cite the three sources that earned it.
+- Validation: 4405 tests / 66 files; **418 routes / 418 sitemap / 420 pages**. Twelve mutation
+  proofs, 12/12 valid after two first-pass survivors were fixed in the tests rather than in the
+  content.
