@@ -816,7 +816,7 @@ export const FORENSICS_GUIDES: readonly Guide[] = [
       {
         claim: 'Forensic science has been shown to be unreliable.',
         reality:
-          'That overstates the findings in the opposite direction. The reviews describe capabilities as well as limitations, and NIST notes that forensic science can exclude innocent people from investigations and help exonerate them in cases of wrongful conviction.',
+          'That is not what the reviews found; it overstates them in the opposite direction. They describe capabilities as well as limitations, and NIST states that forensic science can exclude innocent people from investigations and help exonerate them in cases of wrongful conviction.',
       },
       {
         claim: 'More sensitive methods make forensic conclusions safer.',
@@ -826,7 +826,7 @@ export const FORENSICS_GUIDES: readonly Guide[] = [
       {
         claim: 'A published review settles what a discipline is worth.',
         reality:
-          'Some reviews are final and some are drafts under comment. The DNA mixture review is final; the bitemark review is not, and nothing on this platform is drawn from it.',
+          'Some reviews are final and some are drafts under comment. The DNA mixture review is final; the bitemark analysis review is still a draft, and nothing on this platform is drawn from that draft.',
       },
       {
         claim: 'Stating limits means the evidence should be ignored.',
