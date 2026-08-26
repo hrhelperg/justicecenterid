@@ -4,6 +4,7 @@ import { CoverageNotice } from '@/components/content/CoverageNotice';
 import { ContentPage } from '@/components/pages/ContentPage';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { buildMetadata } from '@/lib/metadata';
+import { HISTORY_CHRONOLOGICAL, historyPath } from '@/content/history';
 
 const PATH = '/history';
 const DESCRIPTION =
@@ -35,7 +36,7 @@ export default function HistoryPage() {
 
       <CoverageNotice title="What exists now">
         <p>
-          Two things: the{' '}
+          The pages indexed below, the{' '}
           <Link href="/timeline" className="link-inline">
             timeline
           </Link>{' '}
@@ -49,11 +50,44 @@ export default function HistoryPage() {
           .
         </p>
         <p>
-          Historical period pages, institutional histories, and regional coverage have not been
-          researched. They are not represented by placeholder pages, and they do not appear in
-          our sitemap.
+          Coverage is thin and uneven by design. Every page below required primary or archival
+          sourcing, and far more candidates were deferred than published — regional coverage
+          outside Europe most of all. Deferred subjects are not represented by placeholder pages
+          and do not appear in our sitemap.
         </p>
       </CoverageNotice>
+
+      <section aria-labelledby="entries" className="mt-14">
+        <SectionHeading
+          id="entries"
+          description="Oldest first. Each states the period it covers, how firmly that period is dated, and what it does not claim."
+        >
+          Historical pages
+        </SectionHeading>
+        <ol className="max-w-measure space-y-6 border-l-2 border-line pl-6">
+          {HISTORY_CHRONOLOGICAL.map((entry) => (
+            <li key={entry.slug} className="relative">
+              <span
+                aria-hidden="true"
+                className="absolute top-2 -left-[1.9rem] block h-3 w-3 rounded-full border-2 border-accent bg-surface"
+              />
+              <p className="text-sm font-semibold tracking-wide text-brand uppercase">
+                {entry.period.display}
+                {entry.period.precision !== 'exact'
+                  ? ` · dating ${entry.period.precision}`
+                  : ''}
+              </p>
+              <h3 className="mt-1 text-xl font-semibold text-ink">
+                <Link href={historyPath(entry)} className="link-inline">
+                  {entry.question}
+                </Link>
+              </h3>
+              <p className="mt-2 text-ink-muted">{entry.summary}</p>
+              <p className="mt-2 text-sm text-ink-subtle">{entry.scope}</p>
+            </li>
+          ))}
+        </ol>
+      </section>
 
       <section aria-labelledby="standards" className="mt-14">
         <SectionHeading
@@ -115,8 +149,8 @@ export default function HistoryPage() {
         </SectionHeading>
         <ul className="max-w-measure list-disc space-y-2 pl-6 text-ink-muted">
           <li>
-            Historical period pages, framed by institutional change rather than by political
-            era.
+            Further historical pages, framed by institutional change rather than by political
+            era. Seven exist; the subjects below do not.
           </li>
           <li>
             The development of court systems and of judicial independence as a structural idea.

@@ -3822,6 +3822,76 @@ export const SOURCES: readonly SourceRecord[] = [
     jurisdiction: 'GB',
     note: 'The official revised text, read directly; the section was inserted into the 1952 Act by later amendment and appears in the revised text with its amendment history. Supports s. 5A(1): a person may be appointed to be Chief Inspector of Prisons. Supports s. 5A(2): "It shall be the duty of the Chief Inspector to inspect or arrange for the inspection of prisons in England and Wales and to report to the Secretary of State on them." Supports s. 5A(3): the Chief Inspector "shall in particular report to the Secretary of State on the treatment of prisoners and conditions in prisons". Supports s. 5A(4): the Secretary of State may refer specific matters connected with prisons and prisoners to the Chief Inspector and direct a report on them. Supports s. 5A(5): the Chief Inspector shall each year submit a report to the Secretary of State in such form as the Secretary of State may direct, "and the Secretary of State shall lay a copy of that report before Parliament". Supports s. 5A(5A)–(5B): that subsections (2) to (5) apply also in relation to immigration removal centres, short-term holding facilities, pre-departure accommodation and escort arrangements within the meaning of s. 147 of the Immigration and Asylum Act 1999, and that in that application they apply to such centres, facilities, accommodation and arrangements anywhere in the United Kingdom. Cited for the existence and statutory duties of a prison inspectorate in one system. It supports no claim about inspection findings, about compliance, or about arrangements in any other country.',
   },
+
+  /* ---------------------------------------------------------------------- */
+  /* Wave 18 — history of justice institutions                               */
+  /* ---------------------------------------------------------------------- */
+
+  {
+    id: 'perseus-aristotle-athenian-constitution',
+    type: 'academic',
+    title:
+      'Aristotle, Athenian Constitution, chapters 9 and 63 (H. Rackham translation, Loeb Classical Library, 1952)',
+    publisher: 'Perseus Digital Library, Tufts University',
+    url: 'https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0046',
+    publishedOn: '1952',
+    verifiedOn: '2026-08-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'INT',
+    translationStatus: 'unofficial',
+    authoritativeLanguage: 'grc',
+    note: 'The Rackham English translation, read directly at Perseus (Tufts University) — the edition line reads "Aristotle in 23 Volumes, Vol. 20, translated by H. Rackham. Cambridge, MA, Harvard University Press; London, William Heinemann Ltd. 1952." Supports, from chapter 9: that the three most democratic features of Solon\'s constitution "seem to be these: first and most important the prohibition of loans secured upon the person, secondly the liberty allowed to anybody who wished to exact redress on behalf of injured persons, and third … the right of appeal to the jury-court"; that "the jury-court is the umpire in all business both public and private"; and Aristotle\'s own methodological caution that "it is not fair to study his intention in the light of what happens at the present day, but to judge it from the rest of his constitution". Supports, from chapter 63: that the jury-courts are allotted by the Nine Archons by tribes; the allotment apparatus of ten entrances, twenty rooms, a hundred small boxes, boxes for jurors\' tickets, two urns, staves and inscribed acorns; that "Right to sit on juries belongs to all those over thirty years old who are not in debt to the Treasury or disfranchised"; the penalty procedure where an unqualified person sits; and that each juryman had a box-wood ticket bearing his own name, his father\'s name and his deme. IMPORTANT LIMITS. This is a TRANSLATION of an ancient text; the English words "jury", "jury-court" and "juryman" are Rackham\'s renderings of Greek institutional terms and must not be read as asserting equivalence with a modern jury. The work describes Athenian arrangements at the time of writing and reports earlier arrangements at second hand. It supports nothing about any other ancient system and nothing whatever about any modern institution.',
+  },
+  {
+    id: 'avalon-twelve-tables',
+    type: 'academic',
+    title: 'The Twelve Tables (Duodecim Tabularum), Table I — Proceedings Preliminary to Trial',
+    publisher: 'The Avalon Project, Lillian Goldman Law Library, Yale Law School',
+    url: 'https://avalon.law.yale.edu/ancient/twelve_tables.asp',
+    verifiedOn: '2026-08-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'INT',
+    translationStatus: 'unofficial',
+    authoritativeLanguage: 'la',
+    note: 'The Avalon Project text, read directly. Supports Table I as printed there: "If the plaintiff summons the defendant to court the defendant shall go. If the defendant does not go the plaintiff shall call a witness thereto. Only then the plaintiff shall seize the defendant" (I.1); "If the defendant attempts evasion or takes flight the plaintiff shall lay hand on him" (I.2); that where sickness or age is an impediment the summoner shall grant a vehicle (I.3); that when the parties agree the magistrate shall announce it (I.6); that if they do not agree the parties shall state their case "before the assembly in the meeting place or before the magistrate in the market place before noon", both being present and pleading together (I.7); that if one party does not appear the magistrate shall adjudge the case after noon in favour of the one present (I.8); and that "If both parties are present sunset shall be the time limit of the proceedings" (I.9). PROVENANCE LIMITS, which are severe and must travel with any use of this source. The Twelve Tables DO NOT SURVIVE: no tablet or contemporary copy exists, and every printed text is a modern reconstruction assembled from quotations in later Roman authors. Avalon\'s own introduction is itself hedged — "Tradition tells us that the code was composed by a commission, first of ten and then of twelve men, in 451-450 B.C." — and the page names no translator and no reconstruction. This source therefore supports what the Avalon text says the Tables provided; it does NOT establish the authentic wording of any provision, the dating of the code, or that any particular clause is genuine. Nothing on this platform relies on it for a claim about origins, priority or firsts.',
+  },
+  {
+    id: 'uk-habeas-corpus-act-1679',
+    type: 'legislation',
+    title:
+      'Habeas Corpus Act 1679 (31 Cha 2 c. 2) — An Act for the better secureing the Liberty of the Subject and for Prevention of Imprisonments beyond the Seas',
+    publisher: 'The National Archives (legislation.gov.uk)',
+    url: 'https://www.legislation.gov.uk/aep/Cha2/31/2/contents',
+    publishedOn: '1679',
+    verifiedOn: '2026-08-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'GB',
+    note: 'The digitised text on the statute book, read directly. Supports the long title as given above. Supports the recital, which is the load-bearing part for this platform: "WHEREAS great Delayes have beene used by Sheriffes Goalers and other Officers to whose Custody any of the Kings Subjects have beene committed for criminall or supposed criminall Matters in makeing Returnes of Writts of Habeas Corpus to them directed by standing out an Alias and Pluries Habeas Corpus and sometimes more and by other shifts to avoid their yeilding Obedience to such Writts contrary to their Duty and the knowne Lawes of the Land whereby many of the Kings Subjects have beene and hereafter may be long detained in Prison in such Cases where by Law they are baylable to their great charge and vexation." Supports section I: that on service of a writ the officer or their under-officers shall within THREE DAYS bring up the body before the court to which the writ is returnable and certify the true causes of the imprisonment, subject to stated exceptions for commitment for treason or felony plainly and specially expressed in the warrant, to provisions about distance, and to payment or tender of the charges of bringing the prisoner, not exceeding twelvepence per mile, and security by bond. Supports the editorial note recorded on the page that abbreviations or contractions in the original form of the Act have been expanded into modern lettering in the text set out there, and that the short title was given by the Short Titles Act 1896. The Act recites that the writ ALREADY EXISTED and was being evaded; it is cited on this platform for that fact and NOT for any claim that it created habeas corpus. England and Wales; nothing about any other jurisdiction.',
+  },
+  {
+    id: 'uk-bill-of-rights-1689',
+    type: 'legislation',
+    title: 'Bill of Rights [1688] (1 Will and Mar Sess 2 c. 2)',
+    publisher: 'The National Archives (legislation.gov.uk)',
+    url: 'https://www.legislation.gov.uk/aep/WillandMarSess2/1/2/contents',
+    publishedOn: '1689',
+    verifiedOn: '2026-08-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'GB',
+    note: 'The digitised text on the statute book, read directly, in the original spelling as printed there. DATING NOTE: legislation.gov.uk titles the Act "Bill of Rights [1688]" while it is conventionally cited as 1689; the discrepancy reflects the old-style calendar and the platform records both rather than choosing one. Supports the GRIEVANCE recitals, which precede the declarations and name what was complained of, including: that partial, corrupt and unqualified persons had been returned and served on juries in trials, particularly jurors in trials for high treason who were not freeholders; that "excessive Baile hath beene required of Persons committed in Criminall Cases to elude the Benefitt of the Lawes made for the Liberty of the Subjects"; that "excessive Fines have beene imposed"; that "illegall and cruell Punishments" had been inflicted; and that grants and promises of fines and forfeitures had been made before any conviction or judgement. Supports the DECLARATORY clauses, including: "That the pretended Power of Suspending of Laws or the Execution of Laws by Regall Authority without Consent of Parlyament is illegall"; "That it is the Right of the Subjects to petition the King and all Commitments and Prosecutions for such Petitioning are Illegall"; "That excessive Baile ought not to be required nor excessive Fines imposed nor cruell and unusuall Punishments inflicted"; "That Jurors ought to be duely impannelled and returned" (the following words being repealed, as the revised text records); and "That all Grants and Promises of Fines and Forfeitures of particular persons before Conviction are illegall and void". Cited for what this text SAYS and for the structural fact that each declaration answers a recited grievance. It establishes no line of descent to any later instrument in any country, and no such claim is made from it.',
+  },
+  {
+    id: 'uk-homeoffice-policing-by-consent',
+    type: 'government',
+    title: 'Definition of policing by consent',
+    publisher: 'Home Office (GOV.UK)',
+    url: 'https://www.gov.uk/government/publications/policing-by-consent/definition-of-policing-by-consent',
+    publishedOn: '2012',
+    verifiedOn: '2026-08-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'GB',
+    note: 'An official Home Office publication (© Crown copyright 2012, Open Government Licence v3.0), read directly. Supports, verbatim and load-bearing: "When saying ‘policing by consent’, the Home Secretary was referring to a long standing philosophy of British policing, known as the Robert Peel’s 9 Principles of Policing. However, there is no evidence of any link to Robert Peel and it was likely devised by the first Commissioners of Police of the Metropolis (Charles Rowan and Richard Mayne). The principles which were set out in the ‘General Instructions’ that were issued to every new police officer from 1829 were: …" — followed by the nine principles, which the publication sets out in full. Supports the eighth principle in particular: "To recognise always the need for strict adherence to police-executive functions, and to refrain from even seeming to usurp the powers of the judiciary of avenging individuals or the State, and of authoritatively judging guilt and punishing the guilty." Supports the closing clarification: that the phrase "refers to the power of the police coming from the common consent of the public, as opposed to the power of the state. It does not mean the consent of an individual. No individual can chose to withdraw his or her consent from the police, or from a law." NOTE ON HEDGING, which must be preserved in any use: the department says there is no evidence of a link to Peel and that the principles were "likely" devised by Rowan and Mayne. The attribution to the Commissioners is stated as probable, not established, and this platform reproduces that hedge rather than hardening it. The publication also quotes the police historian Charles Reith (New Study of Police History, 1956); that quotation is attributed to Reith where used and is not treated as the department\'s own finding.',
+  },
 ];
 
 const SOURCE_INDEX = new Map(SOURCES.map((source) => [source.id, source]));

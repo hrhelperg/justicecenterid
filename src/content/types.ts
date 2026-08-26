@@ -1111,6 +1111,102 @@ export function isSafetySensitive(section: SectionId): boolean {
 }
 
 /* -------------------------------------------------------------------------- */
+/* Historical entities (Wave 18)                                              */
+/* -------------------------------------------------------------------------- */
+
+/*
+ * WHY A NEW MODEL EXISTS, AND WHY IT IS THIS SMALL.
+ *
+ * The brief for Wave 18 required testing whether the existing temporal fields could carry
+ * historical material before proposing anything. They cannot, and the gap is narrow and
+ * specific: `TemporalScope` is `current | historical | mixed`, which records THAT something is
+ * historical and nothing about WHEN. `ScheduledChange` models a known future legal change and
+ * would be abuse to repurpose. `TimelineEntry` models a dated point, not a period a page covers.
+ *
+ * So exactly two things are added, each because the same problem recurred on nearly every page
+ * researched rather than on one:
+ *
+ *   1. A PERIOD with its own precision. "Medieval Europe" is not one justice system and 451 BCE
+ *      is not a date anyone can verify. A page has to say what span it covers and how firmly the
+ *      boundaries are known, and the precision has to be a field rather than a caveat so it
+ *      cannot be dropped in an edit.
+ *
+ *   2. A CONTINUITY CLAIM. Every historical page researched for this wave attracts the same
+ *      reader assumption — that the body described is an early version of a modern institution —
+ *      and in every case the honest answer was that no such relationship is established. Recording
+ *      the modern counterpart a reader will think of, and what the evidence actually supports
+ *      about it, is the single most useful field on a historical page.
+ *
+ * Deliberately NOT added: predecessor/successor edges, an institutional-lineage graph, or any
+ * ontology of historical relations. Nothing in the researched material needed them, and a lineage
+ * model would invite exactly the descent claims this wave exists to refuse.
+ */
+
+/** How firmly the boundaries of a period are known. */
+export const PERIOD_PRECISIONS = ['exact', 'approximate', 'disputed'] as const;
+export type PeriodPrecision = (typeof PERIOD_PRECISIONS)[number];
+
+export interface HistoricalPeriod {
+  /** Earliest year covered. Negative for BCE. */
+  fromYear: number;
+  /** Latest year covered. Negative for BCE. */
+  toYear: number;
+  /** As a source would express it — never a fabricated month or day. */
+  display: string;
+  precision: PeriodPrecision;
+  /** Required where precision is not `exact`: what is uncertain and why. */
+  datingNote?: string;
+}
+
+/** What the evidence supports about the link to a modern institution. */
+export const CONTINUITY_RELATIONSHIPS = [
+  'none-established',
+  'contested',
+  'documented',
+] as const;
+export type ContinuityRelationship = (typeof CONTINUITY_RELATIONSHIPS)[number];
+
+export interface ContinuityClaim {
+  /** The modern institution or function a reader will be tempted to connect this to. */
+  modernCounterpart: string;
+  relationship: ContinuityRelationship;
+  /** Required. Why the relationship is what it is — never left to be inferred. */
+  basis: string;
+}
+
+/** A routed historical page at /history/{slug}. */
+export interface HistoryEntry {
+  slug: string;
+  title: string;
+  shortTitle?: string;
+  /** The reader's question, in the reader's words. */
+  question: string;
+  summary: string;
+  period: HistoricalPeriod;
+  /** Where. Explicit and narrow, because a region is not a legal system. */
+  scope: string;
+  /** At least one. The reader assumptions this page exists to answer. */
+  continuity: ContinuityClaim[];
+  definition: Block[];
+  whatTheSourcesSay: Block[];
+  whyItMatters: Block[];
+  misconceptions: Misconception[];
+  /** Required. Historical pages state their limits or they should not exist. */
+  uncertainty: string[];
+  furtherReading?: Block[];
+  /** Guide slugs this contextualises. Never implies descent. */
+  relatedGuides?: string[];
+  sources: string[];
+  status: ContentStatus;
+  review: ReviewStatus;
+  updatedOn: string;
+  publishedOn?: string;
+  reviewedOn?: string;
+  factsVerifiedOn?: string;
+  readingTimeMinutes: number;
+}
+
+/* -------------------------------------------------------------------------- */
 /* Justice-system lifecycle (Wave 15)                                         */
 /* -------------------------------------------------------------------------- */
 

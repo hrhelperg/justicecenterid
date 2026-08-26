@@ -6,6 +6,7 @@ import { PUBLISHED_PROFESSIONS } from '@/content/professions';
 import { COUNTRY_DOSSIERS } from '@/content/dossiers';
 import { JURISDICTIONS } from '@/content/jurisdictions';
 import { SCHEDULED_CHANGES } from '@/content/scheduled-changes';
+import { HISTORY_ENTRIES } from '@/content/history';
 import { SOURCES, getSource } from '@/content/sources';
 import { TIMELINE } from '@/content/timeline';
 
@@ -30,6 +31,13 @@ const ALL_SOURCE_REFERENCES = [
   ]),
   ...JURISDICTIONS.flatMap((j) => j.sources),
   ...SCHEDULED_CHANGES.flatMap((c) => c.sources),
+  /*
+   * History entries, added by Wave 18. The same lesson as the France pilot recorded above:
+   * an "unused source" check that does not know about every content family reports the content
+   * as wrong rather than itself. Five genuinely-cited archival sources looked orphaned until
+   * this line existed.
+   */
+  ...HISTORY_ENTRIES.flatMap((e) => e.sources),
 ];
 
 describe('cross-references resolve', () => {
