@@ -2313,7 +2313,7 @@ export const COURTS_GUIDES: readonly Guide[] = [
       },
       {
         kind: 'paragraph',
-        text: 'These routes are ordered rather than parallel, and Spain states the ordering in its constitution. Article 53.2 provides that any citizen may seek protection of the rights in Article 14 and Section 1 of Chapter 2 before the **ordinary courts**, by a procedure based on the principles of preference and summariness, and *where appropriate* thereafter through the *recurso de amparo* before the Constitutional Court.',
+        text: 'These routes are ordered rather than parallel, and Spain states the ordering in its constitution. Article 53.2 provides that any citizen may seek protection of the rights in Article 14 and Section 1 of Chapter 2 before the **ordinary courts**, by a procedure based on the principles of *preferencia y sumariedad* — preference and summariness, and *where appropriate* thereafter through the *recurso de amparo* before the Constitutional Court.',
         claim: 'fact',
         sources: ['es-constitution'],
       },
@@ -2613,7 +2613,7 @@ export const COURTS_GUIDES: readonly Guide[] = [
     howItWorks: [
       {
         kind: 'paragraph',
-        text: 'The clearest evidence that outcome depends on route comes from a single constitution. Article 62 of the French Constitution provides that a provision declared unconstitutional on the basis of Article 61 — before promulgation — *may not be promulgated or applied*. It never enters the legal order.',
+        text: 'The clearest evidence that outcome depends on route comes from a single constitution. Article 62 of the French Constitution provides that a provision declared unconstitutional on the basis of Article 61 — before promulgation — *ne peut être promulguée ni mise en application* — it may not be promulgated or applied. It never enters the legal order.',
         claim: 'fact',
         sources: ['fr-constitution-1958'],
       },

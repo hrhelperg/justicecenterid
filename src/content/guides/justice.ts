@@ -2948,7 +2948,7 @@ export const JUSTICE_GUIDES: readonly Guide[] = [
     howItWorks: [
       {
         kind: 'paragraph',
-        text: 'Germany allows the question to be asked in the abstract. Article 94(1) no. 2 of the Basic Law gives the Federal Constitutional Court jurisdiction in the event of disagreements or doubts concerning the formal or substantive compatibility of federal or Land law with the Basic Law — on application of the Federal Government, a Land government, **or one quarter of the Members of the Bundestag**. No case, no litigant, no injury: a political minority may put the question directly.',
+        text: 'Germany allows the question to be asked in the abstract. Article 94(1) no. 2 of the Basic Law gives the Federal Constitutional Court jurisdiction in the event of disagreements or doubts concerning the formal or substantive compatibility of federal or Land law with the Basic Law — on application of the Federal Government, a Land government, **or one fourth of the Members of the Bundestag**. No case, no litigant, no injury: a political minority may put the question directly.',
         claim: 'fact',
         sources: ['de-grundgesetz'],
       },
@@ -2990,7 +2990,7 @@ export const JUSTICE_GUIDES: readonly Guide[] = [
       },
       {
         kind: 'paragraph',
-        text: 'Spain sequences the individual route rather than opening it directly. Article 53.2 provides that any citizen may seek protection of the rights in Article 14 and Section 1 of Chapter 2 before the **ordinary courts**, by a procedure based on the principles of preference and summariness, and *where appropriate* thereafter through the recurso de amparo before the Constitutional Court.',
+        text: 'Spain sequences the individual route rather than opening it directly. Article 53.2 provides that any citizen may seek protection of the rights in Article 14 and Section 1 of Chapter 2 before the **ordinary courts**, by a procedure based on the principles of *preferencia y sumariedad* — preference and summariness, and *where appropriate* thereafter through the recurso de amparo before the Constitutional Court.',
         claim: 'fact',
         sources: ['es-constitution'],
       },
