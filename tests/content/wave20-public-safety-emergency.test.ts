@@ -146,6 +146,41 @@ function deniesForward(sentence: string, pattern: RegExp): boolean {
 const ALL_UNITS = WAVE_20.flatMap((slug) => tripwireUnits(guide(slug)));
 const ALL_PROSE = WAVE_20.map((slug) => prose(guide(slug))).join('\n');
 
+/**
+ * A DIFFERENT unit set, for the safety and tactical guards. Everything split into sentences,
+ * misconceptions included.
+ *
+ * Forced by mutation proof W20-M4, which planted "How to bypass a checkpoint during a curfew is
+ * covered below" at the end of a misconception's reality and the suite still passed. The reason is
+ * structural rather than accidental, and it matters beyond this wave.
+ *
+ * A misconception has to be ONE unit for a denial-aware check, because the schema guarantees that
+ * `reality` denies `claim` and splitting the pair reports the corpus's own corrections as
+ * violations. But a directive check reads only the text BEFORE the match, and a misconception's
+ * reality almost always contains a negation early on — so any instruction planted later in the
+ * same unit is cleared by a negation that has nothing to do with it.
+ *
+ * The two checks therefore need different units. A denial-aware check needs the pair intact; a
+ * directive check needs sentences, because an instruction is an instruction wherever it sits.
+ */
+function safetyUnits(g: Guide): string[] {
+  const text = [
+    g.title,
+    g.summary,
+    g.question,
+    ...blocks(allBlocks(g)),
+    ...g.misconceptions.flatMap((m) => [m.claim, m.reality, m.note ?? '']),
+    ...(g.countryExamples ?? []).map((e) => e.note),
+    ...(g.counterExamples ?? []).map((e) => e.note),
+    ...(g.uncertainty ?? []),
+  ]
+    .filter(Boolean)
+    .join('\n');
+  return sentences(text);
+}
+
+const SAFETY_UNITS = WAVE_20.flatMap((slug) => safetyUnits(guide(slug)));
+
 function offending(pattern: RegExp, units: string[] = ALL_UNITS): string[] {
   return units.filter((s) => pattern.test(s) && !deniesClaim(s, pattern));
 }
@@ -623,7 +658,7 @@ describe('no page is usable as evasion, tactics or legal advice', () => {
     'no affirmative instruction matching %s',
     (_src, pattern) => {
       expect(
-        ALL_UNITS.filter((s) => isActionable(s, pattern)),
+        SAFETY_UNITS.filter((s) => isActionable(s, pattern)),
         'an actionable instruction on a prohibited topic',
       ).toEqual([]);
     },
@@ -672,6 +707,25 @@ describe('no page is usable as evasion, tactics or legal advice', () => {
     ).toBe(false);
   });
 
+  it('scans misconceptions sentence by sentence, which the denial checks must not', () => {
+    // The W20-M4 finding, pinned. An instruction appended to a misconception's reality is cleared
+    // by the forward check when the pair is one unit, because the reality's own denial precedes
+    // it. Split into sentences, it is caught.
+    const planted =
+      'The police are in charge of emergencies. Not as a general rule. How to bypass a checkpoint during a curfew is covered below.';
+    const asOneUnit = ACTIONABLE_TOPICS.some((p) => isActionable(planted, p));
+    const asSentences = sentences(planted).some((u) =>
+      ACTIONABLE_TOPICS.some((p) => isActionable(u, p)),
+    );
+    expect(
+      asOneUnit,
+      'the pair-as-one-unit reading would have caught it, so the split is moot',
+    ).toBe(false);
+    expect(asSentences, 'the sentence-level reading fails to catch a planted instruction').toBe(
+      true,
+    );
+  });
+
   it('states no deadline applicable to any reader anywhere in the wave', () => {
     expect(ALL_PROSE).not.toMatch(/\byou (?:have|must act within|must file within)\b/i);
     expect(ALL_PROSE).not.toMatch(/\bwithin \d+ days of (?:being|receiving|the notice)\b/i);
@@ -697,7 +751,7 @@ describe('no page is usable as evasion, tactics or legal advice', () => {
     ];
     for (const pattern of TACTICAL) {
       expect(
-        ALL_UNITS.filter((s) => isActionable(s, pattern)),
+        SAFETY_UNITS.filter((s) => isActionable(s, pattern)),
         `tactical detail matching ${pattern.source}`,
       ).toEqual([]);
     }
