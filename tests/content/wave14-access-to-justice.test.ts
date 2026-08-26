@@ -90,6 +90,39 @@ function scannedProse(g: Guide): string {
   ].join('\n');
 }
 
+/**
+ * The blocks of a guide, each kept whole.
+ *
+ * Forced by mutation proofs W14-M9 and W14-M12, which both applied cleanly and PASSED. Each of
+ * the tests they attacked asserted that a string appeared somewhere in the page — "Sorb", and
+ * "where the accused has defence counsel". Both strings appear twice: once where the rule is
+ * stated and once in a misconception that restates it. Deleting the statement of the rule left
+ * the incidental occurrence, and the presence check was satisfied by it.
+ *
+ * A qualification has to sit WITH the thing it qualifies, so the assertions below are
+ * co-location assertions on a single block rather than presence assertions on a page.
+ */
+function guideBlocks(g: Guide): string[] {
+  const all = [
+    ...(g.definition ?? []),
+    ...(g.whyItExists ?? []),
+    ...(g.howItWorks ?? []),
+    ...(g.variation ?? []),
+    ...(g.rightsAndAccountability ?? []),
+  ];
+  return all.flatMap((block) => {
+    if (block.kind === 'paragraph') return [block.text];
+    if (block.kind === 'callout') return [`${block.title} ${block.text}`];
+    if (block.kind === 'list') return [block.items.join(' ')];
+    return [block.items.map((i) => `${i.term} ${i.description}`).join(' ')];
+  });
+}
+
+/** The single block stating `needle`, or a failure the caller can report. */
+function blockStating(g: Guide, needle: RegExp): string | undefined {
+  return guideBlocks(g).find((b) => needle.test(b));
+}
+
 function professionProse(p: Profession): string {
   return [
     p.title,
@@ -632,9 +665,23 @@ describe('statutory material names the provision it comes from', () => {
     expect(ALL_PROSE).toMatch(/unabh[äa]ngiges Organ der Rechtspflege/);
   });
 
-  it('carries the Sorbian exception rather than reporting the rule as absolute', () => {
-    const text = prose(guide('court-language-and-interpretation'));
-    expect(text).toMatch(/Sorb/);
+  it('carries the Sorbian exception in the block that states the rule', () => {
+    const g = guide('court-language-and-interpretation');
+    const block = blockStating(g, /Die Gerichtssprache ist deutsch/);
+    expect(block, 'the block stating GVG § 184 has gone').toBeDefined();
+    expect(
+      block,
+      'the court-language rule is stated without the exception the same provision contains',
+    ).toMatch(/Sorb/);
+  });
+
+  it('would catch the exception being dropped from that block', () => {
+    const stripped =
+      'Section 184 of the Courts Constitution Act opens with four words: “Die Gerichtssprache ist deutsch.” The provision admits no exception.';
+    expect(
+      /Sorb/.test(stripped),
+      'the co-location check would not notice the exception disappearing',
+    ).toBe(false);
   });
 
   it('records which way each language accommodation runs', () => {
@@ -644,9 +691,23 @@ describe('statutory material names the provision it comes from', () => {
     expect(text).toMatch(/translated into the proceedings|moves the person into it/i);
   });
 
-  it('records the interaction between counsel and translation', () => {
-    const text = prose(guide('taking-part-in-your-own-case'));
-    expect(text).toMatch(/where the accused has defence counsel/i);
+  it('records the counsel condition in the block that states the substitution', () => {
+    const g = guide('taking-part-in-your-own-case');
+    const block = blockStating(g, /oral translation or an oral summary to replace/i);
+    expect(block, 'the block stating the substitution rule has gone').toBeDefined();
+    expect(
+      block,
+      'the substitution is stated without the condition GVG § 187(2) attaches to it',
+    ).toMatch(/where the accused has defence counsel/i);
+  });
+
+  it('would catch the counsel condition being dropped from that block', () => {
+    const stripped =
+      'The same provision allows an oral translation or an oral summary to replace the written one where that preserves the accused’s procedural rights — and the substitution is available generally.';
+    expect(
+      /where the accused has defence counsel/i.test(stripped),
+      'the co-location check would not notice the condition disappearing',
+    ).toBe(false);
   });
 });
 
