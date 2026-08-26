@@ -1757,6 +1757,12 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
       'municipal-police',
       'national-police',
       'federal-investigative-agency',
+      /*
+       * Added by Wave 15's link-graph audit. A transport police force is jurisdiction
+       * defined by function rather than by territory, which is the distinction this page
+       * exists to draw — so the link is contextual rather than added to raise a count.
+       */
+      'transport-police',
     ],
     sources: ['us-bjs-csllea-2018', 'ch-fedpol', 'fr-csi-l511-1', 'unodc-cpcj'],
     status: 'published',
@@ -2480,6 +2486,8 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
       'police-jurisdiction',
       'how-policing-is-divided-between-levels',
       'local-police-governance',
+      /* Wave 15 link audit: the same municipal tier, worked through in one country. */
+      'sheriffs-and-city-police',
     ],
     relatedInstitutions: ['municipal-police', 'national-police', 'autonomous-community-police'],
     sources: ['fr-csi-l511-1', 'es-lofcs', 'jp-npa-police-of-japan-2020', 'unodc-cpcj'],

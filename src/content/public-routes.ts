@@ -48,6 +48,12 @@ export interface PublicRoute {
 }
 
 const HUB_SLUGS = [
+  /*
+   * Wave 15. A top-level route rather than a guide under /justice, because the page is about
+   * all nine sections rather than about justice principles, and because /timeline and
+   * /comparisons already establish the pattern for a corpus-spanning page at this level.
+   */
+  ['justice-system', 'How a Justice System Works'],
   ['countries', 'Countries'],
   ['history', 'History'],
   ['timeline', 'Timeline'],

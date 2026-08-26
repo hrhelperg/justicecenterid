@@ -139,6 +139,13 @@ export const SAFETY_SENSITIVE_SECTIONS: readonly SectionId[] = [
    * A safety review is therefore mandatory before anything in `/defence` can publish.
    */
   'defence',
+  /*
+   * Added by Wave 13, on the same reasoning that put `defence` on this list. Material
+   * describing how custody, supervision, licence conditions and release decisions operate is
+   * one step from material describing how to defeat them. A safety review is therefore
+   * mandatory before anything in `/corrections` can publish.
+   */
+  'corrections',
 ];
 
 /*
@@ -1101,6 +1108,62 @@ export function isPublished(entity: { status: ContentStatus }): boolean {
 
 export function isSafetySensitive(section: SectionId): boolean {
   return SAFETY_SENSITIVE_SECTIONS.includes(section);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Justice-system lifecycle (Wave 15)                                         */
+/* -------------------------------------------------------------------------- */
+
+/*
+ * WHY A NEW MODEL EXISTS AT ALL.
+ *
+ * The brief for this wave offered a nine-term relationship vocabulary and told us to implement
+ * it only if the existing models could not express what was needed. They express almost all of
+ * it already: `relatedInstitutions` is performedBy, oversight guides are overseenBy, `related`
+ * is relatedTo, `counterExamples` is contrastsWith, and the `review` fields are reviewedBy.
+ *
+ * One thing has no expression anywhere in the corpus: ORDER. Nothing records that one stage of
+ * a justice system may come before another, and nothing records that it may not. That is the
+ * whole of what this model adds, and it is deliberately the whole of it.
+ *
+ * `mayPrecede` is named for what it asserts. It does NOT say a case goes from one stage to the
+ * next; it says the sequence is one a system may use. The distinction is the entire point of
+ * the model, because the error it exists to prevent is a reader coming away with a single
+ * universal path — police, prosecutor, jury, prison — that the rest of this corpus disproves.
+ */
+
+/** Stage of the educational lifecycle. Not a procedural code. */
+export interface LifecycleStage {
+  id: string;
+  title: string;
+  /** The reader's question this stage answers. */
+  question: string;
+  summary: string;
+  /**
+   * Whether a case necessarily passes through this stage.
+   *
+   * `false` here is a substantive claim about every system the corpus describes, so the stages
+   * marked required are few.
+   */
+  required: boolean;
+  /** Stages that MAY follow. Never an assertion that they do. */
+  mayPrecede: string[];
+  /** Ways a case leaves the model here rather than continuing. At least one, everywhere. */
+  exits: string[];
+  /** How systems differ at this stage — required, because they always do. */
+  variation: string;
+  /** Routes in this corpus that explain the stage. Validated against the registry. */
+  explainedBy: string[];
+}
+
+/** A concern that applies across stages rather than sitting at one. */
+export interface LifecycleLayer {
+  id: string;
+  title: string;
+  summary: string;
+  /** Stage ids, or 'all' where the layer genuinely applies throughout. */
+  appliesTo: string[] | 'all';
+  explainedBy: string[];
 }
 
 /* -------------------------------------------------------------------------- */

@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { DEFENCE_GUIDES } from '@/content/guides/defence';
 import { ALL_GUIDES, getGuide, guidePath } from '@/content/guides';
-import { PUBLISHED_PROFESSIONS } from '@/content/professions';
+import { PUBLISHED_PROFESSIONS, getProfession } from '@/content/professions';
 import { PUBLISHED_GLOSSARY } from '@/content/glossary';
 import { getSection } from '@/content/sections';
 import { SECTION_IDS, SAFETY_SENSITIVE_SECTIONS } from '@/content/types';
@@ -234,23 +234,47 @@ describe('nothing already owned is restated', () => {
     }
   });
 
-  it('creates no defence institution or profession route', () => {
+  /*
+   * AMENDED BY WAVE 14, and the amendment is deliberately narrow.
+   *
+   * Wave 11 recorded that it created no defence institution or profession route, because the
+   * evidence it held described how defence is FUNDED rather than what the profession is. Wave 14
+   * obtained the missing evidence — BRAO §§ 1, 3, 43a and 60, CF Art. 133 with Lei 8.906, and
+   * LSA 2007 ss. 12-13 — and routed /professions/defence-lawyer on it.
+   *
+   * `defence-lawyer` is therefore removed from this list and nothing else is. The institution
+   * slugs stay forbidden: Wave 11's finding that France has a funding scheme with no defence
+   * institution and Germany an appointment scheme that is neither still holds, so a single
+   * institution family would still be false. `public-defender` stays forbidden for the same
+   * reason it always was — it is not a universal role, and the Defensoria Pública finding is
+   * pinned separately below.
+   */
+  it('creates no defence institution route, and no profession route the evidence does not carry', () => {
     for (const slug of [
       'public-defender-office',
       'legal-aid-authority',
       'legal-aid-commission',
       'public-defence-institution',
       'court-appointed-counsel-system',
+      'bar-association',
     ]) {
       expect(PUBLIC_ROUTE_PATHS).not.toContain(`/institutions/${slug}`);
     }
-    for (const slug of [
-      'defence-lawyer',
-      'defense-lawyer',
-      'public-defender',
-      'legal-aid-lawyer',
-    ]) {
+    for (const slug of ['defense-lawyer', 'public-defender', 'legal-aid-lawyer']) {
       expect(PUBLIC_ROUTE_PATHS).not.toContain(`/professions/${slug}`);
+    }
+  });
+
+  it('routes the defence-lawyer profession only with the evidence Wave 14 obtained', () => {
+    const routed = PUBLIC_ROUTE_PATHS.includes('/professions/defence-lawyer');
+    if (!routed) return;
+    const record = getProfession('defence-lawyer');
+    expect(record, 'the route exists but the record does not').toBeDefined();
+    for (const id of ['de-brao-anwaltschaft', 'br-lei-8906-1994-oab', 'br-cf-1988']) {
+      expect(
+        record?.sources,
+        `defence-lawyer is routed without ${id}, the evidence that earned it`,
+      ).toContain(id);
     }
   });
 });

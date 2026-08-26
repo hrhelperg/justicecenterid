@@ -946,3 +946,190 @@ defence. A new top-level section, three jurisdictions, seven routes. Details in
   as measured rather than rounded.
 
 Delivered on `feat/knowledge-expansion-wave-11`. Not merged, not deployed.
+
+## Phase 26 — Knowledge Expansion Wave 12 (delivered 2026-08-26)
+
+Rule of law, due process and justice principles. Ten routes deepening `/justice`, which held five
+guides carrying the whole conceptual vocabulary of the site. Details in
+`docs/audits/knowledge-expansion-wave-12-qa.md`.
+
+- **"Due process" is neither universal nor American-only, and the research produced the sharper
+  answer.** Brazil's Article 5º LIV constitutionalises _devido processo legal_ in terms, so the term
+  travels — while systems that protect the same ground under other names remain the majority. Both
+  halves are pinned by tests, because either error alone is the easy one to make.
+- **Jurisdictional diversification away from the European default.** South Africa, Kenya and Brazil
+  carry the wave, read from primary constitutional text: equality before the law, access to courts,
+  effective remedy, reasonable duration, and the express binding of all three branches to law.
+- **Proportionality was deferred on evidence.** No clean authoritative statement of the general
+  public-law test was obtained, so no page asserts one, and a test forbids it appearing as a
+  universal.
+- **A mutation proof passed twice, for two different reasons, and both were test defects.** First,
+  `deniesClaim` asked whether a sentence contained a negation anywhere — and several tripwire
+  patterns carry a negation in their own text ("courts must **never** be criticised"), so the claim
+  satisfied the denial check by being itself. The matched span is now stripped before the denial is
+  looked for. Second, the fix was applied with a conditional rather than an assertion, prettier had
+  reflowed the target, and the absolutist block silently kept the old logic while only the
+  delegitimising block was corrected. **Conditional edits to test files silently revert safeguards**
+  — anchors are asserted now.
+- **The central formulation the wave earned:** respect for courts is compatible with challenging
+  decisions through the procedures the legal system itself provides — which is not a compromise
+  between two positions but what the constitutional texts describe.
+- Validation: 3705 tests / 64 files; **398 routes / 398 sitemap / 400 pages**. Cicero preserved
+  without re-quoting.
+
+## Phase 27 — Knowledge Expansion Wave 13 (delivered 2026-08-26)
+
+Corrections, sentencing and reintegration. Twelve routes in a section that had a landing page, an
+institution record and a profession record — and **zero guides**. Details in
+`docs/audits/knowledge-expansion-wave-13-qa.md`.
+
+- **Where a legislature states its purposes turns out to be as informative as the purposes.**
+  England and Wales (Sentencing Act 2020 s. 57) and Canada (Criminal Code ss. 718–718.2) state
+  purposes in **sentencing** law. Germany (StVollzG § 2) and Brazil (LEP Art. 1) state their
+  reintegration purpose in the law of **execution**, and German sentencing law names culpability as
+  the _basis_ of measurement rather than opening with purposes at all. Those answer different
+  questions, so two systems that both "aim at rehabilitation" can mean structurally different things
+  by it.
+- **The brief's proposed capacity route could not be built as named, and the repository's own
+  safeguard is why.** `RESTRICTED_PATTERNS` blocks `overcrowd*`; the guide scan hard-codes the
+  declared-category list to `[]`; and `Guide` has no `restrictedClaims` field — only dossier modules
+  do. The brief also requires preserving restricted-claim safeguards, and the safeguard wins. Built
+  as `how-prison-capacity-is-measured` instead, which is the part of the topic the sources support:
+  four official sources, four counting rules, four conversions the page refuses to perform, and the
+  Japanese absence stated rather than approximated. No declaration channel was added for guides —
+  that would be speculative architecture for one page.
+- **"Probation" is three unrelated things**, and Denmark holds all three at once. An organisation
+  (Kriminalforsorgen, Kriminalvården), the status attached to a **wholly unserved** suspended term
+  (StGB § 56), and the status attached to the **remainder of a partly served** one (StGB § 57).
+  Canadian statute enumerates four release statuses separately rather than describing one.
+- **The German consent requirement.** StGB § 57(1) conditions release of the remainder on the
+  convicted person's consent — a recognition that supervised release, carrying obligations and the
+  possibility of return, is a different thing from serving to the end rather than simply a lesser
+  one.
+- **The suite's own first run was wrong twice, and both fixes are unit-of-analysis decisions.**
+  Sentence-level tripwires reported four misconception _claims_ as undenied assertions of the things
+  their `reality` fields correct — a misconception is now one unit of `claim + reality`, with a
+  planted non-denying pair proving the guard still fires. And attribution of statutory quantities is
+  checked **block by block**, not sentence by sentence, because a paragraph whose opening sentence
+  names the German Criminal Code has attributed every figure in it; a planted detached fraction
+  proves that check still bites. Wave 11's same-sentence denial rule survives for ordinary prose.
+- **`verify:output` caught what the test suite could not.** All twelve routes registered and none
+  exported: `src/app/corrections/` had a `page.tsx` and no `[slug]` segment. The registry and the
+  export are separately verified for exactly this case.
+- **Zero institution routes for the sixth consecutive wave.** What was missing from corrections was
+  the conceptual layer, not the registry layer.
+- Validation: 4120 tests / 65 files; **410 routes / 410 sitemap / 412 pages**. Ten mutation proofs,
+  10/10 valid, none surviving. Six defects found and fixed during the wave, four of them by the new
+  guards on their first run.
+
+## Phase 28 — Knowledge Expansion Wave 14 (delivered 2026-08-26)
+
+Access to justice and legal institutions. Eight routes across three existing sections plus the
+first new profession record since the pilot. Details in
+`docs/audits/knowledge-expansion-wave-14-qa.md`.
+
+- **Reading the corpus first reshaped the wave.** Most of the brief's candidate routes already
+  existed — `/justice/access-to-justice` and `/justice/effective-remedy` from Wave 12,
+  `/defence/right-to-counsel` and `/defence/how-defence-is-funded` from Wave 11. The funding page
+  already asks "What is the difference between legal aid, a public defender and court-appointed
+  counsel?" and already carries the Defensoria Pública finding the brief asks to preserve, so two
+  whole brief sections describe work that is done. The wave spent its routes on the **mechanics**
+  of access instead, which nothing covered: language, participation, cost, court administration,
+  who may act as a lawyer, whether you may act without one, and where victims stand.
+- **Which way the language accommodation runs is the finding.** South Africa gives the right to be
+  **tried in** a language the accused understands, interpreting only if that is not practicable.
+  Germany fixes the court language absolutely — "Die Gerichtssprache ist deutsch", with one named
+  exception, the Sorbian guarantee — and translates the person into it. Canada covers any party or
+  witness in any proceedings and names deafness in the same clause. Kenya makes the interpreter
+  free. Reporting all four as "the right to an interpreter" erases the difference.
+- **One access mechanism changes another.** GVG § 187(2) lets an oral translation replace the
+  written translation of indictments and judgments where procedural rights are preserved — as a
+  rule to be assumed **where the accused has defence counsel**. Having a lawyer alters what the
+  court must translate.
+- **What Brazil makes free is not random.** Habeas corpus and habeas data are free
+  unconditionally; birth and death certificates only for the recognisedly poor. And Lei 8.906
+  excludes the habeas corpus petition from the activities exclusive to advocacia — the one thing
+  anyone may do without a lawyer is challenge a detention.
+- **The defence-lawyer gate was applied, not assumed.** Six of seven schema fields are carried by
+  primary text; `trainingRouteShape` is not, because no qualification-route source was obtained
+  anywhere. The field stays structural, the gap is stated, and a mutation proves the guard.
+- **Seventh consecutive wave with no new institution record.** Germany and Brazil vest admission
+  in a professional body; England and Wales reserves six _activities_ and constitutes lawyers as
+  no status at all. There is no third member of the family, so the comparison stays in prose.
+- **Two test-design findings, both from mutations that survived.** `deniesClaim` is wrong for
+  directives — an incidental "cannot" was clearing genuine advice — so advice and evasion
+  tripwires now only accept a negation that _precedes_ the match. And presence-anywhere is not a
+  guard: "Sorb" and "where the accused has defence counsel" each appear twice, so deleting the
+  statement of the rule left the restatement and the check passed. Both are now co-location
+  assertions on a single block, which is where Wave 13 landed for statutory quantities.
+- **A Wave 11 test was narrowed, not deleted.** It asserted `/professions/defence-lawyer` does not
+  exist, which was true when written. `defence-lawyer` comes off the list because the evidence now
+  exists; every institution slug stays on it, `bar-association` is added, and a new test requires
+  the route to cite the three sources that earned it.
+- Validation: 4405 tests / 66 files; **418 routes / 418 sitemap / 420 pages**. Twelve mutation
+  proofs, 12/12 valid after two first-pass survivors were fixed in the tests rather than in the
+  content.
+
+## Phase 29 — Knowledge Expansion Wave 15 (delivered 2026-08-26)
+
+Justice-system lifecycle and knowledge graph. Not a topical silo: one hub, one typed model, two
+integrative pages, and the rendering defect the link audit found. Details in
+`docs/audits/knowledge-expansion-wave-15-qa.md`, with programme-level findings in
+`docs/research/waves-12-15-cross-wave-findings.md`.
+
+- **The hub is `/justice-system`, decided on architecture rather than preference.** It is about
+  all nine sections rather than about justice principles; `/timeline` and `/comparisons` already
+  establish the pattern for a corpus-spanning page at top level; and every country dossier
+  already has a `/countries/{slug}/justice-system` module, so the hub is the general case of a
+  vocabulary the corpus already uses.
+- **The relationship model adds exactly one term.** The brief offered nine and said to implement
+  only what existing models cannot express. Eight already are — `relatedInstitutions` is
+  performedBy, `counterExamples` is contrastsWith, oversight guides are overseenBy, and so on.
+  **Order** is the one thing nothing recorded, so `mayPrecede` is the whole addition, and it is
+  named for what it asserts: the sequence is one a system _may_ use.
+- **The anti-linearity guarantees are structural, not editorial.** Nine of eleven stages are
+  `required: false`; `exits` and `variation` are required fields; and the validator fails a model
+  in which fewer than half the stages branch — the one rule that would otherwise pass every check
+  while teaching precisely the error the wave exists to prevent. A four-stage chain is fed to it
+  in a test. Cycles are permitted and correct: appeal returns a disposition to adjudication.
+- **No graph library and no client JavaScript.** Semantic HTML at build time. The whole wave cost
+  **32 bytes of JS** — a manifest entry for one new route.
+- **The audit found dead data.** `Guide.relatedInstitutions` was populated on 58 guides,
+  validated by the content tests, and **never rendered** — readers could not follow it, crawlers
+  could not see it, and three institution pages were reachable only from the institutions index.
+  `Connections` is now shared between guide and reference pages. That one fix added 82 edges, and
+  the graph finished the wave with **zero orphans, zero weakly linked pages and zero dead ends**.
+- **Six of the brief's eight supporting-page candidates were cannibalistic**, which the brief
+  anticipated. Two genuinely new pages were written, and a test plants a real paragraph from
+  `/courts/what-do-courts-do` to prove they reproduce nothing.
+- **Three mutations needed a second pass, for three different reasons** — one test defect, one
+  badly chosen mutation, one that broke the build and was therefore no proof at all. The
+  distinction is recorded rather than smoothed over.
+- Validation: 4543 tests / 68 files; **421 routes / 421 sitemap / 423 pages**; Playwright 790
+  passed / 4 skipped / 0 failed; route matrix 552/552. Ten mutation proofs, 10/10 valid.
+
+## Programme close — Knowledge Expansion Waves 12–15
+
+Four waves on one branch, one push. Baseline `6fedbe9`.
+
+- **+33 routes, +12 sources, +1053 tests, +32 bytes of JS.** The `out/` directory grew 12.1%,
+  and the cause is content plus the newly rendered Connections block on 58 guides — not tooling,
+  and not described as optimisation.
+- **Seven consecutive waves with no new institution record.** The recurring thing keeps turning
+  out to be a function whose institutional embodiments differ in kind. Wave 14 produced the
+  sharpest case: Germany and Brazil vest admission to the bar in a professional body, and England
+  and Wales constitutes lawyers as no status at all, so there was no third member of the family
+  to describe.
+- **The brief and the evidence disagreed three times**, each documented: a capacity route the
+  repository's own restricted-claim safeguard forbids, a Wave 14 candidate list already delivered
+  by Wave 11, and six Wave 15 candidates that duplicated existing pages.
+- **Five mutations survived a first pass across the programme, and every one exposed a defect in
+  a test rather than in the content.** No content was changed to accommodate a surviving mutation.
+- **The recurring test-design lesson: the unit of analysis is usually the block.** Wave 11's
+  same-sentence denial rule is right for assertions and wrong for attribution (Wave 13),
+  qualification (Wave 14) and set-up sentences (Wave 15) — each discovered independently, each
+  after a mutation survived.
+- **The final gate caught two accessibility regressions and one stale route assertion**, all
+  fixed rather than waived.
+
+Delivered on `feat/knowledge-expansion-waves-12-15`. Not merged, not deployed.

@@ -426,6 +426,104 @@ export const PROFESSIONS: readonly Profession[] = [
     reviewedOn: '2026-08-10',
     factsVerifiedOn: '2026-08-10',
   },
+
+  /* ------------------------------------------------------------------------
+     Wave 14 — the defence lawyer.
+
+     Wave 11 identified this as a genuine gap and did not fill it, because the
+     evidence then in hand described defence FUNDING rather than the profession.
+     The gate applied here was whether primary text supports each field the record
+     must carry. Two systems constitute the lawyer in law — BRAO § 1 and CF Art. 133
+     with Lei 8.906 Art. 2 — and both vest admission and discipline in a professional
+     body. That earns the record. What is NOT earned, and is stated rather than
+     invented, is the qualification route in any country: no source for it was
+     obtained, so trainingRouteShape stays structural, as the schema requires.
+     ------------------------------------------------------------------------ */
+  {
+    slug: 'defence-lawyer',
+    title: 'Defence lawyer',
+    shortTitle: 'Defence lawyer',
+    summary:
+      'The legally admitted professional who acts for a person facing a criminal case — constituted in some systems as an organ of the administration of justice rather than as a private service provider.',
+    section: 'defence',
+    question: 'What is a defence lawyer, and who decides who may be one?',
+    purpose:
+      'The International Covenant on Civil and Political Rights states the declared standard that a person charged is entitled to defend themselves in person or through legal assistance of their own choosing, and to communicate with counsel — a declared standard rather than the law of any particular state. Domestically, a person facing the state in a criminal case is opposed by professionals and bound by procedure they did not design. The role exists so that the case against them is actually tested — which is a condition of the verdict being worth anything, not a favour to the accused. Two of the systems described here say so in their own texts: the lawyer is placed inside the administration of justice rather than beside it.',
+    institutionalContext:
+      'Germany constitutes the Rechtsanwalt by statute as an independent organ of the administration of justice, admitted by a Rechtsanwaltskammer formed for the district of each Oberlandesgericht. Brazil makes the advogado constitutionally indispensable to the administration of justice, with the exercise of advocacy and the designation itself exclusive to those inscribed in the Ordem dos Advogados do Brasil. In both, admission sits with a professional body rather than with a government department — Brazilian statute stating expressly that the body maintains no functional or hierarchical link with organs of public administration.',
+    ethicsNote:
+      'German law states the basic duties directly: the Rechtsanwalt may enter into no ties that endanger their professional independence; is bound to confidentiality covering everything that has become known in the exercise of the profession, excepting facts that are obvious or by their significance require no secrecy; may not conduct themselves unobjectively, which the provision defines as including the knowing dissemination of untruths or disparaging statements the proceedings gave no occasion for; and may not act where they have already advised or represented another client in the same matter in a conflicting interest. Independence, confidentiality, objectivity and freedom from conflicts are not aspirations attached to the role — they are its statutory content.',
+    responsibilities: [
+      'Advising the accused person on their legal position and on the decisions that are theirs to make',
+      'Obtaining and examining the material the case rests on, so far as the applicable code allows',
+      'Testing whether the case is proved to the standard the law requires',
+      'Ensuring the procedures the law provides are actually followed',
+      'Acting for the client’s legal interests, which is not the same as acting on their instructions in every particular',
+    ],
+    decisionAuthority: [
+      'How the defence is conducted, within the client’s instructions and the professional rules',
+      'What applications to make and what material to challenge',
+      'Whether a conflict prevents acting at all — a decision the lawyer must take against their own interest',
+    ],
+    constraints: [
+      'Confidentiality binds the lawyer and is not absolute in any system researched here',
+      'Acting is prohibited where the lawyer has advised or represented another client in the same matter in a conflicting interest',
+      'Conduct in proceedings is regulated: German law forbids unobjective conduct in defined terms',
+      'Access to case material is governed by the applicable code and may be restricted at defined stages',
+    ],
+    oversight: [
+      'Admission and discipline by a professional body rather than by a government department',
+      'In Germany, the Rechtsanwaltskammer that admitted or received the member',
+      'In Brazil, the OAB, which statute gives exclusively the representation, defence, selection and discipline of advogados nationwide, through a Conselho Federal and Conselhos Seccionais',
+      'Judicial control of the proceedings in which the lawyer appears',
+    ],
+    trainingRouteShape: [
+      'A law qualification, followed by a period of supervised or practical preparation',
+      'Admission by the professional body that will hold the disciplinary jurisdiction, rather than by the state directly',
+      'Continuing professional obligations that persist for as long as admission does',
+    ],
+    commonMisunderstandings: [
+      'That the role is to secure an acquittal whatever the facts. It is to protect the accused person’s legal interests and to make the case be proved, which is a different assignment and one the law defines.',
+      'That a defence lawyer is a private service provider like any other. German law makes the Rechtsanwalt an independent organ of the administration of justice; Brazilian law makes the advogado indispensable to that administration and describes their private ministry as rendering a public service.',
+      'That "defence lawyer" names one thing across systems. Lawyer, barrister, solicitor, advocate, attorney, advogado and Rechtsanwalt are terms of the systems that use them, several coexist within a single system with different rights, and none is a translation of the others.',
+      'That a court-appointed or publicly funded lawyer is a state employee. Appointment assigns a lawyer to a case; employment is a relationship between a lawyer and an organisation, and the defence cluster sets out how differently systems combine the two.',
+      'That because the profession is regulated, it answers to the government. In the systems described here admission and discipline sit with a professional body, and Brazilian statute states expressly that the body maintains no functional or hierarchical link with public administration.',
+    ],
+    jurisdictionNote:
+      'What a defence lawyer may do, what they are called, who admits them and what they are constituted as differ in every system. England and Wales does not constitute lawyers as a status at all — the Legal Services Act reserves six named activities and determines entitlement by authorisation or exemption for each. Nothing in this record should be read as describing a system it does not name.',
+    uncertainty: [
+      'Qualification routes were not researched for any country: no source establishing examinations, training periods or entry requirements was obtained, so trainingRouteShape is structural only and names no country.',
+      'Remuneration, numbers, distribution and specialisation within the profession were not researched and are not described.',
+      'Only two systems constitute the profession in the primary text read here. The English and Welsh material describes the regulation of activities, not the profession, and no French source could be obtained — legifrance.gouv.fr returned HTTP 403, which is an access limitation and not evidence about French arrangements.',
+    ],
+    relatedInstitutions: ['prosecution-service'],
+    relatedProfessions: ['prosecutor', 'judge'],
+    countryExamples: [
+      {
+        countrySlug: 'germany',
+        note: 'Section 1 of the Federal Lawyers’ Act consists of a single sentence — the Rechtsanwalt is an independent organ of the administration of justice — and section 3 adds that everyone has the right, within the statutory provisions, to be advised and represented by a Rechtsanwalt of their choice, with the right of audience restrictable only by federal statute.',
+      },
+      {
+        countrySlug: 'brazil',
+        note: 'Article 133 of the Constitution makes the advogado indispensable to the administration of justice and inviolable for their acts and statements in the exercise of the profession, within the limits of the law. Lei 8.906/1994 reserves postulation and legal consultancy to those inscribed in the OAB — expressly excepting the petition of habeas corpus, which anyone may make.',
+      },
+    ],
+    sources: [
+      'de-brao-anwaltschaft',
+      'br-cf-1988',
+      'br-lei-8906-1994-oab',
+      'uk-legal-services-act-2007',
+      'iccpr',
+      'de-stpo-137-verteidiger',
+      'de-stpo-147-akteneinsicht',
+      'de-stpo-148-verkehr-verteidiger',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    updatedOn: '2026-08-26',
+    reviewedOn: '2026-08-26',
+    factsVerifiedOn: '2026-08-26',
+  },
 ];
 
 export const PUBLISHED_PROFESSIONS: readonly Profession[] = PROFESSIONS.filter(

@@ -835,4 +835,2052 @@ export const JUSTICE_GUIDES: readonly Guide[] = [
       },
     ],
   },
+  {
+    slug: 'why-government-is-bound-by-law',
+    title: 'Why government is bound by law',
+    shortTitle: 'Why government is bound by law',
+    question: 'What actually stops a government from doing as it likes?',
+    summary:
+      'Constitutions answer this in text, not in sentiment. Germany binds the executive and the judiciary to law and opens the courts against public authority; South Africa requires administrative action to be lawful, reasonable and procedurally fair; Brazil forbids any law excluding a rights claim from the courts.',
+    entityType: 'concept',
+    section: 'justice',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'what-is-the-rule-of-law',
+      'limits-on-public-power',
+      'why-justice-systems-need-oversight',
+    ],
+    relatedInstitutions: ['constitutional-court'],
+    sources: [
+      'de-gg-rechtsstaat-articles',
+      'za-constitution',
+      'br-cf-1988',
+      'ke-constitution',
+      'udhr',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-08-26',
+    publishedOn: '2026-08-26',
+    reviewedOn: '2026-08-26',
+    factsVerifiedOn: '2026-08-26',
+    readingTimeMinutes: 9,
+    keyTerms: ['rule-of-law', 'judicial-review'],
+    uncertainty: [
+      'This page describes constitutional arrangements. It establishes nothing about whether any government complies with them, which is an empirical question no constitutional text can answer.',
+      'Four constitutions were read from primary text for this page. Where a country is named the statement is limited to what its own instrument says.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'The rule of law is often stated as a sentiment: that government should be under the law rather than above it. Constitutions state it as a provision, and reading the provisions is more instructive than reading the sentiment, because they show what the binding actually consists of.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This explains how constitutions bind public power. It is not legal advice, it does not assess any government’s compliance, and it does not describe how to bring a claim in any country.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'A state that makes law, applies it and adjudicates disputes about it holds every relevant power at once. The problem is not that officials are assumed to be dishonest; it is that a power with no external check produces decisions no one outside the institution has any reason to accept.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Binding government to law answers that by making the state a subject of the legal order rather than only its author. That is a structural claim, and constitutions make it in structural language.',
+        claim: 'analysis',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'The executive and the judiciary bound by law — Germany',
+            description:
+              'Article 20(3) of the Basic Law: "Die Gesetzgebung ist an die verfassungsmäßige Ordnung, die vollziehende Gewalt und die Rechtsprechung sind an Gesetz und Recht gebunden" — legislation is bound by the constitutional order, and the executive and the judiciary are bound by law and justice. The binding runs to all three, and it is stated in one sentence.',
+          },
+          {
+            term: 'A guaranteed route to a court — Germany',
+            description:
+              'Article 19(4): "Wird jemand durch die öffentliche Gewalt in seinen Rechten verletzt, so steht ihm der Rechtsweg offen" — where a person’s rights are violated by public authority, recourse to the courts is open. A binding with no route to enforce it would be a statement of intent; this is the provision that makes it a claim.',
+          },
+          {
+            term: 'A standard the administration must meet — South Africa',
+            description:
+              'Section 33(1): "Everyone has the right to administrative action that is lawful, reasonable and procedurally fair." Section 33(2) adds that a person whose rights have been adversely affected is entitled to written reasons, and section 33(3) requires legislation providing for review by a court or an independent tribunal. Lawfulness, reasonableness, fairness and reasons, in one section.',
+          },
+          {
+            term: 'A prohibition on closing the courthouse — Brazil',
+            description:
+              'Article 5º XXXV: "a lei não excluirá da apreciação do Poder Judiciário lesão ou ameaça a direito" — the law shall not exclude from the appraisal of the Judiciary any injury or threat to a right. The provision binds the legislature specifically, by forbidding it to legislate access away. Article 5º XXXVII adds that there shall be no exceptional court or tribunal.',
+          },
+          {
+            term: 'Values that bind every official act — Kenya',
+            description:
+              'Article 10 makes the national values and principles of governance, which expressly include the rule of law, binding on all State organs, State officers, public officers and all persons whenever any of them applies or interprets the Constitution, enacts, applies or interprets any law, or makes or implements public policy decisions. The binding attaches to the act, not to the office.',
+          },
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Four different mechanisms, not four phrasings of one',
+        text: 'Germany binds the branches and then opens a route to court. South Africa sets a quality standard for administrative action and requires reasons. Brazil forbids the legislature to remove access. Kenya attaches the values to every application of law by anyone. These are genuinely different techniques, and a system can have one without the others.',
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Saying government is bound by law just means officials should obey the rules.',
+        reality:
+          'It means the state is a subject of the legal order and answerable within it. Germany’s Article 19(4) opens the courts against public authority, and Brazil’s Article 5º XXXV forbids the law itself from closing them. Those are enforceable positions, not exhortations.',
+      },
+      {
+        claim: 'A constitution that says the right things means a government behaves well.',
+        reality:
+          'A provision establishes an arrangement. Whether it functions is an empirical question about practice, and this site describes the arrangements without inferring compliance from text.',
+      },
+      {
+        claim: 'Being bound by law means the government cannot act decisively.',
+        reality:
+          'These provisions govern how power is exercised, not whether. Every system described here investigates, prosecutes, adjudicates and punishes; what the provisions require is that it be done on a legal basis and be capable of review.',
+      },
+      {
+        claim: 'Only democracies bind their governments this way.',
+        reality:
+          'That is a claim about political systems this site does not make. The four constitutions described here are the ones read for this page, and nothing here is a survey of which states have such provisions or of whether they are honoured.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'The useful question about any system is which of four things its constitution actually does.',
+      },
+      {
+        kind: 'list',
+        ordered: true,
+        items: [
+          'Does it bind the branches to law in terms — Germany, Article 20(3)?',
+          'Does it guarantee a route to a court against public authority — Germany, Article 19(4)?',
+          'Does it set a quality standard for official action and require reasons — South Africa, section 33?',
+          'Does it forbid the legislature from removing access — Brazil, Article 5º XXXV?',
+        ],
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'What these provisions share is that they make the state answerable to something other than its own judgement. The Universal Declaration of Human Rights states the declared principle of a right to an effective remedy by a competent tribunal for acts violating fundamental rights; the constitutions above are what turn a declared principle into a domestic claim.',
+        claim: 'fact',
+        sources: ['udhr'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Binding is not distrust',
+        text: 'None of this assumes officials act badly. It assumes that a power capable of being exercised wrongly should be capable of being examined, which is a claim about institutions rather than about the people in them.',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [what the rule of law is](/justice/what-is-the-rule-of-law), [limits on public power](/justice/limits-on-public-power), and [constitutional courts](/institutions/constitutional-court).',
+      },
+    ],
+  },
+  {
+    slug: 'limits-on-public-power',
+    title: 'Limits on public power',
+    shortTitle: 'Limits on public power',
+    question: 'What limits does law place on what the state may do to a person?',
+    summary:
+      'Four recurring limits appear in constitutional text: an act must have a legal basis that existed beforehand, the person must be heard, the decision must be capable of review, and some things may not be done at all.',
+    entityType: 'concept',
+    section: 'justice',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'why-government-is-bound-by-law',
+      'legality-and-non-retroactivity',
+      'what-is-due-process',
+    ],
+    relatedInstitutions: ['constitutional-court'],
+    sources: [
+      'de-gg-rechtsstaat-articles',
+      'br-cf-1988',
+      'za-constitution',
+      'ke-constitution',
+      'iccpr',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-08-26',
+    publishedOn: '2026-08-26',
+    reviewedOn: '2026-08-26',
+    factsVerifiedOn: '2026-08-26',
+    readingTimeMinutes: 9,
+    keyTerms: ['rule-of-law', 'due-process'],
+    uncertainty: [
+      'The four limits described here are drawn from the constitutions read for this wave. They are a way of reading those texts, not a universal scheme, and a system may organise the same protections differently.',
+      'Proportionality — the doctrine several constitutional courts use to assess whether a limit on a right goes further than necessary — is not described. None of the four constitutions read here states it in terms, and the jurisprudence that develops it was not researched.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'The state may search, arrest, prosecute, try, convict and detain. Every one of those is something a private person may not do, and every one is bounded. The bounds recur across systems in four recognisable forms, and they are worth separating because a system can be strong on one and weak on another.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This explains categories of legal limit on state action. It is not legal advice, it states no country’s procedure, and it contains nothing about how to resist, delay or avoid a lawful process.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'Coercive power is granted because a society needs it exercised — against violence, fraud, and harms private parties cannot resolve between themselves. The limits exist because the same power exercised without basis, without hearing the person, or without any possibility of correction produces outcomes that are indistinguishable from arbitrary ones even when they are right.',
+        claim: 'analysis',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'A legal basis that existed first',
+            description:
+              'Brazil’s Article 5º XXXIX: "não há crime sem lei anterior que o defina, nem pena sem prévia cominação legal" — no crime without a prior law defining it, no penalty without prior legal imposition. Germany’s Article 103(2) states the same limit from the other direction: an act may be punished only if its punishability was determined by law before the act was committed.',
+          },
+          {
+            term: 'The person must be heard',
+            description:
+              'Germany’s Article 103(1): "Vor Gericht hat jedermann Anspruch auf rechtliches Gehör" — before a court, everyone is entitled to a hearing in accordance with law. Brazil’s Article 5º LV assures litigants in judicial and administrative proceedings, and the accused generally, "o contraditório e ampla defesa" — the adversarial principle and full defence, with the means and remedies inherent to it.',
+          },
+          {
+            term: 'The decision must be reviewable',
+            description:
+              'Germany’s Article 19(4) opens the courts where public authority violates rights. Brazil’s Article 5º XXXV forbids the law from excluding an injury or threat to a right from judicial appraisal. South Africa’s section 33(3) requires legislation providing for review of administrative action by a court or an independent and impartial tribunal.',
+          },
+          {
+            term: 'Some things may not be done at all',
+            description:
+              'Germany’s Article 19(2): a fundamental right may in no case be encroached upon in its essential content. Brazil’s Article 5º XXXVII forbids exceptional courts or tribunals, and Article 5º LVI makes evidence obtained by unlawful means inadmissible. These are not balancing rules; they are prohibitions.',
+          },
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'The limits protect the process as much as the person',
+        text: 'Brazil’s exclusion of unlawfully obtained evidence is the clearest case. It is stated as a rule about the process rather than as a remedy for the individual: material obtained unlawfully is inadmissible, whatever it shows. A system that admitted it would be accepting that the way a fact was obtained does not matter, which is a different proposition about what a finding is worth.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Some limits are about time rather than substance. Brazil’s Article 5º LXXVIII guarantees, in the judicial and administrative spheres, reasonable duration of proceedings and the means that guarantee the speed of their handling; Kenya’s Article 159(2)(b) states as a guiding principle that justice shall not be delayed. A process that is fair but never ends has failed the person in it.',
+        claim: 'fact',
+        sources: ['br-cf-1988', 'ke-constitution'],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Limits on state power make it harder to deal with crime.',
+        reality:
+          'They govern how the state acts, not whether. Every system described here investigates, prosecutes and punishes; what the limits require is a prior legal basis, a hearing, and the possibility of review.',
+      },
+      {
+        claim: 'Everything the state does can be balanced against the public interest.',
+        reality:
+          'Some limits are absolute in their terms. Germany’s Article 19(2) bars encroachment on the essential content of a fundamental right, and Brazil’s Article 5º LVI excludes unlawfully obtained evidence without a balancing test on its face.',
+      },
+      {
+        claim: 'These protections only matter to people who are accused of something.',
+        reality:
+          'Three of the four are about administrative and civil action as much as criminal. South Africa’s section 33 governs administrative action generally, and Brazil’s LXXVIII covers the administrative sphere expressly.',
+      },
+      {
+        claim:
+          'A law can be applied to conduct that happened before it existed if the conduct was bad enough.',
+        reality:
+          'Both Germany and Brazil forbid that in terms, and Brazil states the one permitted direction: Article 5º XL provides that criminal law shall not be retroactive, save to benefit the accused.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Systems differ in where they put each limit, which is why reading only one instrument gives a partial picture.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'In the constitution as a right — Germany’s Article 103, Brazil’s Article 5º.',
+          'In the constitution as a standard for official conduct — South Africa’s section 33.',
+          'In the constitution as a binding value applying to every act of interpretation — Kenya’s Article 10.',
+          'In ordinary procedural law, where the constitution is silent and the code carries the guarantee.',
+        ],
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'The International Covenant on Civil and Political Rights carries fair-trial guarantees for states party to it, including the right to a competent, independent and impartial tribunal established by law. It states a standard; the constitutional provisions above are what make a claim available domestically, and only the second kind of provision can be enforced in a national court.',
+        claim: 'fact',
+        sources: ['iccpr'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Limits are not the same as weakness',
+        text: 'A state that acts on a legal basis, hears the person affected, and submits its decision to review is a state whose decisions can be relied on. The limits are what make the exercise of power something other than the assertion of it.',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [why government is bound by law](/justice/why-government-is-bound-by-law), [legality and non-retroactivity](/justice/legality-and-non-retroactivity), and [what due process is](/justice/what-is-due-process).',
+      },
+    ],
+  },
+  {
+    slug: 'legality-and-non-retroactivity',
+    title: 'Legality and non-retroactivity',
+    shortTitle: 'Legality and non-retroactivity',
+    question:
+      'Can a person be punished for something that was not an offence when they did it?',
+    summary:
+      'Constitutions answer no, and say so in almost identical words across very different systems: no crime without a prior law, no penalty without prior legal imposition. Brazil states the one permitted exception — retroactivity that benefits the accused.',
+    entityType: 'concept',
+    section: 'justice',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: ['limits-on-public-power', 'legal-certainty', 'why-government-is-bound-by-law'],
+    relatedInstitutions: ['constitutional-court'],
+    sources: ['de-gg-rechtsstaat-articles', 'br-cf-1988', 'udhr', 'iccpr'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-08-26',
+    publishedOn: '2026-08-26',
+    reviewedOn: '2026-08-26',
+    factsVerifiedOn: '2026-08-26',
+    readingTimeMinutes: 7,
+    keyTerms: ['rule-of-law', 'legal-certainty'],
+    uncertainty: [
+      'Two constitutions were read from primary text for this page. The principle appears widely, but this page states it only for the systems whose text was read, and describes no country’s case law on how the principle is applied at the margins.',
+      'How courts treat changes in sentencing law, in limitation periods, or in procedural rules is a body of jurisprudence that was not researched and is not described.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'The principle is usually given in Latin — nullum crimen, nulla poena sine lege — and it contains two demands that are worth separating. The conduct must have been criminal when it was done, and the punishment must have been provided for when it was done.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This explains a constitutional principle and how two systems state it. It is not legal advice and describes no country’s case law.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'A person can only regulate their conduct against rules that exist. Punishing someone under a rule created afterwards asks them to have complied with something unknowable, and it hands the state a power it could use against anyone by legislating after the fact.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'paragraph',
+        text: 'That is why the principle is usually placed among the strongest protections in a constitution rather than in ordinary law: it is a limit on the legislature, and a limit on the legislature has to sit somewhere the legislature cannot reach.',
+        claim: 'analysis',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'Brazil — stated as two prohibitions and one exception',
+            description:
+              'Article 5º XXXIX: "não há crime sem lei anterior que o defina, nem pena sem prévia cominação legal" — there is no crime without a prior law defining it, and no penalty without prior legal imposition. Article 5º XL then states the exception, and its direction: "a lei penal não retroagirá, salvo para beneficiar o réu" — criminal law shall not be retroactive, save to benefit the accused.',
+          },
+          {
+            term: 'Germany — stated as a condition on punishing',
+            description:
+              'Article 103(2) of the Basic Law: "Eine Tat kann nur bestraft werden, wenn die Strafbarkeit gesetzlich bestimmt war, bevor die Tat begangen wurde" — an act may be punished only if its punishability was determined by law before the act was committed. Article 103(3) adds ne bis in idem: no one may be punished more than once for the same act under the general criminal laws.',
+          },
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'The asymmetry is deliberate',
+        text: 'Brazil’s exception runs one way only. A later law may be applied backwards if it helps the accused — a reduced penalty, a decriminalised act — and may not if it harms them. That asymmetry follows from what the principle is for: it protects a person against being surprised by the state, not the state against being bound by its own change of mind.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The principle also does work beyond the criminal law’s edges. Brazil’s Article 5º XXXVI provides that the law shall not impair a vested right, a perfect juridical act or res judicata — the same underlying idea applied to settled legal positions rather than to offences, and the subject of [legal certainty](/justice/legal-certainty).',
+        claim: 'fact',
+        sources: ['br-cf-1988'],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Non-retroactivity means the law can never change.',
+        reality:
+          'It means a change cannot reach backwards to make past conduct punishable. Legislatures amend criminal law constantly; what they cannot do is apply the amendment to what was already done.',
+      },
+      {
+        claim: 'Retroactivity is always forbidden.',
+        reality:
+          'Brazil expressly permits it in one direction: Article 5º XL allows criminal law to be retroactive where it benefits the accused.',
+      },
+      {
+        claim: 'The principle protects wrongdoers from consequences.',
+        reality:
+          'It requires that the consequence existed in law before the act. Conduct criminal at the time remains punishable; the principle bars punishing conduct that was not.',
+      },
+      {
+        claim: 'This is a technicality that rarely matters.',
+        reality:
+          'It is the limit that prevents a state from legislating against a person after identifying them. Both constitutions here place it among fundamental rights rather than in ordinary procedural law.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'The two texts here express the same principle with different emphasis, and the difference is instructive.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Brazil states it as two prohibitions — no crime, no penalty — and then names the exception.',
+          'Germany states it as a single condition on the power to punish, and adds ne bis in idem beside it.',
+        ],
+      },
+      {
+        kind: 'paragraph',
+        text: 'International instruments state the principle for states party to them. The Universal Declaration of Human Rights carries the declared principle that no one shall be held guilty of a penal offence on account of an act which did not constitute a penal offence under national or international law at the time it was committed. As always on this site, that establishes an international standard and not the law of any particular state.',
+        claim: 'fact',
+        sources: ['udhr'],
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'For a reader, the practical significance is that the question "was this lawful?" always has a date attached. Whether conduct was an offence is answered by the law as it stood when the conduct occurred, not by the law as it stands when the question is asked.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'A limit on the legislature, not on the courts',
+        text: 'This principle constrains what may be enacted and applied, not whether a court may decide a case. A court applying a law that existed at the time is doing exactly what the principle requires of it.',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [limits on public power](/justice/limits-on-public-power), [legal certainty](/justice/legal-certainty), and [Brazil](/countries/brazil).',
+      },
+    ],
+  },
+  {
+    slug: 'legal-certainty',
+    title: 'Legal certainty',
+    shortTitle: 'Legal certainty',
+    question: 'Why does it matter that people can know where they stand in law?',
+    summary:
+      'Because a rule you cannot find, cannot understand, or that can be changed against you afterwards cannot guide anything. Constitutions protect settled positions directly — vested rights, completed acts, and decisions that have become final.',
+    entityType: 'concept',
+    section: 'justice',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'legality-and-non-retroactivity',
+      'why-government-is-bound-by-law',
+      'what-is-the-rule-of-law',
+    ],
+    relatedInstitutions: ['constitutional-court'],
+    sources: ['br-cf-1988', 'de-gg-rechtsstaat-articles', 'ke-constitution'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-08-26',
+    publishedOn: '2026-08-26',
+    reviewedOn: '2026-08-26',
+    factsVerifiedOn: '2026-08-26',
+    readingTimeMinutes: 7,
+    keyTerms: ['legal-certainty', 'rule-of-law'],
+    uncertainty: [
+      'This page describes constitutional provisions protecting settled legal positions. The wider doctrine of legal certainty — including how courts treat legitimate expectations and changes of administrative practice — was not researched and is not described.',
+      'Two constitutions were read from primary text. Nothing here describes any other system.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Legal certainty is the requirement that law be knowable in advance and stable enough to rely on. It is less dramatic than the other rule-of-law principles and it does more day-to-day work than most of them, because almost every decision a person makes about property, contracts, employment or conduct assumes the legal position will still be the legal position tomorrow.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This explains a principle and the constitutional provisions that carry it. It is not legal advice and describes no country’s case law.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'Law claims to guide conduct. A rule that is unknowable cannot guide, and a rule that can be altered retrospectively guides only until someone decides otherwise. Certainty is the property that makes the other rule-of-law commitments operable rather than nominal.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'paragraph',
+        text: 'It also has a quieter function: it limits the advantage the state gains from being both the maker of rules and a party under them. A government that could reopen settled positions would hold a power no other litigant has.',
+        claim: 'analysis',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'Brazil protects three settled positions by name in a single clause. Article 5º XXXVI provides that the law shall not impair a vested right, a perfect juridical act, or res judicata — that is, an entitlement already acquired, a legal act already validly completed, and a judicial decision from which no appeal lies. The three cover most of the ways a legal position becomes settled.',
+        claim: 'fact',
+        sources: ['br-cf-1988'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Finality is a feature, not an oversight',
+        text: 'Res judicata protection can look like a system defending its own mistakes. It is the price of a different guarantee: that a dispute once decided stays decided, and that a person cannot be pursued indefinitely by whoever has the resources to keep asking. Systems answer the tension by placing correction earlier — in appeal and review — rather than by leaving every judgment permanently open.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Certainty has a temporal dimension as well as a substantive one. Brazil’s Article 5º LXXVIII guarantees reasonable duration of proceedings and the means that guarantee the speed of their handling, in the judicial and administrative spheres; Kenya’s Article 159(2)(b) states as a guiding principle of judicial authority that justice shall not be delayed. A legal position that takes a decade to establish was not certain during the decade.',
+        claim: 'fact',
+        sources: ['br-cf-1988', 'ke-constitution'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'The criminal-law expression of the same idea is the prohibition on retroactivity, which [legality and non-retroactivity](/justice/legality-and-non-retroactivity) sets out. Germany’s Article 103(2) requires that punishability be determined by law before the act; that is legal certainty applied where the stakes are highest.',
+        claim: 'fact',
+        sources: ['de-gg-rechtsstaat-articles'],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Legal certainty means the law should never change.',
+        reality:
+          'It means changes should operate prospectively and settled positions should hold. Legislatures amend law constantly; what certainty constrains is reaching backwards into positions already fixed.',
+      },
+      {
+        claim: 'Certainty and fairness pull in opposite directions.',
+        reality:
+          'They frequently reinforce each other. A person cannot be treated fairly under a rule they could not have known, and a decision that can be reopened indefinitely is not a resolution.',
+      },
+      {
+        claim: 'Res judicata exists to protect courts from being second-guessed.',
+        reality:
+          'It protects the parties from indefinite litigation. Systems place the opportunity to correct error before finality — in appeal and review — rather than removing finality.',
+      },
+      {
+        claim: 'Certainty is only about written rules.',
+        reality:
+          'Brazil’s clause protects a vested right and a perfect juridical act alongside res judicata, which are positions created by conduct and decision rather than by legislation.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Where a system places the principle tells you how strongly it holds.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'As a constitutional right against the legislature — Brazil, Article 5º XXXVI.',
+          'As a constitutional condition on punishment — Germany, Article 103(2).',
+          'As a guiding principle of judicial authority — Kenya, Article 159(2)(b) on delay.',
+        ],
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'The everyday consequence is that a person can act on the law as it is. That sounds modest until the alternative is described: a system in which the rules governing what you did yesterday are settled by what is decided tomorrow.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Certainty is not immunity',
+        text: 'A settled legal position is protected; conduct that was unlawful when done is not made lawful by the passage of time. The principle governs the stability of the rules, not the consequences of breaking them.',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [legality and non-retroactivity](/justice/legality-and-non-retroactivity), [what the rule of law is](/justice/what-is-the-rule-of-law), and [appeal](/glossary/appeal).',
+      },
+    ],
+  },
+  {
+    slug: 'equality-before-the-law',
+    title: 'Equality before the law',
+    shortTitle: 'Equality before the law',
+    question: 'What does it mean to say everyone is equal before the law?',
+    summary:
+      'At minimum, that the same rules apply regardless of who a person is. Some constitutions go further in the same sentence: South Africa pairs equality before the law with a right to equal protection and benefit of the law, which is a different and larger claim.',
+    entityType: 'concept',
+    section: 'justice',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: ['why-government-is-bound-by-law', 'what-is-justice', 'access-to-justice'],
+    relatedInstitutions: ['constitutional-court'],
+    sources: ['za-constitution', 'de-gg-rechtsstaat-articles', 'ke-constitution', 'udhr'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-08-26',
+    publishedOn: '2026-08-26',
+    reviewedOn: '2026-08-26',
+    factsVerifiedOn: '2026-08-26',
+    readingTimeMinutes: 8,
+    keyTerms: ['justice', 'rule-of-law'],
+    uncertainty: [
+      'This page describes what constitutional texts provide. It makes no assessment of whether any system achieves equality in practice, which is an empirical question these sources cannot answer.',
+      'Anti-discrimination law, the tests courts apply to differential treatment, and the jurisprudence on substantive equality were not researched and are not described.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'The phrase is old and does less work on its own than it appears to. Read narrowly it means the law is applied to people without regard to their rank — the same rule, the same court, the same procedure. Read more widely it means something about what the law contains, not only about how it is applied. Constitutions differ on which they promise.',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Two claims in one sentence — South Africa',
+        text: 'Section 9(1) reads: "Everyone is equal before the law and has the right to equal protection and benefit of the law." Equality BEFORE the law is about application: the same rules, applied the same way. Equal protection AND BENEFIT of the law is about content and reach: what the law provides, and whether it actually reaches the person. Placing both in one provision makes explicit a distinction that a shorter formula leaves ambiguous.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This explains what constitutional equality provisions say. It is not legal advice, it assesses no country, and it does not describe discrimination law.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'A legal system that applied different rules according to a person’s standing would not be enforcing law; it would be recording who currently has influence. Equality before the law is the commitment that makes a rule a rule rather than an instruction about particular people.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'paragraph',
+        text: 'It is also what makes the other principles coherent. A guarantee of a fair hearing, or of recourse against public authority, means little if it is available to some people and not others.',
+        claim: 'analysis',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'Germany — the narrow formula, stated first',
+            description:
+              'Article 3(1) of the Basic Law: "Alle Menschen sind vor dem Gesetz gleich" — all persons are equal before the law. Article 3(3) then lists grounds on which no one may be disadvantaged or favoured, and states separately that no one may be disadvantaged because of disability.',
+          },
+          {
+            term: 'South Africa — application and content together',
+            description:
+              'Section 9(1) gives both equality before the law and the right to equal protection and benefit of the law. Section 9(2) then states that equality includes the full and equal enjoyment of all rights and freedoms, and that measures designed to protect or advance persons disadvantaged by unfair discrimination may be taken to promote its achievement.',
+          },
+          {
+            term: 'Kenya — as a binding value on every official act',
+            description:
+              'Article 10 lists equality, human rights, non-discrimination and protection of the marginalised among the national values binding all State organs and officers whenever they apply or interpret law or make public policy. Article 159(2)(a) adds, as a principle of judicial authority, that justice shall be done to all "irrespective of status".',
+          },
+        ],
+      },
+      {
+        kind: 'paragraph',
+        text: 'The Kenyan formulation is worth isolating because it addresses the failure mode directly. "Justice shall be done to all, irrespective of status" is a principle stated to the courts about how they exercise authority, rather than a right asserted by a litigant — a different mechanism for the same commitment.',
+        claim: 'analysis',
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Equality before the law means everyone is treated identically.',
+        reality:
+          'It means the rules apply without regard to status. Systems routinely and lawfully treat people differently on grounds the law makes relevant — age, capacity, role — and South Africa’s section 9(2) expressly contemplates measures to advance persons disadvantaged by unfair discrimination.',
+      },
+      {
+        claim: 'Equality before the law and equal protection are the same thing.',
+        reality:
+          'South Africa’s section 9(1) states both, which would be redundant if they were. The first concerns how law is applied; the second concerns what it provides and whether it reaches the person.',
+      },
+      {
+        claim: 'If a constitution guarantees equality, the system is equal.',
+        reality:
+          'A provision establishes a commitment. Whether it is realised is an empirical question this site does not answer from constitutional text.',
+      },
+      {
+        claim: 'Equality before the law is only about criminal cases.',
+        reality:
+          'The provisions here are general. South Africa’s section 9 sits in the Bill of Rights and applies across the legal order, and Kenya’s Article 10 binds every application or interpretation of any law.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'The three texts show three ways of carrying the same commitment, and the differences are not stylistic.',
+      },
+      {
+        kind: 'list',
+        ordered: true,
+        items: [
+          'As an equality of application — Germany, Article 3(1).',
+          'As application plus content and reach — South Africa, section 9(1).',
+          'As a value binding every act of interpretation, plus a principle addressed to courts — Kenya, Articles 10 and 159(2)(a).',
+        ],
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'The Universal Declaration of Human Rights states the declared principle that all are equal before the law and entitled without any discrimination to equal protection of the law. As with every international instrument on this site, that establishes a declared standard rather than the law of any state; the constitutional provisions above are what make the commitment domestically enforceable.',
+        claim: 'fact',
+        sources: ['udhr'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'A right that is formally equal but practically unusable is the subject of [access to justice](/justice/access-to-justice). Equality before the law is a claim about the rules; whether a person can actually invoke them is a separate question, and constitutions increasingly address it separately too.',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [access to justice](/justice/access-to-justice), [what justice is](/justice/what-is-justice), and [South Africa](/countries/south-africa).',
+      },
+    ],
+  },
+  {
+    slug: 'access-to-justice',
+    title: 'Access to justice',
+    shortTitle: 'Access to justice',
+    question: 'What good is a legal right if a person cannot actually use it?',
+    summary:
+      'Constitutions increasingly treat access as a right in itself rather than assuming it. Kenya guarantees it expressly and constrains court fees; South Africa gives everyone the right to have a dispute decided by a court; Brazil forbids the law from excluding a rights claim from the judiciary.',
+    entityType: 'concept',
+    section: 'justice',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: ['equality-before-the-law', 'effective-remedy', 'why-government-is-bound-by-law'],
+    relatedInstitutions: ['constitutional-court', 'prosecution-service'],
+    sources: [
+      'ke-constitution',
+      'za-constitution',
+      'br-cf-1988',
+      'de-gg-rechtsstaat-articles',
+      'udhr',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-08-26',
+    publishedOn: '2026-08-26',
+    reviewedOn: '2026-08-26',
+    factsVerifiedOn: '2026-08-26',
+    readingTimeMinutes: 9,
+    keyTerms: ['justice', 'rule-of-law'],
+    uncertainty: [
+      'This page describes constitutional guarantees of access. It establishes nothing about whether courts are in practice accessible in any country — a question about cost, distance, delay, language and representation that constitutional text cannot answer.',
+      'Legal aid and representation are described only where a constitution states them. How states fund and organise representation is covered separately in the defence cluster.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'A right that exists in law and cannot be invoked in practice is a right in a weak sense. Access to justice is the name for the gap between the two, and for the arrangements that try to close it — courts a person can reach, procedures they can navigate, costs they can bear, and help where they cannot.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This explains access as a constitutional and institutional commitment. It is not legal advice, it does not tell anyone how to bring a case or obtain assistance, and it makes no assessment of any country’s courts.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'Every other principle on this site assumes someone can get to a forum. The rule of law, the limits on public power, the right to be heard, the right to a remedy — all of them presuppose that the person affected can put the question to a body with authority to answer it. Access is the precondition rather than an addition.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Access is not outcome',
+        text: 'It concerns the ability to use legal institutions, not what they decide. Access to justice does not mean winning, does not mean free representation in every matter, and does not mean every procedure is costless. A system can provide genuine access and decide against the person who used it — that is what deciding means.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'Kenya — an express guarantee, with a limit on fees',
+            description:
+              'Article 48: "The State shall ensure access to justice for all persons and, if any fee is required, it shall be reasonable and shall not impede access to justice." The provision is unusual in naming cost as the obstacle and constraining it directly, rather than leaving fees to ordinary legislation.',
+          },
+          {
+            term: 'South Africa — a right to have a dispute decided',
+            description:
+              'Section 34: "Everyone has the right to have any dispute that can be resolved by the application of law decided in a fair public hearing before a court or, where appropriate, another independent and impartial tribunal or forum." Note what it covers: any dispute resolvable by law, not only criminal matters, and a forum that need not be a court.',
+          },
+          {
+            term: 'Brazil — a prohibition on closing the route',
+            description:
+              'Article 5º XXXV forbids the law from excluding from the appraisal of the Judiciary any injury or threat to a right. Access is protected by binding the legislature rather than by promising a service.',
+          },
+          {
+            term: 'Germany — recourse against public authority',
+            description:
+              'Article 19(4) opens the courts where a person’s rights are violated by public authority, with the ordinary courts available where no other jurisdiction is established. This is narrower than the others — it addresses access against the state specifically — and correspondingly firm.',
+          },
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Kenya also addresses the form of the obstacle',
+        text: 'Article 159(2) directs that in exercising judicial authority the courts shall be guided by principles including that justice shall not be delayed, that alternative forms of dispute resolution — reconciliation, mediation, arbitration and traditional dispute resolution — shall be promoted, and that justice shall be administered "without undue regard to procedural technicalities". That last principle names something the other constitutions leave implicit: procedure itself can be the barrier.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Some constitutions attach assistance to access rather than leaving it to policy. South Africa’s section 35(2)(c) gives a detained person the right to have a legal practitioner assigned by the state and at state expense "if substantial injustice would otherwise result"; Brazil’s Article 5º LXXIV provides full and free legal assistance to those who prove insufficiency of resources. Those are different conditions — one about the consequence of going unrepresented, the other about means — and the difference is the subject of the defence cluster.',
+        claim: 'fact',
+        sources: ['za-constitution', 'br-cf-1988'],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Access to justice means free legal representation for everyone.',
+        reality:
+          'No constitution read here provides that. South Africa conditions state-funded counsel on substantial injustice otherwise resulting; Brazil conditions it on proof of insufficient resources; Kenya requires that fees be reasonable, not that they be absent.',
+      },
+      {
+        claim: 'Access to justice means getting the outcome you want.',
+        reality:
+          'It concerns the ability to bring a matter to a body with authority to decide it. A decision against the person is a use of the right, not a denial of it.',
+      },
+      {
+        claim: 'Access means going to court.',
+        reality:
+          'South Africa’s section 34 expressly contemplates another independent and impartial tribunal or forum, and Kenya’s Article 159(2)(c) directs that alternative forms of dispute resolution be promoted, including traditional mechanisms.',
+      },
+      {
+        claim: 'If the courts are open, access is achieved.',
+        reality:
+          'Openness is one condition. Kenya’s Article 48 names fees and Article 159(2) names delay and procedural technicality, which are barriers that leave the doors formally open.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Four constitutions, four different techniques for protecting the same thing.',
+      },
+      {
+        kind: 'list',
+        ordered: true,
+        items: [
+          'A positive state duty, with a fee constraint — Kenya, Article 48.',
+          'An individual right to have a dispute decided, before a court or another forum — South Africa, section 34.',
+          'A prohibition binding the legislature — Brazil, Article 5º XXXV.',
+          'A guaranteed route specifically against public authority — Germany, Article 19(4).',
+        ],
+      },
+      {
+        kind: 'paragraph',
+        text: 'A system may have any one of these without the others, and the choice determines who the guarantee runs against — the state as service provider, the state as adversary, or the legislature.',
+        claim: 'analysis',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'The Universal Declaration of Human Rights states the declared principle of a right to an effective remedy by a competent national tribunal for acts violating fundamental rights. Access is the operative half of that: a remedy that cannot be sought is not effective, whatever it provides.',
+        claim: 'fact',
+        sources: ['udhr'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'What a person can obtain once they reach a forum is the subject of [effective remedy](/justice/effective-remedy). How states provide and pay for representation is covered in the defence cluster, and this page does not restate it.',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [effective remedy](/justice/effective-remedy), [equality before the law](/justice/equality-before-the-law), and [how defence is funded](/defence/how-defence-is-funded).',
+      },
+    ],
+  },
+  {
+    slug: 'effective-remedy',
+    title: 'Effective remedy',
+    shortTitle: 'Effective remedy',
+    question: 'When the state gets something wrong, what is a person actually entitled to?',
+    summary:
+      'A remedy is what a forum can give, and constitutions state it in concrete terms: release from unlawful detention, review of an official decision, written reasons, invalidity of inconsistent law — and, in Brazil, indemnity for a wrongful conviction.',
+    entityType: 'concept',
+    section: 'justice',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'access-to-justice',
+      'why-government-is-bound-by-law',
+      'why-justice-systems-need-oversight',
+    ],
+    relatedInstitutions: ['constitutional-court', 'ombuds-and-rights-institution'],
+    sources: ['br-cf-1988', 'za-constitution', 'de-gg-rechtsstaat-articles', 'udhr', 'iccpr'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-08-26',
+    publishedOn: '2026-08-26',
+    reviewedOn: '2026-08-26',
+    factsVerifiedOn: '2026-08-26',
+    readingTimeMinutes: 8,
+    keyTerms: ['judicial-review', 'rule-of-law'],
+    uncertainty: [
+      'This page describes remedies stated in constitutional text. Whether a remedy is available on particular facts, and what a court would order, are questions of national law and procedure that are not described.',
+      'The extensive body of law on damages against public authorities was not researched and is not described.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'A right without a remedy is a description of how things ought to be. The remedy is the part that changes something: it is what the forum can actually do once it agrees the person was wronged.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This explains what remedies constitutions provide for. It is not legal advice, it states no entitlement on any facts, and it does not describe how to bring a claim.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'Institutions make mistakes, and some of their mistakes are extremely costly to the person on the receiving end. A system that acknowledged this and provided nothing would be conceding that the error stands. Remedies are how a legal order absorbs its own failures without abandoning the claim to be lawful.',
+        claim: 'analysis',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'Release from unlawful detention',
+            description:
+              'South Africa’s section 35(2)(d): a detained person has the right to challenge the lawfulness of the detention in person before a court "and, if the detention is unlawful, to be released". The remedy is stated in the same breath as the right to challenge, which is what makes the challenge worth bringing.',
+          },
+          {
+            term: 'Review of an official decision, and written reasons',
+            description:
+              'South Africa’s section 33(2) gives a person whose rights have been adversely affected by administrative action the right to written reasons, and section 33(3) requires legislation providing for review by a court or an independent and impartial tribunal. Reasons are a remedy in themselves: a decision that must be explained is a decision that can be contested.',
+          },
+          {
+            term: 'Invalidity of inconsistent law',
+            description:
+              'South Africa’s section 2 provides that the Constitution is the supreme law and that law or conduct inconsistent with it is invalid. Where the wrong is the rule rather than its application, the remedy operates on the rule.',
+          },
+          {
+            term: 'Compensation for judicial error',
+            description:
+              'Brazil’s Article 5º LXXV: the State shall indemnify the person convicted by judicial error, and also the person held beyond the term fixed in the sentence. Few constitutions state this so directly, and it is the clearest possible acknowledgement that a system can convict wrongly.',
+          },
+          {
+            term: 'A guaranteed forum against public authority',
+            description:
+              'Germany’s Article 19(4) opens recourse to the courts where public authority violates a person’s rights. It supplies the route rather than the outcome, and the other remedies here are useless without one.',
+          },
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'The Brazilian provision is worth pausing on',
+        text: 'Article 5º LXXV places, in the constitution, the proposition that criminal justice sometimes convicts the wrong person and that the state owes something when it does. That is not an admission of institutional weakness. It is what distinguishes a system that treats its judgments as reliable-but-fallible from one that treats them as beyond question, and it belongs beside appeal and review rather than in opposition to them.',
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'A remedy means compensation.',
+        reality:
+          'Most of the remedies here are not monetary: release, review, written reasons, invalidity of a rule. Brazil’s indemnity for judicial error is the exception rather than the pattern.',
+      },
+      {
+        claim: 'If a right is in the constitution, a remedy follows automatically.',
+        reality:
+          'Not necessarily, which is why constitutions state remedies expressly. South Africa states release in the same subsection as the right to challenge detention, and requires legislation to give effect to administrative-justice rights.',
+      },
+      {
+        claim: 'Providing remedies means the system does not trust its own decisions.',
+        reality:
+          'It means the system treats its decisions as capable of being wrong. Appeal, review and compensation are the mechanisms by which a legal order corrects itself, and their existence is a feature of lawful government rather than evidence against it.',
+      },
+      {
+        claim: 'An effective remedy means the person gets what they asked for.',
+        reality:
+          'Effectiveness concerns whether the forum can address the wrong, not whether it agrees there was one. A claim properly heard and dismissed has been remedied in the sense the principle uses.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Remedies divide by what they operate on, and systems provide different combinations.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'On the person’s situation — release from unlawful detention.',
+          'On the decision — review, and a duty to give reasons.',
+          'On the rule — invalidity where inconsistent with the constitution.',
+          'On the consequence — indemnity for judicial error, or for detention beyond sentence.',
+        ],
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'The Universal Declaration of Human Rights states the declared principle of a right to an effective remedy by a competent national tribunal for acts violating fundamental rights granted by constitution or law, and the International Covenant on Civil and Political Rights carries fair-trial guarantees for states party to it. Both state standards; the constitutional provisions above are what supply a claim in a national court.',
+        claim: 'fact',
+        sources: ['udhr', 'iccpr'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Remedies and respect for courts',
+        text: 'Seeking a remedy — appealing, applying for review, claiming compensation — is participation in a legal order, not opposition to it. The mechanisms exist because the system provides them, and using them is using the system as designed.',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [access to justice](/justice/access-to-justice), [judicial review](/glossary/judicial-review), and [why justice systems need oversight](/justice/why-justice-systems-need-oversight).',
+      },
+    ],
+  },
+  {
+    slug: 'procedural-fairness-and-its-many-names',
+    title: 'Procedural fairness and its many names',
+    shortTitle: 'Procedural fairness',
+    question:
+      'Is “due process” the same thing as a fair hearing, natural justice, or procedural fairness?',
+    summary:
+      'Not quite, and the differences are visible in constitutional text. Brazil constitutionalises “devido processo legal” — so the term is not only American — while Germany, South Africa and Kenya reach comparable ground under names that are not translations of it.',
+    entityType: 'concept',
+    section: 'justice',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: ['what-is-due-process', 'limits-on-public-power', 'why-courts-must-be-respected'],
+    relatedInstitutions: ['constitutional-court'],
+    sources: [
+      'br-cf-1988',
+      'de-gg-rechtsstaat-articles',
+      'za-constitution',
+      'ke-constitution',
+      'iccpr',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-08-26',
+    publishedOn: '2026-08-26',
+    reviewedOn: '2026-08-26',
+    factsVerifiedOn: '2026-08-26',
+    readingTimeMinutes: 9,
+    keyTerms: ['due-process', 'rule-of-law'],
+    uncertainty: [
+      'Four constitutions were read from primary text. This page compares what those texts say; it does not survey which systems use which term, and it does not describe the case law that gives each term its content.',
+      '`/justice/what-is-due-process` owns the explanation of what due process requires. This page owns the comparative terminology question and does not restate that guide.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'English-language writing about justice systems tends to reach for "due process" as though it were the universal name for procedural protection. The reality is more interesting than either "it is universal" or "it is American".',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'The term travelled; the bundle did not',
+        text: 'Article 5º LIV of Brazil’s Constitution provides that no one shall be deprived of liberty or property "sem o devido processo legal" — a direct rendering of the phrase, in a constitution that is not American. So the term is not confined to one country. But Brazil pairs it immediately with Article 5º LV, assuring "o contraditório e ampla defesa" — the adversarial principle and full defence — which the American formula does not name. Meanwhile three other systems reach comparable ground under vocabulary that is not a translation of "due process" at all.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This is a comparative terminology page. It is not legal advice, it does not state what any system requires on particular facts, and it does not describe any country’s case law.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'Terminology matters here more than usual because the words carry assumptions about what is guaranteed. Telling a reader that their system provides "due process" imports a body of American constitutional doctrine that may have no counterpart where they live — and telling them it does not may equally mislead, if their constitution uses the phrase.',
+        claim: 'analysis',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'Brazil — devido processo legal, plus what the phrase does not say',
+            description:
+              'Article 5º LIV states the guarantee against deprivation of liberty or property. Article 5º LV then names its components for both judicial and administrative proceedings: the contraditório — the right to know and answer what is said against you — and ampla defesa, full defence, "com os meios e recursos a ela inerentes", with the means and remedies inherent to it.',
+          },
+          {
+            term: 'Germany — rechtliches Gehör',
+            description:
+              'Article 103(1): "Vor Gericht hat jedermann Anspruch auf rechtliches Gehör" — before a court, everyone is entitled to a hearing in accordance with law. The German guarantee is stated as a claim to be heard, and it is stated for courts specifically.',
+          },
+          {
+            term: 'South Africa — procedurally fair administrative action, and a fair public hearing',
+            description:
+              'Section 33(1) requires administrative action to be "lawful, reasonable and procedurally fair" — three standards, of which fairness of procedure is one. Section 34 separately gives everyone the right to have a dispute decided in a "fair public hearing" before a court or another independent and impartial tribunal or forum.',
+          },
+          {
+            term: 'Kenya — fair hearing',
+            description:
+              'Article 50(1) gives every person the right to have a dispute resolvable by law decided in a "fair and public hearing" before a court or another independent and impartial tribunal or body; Article 50(2) lists what fair trial includes for an accused person, beginning with the presumption of innocence.',
+          },
+        ],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Read side by side, the texts differ in scope as well as in name. Germany’s Article 103(1) addresses courts; South Africa’s section 33 addresses administrative action and section 34 addresses disputes; Brazil’s Article 5º LV addresses judicial and administrative proceedings together and extends to "os acusados em geral". A reader asking whether their system guarantees a hearing before an administrative decision will get different answers from these four texts.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'What they share',
+        text: 'Every one of them contains the same minimum: the person affected must be able to know the case and answer it before a body that decides. What differs is where that minimum applies, what else travels with it, and what the guarantee is called. Treating the names as synonyms hides the first two differences; treating the concept as untranslatable hides the shared minimum.',
+      },
+    ],
+    misconceptions: [
+      {
+        claim: '“Due process” is an American term that other systems do not use.',
+        reality:
+          'Article 5º LIV of Brazil’s Constitution uses it in Portuguese translation: "devido processo legal". The claim is wrong on its own terms.',
+      },
+      {
+        claim:
+          'Due process, natural justice, procedural fairness and fair hearing are interchangeable.',
+        reality:
+          'They are not co-extensive. South Africa’s section 33 makes procedural fairness one of three standards for administrative action alongside lawfulness and reasonableness; Germany’s Article 103(1) is a claim to be heard before a court; Brazil’s LV adds the adversarial principle and full defence by name.',
+      },
+      {
+        claim: 'If a system does not use the phrase, it lacks the protection.',
+        reality:
+          'Germany, South Africa and Kenya all guarantee that a person may know and answer the case before a decision. The absence of a phrase is a fact about vocabulary.',
+      },
+      {
+        claim: 'These guarantees apply only to criminal trials.',
+        reality:
+          'Brazil’s LV covers judicial and administrative proceedings expressly; South Africa’s section 33 is about administrative action; section 34 and Kenya’s Article 50(1) cover any dispute resolvable by law.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Three questions establish what a system actually guarantees, and the name answers none of them.',
+      },
+      {
+        kind: 'list',
+        ordered: true,
+        items: [
+          'Does the guarantee apply to courts, to administrative decisions, or to both?',
+          'Does it name its components — notice, the right to answer, reasons — or leave them to case law?',
+          'Does it attach to the process, to the decision, or to both?',
+        ],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Brazil answers: both spheres; components named in LV; attaches to the process. South Africa answers: administrative action under section 33 and disputes under section 34; lawfulness, reasonableness and procedural fairness named, with written reasons in 33(2); attaches to the action and the decision.',
+        claim: 'analysis',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'The International Covenant on Civil and Political Rights carries fair-trial guarantees for states party to it, including the right to a competent, independent and impartial tribunal established by law. International instruments supply a common vocabulary for comparison; they do not settle what any state guarantees, which is why every statement above is attributed to a national text.',
+        claim: 'fact',
+        sources: ['iccpr'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Why this site is careful here',
+        text: 'A global educational platform that exported one country’s constitutional vocabulary to every system would be teaching readers to expect protections their own law may not contain, and to miss protections it does. Naming each system’s own term is more work and it is the only accurate option.',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [what due process is](/justice/what-is-due-process), [limits on public power](/justice/limits-on-public-power), and [Brazil](/countries/brazil).',
+      },
+    ],
+  },
+  {
+    slug: 'why-courts-must-be-respected',
+    title: 'Why courts must be respected',
+    shortTitle: 'Why courts must be respected',
+    question:
+      'What does respecting a court actually require — and does it rule out disagreeing with one?',
+    summary:
+      'It requires complying with lawful judgments and using the legal order’s own procedures to challenge them. It does not require agreeing with a decision, refraining from criticism, or accepting that a court cannot be wrong — and the same constitutions that establish courts say so.',
+    entityType: 'concept',
+    section: 'justice',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'appeal-and-the-rule-of-law',
+      'effective-remedy',
+      'why-government-is-bound-by-law',
+    ],
+    relatedInstitutions: ['constitutional-court'],
+    sources: [
+      'br-cf-1988',
+      'za-constitution',
+      'ke-constitution',
+      'de-gg-rechtsstaat-articles',
+      'udhr',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-08-26',
+    publishedOn: '2026-08-26',
+    reviewedOn: '2026-08-26',
+    factsVerifiedOn: '2026-08-26',
+    readingTimeMinutes: 10,
+    keyTerms: ['court', 'rule-of-law', 'judicial-independence'],
+    uncertainty: [
+      'This page describes what respect for courts consists of as an institutional matter. It makes no assessment of any court or any judgment, and it takes no position on any decided case.',
+      'Contempt of court, and the limits national law places on comment about proceedings, differ substantially between systems and were not researched. Nothing here describes what any jurisdiction permits or prohibits.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'The phrase is used to mean two very different things. One is a claim about conduct: that lawful judgments are complied with rather than ignored. The other is a claim about attitude: that courts should not be criticised. The first is a requirement of any legal order. The second is not, and the constitutions that establish courts do not ask for it.',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'What respect requires',
+            description:
+              'That a lawful judgment is complied with while it stands; that disagreement is pursued through the procedures the legal system provides; that the institution is not attacked as a substitute for answering its reasoning.',
+          },
+          {
+            term: 'What it does not require',
+            description:
+              'Agreement with the outcome. Silence about the reasoning. Acceptance that a court cannot be wrong. Abandoning an appeal, a review, a complaint or a constitutional challenge.',
+          },
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This explains an institutional relationship. It is not legal advice, it comments on no decided case or serving judge, and it does not describe what any jurisdiction treats as contempt.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'A court’s authority is not physical. It decides, and something happens afterwards because institutions and people treat the decision as binding. Remove that and the decision is an opinion. This is why compliance with lawful judgments is structural rather than deferential: it is the mechanism by which adjudication does anything at all.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'paragraph',
+        text: 'But the same reasoning explains the limit. Courts are worth complying with because their decisions are reached through a process — hearing both sides, applying law, giving reasons — that makes them more reliable than the alternatives. A decision insulated from examination loses the property that justified compliance in the first place.',
+        claim: 'analysis',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'The constitutions provide the means of disagreement themselves',
+        text: 'Every mechanism for challenging a judicial or official decision is created by the same legal order that creates the courts. Brazil forbids the law from excluding an injury or threat to a right from judicial appraisal, and separately provides that the State shall indemnify a person convicted by judicial error. South Africa gives a detained person the right to challenge the lawfulness of detention before a court and to be released if it is unlawful. Germany opens recourse to the courts against public authority. These are not loopholes in a system that would prefer obedience. They are the system.',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'Complying, and appealing',
+            description:
+              'These are compatible. A judgment binds while it stands, and appealing is how the legal order asks whether it should stand. A person who complies and appeals is doing exactly what the system provides for.',
+          },
+          {
+            term: 'Criticising the reasoning',
+            description:
+              'Reasoned decisions exist to be read. A court that gives reasons is inviting examination of them — by higher courts, by other courts, by lawyers, by the public. Disagreeing with reasoning in public is ordinary legal and civic life.',
+          },
+          {
+            term: 'Challenging the law rather than the judgment',
+            description:
+              'Where the problem is the rule, the remedy operates on the rule. South Africa’s section 2 makes law or conduct inconsistent with the Constitution invalid; Brazil’s Article 5º XXXVII forbids exceptional courts. Both are ways of contesting an outcome without contesting that courts decide.',
+          },
+          {
+            term: 'Where it stops',
+            description:
+              'Refusing to comply with a lawful judgment, or attacking the institution to avoid answering its reasoning, is a different act from disagreeing with it. Those attack the mechanism that makes any decision — including a favourable one — worth anything.',
+          },
+        ],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Kenya states a related idea from inside the institution. Article 159(1) provides that judicial authority is derived from the people and vests in the courts; Article 159(2) then binds the courts, in exercising it, to principles including that justice shall be done to all irrespective of status and shall not be delayed. Authority derived from the people, exercised on stated conditions, is a claim about legitimacy rather than about deference.',
+        claim: 'fact',
+        sources: ['ke-constitution'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Brazil’s Article 5º LXXV is the plainest evidence that respect and infallibility are separate ideas: the State shall indemnify the person convicted by judicial error. A constitution that establishes courts, requires compliance with their judgments, and provides compensation when they convict wrongly is not describing an institution beyond question. It is describing one that is reliable enough to be obeyed and fallible enough to need correcting.',
+        claim: 'fact',
+        sources: ['br-cf-1988'],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Respecting courts means never criticising a judgment.',
+        reality:
+          'Reasoned decisions are published so that they can be examined. Appellate courts overturn reasoning, lawyers argue it is wrong, and commentators say so publicly. None of that is disrespect; it is what a reasoned decision is for.',
+      },
+      {
+        claim: 'Appealing a judgment shows disrespect for the court that gave it.',
+        reality:
+          'Appeal is provided by the legal system itself. Using a procedure the law creates is participation in the legal order, not defiance of it.',
+      },
+      {
+        claim: 'If courts can be wrong, their judgments need not be obeyed.',
+        reality:
+          'The opposite follows. Because judgments can be wrong, systems provide appeal, review and — in Brazil’s case — indemnity for judicial error. Those mechanisms only function if the judgment binds while it stands.',
+      },
+      {
+        claim: 'Courts are always right.',
+        reality:
+          'No source on this site supports that, and Brazil’s constitution contradicts it directly by providing compensation for wrongful conviction. What courts offer is a process more reliable than the alternatives, not a guarantee of correctness.',
+      },
+      {
+        claim: 'Challenging government action in court is improper.',
+        reality:
+          'Germany’s Article 19(4) opens the courts precisely where public authority violates rights, and Brazil’s Article 5º XXXV forbids the law from closing them. Contesting official action in court is the arrangement working.',
+      },
+      {
+        claim:
+          'Respect for courts is the same as deference to the government that appointed the judges.',
+        reality:
+          'It is close to the opposite. Judicial independence exists so that a court can decide against whoever appointed it, and the courts-cluster material on this site sets out the arrangements that protect that.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'What differs between systems is not whether disagreement is permitted but through which route.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Appeal within the court hierarchy — available everywhere, with scope set by each system.',
+          'Review of official action — South Africa’s section 33(3), Germany’s Article 19(4).',
+          'Constitutional challenge to the rule itself — South Africa’s section 2.',
+          'Compensation where the error has already caused harm — Brazil’s Article 5º LXXV.',
+        ],
+      },
+      {
+        kind: 'paragraph',
+        text: 'A reader in any of these systems has a lawful means of pressing a disagreement. Which one depends on whether the complaint is about the decision, the procedure, the rule, or the consequence.',
+        claim: 'analysis',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'The Universal Declaration of Human Rights states the declared principle of a right to an effective remedy by a competent national tribunal and of a fair and public hearing by an independent and impartial tribunal. Both presuppose that decisions can be sought, tested and where necessary corrected — which is the same proposition this page makes about respect.',
+        claim: 'fact',
+        sources: ['udhr'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'The formulation this page earns',
+        text: 'Respect for courts is compatible with challenging decisions through the procedures the legal system itself provides. That is not a compromise between two positions. It is what the constitutional texts describe: institutions whose judgments bind, and which create the means of contesting them in the same document.',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [appeal and the rule of law](/justice/appeal-and-the-rule-of-law), [why courts matter](/courts/why-courts-matter), and [why judicial independence matters](/courts/why-judicial-independence-matters).',
+      },
+    ],
+  },
+  {
+    slug: 'appeal-and-the-rule-of-law',
+    title: 'Appeal and the rule of law',
+    shortTitle: 'Appeal and the rule of law',
+    question: 'Why does a legal system build in a way of saying its own decisions were wrong?',
+    summary:
+      'Because a system that could not correct itself would have to claim it never errs. Appeal, review and compensation are how a legal order absorbs its own mistakes — and their existence is what makes its decisions worth relying on.',
+    entityType: 'concept',
+    section: 'justice',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: ['why-courts-must-be-respected', 'effective-remedy', 'legal-certainty'],
+    relatedInstitutions: ['constitutional-court'],
+    sources: ['br-cf-1988', 'za-constitution', 'de-gg-rechtsstaat-articles', 'ke-constitution'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-08-26',
+    publishedOn: '2026-08-26',
+    reviewedOn: '2026-08-26',
+    factsVerifiedOn: '2026-08-26',
+    readingTimeMinutes: 7,
+    keyTerms: ['appeal', 'rule-of-law', 'judicial-review'],
+    uncertainty: [
+      'What may be appealed, by whom and on what grounds is set by each system, and this page states no country’s appeal rules. `/courts/trial-and-appellate-courts` covers the structural question and this page does not restate it.',
+      'This page concerns why correction mechanisms exist. It does not assess whether any system corrects error well.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Every legal system builds in machinery whose only purpose is to say that the system got something wrong. That is a strange thing for an institution to do, and it is worth asking why they all do it.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This explains why correction mechanisms exist. It is not legal advice, it states no appeal rights, and it comments on no decided case.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'The alternative is the claim that first-instance decisions are always correct, which no system makes. Once that claim is abandoned, a mechanism for correction follows necessarily — and the mechanism is what allows the system to insist on compliance in the meantime.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Correction is what licenses finality',
+        text: 'A decision has to become final or nothing is ever resolved, and Brazil protects finality expressly by shielding res judicata from legislative impairment. But finality is only tolerable if there was a real opportunity to be wrong and be corrected first. Appeal and finality are not in tension; appeal is the price of finality.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'Correcting the decision',
+            description:
+              'Appeal within the court hierarchy. Scope varies sharply between systems, and `/courts/trial-and-appellate-courts` sets out why an appeal is neither universally a fresh trial nor universally confined to law.',
+          },
+          {
+            term: 'Correcting the official act',
+            description:
+              'Review. South Africa’s section 33(3) requires legislation providing for review of administrative action by a court or independent tribunal; Germany’s Article 19(4) opens the courts where public authority violates rights.',
+          },
+          {
+            term: 'Correcting the rule',
+            description:
+              'Constitutional review. South Africa’s section 2 makes law or conduct inconsistent with the Constitution invalid. Where the error is in the rule, correcting the individual decision would leave the problem in place.',
+          },
+          {
+            term: 'Compensating where correction comes too late',
+            description:
+              'Brazil’s Article 5º LXXV: the State shall indemnify the person convicted by judicial error, and the person held beyond the term fixed in the sentence. Some errors cannot be undone, and the constitution says what is owed then.',
+          },
+        ],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Timeliness belongs here too, because a correction that arrives too late is not one. Brazil’s Article 5º LXXVIII guarantees reasonable duration of proceedings and the means guaranteeing the speed of their handling; Kenya’s Article 159(2)(b) makes it a guiding principle that justice shall not be delayed.',
+        claim: 'fact',
+        sources: ['br-cf-1988', 'ke-constitution'],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'A high rate of successful appeals shows the system is failing.',
+        reality:
+          'This site publishes no such rates and draws no such inference. Appeals succeeding shows the correction mechanism operating; what it would mean about the system requires evidence about first-instance decisions that these sources do not provide.',
+      },
+      {
+        claim: 'Appeals undermine the authority of courts.',
+        reality:
+          'Appellate courts are courts. A system correcting itself through its own hierarchy is exercising judicial authority, not eroding it.',
+      },
+      {
+        claim: 'If a decision can be appealed, it need not be complied with.',
+        reality:
+          'A judgment binds while it stands. Compliance and appeal run together, which is what makes it possible to have both order and correction.',
+      },
+      {
+        claim: 'Correction mechanisms exist because legal systems are unreliable.',
+        reality:
+          'They exist because the systems are reliable enough to be relied on and honest enough not to claim infallibility. Brazil writes compensation for judicial error into its constitution alongside the courts that may commit it.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'The four mechanisms address different objects, and a complaint has to be matched to the right one.',
+      },
+      {
+        kind: 'list',
+        ordered: true,
+        items: [
+          'Wrong decision on the facts or the law → appeal.',
+          'Unlawful or unfair official act → review.',
+          'Unconstitutional rule → constitutional challenge.',
+          'Harm already suffered and not reversible → compensation, where the system provides it.',
+        ],
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'For a reader, the practical point is that disagreement has a route, and the route is part of the design. Nothing about pursuing it is adversarial to the legal order; the order built it.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Self-correction is a feature of lawful government',
+        text: 'A system with appeal, review, remedies and compensation is not a system admitting weakness. It is one that has decided its own decisions should be capable of being tested — and that is the same decision that makes them worth obeying.',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [why courts must be respected](/justice/why-courts-must-be-respected), [trial and appellate courts](/courts/trial-and-appellate-courts), and [appeal](/glossary/appeal).',
+      },
+    ],
+  },
+
+  /* ------------------------------------------------------------------------
+     Wave 14 — the participant the two-sided model leaves out.
+     ------------------------------------------------------------------------ */
+  {
+    slug: 'victims-in-the-justice-process',
+    title: 'Victims in the justice process',
+    shortTitle: 'Victims in the process',
+    question: 'Where does the victim of a crime stand in a criminal case?',
+    summary:
+      'Not as a party, in most systems — a public prosecution is brought by the state, not on the victim’s behalf. Some systems then create a route back in, and German law lets specified victims join the prosecution as an accessory prosecutor.',
+    entityType: 'concept',
+    section: 'justice',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: ['why-public-prosecution-exists', 'access-to-justice', 'effective-remedy'],
+    relatedInstitutions: ['prosecution-service'],
+    sources: ['de-stpo-395-nebenklage', 'de-gvg-gerichtssprache', 'ke-constitution'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'not-required',
+    updatedOn: '2026-08-26',
+    publishedOn: '2026-08-26',
+    reviewedOn: '2026-08-26',
+    factsVerifiedOn: '2026-08-26',
+    readingTimeMinutes: 8,
+    keyTerms: ['prosecutor', 'fair-trial'],
+    uncertainty: [
+      'One participation mechanism is described in detail from primary text, and one constitutional mandate. Victim-support services, compensation schemes, protection measures and the rights that follow from joining a prosecution were not researched and are not described.',
+      'This page describes where victims stand structurally. It is not guidance for anyone affected by a crime, and it describes no procedure for participating anywhere.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'In a criminal case the parties are the prosecution and the accused. The person harmed by the offence is, in most systems, neither — they are a witness to the case, and the case is not theirs. That is a structural fact about public prosecution rather than an oversight, and understanding it is what makes the mechanisms some systems build on top of it intelligible.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This describes where victims sit in the structure of a criminal process and one statutory route to participation. It is not advice or support for anyone affected by a crime, and it describes no procedure anywhere. Anyone in that position should contact the relevant authorities and support services in their own country.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'Public prosecution exists precisely so that the response to crime does not depend on the resources, persistence or wishes of the person harmed. That is a genuine protection: it means a case can proceed where the victim cannot pursue it, and it removes the pressure that would otherwise fall on them to. The cost of the arrangement is that the person with the strongest interest in the outcome has no standing in the proceedings about it.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Why the two-sided picture misleads here',
+        text: 'Describing a criminal trial as the state against the accused is accurate about the parties and incomplete about the participants. It leaves the reader with no place to put the victim, which is why the common assumption — that the prosecutor is the victim’s lawyer — is so persistent. The prosecutor acts for the public interest, which frequently coincides with the victim’s and is not defined by it.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'Germany builds a route in and defines it carefully. Section 395 of the Code of Criminal Procedure sets out who may join a public prosecution already brought, as a *Nebenkläger* — an accessory prosecutor. Subsection (1) lists offence groups whose victims may join, among them offences against sexual self-determination, attempted murder and manslaughter, bodily-injury offences including ill-treatment in office, and offences of trafficking, deprivation of liberty and coercion.',
+        claim: 'fact',
+        sources: ['de-stpo-395-nebenklage'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Two further categories follow. Subsection (2) extends the same power to persons whose children, parents, siblings, spouses or life partners were killed by an unlawful act, and to persons who brought about the raising of the public charge by an application for judicial decision. Subsection (3) allows joinder by a person injured by another unlawful act where this appears necessary for the protection of their interests for special reasons, in particular because of the grave consequences of the act.',
+        claim: 'fact',
+        sources: ['de-stpo-395-nebenklage'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'An enumerated list is a choice, not a limitation of imagination',
+        text: 'The provision could have opened accessory prosecution to every victim of every offence. Instead it names offence groups, adds bereaved close relatives, and keeps a discretionary category for grave consequences elsewhere. That structure treats participation as something to be given where the harm is personal and severe, rather than as a general feature of being a complainant — and the third subsection exists so that the enumeration does not become the whole answer.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Timing is generous where the substance is narrow. Subsection (4) provides that joinder is permissible at any stage of the proceedings, and may occur after judgment for the purpose of lodging an appeal.',
+        claim: 'fact',
+        sources: ['de-stpo-395-nebenklage'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Participation once granted carries practical entitlements, and one of them shows how the mechanisms interlock. Section 187(4) of the Courts Constitution Act applies the interpreter and translator provision — including the entitlement to free engagement of an interpreter for the whole proceedings — correspondingly to persons entitled to join the public prosecution as a Nebenkläger. A route into the case brings the means of following it.',
+        claim: 'fact',
+        sources: ['de-gvg-gerichtssprache'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Other systems address victims by directing that the subject be legislated for rather than by creating a mechanism in the constitution itself. Kenya’s Article 50(9) provides that Parliament shall enact legislation providing for the protection, rights and welfare of victims of offences. Kenya’s Article 50(7) also lets a court allow an intermediary to assist a complainant — as well as an accused person — to communicate with the court.',
+        claim: 'fact',
+        sources: ['ke-constitution'],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'The prosecutor is the victim’s lawyer.',
+        reality:
+          'A public prosecution is brought in the public interest, not on the victim’s behalf. The interests frequently coincide; the prosecutor’s duty is not defined by them, and the victim is not the prosecutor’s client.',
+      },
+      {
+        claim: 'The victim decides whether a case goes ahead.',
+        reality:
+          'That is what public prosecution was designed to avoid, so that a case does not depend on the victim’s resources or persistence and so that pressure does not fall on them. Systems vary in how much weight a victim’s wishes carry, but the decision is not theirs.',
+      },
+      {
+        claim: 'Victims have no standing in a criminal case anywhere.',
+        reality:
+          'German law lets specified victims join a public prosecution as a Nebenkläger, at any stage of the proceedings and even after judgment for the purpose of appealing.',
+      },
+      {
+        claim: 'Where victim participation exists, it is open to every complainant.',
+        reality:
+          'The German provision enumerates offence groups, adds bereaved close relatives and those who forced a prosecution, and keeps a discretionary category for grave consequences. It is a defined route rather than a general entitlement.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Two techniques, at different levels of the legal order.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'A statutory route into the proceedings for defined categories of victim, available at any stage — Germany, StPO § 395.',
+          'A constitutional direction to the legislature to provide for victims’ protection, rights and welfare — Kenya, Art. 50(9).',
+          'A judicial discretion to allow an intermediary to assist a complainant to communicate with the court — Kenya, Art. 50(7).',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'uncertainty',
+        title: 'A narrow view of a wide subject',
+        text: 'Support services, compensation schemes, protection from intimidation, information rights and the treatment of witnesses in court are all part of how systems deal with victims, and none was researched here. What this page describes is standing in the proceedings, which is one element of it.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'Standing determines what a person can do when the system does something they disagree with. A witness who thinks a prosecution has gone wrong has no procedural route; a party has one. That is the practical difference the German mechanism creates, and it is why the question of who counts as a participant is not merely descriptive.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The interaction with fair-trial rights is real and is not a reason to dismiss either side. Participation by a victim adds a voice to proceedings whose subject is another person’s liberty, which is exactly why the systems that allow it define who may join and on what basis rather than opening it generally.',
+        claim: 'analysis',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [why public prosecution exists](/prosecution/why-public-prosecution-exists), [access to justice](/justice/access-to-justice), and [effective remedy](/justice/effective-remedy).',
+      },
+    ],
+  },
+
+  /* ------------------------------------------------------------------------
+     Wave 15 — integration.
+
+     These two pages exist because the corpus had no page that reads across it.
+     Neither concatenates existing articles: the first states what the shape of a
+     justice system is NOT, using findings from six earlier waves as evidence, and
+     the second describes the handoffs between institutions, which no page owned.
+     ------------------------------------------------------------------------ */
+  {
+    slug: 'no-single-path-through-a-justice-system',
+    title: 'There is no single path through a justice system',
+    shortTitle: 'No single path',
+    question: 'Does every case follow the same route from report to outcome?',
+    summary:
+      'No, and the familiar route is wrong at almost every step. Most matters leave before a court, most sentences are not custodial, and in several systems the prosecutor is legally responsible for the investigation rather than receiving a finished file.',
+    entityType: 'concept',
+    section: 'justice',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'how-justice-institutions-work-together',
+      'what-is-justice',
+      'what-is-due-process',
+    ],
+    sources: [
+      'de-stpo-160',
+      'de-stgb-56-strafaussetzung',
+      'ca-statcan-corrections',
+      'ke-constitution',
+      'uk-legal-services-act-2007',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'not-required',
+    updatedOn: '2026-08-26',
+    publishedOn: '2026-08-26',
+    reviewedOn: '2026-08-26',
+    factsVerifiedOn: '2026-08-26',
+    readingTimeMinutes: 9,
+    keyTerms: ['justice', 'jurisdiction'],
+    uncertainty: [
+      'This page assembles findings established elsewhere on this site, each from primary text. It introduces no new evidence and describes no system in full.',
+      'The exceptions listed are examples of branching, not a taxonomy of every route a case may take. Systems contain routes that this corpus has not researched.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Accounts of criminal justice usually describe a line: an offence is reported, police investigate, a prosecutor charges, a jury decides, a prison follows. It is a serviceable picture of one branch of one kind of case in some systems. As a description of how justice systems work, almost every link in it is wrong somewhere.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This explains why the process branches, using findings established elsewhere on this site. It is not legal advice, it does not describe what would happen in any case, and it is not a procedural code for any jurisdiction.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'The linear picture is not merely incomplete. It teaches a reader to expect a court where there will be none, to treat an outcome without a conviction as a failure, and to assume that institutions in other countries do the same jobs under different names. Each of those is a specific error with consequences for how a person reads news about a case.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Why the line is so persistent',
+        text: 'It is the shape of the cases that get reported. A matter that ends with no charge produces no hearing, no verdict and no story, so the visible cases are systematically the ones that travelled furthest. The line is not a myth invented by anyone — it is what you get if you generalise from what you can see.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'Take the steps in order. First, that police investigate and then hand a file to a prosecutor. Section 160 of the German Code of Criminal Procedure places responsibility for investigating on the public prosecution office, which must ascertain not only incriminating but also exonerating circumstances. The prosecutor is not the recipient of an investigation there; the prosecutor is legally responsible for it.',
+        claim: 'fact',
+        sources: ['de-stpo-160'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Second, that a charge follows an investigation. It frequently does not. A matter may close without a suspect, close without sufficient evidence, be discontinued on a basis the law provides, be diverted, or be dealt with by an administrative penalty. Whether the prosecutor even has the choice differs: some systems make prosecution a duty subject to statutory exceptions, others a discretion structured by tests.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Third, that a court means a jury. Juries do not exist in most systems described on this site, and where they do they sit in a minority of cases. Professional judges, lay judges and mixed panels all appear among functioning systems, which is why "trial" is a word covering unlike things.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Fourth, that conviction means custody. German law directs that on a custodial sentence of not more than one year the court suspends execution on probation where the statutory expectation is made out, and permits suspension up to two years where special circumstances are present. A custodial term can be imposed and never executed.',
+        claim: 'fact',
+        sources: ['de-stgb-56-strafaussetzung'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'And the people in custody are not all serving sentences',
+        text: 'Statistics Canada records that in fiscal 2023/2024 the average daily count of adults in provincial and territorial custody was 25,349.8, of which 19,334.5 were on remand and 5,895.1 were serving a sentence — provincial and territorial custody only, excluding federal custody for sentences of two years or more, averaged over the year rather than a snapshot, and describing none of the thirteen jurisdictions individually. Even the end of the line is not what the line implies.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Fifth, that the criminal route is the route. Kenya’s Article 159(2) directs that in exercising judicial authority the courts shall be guided by principles including that alternative forms of dispute resolution — reconciliation, mediation, arbitration and traditional dispute resolution mechanisms — shall be promoted. England and Wales excludes acting as a mediator from "legal activity" altogether under the Legal Services Act, placing it outside the regulated category rather than inside it.',
+        claim: 'fact',
+        sources: ['ke-constitution', 'uk-legal-services-act-2007'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Sixth, that the process ends. Appeal, review and retrial send decided matters back to courts, and in systems with an execution court, decisions taken during a sentence are judicial too. The shape is not a line with an end but a graph with loops, and the loops are the mechanisms by which a legal order corrects itself.',
+        claim: 'analysis',
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'A case that ends without a charge is a case the system failed on.',
+        reality:
+          'Ending is one of the outcomes the arrangement provides for. A system that charged everything reported would be applying no standard at the point where a standard matters most.',
+      },
+      {
+        claim:
+          'The prosecutor receives the police investigation and decides what to do with it.',
+        reality:
+          'In Germany the public prosecution office is responsible for investigating and must ascertain exonerating as well as incriminating circumstances. Where investigative responsibility sits is a question of law, and it is answered differently.',
+      },
+      {
+        claim: 'A criminal conviction means a prison sentence.',
+        reality:
+          'German law requires suspension of execution on a custodial sentence of not more than one year where the statutory expectation is made out, and permits it up to two years on special circumstances. A term can be fixed and never carried out.',
+      },
+      {
+        claim: 'Courts are where disputes go.',
+        reality:
+          'Kenya’s constitution directs courts to promote reconciliation, mediation, arbitration and traditional dispute resolution as guiding principles of judicial authority. Adjudication is one route among several that a system may provide.',
+      },
+      {
+        claim: 'Once a court has decided, the case is over.',
+        reality:
+          'Appeal, review and retrial return matters to courts, and where an execution court exists, decisions taken while a sentence runs are judicial. The loops are how a legal order corrects itself.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Six points where the familiar line breaks, and where this site sets out the evidence.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Who investigates, and under whose legal responsibility — Germany, StPO § 160.',
+          'Whether charging is a duty or a discretion, and what test applies.',
+          'What a court is: professional judges, lay judges, mixed panels, juries.',
+          'Whether a custodial term is executed at all — Germany, StGB § 56.',
+          'Whether the matter belongs in a criminal court — Kenya, Art. 159(2).',
+          'Whether the decision is final, or returns on appeal, review or during execution.',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'uncertainty',
+        title: 'Examples of branching, not a taxonomy',
+        text: 'These six are the branches this corpus can evidence. They are not a complete account of the routes a matter may take in any system, and a system will contain routes nobody here has researched.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'The branches matter to a reader because they determine which safeguards apply. A matter resolved by an administrative penalty has not passed through the protections that attach to a criminal trial, and a person diverted from prosecution has not been convicted of anything. Knowing which route a matter took is how you know what standard it was held to.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'paragraph',
+        text: 'It also disciplines comparison. Two systems that appear to reach different outcomes may be routing the same conduct through different parts of their arrangements, and a comparison that assumed a single path would attribute to severity what is actually a difference in classification.',
+        claim: 'analysis',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [how a justice system works](/justice-system), [how justice institutions work together](/justice/how-justice-institutions-work-together), and [what is due process](/justice/what-is-due-process).',
+      },
+    ],
+  },
+  {
+    slug: 'how-justice-institutions-work-together',
+    title: 'How justice institutions work together',
+    shortTitle: 'How institutions connect',
+    question: 'What actually passes between the institutions in a justice system?',
+    summary:
+      'A case, a file and a person — and not the authority to decide. The handoffs are designed so that each body receives the work without inheriting the powers of the one before it, which is what makes the separations more than an org chart.',
+    entityType: 'concept',
+    section: 'justice',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'no-single-path-through-a-justice-system',
+      'why-justice-systems-need-oversight',
+      'what-is-justice',
+    ],
+    relatedInstitutions: ['prosecution-service', 'correctional-service'],
+    sources: [
+      'de-stpo-160',
+      'de-stpo-147-akteneinsicht',
+      'br-lep-1984',
+      'ke-constitution',
+      'mandela-rules',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'not-required',
+    updatedOn: '2026-08-26',
+    publishedOn: '2026-08-26',
+    reviewedOn: '2026-08-26',
+    factsVerifiedOn: '2026-08-26',
+    readingTimeMinutes: 9,
+    keyTerms: ['accountability', 'oversight', 'jurisdiction'],
+    uncertainty: [
+      'This page describes the structure of handoffs using provisions established elsewhere on this site. It describes no country’s process end to end and introduces no new evidence.',
+      'How information actually moves between institutions — case-management systems, records, timeliness — was not researched and is not described.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'A justice system is a set of institutions that pass work to one another. What passes is concrete: a case, the material gathered about it, and frequently a person. What does not pass is the authority to decide, and that is the design rather than an omission.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This explains how institutions connect and what the connections do not transfer. It is not a description of any country’s process, it is not legal advice, and it does not describe how to interact with any of these bodies.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'Separation of function is easy to state and easy to hollow out. If a body could investigate, decide to prosecute and adjudicate, dividing it into three departments would change nothing. What makes the separation real is that each institution receives the work under its own legal authority, applies its own test, and cannot exercise the powers of the one before it.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'The handoff is where a system is strongest and most fragile',
+        text: 'Each transfer is an opportunity for a fresh judgment by somebody with a different responsibility — which is the point. It is also where material can be lost, where delay accumulates, and where each body can assume another has checked something. Systems that take the transfers seriously write down what must be handed over rather than leaving it to practice.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'Start with the first transfer, and notice that in some systems there is not one. Section 160 of the German Code of Criminal Procedure places responsibility for investigating on the public prosecution office and requires it to ascertain exonerating as well as incriminating circumstances. Where the law is drafted that way, the prosecutor did not receive the investigation — the prosecutor is answerable for it.',
+        claim: 'fact',
+        sources: ['de-stpo-160'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'The second transfer is the file, and it is the one that is regulated most explicitly. German law grants defence counsel access to the files and to officially held evidence, permits refusal where access would endanger an ongoing investigation, and then requires access anyway once defined stages are reached. That is a handoff with a condition and a deadline attached, rather than a matter of professional cooperation.',
+        claim: 'fact',
+        sources: ['de-stpo-147-akteneinsicht'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'What is withheld is as structural as what is passed',
+        text: 'A rule that permits refusal at one stage and compels disclosure at another is doing two jobs at once: protecting an investigation that is still live, and guaranteeing that the protection expires. A system with only the first half would have discretion; a system with only the second would have no investigations. The interesting part of a handoff is usually its conditions.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The third transfer is to adjudication, and here the design is that almost nothing transfers except the case itself. The court receives the matter and applies its own standard; it does not inherit the prosecutor’s view of it, and the prosecutor’s decision that a case should be brought establishes nothing about whether it is proved. This is why the presumption of innocence is not in tension with a charging decision — the two answer different questions.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The fourth transfer is to execution, and Brazil shows how many bodies can be involved. Article 61 of the Lei de Execução Penal lists the organs of penal execution, and they include the Juízo da Execução, the Ministério Público, the Conselho Penitenciário and the penitentiary departments. A sentence does not pass from a court to a prison; it passes into an arrangement with a court still inside it.',
+        claim: 'fact',
+        sources: ['br-lep-1984'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Running alongside all of these is a set of bodies that receive nothing and decide nothing about any case. Kenya’s Judicial Service Commission promotes and facilitates the independence and accountability of the judiciary and the administration of justice, appoints and disciplines judicial officers and staff, and advises on efficiency — none of which is deciding a case. The international minimum standards for detention require inspection by a body independent of the prison administration, for the same reason: examining how an institution used its powers is a different function from exercising them.',
+        claim: 'fact',
+        sources: ['ke-constitution', 'mandela-rules'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Oversight is not a further stage',
+        text: 'An inspectorate, a commission or a complaints body sits beside the process rather than after it. It does not overturn outcomes and is not an additional level of appeal — which is why a person seeking to change a decision needs the review mechanisms, and a person concerned about how an institution behaved needs the oversight ones. Sending a question to the wrong one is one of the more common practical mistakes about justice systems.',
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Each institution hands the next one its conclusions.',
+        reality:
+          'It hands over the case and, subject to rules, the material. The next body applies its own test under its own authority. A prosecutor’s decision that a case should be brought establishes nothing about whether it is proved.',
+      },
+      {
+        claim: 'The police investigation is always complete before a prosecutor is involved.',
+        reality:
+          'Section 160 of the German code places responsibility for investigating on the public prosecution office, including ascertaining exonerating circumstances. Where investigative responsibility sits is a question of law and it varies.',
+      },
+      {
+        claim: 'Once a sentence is passed, the courts are finished with the case.',
+        reality:
+          'Brazil’s execution statute lists the Juízo da Execução among the organs of penal execution, alongside the prosecution service, a penitentiary council and the penitentiary departments.',
+      },
+      {
+        claim: 'An oversight body can overturn a decision you disagree with.',
+        reality:
+          'Oversight examines how institutions used their powers. Changing an outcome is what appeal and review are for, and confusing the two sends a question to a body with no power to answer it.',
+      },
+      {
+        claim: 'Institutions cooperating closely is a sign the system is working well.',
+        reality:
+          'The separations exist so that each body forms its own judgment. Close cooperation is necessary for the work to move at all, and it is also the direction in which the separations erode.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Three questions to ask about any handoff in any system.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'What passes — the case, the material, the person, or all three?',
+          'What is withheld, on what condition, and when does the condition expire?',
+          'What authority does the receiving body exercise, and whose test does it apply?',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'uncertainty',
+        title: 'Structure, not practice',
+        text: 'Everything here describes how the transfers are constituted in law. How reliably material actually moves, how long it takes, and what is lost on the way are empirical questions this corpus has not researched.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'The handoffs are where a person’s rights are most exposed, because responsibility can appear to sit with whoever had the case last. Rules that name what must be disclosed, and when, are how a system stops a right from falling into a gap between two institutions.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'paragraph',
+        text: 'They also determine where to direct a question. Which body holds a matter now, and which held it when something went wrong, are different questions with different answers — and for anything concerning conditions in a closed institution, the international standards treat independent inspection as the mechanism precisely because the people affected cannot readily be heard.',
+        claim: 'fact',
+        sources: ['mandela-rules'],
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [how a justice system works](/justice-system), [there is no single path](/justice/no-single-path-through-a-justice-system), and [why justice systems need oversight](/justice/why-justice-systems-need-oversight).',
+      },
+    ],
+  },
 ];

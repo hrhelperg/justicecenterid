@@ -37,7 +37,13 @@ export function SourceList({
               {source.publishedOn ? ` · ${source.publishedOn}` : ''}
               {source.verifiedOn ? ` · link verified ${source.verifiedOn}` : ''}
             </p>
-            {source.note && <p className="mt-1 text-ink-subtle">{source.note}</p>}
+            {/*
+              `break-words` for the same reason as on /sources: a note may quote a URL, and a
+              long one overflows the viewport at 320px. This is the component every entity page
+              uses, so fixing it here rather than per page is what stops the regression
+              reappearing on whichever page next cites a multi-provision source.
+            */}
+            {source.note && <p className="mt-1 break-words text-ink-subtle">{source.note}</p>}
           </li>
         ))}
       </ol>

@@ -1,4 +1,5 @@
 import type { Guide, SectionId } from '../types';
+import { CORRECTIONS_GUIDES } from './corrections';
 import { COURTS_GUIDES } from './courts';
 import { DEFENCE_GUIDES } from './defence';
 import { INVESTIGATIONS_GUIDES } from './investigations';
@@ -9,6 +10,7 @@ import { PROCESS_GUIDES } from './process';
 
 /** Every guide record, published or not. Validation runs against this list. */
 export const ALL_GUIDES: readonly Guide[] = [
+  ...CORRECTIONS_GUIDES,
   ...COURTS_GUIDES,
   ...DEFENCE_GUIDES,
   ...INVESTIGATIONS_GUIDES,

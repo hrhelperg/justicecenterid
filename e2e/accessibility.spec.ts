@@ -130,6 +130,15 @@ test.describe('layout integrity', () => {
     '/sources',
     '/justice/what-is-due-process',
     '/countries',
+    /*
+     * Added by Waves 12-15. The hub is the widest new page — a long ordered list of stages with
+     * inline route links — and the corrections and courts pages carry long German and Portuguese
+     * statutory terms, which is the other way a page overflows at 320px.
+     */
+    '/justice-system',
+    '/corrections/what-sentencing-is-for',
+    '/courts/court-language-and-interpretation',
+    '/professions/defence-lawyer',
   ]) {
     test(`${path} has no horizontal overflow at ${NARROW}px`, async ({ page }) => {
       await page.setViewportSize({ width: NARROW, height: 800 });

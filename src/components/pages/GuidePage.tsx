@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { BlockRenderer } from '@/components/content/BlockRenderer';
 import { MisconceptionList } from '@/components/content/MisconceptionList';
 import { RelatedTopics } from '@/components/content/RelatedTopics';
+import { Connections } from '@/components/content/Connections';
 import { ReviewMeta } from '@/components/content/ReviewMeta';
 import { SourceList } from '@/components/content/SourceList';
 import { getDossier } from '@/content/dossiers';
@@ -189,6 +190,7 @@ export async function GuidePage({
             </Callout>
 
             <RelatedTopics slugs={guide.related} />
+            <Connections institutions={guide.relatedInstitutions} />
             <SourceList ids={guide.sources} />
           </div>
         </div>

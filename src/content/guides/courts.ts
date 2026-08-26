@@ -1562,4 +1562,651 @@ export const COURTS_GUIDES: readonly Guide[] = [
       },
     ],
   },
+
+  /* ------------------------------------------------------------------------
+     Wave 14 — the mechanics of access.
+
+     The concept of access to justice is owned by /justice/access-to-justice, and
+     how defence is paid for is owned by the defence cluster. What neither covers,
+     and what these pages add, is the set of arrangements that determine whether a
+     person can actually use a forum: the language it runs in, whether they can
+     follow and take part, what it costs, and who administers it.
+     ------------------------------------------------------------------------ */
+  {
+    slug: 'court-language-and-interpretation',
+    title: 'Court language and interpretation',
+    shortTitle: 'Court language',
+    question: 'What happens if you do not speak the language the court uses?',
+    summary:
+      'Four systems answer differently, and the difference is not how much protection they give. It is whether the proceedings move towards the person or the person is translated into the proceedings.',
+    entityType: 'concept',
+    section: 'courts',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'taking-part-in-your-own-case',
+      'the-cost-of-going-to-court',
+      'what-do-courts-do',
+    ],
+    sources: [
+      'de-gvg-gerichtssprache',
+      'za-constitution',
+      'ca-charter-1982',
+      'ke-constitution',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'not-required',
+    updatedOn: '2026-08-26',
+    publishedOn: '2026-08-26',
+    reviewedOn: '2026-08-26',
+    factsVerifiedOn: '2026-08-26',
+    readingTimeMinutes: 8,
+    keyTerms: ['fair-trial', 'due-process'],
+    uncertainty: [
+      'Four systems are described from primary constitutional and statutory text. Nothing here describes the availability, quality, cost or organisation of interpretation in practice anywhere, which would require evidence the platform does not hold.',
+      'Interpretation in civil and administrative proceedings is described only where the provision quoted covers them. Most of the material here concerns criminal proceedings.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'A court runs in a language. If the person whose case it is does not understand that language, everything else the system provides — the right to be heard, to answer the case, to test evidence — becomes unusable, because all of it happens in words the person cannot follow. Provision for language is therefore not a courtesy attached to a hearing; it is a condition of the hearing being one.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This describes constitutional and statutory provisions on the language of proceedings. It is not legal advice, it does not describe how to request an interpreter anywhere, and it makes no assessment of interpretation services in any country.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'Every other procedural guarantee assumes comprehension. A person who cannot follow the proceedings cannot exercise a right to be present in any meaningful sense, cannot instruct anyone, and cannot know what has been decided about them until afterwards. The guarantee is what converts physical presence into participation.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Why the provisions sit at constitutional level so often',
+        text: 'Language provision costs money and is easy to ration quietly. Three of the four systems here put it in the constitution or in a code rather than leaving it to court practice, which makes it a claim a person can assert rather than a service that may or may not be resourced. That placement is the substance of the protection, not its packaging.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'South Africa starts from the person. Section 35(3)(k) of the Constitution gives every accused person the right to be tried in a language that the accused person understands — and only *if that is not practicable* the right to have the proceedings interpreted in that language. Interpretation is the fallback; the primary entitlement is that the trial itself is conducted in a language the accused follows.',
+        claim: 'fact',
+        sources: ['za-constitution'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Germany starts from the court, and says so in one sentence. Section 184 of the Courts Constitution Act opens with four words: “Die Gerichtssprache ist deutsch.” The language of the court is German. The same provision then guarantees a single exception: the right of the Sorbs to speak Sorbian before a court in the home districts of the Sorbian population.',
+        claim: 'fact',
+        sources: ['de-gvg-gerichtssprache'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'The finding this page exists to make',
+        text: 'These two are not different amounts of the same protection. South Africa contemplates moving the proceedings to the person’s language where practicable; Germany fixes the language of the court and moves the person into it through translation. A comparison that reported both as "the right to an interpreter" would erase the difference — and it is the difference that determines what a person is actually entitled to ask for.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Because Germany fixes the court language, section 187 has to carry the whole mechanism. The court engages an interpreter or translator for an accused or convicted person not in command of German so far as this is necessary for the exercise of their rights in criminal procedure, and must instruct the accused, in a language they understand, that they may claim the *unentgeltliche* — free of charge — engagement of an interpreter or translator for the whole of the proceedings.',
+        claim: 'fact',
+        sources: ['de-gvg-gerichtssprache'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Being told about the right is part of the right',
+        text: 'The German provision requires the instruction to be given in a language the accused understands, and Kenya and South Africa each require that any information their provisions mandate be given in a language the person understands. A right a person is informed of only in a language they do not speak has not been conferred in any practical sense.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Canada writes the entitlement more widely than the others. Section 14 of the Charter provides that a party *or witness* in *any proceedings* who does not understand or speak the language in which the proceedings are conducted, *or who is deaf*, has the right to the assistance of an interpreter. Three expansions sit in one sentence: it is not confined to criminal proceedings, it is not confined to the accused, and it treats deafness alongside not speaking the language.',
+        claim: 'fact',
+        sources: ['ca-charter-1982'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Kenya says who pays. Article 50(2)(m) gives an accused person the right to the assistance of an interpreter *without payment* if the accused cannot understand the language used at the trial, and Article 50(3) requires information the Article mandates to be given in a language the person understands.',
+        claim: 'fact',
+        sources: ['ke-constitution'],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Every system gives the same thing: an interpreter when you need one.',
+        reality:
+          'South Africa’s primary entitlement is to be tried in a language the accused understands, with interpretation only where that is not practicable. Germany fixes the court language by statute and supplies translation into it. Those are different starting points, not different wordings.',
+      },
+      {
+        claim: 'Interpretation rights apply only to the accused in a criminal trial.',
+        reality:
+          'Canada’s Charter section 14 covers a party or witness in any proceedings. Whether the entitlement extends beyond criminal cases depends entirely on how the provision is drafted.',
+      },
+      {
+        claim: 'Language provision is about foreign nationals.',
+        reality:
+          'Canada’s provision covers deafness in the same clause, and Germany’s guarantees the right of the Sorbs — a domestic minority — to speak Sorbian before a court. The question is comprehension, not nationality.',
+      },
+      {
+        claim: 'If a court provides an interpreter, the person will be charged for it.',
+        reality:
+          'Kenya’s Article 50(2)(m) gives the assistance of an interpreter without payment, and the German provision requires the accused to be told they may claim it free of charge for the whole proceedings. Who pays is a question each system answers in its own text.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Four techniques for the same problem.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Try the case in a language the accused understands, and interpret only where that is not practicable — South Africa, s 35(3)(k).',
+          'Fix a single court language by statute, with one named minority exception, and translate into it — Germany, GVG § 184 with § 187.',
+          'Give any party or witness in any proceedings an interpreter, deafness included — Canada, Charter s. 14.',
+          'Give the accused an interpreter without payment, and require information to be given in a language they understand — Kenya, Art. 50(2)(m) and 50(3).',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'uncertainty',
+        title: 'Text is not service',
+        text: 'Every statement here is about what a provision says. Whether interpreters are available, qualified, timely or adequately paid in any of these systems is a separate empirical question, and this page makes no claim about it.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'A language provision drafted as a right is contestable in a way a service is not. Where the entitlement is constitutional, a proceeding conducted without it has a defect that can be raised, independently of whether the outcome looks correct.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The German waiver rule shows what taking the entitlement seriously looks like in drafting. A waiver of written translation is effective only where the accused has first been instructed about the right and about the consequences of waiving it, and both the instruction and the waiver must be documented.',
+        claim: 'fact',
+        sources: ['de-gvg-gerichtssprache'],
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [taking part in your own case](/courts/taking-part-in-your-own-case), [access to justice](/justice/access-to-justice), and [what courts do](/courts/what-do-courts-do).',
+      },
+    ],
+  },
+  {
+    slug: 'taking-part-in-your-own-case',
+    title: 'Taking part in your own case',
+    shortTitle: 'Taking part',
+    question:
+      'What does a court do when someone cannot follow proceedings in the ordinary way?',
+    summary:
+      'Presence is not participation. Systems provide intermediaries, interpretation for deafness, and written translation of key documents — and in German law one of those entitlements changes depending on whether the person has a lawyer.',
+    entityType: 'concept',
+    section: 'courts',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'court-language-and-interpretation',
+      'the-cost-of-going-to-court',
+      'what-do-courts-do',
+    ],
+    sources: [
+      'ca-charter-1982',
+      'ke-constitution',
+      'de-gvg-gerichtssprache',
+      'za-constitution',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'not-required',
+    updatedOn: '2026-08-26',
+    publishedOn: '2026-08-26',
+    reviewedOn: '2026-08-26',
+    factsVerifiedOn: '2026-08-26',
+    readingTimeMinutes: 7,
+    keyTerms: ['fair-trial'],
+    uncertainty: [
+      'Three systems are described from primary text. Physical accessibility of court buildings, assistive technology, support for people with cognitive or psychiatric conditions, and the training of court staff were not researched and are not described.',
+      'This page describes provisions that exist. It makes no claim about whether they are used, resourced or effective anywhere.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'A person can be in the room and still be absent from the proceedings. Participation means being able to follow what is said, understand what is being decided, communicate with the court, and know what the documents say. Provisions for participation are the arrangements that close the gap between attending a hearing and being party to one.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This describes constitutional and statutory provisions on participation. It is not legal advice, it describes no process for requesting any form of assistance, and it assesses no court’s facilities or practices.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'The right to be present at one’s own trial is among the oldest procedural guarantees, and on its own it is close to empty. It secures a body in a seat. What makes presence worth having is the ability to understand and to be understood, and that is not distributed equally among the people courts deal with.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Two different problems, often conflated',
+        text: 'Not understanding the language of the court and not being able to communicate with the court are different obstacles requiring different remedies. An interpreter solves the first. Someone who cannot give evidence in the ordinary way — because of age, disability, or the nature of the case — needs something else, and systems that provide only interpretation have answered only half the question.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'South Africa and Kenya both guarantee presence, and both bound it. Section 35(3)(e) of the South African Constitution gives every accused person the right to be present when being tried; Kenya’s Article 50(2)(f) gives the same right unless the conduct of the accused person makes it impossible for the trial to proceed. Presence is the baseline the rest of this page builds on.',
+        claim: 'fact',
+        sources: ['za-constitution', 'ke-constitution'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Kenya provides for an intermediary. Article 50(7) states that in the interest of justice, a court may allow an intermediary to assist a complainant or an accused person to communicate with the court. It is drafted as a judicial discretion rather than an entitlement, it covers complainants as well as accused people, and it addresses communication generally rather than language specifically.',
+        claim: 'fact',
+        sources: ['ke-constitution'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Canada folds one accessibility question into its interpretation clause. Charter section 14 gives the right to the assistance of an interpreter to a party or witness in any proceedings who does not understand or speak the language in which the proceedings are conducted *or who is deaf*. Deafness is named in the constitutional text, not left to be inferred from a general equality provision.',
+        claim: 'fact',
+        sources: ['ca-charter-1982'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Documents are the third element, and German law is unusually specific about them. Section 187(2) of the Courts Constitution Act provides that written translation of custodial orders, indictments, penal orders and non-final judgments is as a rule necessary for an accused not in command of German; an extract suffices where that preserves their procedural rights; and the translation is to be provided without delay.',
+        claim: 'fact',
+        sources: ['de-gvg-gerichtssprache'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'One entitlement changes because of another',
+        text: 'The same provision allows an oral translation or an oral summary to replace the written one where that preserves the accused’s procedural rights — and states that this is as a rule to be assumed **where the accused has defence counsel**. Having a lawyer alters what the court must translate. It is a rare case of a statute making the interaction between two access mechanisms explicit, and it cuts both ways: the assistance is calibrated to what the person can already reach, and a person without counsel is entitled to more from the court.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Waiver is guarded. Under section 187(3) an accused can effectively waive written translation only after being instructed about the right and about the consequences of waiving it, and both the instruction and the waiver must be documented.',
+        claim: 'fact',
+        sources: ['de-gvg-gerichtssprache'],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'If a person is present at their trial, they are taking part in it.',
+        reality:
+          'Presence secures attendance. Following the proceedings, communicating with the court and knowing what the documents say are separate matters that systems address with separate provisions.',
+      },
+      {
+        claim: 'An interpreter covers every participation problem.',
+        reality:
+          'Kenya provides separately for an intermediary to assist a complainant or an accused person to communicate with the court — a different remedy for a different obstacle, framed as a judicial discretion rather than a right.',
+      },
+      {
+        claim: 'Support for participation is only for the accused.',
+        reality:
+          'Canada’s provision covers a party or witness in any proceedings, and Kenya’s intermediary provision covers complainants as well as accused people.',
+      },
+      {
+        claim: 'What the court must translate is fixed.',
+        reality:
+          'Under the German provision an oral translation or summary may replace a written one where procedural rights are preserved, which is as a rule assumed where the accused has defence counsel. The entitlement varies with what else the person has.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Three mechanisms, drafted at different strengths.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'A constitutional right, naming deafness alongside language, for any party or witness — Canada, Charter s. 14.',
+          'A judicial discretion to allow an intermediary, covering complainants and accused people — Kenya, Art. 50(7).',
+          'A statutory rule on written translation of named documents, with a guarded waiver — Germany, GVG § 187(2)–(3).',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'uncertainty',
+        title: 'A narrow slice of a wide subject',
+        text: 'Physical access to court buildings, assistive technology, support for people with cognitive or psychiatric conditions, and remote participation are all part of this subject and none was researched here. Their absence from this page is a gap in the research, not evidence that systems lack them.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'The value of these provisions to a person is that they convert a practical difficulty into a legal question. Whether someone could follow their own trial becomes something a court can be asked about, rather than something that is noticed only if it goes badly wrong.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The documentation requirement does similar work from the record’s side. A waiver that must be recorded, with the instruction that preceded it, leaves evidence that the question was put — which is what makes it reviewable later.',
+        claim: 'fact',
+        sources: ['de-gvg-gerichtssprache'],
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [court language and interpretation](/courts/court-language-and-interpretation), [representing yourself](/defence/representing-yourself), and [access to justice](/justice/access-to-justice).',
+      },
+    ],
+  },
+  {
+    slug: 'the-cost-of-going-to-court',
+    title: 'The cost of going to court',
+    shortTitle: 'The cost of court',
+    question: 'Does using a court cost money, and what do constitutions say about that?',
+    summary:
+      'Usually yes, and two constitutions address it directly — one by requiring any fee to be reasonable and not to impede access, the other by naming specific things that must be free. Neither makes justice costless, and neither claims to.',
+    entityType: 'concept',
+    section: 'courts',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'court-language-and-interpretation',
+      'taking-part-in-your-own-case',
+      'who-runs-the-courts',
+    ],
+    sources: ['ke-constitution', 'br-cf-1988'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'not-required',
+    updatedOn: '2026-08-26',
+    publishedOn: '2026-08-26',
+    reviewedOn: '2026-08-26',
+    factsVerifiedOn: '2026-08-26',
+    readingTimeMinutes: 7,
+    keyTerms: ['fair-trial'],
+    uncertainty: [
+      'No fee schedule was obtained for any jurisdiction and none is quoted. This page describes how two constitutions treat cost, not what anything costs.',
+      'Lawyers’ fees, costs orders between parties, and litigation funding were not researched and are not described. How states pay for defence representation is covered in the defence cluster and is not restated here.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Using a court usually involves paying something: a fee to start proceedings, a fee for a copy of the record, the cost of getting there, and in most matters the cost of a lawyer. Cost is the most ordinary barrier to using a legal institution and the least dramatic, which is part of why it is often left out of accounts of access.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This describes what two constitutions say about the cost of using courts. It states no fee, no threshold and no eligibility rule, it is not legal advice, and it does not describe how to apply for anything.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'Fees exist for reasons that are not disreputable. They recover part of the cost of running a system, and they impose a small check on bringing proceedings with nothing at stake. The difficulty is that a fee set at a level that does either of those things is, for some people, the whole difference between having a remedy and not having one.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Why this is a constitutional question rather than an administrative one',
+        text: 'A fee is set by whoever runs the courts, and the effect of setting it too high is that certain claims are never brought — which is invisible, because the cases that were priced out leave no record. A constitutional constraint on fees is a response to a barrier that does not show up in any of the system’s own statistics.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'Kenya addresses fees in the access provision itself. Article 48 of the Constitution states, in full: "The State shall ensure access to justice for all persons and, if any fee is required, it shall be reasonable and shall not impede access to justice." Two constraints in one clause — the fee must be reasonable, and separately it must not impede access.',
+        claim: 'fact',
+        sources: ['ke-constitution'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Read the conditional',
+        text: 'The provision says "if any fee is required". It does not abolish fees, and it does not presume they are wrong. It accepts that a system may charge and then constrains what charging may do — which is a more workable constitutional standard than a prohibition would be, and a more demanding one than a general commitment to access.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The same constitution shows that access-protective drafting does not mean everything is free. Article 50(5)(b) gives a right to a copy of the record of proceedings within a reasonable period after they are concluded — "in return for a reasonable fee as prescribed by law". The record is guaranteed; it is not guaranteed gratis.',
+        claim: 'fact',
+        sources: ['ke-constitution'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Brazil takes the other approach and names specific gratuities. Article 5º LXXVII provides that actions of habeas corpus and habeas data are free, as are, in the form of the law, the acts necessary to the exercise of citizenship. Article 5º LXXVI makes civil birth registration and the death certificate free, in the form of the law, for the recognisedly poor.',
+        claim: 'fact',
+        sources: ['br-cf-1988'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'What the Brazilian selection tells you',
+        text: 'Habeas corpus is the remedy against unlawful detention and habeas data the remedy for access to one’s own records held by the state. Both are proceedings a person brings against public power, and both are made free unconditionally rather than on proof of poverty. The choice is not random: a charge for challenging your own detention would be a charge for using the one remedy the state has the strongest interest in your not using.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Alongside those specific gratuities sits Brazil’s general provision on assistance. Article 5º LXXIV states that the State shall provide full and free legal assistance to those who prove insufficiency of resources — an entitlement conditioned on proof, and one that concerns assistance rather than the cost of the proceedings themselves.',
+        claim: 'fact',
+        sources: ['br-cf-1988'],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Access to justice means using a court is free.',
+        reality:
+          'Kenya’s Article 48 is drafted as "if any fee is required, it shall be reasonable and shall not impede access to justice" — a constraint on charging, not an abolition of it. The same constitution gives a right to a copy of the record in return for a reasonable fee.',
+      },
+      {
+        claim: 'A constitution that protects access will not put a price on anything.',
+        reality:
+          'Brazil names specific things that are free — habeas corpus, habeas data, and for the recognisedly poor civil birth registration and the death certificate. Naming some things as free implies the others are not.',
+      },
+      {
+        claim: 'Free legal assistance and free proceedings are the same guarantee.',
+        reality:
+          'They are separate. Brazil’s Article 5º LXXIV provides assistance to those who prove insufficiency of resources; Article 5º LXXVII makes two named actions free to everyone. One is about help, the other about the cost of the proceeding.',
+      },
+      {
+        claim: 'Court fees are an administrative matter, not a rights question.',
+        reality:
+          'Two of the constitutions read here treat them as a rights question and put constraints in the constitutional text. Whether that is the right approach is a policy question this page does not take a position on.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Two constitutional techniques for the same problem.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'A general standard applying to any fee — Kenya, Art. 48: reasonable, and not impeding access.',
+          'Named gratuities for specific proceedings and documents — Brazil, Art. 5º LXXVI and LXXVII.',
+          'A means-conditioned entitlement to assistance, which is a different thing from a fee rule — Brazil, Art. 5º LXXIV.',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'uncertainty',
+        title: 'No prices here',
+        text: 'This page quotes no fee schedule for any jurisdiction, because none was obtained to the standard the platform requires. It describes constitutional treatment of cost and nothing about what using a court actually costs anywhere.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'A constitutional constraint on fees gives a person something to argue about that is separate from the merits. Where a fee is set at a level that impedes access, that is a challengeable defect in the fee rather than a complaint about the outcome of a case.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'paragraph',
+        text: 'It also constrains whoever administers the courts. A body that sets fees under a rule requiring them to be reasonable and non-impeding is exercising a bounded power, which is the same structure that governs every other exercise of public authority described on this site.',
+        claim: 'analysis',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [who runs the courts](/courts/who-runs-the-courts), [access to justice](/justice/access-to-justice), and [how defence is funded](/defence/how-defence-is-funded).',
+      },
+    ],
+  },
+  {
+    slug: 'who-runs-the-courts',
+    title: 'Who runs the courts',
+    shortTitle: 'Who runs the courts',
+    question: 'Who administers a court system, if not the judges deciding cases?',
+    summary:
+      'Somebody has to appoint staff, set budgets, handle complaints and keep the buildings open, and doing that is not judging. Two constitutions create a body for it — and give that body the uncomfortable job of protecting judicial independence while also disciplining judges.',
+    entityType: 'concept',
+    section: 'courts',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'the-cost-of-going-to-court',
+      'why-judicial-independence-matters',
+      'court-hierarchy',
+    ],
+    sources: ['ke-constitution', 'br-cf-1988', 'de-grundgesetz'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'not-required',
+    updatedOn: '2026-08-26',
+    publishedOn: '2026-08-26',
+    reviewedOn: '2026-08-26',
+    factsVerifiedOn: '2026-08-26',
+    readingTimeMinutes: 8,
+    keyTerms: ['judicial-independence', 'accountability', 'oversight'],
+    uncertainty: [
+      'Three systems are described from primary constitutional text. How these bodies operate, how they are composed in practice, and how their decisions are received were not researched and are not described.',
+      'Systems where court administration sits with a justice ministry rather than a dedicated body exist and are not described here.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Deciding cases is one activity. Appointing and disciplining staff, preparing budgets, setting fees, running registries, handling complaints and maintaining buildings are others, and they are what makes deciding cases possible. Court administration is the name for the second group, and the question of who holds it is separate from the question of who judges.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This describes constitutional arrangements for administering court systems. It does not describe how any of these bodies operates, does not assess any of them, and is not a route for making a complaint about a court anywhere.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'A judiciary that administered nothing would depend entirely on another branch for its staff, its premises and its money — which is a substantial lever over an institution the same constitution declares independent. A judiciary that administered everything with no external check would be answerable to nobody for how it spent public funds or how it treated the people who work in it. Every arrangement in this area is a position between those two problems.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'The tension is built into the mandate',
+        text: 'These bodies are typically asked to do two things that pull apart: to protect judicial independence, and to discipline judicial officers. A body that only protected would be a shield; a body that only disciplined would be a threat to the independence it operates inside. Constitutions that create one are declining to separate the functions, and the composition of the body is where that choice is actually made.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'Kenya states the double mandate in the first line. Article 172(1) provides that the Judicial Service Commission shall promote and facilitate the independence and accountability of the judiciary and the efficient, effective and transparent administration of justice — and then lists what it shall do: recommend persons to the President for appointment as judges; review and make recommendations on the conditions of service of judges, judicial officers and the staff of the Judiciary, other than their remuneration; appoint, receive complaints against, investigate and remove from office or otherwise discipline registrars, magistrates, other judicial officers and other staff; prepare and implement programmes for the continuing education and training of judges and judicial officers; and advise the national government on improving the efficiency of the administration of justice.',
+        claim: 'fact',
+        sources: ['ke-constitution'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'One exclusion worth noticing',
+        text: 'The Commission reviews conditions of service "other than their remuneration". Pay is deliberately placed outside its remit — which is a recurring device in constitutional design, because control over what judges are paid is one of the more direct forms of leverage over them.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Kenya also separates the money. Article 173 establishes a Judiciary Fund administered by the Chief Registrar of the Judiciary and used for the administrative expenses of the Judiciary; the Chief Registrar prepares annual estimates and submits them to the National Assembly for approval, and once approved the expenditure of the Judiciary is a charge on the Consolidated Fund paid directly into the Judiciary Fund.',
+        claim: 'fact',
+        sources: ['ke-constitution'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Why "paid directly" is the operative phrase',
+        text: 'A budget that is approved by the legislature and then routed through an executive department can be delayed, conditioned or reduced in transit. Making the expenditure a charge on the Consolidated Fund paid directly into a judiciary-administered fund removes an intermediary. The legislature still approves the amount — the accountability is intact — but nobody stands between the approval and the money.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Brazil creates a body with a control mandate rather than a service one. Article 103-B § 4º gives the Conselho Nacional de Justiça competence for the control of the administrative and financial activity of the Judiciary and of judges’ compliance with their functional duties. It may safeguard the autonomy of the Judiciary and issue regulatory acts within its competence; review the legality of administrative acts of members or organs of the Judiciary and annul them, revise them or set a period for compliance; and receive complaints against members or organs of the Judiciary, including its auxiliary services and delegated notarial and registry services, take over disciplinary proceedings already under way, and order removal, availability or retirement or apply other administrative sanctions.',
+        claim: 'fact',
+        sources: ['br-cf-1988'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Germany does not create such a body at national level, and administers courts through the general constitutional rule instead. The courts that hear most cases are administered by the Länder while applying federal law, following Article 83 of the Basic Law under which the Länder execute federal laws in their own right. Administration and adjudicative hierarchy therefore do not coincide.',
+        claim: 'fact',
+        sources: ['de-grundgesetz'],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Judges run the courts.',
+        reality:
+          'Judges decide cases. Appointment of staff, budgets, complaints and training are handled elsewhere — in Kenya by a Judicial Service Commission, in Brazil by a national council, in Germany by the Länder.',
+      },
+      {
+        claim: 'A body that disciplines judges is a threat to judicial independence.',
+        reality:
+          'Kenya’s constitution gives the same commission both mandates in one sentence: promoting independence and accountability. Whether a particular design achieves the balance is a real question, but the pairing is deliberate rather than an oversight.',
+      },
+      {
+        claim: 'Court administration is an internal matter with no effect on the public.',
+        reality:
+          'It determines staffing, fees, registries and how complaints are handled — which is most of what a person encounters before reaching a judge at all.',
+      },
+      {
+        claim: 'Every country has a judicial council.',
+        reality:
+          'Germany administers its ordinary courts through the Länder under the general rule of Article 83 of the Basic Law rather than through a national council. The body is one solution to the problem, not the definition of it.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Three arrangements for the same set of tasks.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'A commission with a stated double mandate plus a directly funded judiciary fund — Kenya, Arts. 172 and 173.',
+          'A national council with a control mandate over administrative and financial activity and functional duties — Brazil, Art. 103-B § 4º.',
+          'No national body; administration follows the general rule that the Länder execute federal law — Germany, Basic Law Art. 83.',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'uncertainty',
+        title: 'Composition is where the design actually lives',
+        text: 'Who sits on these bodies — judges, lawyers, appointees of other branches, lay members — determines what they are in practice, and that was not researched here. This page describes mandates, not compositions, and a mandate tells you what a body may do rather than what it will.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'For a person with a complaint about a court, the first question is which body receives it, and the answer follows from the administrative arrangement rather than from the court hierarchy. Kenya’s commission receives complaints against registrars, magistrates, other judicial officers and staff; Brazil’s council receives complaints against members and organs of the Judiciary including its auxiliary and delegated services.',
+        claim: 'fact',
+        sources: ['ke-constitution', 'br-cf-1988'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'The wider point is that judicial independence is not only about deciding cases without instruction. It also depends on who controls the conditions under which cases are decided, which is why constitutions that take independence seriously tend to say something about administration and money as well as about adjudication.',
+        claim: 'analysis',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [why judicial independence matters](/courts/why-judicial-independence-matters), [the cost of going to court](/courts/the-cost-of-going-to-court), and [why justice systems need oversight](/justice/why-justice-systems-need-oversight).',
+      },
+    ],
+  },
 ];

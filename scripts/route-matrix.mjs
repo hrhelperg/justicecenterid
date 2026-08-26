@@ -211,7 +211,14 @@ const MUST_404 = [
   '/defence/effective-assistance-of-counsel',
   '/institutions/public-defender-office',
   '/institutions/legal-aid-authority',
-  '/professions/defence-lawyer',
+  // Wave 14 removed '/professions/defence-lawyer' from this list. Wave 11 deferred it for want
+  // of evidence about the PROFESSION rather than about how defence is funded; Wave 14 obtained
+  // that evidence — BRAO §§ 1, 3, 43a, 60, CF Art. 133 with Lei 8.906, and LSA 2007 ss. 12-13 —
+  // and routed it. Nothing else came off this list, and one thing was added: Wave 14 examined a
+  // bar-association institution record and rejected it, because Germany and Brazil vest
+  // admission in a professional body while England and Wales constitutes lawyers as no status
+  // at all, leaving no third member of the family to describe.
+  '/institutions/bar-association',
   '/professions/public-defender',
   // A parallel prosecution taxonomy was considered and rejected; the existing hub is used.
   '/prosecutors',
