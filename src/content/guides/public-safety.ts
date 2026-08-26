@@ -937,7 +937,13 @@ export const PUBLIC_SAFETY_GUIDES: Guide[] = [
       },
       {
         kind: 'paragraph',
-        text: 'The Insurrection Act is that express authorisation. Under 10 U.S.C. § 251, where there is an insurrection in a State against its government, the President may act *upon the request of its legislature or of its governor if the legislature cannot be convened*.',
+        text: 'The Insurrection Act is that express authorisation, and it is not one rule but several. Under 10 U.S.C. § 251, where there is an insurrection in a State against its government, the President may act *upon the request of its legislature or of its governor if the legislature cannot be convened*.',
+        claim: 'fact',
+        sources: ['us-military-domestic-deployment'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'The neighbouring sections are not conditioned on a request. Section 252 reaches unlawful obstructions, combinations or assemblages, or rebellion against the authority of the United States, that make it impracticable to enforce the laws by the ordinary course of judicial proceedings — a ground that turns on the situation rather than on who asked.',
         claim: 'fact',
         sources: ['us-military-domestic-deployment'],
       },
@@ -945,7 +951,7 @@ export const PUBLIC_SAFETY_GUIDES: Guide[] = [
         kind: 'callout',
         variant: 'note',
         title: 'Why the two must be read together',
-        text: 'Section 1385 alone would describe a country whose military may never act domestically, which is wrong. Section 251 alone would describe a general power, which is also wrong. The structure is a prohibition displaced only by an express authorisation, and the request condition is part of the authorisation rather than a convention.',
+        text: 'Section 1385 alone would describe a country whose military may never act domestically, which is wrong. Section 251 alone would describe a power that always requires a State to ask, which is also wrong — § 252 does not. The structure is a prohibition displaced only by an express authorisation, and the conditions attach to the particular section relied on rather than to the Act as a whole.',
       },
       {
         kind: 'paragraph',
@@ -1696,7 +1702,7 @@ export const PUBLIC_SAFETY_GUIDES: Guide[] = [
       },
       {
         kind: 'paragraph',
-        text: 'So continuation runs on a notice by the person who declared it, and ending it against that person’s wishes requires legislation. It is the only system researched for this wave in which no other body need agree for the emergency to carry on.',
+        text: 'So continuation runs on a notice by the person who declared it, and ending it against that person’s wishes requires legislation. That is the exact inverse of the Swiss design, where nobody need act for the ordinance to lapse and somebody must act to keep it — and the contrast is between the two defaults rather than between two levels of scrutiny.',
         claim: 'analysis',
       },
       {

@@ -91,10 +91,8 @@ test.describe('metadata, structured data, layout and keyboard', () => {
       );
       expect(levels.length).toBeGreaterThan(1);
       for (let i = 1; i < levels.length; i += 1) {
-        expect(
-          levels[i] - levels[i - 1],
-          `heading level jumps at index ${i}`,
-        ).toBeLessThanOrEqual(1);
+        const step = (levels[i] ?? 0) - (levels[i - 1] ?? 0);
+        expect(step, `heading level jumps at index ${i}`).toBeLessThanOrEqual(1);
       }
     });
 

@@ -2764,6 +2764,7 @@ export const COURTS_GUIDES: readonly Guide[] = [
       'ie-emergency-statutes',
       'un-hrc-general-comment-29',
       'za-constitution',
+      'ie-special-criminal-court',
     ],
     status: 'published',
     review: 'fact-checked',
@@ -2880,9 +2881,21 @@ export const COURTS_GUIDES: readonly Guide[] = [
       },
       {
         kind: 'paragraph',
-        text: 'The statutory machinery matches that structure exactly. Part V of the Offences Against the State Act 1939 is dormant: section 35 provides that it shall not come into or be in force save as and when provided by the section, and it comes into force when the Government makes and publishes a proclamation declaring that it is satisfied that the ordinary courts are inadequate.',
+        text: 'The statutory machinery matches that structure exactly. Section 35 of the Offences Against the State Act 1939 provides that Part V shall not come into or be in force save as and when provided by the section, and that it comes into force when the Government makes and publishes a proclamation declaring that it is satisfied that the ordinary courts are inadequate.',
         claim: 'fact',
         sources: ['ie-emergency-statutes'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'That machinery is currently switched on, and has been for a long time. The Courts Service records that the court now known as Special Criminal Court No. 1 “was established by an order made by the Government on the 30th May 1972 and is operating since 1972”.',
+        claim: 'fact',
+        sources: ['ie-special-criminal-court'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'A dormancy mechanism that has not been dormant',
+        text: 'The design is switch-on-by-proclamation, and the proclamation has stood for more than five decades. That is the same finding as the one about duration on the emergency-powers pages, arriving from a different direction: a legal mechanism built to be exceptional is not thereby short-lived, and describing the machinery without describing its actual state would leave a reader with the wrong picture of both.',
       },
       {
         kind: 'callout',
