@@ -1089,7 +1089,7 @@ export const CORRECTIONS_GUIDES: readonly Guide[] = [
         kind: 'callout',
         variant: 'note',
         title: 'Fractions are a threshold, not an entitlement',
-        text: 'Reaching two-thirds does not produce release. It makes the question askable; the public-security condition and the consent requirement still have to be satisfied, and the assessment factors still have to be weighed. A fraction in a statute is where a decision becomes possible, not where it becomes automatic.',
+        text: 'Reaching the German two-thirds point does not produce release. It makes the question askable; the public-security condition and the consent requirement still have to be satisfied, and the assessment factors still have to be weighed. A fraction in a statute is where a decision becomes possible, not where it becomes automatic.',
       },
       {
         kind: 'paragraph',
@@ -1107,7 +1107,7 @@ export const CORRECTIONS_GUIDES: readonly Guide[] = [
       {
         claim: 'Release at two-thirds is automatic once the point is reached.',
         reality:
-          'The fraction is one of three cumulative conditions. The suspension must also be justifiable taking account of the security interest of the general public, and the convicted person must consent.',
+          'Under the German provision the fraction is one of three cumulative conditions. The suspension must also be justifiable taking account of the security interest of the general public, and the convicted person must consent.',
       },
       {
         claim: 'Release decisions are made by the prison administration.',
@@ -1137,7 +1137,7 @@ export const CORRECTIONS_GUIDES: readonly Guide[] = [
         kind: 'callout',
         variant: 'uncertainty',
         title: 'Fractions do not travel',
-        text: 'The two-thirds and one-half points are provisions of one criminal code. They are not a general rule, and applying them to any other system would be an invention.',
+        text: 'The two-thirds and one-half points are provisions of one criminal code — Germany’s. They are not a general rule, and applying them to any other system would be an invention.',
       },
     ],
     rightsAndAccountability: [
