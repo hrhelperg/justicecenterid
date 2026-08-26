@@ -319,9 +319,15 @@ export const LIFECYCLE_LAYERS: readonly LifecycleLayer[] = [
     appliesTo: ['enforcement', 'investigation', 'adversarial', 'adjudication'],
     explainedBy: [
       '/forensics/what-is-forensic-science',
-      '/glossary/evidence',
+      /*
+       * Only five glossary terms are routed — the rest sit on the glossary hub under the
+       * publication gate. `evidence` and `standard-of-proof` are among the unrouted, so citing
+       * them here would have pointed the most heavily linking page on the site at pages that do
+       * not exist. Caught by the model's own validator on its first run.
+       */
       '/glossary/chain-of-custody',
-      '/glossary/standard-of-proof',
+      '/glossary/disclosure',
+      '/investigations/what-is-a-criminal-investigation',
     ],
   },
   {
