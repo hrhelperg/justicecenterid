@@ -139,6 +139,14 @@ test.describe('layout integrity', () => {
     '/corrections/what-sentencing-is-for',
     '/courts/court-language-and-interpretation',
     '/professions/defence-lawyer',
+    /*
+     * Added by Wave 16. These carry the longest unbroken tokens the corpus has: German
+     * compounds (Gerichtsverfassungsgesetz, Leichenöffnung, Sachverständigen) and statutory
+     * citations, which are the two ways a page overflows at 320px.
+     */
+    '/forensics/who-investigates-a-death',
+    '/forensics/what-dna-analysis-establishes',
+    '/forensics/who-regulates-forensic-science',
   ]) {
     test(`${path} has no horizontal overflow at ${NARROW}px`, async ({ page }) => {
       await page.setViewportSize({ width: NARROW, height: 800 });
