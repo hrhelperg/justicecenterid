@@ -106,15 +106,51 @@ describe('Japan translation integrity', () => {
     expect(policy!.note).toMatch(/only the original Japanese texts have legal effect/);
   });
 
+  /*
+   * Narrowed by Wave 20, with the reasoning recorded here rather than in a commit message.
+   *
+   * When this was written every Japanese legislation source on the platform was an English text
+   * from the Ministry of Justice's translation database, so requiring `official-reference` on all
+   * of them was the same thing as requiring it on all translations. Wave 20 added the first
+   * Japanese source that is the AUTHORITATIVE ORIGINAL — Art. 83 of the Self-Defense Forces Act,
+   * read in Japanese from e-Gov — and the old assertion reported that record as defective when in
+   * fact the record was right and the check was too narrow.
+   *
+   * The invariant that actually matters survives intact and is now stated directly: whatever the
+   * document is, Japanese is the language with legal effect. What varies is whether the record IS
+   * that text or a translation of it, and only a translation may be marked `official-reference`.
+   */
   it('never leaves a Japanese legislation source without an authoritative-language marker', () => {
     const jpLegislation = SOURCES.filter(
       (s) => s.jurisdiction === 'JP' && s.type === 'legislation',
     );
     expect(jpLegislation.length).toBeGreaterThan(0);
     for (const s of jpLegislation) {
-      expect(s.translationStatus, `${s.id} translationStatus`).toBe('official-reference');
       expect(s.authoritativeLanguage, `${s.id} authoritativeLanguage`).toBe('ja');
+      expect(
+        ['official-reference', 'not-a-translation'],
+        `${s.id} translationStatus`,
+      ).toContain(s.translationStatus);
     }
+  });
+
+  it('still holds the translations to official-reference, which is the point of the rule', () => {
+    const translations = SOURCES.filter(
+      (s) =>
+        s.jurisdiction === 'JP' &&
+        s.type === 'legislation' &&
+        (s.url ?? '').includes('japaneselawtranslation.go.jp'),
+    );
+    expect(translations.length, 'no Japanese translations left to check').toBeGreaterThan(0);
+    for (const s of translations) {
+      expect(s.translationStatus, `${s.id} is a translation`).toBe('official-reference');
+    }
+  });
+
+  it('is not vacuous — the platform now cites both a Japanese original and a translation', () => {
+    const jp = SOURCES.filter((s) => s.jurisdiction === 'JP' && s.type === 'legislation');
+    expect(jp.some((s) => s.translationStatus === 'not-a-translation')).toBe(true);
+    expect(jp.some((s) => s.translationStatus === 'official-reference')).toBe(true);
   });
 
   it('states on the pages that the English is reference only, not authoritative', () => {
