@@ -13,21 +13,32 @@ const CLAIM_LABELS: Partial<Record<ClaimType, string>> = {
   disputed: 'Disputed',
 };
 
-/** Resolves `[text](/route)` markers written in content into real links. */
+/**
+ * Resolves `[text](/route)` link markers and `**strong**` / `*em*` emphasis markers written in
+ * content into real elements. A segment never carries both — emphasis is not parsed inside a
+ * link label — so the two cases are exclusive.
+ */
 function InlineText({ text }: { text: string }) {
   return (
     <>
-      {parseInline(text).map((segment, index) => (
-        <Fragment key={index}>
-          {segment.href ? (
-            <Link href={segment.href} className="link-inline">
-              <ScriptText text={segment.text} />
-            </Link>
-          ) : (
-            <ScriptText text={segment.text} />
-          )}
-        </Fragment>
-      ))}
+      {parseInline(text).map((segment, index) => {
+        const content = <ScriptText text={segment.text} />;
+        return (
+          <Fragment key={index}>
+            {segment.href ? (
+              <Link href={segment.href} className="link-inline">
+                {content}
+              </Link>
+            ) : segment.emphasis === 'strong' ? (
+              <strong className="font-semibold">{content}</strong>
+            ) : segment.emphasis === 'em' ? (
+              <em>{content}</em>
+            ) : (
+              content
+            )}
+          </Fragment>
+        );
+      })}
     </>
   );
 }

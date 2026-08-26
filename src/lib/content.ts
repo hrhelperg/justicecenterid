@@ -35,17 +35,61 @@ export const SITE_STATS = {
 
 const INLINE_LINK = /\[([^\]]+)\]\((\/[^)\s]*)\)/g;
 
+/**
+ * `**strong**` and `*em*`.
+ *
+ * The markers must sit against a non-space character and no asterisk may appear inside a run, so
+ * a stray asterisk stays literal instead of swallowing the rest of the sentence. The `**`
+ * alternative is tried first — otherwise `*x*` would match the opening pair of `**x**`.
+ */
+const INLINE_EMPHASIS = /\*\*(\S(?:[^*]*\S)?)\*\*|\*(\S(?:[^*]*\S)?)\*/g;
+
 export interface InlineSegment {
   text: string;
   href?: string;
+  emphasis?: 'strong' | 'em';
 }
 
 /**
- * Splits `[text](/route)` markers out of a block's text.
+ * Splits emphasis markers out of one plain-text run.
  *
- * Content carries no HTML: links are written as markers and resolved at render time. That is
- * what allows tests/content/links.test.ts to validate every internal link against the route
- * registry without parsing rendered output.
+ * Applied only to text OUTSIDE a link marker: a label that carried emphasis would have to be
+ * rendered as several segments, and several segments carrying the same `href` would render as
+ * several adjacent links. Content therefore does not put emphasis inside a link label, and
+ * tests/content/wave19-remedies-review.test.ts fails on any asterisk that survives parsing —
+ * including one inside a label — rather than letting it reach the page as a literal `*`.
+ */
+function splitEmphasis(text: string): InlineSegment[] {
+  if (!text.includes('*')) return [{ text }];
+  const segments: InlineSegment[] = [];
+  let lastIndex = 0;
+
+  for (const match of text.matchAll(INLINE_EMPHASIS)) {
+    const [full, strong, em] = match;
+    const index = match.index;
+    if (index > lastIndex) segments.push({ text: text.slice(lastIndex, index) });
+    const inner = strong ?? em;
+    // One alternative always captures. If neither did, the marker is passed through as literal
+    // text rather than dropped, so a parser bug would show on the page instead of losing words.
+    if (inner === undefined) segments.push({ text: full });
+    else segments.push({ text: inner, emphasis: strong === undefined ? 'em' : 'strong' });
+    lastIndex = index + full.length;
+  }
+
+  if (lastIndex < text.length) segments.push({ text: text.slice(lastIndex) });
+  return segments;
+}
+
+/**
+ * Splits `[text](/route)` link markers and `**strong**` / `*em*` emphasis out of a block's text.
+ *
+ * Content carries no HTML: links and emphasis are written as markers and resolved at render
+ * time. That is what allows tests/content/links.test.ts to validate every internal link against
+ * the route registry without parsing rendered output.
+ *
+ * Emphasis was added in Wave 19 after a scan found 93 marker pairs across the corpus — italics
+ * for foreign legal terms and quoted statutory phrases, bold for emphasis — every one of which
+ * was reaching the reader as a literal asterisk because nothing resolved them.
  */
 export function parseInline(text: string): InlineSegment[] {
   const segments: InlineSegment[] = [];
@@ -54,12 +98,12 @@ export function parseInline(text: string): InlineSegment[] {
   for (const match of text.matchAll(INLINE_LINK)) {
     const [full, label, href] = match;
     const index = match.index;
-    if (index > lastIndex) segments.push({ text: text.slice(lastIndex, index) });
+    if (index > lastIndex) segments.push(...splitEmphasis(text.slice(lastIndex, index)));
     if (label && href) segments.push({ text: label, href });
     lastIndex = index + full.length;
   }
 
-  if (lastIndex < text.length) segments.push({ text: text.slice(lastIndex) });
+  if (lastIndex < text.length) segments.push(...splitEmphasis(text.slice(lastIndex)));
   return segments;
 }
 
