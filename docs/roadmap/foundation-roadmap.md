@@ -1069,3 +1069,67 @@ first new profession record since the pilot. Details in
 - Validation: 4405 tests / 66 files; **418 routes / 418 sitemap / 420 pages**. Twelve mutation
   proofs, 12/12 valid after two first-pass survivors were fixed in the tests rather than in the
   content.
+
+## Phase 29 — Knowledge Expansion Wave 15 (delivered 2026-08-26)
+
+Justice-system lifecycle and knowledge graph. Not a topical silo: one hub, one typed model, two
+integrative pages, and the rendering defect the link audit found. Details in
+`docs/audits/knowledge-expansion-wave-15-qa.md`, with programme-level findings in
+`docs/research/waves-12-15-cross-wave-findings.md`.
+
+- **The hub is `/justice-system`, decided on architecture rather than preference.** It is about
+  all nine sections rather than about justice principles; `/timeline` and `/comparisons` already
+  establish the pattern for a corpus-spanning page at top level; and every country dossier
+  already has a `/countries/{slug}/justice-system` module, so the hub is the general case of a
+  vocabulary the corpus already uses.
+- **The relationship model adds exactly one term.** The brief offered nine and said to implement
+  only what existing models cannot express. Eight already are — `relatedInstitutions` is
+  performedBy, `counterExamples` is contrastsWith, oversight guides are overseenBy, and so on.
+  **Order** is the one thing nothing recorded, so `mayPrecede` is the whole addition, and it is
+  named for what it asserts: the sequence is one a system _may_ use.
+- **The anti-linearity guarantees are structural, not editorial.** Nine of eleven stages are
+  `required: false`; `exits` and `variation` are required fields; and the validator fails a model
+  in which fewer than half the stages branch — the one rule that would otherwise pass every check
+  while teaching precisely the error the wave exists to prevent. A four-stage chain is fed to it
+  in a test. Cycles are permitted and correct: appeal returns a disposition to adjudication.
+- **No graph library and no client JavaScript.** Semantic HTML at build time. The whole wave cost
+  **32 bytes of JS** — a manifest entry for one new route.
+- **The audit found dead data.** `Guide.relatedInstitutions` was populated on 58 guides,
+  validated by the content tests, and **never rendered** — readers could not follow it, crawlers
+  could not see it, and three institution pages were reachable only from the institutions index.
+  `Connections` is now shared between guide and reference pages. That one fix added 82 edges, and
+  the graph finished the wave with **zero orphans, zero weakly linked pages and zero dead ends**.
+- **Six of the brief's eight supporting-page candidates were cannibalistic**, which the brief
+  anticipated. Two genuinely new pages were written, and a test plants a real paragraph from
+  `/courts/what-do-courts-do` to prove they reproduce nothing.
+- **Three mutations needed a second pass, for three different reasons** — one test defect, one
+  badly chosen mutation, one that broke the build and was therefore no proof at all. The
+  distinction is recorded rather than smoothed over.
+- Validation: 4543 tests / 68 files; **421 routes / 421 sitemap / 423 pages**; Playwright 790
+  passed / 4 skipped / 0 failed; route matrix 552/552. Ten mutation proofs, 10/10 valid.
+
+## Programme close — Knowledge Expansion Waves 12–15
+
+Four waves on one branch, one push. Baseline `6fedbe9`.
+
+- **+33 routes, +12 sources, +1053 tests, +32 bytes of JS.** The `out/` directory grew 12.1%,
+  and the cause is content plus the newly rendered Connections block on 58 guides — not tooling,
+  and not described as optimisation.
+- **Seven consecutive waves with no new institution record.** The recurring thing keeps turning
+  out to be a function whose institutional embodiments differ in kind. Wave 14 produced the
+  sharpest case: Germany and Brazil vest admission to the bar in a professional body, and England
+  and Wales constitutes lawyers as no status at all, so there was no third member of the family
+  to describe.
+- **The brief and the evidence disagreed three times**, each documented: a capacity route the
+  repository's own restricted-claim safeguard forbids, a Wave 14 candidate list already delivered
+  by Wave 11, and six Wave 15 candidates that duplicated existing pages.
+- **Five mutations survived a first pass across the programme, and every one exposed a defect in
+  a test rather than in the content.** No content was changed to accommodate a surviving mutation.
+- **The recurring test-design lesson: the unit of analysis is usually the block.** Wave 11's
+  same-sentence denial rule is right for assertions and wrong for attribution (Wave 13),
+  qualification (Wave 14) and set-up sentences (Wave 15) — each discovered independently, each
+  after a mutation survived.
+- **The final gate caught two accessibility regressions and one stale route assertion**, all
+  fixed rather than waived.
+
+Delivered on `feat/knowledge-expansion-waves-12-15`. Not merged, not deployed.
