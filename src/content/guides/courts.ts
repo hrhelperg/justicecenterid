@@ -2376,7 +2376,7 @@ export const COURTS_GUIDES: readonly Guide[] = [
         kind: 'callout',
         variant: 'uncertainty',
         title: 'Four systems, not a survey',
-        text: 'These were chosen because each states something explicit in primary text. Most systems are not described here, and the English phrase "judicial review" covers arrangements in other countries that none of these four resembles.',
+        text: 'Four systems, picked because each writes its answer into a constitution or a code rather than leaving it to be inferred. The rest are absent from this page, and the English phrase "judicial review" is stretched over arrangements elsewhere that none of these four resembles.',
       },
     ],
     rightsAndAccountability: [

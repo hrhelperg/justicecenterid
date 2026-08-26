@@ -1236,6 +1236,7 @@ export const FORENSICS_GUIDES: readonly Guide[] = [
       'expert-evidence-in-court',
       'what-dna-analysis-establishes',
       'what-is-a-criminal-investigation',
+      'what-happens-to-unlawfully-obtained-evidence',
     ],
     sources: [
       'uk-fsr-act-2021',

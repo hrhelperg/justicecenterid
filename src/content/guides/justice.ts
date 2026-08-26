@@ -1744,6 +1744,8 @@ export const JUSTICE_GUIDES: readonly Guide[] = [
       'access-to-justice',
       'why-government-is-bound-by-law',
       'why-justice-systems-need-oversight',
+      'reviewing-detention',
+      'what-a-reviewing-court-can-do',
     ],
     relatedInstitutions: ['constitutional-court', 'ombuds-and-rights-institution'],
     sources: ['br-cf-1988', 'za-constitution', 'de-gg-rechtsstaat-articles', 'udhr', 'iccpr'],
@@ -3148,7 +3150,7 @@ export const JUSTICE_GUIDES: readonly Guide[] = [
       },
       {
         kind: 'paragraph',
-        text: 'South Africa gives the same protection and never uses the phrase. Section 35(2)(d) provides that everyone who is detained, including every sentenced prisoner, has the right to challenge the lawfulness of the detention **in person before a court and, if the detention is unlawful, to be released**. The right to be heard in person and the remedy of release are stated in the provision itself.',
+        text: 'South Africa gives the same protection and never uses the phrase. Section 35(2)(d) lets anyone who is detained appear in person before a court to contest whether the detention is lawful, and be released if it is not — and it says the right belongs to everyone detained, "including every sentenced prisoner". Two things sit in the provision rather than in procedure: the appearance in person, and release as the remedy.',
         claim: 'fact',
         sources: ['za-constitution'],
       },
@@ -3180,7 +3182,7 @@ export const JUSTICE_GUIDES: readonly Guide[] = [
       {
         claim: 'Habeas corpus is the universal remedy against unlawful detention.',
         reality:
-          'It is one tradition’s name for one mechanism. South Africa gives a right to challenge detention in person and be released without using the phrase, and France allocates guardianship of individual liberty to the judicial authority.',
+          'It is not universal. It is one tradition’s name for one mechanism: South Africa gives a right to challenge detention in person and be released without ever using the phrase, and France allocates guardianship of individual liberty to the judicial authority instead.',
       },
       {
         claim: 'A system without habeas corpus has no protection against unlawful detention.',
@@ -3347,7 +3349,7 @@ export const JUSTICE_GUIDES: readonly Guide[] = [
       },
       {
         kind: 'paragraph',
-        text: 'The Forensic Science Regulator Act 2021 does it for a code of practice. Section 4, headed "Status of the code", provides that "a failure by a person to act in accordance with the code does not of itself make that person liable to civil or criminal proceedings"; that the code "is admissible in evidence in criminal and civil proceedings in England and Wales"; and that a court "may in particular take into account a failure by a person to act in accordance with the code in determining a question in any such proceedings".',
+        text: 'The Forensic Science Regulator Act 2021 does the same for a code of practice, in a section headed "Status of the code". Breaching the code "does not of itself make that person liable" to civil or criminal proceedings; the code is nevertheless admissible in evidence, and a court may take a failure to follow it into account in determining a question. Not nullity, not liability — relevance. [Who regulates forensic science](/forensics/who-regulates-forensic-science) sets the section out in full.',
         claim: 'fact',
         sources: ['uk-fsr-act-2021'],
       },

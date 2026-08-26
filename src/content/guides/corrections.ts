@@ -1340,6 +1340,7 @@ export const CORRECTIONS_GUIDES: readonly Guide[] = [
       'how-prison-capacity-is-measured',
       'who-runs-prisons',
       'conviction-sentence-and-execution',
+      'reviewing-detention',
     ],
     relatedInstitutions: ['correctional-service'],
     sources: ['ca-statcan-corrections', 'mandela-rules'],
