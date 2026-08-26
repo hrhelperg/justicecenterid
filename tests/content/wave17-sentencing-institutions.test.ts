@@ -432,6 +432,68 @@ describe('Wave 13 is not restated', () => {
     }
   });
 
+  /**
+   * Near-duplication, not only verbatim copying.
+   *
+   * Prompted by mutation proof W17-M12, which planted a PARAPHRASE of a Wave 13 paragraph and
+   * passed. That was a mis-aimed mutation rather than a test defect — an exact-substring guard
+   * never claimed to catch rewriting — but the gap it revealed is real: the failure this suite
+   * exists to prevent is a page re-answering a question Wave 13 owns, and a rewritten paragraph
+   * does that just as effectively as a copied one.
+   *
+   * Overlap is measured on word 5-grams, which is long enough that ordinary shared vocabulary
+   * ("the court must not pass a custodial sentence") does not register while a lightly edited
+   * paragraph does.
+   */
+  const shingles = (text: string): Set<string> => {
+    const words = text
+      .toLowerCase()
+      .replace(/[^a-z0-9\s]/g, ' ')
+      .split(/\s+/)
+      .filter(Boolean);
+    const out = new Set<string>();
+    for (let i = 0; i + 5 <= words.length; i += 1) out.add(words.slice(i, i + 5).join(' '));
+    return out;
+  };
+
+  it('does not near-duplicate a Wave 13 paragraph', () => {
+    const w17Shingles = new Set<string>();
+    for (const slug of WAVE_17) {
+      for (const text of guideBlocks(guide(slug))) {
+        for (const s of shingles(text)) w17Shingles.add(s);
+      }
+    }
+    for (const slug of WAVE_13) {
+      const source = getGuide(slug) as Guide;
+      for (const text of guideBlocks(source)) {
+        const src = shingles(text);
+        if (src.size < 20) continue;
+        let shared = 0;
+        for (const s of src) if (w17Shingles.has(s)) shared += 1;
+        const ratio = shared / src.size;
+        expect(
+          ratio,
+          `a Wave 17 page overlaps ${Math.round(ratio * 100)}% with a paragraph of /corrections/${slug}: "${text.slice(0, 90)}…"`,
+        ).toBeLessThan(0.3);
+      }
+    }
+  });
+
+  it('would catch a lightly edited Wave 13 paragraph', () => {
+    const source = guideBlocks(getGuide('what-a-suspended-sentence-is') as Guide).find(
+      (b) => b.length > 200,
+    );
+    expect(source, 'no long Wave 13 paragraph to test against').toBeDefined();
+    const src = shingles(source as string);
+    const planted = shingles(`Additionally, ${source}`);
+    let shared = 0;
+    for (const s of src) if (planted.has(s)) shared += 1;
+    expect(
+      shared / src.size,
+      'the overlap measure would not notice a lightly edited paragraph',
+    ).toBeGreaterThan(0.3);
+  });
+
   it('is not vacuous — Wave 13 pages have long paragraphs to collide with', () => {
     const long = blocks((getGuide('what-sentencing-is-for') as Guide).howItWorks).filter(
       (t) => t.length >= 140,
