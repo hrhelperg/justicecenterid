@@ -238,7 +238,7 @@ export const PUBLIC_SAFETY_GUIDES: Guide[] = [
       },
     ],
     uncertainty: [
-      'Three national systems and one supranational instrument are described. How any other system draws the line, or whether it draws one at all, was not researched.',
+      'Five national systems and one supranational instrument are described — Switzerland, Germany and Norway on the civil-protection/civil-defence line, and Kenya and Sweden on the institutional form. How any other system draws the line, or whether it draws one at all, was not researched.',
       'This page describes the legal architecture of the function. It describes no civil-protection activity, no plan, no exercise and no capability.',
     ],
     definition: [
@@ -370,7 +370,7 @@ export const PUBLIC_SAFETY_GUIDES: Guide[] = [
     variation: [
       {
         kind: 'paragraph',
-        text: 'Three ways to place the same function.',
+        text: 'Five systems, four ways to place the same function.',
       },
       {
         kind: 'list',
@@ -379,6 +379,8 @@ export const PUBLIC_SAFETY_GUIDES: Guide[] = [
           'A federal task for war effects, with disaster protection left to the Länder and the federal Act executed on commission — Germany, ZSKG §§ 1 and 2(1).',
           'One statutory purpose spanning war, the threat of war, danger to the realm, and peacetime events — Norway, sivilbeskyttelsesloven § 1.',
           'A supporting supranational competence that cannot displace the national one — EU, TFEU Art. 6(f) with Decision 1313/2013 Art. 1(3).',
+          'A brand-new statutory authority with a matching committee in every county — Kenya, National Disaster Risk Management Act 2026 ss. 5 and 31.',
+          'A national coordinating agency constituted by instruction, recently renamed — Sweden, förordning (2008:1002).',
         ],
       },
       {
@@ -541,8 +543,8 @@ export const PUBLIC_SAFETY_GUIDES: Guide[] = [
       {
         kind: 'callout',
         variant: 'analysis',
-        title: 'Seven institutional forms, one function',
-        text: 'Across the systems researched for this wave the civil-protection function is discharged by a standing agency in some, by a centre inside a department in another, by a council in a cabinet office in another, by a statutory system of partners with no single body in four, and — in Ireland — by a section of a ministry. The function recurs everywhere; the institution does not. That is why this platform describes it in prose rather than adding an institution type for it.',
+        title: 'Five institutional forms, one function',
+        text: 'Across the fourteen systems researched for this wave the civil-protection function is discharged by a standing agency in six, by a centre inside a department in one, by a council in a cabinet office in one, by a statutory system of named partners in four, and — in Ireland — by a section of a ministry. Five forms, and the modal one accounts for fewer than half. The function recurs everywhere; the institution recurs only loosely, which is why this platform describes it in prose rather than adding an institution type for it.',
       },
     ],
     misconceptions: [
@@ -666,7 +668,7 @@ export const PUBLIC_SAFETY_GUIDES: Guide[] = [
       },
     ],
     uncertainty: [
-      'Four national systems and one instruction are described. Whether any of these thresholds has ever been met, and what happened, was not researched and is not stated.',
+      'Five national systems and one cross-government instruction are described — Germany, Switzerland, Spain and the United States from statute, Sweden from ordinary statute, and Norway from the samfunnssikkerhetsinstruks. Whether any of these thresholds has ever been met, and what happened, was not researched and is not stated.',
       'No sub-national instrument was read in any federal system described here, so the receiving end of each escalation is not described.',
     ],
     definition: [
@@ -803,7 +805,7 @@ export const PUBLIC_SAFETY_GUIDES: Guide[] = [
     variation: [
       {
         kind: 'paragraph',
-        text: 'Five systems, five thresholds.',
+        text: 'Six systems, six answers.',
       },
       {
         kind: 'list',
@@ -813,6 +815,7 @@ export const PUBLIC_SAFETY_GUIDES: Guide[] = [
           'A sub-constitutional emergency of national interest, declared by the Interior Minister — Spain, Ley 17/2015 Arts. 28–30.',
           'A State or tribal request, with a narrow federal-responsibility override for emergency declarations only — United States, 42 U.S.C. §§ 5170 and 5191(b).',
           'No default escalation at all — Norway, the ansvarsprinsippet.',
+          'Escalation inside the municipality rather than upward from it, with far-reaching powers held under ordinary statute — Sweden, lag (2006:544) and lag (2003:778).',
         ],
       },
       {
@@ -848,7 +851,7 @@ export const PUBLIC_SAFETY_GUIDES: Guide[] = [
     shortTitle: 'Military assistance',
     question: 'When soldiers are sent to help at home, who is actually in command?',
     summary:
-      'The civil authority, in every system described here — and the instruments say so in operative terms. One statute makes domestic use of the armed forces a crime unless expressly authorised; another forbids using them to stop a protest; a constitution bars military force against the inhabitants except by statute.',
+      'The civil authority decides whether and for what — a police request, a governor’s request, an express constitutional permission, a criminal prohibition. Command of the deployed force stays military, and one of these statutes says so in terms, which is a distinction the phrase “in command” usually loses.',
     entityType: 'concept',
     section: 'public-safety',
     jurisdiction: ['INT'],
@@ -900,7 +903,7 @@ export const PUBLIC_SAFETY_GUIDES: Guide[] = [
       },
     ],
     uncertainty: [
-      'Five systems are described from primary text. Whether any of these powers has been used, how often, or with what result was not researched and is not stated.',
+      'Six systems are described from primary text — the United States, Germany, Australia, Norway, Japan and Ireland. Whether any of these powers has been used, how often, or with what result was not researched and is not stated.',
       'This page describes legal boundaries. It contains nothing about deployments, capabilities, locations, tactics or rules of engagement, and no such material was researched.',
     ],
     definition: [
@@ -979,6 +982,19 @@ export const PUBLIC_SAFETY_GUIDES: Guide[] = [
       },
       {
         kind: 'paragraph',
+        text: 'And the same section that requires the police request refuses to turn it into command. Section 40(3) provides that subsection (1) *does not require or permit the Chief of the Defence Force to transfer to any extent command of the Defence Force to a State or Territory, or to a police force or member of the police force of that State or Territory*.',
+        claim: 'fact',
+        sources: ['au-defence-act-callout'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title:
+          'Two different questions, and only one of them is answered “the civil authority”',
+        text: 'Whether the force may be used at all, and for what task, is decided by a civil authority in every instrument on this page. Who commands the force while it is doing that task is a separate question, and Australia answers it expressly: command is not transferred. A page that ran the two together would describe soldiers taking orders from a sergeant, which is not what any of these statutes provides for — and it would make the civilian-primacy point sound stronger than it is while actually describing something weaker.',
+      },
+      {
+        kind: 'paragraph',
         text: 'The same Act contains an express civil-liberties restraint. The Chief of the Defence Force must not use the Defence Force to *stop or restrict any protest, dissent, assembly or industrial action*, except where there is a reasonable likelihood of the death of, or serious injury to, persons, or of serious damage to property.',
         claim: 'fact',
         sources: ['au-defence-act-callout'],
@@ -1011,7 +1027,7 @@ export const PUBLIC_SAFETY_GUIDES: Guide[] = [
         kind: 'callout',
         variant: 'analysis',
         title: 'Five instruments, one shape',
-        text: 'A prohibition displaced by express authorisation; a constitutional permission requirement with a parliamentary off-switch; a statutory duty to act only at police request with a named exclusion; a constitutional bar on force against the inhabitants; and a request-driven dispatch. Different traditions, different drafting, and the same answer about who is in charge.',
+        text: 'A prohibition displaced by express authorisation; a constitutional permission requirement with a parliamentary off-switch; a statutory duty to act only at police request with a named exclusion; a constitutional bar on force against the inhabitants; and a request-driven dispatch. Different traditions, different drafting, and the same answer to the question they all address — who decides that the force is used, and for what.',
       },
     ],
     misconceptions: [
@@ -1083,7 +1099,7 @@ export const PUBLIC_SAFETY_GUIDES: Guide[] = [
       },
       {
         kind: 'paragraph',
-        text: 'Recording that is not an argument that Ireland has it wrong. It is the reason a comparative page has to say which system it is describing: the same sentence about military assistance is true of four of these systems and false of the fifth.',
+        text: 'Recording that is not an argument that Ireland has it wrong. It is the reason a comparative page has to say which system it is describing: the same sentence about the ordinary route of challenge is true of the five systems above and false of Ireland during a state of war or armed rebellion.',
         claim: 'analysis',
       },
     ],
@@ -1209,7 +1225,7 @@ export const PUBLIC_SAFETY_GUIDES: Guide[] = [
       },
       {
         kind: 'paragraph',
-        text: 'Czechia requires the answer to be given when the declaration is made. Article 6(1) of the constitutional act on security provides that a *nouzový stav* may be declared only with a statement of reasons, for a defined time and for a defined territory, and that simultaneously with the declaration the Government *musí vymezit, která práva stanovená ve zvláštním zákoně* are restricted and to what extent.',
+        text: 'Czechia requires the answer to be given when the declaration is made. Article 6(1) of the constitutional act on security provides that a *nouzový stav* may be declared only with a statement of reasons, for a defined time and for a defined territory, and that simultaneously with the declaration *musí vláda vymezit, která práva stanovená ve zvláštním zákoně* — the Government must specify which rights laid down in a special statute — are restricted and to what extent.',
         claim: 'fact',
         sources: ['cz-security-act'],
       },
@@ -1306,7 +1322,7 @@ export const PUBLIC_SAFETY_GUIDES: Guide[] = [
           'A closed list of permitted measures, stated twice for two regimes — Brazil, CF Arts. 136 §1 and 139.',
           'A closed list of suspendable rights, unavailable in the mildest regime — Spain, CE Art. 55(1) with Art. 116.',
           'A duty to specify the restricted rights at the moment of declaration — Czechia, ústavní zákon č. 110/1998 Sb. Čl. 6(1).',
-          'No emergency regime at all, with the ordinary limitation qualifier doing the work — Japan.',
+          'No emergency chapter in the constitution, so no derogation or suspension clause and the ordinary “public welfare” qualifier does the rights work — while a declared state of emergency disaster and a narrow Cabinet Order power sit in ordinary statute — Japan.',
           'Two parallel regimes with different controls — South Africa, Disaster Management Act 2002 alongside Constitution s. 37.',
         ],
       },
@@ -1347,7 +1363,7 @@ export const PUBLIC_SAFETY_GUIDES: Guide[] = [
     shortTitle: 'Who can declare',
     question: 'Who is legally able to declare one, and does anyone else have to agree?',
     summary:
-      'No two systems answer alike. Czechia and Spain each run three regimes with three different declaring authorities; Germany requires a two-thirds vote of the Bundestag; Ireland needs a resolution of both Houses; South Africa’s Constitution does not name the declaring authority at all.',
+      'No two systems answer alike. Czechia and Spain each run three regimes with three different declaring authorities; Germany requires a two-thirds Bundestag vote before the state of defence; Ireland needs a resolution of both Houses; South Africa’s Constitution does not name the declaring authority at all.',
     entityType: 'concept',
     section: 'public-safety',
     jurisdiction: ['INT'],
@@ -1385,7 +1401,7 @@ export const PUBLIC_SAFETY_GUIDES: Guide[] = [
       },
       {
         countrySlug: 'germany',
-        note: 'Makes the determination itself a parliamentary act — the Bundestag with the Bundesrat’s consent, on the Federal Government’s application, by two-thirds of votes cast and at least a majority of members — with a substitute route through the Joint Committee where the Bundestag cannot convene.',
+        note: 'Makes one determination a parliamentary act: the Verteidigungsfall under Art. 115a, decided by the Bundestag with the Bundesrat’s consent, on the Federal Government’s application, by two-thirds of votes cast and at least a majority of members, with a substitute route through the Joint Committee. That threshold governs the DEFENCE emergency alone — the disaster and internal-emergency instruments of Arts. 35(3) and 91(2) carry no such requirement.',
       },
       {
         countrySlug: 'ireland',
@@ -1571,7 +1587,7 @@ export const PUBLIC_SAFETY_GUIDES: Guide[] = [
     question:
       'Does a state of emergency actually end, and what happens to what was done under it?',
     summary:
-      'Initial limits run from seven days to no fixed term at all, so "temporary" carries no common content. Renewal is where the systems differ most — and Brazil answers the harder question by preserving liability for unlawful acts after the regime is over.',
+      'Initial limits run from fourteen days to no fixed term at all, so "temporary" carries no common content. Renewal is where the systems differ most — and Brazil answers the harder question by preserving liability for unlawful acts after the regime is over.',
     entityType: 'concept',
     section: 'public-safety',
     jurisdiction: ['INT'],
@@ -1684,7 +1700,7 @@ export const PUBLIC_SAFETY_GUIDES: Guide[] = [
       },
       {
         kind: 'paragraph',
-        text: 'Switzerland inverts the default entirely. Under the Regierungs- und Verwaltungsorganisationsgesetz a Federal Council ordinance made directly on constitutional authority ceases to have effect six months after entry into force unless the Federal Council has by then submitted to the Federal Assembly a draft statutory basis for its content or a draft Assembly ordinance replacing it — and it lapses on rejection of that draft, or on the entry into force of the statutory basis.',
+        text: 'Switzerland inverts the default entirely, for one class of instrument. Under Article 7d of the Regierungs- und Verwaltungsorganisationsgesetz a Federal Council ordinance made directly on Article 185(3) of the Constitution — to counter serious disturbances of public order or of internal or external security — ceases to have effect six months after entry into force unless the Federal Council has by then submitted to the Federal Assembly a draft statutory basis for its content or a draft Assembly ordinance replacing it, and it lapses on rejection of that draft or on the entry into force of the statutory basis. Article 7c, which governs ordinances made on Article 184(3) to safeguard the interests of the country, sets its own and longer clock.',
         claim: 'fact',
         sources: ['ch-rvog-notrecht'],
       },
@@ -1778,7 +1794,7 @@ export const PUBLIC_SAFETY_GUIDES: Guide[] = [
           'Fourteen days, extendable two months at a time on two-thirds then three-quarters of all members — Kenya, Art. 58(2)–(3).',
           'Twenty-one days, extendable three months at a time on a majority then at least sixty per cent — South Africa, s. 37(2).',
           'Thirty days, renewable once only, for a hard sixty-day ceiling — Brazil, CF Art. 136 §2.',
-          'Six months, lapsing unless a draft statutory basis is put before the chamber — Switzerland, RVOG Arts. 7c and 7d.',
+          'Six months for a security ordinance, lapsing unless a draft statutory basis is put before the chamber — Switzerland, RVOG Art. 7d.',
           'One year, continuing on a presidential notice with no legislative approval — United States, 50 U.S.C. § 1622(d).',
           'No fixed term, ending only when both Houses resolve the emergency has ceased — Ireland, Art. 28.3.3.',
         ],

@@ -3696,7 +3696,7 @@ export const JUSTICE_GUIDES: readonly Guide[] = [
       },
     ],
     uncertainty: [
-      'Two treaties and four national systems are described. What any other system provides was not researched, and the treaties are not evidence of any state’s domestic law.',
+      'Two treaties and five national systems are described in detail — South Africa, Kenya, Switzerland, Canada and the United States — with single sourced points about six more in the comparison list. What any other system provides was not researched, and the treaties are not evidence of any state’s domestic law.',
       'This page describes what the texts state. It does not indicate whether any measure anywhere was lawful, and it is not advice to anyone about their own position.',
     ],
     definition: [
@@ -3708,7 +3708,7 @@ export const JUSTICE_GUIDES: readonly Guide[] = [
         kind: 'callout',
         variant: 'safety',
         title: 'What this page is and is not',
-        text: 'This describes the structure of rights protection in emergencies across two treaties and four national systems. It cannot indicate whether any measure was lawful, states no route of challenge, and is not legal advice. Anyone dealing with a real situation needs a lawyer in that jurisdiction.',
+        text: 'This describes the structure of rights protection in emergencies across two treaties and five national systems, with shorter sourced points about six more. It cannot indicate whether any measure was lawful, states no route of challenge, and is not legal advice. Anyone dealing with a real situation needs a lawyer in that jurisdiction.',
       },
     ],
     whyItExists: [
@@ -3878,7 +3878,7 @@ export const JUSTICE_GUIDES: readonly Guide[] = [
       },
       {
         kind: 'paragraph',
-        text: "Neither model is a constraint on the state's capacity to protect people. Both operate on the same premise as the emergency powers themselves — that a government facing a catastrophe will need to act, and that deciding in advance what it may not do is what allows the rest to be done with confidence.",
+        text: "Neither model is designed to reduce the state's capacity to protect people, and both operate on the same premise as the emergency powers themselves — that a government facing a catastrophe will need to act, and that deciding in advance what it may not do is what allows the rest to be done with confidence. That is not the same as saying the constraints never cost anything: a rule that puts a measure out of reach puts it out of reach in the hard case as well as the easy one, and the constitutions here accept that price knowingly.",
         claim: 'analysis',
       },
     ],

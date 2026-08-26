@@ -87,27 +87,50 @@ satisfied. **The fourth is not, and it fails badly.**
 
 Fourteen systems were researched on this dimension. What the statutes actually constitute:
 
-| Form                                                    | Systems                                                                                                                                                                                                                                                 |
-| ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| A standing **agency**                                   | United States (FEMA, `6 U.S.C. §313`, inside DHS); Sweden (_Myndigheten för civilt försvar_, by instruction); Germany (BBK, by ZSKG § 4 — but _Katastrophenschutz_ is a Land matter, so the federal office is not the responsible body for most events) |
-| A **centre** inside a department                        | South Africa (National Disaster Management Centre, "an institution within which the Minister is responsible")                                                                                                                                           |
-| A **council** in a cabinet office                       | Japan (National Disaster Management Council, Cabinet Office)                                                                                                                                                                                            |
-| A statutory **system** with no single body              | Brazil (SINPDEC); Spain (Sistema Nacional de Protección Civil); Czechia (_integrovaný záchranný systém_, four named basic components); Switzerland (_Bevölkerungsschutz_, five named partner organisations under **cantonal** command)                  |
-| A **section of a ministry**                             | Ireland — the NDFEM "is not a free-standing agency but a section within the Department"                                                                                                                                                                 |
-| A **ministerial responsibility** with no dedicated body | Canada (Emergency Management Act s. 4: the Minister exercises leadership by coordinating)                                                                                                                                                               |
-| A brand-new statutory **authority**                     | Kenya (National Disaster Risk Management Authority, Act No. 16 of 2026)                                                                                                                                                                                 |
+| Form                                                    | Systems                                                                                                                                                                                                              | Count |
+| ------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----- |
+| A standing **agency**                                   | United States (FEMA, `6 U.S.C. §313`, inside DHS); Sweden (_Myndigheten för civilt försvar_); Germany (BBK, by ZSKG § 4); Kenya (National Disaster Risk Management Authority, Act No. 16 of 2026); Australia; Norway | 6     |
+| A **centre** inside a department                        | South Africa (National Disaster Management Centre, "an institution within which the Minister is responsible")                                                                                                        | 1     |
+| A **council** in a cabinet office                       | Japan (National Disaster Management Council, Cabinet Office)                                                                                                                                                         | 1     |
+| A statutory **system of named partners**                | Brazil (SINPDEC); Spain (Sistema Nacional de Protección Civil); Czechia (_integrovaný záchranný systém_); Switzerland (_Bevölkerungsschutz_, under **cantonal** command)                                             | 4     |
+| A **section of a ministry**                             | Ireland — the NDFEM "is not a free-standing agency but a section within the Department"                                                                                                                              | 1     |
+| A **ministerial responsibility** as the statutory locus | Canada (Emergency Management Act s. 4: the Minister exercises leadership by coordinating)                                                                                                                            | 1     |
 
-That is seven institutional forms for one function. An `InstitutionType` record would have to
-assert a cross-country identity that the sources refute: in four systems there is no body to point
-at, because the statute constitutes a _system of partners_ rather than an institution, and in one
-the answer is a section of a department.
+**Five forms across fourteen systems, and the modal form accounts for fewer than half.**
 
-This is the same shape the corpus has now found eleven waves running — a function whose
-institutional embodiments differ in kind — and it is the sharpest case yet, because here three
-systems have no member of the family at all.
+### The premise as first stated, and the correction
 
-**Decision: no `InstitutionType` record. The function is described in prose, on
-`/public-safety/who-is-in-charge-in-an-emergency`, with the seven forms shown as the finding.**
+The first version of this section said "in four systems there is no body to point at, because the
+statute constitutes a _system of partners_ rather than an institution", and counted seven forms.
+Adversarial review refuted both limbs from this wave's own material. BZG Art. 7(3), quoted verbatim
+in the `ch-bzg` record, names _das Koordinationsorgan des Bundes für den Bevölkerungsschutz_ — for
+Switzerland there is a body. And the original table listed twelve of the fourteen researched
+systems, omitting Australia, Norway and New Zealand, whose omission understated how common the
+standing agency is: with them included it is the modal form.
+
+Both corrections are recorded because they weaken the argument, and the argument survives them in
+a narrower and more honest form. What disqualifies an `InstitutionType` is not that four systems
+have no body. It is that **the statutory locus of the function is a different kind of object in
+five different groups of systems**, and a record whose `slug` is a noun phrase has to pick one.
+Calling the Czech _integrovaný záchranný systém_ and FEMA two instances of a single institution
+type asserts a comparability the instruments do not carry: one is a coordination structure defined
+by its four named statutory components, the other an agency inside a department with an
+Administrator reporting to a Secretary. A Swiss federal coordination organ sitting inside a
+five-partner system under cantonal command is a third thing again.
+
+The counter-argument deserves recording, because it is not weak. `coast-guard` and
+`border-and-customs-authority` are already registry records, and `coast-guard`'s own summary
+describes a body whose status "ranges from an armed military service to a civilian
+search-and-rescue or regulatory organisation" — variance at least as wide as this. Both are
+`review: 'editorial-review'` and neither is routed, so the corpus does have a shape for "recurring
+family, contested identity, summary only".
+
+**Decision, restated on the narrower ground: no `InstitutionType` record in this wave.** The
+function is described in prose on `/public-safety/who-is-in-charge-in-an-emergency`, with the five
+forms and their counts as the finding. A summary-only, unrouted record on the `coast-guard` model
+is a defensible future option and is recorded as one — but it would need the sub-national research
+this wave did not do, since in four of these systems the operational body is constituted by
+cantonal, Land or provincial law that was never read.
 
 Nothing was added to `INSTITUTION_TYPES`, `PROFESSIONS` or `GLOSSARY`, and a test asserts the
 absence negatively so a later wave cannot introduce one by accident.
@@ -172,11 +195,11 @@ counterexamples this wave carries are the ones a general account would get wrong
 
 ## 7. Summary
 
-| Question                | Decision                               | Basis                                                                        |
-| ----------------------- | -------------------------------------- | ---------------------------------------------------------------------------- |
-| New route family?       | **No** — reuse `/public-safety/[slug]` | Eight sections already carry the identical file                              |
-| New temporal type?      | **No** — `ScheduledChange` suffices    | It models corpus maintenance, not a regime's internal clock                  |
-| New `InstitutionType`?  | **No**                                 | Seven institutional forms for one function; four systems have no body at all |
-| New `RestrictedClaim`?  | **No**                                 | The wave publishes no statistic                                              |
-| New country module?     | **No**                                 | Every candidate's sub-national half was unresearched                         |
-| New comparative fields? | **No** — reuse Wave 4's                | `counterExamples` is already the right instrument                            |
+| Question                | Decision                               | Basis                                                                                                                                                                                                                           |
+| ----------------------- | -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| New route family?       | **No** — reuse `/public-safety/[slug]` | Eight sections already carry the identical file                                                                                                                                                                                 |
+| New temporal type?      | **No** — `ScheduledChange` suffices    | It models corpus maintenance, not a regime's internal clock                                                                                                                                                                     |
+| New `InstitutionType`?  | **No, on narrowed grounds**            | Five forms across fourteen systems, the statutory locus being a different kind of object in each. The original "four systems have no body" premise was refuted for Switzerland by this wave's own source and is corrected in §3 |
+| New `RestrictedClaim`?  | **No**                                 | The wave publishes no statistic                                                                                                                                                                                                 |
+| New country module?     | **No**                                 | Every candidate's sub-national half was unresearched                                                                                                                                                                            |
+| New comparative fields? | **No** — reuse Wave 4's                | `counterExamples` is already the right instrument                                                                                                                                                                               |

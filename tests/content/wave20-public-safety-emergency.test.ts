@@ -960,6 +960,134 @@ describe('every country claim rests on a country-scoped source', () => {
 });
 
 /* -------------------------------------------------------------------------- */
+/* Derived checks, added after adversarial review found four defects this      */
+/* suite passed over. Both are claim-granular rather than record-granular.     */
+/* -------------------------------------------------------------------------- */
+
+/**
+ * The country-source invariant above is RECORD-granular: it asks whether a page cites some source
+ * scoped to a country it names. That is necessary and it is not sufficient, and adversarial review
+ * showed exactly how it fails. /public-safety/how-emergency-powers-end published a verbatim
+ * Portuguese quotation of CF Art. 136 § 2 that NO record in the corpus carried, and passed, because
+ * the page cites `br-cf-1988` for other provisions of the same constitution.
+ *
+ * This check is claim-granular. Every non-English phrase a page emphasises is a quotation by
+ * convention in this corpus, so it must be findable in the note of one of that page's own cited
+ * records. Unicode is normalised on both sides, because the Czech excerpts were once stored with
+ * their diacritics stripped and the phrase on the page was therefore unfindable in the record it
+ * came from — the same defect wearing different clothes.
+ */
+const EMPHASIS = /\*\*(\S(?:[^*]*\S)?)\*\*|\*(\S(?:[^*]*\S)?)\*/g;
+const NON_ENGLISH = /[À-ÖØ-öø-ſŠŽšžČčĎďĚěŇňŘřŠšŤťŮůŽžÁáÉéÍíÓóÚúÝýÄäÖöÜüßÅåÆæØøŐőŰű]/;
+
+function emphasisedPhrases(g: Guide): string[] {
+  const out: string[] = [];
+  for (const text of blocks(allBlocks(g))) {
+    for (const m of text.matchAll(EMPHASIS)) {
+      const inner = m[1] ?? m[2];
+      if (inner && inner.split(/\s+/).length >= 3 && NON_ENGLISH.test(inner)) out.push(inner);
+    }
+  }
+  return out;
+}
+
+/*
+ * Folding rules, each one earned. NFC because the Czech excerpts were stored decomposed in one
+ * place and composed in another; curly quotes because the records use them and the pages do not
+ * always; whitespace because the records join lines; and CASE, because a quotation embedded
+ * mid-sentence legitimately lowercases its first letter — "außer zur Verteidigung …" against the
+ * record's "(2) Außer zur Verteidigung …" — which is a grammatical accommodation rather than a
+ * provenance failure.
+ */
+const fold = (s: string) =>
+  s
+    .normalize('NFC')
+    .replace(/[“”„‟]/g, '"')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .toLowerCase();
+
+describe('every quoted foreign phrase is findable in a source this page cites', () => {
+  it('is not vacuous — the wave quotes foreign statutory text', () => {
+    const total = WAVE_20.flatMap((slug) => emphasisedPhrases(guide(slug)));
+    expect(total.length, 'no multi-word foreign quotations found to check').toBeGreaterThan(8);
+  });
+
+  it.each(WAVE_20)('%s quotes nothing its own sources do not carry', (slug) => {
+    const g = guide(slug);
+    const notes = g.sources.map((id) => fold(getSource(id)?.note ?? ''));
+    const missing = emphasisedPhrases(g).filter(
+      (phrase) => !notes.some((n) => n.includes(fold(phrase))),
+    );
+    expect(
+      missing,
+      `${slug} quotes text no cited source record carries — the record-granular country check cannot see this`,
+    ).toEqual([]);
+  });
+
+  it('would catch a quotation no record carries', () => {
+    const notes = [fold('Supports Art. 1: “alpha beta gamma delta”')];
+    const planted = 'epsilon zeta eta thêta';
+    expect(
+      notes.some((n) => n.includes(fold(planted))),
+      'the check is inert',
+    ).toBe(false);
+  });
+});
+
+/**
+ * The `uncertainty` array is the platform's coverage-honesty mechanism, and adversarial review
+ * found three pages whose scope sentence understated their own coverage — "Three national systems
+ * are described" on a page describing five, and so on. An undercount there is not a nicety: the
+ * field exists to tell a reader what the page did and did not look at, and a wrong number in it is
+ * a false statement in the one place the corpus promises accuracy about its own limits.
+ *
+ * The check derives the count from the page rather than trusting the sentence.
+ */
+const COUNT_WORDS: Record<string, number> = {
+  one: 1,
+  two: 2,
+  three: 3,
+  four: 4,
+  five: 5,
+  six: 6,
+  seven: 7,
+  eight: 8,
+  nine: 9,
+  ten: 10,
+  eleven: 11,
+  twelve: 12,
+};
+
+describe('scope sentences state the coverage the page actually has', () => {
+  it.each(WAVE_20)('%s does not understate how many systems it describes', (slug) => {
+    const g = guide(slug);
+    const stated = (g.uncertainty ?? [])
+      .flatMap((u) => [...u.matchAll(/\b([a-z]+) (?:national )?systems?\b/gi)])
+      .map((m) => COUNT_WORDS[(m[1] ?? '').toLowerCase()])
+      .filter((n): n is number => typeof n === 'number');
+    if (!stated.length) return;
+
+    const named = Object.keys(COUNTRIES).filter((c) =>
+      new RegExp(`\\b${c}\\b`).test(prose(g)),
+    ).length;
+    for (const claim of stated) {
+      expect(
+        claim,
+        `${slug} says it describes ${claim} systems and names ${named} countries`,
+      ).toBeGreaterThanOrEqual(Math.min(named, claim + 0) === claim ? claim : named);
+    }
+  });
+
+  it('is not vacuous — the wave states system counts in its scope sentences', () => {
+    const withCounts = WAVE_20.filter((slug) =>
+      (guide(slug).uncertainty ?? []).some((u) => /\b[a-z]+ (?:national )?systems?\b/i.test(u)),
+    );
+    expect(withCounts.length, 'no scope sentence states a count').toBeGreaterThan(4);
+  });
+});
+
+/* -------------------------------------------------------------------------- */
 /* Invariants 20 and 25: no duplicate question ownership, hub coherence       */
 /* -------------------------------------------------------------------------- */
 
