@@ -72,8 +72,14 @@ for (const [from, links] of pages) {
   }
 }
 
+/*
+ * Wave 18 added /history/{slug}. It was omitted from this list on the first run after that wave,
+ * which meant seven new pages were audited as though they did not exist — the same failure mode
+ * the source-usage test had, where a check that does not know about a content family reports the
+ * content as fine rather than reporting itself as incomplete.
+ */
 const CONTENT =
-  /^\/(justice|courts|law-enforcement|investigations|prosecution|defence|corrections|forensics|public-safety|institutions|professions|glossary|countries)\//;
+  /^\/(justice|courts|law-enforcement|investigations|prosecution|defence|corrections|forensics|public-safety|institutions|professions|glossary|countries|history)\//;
 const contentRoutes = [...pages.keys()].filter((r) => CONTENT.test(r)).sort();
 
 const orphans = contentRoutes.filter((r) => inbound.get(r).size === 0);

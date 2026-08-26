@@ -2,6 +2,7 @@ import type { Guide, SectionId } from '../types';
 import { CORRECTIONS_GUIDES } from './corrections';
 import { COURTS_GUIDES } from './courts';
 import { DEFENCE_GUIDES } from './defence';
+import { FORENSICS_GUIDES } from './forensics';
 import { INVESTIGATIONS_GUIDES } from './investigations';
 import { PROSECUTION_GUIDES } from './prosecution';
 import { JUSTICE_GUIDES } from './justice';
@@ -13,6 +14,7 @@ export const ALL_GUIDES: readonly Guide[] = [
   ...CORRECTIONS_GUIDES,
   ...COURTS_GUIDES,
   ...DEFENCE_GUIDES,
+  ...FORENSICS_GUIDES,
   ...INVESTIGATIONS_GUIDES,
   ...PROSECUTION_GUIDES,
   ...JUSTICE_GUIDES,

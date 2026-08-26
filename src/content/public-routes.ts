@@ -20,6 +20,7 @@
 import { COUNTRY_MODULES } from './country-modules';
 import { PUBLISHED_DOSSIERS, publishedModules } from './dossiers';
 import { PUBLISHED_GUIDES, guidePath } from './guides';
+import { PUBLISHED_HISTORY, historyPath } from './history';
 import { glossaryPath } from './glossary';
 import { ROUTED_GLOSSARY } from './glossary-routes';
 import { ROUTED_INSTITUTION_TYPES, institutionPath } from './institutions';
@@ -28,6 +29,7 @@ import { SECTIONS } from './sections';
 
 export type PublicRouteKind =
   | 'home'
+  | 'history-entry'
   | 'section'
   | 'guide'
   | 'hub'
@@ -100,6 +102,21 @@ function buildRoutes(): PublicRoute[] {
 
   for (const [slug, title] of HUB_SLUGS) {
     routes.push({ path: `/${slug}`, kind: 'hub', title, parent: '/' });
+  }
+
+  /*
+   * Wave 18. /history is a hub with its own page, and history entries are its children — the
+   * same shape as /countries, /institutions, /professions and /glossary, so no new routing
+   * concept is introduced.
+   */
+  for (const entry of PUBLISHED_HISTORY) {
+    routes.push({
+      path: historyPath(entry),
+      kind: 'history-entry',
+      title: entry.title,
+      lastModified: entry.updatedOn,
+      parent: '/history',
+    });
   }
 
   for (const [slug, title] of PLATFORM_SLUGS) {

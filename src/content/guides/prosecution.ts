@@ -216,7 +216,7 @@ export const PROSECUTION_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [what a prosecutor does](/prosecution/what-does-a-prosecutor-do), [how charging decisions work](/prosecution/how-charging-decisions-work), and [police and prosecutor investigation](/investigations/police-vs-prosecutor-investigation).',
+        text: 'Related: [what a prosecutor does](/prosecution/what-does-a-prosecutor-do), [how charging decisions work](/prosecution/how-charging-decisions-work), and [police and prosecutor investigation](/investigations/police-vs-prosecutor-investigation). For a system that prosecuted without any public prosecutor, see [how Athenian courts worked](/history/how-athenian-courts-worked).',
       },
     ],
   },

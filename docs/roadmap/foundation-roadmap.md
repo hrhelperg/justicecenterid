@@ -1133,3 +1133,122 @@ Four waves on one branch, one push. Baseline `6fedbe9`.
   fixed rather than waived.
 
 Delivered on `feat/knowledge-expansion-waves-12-15`. Not merged, not deployed.
+
+## Phase 30 — Knowledge Expansion Wave 16 (delivered 2026-08-26)
+
+Forensics and evidence systems. `/forensics` held **one** guide — the thinnest routed section on
+the platform. Eight routes, ten sources, all primary. Details in
+`docs/audits/knowledge-expansion-wave-16-qa.md`.
+
+- **Two legal systems bound the science from opposite ends.** Germany's StPO § 81e lists what a
+  molecular-genetic examination may determine and then provides that other findings "may not be
+  made" and examinations directed at them are inadmissible — a statute deciding what a technique
+  may be _asked_. England and Wales bounds the testimony instead: an expert must stay within their
+  area of expertise and must tell the court, unprompted, when a question falls outside it. Neither
+  leaves the boundary to the examiner's modesty.
+- **Whose expert the expert is, answered two ways.** StPO §§ 73 and 78 give the judge the
+  selection of experts, their number and the direction of their activity. CrimPR r. 19.2(2) keeps
+  party instruction and ranks the loyalties: the duty to the court "overrides any obligation to
+  the person from whom the expert receives instructions or by whom the expert is paid".
+- **Forensic quality is enforced evidentially, not penally.** Forensic Science Regulator Act 2021
+  s. 4: breaching the code is not an offence, but the code is admissible and a court may take a
+  failure into account. Prosecuting a provider does nothing for the case its work is in;
+  devaluing the evidence addresses it directly.
+- **"Coroner equals medical examiner" is wrong in the one jurisdiction where both words are
+  native.** England and Wales has both, created by the same Act, doing different things — a
+  judicial office under a duty to investigate, and registered doctors with a statutory firewall
+  protecting their clinical judgment. Germany has neither.
+- **One technique, two reliability profiles.** The final NISTIR 8351 records that laboratories
+  agree on high-quality single-source DNA samples and that interlaboratory studies over two
+  decades show they can produce "a wide range of results" on the same mixtures. That single
+  contrast defeats "DNA proves guilt" and "DNA is unreliable" together.
+- **Source-currency discipline paid three times**: the final NIST review over its draft, the 2025
+  Criminal Procedure Rules over the revoked 2020 Rules, and the rejection of the draft bitemark
+  review as authority for anything.
+- Validation: 4856 tests / 69 files; **429 routes**. Eleven mutation proofs, 11/11 after two
+  survivors exposed test weaknesses — one had left a whole branch of the safety guard unexercised.
+
+## Phase 31 — Knowledge Expansion Wave 17 (delivered 2026-08-26)
+
+Sentencing institutions and community corrections. Wave 13 already owned most of the brief's
+candidate list, so seven routes on what was genuinely absent. Details in
+`docs/audits/knowledge-expansion-wave-17-qa.md`.
+
+- **The day-fine separates the offence from the offender.** StGB § 40 imposes a number of daily
+  units for what the offence merits and values each unit on the offender's circumstances, and
+  § 40(4) requires the decision to state **both** — so an appeal can attack the number without
+  disturbing the value. England and Wales fixes one amount that must reflect seriousness and take
+  account of means, "whether ... increasing or reducing". Neither is a hardship discount.
+- **The custody threshold is framed against the alternatives.** A court must not imprison unless
+  the offence was "so serious that neither a fine alone nor a community sentence can be
+  justified", so a court reaching for custody has necessarily formed a view about both.
+- **Guidelines are neither advisory nor mandatory.** Courts "must follow" relevant guidelines
+  "unless satisfied that it would be contrary to the interests of justice to do so" — binding by
+  requiring an explanation rather than by removing the choice, and expressly subordinate to the
+  statutory thresholds.
+- **A community order is a container, not a sanction**: sixteen statutory requirement types doing
+  three different jobs — taking something away, addressing a cause, and making the others
+  verifiable.
+- **Probation shapes the sentence before it administers one.** The pre-sentence report is written
+  by "an officer of a provider of probation services" — a formulation presupposing plural
+  providers, which is why no probation-service institution record was created.
+- **"Prison inspection" names two different things.** Mandela Rule 83 requires a **twofold**
+  system: internal by the administration, external by a body independent of it. Only one is
+  independent and both are called inspection.
+- **A second currency trap**: CJA 2009 s. 125 was repealed in 2020 and the duty now sits in the
+  Sentencing Act 2020. OHCHR returned 403, so nothing is claimed about OPCAT — stated on the page.
+- Validation: 5111 tests / 70 files; **436 routes**. Twelve mutation proofs, 12/12.
+
+## Phase 32 — Knowledge Expansion Wave 18 (delivered 2026-08-26)
+
+History of justice institutions. `/history` and `/timeline` were single hub pages with no child
+routes. Seven pages spanning ancient to modernisation. Details in
+`docs/audits/knowledge-expansion-wave-18-qa.md`.
+
+- **The Home Office says there is no evidence linking the principles of policing to Peel**, and
+  that they were "likely devised by" the first Commissioners of the Metropolis. The hedge is the
+  department's and is kept: the attribution is recorded as _contested_, and a mutation proves it
+  cannot be quietly upgraded.
+- **The Habeas Corpus Act 1679 did not create habeas corpus, and says so.** Its recital describes
+  gaolers evading writs already directed to them "contrary to their Duty and the knowne Lawes of
+  the Land". What it added was three days — the generalisable point being that rights fail through
+  procedural attrition rather than through denial.
+- **The Bill of Rights prints its grievances immediately above its declarations**, so "cruell and
+  unusuall Punishments" reads as an answer to something specific. The resemblance to later
+  instruments is recorded; the descent is not asserted.
+- **A national archive has to warn researchers about the word "police"** — men employed as
+  "Policemen" on the railways from as early as 1826 were directing trains, like a signalman.
+- **The ancient source contains its own warning against presentism**: "it is not fair to study his
+  intention in the light of what happens at the present day".
+- **Six of seven continuity claims are `none-established`,** and a test requires the wave to
+  refuse more connections than it asserts.
+- **The schema addition is two types and was argued for**, against `TemporalScope`,
+  `ScheduledChange` and `TimelineEntry` in turn. No lineage graph: it would invite the descent
+  claims the wave exists to refuse.
+- **Prison history deferred** — the relevant nineteenth-century Acts are scanned-PDF-only, and OCR
+  was rejected as a source standard in an earlier wave. A long title is not a page.
+- Validation: 5247 tests / 72 files; **443 routes**. Eight mutation proofs, 8/8, including all
+  five the brief named.
+
+## Programme close — Knowledge Expansion Waves 16–18
+
+Three waves on one branch, one push. Baseline `746f482`.
+
+- **+22 routes, +20 sources, +704 tests, +28 bytes of JS.** No client library of any kind was
+  added: no graph, no chart, no search framework.
+- **Nine consecutive waves with no new institution record.** Waves 16 and 17 declined four
+  families between them. The recurring thing keeps turning out to be a function whose
+  institutional embodiments differ in kind — and Wave 16 produced the sharpest case yet, where the
+  third system has no member of the family at all.
+- **A duty whose breach produces no nullity, found twice independently** — in the forensic code of
+  practice and in the pre-sentence report requirement. Systems reach for that shape when voiding
+  the outcome would harm the person the duty protects.
+- **Three source-currency traps caught by reading revised text rather than assuming**: revoked
+  Rules, a repealed section, and a draft mistaken for a final report.
+- **31 of 31 mutation proofs valid.** Three needed a second pass; two exposed genuine test
+  weaknesses and one was a mis-aimed mutation, recorded as such rather than smoothed over.
+- **The recurring engineering lesson, twice more**: a check that does not know about a content
+  family reports the content as wrong rather than itself. Both omissions now carry a comment at
+  the point of the omission.
+
+Delivered on `feat/knowledge-expansion-waves-16-18`. Not merged, not deployed.

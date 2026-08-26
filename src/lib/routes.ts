@@ -98,6 +98,11 @@ const PRIORITY: Record<PublicRouteKind, number> = {
    * point a reader arrives at first.
    */
   institution: 0.6,
+  /*
+   * Wave 18. A history entry sits with the other detail pages beneath a hub: it answers one
+   * narrow question, and /history is where a reader arrives first.
+   */
+  'history-entry': 0.6,
   profession: 0.6,
   /* A definition page sits below a topic guide in the hierarchy it explains. */
   'glossary-term': 0.5,

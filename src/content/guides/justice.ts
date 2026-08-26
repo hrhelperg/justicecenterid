@@ -335,7 +335,7 @@ export const JUSTICE_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [what justice means institutionally](/justice/what-is-justice), [what due process requires](/justice/what-is-due-process), and [what courts do](/courts/what-do-courts-do).',
+        text: 'Related: [what justice means institutionally](/justice/what-is-justice), [what due process requires](/justice/what-is-due-process), and [what courts do](/courts/what-do-courts-do). On the text most often invoked for this idea, see [which Magna Carta](/history/which-magna-carta).',
       },
     ],
   },
@@ -1143,7 +1143,7 @@ export const JUSTICE_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [why government is bound by law](/justice/why-government-is-bound-by-law), [legality and non-retroactivity](/justice/legality-and-non-retroactivity), and [what due process is](/justice/what-is-due-process).',
+        text: 'Related: [why government is bound by law](/justice/why-government-is-bound-by-law), [legality and non-retroactivity](/justice/legality-and-non-retroactivity), and [what due process is](/justice/what-is-due-process). For limits drafted as answers to recited abuses, see [the 1689 declarations](/history/the-1689-declarations-and-what-caused-them).',
       },
     ],
   },
@@ -1871,7 +1871,7 @@ export const JUSTICE_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [access to justice](/justice/access-to-justice), [judicial review](/glossary/judicial-review), and [why justice systems need oversight](/justice/why-justice-systems-need-oversight).',
+        text: 'Related: [access to justice](/justice/access-to-justice), [judicial review](/glossary/judicial-review), and [why justice systems need oversight](/justice/why-justice-systems-need-oversight). On what happens when a remedy exists and is evaded, see [what the Habeas Corpus Act 1679 actually did](/history/what-the-habeas-corpus-act-1679-actually-did).',
       },
     ],
   },

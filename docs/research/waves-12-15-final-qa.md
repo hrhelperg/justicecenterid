@@ -146,6 +146,6 @@ No new client code was added, so there is no new inline-script or CSP implicatio
 
 ## 8. Commits
 
-Nineteen local commits in the conceptual groups the brief suggests: research and sources, content,
+Twenty local commits in the conceptual groups the brief suggests: research and sources, content,
 tests and QA per wave, then the cross-wave audit, documentation and final validation fixes. No
 squashing.
