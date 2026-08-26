@@ -3,8 +3,19 @@
 Branch `feat/knowledge-expansion-wave-20`. Compiled 2026-08-26.
 
 **133 unique documents were fetched and read this session. 79 access failures were recorded.**
-Both numbers matter: a register that showed only successes would be describing a different
-research session from the one that happened.
+
+> **Corrections applied after adversarial review, recorded here rather than silently.** Three
+> Swiss records carried Fedlex ELI permalinks as their `url`; those permalinks return HTTP 200
+> while serving a JavaScript application shell containing no legal text, exactly as this register
+> notes below, so two of them now point at the filestore HTML that was actually read. The ICCPR
+> Article 4 material is now recorded as read from OHCHR's PDF rather than from the UN Treaty
+> Series copy this register lists as never retrieved. `se-constitution` now states that its Wave 20
+> Swedish quotations were read at the Riksdag's SFS text and not from the English-edition PDF at
+> its `url`. And the Czech excerpts, first captured with their diacritics stripped by a
+> Windows-1250 encoding failure this register diagnoses below, have been restored for every
+> passage this platform quotes.
+> Both numbers matter: a register that showed only successes would be describing a different
+> research session from the one that happened.
 
 ## 1. The standard applied
 

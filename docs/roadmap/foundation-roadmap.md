@@ -1297,3 +1297,51 @@ in `docs/audits/knowledge-expansion-wave-19-qa.md`.
   orphans, 0 weakly linked, 0 dead ends. **10/10 mutation proofs valid.**
 
 Delivered on `feat/knowledge-expansion-wave-19`. Not merged, not deployed.
+
+## Phase 34 — Knowledge Expansion Wave 20 (delivered 2026-08-26)
+
+Public safety, emergency powers and civil protection. Twelve guides across three sections, on how
+states provide extraordinary capacity without making extraordinary power legally unlimited.
+Details in `docs/research/knowledge-expansion-wave-20-qa.md`.
+
+- **`/public-safety` was the only section in the corpus that was a hub with no children** — one
+  route, no guides, six editorial outbound links all pointing at other hubs, and six inbound of
+  which two were the 404 pages. It now has eight guides, and needed no new routing concept: the
+  eighteen-line `[slug]/page.tsx` the other eight sections already carry.
+- **The section split is the thesis made architectural.** `/public-safety` carries capacity — what
+  the field covers, who is legally in charge, how authority escalates, what the armed forces may
+  do at home. `/justice` and `/courts` carry the boundaries. A reader who came looking for either
+  half finds it where they would look for it.
+- **Declaration authority is the most jurisdiction-specific thing in the subject.** Czechia and
+  Spain each run three regimes with three declaring authorities; Germany's defence emergency needs
+  a two-thirds Bundestag vote; Ireland's shield is switched on by a resolution of each House; and
+  South Africa's Constitution never names the declaring authority at all.
+- **"Temporary" carries no common content** — fourteen days in Kenya, no fixed term in Ireland,
+  where the shield persists until both Houses resolve the emergency has ceased.
+- **Five architectures for rights, not one**: a list of non-derogable rights, a protected core of
+  every right, a closed list of permitted measures, a closed list of suspendable rights, and no
+  derogation machinery at all.
+- **Assistance is not government, and tasking is not command.** Australia's Defence Act s. 40(3)
+  says in terms that requiring a police request does not transfer command of the force — a
+  distinction the phrase "in command" usually loses, and one the adversarial pass caught this wave
+  losing before it was fixed.
+- **Five model refusals, each argued against evidence, and one corrected under challenge.** The
+  decision not to add an `InstitutionType` originally rested on "in four systems there is no body
+  to point at"; that premise was refuted for Switzerland by this wave's own source record, and the
+  decision is restated on the narrower ground that survives it, with the counter-argument recorded.
+- **Client JS moved by 34 bytes.** No library, no component, no chart; CSS unchanged.
+- **A test-design finding worth more than the wave**: a misconception must be one unit for a
+  denial-aware check and must be split into sentences for a directive check, because a directive
+  check reads only the text before the match and a misconception's reality opens with a negation.
+  Mutation proof M4 found it by planting an instruction that the safety guard cleared.
+- **Two new claim-granular tests, both of which failed on published content**: every non-English
+  phrase a page quotes must be findable in a source record that page cites — which caught a
+  Portuguese constitutional quotation no record carried, Czech excerpts stored with their
+  diacritics stripped, and a quotation that had silently dropped a word — and no scope sentence
+  may understate its own page's coverage.
+- Validation: 6152 tests / 76 files; 928 Playwright tests / 14 specs; **462 routes**, 464 pages,
+  462 sitemap URLs; 325 sources; 0 orphans, 0 weakly linked, 0 dead ends. **10/10 mutation proofs
+  valid**, two of them on a second run. Adversarial QA: 52 findings and 35 refutations across
+  twenty lenses, every P0 and P1 independently reproduced before being acted on.
+
+Delivered on `feat/knowledge-expansion-wave-20`. Not merged, not deployed.
