@@ -1340,6 +1340,7 @@ export const CORRECTIONS_GUIDES: readonly Guide[] = [
       'how-prison-capacity-is-measured',
       'who-runs-prisons',
       'conviction-sentence-and-execution',
+      'reviewing-detention',
     ],
     relatedInstitutions: ['correctional-service'],
     sources: ['ca-statcan-corrections', 'mandela-rules'],
@@ -3106,7 +3107,7 @@ export const CORRECTIONS_GUIDES: readonly Guide[] = [
       {
         claim: 'A complaint that gets no answer has failed.',
         reality:
-          'Rule 57(1) entitles the complainant to bring the matter before a judicial or other authority if the complaint is rejected *or in the event of undue delay*. Delay is treated as a refusal.',
+          'Rule 57(1) entitles the complainant to bring the matter before a judicial or other authority if the complaint is rejected “or in the event of undue delay”. Delay is treated as a refusal.',
       },
       {
         claim: 'Only the prisoner can complain.',

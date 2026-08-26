@@ -2209,4 +2209,531 @@ export const COURTS_GUIDES: readonly Guide[] = [
       },
     ],
   },
+
+  /* ------------------------------------------------------------------------
+     Wave 19 — remedies, appeals and review.
+
+     Nine existing pages already establish WHY correction mechanisms exist, what a
+     remedy is, that appeal is not universally a retrial, and that respect for
+     courts is compatible with challenging them. None of that is repeated.
+
+     What was missing is the layer between "correction mechanisms exist" and "here
+     is a court": the distinction between appeal and review, the models of
+     constitutional review, what a reviewing court can actually order, and three
+     misconceptions no page refuted — that a procedural breach voids a proceeding,
+     that unlawfully obtained evidence is always excluded, and that habeas corpus
+     is the universal detention remedy.
+     ------------------------------------------------------------------------ */
+  {
+    slug: 'appeal-and-judicial-review-are-different',
+    title: 'Appeal and judicial review are different',
+    shortTitle: 'Appeal vs judicial review',
+    question: 'Is judicial review just another word for appeal?',
+    summary:
+      'No. An appeal asks whether a decision was right; judicial review asks whether a body acted within its powers and followed a lawful process. German law makes the difference structural — a court that thinks a statute is unconstitutional may not disapply it, and must stop and refer.',
+    entityType: 'concept',
+    section: 'courts',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'cassation-review',
+      'what-a-reviewing-court-can-do',
+      'trial-and-appellate-courts',
+    ],
+    relatedInstitutions: ['constitutional-court'],
+    sources: ['de-stpo-revision', 'de-grundgesetz', 'nl-constitution', 'es-constitution'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'not-required',
+    updatedOn: '2026-08-26',
+    publishedOn: '2026-08-26',
+    reviewedOn: '2026-08-26',
+    factsVerifiedOn: '2026-08-26',
+    readingTimeMinutes: 9,
+    keyTerms: ['appeal', 'judicial-review', 'jurisdiction'],
+    uncertainty: [
+      'Four systems are described from primary text. How courts apply these distinctions in practice is case law this platform has not researched.',
+      'This page states no time limit, no procedure and no route for bringing anything. It describes what the mechanisms are, not how to use them.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Two questions can be asked about a decision that went against you, and English blurs them. One is whether the decision was correct — the right law applied to the right facts, reaching a defensible result. The other is whether the body was entitled to decide at all, and whether it went about it lawfully. Those are different questions, they are usually answered by different procedures, and the second one can succeed where the first would fail.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This distinguishes two kinds of challenge using provisions from four systems. It is not legal advice, it describes no procedure, time limit or route in any jurisdiction, and it cannot indicate whether anything is challengeable in any case.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'A system needs both because decisions fail in two unrelated ways. A tribunal that heard the case properly can still get the answer wrong. And a body that would have reached a perfectly sensible answer can lack the power to decide the question, or reach it without hearing the person affected. Only the first is an error in the decision; the second is a defect in the decision-making.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Why the second question is the more powerful one',
+        text: 'A challenge to the correctness of a decision has to persuade a reviewing body that a considered judgement was wrong, which is hard and is meant to be. A challenge to the lawfulness of the process does not have to show the outcome was wrong at all — it can succeed while leaving open what the right answer was. That is why the distinction is worth having and why collapsing it into "appeal" loses something.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'Start with what an appeal-type review examines when it is drawn narrowly. Section 337 of the German Code of Criminal Procedure provides that a *Revision* may be based **only** on the judgment resting on a violation of the law, and that the law is violated where a legal norm was not applied or was not correctly applied. The object under examination is the judgment, and the question is whether it is legally sound.',
+        claim: 'fact',
+        sources: ['de-stpo-revision'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Now take a different defect: the statute the court applied may itself be unconstitutional. That is not a complaint about the judgment, and the German Basic Law does not let the trial court treat it as one. Under Article 100(1), if a court concludes that a law on whose validity its decision depends is unconstitutional, the proceedings **shall be stayed** and a decision obtained from the Federal Constitutional Court where the Basic Law is held to be violated.',
+        claim: 'fact',
+        sources: ['de-grundgesetz'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'The finding this page exists to make',
+        text: 'The ordinary court may not simply decline to apply a statute it believes unconstitutional. It must stop and ask a different court. That is the cleanest available demonstration that reviewing a judgment and reviewing a norm are separate jurisdictions rather than degrees of the same thing — the same judge, the same case, and a question that has to leave the room.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The third route is different again: a complaint that public authority infringed a right, brought by the person affected rather than routed through a court. Article 94(1)4a provides that the Federal Constitutional Court rules on constitutional complaints, which may be filed by *any person* alleging that one of their basic rights or one of the listed rights has been infringed by public authority.',
+        claim: 'fact',
+        sources: ['de-grundgesetz'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'A numbering note worth having',
+        text: 'Most references cite Article 93 for the jurisdiction of the German Federal Constitutional Court. In the current text of the Basic Law, Article 93 sets out its composition and Article 94 its jurisdiction — the two were swapped. This page cites the current text.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'These routes are ordered rather than parallel, and Spain states the ordering in its constitution. Article 53.2 provides that any citizen may seek protection of the rights in Article 14 and Section 1 of Chapter 2 before the **ordinary courts**, by a procedure based on the principles of *preferencia y sumariedad* — preference and summariness, and *where appropriate* thereafter through the *recurso de amparo* before the Constitutional Court.',
+        claim: 'fact',
+        sources: ['es-constitution'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'German law contemplates the same sequencing. Article 93(5) provides that the federal law regulating the Court may require that all other legal remedies be exhausted before a constitutional complaint may be filed, and may provide a separate proceeding to decide whether a complaint is accepted at all.',
+        claim: 'fact',
+        sources: ['de-grundgesetz'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'And one system removes the question entirely',
+        text: 'Article 120 of the Dutch Constitution provides that the constitutionality of Acts of Parliament and treaties **shall not be reviewed by the courts**. There is no referral, no complaint and no filter, because there is no jurisdiction to route anything into. Any account of "judicial review" as a feature of rule-of-law systems has to survive that sentence, and the general accounts usually do not.',
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Judicial review is a kind of appeal.',
+        reality:
+          'They examine different things. A German Revision may be based only on the judgment resting on a violation of the law; a challenge to the constitutionality of the statute the court applied cannot be raised that way at all and must go to a different court under Article 100.',
+      },
+      {
+        claim: 'A court that thinks a law is unconstitutional will simply not apply it.',
+        reality:
+          'Not in Germany. Article 100(1) requires the proceedings to be stayed and a decision obtained from the Federal Constitutional Court. Whether an ordinary court may disapply a statute is one of the sharpest differences between systems.',
+      },
+      {
+        claim: 'Every system lets courts review whether a statute is constitutional.',
+        reality:
+          'Article 120 of the Dutch Constitution provides that the constitutionality of Acts of Parliament and treaties shall not be reviewed by the courts.',
+      },
+      {
+        claim: 'A person can take a rights complaint straight to a constitutional court.',
+        reality:
+          'Spain routes protection through the ordinary courts first, by a preferential and summary procedure, with amparo available where appropriate. German law permits the statute governing the Federal Constitutional Court to require all other remedies to be exhausted first.',
+      },
+      {
+        claim: 'Winning a review means the decision was wrong.',
+        reality:
+          'A challenge to the lawfulness of a process can succeed without establishing what the right answer was. That is the difference between saying a decision was incorrect and saying it was not properly made.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Four systems, four positions on who may review what.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Review of a judgment confined to legal error, before the ordinary courts — Germany, StPO § 337.',
+          'Review of a statute reserved to a separate court, reached by compulsory referral — Germany, Basic Law Art. 100(1).',
+          'A complaint by any person that public authority infringed a basic right — Germany, Art. 94(1)4a, with exhaustion permitted by Art. 93(5).',
+          'Rights protection before the ordinary courts first, amparo where appropriate — Spain, Art. 53.2.',
+          'No review of the constitutionality of Acts of Parliament by any court — the Netherlands, Art. 120.',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'uncertainty',
+        title: 'Four systems, not a survey',
+        text: 'Four systems, picked because each writes its answer into a constitution or a code rather than leaving it to be inferred. The rest are absent from this page, and the English phrase "judicial review" is stretched over arrangements elsewhere that none of these four resembles.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'Identifying which question is being asked comes before anything else, because the routes are not interchangeable. A complaint that a decision was unfair, sent to a body that examines only legal correctness, is not a weak complaint — it is one that body has no power to answer.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The referral rule is an accountability mechanism in both directions. It stops individual courts quietly disapplying statutes they dislike, and it stops an unconstitutional statute surviving simply because no ordinary court would take responsibility for saying so.',
+        claim: 'fact',
+        sources: ['de-grundgesetz'],
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [constitutional review](/justice/constitutional-review), [what a reviewing court can do](/courts/what-a-reviewing-court-can-do), and [judicial review](/glossary/judicial-review).',
+      },
+    ],
+  },
+  {
+    slug: 'cassation-review',
+    title: 'Cassation review',
+    shortTitle: 'Cassation',
+    question: 'What is cassation, and does a cassation court sit at the top?',
+    summary:
+      'Cassation is a way of examining a judgment, not a rank a court holds. German law proves the point: the Revision is confined to legal error and is heard against first-instance judgments of courts that are not the apex of anything.',
+    entityType: 'concept',
+    section: 'courts',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'appeal-and-judicial-review-are-different',
+      'supreme-courts-and-final-appeal',
+      'what-a-reviewing-court-can-do',
+    ],
+    sources: ['de-stpo-revision', 'fr-justice-courts', 'be-cassation', 'nl-constitution'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'not-required',
+    updatedOn: '2026-08-26',
+    publishedOn: '2026-08-26',
+    reviewedOn: '2026-08-26',
+    factsVerifiedOn: '2026-08-26',
+    readingTimeMinutes: 8,
+    keyTerms: ['appeal', 'court', 'jurisdiction'],
+    uncertainty: [
+      'Four systems are described from primary or official sources. What a cassation court does with a case after quashing, and how often it does so, were not researched.',
+      'Civil cassation, and cassation in systems not named here, are not described. Nothing on this page transfers to a system it does not name.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Cassation is a mode of review in which a court examines whether the law was correctly applied and does not re-establish the facts. The word comes from *casser*, to break: the characteristic outcome is that the judgment below is broken rather than replaced. What it is not is a level in a hierarchy, and the English habit of treating "the Court of Cassation" as a translation of "the Supreme Court" loses the distinction entirely.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This describes a mode of review and where it sits in four systems. It is not legal advice, describes no procedure or time limit, and states nothing about whether any decision can be challenged.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'A system that let every dissatisfied party have the facts examined again would need as many second courts as first ones, and would never finish anything. But legal questions have a different property from factual ones: the answer should be the same everywhere, and a court that hears them from across the system can make it so. Cassation is the arrangement that follows from taking that difference seriously.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'The consequence readers find surprising',
+        text: 'A court reviewing legal correctness is not primarily interested in whether this litigant was treated justly. It is interested in whether the rule was applied properly, because that answer governs every other case. That is why such a court may quash a judgment and send the case back rather than deciding it — the thing it fixed was the law, and the case still needs deciding.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'German law states the confinement precisely. Section 337 of the Code of Criminal Procedure provides that a *Revision* may be based **only** on the judgment resting on a violation of the law, and that the law is violated where a legal norm was not applied or was not correctly applied. Facts established below are not reopened.',
+        claim: 'fact',
+        sources: ['de-stpo-revision'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'The scope of examination is narrower still. Section 352 provides that the review court examines only the applications actually made, and — where the Revision rests on procedural defects — only the facts designated when those applications were brought. The court does not go looking.',
+        claim: 'fact',
+        sources: ['de-stpo-revision'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'The finding this page exists to make',
+        text: 'Section 333 provides that Revision lies against the judgments of the Strafkammern and Schwurgerichte **and against first-instance judgments of the Oberlandesgerichte**. So a review confined to legal error — cassation in substance — is available against decisions of courts that are not the apex of the system, and is heard by courts that are not necessarily the apex either. Cassation is a description of what the review does, not of where the court sits.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'France supplies the institution most people mean by the word. The Cour de cassation is the highest court of the judicial order, and what makes it distinctive is the mode rather than the position: it reviews whether the law was correctly applied rather than re-deciding the case.',
+        claim: 'fact',
+        sources: ['fr-justice-courts'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'The Netherlands names the same mode in its constitution. Article 118 of the Grondwet provides for the Supreme Court and cassation — so a system can hold cassation at the apex and still be describing a mode of review rather than defining what an apex court is. Belgium likewise operates a Court of Cassation as its highest court in this mode.',
+        claim: 'fact',
+        sources: ['nl-constitution', 'be-cassation'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Two questions, and the name answers neither',
+        text: 'Ask what the court examines — the law only, or the facts as well — and ask where it sits. Those are independent. A cassation-mode review can be heard below the apex, as in Germany; an apex court can re-decide cases rather than review them. Reading either answer off the word "cassation" produces a mistake in one direction or the other.',
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'A Court of Cassation is that country’s Supreme Court.',
+        reality:
+          'The name describes the mode of review, not the rank. France’s Cour de cassation is the highest court of the judicial order; German Revision — the same mode — lies against first-instance judgments of the Oberlandesgerichte, which are not the apex.',
+      },
+      {
+        claim: 'Cassation is just the last appeal.',
+        reality:
+          'It is confined to legal error. German law provides that a Revision may be based only on the judgment resting on a violation of the law, and the review court examines only the applications made.',
+      },
+      {
+        claim: 'Cassation courts decide the case.',
+        reality:
+          'The characteristic outcome is that the judgment below is broken rather than replaced, which is why the case may return to a lower court to be decided again.',
+      },
+      {
+        claim: 'Only some systems have anything like cassation.',
+        reality:
+          'The mode appears under different names and in different positions — the German Revision below the apex, the French Cour de cassation and the Belgian Court of Cassation at it, and cassation named in the Dutch Constitution.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Same mode, different positions in the hierarchy.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Confined to legal error and available below the apex — Germany, StPO §§ 333, 337, 352.',
+          'The highest court of the judicial order, reviewing legal correctness rather than re-deciding — France, Cour de cassation.',
+          'Named in the constitution alongside the Supreme Court — the Netherlands, Grondwet Art. 118.',
+          'A Court of Cassation as the highest court operating in this mode — Belgium.',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'uncertainty',
+        title: 'Criminal procedure, mostly',
+        text: 'The German provisions described here are from the Code of Criminal Procedure. Civil cassation, and the position in systems not named on this page, were not researched.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'A review confined to legal error is a real protection and a limited one, and both halves matter to a person relying on it. It will not reopen a finding about what happened, and it will examine whether the rule applied to that finding was the right one — applied the same way it would be for anyone else.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The narrowing in section 352 is the same trade in procedural form. A court that examined only what was raised is a court whose decisions can be predicted and prepared for, and one whose silence on other points is not a ruling on them.',
+        claim: 'fact',
+        sources: ['de-stpo-revision'],
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [supreme courts and final appeal](/courts/supreme-courts-and-final-appeal), [what a reviewing court can do](/courts/what-a-reviewing-court-can-do), and [trial and appellate courts](/courts/trial-and-appellate-courts).',
+      },
+    ],
+  },
+  {
+    slug: 'what-a-reviewing-court-can-do',
+    title: 'What a reviewing court can do',
+    shortTitle: 'What review can produce',
+    question: 'If a challenge succeeds, what actually changes?',
+    summary:
+      'Less predictably than the word "won" suggests. Outcomes divide by legal effect — set aside, send back, declare, compensate — and in one constitution the same court striking down the same provision produces different consequences depending on which route the case arrived by.',
+    entityType: 'concept',
+    section: 'courts',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'appeal-and-judicial-review-are-different',
+      'cassation-review',
+      'trial-and-appellate-courts',
+    ],
+    sources: ['fr-constitution-1958', 'de-stpo-revision', 'iccpr', 'br-cf-1988'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'not-required',
+    updatedOn: '2026-08-26',
+    publishedOn: '2026-08-26',
+    reviewedOn: '2026-08-26',
+    factsVerifiedOn: '2026-08-26',
+    readingTimeMinutes: 9,
+    keyTerms: ['appeal', 'judicial-review', 'court'],
+    uncertainty: [
+      'This page groups outcomes by legal effect using provisions from three systems and one treaty. It is not a catalogue of the remedies available in any jurisdiction.',
+      'The English words used for these effects — quash, annul, vacate, set aside, cassate — overlap between systems and are not interchangeable. This page groups by what happens, not by what it is called.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Asking whether a challenge succeeded is less useful than asking what it produced. A reviewing body can leave a decision standing, remove it, replace it, send it back, say what the law is without disturbing anything, or order money paid — and those are different results with different consequences for the person who brought it. "Won" covers all of them and distinguishes none.',
+      },
+      {
+        kind: 'callout',
+        variant: 'safety',
+        title: 'What this page is and is not',
+        text: 'This describes categories of outcome. It states no time limit, names no procedure, and cannot indicate what any challenge would produce in any case. It is not legal advice, and anyone with a real matter needs a lawyer in that jurisdiction rather than a comparative description.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'The mismatch between what a person wants and what a forum can give is one of the most common sources of frustration with legal systems, and it is usually a matter of jurisdiction rather than sympathy. A body confined to reviewing legal correctness cannot award compensation; a body that can award compensation may be unable to undo the decision that caused the loss.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'The vocabulary problem is real and is not pedantry',
+        text: 'Quash, annul, vacate, set aside and cassate all describe removing a decision, and they are not equivalents. Each belongs to a system with its own rules about what survives the removal, whether anything replaces it, and whether effects already produced are reopened. Grouping them by the English word would produce a tidy list and a false one, so this page groups by what actually happens.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'The clearest evidence that outcome depends on route comes from a single constitution. Article 62 of the French Constitution provides that a provision declared unconstitutional on the basis of Article 61 — before promulgation — *ne peut être promulguée ni mise en application* — it may not be promulgated or applied. It never enters the legal order.',
+        claim: 'fact',
+        sources: ['fr-constitution-1958'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'The same article treats the other route differently. A provision declared unconstitutional on the basis of Article 61-1 — raised in proceedings already under way — *is abrogated from the publication of the decision or a later date the decision fixes*, and the Conseil constitutionnel determines the conditions and limits within which the effects the provision has already produced may be called into question.',
+        claim: 'fact',
+        sources: ['fr-constitution-1958'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'The finding this page exists to make',
+        text: 'Same court, same constitution, same conclusion that a provision is unconstitutional — and two different legal effects, because the case arrived by different routes. One provision never takes effect; the other stops having effect, from a date the court chooses, with the court controlling how far back the consequences reach. Anyone who thinks "struck down" is a single outcome has not met Article 62.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Finality is part of the design rather than an obstacle to it, and the same article says so: the decisions of the Conseil constitutionnel *are not susceptible to any appeal* and bind the public powers and all administrative and judicial authorities. A body that corrects the law is itself a stopping point.',
+        claim: 'fact',
+        sources: ['fr-constitution-1958'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Where a review is confined to legal error, the natural outcome is removal rather than replacement. German law defines the ground in those terms — a Revision may be based only on the judgment resting on a violation of the law — which is why the characteristic result is that the judgment goes and the case may need deciding again by a court equipped to establish facts.',
+        claim: 'fact',
+        sources: ['de-stpo-revision'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Sending it back is a real outcome, not a failure to decide',
+        text: 'A reviewing court that returns a case has not declined to do its job. It has answered the question it was equipped to answer — was the law applied correctly — and left the question it was not equipped to answer to a court that can hear evidence. That division is the reason the review could be quick enough to be worth having.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Money is a distinct category, and it appears where undoing is impossible. Article 14(6) of the International Covenant on Civil and Political Rights provides that where a person has by a **final** decision been convicted and the conviction is subsequently reversed, or they are pardoned, on the ground that a new or newly discovered fact shows conclusively that there has been a miscarriage of justice, the person who suffered punishment shall be compensated according to law — unless the non-disclosure of the unknown fact in time is wholly or partly attributable to them.',
+        claim: 'fact',
+        sources: ['iccpr'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Some constitutions state the same remedy directly. Brazil’s Article 5º LXXV provides that the State shall indemnify a person convicted by judicial error, and one held beyond the term fixed in the sentence — compensation as a constitutional entitlement rather than a discretionary consolation.',
+        claim: 'fact',
+        sources: ['br-cf-1988'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'And review itself is bounded. Article 14(5) of the Covenant gives everyone convicted of a crime the right to have the conviction and sentence reviewed by a higher tribunal *according to law* — a right to review as the state’s law provides, not a right to appeal without limit or by a route of one’s choosing.',
+        claim: 'fact',
+        sources: ['iccpr'],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Winning a challenge means the decision is replaced with the right one.',
+        reality:
+          'Frequently it means the decision is removed and the case returns to a court that can establish facts. A review confined to legal error is not equipped to substitute a different outcome.',
+      },
+      {
+        claim: 'Striking down a law is a single kind of outcome.',
+        reality:
+          'Under French Article 62 a provision struck down before promulgation may not be promulgated or applied, while one struck down on a question raised in proceedings is abrogated from the publication of the decision or a later date, with the Council controlling whether effects already produced are reopened.',
+      },
+      {
+        claim: 'Quash, annul, vacate and set aside are interchangeable.',
+        reality:
+          'They describe removing a decision in systems with different rules about what survives, what replaces it and whether past effects are reopened. This page groups outcomes by legal effect for that reason.',
+      },
+      {
+        claim: 'A right to appeal means as many appeals as it takes.',
+        reality:
+          'Article 14(5) of the Covenant gives a right to review by a higher tribunal "according to law". The qualifier is part of the provision: the route and its limits are the state’s to set.',
+      },
+      {
+        claim:
+          'Compensation is what you get when the system cannot be bothered to fix the error.',
+        reality:
+          'It is the category that exists where undoing is impossible. Brazil makes indemnity for judicial error a constitutional obligation, and the Covenant requires compensation after a final conviction is reversed on a newly discovered fact.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Outcomes grouped by what they actually do.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Prevent something taking effect at all — France, Art. 62 for provisions reviewed before promulgation.',
+          'End its effect from a chosen date, with control over what is reopened — France, Art. 62 for provisions reviewed in proceedings.',
+          'Remove a judgment for legal error, leaving the case to be decided again — Germany, StPO § 337.',
+          'Compensate where undoing is impossible — ICCPR Art. 14(6); Brazil, Art. 5º LXXV.',
+          'Stop: decisions of the Conseil constitutionnel are subject to no appeal and bind all authorities.',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'uncertainty',
+        title: 'Categories, not a catalogue',
+        text: 'What remedies are available in any particular system, on what conditions, is not stated here and was not researched. The categories travel; the entitlements do not.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'Knowing what a forum can produce is what makes it possible to choose one sensibly. A person seeking compensation from a body that can only quash, or seeking to undo a decision from a body that can only award money, will get an answer that looks like refusal and is actually jurisdiction.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The compensation provisions are the clearest statement that a system expects to be wrong sometimes. A constitution that promises indemnity for judicial error has conceded in advance that judicial error occurs, which is a stronger admission than any appeal right.',
+        claim: 'fact',
+        sources: ['br-cf-1988', 'iccpr'],
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [effective remedy](/justice/effective-remedy), [appeal and judicial review are different](/courts/appeal-and-judicial-review-are-different), and [appeal and the rule of law](/justice/appeal-and-the-rule-of-law).',
+      },
+    ],
+  },
 ];
