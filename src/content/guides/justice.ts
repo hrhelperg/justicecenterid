@@ -2883,4 +2883,737 @@ export const JUSTICE_GUIDES: readonly Guide[] = [
       },
     ],
   },
+
+  /* ------------------------------------------------------------------------
+     Wave 19 — the review layer, in /justice.
+     ------------------------------------------------------------------------ */
+  {
+    slug: 'constitutional-review',
+    title: 'Constitutional review',
+    shortTitle: 'Constitutional review',
+    question: 'Who decides whether a law is constitutional?',
+    summary:
+      'Four different arrangements in three constitutions — and one that answers "nobody". The Dutch Constitution provides that the constitutionality of Acts of Parliament shall not be reviewed by the courts, which any general account of the subject has to survive.',
+    entityType: 'concept',
+    section: 'justice',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'appeal-and-judicial-review-are-different',
+      'limits-on-public-power',
+      'what-is-the-rule-of-law',
+    ],
+    relatedInstitutions: ['constitutional-court'],
+    sources: ['de-grundgesetz', 'fr-constitution-1958', 'nl-constitution', 'es-constitution'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'not-required',
+    updatedOn: '2026-08-26',
+    publishedOn: '2026-08-26',
+    reviewedOn: '2026-08-26',
+    factsVerifiedOn: '2026-08-26',
+    readingTimeMinutes: 10,
+    keyTerms: ['judicial-review', 'rule-of-law', 'legal-certainty'],
+    uncertainty: [
+      'Four systems are described from primary constitutional text. How any of these mechanisms operates in practice, how often, and with what results were not researched.',
+      'This page describes who may raise a constitutional question and when. It does not describe admissibility criteria, time limits or procedure in any system.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'A constitution that binds the legislature raises an obvious question: who says when the legislature has broken it? Systems answer differently on four independent axes — which body decides, whether a live case is needed, who may raise it, and whether the question comes before or after the law takes effect. The combinations are not variations on one model.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This describes constitutional arrangements for reviewing legislation. It is not legal advice, it names no procedure or time limit, and it ranks no system.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'A constitution that no body can enforce against the legislature is a statement of intent. But a court that can strike down statutes is an unelected body overruling an elected one, which is a real objection rather than a rhetorical one. Every arrangement below is a position on that tension, and the differences between them are attempts to have the enforcement without the whole of the objection.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Which is why the axes matter more than the label',
+        text: 'Requiring a live case narrows what a court can reach. Requiring referral from another court adds a filter. Letting only political actors initiate keeps the question inside the elected branches. Reviewing before promulgation avoids disturbing anything already relied on. Each is a way of limiting the power without abolishing it, and a system picks a combination rather than a model.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'Germany allows the question to be asked in the abstract. Article 94(1) no. 2 of the Basic Law gives the Federal Constitutional Court jurisdiction in the event of disagreements or doubts concerning the formal or substantive compatibility of federal or Land law with the Basic Law — on application of the Federal Government, a Land government, **or one quarter of the Members of the Bundestag**. No case, no litigant, no injury: a political minority may put the question directly.',
+        claim: 'fact',
+        sources: ['de-grundgesetz'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'It also allows the question to arrive from a live case, and compels it. Article 100(1) provides that if a court concludes that a law on whose validity its decision depends is unconstitutional, the proceedings shall be stayed and a decision obtained from the Federal Constitutional Court. The ordinary court may not resolve the point itself.',
+        claim: 'fact',
+        sources: ['de-grundgesetz'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'And it allows the individual in. Article 94(1) no. 4a gives the Court jurisdiction over constitutional complaints, which may be filed by *any person* alleging that one of their basic rights, or one of the rights under the listed articles, has been infringed by public authority. Article 93(5) permits the governing statute to require that all other legal remedies be exhausted first, and to provide a separate proceeding deciding whether a complaint is accepted at all.',
+        claim: 'fact',
+        sources: ['de-grundgesetz'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'A numbering correction worth carrying',
+        text: 'Most sources cite Article 93 for the jurisdiction of the Federal Constitutional Court. In the current text, Article 93 is its composition and Article 94 its jurisdiction. The articles were swapped, and this page cites the text as it now stands.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'France places its main review **before** the law exists. Article 61 requires organic laws, referendum propositions under Article 11 and the rules of the parliamentary assemblies to be submitted to the Conseil constitutionnel before promulgation or entry into application; ordinary laws *may* be referred before promulgation by the President, the Prime Minister, the President of either assembly, or sixty deputies or sixty senators. The Council rules within a month, or eight days in urgency, and referral suspends promulgation.',
+        claim: 'fact',
+        sources: ['fr-constitution-1958'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Since Article 61-1 it also reviews afterwards, but only through a filter. Where, in the course of proceedings before a court, it is argued that a legislative provision infringes the rights and freedoms the Constitution guarantees, the Council may be seised **on referral from the Conseil d’État or the Cour de cassation**, which rules within a determined period. The litigant raises the point; the apex courts decide whether it travels.',
+        claim: 'fact',
+        sources: ['fr-constitution-1958'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'The two French routes produce different consequences',
+        text: 'Article 62 makes them different remedies as well as different procedures. A provision condemned before promulgation may not be promulgated or applied. One condemned on a referred question is abrogated from the publication of the decision or a later date the decision fixes — and the Council determines the conditions and limits within which effects already produced may be reopened. Timing is not a formality here; it is the substance of what the reader gets.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Spain sequences the individual route rather than opening it directly. Article 53.2 provides that any citizen may seek protection of the rights in Article 14 and Section 1 of Chapter 2 before the **ordinary courts**, by a procedure based on the principles of preference and summariness, and *where appropriate* thereafter through the recurso de amparo before the Constitutional Court.',
+        claim: 'fact',
+        sources: ['es-constitution'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'The finding this page exists to make',
+        text: 'Article 120 of the Dutch Constitution provides that "the constitutionality of Acts of Parliament and treaties shall not be reviewed by the courts". Not a narrow jurisdiction, not a demanding threshold — an express exclusion, in the constitution, of the power the other three systems are busy allocating. Any general claim that rule-of-law systems provide judicial review of legislation is refuted by a system already documented on this platform.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'That is not an absence of constitutional constraint. It is a decision about who enforces it — a question a constitution is entitled to answer differently, and one on which the systems here plainly disagree.',
+        claim: 'analysis',
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Every constitutional democracy lets courts strike down unconstitutional laws.',
+        reality:
+          'Article 120 of the Dutch Constitution provides that the constitutionality of Acts of Parliament and treaties shall not be reviewed by the courts.',
+      },
+      {
+        claim: 'Constitutional review requires someone to have been harmed by the law.',
+        reality:
+          'Not in Germany or France. The German Basic Law lets the Federal Government, a Land government or one quarter of the Bundestag put the question directly, and France reviews certain laws before promulgation, when nobody can yet have been affected.',
+      },
+      {
+        claim:
+          'An individual can always take a constitutional question to a constitutional court.',
+        reality:
+          'Germany permits any person to file a constitutional complaint, subject to a possible exhaustion requirement and an acceptance procedure. France routes the question through the Conseil d’État or the Cour de cassation. Spain requires the ordinary courts first.',
+      },
+      {
+        claim: 'A court that thinks a statute is unconstitutional will decline to apply it.',
+        reality:
+          'German Article 100(1) requires it to stay the proceedings and obtain a decision from the Federal Constitutional Court instead.',
+      },
+      {
+        claim: 'Striking down a law has the same effect however the question arrived.',
+        reality:
+          'French Article 62 gives one effect for provisions condemned before promulgation and another for those condemned on a referred question, with the Council controlling how far back the consequences reach.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Four axes, and the systems combine them differently.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Abstract, on political application: Federal Government, a Land government, or one quarter of the Bundestag — Germany, Art. 94(1) no. 2.',
+          'Concrete, by compulsory referral from the deciding court — Germany, Art. 100(1).',
+          'Individual complaint by any person, exhaustion permitted — Germany, Arts. 94(1) no. 4a and 93(5).',
+          'Before promulgation, mandatory for some instruments and optional for laws — France, Art. 61.',
+          'After promulgation, but only on referral from an apex court — France, Art. 61-1.',
+          'Ordinary courts first, amparo where appropriate — Spain, Art. 53.2.',
+          'Not at all, by constitutional exclusion — the Netherlands, Art. 120.',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'uncertainty',
+        title: 'Not a taxonomy of the world',
+        text: 'These labels describe what these four constitutions provide. Systems combine the axes in ways none of them illustrates, and several systems in this corpus were not researched for this page at all.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'Who may raise a constitutional question determines whose complaints get answered. A system where only political actors may initiate protects minorities in parliament; one with an individual complaint protects people with no political route at all. Neither follows from having a constitution.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The exhaustion and filtering rules are not obstacles bolted on afterwards. They are what allows a constitutional court to exist without becoming a further tier of ordinary appeal — which is the same reasoning that keeps constitutional review and appeal apart as functions.',
+        claim: 'fact',
+        sources: ['de-grundgesetz', 'es-constitution'],
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [appeal and judicial review are different](/courts/appeal-and-judicial-review-are-different), [limits on public power](/justice/limits-on-public-power), and [the constitutional court](/institutions/constitutional-court).',
+      },
+    ],
+  },
+  {
+    slug: 'reviewing-detention',
+    title: 'Reviewing detention',
+    shortTitle: 'Reviewing detention',
+    question: 'What can a court do about someone being held?',
+    summary:
+      'More systems protect against unlawful detention than use the words "habeas corpus". Brazil names it in the constitution and makes the action free; South Africa gives the same protection without the name; France routes it through the judicial authority as guardian of individual liberty.',
+    entityType: 'concept',
+    section: 'justice',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: ['constitutional-review', 'effective-remedy', 'what-remand-detention-is'],
+    relatedInstitutions: ['correctional-service'],
+    sources: [
+      'br-cf-1988',
+      'za-constitution',
+      'fr-constitution-1958',
+      'uk-habeas-corpus-act-1679',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'not-required',
+    updatedOn: '2026-08-26',
+    publishedOn: '2026-08-26',
+    reviewedOn: '2026-08-26',
+    factsVerifiedOn: '2026-08-26',
+    readingTimeMinutes: 9,
+    keyTerms: ['due-process', 'jurisdiction', 'accountability'],
+    uncertainty: [
+      'Four systems are described from primary text. Grounds for detention, time limits, and the procedure for challenging it in any system were not researched and are not described.',
+      'Immigration detention, mental-health detention and detention under emergency powers each raise distinct questions this page does not address.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Detention is the one exercise of public power whose subject cannot walk away from it to complain. Every other decision leaves the affected person free to seek advice, gather documents and choose a forum; this one does not. That asymmetry is why systems build a route to a court that works quickly and can order the one thing that matters — release.',
+      },
+      {
+        kind: 'callout',
+        variant: 'safety',
+        title: 'What this page is and is not',
+        text: 'This describes constitutional protections against unlawful detention in four systems. It names no procedure, no form, no time limit and no route, it cannot indicate whether any detention is lawful, and it is not legal advice. Anyone dealing with a real detention needs a lawyer in that jurisdiction immediately.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'The protection has to be fast and it has to be cheap, and those two requirements do most of the work in shaping it. A remedy that takes months is no remedy for someone held unlawfully today, and one that costs money is no remedy for someone whose ability to earn or arrange anything has just been removed.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Why the English name misleads',
+        text: '"Habeas corpus" is a specific writ from a specific tradition, and English-language accounts use it as a generic label for judicial control of detention. Two of the systems on this page protect the same interest without ever using the phrase. Reading its absence as an absence of protection would get all three wrong.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'Brazil names the remedy in the constitution and then removes the barrier to using it. Article 5º LXVIII provides for habeas corpus, and Article 5º LXXVII makes actions of habeas corpus and habeas data free of charge.',
+        claim: 'fact',
+        sources: ['br-cf-1988'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Free of charge is the operative half',
+        text: 'A remedy against unlawful detention that carries a fee is a remedy conditioned on the resources of a person the state has just deprived of the ability to arrange anything. Making the action free is not generosity; it is the difference between a right and a right for people who can pay. Brazil pairs it with a broader guarantee — Article 5º XXXV, that the law shall not exclude from judicial appreciation any injury or threat to a right.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'South Africa gives the same protection and never uses the phrase. Section 35(2)(d) provides that everyone who is detained, including every sentenced prisoner, has the right to challenge the lawfulness of the detention **in person before a court and, if the detention is unlawful, to be released**. The right to be heard in person and the remedy of release are stated in the provision itself.',
+        claim: 'fact',
+        sources: ['za-constitution'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'France places the protection in an institution rather than in a named action. Article 66 of the Constitution makes the judicial authority the guardian of individual liberty. The guarantee runs through which branch controls detention, rather than through a remedy a person invokes.',
+        claim: 'fact',
+        sources: ['fr-constitution-1958'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Three techniques for one protection',
+        text: 'A named action the person brings (Brazil). A stated right to be heard and released (South Africa). An allocation of guardianship to a branch (France). All three answer the question "who stops unlawful detention", and only one of them produces a phrase an English speaker would recognise.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The historical record warns against the other error too. The Habeas Corpus Act 1679 did not create habeas corpus: its own recital describes officers evading writs already directed to them, contrary to their duty and the known laws of the land, leaving people who were bailable by law long detained. The Act attached a three-day deadline to a remedy that already existed.',
+        claim: 'fact',
+        sources: ['uk-habeas-corpus-act-1679'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Which is the more useful lesson than the name. What made the remedy work was not its existence but a consequence for delay — and that is the question to ask of any detention-review mechanism, whatever it is called.',
+        claim: 'analysis',
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Habeas corpus is the universal remedy against unlawful detention.',
+        reality:
+          'It is one tradition’s name for one mechanism. South Africa gives a right to challenge detention in person and be released without using the phrase, and France allocates guardianship of individual liberty to the judicial authority.',
+      },
+      {
+        claim: 'A system without habeas corpus has no protection against unlawful detention.',
+        reality:
+          'Two of the four systems described here protect it by other means. The absence of a phrase is not the absence of a mechanism.',
+      },
+      {
+        claim: 'Reviewing detention is a kind of appeal.',
+        reality:
+          'It asks whether the person may lawfully be held now, not whether an earlier decision was correct. South Africa states the remedy in the right itself — release if the detention is unlawful.',
+      },
+      {
+        claim: 'Only people awaiting trial can challenge their detention.',
+        reality:
+          'South Africa’s section 35(2) applies to everyone who is detained, "including every sentenced prisoner".',
+      },
+      {
+        claim: 'The Habeas Corpus Act 1679 created the remedy.',
+        reality:
+          'Its recital describes writs already being directed to officers and evaded. What the Act added was a three-day deadline.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Four systems, three techniques, one protection.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'A constitutionally named action, free of charge — Brazil, Art. 5º LXVIII with LXXVII.',
+          'A general bar on excluding injury or threat to a right from judicial appreciation — Brazil, Art. 5º XXXV.',
+          'A right to challenge lawfulness in person and be released, extending to sentenced prisoners — South Africa, s 35(2)(d).',
+          'Guardianship of individual liberty allocated to the judicial authority — France, Art. 66.',
+          'A statutory deadline attached to an existing writ — England and Wales, Habeas Corpus Act 1679.',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'uncertainty',
+        title: 'Not researched here',
+        text: 'The grounds on which detention may be ordered, how long it may last, and how any of these mechanisms is invoked were not researched. Immigration, mental-health and emergency detention each have their own law and are not described.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'The features that make a detention remedy real are visible in the provisions themselves: speed, cost, who may bring it, and whether the court can order release rather than merely declare something. A mechanism missing any of those is weaker in a way the name will not reveal.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Extending the right to sentenced prisoners is the least obvious and most telling feature. It means lawful conviction does not exhaust the question of whether this detention, now, is lawful — which is the difference between reviewing a decision and reviewing a state of affairs.',
+        claim: 'fact',
+        sources: ['za-constitution'],
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [what remand detention is](/corrections/what-remand-detention-is), [effective remedy](/justice/effective-remedy), and [what the Habeas Corpus Act 1679 actually did](/history/what-the-habeas-corpus-act-1679-actually-did).',
+      },
+    ],
+  },
+  {
+    slug: 'when-a-procedural-error-changes-the-outcome',
+    title: 'When a procedural error changes the outcome',
+    shortTitle: 'Procedural error',
+    question: 'Does breaking a rule mean the decision is void?',
+    summary:
+      'Usually not. Legal systems distinguish between a rule that was broken and a decision that rests on the breach — and they sometimes say so in the statute that creates the duty. German law calls the test "beruhe"; two English statutes state expressly that breach does not invalidate anything.',
+    entityType: 'concept',
+    section: 'justice',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: ['what-a-reviewing-court-can-do', 'cassation-review', 'effective-remedy'],
+    sources: [
+      'de-stpo-revision',
+      'uk-sentencing-act-2020-reports-guidelines',
+      'uk-fsr-act-2021',
+      'iccpr',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'not-required',
+    updatedOn: '2026-08-26',
+    publishedOn: '2026-08-26',
+    reviewedOn: '2026-08-26',
+    factsVerifiedOn: '2026-08-26',
+    readingTimeMinutes: 10,
+    keyTerms: ['due-process', 'appeal', 'legal-certainty'],
+    uncertainty: [
+      'Three systems are described from primary text — Germany and, for two separate statutes, England and Wales. Whether any particular error would meet any of these tests is a question about a real case, and this page cannot answer it.',
+      'How often reviewing courts find that a judgment rests on a violation was not researched and is not stated.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'A procedural rule was broken. It does not follow that the decision falls. Between the breach and the remedy sits a question every system has to answer somehow: did this breach make a difference? The answer is rarely automatic in either direction, and the interesting part is that legislatures sometimes settle it in the same statute that creates the duty.',
+      },
+      {
+        kind: 'callout',
+        variant: 'safety',
+        title: 'What this page is and is not',
+        text: 'This describes how three statutes state the relationship between a procedural breach and the validity of a decision. It is not legal advice, it does not indicate whether any error is or is not material, and nothing here is a basis for deciding anything about a real case. It names no route, no ground and no procedure for raising an error, and it is not a guide to doing so.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'Two failures are available and systems have to steer between them. If every breach voided the decision, procedure would become a lottery in which the most careful party is the one that finds the smallest slip. If no breach ever did, the rules would be advice. The materiality question is where a system decides how much its own procedure is worth.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'The recurring shape',
+        text: 'A statute creates a duty; a later subsection says what happens when the duty is not met; and the answer is frequently "less than you would expect". Reading only the duty gives the wrong picture of the law. This page exists because the second half is the part that is almost never quoted.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'German criminal procedure puts the test in a single word. StPO § 337(1) provides that a Revision "kann nur darauf gestützt werden, daß das Urteil auf einer Verletzung des Gesetzes beruhe" — it may be based only on the judgment resting on a violation of the law. Section 337(2) defines the violation: the law is violated where a legal norm was not applied or not correctly applied.',
+        claim: 'fact',
+        sources: ['de-stpo-revision'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Why "beruhe" is the load-bearing word',
+        text: 'It requires the judgment to rest on the violation, not merely to be accompanied by one. A breach that occurred alongside a correct outcome is a breach the provision does not reach. That single verb does more work in German appellate practice than any list of grounds could.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The same statute then names the exceptions. StPO § 338, headed "Absolute Revisionsgründe", provides that a judgment "ist stets als auf einer Verletzung des Gesetzes beruhend anzusehen" — is always to be regarded as resting on a violation of the law — in an enumerated list of cases.',
+        claim: 'fact',
+        sources: ['de-stpo-revision'],
+      },
+      {
+        kind: 'list',
+        items: [
+          'The deciding court was not properly constituted (no. 1, subject to the detailed conditions the provision sets out).',
+          'A judge or lay judge participated who was excluded from judicial office by operation of law (no. 2).',
+          'A judge participated after a challenge for fear of bias had been declared well founded, or wrongly rejected (no. 3).',
+          'The court wrongly assumed its jurisdiction (no. 4).',
+          'The main hearing took place in the absence of the prosecution or of a person whose presence the law prescribes (no. 5).',
+          'The provisions on the publicity of proceedings were violated at the oral hearing on which the judgment issued (no. 6).',
+          'The judgment contains no grounds, or they were not placed on the file within the period arising from § 275(1) (no. 7).',
+        ],
+      },
+
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'What the list is doing',
+        text: 'These are not errors the legislature thought were worse. They are errors where asking whether the outcome would have differed is not a question that can be answered — an improperly constituted court, a judge who should not have sat, a hearing held in secret. The presumption exists because the counterfactual does not.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'England and Wales supplies the same structure in the other direction, twice, in statutes about very different things. The Sentencing Act 2020 s. 30(2) requires a court to obtain and consider a pre-sentence report before forming certain opinions about an offender aged 18 or over, unless in the circumstances of the case it considers that unnecessary. Section 30(4) then provides that where a court does not obtain and consider such a report, "no custodial sentence or community sentence is invalidated by the fact that it did not do so".',
+        claim: 'fact',
+        sources: ['uk-sentencing-act-2020-reports-guidelines'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'The Forensic Science Regulator Act 2021 does it for a code of practice. Section 4, headed "Status of the code", provides that "a failure by a person to act in accordance with the code does not of itself make that person liable to civil or criminal proceedings"; that the code "is admissible in evidence in criminal and civil proceedings in England and Wales"; and that a court "may in particular take into account a failure by a person to act in accordance with the code in determining a question in any such proceedings".',
+        claim: 'fact',
+        sources: ['uk-fsr-act-2021'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Three subsections, one drafting move',
+        text: 'A duty is stated, and then the consequence of breaching it is stated separately and set deliberately low: not nullity, not liability, but relevance. The breach becomes something a court may weigh rather than something that decides anything by itself. Two English statutes and one German code arrive at the same design from different traditions, which suggests the problem is structural rather than national.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'International law says nothing that settles the question either way. ICCPR Article 14(5) provides that everyone convicted of a crime shall have the right to have the conviction and sentence reviewed by a higher tribunal "according to law" — the review is guaranteed, and what counts as a reviewable error is left to each system.',
+        claim: 'fact',
+        sources: ['iccpr'],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'If a procedural rule was broken, the proceeding is void.',
+        reality:
+          'It does not follow, and statutes often say so expressly. Sentencing Act 2020 s. 30(4) provides that where a court does not obtain a pre-sentence report, no custodial or community sentence is invalidated by that fact.',
+      },
+      {
+        claim: 'A breach of a statutory duty automatically creates liability.',
+        reality:
+          'Not automatically. Forensic Science Regulator Act 2021 s. 4 provides that a failure to act in accordance with the code does not of itself make that person liable to civil or criminal proceedings.',
+      },
+      {
+        claim: 'German law lists the errors that are serious enough to overturn a judgment.',
+        reality:
+          'That inverts the structure. StPO § 337(1) states the general test — that the judgment rests on the violation — and § 338 lists the narrow cases where resting on it is presumed rather than shown.',
+      },
+      {
+        claim: 'Absolute grounds are just the most serious mistakes.',
+        reality:
+          'They are the cases where the counterfactual cannot be run. An improperly constituted court or a hearing held contrary to the publicity provisions leaves nothing to compare the outcome against.',
+      },
+      {
+        claim: 'International law fixes what counts as a reversible error.',
+        reality:
+          'It does not. ICCPR Article 14(5) guarantees review by a higher tribunal "according to law", leaving the content of reviewable error to each system.',
+      },
+      {
+        claim: 'A rule that does not void anything when breached is not really a rule.',
+        reality:
+          'Consequence and status are different questions. The forensic code is admissible in evidence and a court may take a failure to follow it into account, which is a legal effect short of nullity.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Four drafting techniques for the same problem, all read from primary text.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'A general test of causation stated in the appeal provision itself — Germany, StPO § 337(1) "beruhe".',
+          'An enumerated list where that causation is presumed — Germany, StPO § 338.',
+          'An express saving of validity attached to the duty — England and Wales, Sentencing Act 2020 s. 30(4).',
+          'An express exclusion of liability combined with admissibility — England and Wales, Forensic Science Regulator Act 2021 s. 4.',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'Scope of these statements',
+        text: 'The German provisions are the law of Germany and concern the Revision in criminal proceedings. Both English statutes are extent-marked E+W and support nothing about Scotland or Northern Ireland. Nothing here describes the position in any other country.',
+      },
+      {
+        kind: 'callout',
+        variant: 'uncertainty',
+        title: 'Not researched here',
+        text: 'Civil procedure, administrative procedure, and how any of these tests is applied in practice were not researched. No claim is made about how often any of them is satisfied.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'A materiality test is where a system is most exposed to a fair criticism: set it too high and procedural rights become unenforceable, because every breach can be met with the answer that the outcome would have been the same. The German answer to that criticism is § 338, which removes the question entirely for a defined set of cases.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The English examples show the criticism has force in the other direction too. A duty to obtain a pre-sentence report that cannot invalidate a sentence is enforced, if at all, by something other than nullity — and the statute does not say what.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Asking what happens when a rule is broken is not an attack on the rule or on the court applying it. It is the question the legislature itself answered in each of these three statutes, and reading only the duty and not the consequence gives a false picture of what the law requires.',
+        claim: 'analysis',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [what a reviewing court can do](/courts/what-a-reviewing-court-can-do), [cassation review](/courts/cassation-review), and [appeal](/glossary/appeal).',
+      },
+    ],
+  },
+  {
+    slug: 'what-happens-to-unlawfully-obtained-evidence',
+    title: 'What happens to unlawfully obtained evidence',
+    shortTitle: 'Unlawful evidence',
+    question: 'Is evidence obtained unlawfully always thrown out?',
+    summary:
+      'Three constitutions answer this in two different ways. Brazil states inadmissibility flatly. South Africa and Kenya make exclusion conditional on what admitting the evidence would do to the trial — which means the violation alone does not decide it.',
+    entityType: 'concept',
+    section: 'justice',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'when-a-procedural-error-changes-the-outcome',
+      'what-a-reviewing-court-can-do',
+      'effective-remedy',
+    ],
+    sources: ['br-cf-1988', 'za-constitution', 'ke-constitution'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'not-required',
+    updatedOn: '2026-08-26',
+    publishedOn: '2026-08-26',
+    reviewedOn: '2026-08-26',
+    factsVerifiedOn: '2026-08-26',
+    readingTimeMinutes: 9,
+    keyTerms: ['evidence', 'due-process', 'fair-trial'],
+    uncertainty: [
+      'Three constitutional texts are described. What any of these tests means in practice, and how courts applying them decide, were not researched and are not stated.',
+      'Germany appears in this platform’s comparative material for review of legal error, but no source here establishes its position on unlawfully obtained evidence. That is recorded as NOT ESTABLISHED rather than as an absence of any rule.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Evidence was obtained in a way that broke the law or violated a right. What follows? The intuitive answer — it cannot be used — is the answer one of the three constitutions on this page gives. The other two give a different one, in almost identical words to each other, and the difference is not a technicality.',
+      },
+      {
+        kind: 'callout',
+        variant: 'safety',
+        title: 'What this page is and is not',
+        text: 'This describes what three constitutions say about the admissibility of unlawfully obtained evidence. It is not legal advice, it does not indicate whether any evidence would be admitted or excluded anywhere, and nothing here is a technique for obtaining or resisting a ruling on evidence. It is a comparison of constitutional texts, nothing more.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'An exclusionary rule is a system’s answer to a genuinely hard question: what should a court do about reliable evidence of a serious offence that was obtained by violating someone’s rights? Excluding it can mean an unpunished offence. Admitting it can mean the violation cost the state nothing, which is another way of saying the right was not enforceable.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Two things the rule is trying to do at once',
+        text: 'Protect the fairness of this trial, and remove the incentive to violate rights in future cases. A conditional test aims mainly at the first; an absolute rule reaches the second more directly. Neither design is a mistake, and the constitutional texts show drafters choosing between them deliberately.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'Brazil states the rule without a condition. Article 5º LVI of the 1988 Constitution provides that evidence obtained by unlawful means is inadmissible in the process. The constitutional text states the inadmissibility and attaches no balancing test to it.',
+        claim: 'fact',
+        sources: ['br-cf-1988'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'South Africa states a condition. Section 35(5) of the 1996 Constitution provides that evidence obtained in a manner that violates any right in the Bill of Rights **must be excluded if the admission of that evidence would render the trial unfair or otherwise be detrimental to the administration of justice**.',
+        claim: 'fact',
+        sources: ['za-constitution'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Kenya states materially the same condition. Article 50(4) of the 2010 Constitution provides that evidence obtained in a manner that violates any right or fundamental freedom in the Bill of Rights **shall be excluded if the admission of that evidence would render the trial unfair, or would otherwise be detrimental to the administration of justice**.',
+        claim: 'fact',
+        sources: ['ke-constitution'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Where the condition bites',
+        text: 'In both conditional formulations the operative word is "if". Exclusion follows from a judgment about the effect of admitting the evidence, not automatically from the fact of the violation. A court applying either provision has to reach a conclusion about the trial before it can reach one about the evidence — which is exactly the step the Brazilian text does not contain.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Both conditional provisions are also mandatory once the condition is met. Neither says a court may exclude; both say the evidence must, or shall, be excluded. The discretion is in the assessment, not in what follows from it.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Two constitutions, one formulation',
+        text: 'The South African provision of 1996 and the Kenyan provision of 2010 are close enough in wording that the resemblance is unlikely to be coincidental. This page records the resemblance in the texts and makes no claim about how one came to resemble the other.',
+      },
+      {
+        kind: 'callout',
+        variant: 'uncertainty',
+        title: 'What is not established here',
+        text: 'No source used on this page establishes the position in Germany, in England and Wales, or in any system other than the three named. Their absence from this page is a gap in this platform’s sourcing and is not evidence that they have no rule.',
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Unlawfully obtained evidence is always excluded.',
+        reality:
+          'Not in two of the three constitutions described here. South Africa and Kenya both make exclusion conditional on whether admitting the evidence would render the trial unfair or be detrimental to the administration of justice.',
+      },
+      {
+        claim: 'Exclusion of evidence is always a matter of judicial discretion.',
+        reality:
+          'That is not what the Brazilian text says. Article 5º LVI states that evidence obtained by unlawful means is inadmissible in the process, without attaching a balancing condition.',
+      },
+      {
+        claim: 'A conditional rule means a court can admit the evidence if it wants to.',
+        reality:
+          'It does not. Both conditional provisions are mandatory once the condition is met — the evidence must, or shall, be excluded. What is assessed is the effect of admission, not whether to act on the answer.',
+      },
+      {
+        claim: 'Every legal system has an exclusionary rule of some kind.',
+        reality:
+          'This page establishes no such thing. It describes three constitutions, and it records that the position in the other systems this platform covers was not established by any source used here.',
+      },
+      {
+        claim: 'Excluding evidence is a loophole that lets guilty people go free.',
+        reality:
+          'That frames a rule about the state’s own conduct as a benefit to the accused. Both conditional provisions turn on the fairness of the trial and the administration of justice, which are the interests the rule exists to protect.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Two designs, read from the constitutional texts themselves.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Inadmissibility stated without a balancing condition — Brazil, Art. 5º LVI.',
+          'Mandatory exclusion conditional on the effect of admission — South Africa, s 35(5).',
+          'Mandatory exclusion on materially the same condition — Kenya, Art. 50(4).',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'Scope of these statements',
+        text: 'Each provision is the law of its own country and is described from its own constitutional text. Nothing here supports a claim about any other country, and no system described is a model for, or an equivalent of, any other.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'The design choice has a consequence worth stating plainly. Under a conditional rule, a rights violation that produced reliable evidence and did not make the trial unfair may leave the evidence in place — so the violation has to be answered by something other than exclusion, if it is answered at all.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Under an unconditional rule the enforcement is automatic, and the cost is borne in the cases where the evidence was reliable and the offence serious. Both designs pay for what they protect; the constitutions differ on which price to pay.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Neither design implies distrust of courts. Both are choices made by constitutional drafters about the conditions under which a court may rely on evidence, and a court applying either is doing what its constitution requires of it.',
+        claim: 'analysis',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [when a procedural error changes the outcome](/justice/when-a-procedural-error-changes-the-outcome), [chain of custody](/glossary/chain-of-custody), and [disclosure](/glossary/disclosure).',
+      },
+    ],
+  },
 ];
