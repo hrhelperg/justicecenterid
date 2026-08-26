@@ -1963,4 +1963,1207 @@ export const CORRECTIONS_GUIDES: readonly Guide[] = [
       },
     ],
   },
+
+  /* ------------------------------------------------------------------------
+     Wave 17 — sentencing institutions and community corrections.
+
+     Wave 13 owns the purposes of sentencing, the custodial/non-custodial
+     distinction, suspension, release, reintegration and who administers custody.
+     None of that is restated. What was absent was the machinery: how a fine is
+     calculated, what must be true before each kind of sentence becomes available,
+     who writes the guidelines and how binding they are, what a community order
+     actually requires, who tells the court about the offender before it decides,
+     who inspects a prison, and how a prisoner complains.
+     ------------------------------------------------------------------------ */
+  {
+    slug: 'how-fines-are-calculated',
+    title: 'How fines are calculated',
+    shortTitle: 'How fines work',
+    question: 'How can one fine be fair to a rich person and a poor person at once?',
+    summary:
+      'Two systems answer by separating what the offence deserves from what the offender can pay. Germany splits the fine into a number of daily units and a value per unit; England and Wales fixes one amount that must reflect seriousness and take account of means — upwards as well as downwards.',
+    entityType: 'concept',
+    section: 'corrections',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'when-a-court-may-imprison',
+      'custodial-and-non-custodial-sentences',
+      'what-sentencing-is-for',
+    ],
+    sources: ['de-stgb-40-43-geldstrafe', 'uk-sentencing-act-2020-thresholds'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-08-26',
+    publishedOn: '2026-08-26',
+    reviewedOn: '2026-08-26',
+    factsVerifiedOn: '2026-08-26',
+    readingTimeMinutes: 8,
+    keyTerms: ['justice', 'due-process'],
+    uncertainty: [
+      'Two systems are described from primary text. How often fines are imposed, at what levels, and how reliably they are collected are empirical questions this platform has not researched.',
+      'Nothing here indicates what any offence attracts. It describes the mechanics of calculation, not any outcome.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'A fine is the most frequently imposed criminal sanction in many systems and the least examined. It carries a problem no other sanction has in the same form: the same sum is a minor inconvenience to one person and a catastrophe to another, so a fixed amount punishes unequally while appearing to punish identically.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This describes how two systems calculate a fine. It states no amount for any offence, is not legal advice, and cannot indicate what would happen in any case.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'Every other sanction is measured in something the state distributes equally. A day of custody is a day for everyone; an hour of unpaid work is an hour. Money is the exception: a unit of it means different things to different people, so a sanction denominated in money cannot be equal and fixed at the same time.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'This is an equality-before-the-law problem, not an accounting one',
+        text: 'A court that fined everyone the same would be treating unlike situations alike and calling it consistency. A court that simply fined wealthy people more would be punishing them for their means. The designs below are attempts to be equal in the thing that is supposed to be equal — the severity of the punishment — rather than in the number.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'Germany splits the calculation in two. Section 40(1) of the Criminal Code provides that the fine is imposed in daily units — *Tagessätze* — at least five and, unless the law provides otherwise, at most 360 full units. The number of units expresses the offence.',
+        claim: 'fact',
+        sources: ['de-stgb-40-43-geldstrafe'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'The value of a unit expresses the offender. Section 40(2) directs the court to determine it taking into account the personal and economic circumstances of the offender, as a rule proceeding from the net income the offender has or could have on average in one day, while ensuring that the offender is left at least the minimum income indispensable for living. A daily unit is set at not less than one euro and not more than thirty thousand.',
+        claim: 'fact',
+        sources: ['de-stgb-40-43-geldstrafe'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'The finding this page exists to make',
+        text: 'Two people who commit the same offence in the same circumstances receive the same number of daily units and different totals. The number is the sentence; the money is the conversion. Section 40(4) requires the decision to state both — so the record shows what the court thought of the offence separately from what it thought the offender could pay, and an appeal can attack either without disturbing the other.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The statute accepts that the second figure is often unknowable precisely. Section 40(3) permits the offender’s income, assets and other bases for assessing a daily unit to be estimated — which keeps the system working without requiring a financial investigation in every case.',
+        claim: 'fact',
+        sources: ['de-stgb-40-43-geldstrafe'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'England and Wales reaches the same problem with one figure and two requirements. Section 125(1) of the Sentencing Act 2020 provides that the amount of any fine must be such as, in the opinion of the court, reflects the seriousness of the offence. Section 125(2) requires the court, in fixing the amount, to take into account the circumstances of the case including in particular the financial circumstances of the offender so far as they are known or appear to the court.',
+        claim: 'fact',
+        sources: ['uk-sentencing-act-2020-thresholds'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Means can raise a fine as well as lower it',
+        text: 'Section 125(3) states expressly that subsection (2) applies whether taking financial circumstances into account has the effect of increasing or reducing the amount. The provision is not a hardship discount. It is a direction that the figure track the effect on this offender in both directions.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'What happens when a fine is not paid is where the two designs meet again. German law converts: section 43 provides that an irrecoverable fine is replaced by a default custodial sentence, with two daily units corresponding to one day, and a minimum of one day. The unit that was the sentence becomes the unit of the conversion.',
+        claim: 'fact',
+        sources: ['de-stgb-40-43-geldstrafe'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'The conversion rate is itself a policy choice',
+        text: 'Two daily units to one day of custody is a number a legislature picked, and it can be changed without changing anything about fines or about custody. It determines how much custody an unpaid fine ultimately represents — which is why a provision that looks arithmetical is one of the more consequential lines in the sentencing code.',
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'A fine is a fixed amount attached to an offence.',
+        reality:
+          'Not in the systems described here. German law imposes a number of daily units whose value depends on the offender’s circumstances; English law requires the amount to reflect seriousness and to take account of financial circumstances.',
+      },
+      {
+        claim: 'Taking means into account is a discount for poor offenders.',
+        reality:
+          'Section 125(3) of the Sentencing Act 2020 states that the duty applies whether the effect is to increase or reduce the fine. The point is equal severity, not lower figures.',
+      },
+      {
+        claim: 'A day-fine system means the court decides how much someone can afford.',
+        reality:
+          'It decides two things separately: how many units the offence merits, and what a unit is worth for this person. Section 40(4) requires both to be stated in the decision.',
+      },
+      {
+        claim: 'An unpaid fine is simply a debt.',
+        reality:
+          'Under German law an irrecoverable fine is replaced by a default custodial sentence at a statutory conversion rate of two daily units to one day. The sanction does not disappear; it changes form.',
+      },
+      {
+        claim: 'Fines are a minor sanction not worth explaining.',
+        reality:
+          'They are the most frequently imposed criminal sanction in many systems, and the one whose severity varies most between people receiving the same nominal penalty. That is exactly why two legislatures legislate the calculation in detail.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Two mechanics for the same equality problem.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'A number of daily units for the offence, and a separate value per unit for the offender, both stated in the decision — Germany, StGB § 40.',
+          'Estimation permitted where the financial basis cannot be established — Germany, StGB § 40(3).',
+          'One amount that must reflect seriousness and take account of means, increasing or reducing — England and Wales, Sentencing Act 2020 s. 125.',
+          'A statutory conversion of an irrecoverable fine into default custody at two units to one day — Germany, StGB § 43.',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'uncertainty',
+        title: 'Mechanics, not levels',
+        text: 'Nothing here states what any offence attracts in either system, and nothing compares how severe fines actually are. The sources support the method of calculation and no more.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'Stating the number of units and their value separately makes a fine reviewable in two independent ways. A person can say the offence did not merit that many units, or that a unit was valued on a mistaken view of their circumstances, and the two arguments do not collapse into one another.',
+        claim: 'fact',
+        sources: ['de-stgb-40-43-geldstrafe'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'The default-custody rule is the reason the calculation matters beyond money. Where an unpaid fine converts into custody at a fixed rate, an amount set without regard to what the person can pay is a route into a prison, and the provisions requiring means to be considered are the safeguard against it.',
+        claim: 'analysis',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [when a court may imprison](/corrections/when-a-court-may-imprison), [custodial and non-custodial sentences](/corrections/custodial-and-non-custodial-sentences), and [equality before the law](/justice/equality-before-the-law).',
+      },
+    ],
+  },
+  {
+    slug: 'when-a-court-may-imprison',
+    title: 'When a court may imprison',
+    shortTitle: 'The custody threshold',
+    question: 'What has to be true before a court is allowed to send someone to prison?',
+    summary:
+      'In one system, a ladder written into statute. A community order needs the offence to be serious enough; custody needs it to be so serious that neither a fine alone nor a community sentence can be justified; and if custody follows, it must be the shortest term commensurate with the seriousness.',
+    entityType: 'concept',
+    section: 'corrections',
+    jurisdiction: ['GB'],
+    temporalScope: 'current',
+    related: [
+      'how-fines-are-calculated',
+      'what-a-community-order-requires',
+      'custodial-and-non-custodial-sentences',
+    ],
+    sources: ['uk-sentencing-act-2020-thresholds', 'uk-sentencing-act-2020-reports-guidelines'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-08-26',
+    publishedOn: '2026-08-26',
+    reviewedOn: '2026-08-26',
+    factsVerifiedOn: '2026-08-26',
+    readingTimeMinutes: 8,
+    keyTerms: ['due-process', 'rule-of-law'],
+    uncertainty: [
+      'One system’s thresholds are described from primary text. How courts apply "so serious" in practice is case law this platform has not researched.',
+      'Nothing here indicates whether any offence would cross any threshold. It sets out what the statute requires the court to be satisfied of, not any outcome.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'A threshold is a condition that has to be met before a kind of sentence becomes available at all. It is a different mechanism from a maximum, which caps what may be imposed, and from a guideline, which structures the choice within what is available. A threshold decides whether the choice arises.',
+      },
+      {
+        kind: 'callout',
+        variant: 'safety',
+        title: 'What this page is and is not',
+        text: 'This describes statutory conditions addressed to courts in one jurisdiction. It cannot be applied to a case, it indicates no outcome, and it is not legal advice. Anyone facing a criminal case needs a lawyer in that jurisdiction.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'A system that only capped sentences would leave the most severe sanction available in every case within the cap, with nothing but judgement between an offence and a prison. Thresholds put the question the other way round: not how much custody is too much, but whether custody may be reached for at all.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'A threshold is a stronger constraint than a principle',
+        text: 'A principle directing courts towards the least restrictive sanction can be satisfied by a court that considered the alternatives and preferred custody. A threshold cannot: if the statutory opinion is not formed, the sentence is not available. That is why this page sits beside rather than inside the restraint principles other systems use.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'The lowest rung is the community order. Section 204(2) of the Sentencing Act 2020 provides that the court must not make a community order unless it is of the opinion that the offence, or the combination of the offence and one or more offences associated with it, was serious enough to warrant the making of such an order.',
+        claim: 'fact',
+        sources: ['uk-sentencing-act-2020-thresholds'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Crossing a threshold does not compel the sentence above it. Section 204(5) states that the fact the court may make a community order does not require it to do so — so the threshold opens a door rather than pushing the court through it, and a fine remains available above the line as well as below.',
+        claim: 'fact',
+        sources: ['uk-sentencing-act-2020-thresholds'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'The custody threshold is drafted as a comparison rather than a level. Section 230(2) provides that the court must not pass a custodial sentence unless it is of the opinion that the offence, or the combination, was so serious that *neither a fine alone nor a community sentence can be justified* for the offence.',
+        claim: 'fact',
+        sources: ['uk-sentencing-act-2020-thresholds'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'The finding this page exists to make',
+        text: 'The custody test does not ask whether the offence is serious. It asks whether the two less severe sanctions can be justified — which means a court reaching for custody has to have formed a view about a fine and about a community sentence first. The alternatives are not options the court may consider; they are the terms in which the custody question is posed.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'And crossing the threshold does not settle the length. Section 231(2) provides that a custodial sentence must be for the shortest term, not exceeding the permitted maximum, that in the opinion of the court is commensurate with the seriousness of the offence or the combination — subject to stated exceptions for sentences fixed by law and required life sentences.',
+        claim: 'fact',
+        sources: ['uk-sentencing-act-2020-thresholds'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where the ladder stops applying',
+        text: 'Section 230(3) disapplies the custody threshold where a mandatory sentence requirement applies. The pattern matches what this platform found in the purposes provision: where Parliament has removed the discretion, the machinery that structures the discretion goes with it. Thresholds constrain choices, and where there is no choice there is nothing to constrain.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The thresholds outrank the guidelines rather than the other way round. The general duty to follow sentencing guidelines is expressly subject to an enumerated list of provisions that includes the fine rule, the community-order restriction, the custody threshold and the shortest-term rule.',
+        claim: 'fact',
+        sources: ['uk-sentencing-act-2020-reports-guidelines'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Forming these opinions is not meant to be done on the papers alone. Section 204(3) requires the court, in forming its opinion about the community-order threshold, to take into account all the information available about the circumstances of the offence, including any aggravating or mitigating factors; and the pre-sentence report requirements apply to that opinion.',
+        claim: 'fact',
+        sources: ['uk-sentencing-act-2020-thresholds'],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'A court may imprison whenever the offence carries a prison sentence.',
+        reality:
+          'Section 230(2) requires the court to be of the opinion that the offence was so serious that neither a fine alone nor a community sentence can be justified. Availability in the offence definition is not the same as availability in the case.',
+      },
+      {
+        claim: 'Crossing the community-order threshold means a community order should follow.',
+        reality:
+          'Section 204(5) states that the fact the court may make a community order does not require it to do so. A threshold makes a sentence available, not obligatory.',
+      },
+      {
+        claim: 'Once custody is justified, the length is a matter for the court alone.',
+        reality:
+          'Section 231(2) requires the shortest term commensurate with the seriousness of the offence, within the permitted maximum, subject to stated exceptions.',
+      },
+      {
+        claim: 'Sentencing guidelines override the statutory thresholds.',
+        reality:
+          'The duty to follow guidelines is expressly subject to a list of provisions that includes the custody threshold and the shortest-term rule. The statute outranks the guideline.',
+      },
+      {
+        claim: 'The custody threshold applies to every offence.',
+        reality:
+          'Section 230(3) disapplies it where a mandatory sentence requirement applies, with narrow exceptions. Where Parliament has fixed the sentence, the threshold has nothing to operate on.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'One statute, four rungs, in the order they are tested.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'A fine, whose amount must reflect seriousness and take account of means — s. 125.',
+          'A community order, available only if the offence was serious enough to warrant one, and not required even then — s. 204(2) and (5).',
+          'Custody, available only if the offence was so serious that neither a fine alone nor a community sentence can be justified — s. 230(2).',
+          'If custody, the shortest term commensurate with the seriousness, within the permitted maximum — s. 231(2).',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'England and Wales only',
+        text: 'These provisions are extent-marked E+W. Scotland and Northern Ireland have separate sentencing law which is not described here, and no other system structures its sanctions this way merely because this one does.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'A threshold expressed as an opinion the court must form is a reviewable step. A custodial sentence passed without the section 230(2) opinion has a defect in the route to it, which is a different complaint from arguing that the term was too long.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The comparative drafting also creates a record. Because the custody test is framed against a fine and a community sentence, a court crossing it has necessarily addressed both — and what it says about them is available to anyone examining the decision afterwards.',
+        claim: 'analysis',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [what a community order requires](/corrections/what-a-community-order-requires), [sentencing guidelines and who writes them](/corrections/sentencing-guidelines-and-who-writes-them), and [what sentencing is for](/corrections/what-sentencing-is-for).',
+      },
+    ],
+  },
+  {
+    slug: 'sentencing-guidelines-and-who-writes-them',
+    title: 'Sentencing guidelines and who writes them',
+    shortTitle: 'Sentencing guidelines',
+    question: 'Who decides what a typical sentence should be, if not the judge?',
+    summary:
+      'In one system a statutory Council writes guidelines and courts must follow them — unless satisfied that following them would be contrary to the interests of justice. That formulation is neither advisory nor mandatory, and the difference is the whole design.',
+    entityType: 'concept',
+    section: 'corrections',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'when-a-court-may-imprison',
+      'what-a-pre-sentence-report-is',
+      'what-sentencing-is-for',
+    ],
+    relatedInstitutions: ['constitutional-court'],
+    sources: [
+      'uk-cja-2009-sentencing-council',
+      'uk-sentencing-act-2020-reports-guidelines',
+      'de-stgb-46-strafzumessung',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-08-26',
+    publishedOn: '2026-08-26',
+    reviewedOn: '2026-08-26',
+    factsVerifiedOn: '2026-08-26',
+    readingTimeMinutes: 8,
+    keyTerms: ['judicial-independence', 'rule-of-law', 'legal-certainty'],
+    uncertainty: [
+      'One guidelines system is described from primary text, together with a system that has no equivalent body. The composition of the Council, the content of any guideline, and their effect on sentencing outcomes were not researched.',
+      'Nothing here indicates what any guideline says or what any case would attract.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'A sentencing guideline is a published statement of how a court should approach a category of case. It sits between the statute, which sets thresholds and maxima, and the individual decision, which applies them to facts. The interesting question is not what guidelines say but how far a court is bound by one — because the answer determines whether they structure judicial judgement or replace it.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This describes the legal status of sentencing guidelines in one system and their absence in another. It quotes no guideline, states no sentence level, and is not legal advice.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'Two people who did the same thing in the same circumstances should not receive very different sentences because they appeared before different judges. That is a consistency problem, and it is real: sentencing involves so many variables that unstructured discretion produces variation nobody intended and nobody can defend.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'And the cure has its own disease',
+        text: 'Guidelines rigid enough to guarantee consistency would sentence categories rather than people, and would relocate the decision from a judge who heard the case to a body that did not. Every guidelines system is a position on that trade-off, which is why the binding formula matters more than the guidance itself.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'England and Wales created a standing body for the task. Section 118(1) of the Coroners and Justice Act 2009 provides, in a single sentence, that there is to be a Sentencing Council for England and Wales, with Schedule 15 making provision about it. The subsection came into force on 6 April 2010.',
+        claim: 'fact',
+        sources: ['uk-cja-2009-sentencing-council'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'The duty on courts is now in the sentencing code. Section 59(1) of the Sentencing Act 2020 provides that every court must, in sentencing an offender, follow any sentencing guidelines relevant to the offender’s case, and must follow relevant guidelines in exercising any other function relating to sentencing — *unless the court is satisfied that it would be contrary to the interests of justice to do so*.',
+        claim: 'fact',
+        sources: ['uk-sentencing-act-2020-reports-guidelines'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'The finding this page exists to make',
+        text: 'Neither "advisory" nor "mandatory" describes that. The default is compliance — a court must follow — and the exit is not judicial preference but a stated conclusion that following would be contrary to the interests of justice. Departure is available and has to be reasoned, which means guidelines bind by requiring an explanation rather than by removing the choice.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The duty is also expressly subordinate. Section 59(2) makes it subject to an enumerated list of provisions including the rule that a fine must reflect seriousness, the restriction on community orders, the threshold for a discretionary custodial sentence, the requirement that a custodial sentence be the shortest term commensurate with seriousness, and the mandatory-minimum provisions.',
+        claim: 'fact',
+        sources: ['uk-sentencing-act-2020-reports-guidelines'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'The order of authority is explicit',
+        text: 'Statute, then guideline, then judgement. A guideline cannot lower the custody threshold or lengthen a sentence beyond the shortest commensurate term, because the provisions doing that work are listed as ones the guidelines duty yields to. A reader who assumed guidelines were the operative rule would have the hierarchy inverted.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Not every system has such a body, and the absence is not an oversight. German sentencing rests on the code rather than on published guidance: section 46(1) of the Criminal Code makes the offender’s guilt the basis for determining the sentence, and section 46(2) enumerates the circumstances the court weighs — motives and aims, the attitude expressed by the act, the degree of breach of duty, the manner of execution, prior life, personal and economic circumstances, and conduct after the act.',
+        claim: 'fact',
+        sources: ['de-stgb-46-strafzumessung'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Those are two answers to the consistency problem, not one answer and a gap. A statutory list of factors constrains reasoning without prescribing outcomes; a guideline constrains outcomes and leaves the reasoning to the court. Which produces more consistency is an empirical question neither statute answers and this page does not either.',
+        claim: 'analysis',
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Sentencing guidelines are advisory.',
+        reality:
+          'Section 59(1) says a court must follow relevant guidelines unless satisfied that doing so would be contrary to the interests of justice. The default is compliance and departure requires a stated conclusion.',
+      },
+      {
+        claim: 'Sentencing guidelines are binding, so judges have no discretion.',
+        reality:
+          'The same provision supplies the exit, and the duty is expressly subject to statutory provisions including the custody threshold and the shortest-term rule. Guidelines structure a discretion they do not remove.',
+      },
+      {
+        claim: 'A guideline can override the statutory sentencing rules.',
+        reality:
+          'Section 59(2) lists the provisions the guidelines duty is subject to, including the fine rule, the community-order restriction, the custody threshold and the mandatory minimums.',
+      },
+      {
+        claim: 'Every system has a sentencing council.',
+        reality:
+          'Germany has no equivalent body. Its Criminal Code names culpability as the basis of measurement and enumerates the factors a court weighs, leaving the outcome to the court.',
+      },
+      {
+        claim: 'A system without guidelines has unstructured sentencing.',
+        reality:
+          'Section 46 of the German Criminal Code constrains the reasoning rather than the result, listing what the court must weigh. Structure can be applied to the process instead of to the outcome.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Two ways to constrain a sentencing decision.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'A statutory Council producing guidelines, with courts required to follow relevant ones unless satisfied it would be contrary to the interests of justice — England and Wales, CJA 2009 s. 118 and Sentencing Act 2020 s. 59(1).',
+          'That duty expressly subordinate to the statutory thresholds and mandatory minimums — Sentencing Act 2020 s. 59(2).',
+          'No guidelines body: culpability as the basis of measurement, with the weighing factors enumerated in the code — Germany, StGB § 46.',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'uncertainty',
+        title: 'Status, not content or effect',
+        text: 'This page describes how binding guidelines are and where the body comes from. It quotes no guideline, and it makes no claim about whether either arrangement produces more consistent sentencing — no evidence supporting such a comparison was obtained.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'A duty that can be departed from only on a stated basis produces reasons, and reasons are what an appeal works on. A sentence outside the guideline range is not thereby wrong, but the court has had to say why — which is more than an unstructured discretion would leave behind.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Published guidelines also do something for the public that the code alone cannot. They make the ordinary approach to a category of case knowable in advance by someone who is not a lawyer, which is the legal-certainty argument for having them at all.',
+        claim: 'analysis',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [when a court may imprison](/corrections/when-a-court-may-imprison), [legal certainty](/justice/legal-certainty), and [why judicial independence matters](/courts/why-judicial-independence-matters).',
+      },
+    ],
+  },
+  {
+    slug: 'what-a-community-order-requires',
+    title: 'What a community order requires',
+    shortTitle: 'Community orders',
+    question: 'Is a community sentence just a warning with paperwork?',
+    summary:
+      'No. In one system the statute lists fifteen kinds of requirement a court may attach — unpaid work, curfews, exclusion, residence, treatment, electronic monitoring of compliance and of whereabouts — and the order is whatever combination the court imposes.',
+    entityType: 'concept',
+    section: 'corrections',
+    jurisdiction: ['GB'],
+    temporalScope: 'current',
+    related: [
+      'when-a-court-may-imprison',
+      'probation-is-three-different-things',
+      'custodial-and-non-custodial-sentences',
+    ],
+    sources: ['uk-sentencing-act-2020-reports-guidelines', 'uk-sentencing-act-2020-thresholds'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-08-26',
+    publishedOn: '2026-08-26',
+    reviewedOn: '2026-08-26',
+    factsVerifiedOn: '2026-08-26',
+    readingTimeMinutes: 7,
+    keyTerms: ['due-process'],
+    uncertainty: [
+      'One system’s requirement types are listed from primary text. What each involves in practice, how they are supervised, and what happens on breach were not researched and are not described.',
+      'Nothing here indicates what requirements any case would attract, or how onerous any of them is.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'A community order is not a single sanction. It is a container: the court makes an order and attaches requirements to it, and what the sentence actually consists of is whichever requirements were attached. Two community orders can therefore have almost nothing in common beyond the name.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This lists the requirement types one statute provides and explains what kind of sentence that makes a community order. It describes no requirement in operational detail, says nothing about breach, and is not legal advice.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'A single non-custodial sanction would have to be either too light for the serious end of its range or too heavy for the light end. Building the sentence from components lets one legal form cover the whole span between a fine and custody, and lets the court address what the case actually calls for rather than choosing the nearest available shape.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Why "leniency" is the wrong axis',
+        text: 'The word "community" describes where the sentence is served, not how demanding it is. A curfew, an exclusion requirement and electronic whereabouts monitoring are restrictions on liberty imposed continuously outside a prison. Treating the custodial line as the line between punishment and not-punishment misses most of what the sanction system does.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'Section 201 of the Sentencing Act 2020 sets out the community order requirements table. The requirement types it lists are: unpaid work; rehabilitation activity; programme; prohibited activity; curfew; exclusion; residence; foreign travel prohibition; mental health treatment; drug rehabilitation; drug testing; alcohol treatment; alcohol abstinence and monitoring; attendance centre; electronic compliance monitoring; and electronic whereabouts monitoring.',
+        claim: 'fact',
+        sources: ['uk-sentencing-act-2020-reports-guidelines'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'The list is doing three different jobs',
+        text: 'Some requirements take something away — unpaid work takes time, a curfew takes hours, exclusion and foreign travel prohibition take places. Some address a cause — mental health, drug and alcohol treatment. And two do neither: electronic compliance monitoring and electronic whereabouts monitoring exist to make the others verifiable. A sanction, a treatment and a verification mechanism sit in one table because the court needs all three to build a workable order.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The table is not static. The drug testing requirement was inserted into it on 28 June 2022 by the Police, Crime, Sentencing and Courts Act 2022 — which is a reminder that the menu of community requirements is a policy instrument a legislature adjusts, rather than a fixed feature of the sentence.',
+        claim: 'fact',
+        sources: ['uk-sentencing-act-2020-reports-guidelines'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Availability is bounded at both ends. A court must not make a community order unless it is of the opinion that the offence, or the combination of the offence and associated offences, was serious enough to warrant one — and the fact that it may make such an order does not require it to do so.',
+        claim: 'fact',
+        sources: ['uk-sentencing-act-2020-thresholds'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'The upper bound is the custody threshold, and it is expressed in terms of this sanction: a court must not pass a custodial sentence unless the offence was so serious that neither a fine alone *nor a community sentence* can be justified. The community order is therefore not merely an alternative to custody; it is one of the two things a court must have ruled out before custody becomes available.',
+        claim: 'fact',
+        sources: ['uk-sentencing-act-2020-thresholds'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Building the order requires information',
+        text: 'Deciding which requirements fit a person is not something a court can do on the offence alone, which is why the pre-sentence report requirements apply to the opinion under the community-order threshold. The report and the order are parts of the same mechanism.',
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'A community sentence means no real consequences.',
+        reality:
+          'The statutory requirement types include unpaid work, curfews, exclusion, residence, foreign travel prohibition and electronic whereabouts monitoring. These are continuing restrictions on liberty, imposed outside a prison rather than instead of consequence.',
+      },
+      {
+        claim: 'A community order is one sanction.',
+        reality:
+          'It is an order with requirements attached from a statutory table of sixteen entries. What the sentence consists of is whichever requirements the court imposed.',
+      },
+      {
+        claim: 'Community requirements are all about rehabilitation.',
+        reality:
+          'The table mixes three kinds: requirements that take something away, requirements that address a cause, and two electronic monitoring requirements whose function is to make the others verifiable.',
+      },
+      {
+        claim:
+          'If the offence is serious enough for a community order, the court should make one.',
+        reality:
+          'Section 204(5) provides that the fact the court may make a community order does not require it to do so. Passing the threshold makes the sentence available, not obligatory.',
+      },
+      {
+        claim: 'The list of available requirements is a permanent feature of the sentence.',
+        reality:
+          'It is amended by statute — the drug testing requirement was inserted on 28 June 2022 by the Police, Crime, Sentencing and Courts Act 2022.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'What the statutory table contains, grouped by what each kind of requirement does.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Requirements that take something away — unpaid work, curfew, exclusion, residence, foreign travel prohibition, prohibited activity, attendance centre.',
+          'Requirements that address a cause — rehabilitation activity, programme, mental health treatment, drug rehabilitation, drug testing, alcohol treatment, alcohol abstinence and monitoring.',
+          'Requirements that make the others verifiable — electronic compliance monitoring and electronic whereabouts monitoring.',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'One system’s list',
+        text: 'These are the requirement types the Sentencing Act 2020 provides for England and Wales. Other systems build community sanctions from different components, and nothing here describes them.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'A statutory list is a limit as well as a menu. A court may attach requirements the table provides for, which means a person subject to a community order can identify what has been imposed on them and by what authority, rather than being subject to whatever an administering body considers appropriate.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The monitoring requirements make that limit practical from the other direction. Where compliance is verified electronically rather than by assertion, both the person subject to the order and the body supervising it are working from the same record.',
+        claim: 'analysis',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [when a court may imprison](/corrections/when-a-court-may-imprison), [what a pre-sentence report is](/corrections/what-a-pre-sentence-report-is), and [probation is three different things](/corrections/probation-is-three-different-things).',
+      },
+    ],
+  },
+  {
+    slug: 'what-a-pre-sentence-report-is',
+    title: 'What a pre-sentence report is',
+    shortTitle: 'Pre-sentence reports',
+    question: 'Who tells the court about the person before it sentences them?',
+    summary:
+      'In one system, an officer of a provider of probation services — and the court must obtain and consider the report unless it thinks that unnecessary. It is the point where the community-corrections service shapes a sentence it has not yet been asked to administer.',
+    entityType: 'concept',
+    section: 'corrections',
+    jurisdiction: ['GB'],
+    temporalScope: 'current',
+    related: [
+      'what-a-community-order-requires',
+      'when-a-court-may-imprison',
+      'conviction-sentence-and-execution',
+    ],
+    relatedInstitutions: ['correctional-service'],
+    sources: ['uk-sentencing-act-2020-reports-guidelines', 'uk-sentencing-act-2020-thresholds'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-08-26',
+    publishedOn: '2026-08-26',
+    reviewedOn: '2026-08-26',
+    factsVerifiedOn: '2026-08-26',
+    readingTimeMinutes: 7,
+    keyTerms: ['due-process', 'fair-trial'],
+    uncertainty: [
+      'One system is described from primary text. What a report contains in practice, how it is prepared, and how courts use it were not researched and are not described.',
+      'The equivalent function in other systems — where one exists — was not researched. Nothing here should be generalised.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Between conviction and sentence there is a gap the trial did not fill. The court knows what was proved; it does not necessarily know anything reliable about the person, their circumstances, or what a proposed sentence would actually do. A pre-sentence report is the mechanism for closing that gap, and in one system the statute says who writes it and when the court must have it.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This describes a statutory reporting requirement and who discharges it. It does not describe what a report contains, how one is prepared, or how to respond to one, and it is not legal advice.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'Sentencing asks questions a trial is not designed to answer. Whether a person could complete unpaid work, whether treatment would be viable, what a curfew would mean for their employment — none of that is in issue at trial, and none of it can be assumed from the offence. Someone has to find out, and it cannot be the court.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'The service that will administer the sentence helps shape it',
+        text: 'The report is written by the same kind of body that would supervise a community order. That is deliberate rather than awkward: an order built without regard to whether it can be delivered is an order that will fail. It also means the community-corrections service influences sentencing before it has any role in the case — which is the clearest link between the two halves of this section.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'The duty is conditional but the default is to obtain one. Section 30(2) of the Sentencing Act 2020 provides that where the pre-sentence report requirements apply and the offender is aged 18 or over, the court must obtain and consider a pre-sentence report before forming the opinion, *unless, in the circumstances of the case, it considers that it is unnecessary* to obtain one.',
+        claim: 'fact',
+        sources: ['uk-sentencing-act-2020-reports-guidelines'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'For offenders under 18 the exception is narrower. Section 30(3) permits the court to proceed without a fresh report only where a previous pre-sentence report exists and the court, having had regard to the information in it or in the most recent of several, considers a new one unnecessary in the circumstances.',
+        claim: 'fact',
+        sources: ['uk-sentencing-act-2020-reports-guidelines'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'The statute then says who writes it. Section 31(1) defines a pre-sentence report as one made or submitted by an appropriate officer *with a view to assisting the court in determining the most suitable method of dealing with an offender*, containing information as prescribed by rules; and section 31(2)(a) provides that for an offender aged 18 or over the appropriate officer is an officer of a provider of probation services.',
+        claim: 'fact',
+        sources: ['uk-sentencing-act-2020-reports-guidelines'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Read "a provider of probation services"',
+        text: 'The statute does not name a probation service. It refers to a provider of probation services — a formulation that presupposes there may be several and does not assume any particular institutional form. That is why this platform publishes no probation-service institution page: the drafting of the one system examined here argues against a single institutional family rather than for one.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The form is flexible. Section 31(4) allows the court to accept a pre-sentence report given orally in open court, subject to rules and to section 31(5), which requires a written report for an offender under 18 in specified cases including the seriousness threshold for custody.',
+        claim: 'fact',
+        sources: ['uk-sentencing-act-2020-reports-guidelines'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'A duty whose breach does not undo the sentence',
+        text: 'Section 30(4) provides that where a court does not obtain and consider a report when the requirements applied, no custodial sentence or community sentence is invalidated by that fact. The obligation is real and its breach does not produce nullity — the same design this platform found in the forensic code of practice, where non-compliance is not an offence but is admissible and weighable. Systems reach for this shape when the remedy of voiding the outcome would harm the person it is meant to protect.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The report is tied to the thresholds rather than free-floating. The pre-sentence report requirements apply to the court in forming its opinion on whether an offence was serious enough to warrant a community order — the same opinion in which the court must take into account all available information about the circumstances, including aggravating and mitigating factors.',
+        claim: 'fact',
+        sources: ['uk-sentencing-act-2020-thresholds'],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'A pre-sentence report is optional background material.',
+        reality:
+          'Where the pre-sentence report requirements apply, section 30(2) requires the court to obtain and consider one unless it considers that unnecessary in the circumstances of the case — and the rule is stricter for offenders under 18.',
+      },
+      {
+        claim: 'The report tells the court what sentence to pass.',
+        reality:
+          'It is defined as a report made with a view to assisting the court in determining the most suitable method of dealing with an offender. Assisting a determination is not making one.',
+      },
+      {
+        claim: 'A missing report invalidates the sentence.',
+        reality:
+          'Section 30(4) provides that no custodial sentence or community sentence is invalidated by the fact that the court did not obtain and consider one. The duty exists without that consequence attached.',
+      },
+      {
+        claim: 'Pre-sentence reports are always written documents prepared in advance.',
+        reality:
+          'Section 31(4) allows a court to accept a report given orally in open court, subject to rules; writing is required for offenders under 18 in specified cases.',
+      },
+      {
+        claim: 'Probation only becomes involved after the sentence.',
+        reality:
+          'For an adult offender the appropriate officer who prepares the report is an officer of a provider of probation services. The involvement begins before the sentence exists.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'What the statute fixes, and what it leaves open.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Fixed: the court must obtain and consider a report where the requirements apply, unless it considers that unnecessary — s. 30(2).',
+          'Fixed: for adults the author is an officer of a provider of probation services — s. 31(2)(a).',
+          'Open: the form, which may be oral in open court, except where writing is required for an offender under 18 — s. 31(4)–(5).',
+          'Open: the content, which is prescribed by rules made by the Secretary of State — s. 31(1)(b).',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'uncertainty',
+        title: 'One system only',
+        text: 'Whether other systems have an equivalent function, and who performs it, was not researched. Nothing here describes any system but England and Wales.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'A report prepared to assist the court is material about a person that will influence what happens to them, which makes its accuracy a matter of consequence. That is the argument for a defined author, a prescribed content and a form the court receives in open proceedings rather than privately.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The stricter rule for offenders under 18 is the clearest signal of what the mechanism is for. Where the person is least able to explain their own circumstances, the statute is least willing to let the court proceed without someone having established them.',
+        claim: 'fact',
+        sources: ['uk-sentencing-act-2020-reports-guidelines'],
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [what a community order requires](/corrections/what-a-community-order-requires), [when a court may imprison](/corrections/when-a-court-may-imprison), and [conviction, sentence and execution](/corrections/conviction-sentence-and-execution).',
+      },
+    ],
+  },
+  /* ---------------------------------------------------------------------- */
+  /* Looking in: inspection and complaint                                   */
+  /* ---------------------------------------------------------------------- */
+  {
+    slug: 'who-inspects-a-prison',
+    title: 'Who inspects a prison',
+    shortTitle: 'Who inspects a prison',
+    question: 'Who checks what happens inside a prison?',
+    summary:
+      'Two different bodies, by design. The international standards require a twofold system — internal inspection by the prison administration itself, and external inspection by a body independent of it — and set out the powers without which the second would be theatre.',
+    entityType: 'concept',
+    section: 'corrections',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'how-a-prisoner-raises-a-complaint',
+      'who-runs-prisons',
+      'why-justice-systems-need-oversight',
+    ],
+    relatedInstitutions: ['correctional-service', 'ombuds-and-rights-institution'],
+    sources: ['mandela-rules', 'uk-prison-act-1952-s5a'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-08-26',
+    publishedOn: '2026-08-26',
+    reviewedOn: '2026-08-26',
+    factsVerifiedOn: '2026-08-26',
+    readingTimeMinutes: 8,
+    keyTerms: ['oversight', 'inspectorate', 'accountability'],
+    uncertainty: [
+      'One agreed international standard and one national statute are described. What inspections find, how often they occur, and whether recommendations are implemented are empirical questions this platform has not researched.',
+      'The Optional Protocol to the Convention against Torture and the national preventive mechanisms established under it could not be retrieved from an authoritative source — ohchr.org returned HTTP 403 — so nothing is claimed about them.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Inspection of a prison is not one activity. The agreed international standard treats it as two: the administration checking its own institutions, and a body from outside checking them. Both are called inspection and only one of them is independent, which is why the word on its own tells a reader very little.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This describes what the international standards require of prison inspection and one statutory instantiation of the external limb. It reports no inspection finding, assesses no prison system, and is not a route for raising a concern about any institution.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'A prison is the one part of a justice system whose subjects cannot leave, cannot easily be seen, and are least able to be believed. Every other institution is checked partly by the people who deal with it complaining effectively. Inspection exists because that mechanism is weakest exactly where the power is greatest.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Why internal inspection is not a lesser version of external',
+        text: 'The two answer different questions. Internal inspection asks whether institutions are following the administration’s own rules, and the administration is well placed to know. External inspection asks whether the rules and their application are acceptable at all, which is the question an administration cannot ask of itself. Requiring both is not belt and braces; it is two different examinations.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'Rule 83 of the United Nations Standard Minimum Rules for the Treatment of Prisoners states the structure directly: there shall be a twofold system for regular inspections of prisons and penal services — internal or administrative inspections conducted by the central prison administration, and external inspections conducted by a body *independent of the prison administration*, which may include competent international or regional bodies.',
+        claim: 'fact',
+        sources: ['mandela-rules'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'The stated objective covers both limbs: to ensure that prisons are managed in accordance with existing laws, regulations, policies and procedures, with a view to bringing about the objectives of penal and corrections services, and that the rights of prisoners are protected.',
+        claim: 'fact',
+        sources: ['mandela-rules'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'The finding this page exists to make',
+        text: 'The powers are the standard, not the label. Rule 84 gives inspectors authority to access all information on numbers of prisoners and places of detention and everything relevant to treatment including records and conditions; to freely choose which prisons to visit, including unannounced visits at their own initiative, and which prisoners to interview; and to conduct private and fully confidential interviews with prisoners and prison staff. An inspection regime lacking any one of those is not a weaker version of this — it is a different thing wearing the name.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Rule 84 also composes the team: external inspection teams shall consist of qualified and experienced inspectors appointed by a competent authority and *shall encompass health-care professionals*, with due regard to balanced gender representation. Detention raises medical questions that a purely administrative inspectorate could not evaluate.',
+        claim: 'fact',
+        sources: ['mandela-rules'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'And the standard does not stop at looking. Rule 85 requires every inspection to be followed by a written report to the competent authority, with due consideration given to making external inspection reports publicly available excluding personal data unless the prisoner has consented; and requires the administration to indicate, within a reasonable time, whether it will implement the recommendations.',
+        claim: 'fact',
+        sources: ['mandela-rules'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'The obligation is to answer, not to obey',
+        text: 'Rule 85(2) does not require the administration to accept recommendations. It requires it to say whether it will, within a reasonable time. That is a smaller demand and a more enforceable one — and it converts a disagreement about prison conditions into a documented position someone can be held to.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'England and Wales puts the external limb in statute. Section 5A of the Prison Act 1952 provides for the appointment of a Chief Inspector of Prisons whose duty is to inspect or arrange for the inspection of prisons in England and Wales and report to the Secretary of State on them, and who shall *in particular* report on the treatment of prisoners and conditions in prisons.',
+        claim: 'fact',
+        sources: ['uk-prison-act-1952-s5a'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'The reporting route is the accountability mechanism. Section 5A(5) requires the Chief Inspector to submit an annual report to the Secretary of State, and requires the Secretary of State to *lay a copy of that report before Parliament* — so the department that runs prisons cannot be the last body to see what an inspection found.',
+        claim: 'fact',
+        sources: ['uk-prison-act-1952-s5a'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'The remit reaches beyond prisons. Section 5A(5A) and (5B) apply the inspection and reporting duties to immigration removal centres, short-term holding facilities, pre-departure accommodation and escort arrangements, and do so anywhere in the United Kingdom — because the argument for inspection follows detention rather than the building it happens in.',
+        claim: 'fact',
+        sources: ['uk-prison-act-1952-s5a'],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Prison inspection means an independent body looking at prisons.',
+        reality:
+          'Rule 83 requires a twofold system: internal inspections conducted by the central prison administration and external inspections by a body independent of it. Only the second is independent, and both are called inspection.',
+      },
+      {
+        claim: 'Oversight of prisons means running them properly.',
+        reality:
+          'Inspection examines whether institutions are managed in accordance with existing rules and whether prisoners’ rights are protected. It does not manage the institutions, and the external limb must be independent of the body that does.',
+      },
+      {
+        claim:
+          'An inspectorate that visits prisons on a published schedule meets the standard.',
+        reality:
+          'Rule 84 gives inspectors authority to freely choose which prisons to visit, including by making unannounced visits at their own initiative, and which prisoners to interview. Announced visits alone do not carry that authority.',
+      },
+      {
+        claim: 'An inspection report obliges the prison administration to act on it.',
+        reality:
+          'Rule 85(2) requires the administration to indicate within a reasonable time whether it will implement the recommendations. The obligation is to respond, not to comply.',
+      },
+      {
+        claim: 'Prison inspection covers prisons.',
+        reality:
+          'In England and Wales the statutory duties extend to immigration removal centres, short-term holding facilities, pre-departure accommodation and escort arrangements, anywhere in the United Kingdom.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'The standard, and one national instantiation of its external limb.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Twofold inspection — internal by the administration, external by a body independent of it — Mandela Rule 83.',
+          'Powers that make the external limb real: full information access, free choice of prison and prisoner, unannounced visits, confidential interviews — Rule 84.',
+          'A written report every time, publication considered, and a reasoned response within a reasonable time — Rule 85.',
+          'A statutory Chief Inspector reporting annually, with the report laid before Parliament, covering detention beyond prisons — England and Wales, Prison Act 1952 s. 5A.',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'uncertainty',
+        title: 'A gap this page states rather than fills',
+        text: 'The Optional Protocol to the Convention against Torture requires states party to designate national preventive mechanisms with a visiting mandate, and it is central to this subject. The authoritative text could not be retrieved — ohchr.org returned HTTP 403 behind a challenge page — so nothing about it is asserted here. That is an access limitation on this platform, not a statement about the instrument.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'Confidential interviews are the part of the standard that makes the rest usable. A prisoner who can only speak to an inspector in the hearing of staff is a prisoner who will be careful, and an inspection built on careful answers records something other than what it set out to find.',
+        claim: 'fact',
+        sources: ['mandela-rules'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Laying an annual report before Parliament does similar work at the other end. The value is not that legislators read every report; it is that the executive cannot decide which findings become public, so a poor inspection outcome cannot be managed by being kept internal.',
+        claim: 'analysis',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [how a prisoner raises a complaint](/corrections/how-a-prisoner-raises-a-complaint), [who runs prisons](/corrections/who-runs-prisons), and [why justice systems need oversight](/justice/why-justice-systems-need-oversight).',
+      },
+    ],
+  },
+  {
+    slug: 'how-a-prisoner-raises-a-complaint',
+    title: 'How a prisoner raises a complaint',
+    shortTitle: 'Complaints in custody',
+    question: 'If something is wrong inside a prison, who can the person tell?',
+    summary:
+      'The agreed standard builds three routes, not one — daily to the prison, confidentially to an inspector, and uncensored to authorities outside — because a complaints system with a single channel runs through the institution being complained about.',
+    entityType: 'concept',
+    section: 'corrections',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: ['who-inspects-a-prison', 'why-correctional-systems-exist', 'effective-remedy'],
+    relatedInstitutions: ['correctional-service', 'ombuds-and-rights-institution'],
+    sources: ['mandela-rules'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-08-26',
+    publishedOn: '2026-08-26',
+    reviewedOn: '2026-08-26',
+    factsVerifiedOn: '2026-08-26',
+    readingTimeMinutes: 7,
+    keyTerms: ['accountability', 'oversight', 'due-process'],
+    uncertainty: [
+      'This describes what one agreed international standard requires. It is not a description of the complaints system in any country, and whether any system meets the standard is not assessed.',
+      'National complaint and ombudsman arrangements for prisons were not researched for this page.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'A complaint from inside a prison has a structural problem no other complaint has. The person cannot leave, depends on the people they are complaining about for everything from meals to medical care, and will still be there tomorrow. Any complaints system that ignores that is describing a procedure rather than providing a remedy.',
+      },
+      {
+        kind: 'callout',
+        variant: 'safety',
+        title: 'What this page is and is not',
+        text: 'This describes what the international standards require of prison complaints systems. It is not a route for making a complaint, describes no country’s procedure, and is not legal advice. Anyone with a concern about a person in custody should seek help from a lawyer or an oversight body in the relevant jurisdiction.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'Rights that cannot be asserted are descriptions. The Standard Minimum Rules set out at length what people in detention are entitled to, and every one of those entitlements depends on someone being able to say when it is not being provided — to somebody who can do something, without being punished for it.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Retaliation is the design constraint',
+        text: 'This is why the standard reads the way it does. A single internal channel would work perfectly for the complaints the institution is happy to receive, and would be useless for the ones that matter most. Multiple routes, confidentiality and an express protection against retaliation are not three separate good ideas — they are one answer to one problem.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'It begins before any complaint arises. Rule 54 requires that on admission every prisoner be promptly provided with written information about the prison law and applicable regulations; about their rights, including authorised methods of seeking information, access to legal advice including through legal aid schemes, and the procedures for making requests or complaints; about their obligations, including applicable disciplinary sanctions; and about all other matters necessary to adapt to prison life.',
+        claim: 'fact',
+        sources: ['mandela-rules'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Rule 55 makes that information reach people rather than merely exist. It must be available in the most commonly used languages according to the needs of the prison population, with interpretation assistance where a prisoner understands none of them; conveyed orally where a prisoner is illiterate; and provided in an appropriate manner to prisoners with sensory disabilities.',
+        claim: 'fact',
+        sources: ['mandela-rules'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'The finding this page exists to make',
+        text: 'Rule 56 provides three routes and they are not alternatives. Daily opportunity to make requests or complaints to the prison director or an authorised staff member. The opportunity to make them to the inspector of prisons during inspections, speaking freely and in full confidentiality, without the director or other staff present. And the right to make a request or complaint about treatment, without censorship as to substance, to the central prison administration and to the judicial or other competent authorities, including those vested with reviewing or remedial power. One channel is close and quick, one is confidential, and one leaves the prison system entirely.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The routes extend beyond the prisoner. Rule 56(4) provides that the rights extend to the prisoner’s legal adviser, and that where neither the prisoner nor the legal adviser can exercise them, a member of the prisoner’s family or any other person with knowledge of the case may do so.',
+        claim: 'fact',
+        sources: ['mandela-rules'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Rule 57 then addresses what happens next. Every request or complaint shall be promptly dealt with and replied to without delay; and if it is rejected, or in the event of undue delay, the complainant is entitled to bring it before a judicial or other authority. Silence is treated the same as refusal, which closes the most obvious way of defeating a complaints system.',
+        claim: 'fact',
+        sources: ['mandela-rules'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'The protection is stated in terms. Rule 57(2) requires safeguards ensuring prisoners can make requests or complaints safely and, if requested, confidentially, and provides that a complainant — or a family member or other person acting for them — must not be exposed to any risk of retaliation, intimidation or other negative consequences as a result of having submitted a request or complaint.',
+        claim: 'fact',
+        sources: ['mandela-rules'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'One category is removed from the ordinary process',
+        text: 'Rule 57(3) provides that allegations of torture or other cruel, inhuman or degrading treatment or punishment shall be dealt with immediately and shall result in a prompt and impartial investigation conducted by an independent national authority. That does not run through the complaints system at all — the standard treats it as too serious to be handled by the institution complained of, however good its procedure.',
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Prison complaints go to the prison.',
+        reality:
+          'Rule 56 provides three routes: daily to the director or an authorised staff member, confidentially to the inspector during inspections, and without censorship as to substance to the central administration and to judicial or other competent authorities.',
+      },
+      {
+        claim: 'A complaint that gets no answer has failed.',
+        reality:
+          'Rule 57(1) entitles the complainant to bring the matter before a judicial or other authority if the complaint is rejected *or in the event of undue delay*. Delay is treated as a refusal.',
+      },
+      {
+        claim: 'Only the prisoner can complain.',
+        reality:
+          'Rule 56(4) extends the rights to the prisoner’s legal adviser and, where neither can exercise them, to a family member or any other person with knowledge of the case.',
+      },
+      {
+        claim: 'Serious allegations are handled through the same complaints process.',
+        reality:
+          'Rule 57(3) requires allegations of torture or other cruel, inhuman or degrading treatment to be dealt with immediately and to result in a prompt and impartial investigation by an independent national authority.',
+      },
+      {
+        claim: 'Telling prisoners their rights is a formality.',
+        reality:
+          'Rules 54 and 55 require the information on admission to cover complaint procedures and legal advice, and to be provided in a language the prisoner understands, orally where they are illiterate and appropriately where they have sensory disabilities.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'What the standard requires, in the order a complaint would travel.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Information on admission about rights, legal advice and complaint procedures, in a form the person can actually receive — Rules 54 and 55.',
+          'Three routes: daily internal, confidential to an inspector, and uncensored to authorities outside the prison — Rule 56.',
+          'A prompt reply, with rejection or undue delay opening a route to a judicial or other authority — Rule 57(1).',
+          'Express protection against retaliation, intimidation or other negative consequences — Rule 57(2).',
+          'Torture allegations removed from the ordinary process to a prompt, impartial, independent national investigation — Rule 57(3).',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'uncertainty',
+        title: 'A standard, not a description',
+        text: 'These are agreed minimum standards. They are not the law of any state, they bind only through whatever domestic law adopts them, and nothing here assesses whether any system meets them.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'The confidential route to an inspector is where this page and prison inspection meet. The same rule that lets an inspector interview prisoners privately is the rule that gives a prisoner somewhere to speak — which is why the inspection powers are not a technicality about inspectors but a condition of anyone inside being heard.',
+        claim: 'fact',
+        sources: ['mandela-rules'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'The anti-retaliation provision is the one that makes the others operable. Every route in the standard depends on a person being willing to use it, and willingness depends on what happens afterwards to people who did.',
+        claim: 'analysis',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [who inspects a prison](/corrections/who-inspects-a-prison), [effective remedy](/justice/effective-remedy), and [why justice systems need oversight](/justice/why-justice-systems-need-oversight).',
+      },
+    ],
+  },
 ];

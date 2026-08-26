@@ -196,8 +196,26 @@ function offendingSentences(pattern: RegExp): string[] {
 /* -------------------------------------------------------------------------- */
 
 describe('the corrections section is populated and routed', () => {
-  it('publishes exactly the twelve Wave 13 guides and nothing else', () => {
-    expect(CORRECTIONS_GUIDES.map((g) => g.slug).sort()).toEqual([...WAVE_13].sort());
+  /*
+   * AMENDED BY WAVE 17, and narrowed rather than relaxed.
+   *
+   * Wave 13 asserted that CORRECTIONS_GUIDES contained exactly its own twelve slugs, which was
+   * right when the section had held none. Wave 17 added seven more to the same module — fines,
+   * the custody threshold, guidelines, community orders, pre-sentence reports, prison inspection
+   * and complaints — so an exact-set assertion now means "no later wave may extend this
+   * section", which was never the guarantee Wave 13 was making.
+   *
+   * The guarantee that mattered is that every Wave 13 slug is still published and still in this
+   * module. That is what is asserted now, and nothing has been removed from the list.
+   */
+  it('still publishes every one of the twelve Wave 13 guides', () => {
+    const present = CORRECTIONS_GUIDES.map((g) => g.slug);
+    for (const slug of WAVE_13) {
+      expect(
+        present,
+        `Wave 13 guide ${slug} has disappeared from the corrections module`,
+      ).toContain(slug);
+    }
   });
 
   it.each(WAVE_13)('%s is registered in the corpus and resolves as a route', (slug) => {
@@ -219,7 +237,8 @@ describe('the corrections section is populated and routed', () => {
 
   it('is not vacuous — the section held no guides before this wave', () => {
     expect(WAVE_13.length).toBe(12);
-    expect(CORRECTIONS_GUIDES.length).toBe(12);
+    // At least Wave 13's twelve; more once later waves extend the section.
+    expect(CORRECTIONS_GUIDES.length).toBeGreaterThanOrEqual(12);
   });
 });
 

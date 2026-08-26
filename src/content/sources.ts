@@ -69,7 +69,7 @@ export const SOURCES: readonly SourceRecord[] = [
     publishedOn: '2015',
     verifiedOn: '2026-07-23',
     jurisdiction: 'INT',
-    note: 'Supports the internationally agreed minimum standards for the treatment of people in detention, including the requirement of independent inspection of prisons. Standards, not a description of conditions in any particular prison system.',
+    note: 'Supports the internationally agreed minimum standards for the treatment of people in detention, including the requirement of independent inspection of prisons. Standards, not a description of conditions in any particular prison system. WAVE 17 ADDITION, read from the primary UNODC PDF, text-extracted locally. Supports Rule 83(1): "There shall be a twofold system for regular inspections of prisons and penal services: (a) Internal or administrative inspections conducted by the central prison administration; (b) External inspections conducted by a body independent of the prison administration, which may include competent international or regional bodies"; and Rule 83(2): that in both cases the objective is to ensure prisons are managed in accordance with existing laws, regulations, policies and procedures, with a view to bringing about the objectives of penal and corrections services, and that the rights of prisoners are protected. Supports Rule 84(1): inspectors shall have authority to access all information on the numbers of prisoners and places and locations of detention and all information relevant to the treatment of prisoners including their records and conditions of detention; "to freely choose which prisons to visit, including by making unannounced visits at their own initiative, and which prisoners to interview"; to conduct private and fully confidential interviews with prisoners and prison staff; and to make recommendations to the prison administration and other competent authorities. Supports Rule 84(2): external inspection teams shall be composed of qualified and experienced inspectors appointed by a competent authority and shall encompass health-care professionals, with due regard to balanced gender representation. Supports Rule 85(1): every inspection shall be followed by a written report to the competent authority, with due consideration given to making external inspection reports publicly available excluding personal data unless the prisoner has given explicit consent; and Rule 85(2): the administration or other competent authorities shall indicate within a reasonable time whether they will implement the recommendations. Supports Rule 54: on admission every prisoner shall be promptly provided with written information about the prison law and regulations, their rights including authorized methods of seeking information and access to legal advice and procedures for making requests or complaints, their obligations including applicable disciplinary sanctions, and all other matters necessary to adapt to prison life; and Rule 55: that this information shall be available in the most commonly used languages, with interpretation assistance where the prisoner understands none of them, conveyed orally to an illiterate prisoner, and provided appropriately to prisoners with sensory disabilities. Supports Rule 56: every prisoner shall have the opportunity each day to make requests or complaints to the prison director or an authorized staff member; that it shall be possible to make them to the inspector of prisons during inspections, with the opportunity to talk to the inspector "freely and in full confidentiality, without the director or other members of the staff being present"; that every prisoner shall be allowed to make a request or complaint regarding their treatment "without censorship as to substance" to the central prison administration and to the judicial or other competent authorities including those vested with reviewing or remedial power; and that these rights extend to the prisoner\'s legal adviser and, failing that, to a family member or other person with knowledge of the case. Supports Rule 57: every request or complaint shall be promptly dealt with and replied to without delay, and if rejected or unduly delayed the complainant shall be entitled to bring it before a judicial or other authority; that safeguards shall ensure requests can be made safely and confidentially where requested, and that a complainant "must not be exposed to any risk of retaliation, intimidation or other negative consequences"; and that allegations of torture or other cruel, inhuman or degrading treatment shall be dealt with immediately and result in a prompt and impartial investigation by an independent national authority. Supports Rule 87: that before the completion of the sentence it is desirable that the necessary steps be taken to ensure for the prisoner a gradual return to life in society.',
   },
   {
     id: 'rome-statute',
@@ -3750,6 +3750,77 @@ export const SOURCES: readonly SourceRecord[] = [
     verificationMethod: 'content-confirmed',
     jurisdiction: 'US',
     note: 'NIST\'s own account of the programme, read directly. Supports: that the reviews identify the scientific foundations underpinning forensic methods, document and evaluate the empirical evidence for their reliability, explore their capabilities and limitations, and identify knowledge gaps; that the method is set out in NISTIR 8225 and proceeds by selecting a discipline, gathering scientific literature and publicly available information, convening NIST scientists and outside experts, publishing a draft for public comment, and finalising after considering comments; that the programme fulfils a need identified by the 2009 National Academy of Sciences report, which called for "studies establishing the scientific bases demonstrating the validity of forensic methods"; that in 2016 the National Commission on Forensic Science recommended NIST conduct independent scientific evaluations of technical merit; and that Congress appropriated funds for the reviews from 2018. Supports NIST\'s own statement that forensic science "can help exclude innocent people from an investigation or exonerate them in cases of wrongful conviction". Supports the STATUS of individual reviews as listed on that page: DNA Mixture Interpretation is a final report; the Bitemark Analysis review is NISTIR 8352-DRAFT with the public comment period closed. Nothing is quoted from that draft anywhere on this platform.',
+  },
+
+  /* ---------------------------------------------------------------------- */
+  /* Wave 17 — sentencing institutions and community corrections             */
+  /* ---------------------------------------------------------------------- */
+
+  {
+    id: 'de-stgb-40-43-geldstrafe',
+    type: 'legislation',
+    title:
+      'Strafgesetzbuch (StGB) §§ 40 and 43 — Verhängung in Tagessätzen; Ersatzfreiheitsstrafe (German original text)',
+    publisher: 'Bundesministerium der Justiz / Bundesamt für Justiz (Gesetze im Internet)',
+    url: 'https://www.gesetze-im-internet.de/stgb/__40.html',
+    verifiedOn: '2026-08-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'DE',
+    translationStatus: 'not-a-translation',
+    authoritativeLanguage: 'de',
+    note: 'The authoritative German text of both provisions, each read directly (§ 43 at the corresponding URL). Supports § 40(1): "Die Geldstrafe wird in Tagessätzen verhängt" — the fine is imposed in daily units — at least five and, unless the law provides otherwise, at most 360 full daily units. Supports § 40(2): the court determines the amount of a daily unit taking into account the personal and economic circumstances of the offender, as a rule proceeding from the net income the offender has or could have on average in one day, ensuring that the offender is left at least the minimum income indispensable for living, with a daily unit set at not less than one and not more than thirty thousand euros. Supports § 40(3): the offender\'s income, assets and other bases for assessing a daily unit may be estimated. Supports § 40(4): the decision states the number AND the amount of the daily units. Supports § 43 in full: an irrecoverable fine is replaced by a default custodial sentence (Ersatzfreiheitsstrafe); "Zwei Tagessätzen entspricht ein Tag Ersatzfreiheitsstrafe" — two daily units correspond to one day of default imprisonment — and the minimum is one day. Cited for the STRUCTURE of the day-fine system, which separates the number of units from their value. It supports no claim about how often fines are imposed, about amounts in practice, or about any other country.',
+  },
+  {
+    id: 'uk-sentencing-act-2020-thresholds',
+    type: 'legislation',
+    title:
+      'Sentencing Act 2020 (2020 c. 17), sections 125, 204, 230 and 231 — fines, community orders and the custody threshold',
+    publisher: 'The National Archives (legislation.gov.uk)',
+    url: 'https://www.legislation.gov.uk/ukpga/2020/17/section/230',
+    publishedOn: '2020',
+    verifiedOn: '2026-08-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'GB',
+    note: 'The official revised text, each section read directly at its own page. Supports s. 125(1): "The amount of any fine fixed by a court must be such as, in the opinion of the court, reflects the seriousness of the offence"; s. 125(2): in fixing the amount the court must take into account the circumstances of the case including in particular the financial circumstances of the offender so far as known or apparent; and s. 125(3): that this applies "whether taking into account the financial circumstances of the offender has the effect of increasing or reducing the amount of the fine". Supports s. 204(2): the court must not make a community order unless it is of the opinion that the offence, or the combination of the offence and associated offences, "was serious enough to warrant the making of such an order"; s. 204(3): the court must take into account all available information about the circumstances including aggravating and mitigating factors; and s. 204(5): the fact that the court MAY make a community order "does not require it to do so". Supports s. 230(2): the court "must not pass a custodial sentence unless it is of the opinion that" the offence, or the combination, "was so serious that neither a fine alone nor a community sentence can be justified for the offence"; and s. 230(3): that the section does not apply where a mandatory sentence requirement applies. Supports s. 231(2): a custodial sentence "must be for the shortest term (not exceeding the permitted maximum) that in the opinion of the court is commensurate with the seriousness" of the offence or combination, subject to stated exceptions for sentences fixed by law and required life sentences. Sections in force 1 December 2020 (S.I. 2020/1236). ENGLAND AND WALES, extent-marked E+W. It states no sentence for any offence and supports no prediction of any outcome.',
+  },
+  {
+    id: 'uk-sentencing-act-2020-reports-guidelines',
+    type: 'legislation',
+    title:
+      'Sentencing Act 2020 (2020 c. 17), sections 30, 31, 59 and 201 — pre-sentence reports, the guidelines duty and the community order requirements table',
+    publisher: 'The National Archives (legislation.gov.uk)',
+    url: 'https://www.legislation.gov.uk/ukpga/2020/17/section/59',
+    publishedOn: '2020',
+    verifiedOn: '2026-08-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'GB',
+    note: 'The official revised text, each section read directly. Supports s. 59(1): every court "must, in sentencing an offender, follow any sentencing guidelines which are relevant to the offender\'s case" and must follow relevant guidelines in exercising any other sentencing function, "unless the court is satisfied that it would be contrary to the interests of justice to do so"; and s. 59(2): that the duty is subject to an enumerated list of provisions including s. 125(1) (fine must reflect seriousness), s. 204(2) (restriction on community order), s. 230 (threshold for discretionary custodial sentence), s. 231 (shortest term commensurate with seriousness) and the mandatory-minimum provisions mentioned in s. 399(c). Supports s. 30(2): where the pre-sentence report requirements apply and the offender is 18 or over, "the court must obtain and consider a pre-sentence report before forming the opinion unless, in the circumstances of the case, it considers that it is unnecessary" to do so; s. 30(3): the stricter rule for offenders under 18; and s. 30(4): that where a court does not obtain and consider such a report, "no custodial sentence or community sentence is invalidated by the fact that it did not do so". Supports s. 31(1): a "pre-sentence report" is a report made or submitted by an appropriate officer "with a view to assisting the court in determining the most suitable method of dealing with an offender", containing information as prescribed by rules; s. 31(2)(a): that for an offender aged 18 or over the appropriate officer is "an officer of a provider of probation services"; s. 31(4): that the court may accept a pre-sentence report given orally in open court; and s. 31(5): that it must be in writing for an offender under 18 in specified cases. Supports s. 201, the community order requirements table, which lists as requirement types: unpaid work; rehabilitation activity; programme; prohibited activity; curfew; exclusion; residence; foreign travel prohibition; mental health treatment; drug rehabilitation; drug testing (inserted 28 June 2022 by the Police, Crime, Sentencing and Courts Act 2022); alcohol treatment; alcohol abstinence and monitoring; attendance centre; electronic compliance monitoring; and electronic whereabouts monitoring. ENGLAND AND WALES, extent-marked E+W.',
+  },
+  {
+    id: 'uk-cja-2009-sentencing-council',
+    type: 'legislation',
+    title:
+      'Coroners and Justice Act 2009 (2009 c. 25), section 118 — Sentencing Council for England and Wales',
+    publisher: 'The National Archives (legislation.gov.uk)',
+    url: 'https://www.legislation.gov.uk/ukpga/2009/25/section/118',
+    publishedOn: '2009',
+    verifiedOn: '2026-08-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'GB',
+    note: 'The official revised text, read directly. Supports s. 118(1) in full: "There is to be a Sentencing Council for England and Wales", and s. 118(2): that Schedule 15 makes provision about the Council. Section 118(1) came into force on 6 April 2010 (S.I. 2010/816). CURRENCY NOTE, verified rather than assumed: the duty of a court to follow sentencing guidelines was originally s. 125 of this Act, and legislation.gov.uk records s. 125 as REPEALED with effect from 1 December 2020 by the Sentencing Act 2020, s. 416(1) and Sch. 28. The current duty is Sentencing Act 2020 s. 59, cited separately. This record supports the existence and statutory basis of the Council only; it does not support any claim about the Council\'s composition, its guidelines, or the position in any other jurisdiction.',
+  },
+  {
+    id: 'uk-prison-act-1952-s5a',
+    type: 'legislation',
+    title:
+      'Prison Act 1952 (1952 c. 52), section 5A — appointment and functions of the Chief Inspector of Prisons',
+    publisher: 'The National Archives (legislation.gov.uk)',
+    url: 'https://www.legislation.gov.uk/ukpga/Geo6and1Eliz2/15-16/52/section/5A',
+    publishedOn: '1952',
+    verifiedOn: '2026-08-26',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'GB',
+    note: 'The official revised text, read directly; the section was inserted into the 1952 Act by later amendment and appears in the revised text with its amendment history. Supports s. 5A(1): a person may be appointed to be Chief Inspector of Prisons. Supports s. 5A(2): "It shall be the duty of the Chief Inspector to inspect or arrange for the inspection of prisons in England and Wales and to report to the Secretary of State on them." Supports s. 5A(3): the Chief Inspector "shall in particular report to the Secretary of State on the treatment of prisoners and conditions in prisons". Supports s. 5A(4): the Secretary of State may refer specific matters connected with prisons and prisoners to the Chief Inspector and direct a report on them. Supports s. 5A(5): the Chief Inspector shall each year submit a report to the Secretary of State in such form as the Secretary of State may direct, "and the Secretary of State shall lay a copy of that report before Parliament". Supports s. 5A(5A)–(5B): that subsections (2) to (5) apply also in relation to immigration removal centres, short-term holding facilities, pre-departure accommodation and escort arrangements within the meaning of s. 147 of the Immigration and Asylum Act 1999, and that in that application they apply to such centres, facilities, accommodation and arrangements anywhere in the United Kingdom. Cited for the existence and statutory duties of a prison inspectorate in one system. It supports no claim about inspection findings, about compliance, or about arrangements in any other country.',
   },
 ];
 
