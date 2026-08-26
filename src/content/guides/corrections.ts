@@ -269,9 +269,14 @@ export const CORRECTIONS_GUIDES: readonly Guide[] = [
       },
       {
         kind: 'paragraph',
-        text: 'The section also states where it does not apply. By subsection (3) it does not apply to an offence in relation to which a mandatory sentence requirement applies, nor to the making of hospital orders, interim hospital orders, hospital directions or limitation directions under Part 3 of the Mental Health Act 1983. So the purposes govern the discretionary sentencing decision — and where Parliament has removed the discretion, it has also removed the purposes.',
+        text: 'The section also states where it does not bite. Subsection (3) provides that subsection (1) — the provision that makes the section apply at all — does not apply to an offence in relation to which a mandatory sentence requirement applies, nor in relation to the making of hospital orders, interim hospital orders, hospital directions or limitation directions under Part 3 of the Mental Health Act 1983.',
         claim: 'fact',
         sources: ['uk-sentencing-act-2020-s57'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'The effect is that the purposes govern the discretionary sentencing decision: where Parliament has removed the discretion, the provision structuring how it is exercised goes with it.',
+        claim: 'analysis',
       },
       {
         kind: 'callout',

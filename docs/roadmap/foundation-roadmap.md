@@ -946,3 +946,78 @@ defence. A new top-level section, three jurisdictions, seven routes. Details in
   as measured rather than rounded.
 
 Delivered on `feat/knowledge-expansion-wave-11`. Not merged, not deployed.
+
+## Phase 26 — Knowledge Expansion Wave 12 (delivered 2026-08-26)
+
+Rule of law, due process and justice principles. Ten routes deepening `/justice`, which held five
+guides carrying the whole conceptual vocabulary of the site. Details in
+`docs/audits/knowledge-expansion-wave-12-qa.md`.
+
+- **"Due process" is neither universal nor American-only, and the research produced the sharper
+  answer.** Brazil's Article 5º LIV constitutionalises _devido processo legal_ in terms, so the term
+  travels — while systems that protect the same ground under other names remain the majority. Both
+  halves are pinned by tests, because either error alone is the easy one to make.
+- **Jurisdictional diversification away from the European default.** South Africa, Kenya and Brazil
+  carry the wave, read from primary constitutional text: equality before the law, access to courts,
+  effective remedy, reasonable duration, and the express binding of all three branches to law.
+- **Proportionality was deferred on evidence.** No clean authoritative statement of the general
+  public-law test was obtained, so no page asserts one, and a test forbids it appearing as a
+  universal.
+- **A mutation proof passed twice, for two different reasons, and both were test defects.** First,
+  `deniesClaim` asked whether a sentence contained a negation anywhere — and several tripwire
+  patterns carry a negation in their own text ("courts must **never** be criticised"), so the claim
+  satisfied the denial check by being itself. The matched span is now stripped before the denial is
+  looked for. Second, the fix was applied with a conditional rather than an assertion, prettier had
+  reflowed the target, and the absolutist block silently kept the old logic while only the
+  delegitimising block was corrected. **Conditional edits to test files silently revert safeguards**
+  — anchors are asserted now.
+- **The central formulation the wave earned:** respect for courts is compatible with challenging
+  decisions through the procedures the legal system itself provides — which is not a compromise
+  between two positions but what the constitutional texts describe.
+- Validation: 3705 tests / 64 files; **398 routes / 398 sitemap / 400 pages**. Cicero preserved
+  without re-quoting.
+
+## Phase 27 — Knowledge Expansion Wave 13 (delivered 2026-08-26)
+
+Corrections, sentencing and reintegration. Twelve routes in a section that had a landing page, an
+institution record and a profession record — and **zero guides**. Details in
+`docs/audits/knowledge-expansion-wave-13-qa.md`.
+
+- **Where a legislature states its purposes turns out to be as informative as the purposes.**
+  England and Wales (Sentencing Act 2020 s. 57) and Canada (Criminal Code ss. 718–718.2) state
+  purposes in **sentencing** law. Germany (StVollzG § 2) and Brazil (LEP Art. 1) state their
+  reintegration purpose in the law of **execution**, and German sentencing law names culpability as
+  the _basis_ of measurement rather than opening with purposes at all. Those answer different
+  questions, so two systems that both "aim at rehabilitation" can mean structurally different things
+  by it.
+- **The brief's proposed capacity route could not be built as named, and the repository's own
+  safeguard is why.** `RESTRICTED_PATTERNS` blocks `overcrowd*`; the guide scan hard-codes the
+  declared-category list to `[]`; and `Guide` has no `restrictedClaims` field — only dossier modules
+  do. The brief also requires preserving restricted-claim safeguards, and the safeguard wins. Built
+  as `how-prison-capacity-is-measured` instead, which is the part of the topic the sources support:
+  four official sources, four counting rules, four conversions the page refuses to perform, and the
+  Japanese absence stated rather than approximated. No declaration channel was added for guides —
+  that would be speculative architecture for one page.
+- **"Probation" is three unrelated things**, and Denmark holds all three at once. An organisation
+  (Kriminalforsorgen, Kriminalvården), the status attached to a **wholly unserved** suspended term
+  (StGB § 56), and the status attached to the **remainder of a partly served** one (StGB § 57).
+  Canadian statute enumerates four release statuses separately rather than describing one.
+- **The German consent requirement.** StGB § 57(1) conditions release of the remainder on the
+  convicted person's consent — a recognition that supervised release, carrying obligations and the
+  possibility of return, is a different thing from serving to the end rather than simply a lesser
+  one.
+- **The suite's own first run was wrong twice, and both fixes are unit-of-analysis decisions.**
+  Sentence-level tripwires reported four misconception _claims_ as undenied assertions of the things
+  their `reality` fields correct — a misconception is now one unit of `claim + reality`, with a
+  planted non-denying pair proving the guard still fires. And attribution of statutory quantities is
+  checked **block by block**, not sentence by sentence, because a paragraph whose opening sentence
+  names the German Criminal Code has attributed every figure in it; a planted detached fraction
+  proves that check still bites. Wave 11's same-sentence denial rule survives for ordinary prose.
+- **`verify:output` caught what the test suite could not.** All twelve routes registered and none
+  exported: `src/app/corrections/` had a `page.tsx` and no `[slug]` segment. The registry and the
+  export are separately verified for exactly this case.
+- **Zero institution routes for the sixth consecutive wave.** What was missing from corrections was
+  the conceptual layer, not the registry layer.
+- Validation: 4120 tests / 65 files; **410 routes / 410 sitemap / 412 pages**. Ten mutation proofs,
+  10/10 valid, none surviving. Six defects found and fixed during the wave, four of them by the new
+  guards on their first run.

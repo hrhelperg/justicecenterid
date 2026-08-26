@@ -754,6 +754,35 @@ describe('every Wave 13 guide is structurally complete', () => {
     expect(hasScope, `${slug} opens without scoping what it is not`).toBe(true);
   });
 
+  it.each(WAVE_13)('%s sources every block it marks as fact', (slug) => {
+    const g = guide(slug);
+    const unsourced = [
+      ...(g.definition ?? []),
+      ...(g.whyItExists ?? []),
+      ...(g.howItWorks ?? []),
+      ...(g.variation ?? []),
+      ...(g.rightsAndAccountability ?? []),
+    ]
+      .filter((b) => b.kind === 'paragraph' && b.claim === 'fact')
+      .filter((b) => !((b as { sources?: string[] }).sources ?? []).length)
+      .map((b) => (b as { text: string }).text.slice(0, 80));
+    expect(unsourced, `${slug} asserts a fact with no source`).toEqual([]);
+  });
+
+  it('is not vacuous — the wave does mark blocks as fact', () => {
+    const factCount = WAVE_13.flatMap((slug) => {
+      const g = guide(slug);
+      return [
+        ...(g.definition ?? []),
+        ...(g.whyItExists ?? []),
+        ...(g.howItWorks ?? []),
+        ...(g.variation ?? []),
+        ...(g.rightsAndAccountability ?? []),
+      ].filter((b) => b.kind === 'paragraph' && b.claim === 'fact');
+    }).length;
+    expect(factCount).toBeGreaterThan(30);
+  });
+
   it('never puts a markdown link where the renderer will not resolve it', () => {
     for (const g of ALL_GUIDES) {
       for (const m of g.misconceptions) {
