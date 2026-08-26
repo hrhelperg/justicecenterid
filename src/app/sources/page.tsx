@@ -175,7 +175,15 @@ export default function SourcesPage() {
                       {source.publishedOn ? ` · ${source.publishedOn}` : ''}
                       {source.verifiedOn ? ` · link verified ${source.verifiedOn}` : ''}
                     </p>
-                    {source.note && <p className="mt-1 text-ink-subtle">{source.note}</p>}
+                    {/*
+                      `break-words` because a source note may quote a URL, and a long one
+                      overflows the viewport at 320px. Caught by the 320px reflow test after
+                      Wave 14 added notes citing a second URL for a multi-provision source; the
+                      class fixes the whole class of regression rather than the two instances.
+                    */}
+                    {source.note && (
+                      <p className="mt-1 break-words text-ink-subtle">{source.note}</p>
+                    )}
                   </li>
                 ))}
               </ol>
