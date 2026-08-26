@@ -1252,3 +1252,48 @@ Three waves on one branch, one push. Baseline `746f482`.
   the point of the omission.
 
 Delivered on `feat/knowledge-expansion-waves-16-18`. Not merged, not deployed.
+
+## Phase 33 — Knowledge Expansion Wave 19 (delivered 2026-08-26)
+
+Remedies, appeals and review. Seven guides across `/courts` and `/justice`, on what a system does
+when a decision, procedure or exercise of public power may be wrong, unlawful or unfair. Details
+in `docs/audits/knowledge-expansion-wave-19-qa.md`.
+
+- **No taxonomy was added, and that was the finding.** The brief's twenty-one terms are different
+  kinds of thing — jurisdictions, modes of review, grounds, legal effects, procedural postures —
+  and several are two at once. An enum would have forced a choice the sources do not make. A test
+  asserts the absence negatively, so a later wave cannot introduce one by accident.
+- **Article 120 of the Dutch Constitution**: "The constitutionality of Acts of Parliament and
+  treaties shall not be reviewed by the courts." Not a narrow jurisdiction and not a high
+  threshold — an express exclusion of the power three other systems on the same page are busy
+  allocating.
+- **Cassation is a mode of review, not a rank of court.** StPO § 333 makes Revision available
+  against first-instance judgments of the Oberlandesgerichte, so a review confined to legal error
+  reaches courts that are not the apex and is heard by courts that are not the apex either.
+- **The load-bearing word is a verb form.** § 337(1) requires the judgment to _rest on_ the
+  violation — _beruhe_. § 338's absolute grounds are not the worst errors but the ones where the
+  counterfactual cannot be run.
+- **A duty whose breach produces no nullity, found for the third and fourth time** — Sentencing
+  Act 2020 s. 30(4) and FSR Act 2021 s. 4. Not nullity, not liability: relevance. Two English
+  statutes and one German code reach the same design from different traditions.
+- **Two answers on unlawfully obtained evidence, not one.** Brazil states inadmissibility flatly;
+  South Africa and Kenya make exclusion mandatory _if_ admission would render the trial unfair or
+  be detrimental to the administration of justice. The discretion is in the assessment.
+- **Ten consecutive waves with no new institution record**, and now ten with no new type either.
+- **A live rendering defect found by a corpus scan and fixed**: 93 emphasis marker pairs across
+  guides, history, institutions, professions, glossary and dossiers were printing as literal
+  asterisks, because `parseInline` knew only about link markers. The renderer now resolves them,
+  and a corpus-wide guard fails on any marker that survives parsing.
+- **Two source extensions had silently landed on the wrong record** — Spanish constitutional text
+  on a Swiss code, Kenyan constitutional text on a prosecutor's website record — because the
+  append helper matched only single-quoted note literals. Both moved; both pinned by test. The
+  failure was invisible to the typechecker and to every existing test, which is the argument for
+  auditing where an edit landed rather than trusting that it did.
+- **Four test-design defects found by writing the tests**, including a tripwire set whose patterns
+  contain their own negations and therefore cleared themselves under the usual denial helper. The
+  live-catch test now asserts both that the correct check catches the stance and that the wrong one
+  does not.
+- Validation: 5559 tests / 74 files; **450 routes**, 452 pages, 450 sitemap URLs; 289 sources; 0
+  orphans, 0 weakly linked, 0 dead ends. **10/10 mutation proofs valid.**
+
+Delivered on `feat/knowledge-expansion-wave-19`. Not merged, not deployed.
