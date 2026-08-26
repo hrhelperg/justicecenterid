@@ -161,7 +161,7 @@ export const PROCESS_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'This guide explains what courts do. How court systems are STRUCTURED, and how much they differ, is covered by [court hierarchy](/courts/court-hierarchy), [why courts matter](/courts/why-courts-matter) and [why judicial independence matters](/courts/why-judicial-independence-matters). Related: [due process](/justice/what-is-due-process), [what a prosecutor does](/prosecution/what-does-a-prosecutor-do), and [the rule of law](/justice/what-is-the-rule-of-law).',
+        text: 'This guide explains what courts do. How court systems are STRUCTURED, and how much they differ, is covered by [court hierarchy](/courts/court-hierarchy), [why courts matter](/courts/why-courts-matter) and [why judicial independence matters](/courts/why-judicial-independence-matters). Related: [due process](/justice/what-is-due-process), [what a prosecutor does](/prosecution/what-does-a-prosecutor-do), and [the rule of law](/justice/what-is-the-rule-of-law). For a court system built on almost none of the components this page assumes, see [how Athenian courts worked](/history/how-athenian-courts-worked).',
       },
     ],
   },
