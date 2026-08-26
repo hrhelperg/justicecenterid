@@ -219,6 +219,33 @@ const MUST_404 = [
   // admission in a professional body while England and Wales constitutes lawyers as no status
   // at all, leaving no third member of the family to describe.
   '/institutions/bar-association',
+  // Wave 16 examined a forensic-laboratory institution family and rejected it: the Netherlands
+  // has a ministry institute, England and Wales has a regulated market and no national service,
+  // so there is no third member of the family to describe.
+  '/institutions/forensic-laboratory',
+  '/institutions/forensic-institute',
+  '/professions/medical-examiner',
+  '/professions/coroner',
+  '/professions/forensic-pathologist',
+  '/professions/fingerprint-examiner',
+  // Wave 16 deferred these disciplines: no final scientific-foundation review or no primary
+  // institutional source. Digital evidence was deferred on safety grounds as well.
+  '/forensics/digital-evidence',
+  '/forensics/fingerprint-examination',
+  '/forensics/firearms-examination',
+  '/forensics/forensic-toxicology',
+  // Wave 17 examined and rejected each of these families. "A provider of probation services" is
+  // the statute's own formulation and presupposes plural providers; one inspectorate is not a
+  // family; and a parole-board family would have no German member.
+  '/institutions/parole-board',
+  '/institutions/probation-service',
+  '/institutions/prison-inspectorate',
+  '/institutions/sentencing-council',
+  '/professions/probation-officer',
+  // Wave 18 deferred prison history: the Gaol Act 1823 and Prison Act 1877 are scanned-PDF-only
+  // on legislation.gov.uk, and OCR was rejected as a source standard in an earlier wave.
+  '/history/when-prisons-became-a-sentence',
+  '/history/the-penitentiary-movement',
   '/professions/public-defender',
   // A parallel prosecution taxonomy was considered and rejected; the existing hub is used.
   '/prosecutors',
