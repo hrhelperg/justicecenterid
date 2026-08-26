@@ -1641,7 +1641,7 @@ export const COURTS_GUIDES: readonly Guide[] = [
       },
       {
         kind: 'paragraph',
-        text: 'Germany starts from the court, and says so in one sentence. Section 184 of the Courts Constitution Act provides that *die Gerichtssprache ist deutsch* — the language of the court is German. The same provision then guarantees a single exception: the right of the Sorbs to speak Sorbian before a court in the home districts of the Sorbian population.',
+        text: 'Germany starts from the court, and says so in one sentence. Section 184 of the Courts Constitution Act opens with four words: “Die Gerichtssprache ist deutsch.” The language of the court is German. The same provision then guarantees a single exception: the right of the Sorbs to speak Sorbian before a court in the home districts of the Sorbian population.',
         claim: 'fact',
         sources: ['de-gvg-gerichtssprache'],
       },
