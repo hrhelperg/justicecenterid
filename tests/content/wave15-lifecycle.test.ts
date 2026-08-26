@@ -314,7 +314,16 @@ describe('the model cannot be read as one universal procedure', () => {
           ...g.misconceptions.map((m) => `${m.claim} ${m.reality}`),
         ];
       }),
-      ...LIFECYCLE_STAGES.map((s) => `${s.summary} ${s.variation} ${s.exits.join(' ')}`),
+      /*
+       * Each field separately, not concatenated.
+       *
+       * Forced by mutation proof W15-M5, which applied cleanly and PASSED. Joining a stage's
+       * summary, variation and exits into one unit let the variation field — which names
+       * professional judges, lay judges and mixed panels — qualify a summary that had been
+       * replaced with "a jury hears the evidence and decides". They render as separate elements
+       * on the page, so they are separate units here.
+       */
+      ...LIFECYCLE_STAGES.flatMap((s) => [s.summary, s.variation, ...s.exits]),
     ];
     for (const unit of units.filter((u) => /\bjur(?:y|ies)\b/i.test(u))) {
       expect(
