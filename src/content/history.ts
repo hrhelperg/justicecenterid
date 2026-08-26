@@ -491,7 +491,7 @@ export const HISTORY_ENTRIES: readonly HistoryEntry[] = [
       {
         claim: 'The Habeas Corpus Act 1679 created habeas corpus.',
         reality:
-          'The Act recites that writs of habeas corpus were already being directed to officers, that obedience was their duty under the known laws of the land, and that they were evading it. It attached a three-day deadline to an existing remedy.',
+          'It did not. The Act recites that writs of habeas corpus were already being directed to officers, that obedience was their duty under the known laws of the land, and that they were evading it. What it added to an existing remedy was a three-day deadline.',
       },
       {
         claim: 'Before 1679 people could be detained without any remedy.',
