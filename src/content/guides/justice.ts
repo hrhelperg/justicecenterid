@@ -2375,4 +2375,159 @@ export const JUSTICE_GUIDES: readonly Guide[] = [
       },
     ],
   },
+
+  /* ------------------------------------------------------------------------
+     Wave 14 — the participant the two-sided model leaves out.
+     ------------------------------------------------------------------------ */
+  {
+    slug: 'victims-in-the-justice-process',
+    title: 'Victims in the justice process',
+    shortTitle: 'Victims in the process',
+    question: 'Where does the victim of a crime stand in a criminal case?',
+    summary:
+      'Not as a party, in most systems — a public prosecution is brought by the state, not on the victim’s behalf. Some systems then create a route back in, and German law lets specified victims join the prosecution as an accessory prosecutor.',
+    entityType: 'concept',
+    section: 'justice',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: ['why-public-prosecution-exists', 'access-to-justice', 'effective-remedy'],
+    relatedInstitutions: ['prosecution-service'],
+    sources: ['de-stpo-395-nebenklage', 'de-gvg-gerichtssprache', 'ke-constitution'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'not-required',
+    updatedOn: '2026-08-26',
+    publishedOn: '2026-08-26',
+    reviewedOn: '2026-08-26',
+    factsVerifiedOn: '2026-08-26',
+    readingTimeMinutes: 8,
+    keyTerms: ['prosecutor', 'fair-trial'],
+    uncertainty: [
+      'One participation mechanism is described in detail from primary text, and one constitutional mandate. Victim-support services, compensation schemes, protection measures and the rights that follow from joining a prosecution were not researched and are not described.',
+      'This page describes where victims stand structurally. It is not guidance for anyone affected by a crime, and it describes no procedure for participating anywhere.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'In a criminal case the parties are the prosecution and the accused. The person harmed by the offence is, in most systems, neither — they are a witness to the case, and the case is not theirs. That is a structural fact about public prosecution rather than an oversight, and understanding it is what makes the mechanisms some systems build on top of it intelligible.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This describes where victims sit in the structure of a criminal process and one statutory route to participation. It is not advice or support for anyone affected by a crime, and it describes no procedure anywhere. Anyone in that position should contact the relevant authorities and support services in their own country.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'Public prosecution exists precisely so that the response to crime does not depend on the resources, persistence or wishes of the person harmed. That is a genuine protection: it means a case can proceed where the victim cannot pursue it, and it removes the pressure that would otherwise fall on them to. The cost of the arrangement is that the person with the strongest interest in the outcome has no standing in the proceedings about it.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Why the two-sided picture misleads here',
+        text: 'Describing a criminal trial as the state against the accused is accurate about the parties and incomplete about the participants. It leaves the reader with no place to put the victim, which is why the common assumption — that the prosecutor is the victim’s lawyer — is so persistent. The prosecutor acts for the public interest, which frequently coincides with the victim’s and is not defined by it.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'Germany builds a route in and defines it carefully. Section 395 of the Code of Criminal Procedure sets out who may join a public prosecution already brought, as a *Nebenkläger* — an accessory prosecutor. Subsection (1) lists offence groups whose victims may join, among them offences against sexual self-determination, attempted murder and manslaughter, bodily-injury offences including ill-treatment in office, and offences of trafficking, deprivation of liberty and coercion.',
+        claim: 'fact',
+        sources: ['de-stpo-395-nebenklage'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Two further categories follow. Subsection (2) extends the same power to persons whose children, parents, siblings, spouses or life partners were killed by an unlawful act, and to persons who brought about the raising of the public charge by an application for judicial decision. Subsection (3) allows joinder by a person injured by another unlawful act where this appears necessary for the protection of their interests for special reasons, in particular because of the grave consequences of the act.',
+        claim: 'fact',
+        sources: ['de-stpo-395-nebenklage'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'An enumerated list is a choice, not a limitation of imagination',
+        text: 'The provision could have opened accessory prosecution to every victim of every offence. Instead it names offence groups, adds bereaved close relatives, and keeps a discretionary category for grave consequences elsewhere. That structure treats participation as something to be given where the harm is personal and severe, rather than as a general feature of being a complainant — and the third subsection exists so that the enumeration does not become the whole answer.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Timing is generous where the substance is narrow. Subsection (4) provides that joinder is permissible at any stage of the proceedings, and may occur after judgment for the purpose of lodging an appeal.',
+        claim: 'fact',
+        sources: ['de-stpo-395-nebenklage'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Participation once granted carries practical entitlements, and one of them shows how the mechanisms interlock. Section 187(4) of the Courts Constitution Act applies the interpreter and translator provision — including the entitlement to free engagement of an interpreter for the whole proceedings — correspondingly to persons entitled to join the public prosecution as a Nebenkläger. A route into the case brings the means of following it.',
+        claim: 'fact',
+        sources: ['de-gvg-gerichtssprache'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Other systems address victims by directing that the subject be legislated for rather than by creating a mechanism in the constitution itself. Kenya’s Article 50(9) provides that Parliament shall enact legislation providing for the protection, rights and welfare of victims of offences. Kenya’s Article 50(7) also lets a court allow an intermediary to assist a complainant — as well as an accused person — to communicate with the court.',
+        claim: 'fact',
+        sources: ['ke-constitution'],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'The prosecutor is the victim’s lawyer.',
+        reality:
+          'A public prosecution is brought in the public interest, not on the victim’s behalf. The interests frequently coincide; the prosecutor’s duty is not defined by them, and the victim is not the prosecutor’s client.',
+      },
+      {
+        claim: 'The victim decides whether a case goes ahead.',
+        reality:
+          'That is what public prosecution was designed to avoid, so that a case does not depend on the victim’s resources or persistence and so that pressure does not fall on them. Systems vary in how much weight a victim’s wishes carry, but the decision is not theirs.',
+      },
+      {
+        claim: 'Victims have no standing in a criminal case anywhere.',
+        reality:
+          'German law lets specified victims join a public prosecution as a Nebenkläger, at any stage of the proceedings and even after judgment for the purpose of appealing.',
+      },
+      {
+        claim: 'Where victim participation exists, it is open to every complainant.',
+        reality:
+          'The German provision enumerates offence groups, adds bereaved close relatives and those who forced a prosecution, and keeps a discretionary category for grave consequences. It is a defined route rather than a general entitlement.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Two techniques, at different levels of the legal order.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'A statutory route into the proceedings for defined categories of victim, available at any stage — Germany, StPO § 395.',
+          'A constitutional direction to the legislature to provide for victims’ protection, rights and welfare — Kenya, Art. 50(9).',
+          'A judicial discretion to allow an intermediary to assist a complainant to communicate with the court — Kenya, Art. 50(7).',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'uncertainty',
+        title: 'A narrow view of a wide subject',
+        text: 'Support services, compensation schemes, protection from intimidation, information rights and the treatment of witnesses in court are all part of how systems deal with victims, and none was researched here. What this page describes is standing in the proceedings, which is one element of it.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'Standing determines what a person can do when the system does something they disagree with. A witness who thinks a prosecution has gone wrong has no procedural route; a party has one. That is the practical difference the German mechanism creates, and it is why the question of who counts as a participant is not merely descriptive.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The interaction with fair-trial rights is real and is not a reason to dismiss either side. Participation by a victim adds a voice to proceedings whose subject is another person’s liberty, which is exactly why the systems that allow it define who may join and on what basis rather than opening it generally.',
+        claim: 'analysis',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [why public prosecution exists](/prosecution/why-public-prosecution-exists), [access to justice](/justice/access-to-justice), and [effective remedy](/justice/effective-remedy).',
+      },
+    ],
+  },
 ];

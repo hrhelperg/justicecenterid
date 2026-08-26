@@ -1215,4 +1215,368 @@ export const DEFENCE_GUIDES: readonly Guide[] = [
       },
     ],
   },
+
+  /* ------------------------------------------------------------------------
+     Wave 14 — who may act, and whether you must.
+
+     Wave 11 answered how defence is organised and paid for. These two pages ask
+     the questions underneath that: who is permitted to act as a lawyer at all,
+     and whether a person may proceed without one. Both are jurisdictionally
+     specific in ways the English vocabulary conceals.
+     ------------------------------------------------------------------------ */
+  {
+    slug: 'who-may-act-as-a-lawyer',
+    title: 'Who may act as a lawyer',
+    shortTitle: 'Who may act as a lawyer',
+    question: 'Is “lawyer” a protected title, and who decides who gets to be one?',
+    summary:
+      'Three systems, three techniques. One reserves six named activities and regulates by authorisation; one reserves categories of work to those inscribed in a single national body; one constitutes the lawyer as an independent organ of the administration of justice.',
+    entityType: 'concept',
+    section: 'defence',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: ['representing-yourself', 'how-defence-is-funded', 'what-defence-counsel-does'],
+    sources: [
+      'uk-legal-services-act-2007',
+      'br-lei-8906-1994-oab',
+      'br-cf-1988',
+      'de-brao-anwaltschaft',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-08-26',
+    publishedOn: '2026-08-26',
+    reviewedOn: '2026-08-26',
+    factsVerifiedOn: '2026-08-26',
+    readingTimeMinutes: 9,
+    keyTerms: ['accountability', 'oversight'],
+    uncertainty: [
+      'Three systems are described from primary statutory text. Qualification routes, examinations, training periods and the bodies that authorise in England and Wales were not researched and are not described.',
+      'This page describes who may act. It says nothing about how to find, choose, instruct or complain about a lawyer anywhere.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Most legal systems restrict some legal work to people who have been admitted to something. What is restricted, who admits, and what the admitted person is called differ so much between systems that the English word "lawyer" carries almost no information on its own. The useful questions are what activity is reserved, who controls entry, and what the person is constituted as once admitted.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This describes statutory arrangements governing who may act. It is not legal advice, it does not describe qualification routes, and it is not guidance on finding or instructing anyone.',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Words that are not synonyms',
+        text: 'Lawyer, barrister, solicitor, advocate, attorney, advogado, Rechtsanwalt — none of these is a translation of the others. Each is defined by the system that uses it, several coexist within a single system with different rights, and some name roles this page does not describe at all. This site uses each system’s own term and explains it rather than translating it.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'The case for restricting legal work is that the person receiving it usually cannot evaluate it. Someone who does not know the law cannot tell whether the advice they were given was competent until the consequences arrive, and by then the matter may be beyond repair. Restriction substitutes a check on the adviser for a judgment the client cannot make.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The case against is that every restriction is also a barrier. Work that only admitted persons may do costs what admitted persons charge, and a system that reserved everything would price out the people who most need help. Every arrangement here is a line drawn between those two arguments, and where the line falls is a policy choice this page describes rather than evaluates.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Who controls entry is a separate question from whether entry is controlled',
+        text: 'A state that admitted lawyers directly would control who may appear against it. Both systems here that vest admission in a professional body are answering that problem, and Brazil says so in terms — its statute states that the body maintains no functional or hierarchical link with organs of public administration. Self-regulation is not merely a professional privilege; it is also a structural answer to a conflict of interest.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'England and Wales reserves activities, not status. Section 12(1) of the Legal Services Act 2007 defines "reserved legal activity" as six named things: the exercise of a right of audience; the conduct of litigation; reserved instrument activities; probate activities; notarial activities; and the administration of oaths. Section 13 provides that whether a person is entitled to carry on a reserved legal activity is to be determined solely in accordance with the Act, and that a person is entitled where they are an authorised person, or an exempt person, in relation to that activity.',
+        claim: 'fact',
+        sources: ['uk-legal-services-act-2007'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'What is missing from that list',
+        text: 'Giving legal advice is not among the six reserved activities. Section 12(3) defines a wider category of "legal activity" that does include advice and representation — but reservation attaches to the six, not to the wider category. So in England and Wales the activity of advising on the law is, as a matter of this Act, not reserved, while appearing in court and conducting litigation are. A reader who assumed reservation covers "legal work" would have the structure backwards.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The Act also excludes something explicitly. Section 12(4) provides that "legal activity" does not include any activity of a judicial or quasi-judicial nature, including acting as a mediator — so mediation is placed outside the regulated category rather than inside it.',
+        claim: 'fact',
+        sources: ['uk-legal-services-act-2007'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Brazil reserves broader categories and ties them to a single body. Article 1 of Lei 8.906/1994 makes the activities exclusive to advocacia the postulation to any organ of the Judiciary and to the juizados especiais, and the activities of legal consultancy, advice and direction. Article 3 provides that the exercise of advocacy in Brazilian territory and the designation *advogado* are exclusive to those inscribed in the Ordem dos Advogados do Brasil.',
+        claim: 'fact',
+        sources: ['br-lei-8906-1994-oab'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'One carve-out that says a great deal',
+        text: 'Article 1 § 1 states that the petition of habeas corpus in any instance or court is NOT included in the exclusive activity of advocacia. The one thing anybody may do without a lawyer is challenge a detention. A system that reserves legal consultancy but opens habeas corpus to everyone has made a judgment about which barrier it can least afford.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Brazil also says what the advogado is, in the constitution and again in the statute. Article 133 of the Constitution provides that the advogado is indispensable to the administration of justice and is inviolable for their acts and statements in the exercise of the profession, within the limits of the law; Article 2 of the statute repeats the first half and adds that in their private ministry the advogado renders a public service and exercises a social function, and that in judicial proceedings their acts constitute a *múnus público*.',
+        claim: 'fact',
+        sources: ['br-cf-1988', 'br-lei-8906-1994-oab'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Germany opens with the same kind of statement and makes it the whole of section 1 of the Federal Lawyers’ Act: *"Der Rechtsanwalt ist ein unabhängiges Organ der Rechtspflege"* — the Rechtsanwalt is an independent organ of the administration of justice. Section 3 adds that the Rechtsanwalt is the appointed independent adviser and representative in all legal matters, that the right to appear before courts, arbitral tribunals or authorities may be restricted only by federal statute, and that everyone has the right, within the statutory provisions, to be advised and represented by a Rechtsanwalt of their choice.',
+        claim: 'fact',
+        sources: ['de-brao-anwaltschaft'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Admission and discipline sit with professional bodies in both systems, organised quite differently. In Germany a Rechtsanwaltskammer is formed for the district of each Oberlandesgericht and has its seat at that court, with its members being those it has admitted or received. In Brazil the OAB is a single federative body described by statute as a *serviço público*, with the Conselho Federal as its supreme organ and Conselhos Seccionais with jurisdiction over each state; Article 44 II gives it, exclusively, the representation, defence, selection and discipline of advogados throughout the country.',
+        claim: 'fact',
+        sources: ['de-brao-anwaltschaft', 'br-lei-8906-1994-oab'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Why no institution page follows from this',
+        text: 'Two of these systems vest admission and discipline in a professional body; the third regulates activities and authorisation without constituting lawyers as a status at all. That is not one institution with three designs — the third has no member of the family to describe. So the comparison stays in prose here rather than becoming a taxonomy that two examples would have to carry.',
+      },
+    ],
+    misconceptions: [
+      {
+        claim:
+          'Lawyer, attorney, advocate, barrister and solicitor are different words for the same job.',
+        reality:
+          'Each is defined by the system that uses it. England and Wales attaches entitlement to six named activities and to authorisation for each; Brazil ties exclusive activities to inscription in the OAB; Germany constitutes the Rechtsanwalt by statute as an independent organ of the administration of justice.',
+      },
+      {
+        claim: 'Only lawyers may give legal advice.',
+        reality:
+          'Not in England and Wales as a matter of the Legal Services Act: giving legal advice is not one of the six reserved legal activities, though appearing in court and conducting litigation are. Brazil, by contrast, does place legal consultancy among the exclusive activities.',
+      },
+      {
+        claim: 'A lawyer is a private service provider like any other.',
+        reality:
+          'Both German and Brazilian law say otherwise in their own text. The Rechtsanwalt is an independent organ of the administration of justice; the advogado is indispensable to the administration of justice and, in their private ministry, renders a public service.',
+      },
+      {
+        claim: 'Because the state licenses lawyers, lawyers answer to the state.',
+        reality:
+          'In the systems described here admission and discipline sit with a professional body rather than a government department, and Brazilian statute states expressly that the OAB maintains no functional or hierarchical link with organs of public administration.',
+      },
+      {
+        claim: 'Everything a court touches is reserved to lawyers.',
+        reality:
+          'Brazilian statute expressly excludes the petition of habeas corpus in any instance or court from the exclusive activity of advocacia, and the English Act excludes acting as a mediator from "legal activity" altogether.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Three techniques, and they are not variants of one another.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Reserve six named activities; entitlement determined solely by the Act, through authorisation or exemption — England and Wales, LSA 2007 ss. 12–13.',
+          'Reserve postulation and legal consultancy to those inscribed in one national body, with habeas corpus carved out — Brazil, Lei 8.906 Arts. 1 and 3.',
+          'Constitute the lawyer as an independent organ of the administration of justice, restrictable only by federal statute — Germany, BRAO §§ 1 and 3.',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'England and Wales only',
+        text: 'The Legal Services Act provisions described here are extent-marked for England and Wales. Scotland and Northern Ireland have separate arrangements which are not described, and nothing here applies outside those jurisdictions.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'Restriction of legal work is justified by the protection it gives clients, which means the protection has to be real. In both systems that admit by professional body, the same body that admits also disciplines — Germany through the Kammer that received the member, Brazil through a body given selection and discipline exclusively by statute.',
+        claim: 'fact',
+        sources: ['de-brao-anwaltschaft', 'br-lei-8906-1994-oab'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'The duties attached to admission are the other half. German law requires the Rechtsanwalt to enter into no ties endangering professional independence, binds them to confidentiality over everything learned in the exercise of the profession, forbids unobjective conduct, and prohibits acting where they have advised or represented another client in the same matter in a conflicting interest.',
+        claim: 'fact',
+        sources: ['de-brao-anwaltschaft'],
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [representing yourself](/defence/representing-yourself), [what defence counsel does](/defence/what-defence-counsel-does), and [the defence lawyer](/professions/defence-lawyer).',
+      },
+    ],
+  },
+  {
+    slug: 'representing-yourself',
+    title: 'Representing yourself',
+    shortTitle: 'Representing yourself',
+    question: 'Can a person go to court without a lawyer?',
+    summary:
+      'Sometimes, and in some situations not even if they want to. The right to choose a lawyer implies a right to decline one — until a system decides the case is too serious to be conducted without defence, at which point the choice is removed.',
+    entityType: 'concept',
+    section: 'defence',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: ['who-may-act-as-a-lawyer', 'right-to-counsel', 'how-defence-is-funded'],
+    sources: [
+      'ke-constitution',
+      'za-constitution',
+      'br-lei-8906-1994-oab',
+      'de-stpo-140-notwendige-verteidigung',
+      'uk-legal-services-act-2007',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-08-26',
+    publishedOn: '2026-08-26',
+    reviewedOn: '2026-08-26',
+    factsVerifiedOn: '2026-08-26',
+    readingTimeMinutes: 8,
+    keyTerms: ['fair-trial', 'due-process'],
+    uncertainty: [
+      'Four systems are described from primary text. What a person representing themselves may or must do procedurally, and how courts handle self-represented parties, were not researched and are not described.',
+      'Nothing here indicates whether representing oneself is advisable in any situation. That is a question about a particular case and a particular system, and this page cannot answer it.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Representing yourself means conducting your own case: making your own applications, putting your own questions, and answering the case without a lawyer acting for you. Systems treat it differently in different proceedings, and the entitlement to do it is not the same thing as the entitlement to be helped.',
+      },
+      {
+        kind: 'callout',
+        variant: 'safety',
+        title: 'This page is not a recommendation',
+        text: 'Nothing here suggests that representing yourself is a good idea in any situation, and nothing here explains how to do it. Whether it is possible or sensible depends on the jurisdiction, the proceedings and the facts, and anyone facing a real case needs a lawyer in that jurisdiction rather than a comparative description.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'The starting point is that the case belongs to the person whose case it is. A system that required everyone to be represented would be telling people they may not speak for themselves in the proceedings that determine their liberty or their property — which is a strong thing for a legal order to say, and most say it only in narrow circumstances.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Against that sits what the proceedings actually demand. Criminal procedure is technical, the other side is a professional, and a person conducting their own defence is exercising a right in conditions that may make it worthless. Mandatory representation is the recognition that autonomy exercised without capacity is not much of a protection.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'The uncomfortable shape of the answer',
+        text: 'Both positions are about protecting the same person, and they conflict. Systems resolve it by tying mandatory defence to the seriousness of the case rather than to any judgment about the individual — so the question is not whether this person can cope, but whether this kind of case may be conducted undefended at all. That is a less intrusive test, and it is also a blunter one.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'Constitutional guarantees are usually drafted as a right to choose, which implies the possibility of choosing nobody. Kenya’s Article 50(2)(g) gives every accused person the right to choose, and be represented by, an advocate, and to be informed of this right promptly; South Africa’s section 35(3)(f) is in materially the same terms. Neither says a person must be represented.',
+        claim: 'fact',
+        sources: ['ke-constitution', 'za-constitution'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Germany is where the limit is visible. The Code of Criminal Procedure makes defence *necessary* in defined situations — § 140 sets out the cases in which the participation of defence counsel is required — and where it applies, counsel is appointed. The trigger is the seriousness and circumstances of the case, not the accused person’s means and not their preference.',
+        claim: 'fact',
+        sources: ['de-stpo-140-notwendige-verteidigung'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'A right that can be exercised against the holder’s wishes',
+        text: 'Mandatory defence is one of the few places in criminal procedure where a protection is imposed on a person who may not want it. It is defensible on the same ground as the rest of the fair-trial guarantees: they exist so that a conviction means something, and a conviction obtained against an undefended person in a case of that gravity would be worth less as a finding. The protection runs to the process as much as to the individual.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'A second limit is subtler: in some systems, some acts may only be done by an admitted person, so a self-represented party is barred not from appearing but from certain steps. Brazil reserves postulation to any organ of the Judiciary to those inscribed in the OAB — with the express exception, in Article 1 § 1 of the statute, that the petition of habeas corpus in any instance or court is not within that exclusive activity.',
+        claim: 'fact',
+        sources: ['br-lei-8906-1994-oab'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Why habeas corpus is the exception everywhere it is an exception',
+        text: 'The petition against unlawful detention is the one application a person may need to make when they are least able to arrange anything — held, without means to instruct anyone, possibly without knowing why. A reservation that applied to it would make the remedy depend on the very capacity the detention has removed. Brazil’s carve-out is a system noticing that.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'England and Wales reaches the same place through a different mechanism. Because entitlement to carry on a reserved legal activity is determined solely by the Legal Services Act, and a person is entitled where they are an authorised person *or an exempt person* in relation to that activity, the possibility of acting without authorisation is handled through exemption rather than through a general right to self-represent.',
+        claim: 'fact',
+        sources: ['uk-legal-services-act-2007'],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Everyone always has the right to represent themselves.',
+        reality:
+          'German law makes defence necessary in defined situations, and where it applies counsel is appointed regardless of what the accused would prefer. The trigger is the seriousness of the case rather than means or preference.',
+      },
+      {
+        claim: 'If a person is entitled to appear, they can take every step in the case.',
+        reality:
+          'Brazil reserves postulation to any organ of the Judiciary to those inscribed in the OAB, with habeas corpus expressly excepted. Appearing and being permitted to do a particular act are separate questions.',
+      },
+      {
+        claim: 'Mandatory representation exists to protect courts from difficult litigants.',
+        reality:
+          'Where the trigger is the gravity of the case rather than the conduct of the accused, the provision is directed at what the proceedings require, not at managing the person.',
+      },
+      {
+        claim: 'Choosing to represent yourself waives the right to a fair trial.',
+        reality:
+          'The constitutional guarantees are drafted as rights to choose and be represented. Declining representation does not remove the other fair-trial rights, and in systems with mandatory defence it may not be possible to decline at all.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Four positions on the same question.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'A constitutional right to choose and be represented, with no requirement to be — Kenya, Art. 50(2)(g); South Africa, s 35(3)(f).',
+          'Defence made necessary by statute in defined situations, on the gravity of the case — Germany, StPO § 140.',
+          'Certain acts reserved to admitted persons, with habeas corpus expressly excluded — Brazil, Lei 8.906 Art. 1 § 1.',
+          'Entitlement handled through authorisation or exemption for each reserved activity — England and Wales, LSA 2007 s. 13(2).',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'uncertainty',
+        title: 'Criminal proceedings, mostly',
+        text: 'Most of the provisions here concern criminal cases. Civil, family and administrative proceedings have their own rules on representation in every system described, and none of them was researched.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'The presence of mandatory defence in a system is a statement about what it thinks convictions are for. A legal order that lets a person conduct a serious defence alone is accepting a finding produced without the testing that defence provides — which is why the systems that take the point seriously remove the choice rather than the safeguard.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The habeas corpus carve-out points the other way and is equally deliberate. Where the state is holding someone, the system removes rather than adds a requirement, because a procedural precondition to challenging detention is a barrier placed exactly where a person is least able to clear it.',
+        claim: 'fact',
+        sources: ['br-lei-8906-1994-oab'],
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [who may act as a lawyer](/defence/who-may-act-as-a-lawyer), [the right to counsel](/defence/right-to-counsel), and [taking part in your own case](/courts/taking-part-in-your-own-case).',
+      },
+    ],
+  },
 ];
