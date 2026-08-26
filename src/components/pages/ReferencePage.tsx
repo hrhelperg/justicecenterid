@@ -4,10 +4,11 @@ import { Callout } from '@/components/ui/Callout';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { ReviewMeta } from '@/components/content/ReviewMeta';
 import { SourceList } from '@/components/content/SourceList';
+import { Connections } from '@/components/content/Connections';
 import { ContentPage } from './ContentPage';
 import { getDossier } from '@/content/dossiers';
-import { getInstitutionType, institutionPath } from '@/content/institutions';
-import { getProfession, professionPath } from '@/content/professions';
+import { institutionPath } from '@/content/institutions';
+import { professionPath } from '@/content/professions';
 import { glossaryPath } from '@/content/glossary';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { definedTermSchema } from '@/lib/jsonld';
@@ -114,53 +115,6 @@ function CountryExamples({ examples }: { examples: CountryExample[] }) {
  * only the roles that work inside this institution, or the institutions this role works
  * within, and only where the target is actually routed.
  */
-function Connections({
-  institutions = [],
-  professions = [],
-}: {
-  institutions?: string[];
-  professions?: string[];
-}) {
-  const inst = institutions.map(getInstitutionType).filter(Boolean) as InstitutionType[];
-  const prof = professions.map(getProfession).filter(Boolean) as Profession[];
-  if (inst.length === 0 && prof.length === 0) return null;
-
-  return (
-    <section aria-labelledby="connections" className="mt-10">
-      <SectionHeading id="connections">Where this connects</SectionHeading>
-      <div className="max-w-measure space-y-3 text-ink-muted">
-        {prof.length > 0 ? (
-          <p>
-            Roles:{' '}
-            {prof.map((p, i) => (
-              <span key={p.slug}>
-                {i > 0 ? ', ' : ''}
-                <Link href={professionPath(p)} className="link-inline">
-                  {p.shortTitle ?? p.title}
-                </Link>
-              </span>
-            ))}
-            .
-          </p>
-        ) : null}
-        {inst.length > 0 ? (
-          <p>
-            Institutions:{' '}
-            {inst.map((institution, i) => (
-              <span key={institution.slug}>
-                {i > 0 ? ', ' : ''}
-                <Link href={institutionPath(institution)} className="link-inline">
-                  {institution.shortTitle ?? institution.title}
-                </Link>
-              </span>
-            ))}
-            .
-          </p>
-        ) : null}
-      </div>
-    </section>
-  );
-}
 
 function Uncertainty({ items }: { items?: string[] }) {
   if (!items || items.length === 0) return null;

@@ -2530,4 +2530,357 @@ export const JUSTICE_GUIDES: readonly Guide[] = [
       },
     ],
   },
+
+  /* ------------------------------------------------------------------------
+     Wave 15 — integration.
+
+     These two pages exist because the corpus had no page that reads across it.
+     Neither concatenates existing articles: the first states what the shape of a
+     justice system is NOT, using findings from six earlier waves as evidence, and
+     the second describes the handoffs between institutions, which no page owned.
+     ------------------------------------------------------------------------ */
+  {
+    slug: 'no-single-path-through-a-justice-system',
+    title: 'There is no single path through a justice system',
+    shortTitle: 'No single path',
+    question: 'Does every case follow the same route from report to outcome?',
+    summary:
+      'No, and the familiar route is wrong at almost every step. Most matters leave before a court, most sentences are not custodial, and in several systems the prosecutor is legally responsible for the investigation rather than receiving a finished file.',
+    entityType: 'concept',
+    section: 'justice',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'how-justice-institutions-work-together',
+      'what-is-justice',
+      'what-is-due-process',
+    ],
+    sources: [
+      'de-stpo-160',
+      'de-stgb-56-strafaussetzung',
+      'ca-statcan-corrections',
+      'ke-constitution',
+      'uk-legal-services-act-2007',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'not-required',
+    updatedOn: '2026-08-26',
+    publishedOn: '2026-08-26',
+    reviewedOn: '2026-08-26',
+    factsVerifiedOn: '2026-08-26',
+    readingTimeMinutes: 9,
+    keyTerms: ['justice', 'jurisdiction'],
+    uncertainty: [
+      'This page assembles findings established elsewhere on this site, each from primary text. It introduces no new evidence and describes no system in full.',
+      'The exceptions listed are examples of branching, not a taxonomy of every route a case may take. Systems contain routes that this corpus has not researched.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Accounts of criminal justice usually describe a line: an offence is reported, police investigate, a prosecutor charges, a jury decides, a prison follows. It is a serviceable picture of one branch of one kind of case in some systems. As a description of how justice systems work, almost every link in it is wrong somewhere.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This explains why the process branches, using findings established elsewhere on this site. It is not legal advice, it does not describe what would happen in any case, and it is not a procedural code for any jurisdiction.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'The linear picture is not merely incomplete. It teaches a reader to expect a court where there will be none, to treat an outcome without a conviction as a failure, and to assume that institutions in other countries do the same jobs under different names. Each of those is a specific error with consequences for how a person reads news about a case.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Why the line is so persistent',
+        text: 'It is the shape of the cases that get reported. A matter that ends with no charge produces no hearing, no verdict and no story, so the visible cases are systematically the ones that travelled furthest. The line is not a myth invented by anyone — it is what you get if you generalise from what you can see.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'Take the steps in order. First, that police investigate and then hand a file to a prosecutor. Section 160 of the German Code of Criminal Procedure places responsibility for investigating on the public prosecution office, which must ascertain not only incriminating but also exonerating circumstances. The prosecutor is not the recipient of an investigation there; the prosecutor is legally responsible for it.',
+        claim: 'fact',
+        sources: ['de-stpo-160'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Second, that a charge follows an investigation. It frequently does not. A matter may close without a suspect, close without sufficient evidence, be discontinued on a basis the law provides, be diverted, or be dealt with by an administrative penalty. Whether the prosecutor even has the choice differs: some systems make prosecution a duty subject to statutory exceptions, others a discretion structured by tests.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Third, that a court means a jury. Juries do not exist in most systems described on this site, and where they do they sit in a minority of cases. Professional judges, lay judges and mixed panels all appear among functioning systems, which is why "trial" is a word covering unlike things.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Fourth, that conviction means custody. German law directs that on a custodial sentence of not more than one year the court suspends execution on probation where the statutory expectation is made out, and permits suspension up to two years where special circumstances are present. A custodial term can be imposed and never executed.',
+        claim: 'fact',
+        sources: ['de-stgb-56-strafaussetzung'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'And the people in custody are not all serving sentences',
+        text: 'Statistics Canada records that in fiscal 2023/2024 the average daily count of adults in provincial and territorial custody was 25,349.8, of which 19,334.5 were on remand and 5,895.1 were serving a sentence — provincial and territorial custody only, excluding federal custody for sentences of two years or more, averaged over the year rather than a snapshot, and describing none of the thirteen jurisdictions individually. Even the end of the line is not what the line implies.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Fifth, that the criminal route is the route. Kenya’s Article 159(2) directs that in exercising judicial authority the courts shall be guided by principles including that alternative forms of dispute resolution — reconciliation, mediation, arbitration and traditional dispute resolution mechanisms — shall be promoted. England and Wales excludes acting as a mediator from "legal activity" altogether under the Legal Services Act, placing it outside the regulated category rather than inside it.',
+        claim: 'fact',
+        sources: ['ke-constitution', 'uk-legal-services-act-2007'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Sixth, that the process ends. Appeal, review and retrial send decided matters back to courts, and in systems with an execution court, decisions taken during a sentence are judicial too. The shape is not a line with an end but a graph with loops, and the loops are the mechanisms by which a legal order corrects itself.',
+        claim: 'analysis',
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'A case that ends without a charge is a case the system failed on.',
+        reality:
+          'Ending is one of the outcomes the arrangement provides for. A system that charged everything reported would be applying no standard at the point where a standard matters most.',
+      },
+      {
+        claim:
+          'The prosecutor receives the police investigation and decides what to do with it.',
+        reality:
+          'In Germany the public prosecution office is responsible for investigating and must ascertain exonerating as well as incriminating circumstances. Where investigative responsibility sits is a question of law, and it is answered differently.',
+      },
+      {
+        claim: 'A criminal conviction means a prison sentence.',
+        reality:
+          'German law requires suspension of execution on a custodial sentence of not more than one year where the statutory expectation is made out, and permits it up to two years on special circumstances. A term can be fixed and never carried out.',
+      },
+      {
+        claim: 'Courts are where disputes go.',
+        reality:
+          'Kenya’s constitution directs courts to promote reconciliation, mediation, arbitration and traditional dispute resolution as guiding principles of judicial authority. Adjudication is one route among several that a system may provide.',
+      },
+      {
+        claim: 'Once a court has decided, the case is over.',
+        reality:
+          'Appeal, review and retrial return matters to courts, and where an execution court exists, decisions taken while a sentence runs are judicial. The loops are how a legal order corrects itself.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Six points where the familiar line breaks, and where this site sets out the evidence.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Who investigates, and under whose legal responsibility — Germany, StPO § 160.',
+          'Whether charging is a duty or a discretion, and what test applies.',
+          'What a court is: professional judges, lay judges, mixed panels, juries.',
+          'Whether a custodial term is executed at all — Germany, StGB § 56.',
+          'Whether the matter belongs in a criminal court — Kenya, Art. 159(2).',
+          'Whether the decision is final, or returns on appeal, review or during execution.',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'uncertainty',
+        title: 'Examples of branching, not a taxonomy',
+        text: 'These six are the branches this corpus can evidence. They are not a complete account of the routes a matter may take in any system, and a system will contain routes nobody here has researched.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'The branches matter to a reader because they determine which safeguards apply. A matter resolved by an administrative penalty has not passed through the protections that attach to a criminal trial, and a person diverted from prosecution has not been convicted of anything. Knowing which route a matter took is how you know what standard it was held to.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'paragraph',
+        text: 'It also disciplines comparison. Two systems that appear to reach different outcomes may be routing the same conduct through different parts of their arrangements, and a comparison that assumed a single path would attribute to severity what is actually a difference in classification.',
+        claim: 'analysis',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [how a justice system works](/justice-system), [how justice institutions work together](/justice/how-justice-institutions-work-together), and [what is due process](/justice/what-is-due-process).',
+      },
+    ],
+  },
+  {
+    slug: 'how-justice-institutions-work-together',
+    title: 'How justice institutions work together',
+    shortTitle: 'How institutions connect',
+    question: 'What actually passes between the institutions in a justice system?',
+    summary:
+      'A case, a file and a person — and not the authority to decide. The handoffs are designed so that each body receives the work without inheriting the powers of the one before it, which is what makes the separations more than an org chart.',
+    entityType: 'concept',
+    section: 'justice',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'no-single-path-through-a-justice-system',
+      'why-justice-systems-need-oversight',
+      'what-is-justice',
+    ],
+    relatedInstitutions: ['prosecution-service', 'correctional-service'],
+    sources: [
+      'de-stpo-160',
+      'de-stpo-147-akteneinsicht',
+      'br-lep-1984',
+      'ke-constitution',
+      'mandela-rules',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'not-required',
+    updatedOn: '2026-08-26',
+    publishedOn: '2026-08-26',
+    reviewedOn: '2026-08-26',
+    factsVerifiedOn: '2026-08-26',
+    readingTimeMinutes: 9,
+    keyTerms: ['accountability', 'oversight', 'jurisdiction'],
+    uncertainty: [
+      'This page describes the structure of handoffs using provisions established elsewhere on this site. It describes no country’s process end to end and introduces no new evidence.',
+      'How information actually moves between institutions — case-management systems, records, timeliness — was not researched and is not described.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'A justice system is a set of institutions that pass work to one another. What passes is concrete: a case, the material gathered about it, and frequently a person. What does not pass is the authority to decide, and that is the design rather than an omission.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This explains how institutions connect and what the connections do not transfer. It is not a description of any country’s process, it is not legal advice, and it does not describe how to interact with any of these bodies.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'Separation of function is easy to state and easy to hollow out. If a body could investigate, decide to prosecute and adjudicate, dividing it into three departments would change nothing. What makes the separation real is that each institution receives the work under its own legal authority, applies its own test, and cannot exercise the powers of the one before it.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'The handoff is where a system is strongest and most fragile',
+        text: 'Each transfer is an opportunity for a fresh judgment by somebody with a different responsibility — which is the point. It is also where material can be lost, where delay accumulates, and where each body can assume another has checked something. Systems that take the transfers seriously write down what must be handed over rather than leaving it to practice.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'Start with the first transfer, and notice that in some systems there is not one. Section 160 of the German Code of Criminal Procedure places responsibility for investigating on the public prosecution office and requires it to ascertain exonerating as well as incriminating circumstances. Where the law is drafted that way, the prosecutor did not receive the investigation — the prosecutor is answerable for it.',
+        claim: 'fact',
+        sources: ['de-stpo-160'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'The second transfer is the file, and it is the one that is regulated most explicitly. German law grants defence counsel access to the files and to officially held evidence, permits refusal where access would endanger an ongoing investigation, and then requires access anyway once defined stages are reached. That is a handoff with a condition and a deadline attached, rather than a matter of professional cooperation.',
+        claim: 'fact',
+        sources: ['de-stpo-147-akteneinsicht'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'What is withheld is as structural as what is passed',
+        text: 'A rule that permits refusal at one stage and compels disclosure at another is doing two jobs at once: protecting an investigation that is still live, and guaranteeing that the protection expires. A system with only the first half would have discretion; a system with only the second would have no investigations. The interesting part of a handoff is usually its conditions.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The third transfer is to adjudication, and here the design is that almost nothing transfers except the case itself. The court receives the matter and applies its own standard; it does not inherit the prosecutor’s view of it, and the prosecutor’s decision that a case should be brought establishes nothing about whether it is proved. This is why the presumption of innocence is not in tension with a charging decision — the two answer different questions.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The fourth transfer is to execution, and Brazil shows how many bodies can be involved. Article 61 of the Lei de Execução Penal lists the organs of penal execution, and they include the Juízo da Execução, the Ministério Público, the Conselho Penitenciário and the penitentiary departments. A sentence does not pass from a court to a prison; it passes into an arrangement with a court still inside it.',
+        claim: 'fact',
+        sources: ['br-lep-1984'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Running alongside all of these is a set of bodies that receive nothing and decide nothing about any case. Kenya’s Judicial Service Commission promotes and facilitates the independence and accountability of the judiciary and the administration of justice, appoints and disciplines judicial officers and staff, and advises on efficiency — none of which is deciding a case. The international minimum standards for detention require inspection by a body independent of the prison administration, for the same reason: examining how an institution used its powers is a different function from exercising them.',
+        claim: 'fact',
+        sources: ['ke-constitution', 'mandela-rules'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Oversight is not a further stage',
+        text: 'An inspectorate, a commission or a complaints body sits beside the process rather than after it. It does not overturn outcomes and is not an additional level of appeal — which is why a person seeking to change a decision needs the review mechanisms, and a person concerned about how an institution behaved needs the oversight ones. Sending a question to the wrong one is one of the more common practical mistakes about justice systems.',
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Each institution hands the next one its conclusions.',
+        reality:
+          'It hands over the case and, subject to rules, the material. The next body applies its own test under its own authority. A prosecutor’s decision that a case should be brought establishes nothing about whether it is proved.',
+      },
+      {
+        claim: 'The police investigation is always complete before a prosecutor is involved.',
+        reality:
+          'Section 160 of the German code places responsibility for investigating on the public prosecution office, including ascertaining exonerating circumstances. Where investigative responsibility sits is a question of law and it varies.',
+      },
+      {
+        claim: 'Once a sentence is passed, the courts are finished with the case.',
+        reality:
+          'Brazil’s execution statute lists the Juízo da Execução among the organs of penal execution, alongside the prosecution service, a penitentiary council and the penitentiary departments.',
+      },
+      {
+        claim: 'An oversight body can overturn a decision you disagree with.',
+        reality:
+          'Oversight examines how institutions used their powers. Changing an outcome is what appeal and review are for, and confusing the two sends a question to a body with no power to answer it.',
+      },
+      {
+        claim: 'Institutions cooperating closely is a sign the system is working well.',
+        reality:
+          'The separations exist so that each body forms its own judgment. Close cooperation is necessary for the work to move at all, and it is also the direction in which the separations erode.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Three questions to ask about any handoff in any system.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'What passes — the case, the material, the person, or all three?',
+          'What is withheld, on what condition, and when does the condition expire?',
+          'What authority does the receiving body exercise, and whose test does it apply?',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'uncertainty',
+        title: 'Structure, not practice',
+        text: 'Everything here describes how the transfers are constituted in law. How reliably material actually moves, how long it takes, and what is lost on the way are empirical questions this corpus has not researched.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'The handoffs are where a person’s rights are most exposed, because responsibility can appear to sit with whoever had the case last. Rules that name what must be disclosed, and when, are how a system stops a right from falling into a gap between two institutions.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'paragraph',
+        text: 'They also determine where to direct a question. Which body holds a matter now, and which held it when something went wrong, are different questions with different answers — and for anything concerning conditions in a closed institution, the international standards treat independent inspection as the mechanism precisely because the people affected cannot readily be heard.',
+        claim: 'fact',
+        sources: ['mandela-rules'],
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [how a justice system works](/justice-system), [there is no single path](/justice/no-single-path-through-a-justice-system), and [why justice systems need oversight](/justice/why-justice-systems-need-oversight).',
+      },
+    ],
+  },
 ];
