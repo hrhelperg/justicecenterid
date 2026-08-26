@@ -2736,4 +2736,238 @@ export const COURTS_GUIDES: readonly Guide[] = [
       },
     ],
   },
+  {
+    slug: 'courts-during-a-state-of-emergency',
+    title: 'Courts during a state of emergency',
+    shortTitle: 'Courts in an emergency',
+    question:
+      'Do the courts keep sitting in an emergency, and can an emergency court try you instead?',
+    summary:
+      'Four constitutions prohibit courts of exception outright, one protects its constitutional court by name even in a defence emergency — and one permits special courts where the ordinary ones are determined inadequate. The general rule and its exception both need stating.',
+    entityType: 'concept',
+    section: 'courts',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: ['reviewing-an-emergency-declaration', 'specialized-courts', 'access-to-justice'],
+    sources: [
+      'jp-constitution',
+      'br-cf-1988',
+      'es-constitution',
+      'de-grundgesetz',
+      'ie-constitution',
+      'ie-emergency-statutes',
+      'un-hrc-general-comment-29',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'not-required',
+    updatedOn: '2026-08-26',
+    publishedOn: '2026-08-26',
+    reviewedOn: '2026-08-26',
+    factsVerifiedOn: '2026-08-26',
+    readingTimeMinutes: 10,
+    keyTerms: ['court', 'fair-trial', 'judicial-independence'],
+    countryExamples: [
+      {
+        countrySlug: 'japan',
+        note: 'States the prohibition without qualification: Art. 76 vests the whole judicial power in the Supreme Court and inferior courts established by law, provides that no extraordinary tribunal shall be established, and bars any organ or agency of the Executive from being given final judicial power. There is no emergency exception because there is no emergency chapter.',
+      },
+      {
+        countrySlug: 'germany',
+        note: 'Prohibits extraordinary courts in Art. 101(1) and then protects the constitutional court by name for the one situation where the pressure would be greatest: Art. 115g provides that even in the Verteidigungsfall the constitutional position and the discharge of the constitutional functions of the Bundesverfassungsgericht and its judges may not be impaired.',
+      },
+      {
+        countrySlug: 'brazil',
+        note: 'Pairs the prohibition with an access guarantee. Art. 5º XXXVII provides that there shall be no court or tribunal of exception, and Art. 5º XXXV that the law shall not exclude from the appraisal of the Judiciary any injury or threat to a right — and neither is among the guarantees suspendable under the estado de sítio.',
+      },
+    ],
+    counterExamples: [
+      {
+        countrySlug: 'ireland',
+        note: 'The counter-case, and it is constitutional rather than an irregularity. Art. 38.3.1 permits special courts to be established by law where it may be determined that the ordinary courts are inadequate to secure the effective administration of justice and the preservation of public peace and order; Part V of the Offences Against the State Act 1939 is dormant until the Government proclaims that it is satisfied of exactly that.',
+      },
+    ],
+    uncertainty: [
+      'Five systems are described from primary text. Whether courts in fact continued to sit anywhere during any emergency was not researched and is not stated.',
+      'This page describes what the texts provide about forums. It says nothing about how any court has operated, about any case, or about anyone’s access to a court in practice.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Two questions hide inside one. Whether the courts keep sitting is about continuity. Whether a different tribunal may try you instead is about the forum — and it is the second that constitutions answer most emphatically, because a system that permitted emergency tribunals would have found a way round every other protection it grants.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This describes constitutional provisions about courts and tribunals. It says nothing about any case, any proceeding, or anyone’s access to a court, and it is not legal advice.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'The historical worry is specific rather than abstract: a tribunal constituted for a situation, staffed by people chosen for it, applying a procedure written for it. Each of those features is separately objectionable, and a prohibition on courts of exception addresses all three at once by requiring that the forum exist before the case does.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Why continuity gets less textual attention',
+        text: 'Most constitutions assume courts keep sitting rather than saying so. The obligations that presuppose it — review of a detention within ten days, validity challenges to a declaration — do the work implicitly, which is why this page states the continuity point more cautiously than the forum point.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'Japan states the prohibition in the same article that vests judicial power. Article 76 provides that the whole judicial power is vested in a Supreme Court and in such inferior courts as are established by law; that *no extraordinary tribunal shall be established*, nor shall any organ or agency of the Executive be given final judicial power; and that all judges are independent in the exercise of their conscience and bound only by the Constitution and the laws.',
+        claim: 'fact',
+        sources: ['jp-constitution'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Because the Constitution contains no emergency chapter, there is no provision anywhere in it that qualifies that sentence. The same Constitution gives the Supreme Court power to determine the constitutionality of any law, order, regulation or official act, with no carve-out for emergency measures.',
+        claim: 'fact',
+        sources: ['jp-constitution'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Brazil pairs the prohibition with an access guarantee, and puts both in the fundamental-rights article. Article 5º XXXVII provides that *não haverá juízo ou tribunal de exceção*; Article 5º XXXV provides that the law shall not exclude from the appraisal of the Judiciary any injury or threat to a right.',
+        claim: 'fact',
+        sources: ['br-cf-1988'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Two halves of one protection',
+        text: 'A guarantee of access to the Judiciary is worth little if a special tribunal can be created to receive the case, and a prohibition on special tribunals is worth little if the route to the ordinary courts can be legislated away. Brazil closes both at once, in consecutive clauses.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Spain prohibits courts of exception in Article 117(6) and then draws the one line it does allow with care: Article 117(5) confines military jurisdiction to the strictly military sphere and to cases of *estado de sitio*, and the organic law permits the Congress, in declaring that state, to determine the offences that during it fall under military jurisdiction.',
+        claim: 'fact',
+        sources: ['es-constitution'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Germany prohibits extraordinary courts in Article 101(1) — *Ausnahmegerichte sind unzulässig* — adds that no one may be removed from the jurisdiction of their lawful judge, and provides that courts for particular subject matters may be established only by statute. The Basic Law contains no emergency exception to that article.',
+        claim: 'fact',
+        sources: ['de-grundgesetz'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'It then protects the constitutional court by name in the one situation where the pressure would be greatest. Article 115g provides that the constitutional position and the discharge of the constitutional functions of the Bundesverfassungsgericht and its judges may not be impaired, even in the *Verteidigungsfall*.',
+        claim: 'fact',
+        sources: ['de-grundgesetz'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Naming the institution rather than the principle',
+        text: 'A general guarantee of judicial independence would already cover this. Saying it again, about one court, for one situation, is a drafter deciding that the general statement is not enough where the stakes are highest — which is the same instinct that produces a list of non-derogable rights.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Ireland is the counter-example, and it is constitutional. Article 38.3.1 provides that special courts may be established by law for the trial of offences in cases where it may be determined in accordance with such law that the ordinary courts are inadequate to secure the effective administration of justice and the preservation of public peace and order.',
+        claim: 'fact',
+        sources: ['ie-constitution'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'The statutory machinery matches that structure exactly. Part V of the Offences Against the State Act 1939 is dormant: section 35 provides that it shall not come into or be in force save as and when provided by the section, and it comes into force when the Government makes and publishes a proclamation declaring that it is satisfied that the ordinary courts are inadequate.',
+        claim: 'fact',
+        sources: ['ie-emergency-statutes'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'What makes this different from a court of exception',
+        text: 'The court is provided for by law in advance, the condition for switching it on is stated in advance, and the act of switching it on is a published proclamation. Those are precisely the features whose absence defines a court of exception — which is why a constitution can prohibit the one and permit the other without contradicting itself.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'On continuity, most of these texts speak by implication rather than directly. South Africa’s requirement that a court review an emergency detention within ten days and at ten-day intervals presupposes a functioning court; so does its provision that any competent court may decide the validity of a declaration. Spain says it expressly for the legislature — the Congress may not be dissolved and the functioning of the constitutional powers may not be interrupted — and this platform found no equivalent express clause about the courts in most of the constitutions read.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The clearest statement of the forum point at international level comes from a treaty body rather than a treaty. In General Comment No. 29 the United Nations Human Rights Committee states that the principles of legality and the rule of law require that fundamental requirements of fair trial be respected during a state of emergency, that *only a court of law may try and convict a person for a criminal offence*, and that the presumption of innocence must be respected.',
+        claim: 'fact',
+        sources: ['un-hrc-general-comment-29'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Attributed to the Committee, not to the Covenant',
+        text: 'A general comment is the treaty body’s authoritative interpretation of a provision; it is not the text of the Covenant, and neither is evidence of any particular state’s domestic law. It is quoted here as the Committee’s reading because the reading is what the sentence is worth — the Covenant’s Article 14 does not say it in those words.',
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'A state of emergency lets a government set up special courts.',
+        reality:
+          'Four of the constitutions described here forbid courts of exception outright, and Germany and Japan carve out no emergency exception at all. Ireland is the exception, and it permits them only where the ordinary courts are determined inadequate under a law made in advance.',
+      },
+      {
+        claim: 'Special courts and courts of exception are the same thing.',
+        reality:
+          'They are distinguished by when they are created and how. Ireland’s Special Criminal Court exists in statute in advance, is dormant until a published proclamation, and rests on a condition stated in the Constitution — none of which is true of a tribunal constituted for a particular situation.',
+      },
+      {
+        claim: 'Constitutional courts can be suspended during a defence emergency.',
+        reality:
+          'Not under the Basic Law. Article 115g provides that even in the Verteidigungsfall the constitutional position and the discharge of the constitutional functions of the Bundesverfassungsgericht and its judges may not be impaired.',
+      },
+      {
+        claim: 'Military courts can try civilians whenever an emergency is declared.',
+        reality:
+          'Spain confines military jurisdiction to the strictly military sphere and to cases of estado de sitio — the severest of its three regimes and the one declared by the Congress itself, not by the Government.',
+      },
+      {
+        claim:
+          'Constitutions guarantee in terms that ordinary courts keep sitting during an emergency.',
+        reality:
+          'Most do not say so directly. The obligation is usually implicit in duties that presuppose a functioning court, and this page states that more cautiously than the prohibition on exceptional tribunals for that reason.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Five systems, and the exception is as instructive as the rule.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'No extraordinary tribunal, and no executive organ with final judicial power — Japan, Art. 76.',
+          'No court or tribunal of exception, paired with a guarantee of access to the Judiciary — Brazil, CF Art. 5º XXXVII and XXXV.',
+          'Courts of exception prohibited, military jurisdiction confined to the military sphere and to the estado de sitio — Spain, CE Art. 117(5)–(6).',
+          'Extraordinary courts prohibited, the lawful judge guaranteed, and the constitutional court protected by name in the defence emergency — Germany, GG Arts. 101 and 115g.',
+          'Special courts permitted where the ordinary courts are determined inadequate, through a statute dormant until proclamation — Ireland, Art. 38.3.1 with OASA 1939 s. 35.',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'uncertainty',
+        title: 'Not established here',
+        text: 'Whether Ireland’s Special Criminal Court is currently sitting, and anything about any proceeding before it, was not researched and is not stated. The 1939 Act is quoted as enacted, and later amendments to it were not read.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'The prohibition on courts of exception is unusual among constitutional guarantees in that it protects nobody in particular and everybody generally. It does not say what a court must decide; it says the forum must have existed before the dispute, which is a structural guarantee rather than a procedural one.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Ireland shows that the guarantee can be given up deliberately and openly, on a stated condition and by a published act. That is a materially different thing from a tribunal appearing without warning, and recording the difference is the reason this page states both the rule and its exception rather than the rule alone.',
+        claim: 'analysis',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [reviewing an emergency declaration](/justice/reviewing-an-emergency-declaration), [specialized courts](/courts/specialized-courts), and [access to justice](/justice/access-to-justice).',
+      },
+    ],
+  },
 ];

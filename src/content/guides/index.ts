@@ -8,6 +8,7 @@ import { PROSECUTION_GUIDES } from './prosecution';
 import { JUSTICE_GUIDES } from './justice';
 import { LAW_ENFORCEMENT_GUIDES } from './law-enforcement';
 import { PROCESS_GUIDES } from './process';
+import { PUBLIC_SAFETY_GUIDES } from './public-safety';
 
 /** Every guide record, published or not. Validation runs against this list. */
 export const ALL_GUIDES: readonly Guide[] = [
@@ -20,6 +21,7 @@ export const ALL_GUIDES: readonly Guide[] = [
   ...JUSTICE_GUIDES,
   ...LAW_ENFORCEMENT_GUIDES,
   ...PROCESS_GUIDES,
+  ...PUBLIC_SAFETY_GUIDES,
 ];
 
 /**

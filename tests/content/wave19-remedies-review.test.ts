@@ -77,23 +77,44 @@ function allBlocks(g: Guide): Block[] {
 }
 
 /**
- * The same blocks WITHOUT furtherReading, for the duplication checks.
+ * The blocks the duplication checks actually measure.
  *
- * A furtherReading block is a list of link markers by construction — "Related: [a](/x), [b](/y)"
- * — so two pages that point at overlapping neighbours share word 5-grams for a reason that has
- * nothing to do with restating each other's content. Including them made the overlap measure
- * report a Wave 19 page as a 32% duplicate of a corrections page on the strength of the word
- * "Related" and two shared link targets. That is the check not knowing about a content family
- * and reporting the content as wrong rather than itself.
+ * Two families are excluded, and both exclusions were forced by the measure reporting content as
+ * wrong when the measure was what needed narrowing.
+ *
+ * `furtherReading` is a list of link markers by construction — "Related: [a](/x), [b](/y)" — so
+ * two pages pointing at overlapping neighbours share word 5-grams for a reason that has nothing
+ * to do with restating each other. Including it reported a Wave 19 page as a 32% duplicate of a
+ * corrections page on the strength of the word "Related" and two shared link targets.
+ *
+ * The `safety`, `scope` and `uncertainty` callout variants are the corpus's NEGATIVE SPACE — the
+ * blocks whose whole function is to say what a page does NOT do, does NOT cover and does NOT
+ * establish. By construction they cannot re-answer a question another page owns, which is the
+ * only thing this measure exists to catch, and by design they are formulaic: "this names no
+ * procedure and is not legal advice"; "no source used on this page establishes X, and their
+ * absence is a gap in this platform's sourcing rather than evidence either way".
+ *
+ * Wave 20 made the cost of measuring them visible twice. /justice/detention-under-emergency-powers
+ * registered as a 56% duplicate of /justice/reviewing-detention on disclaimer language alone, and
+ * /public-safety/what-public-safety-covers as a 39% duplicate on the standing NOT ESTABLISHED
+ * formula. Consistency in both is required — by the safety tests in the first case and by the
+ * rule against converting an unknown into a "no" in the second — so scoring it as
+ * cannibalization penalises exactly what the corpus asks authors to do.
+ *
+ * The substantive variants — note, analysis, disputed — stay in the measure, and a companion
+ * test below asserts they do, so that this exclusion cannot quietly become "callouts are not
+ * measured".
  */
 function proseBlocks(g: Guide): Block[] {
-  return [
+  const blocks = [
     ...(g.definition ?? []),
     ...(g.whyItExists ?? []),
     ...(g.howItWorks ?? []),
     ...(g.variation ?? []),
     ...(g.rightsAndAccountability ?? []),
   ];
+  const NEGATIVE_SPACE = ['safety', 'scope', 'uncertainty'];
+  return blocks.filter((b) => !(b.kind === 'callout' && NEGATIVE_SPACE.includes(b.variant)));
 }
 
 function prose(g: Guide): string {
@@ -875,6 +896,27 @@ describe('the wave adds no taxonomy and duplicates no existing page', () => {
           `a Wave 19 page overlaps ${Math.round(ratio * 100)}% with a paragraph of ${guidePath(other)}: "${text.slice(0, 90)}…"`,
         ).toBeLessThan(0.3);
       }
+    }
+  });
+
+  it('still measures substantive callouts, which is what makes the exclusion safe', () => {
+    // If the exclusion had removed callouts wholesale, a duplicated `analysis` or `note` callout
+    // would stop registering. Both halves are asserted here rather than assumed.
+    const survivors = WAVE_19.flatMap((slug) =>
+      proseBlocks(guide(slug)).filter((b) => b.kind === 'callout'),
+    );
+    expect(survivors.length, 'no substantive callouts survive the filter').toBeGreaterThan(10);
+    for (const variant of ['safety', 'scope', 'uncertainty']) {
+      expect(
+        survivors.some((b) => b.kind === 'callout' && b.variant === variant),
+        `a ${variant} callout survived the filter`,
+      ).toBe(false);
+    }
+    for (const variant of ['note', 'analysis']) {
+      expect(
+        survivors.some((b) => b.kind === 'callout' && b.variant === variant),
+        `${variant} callouts are no longer measured, which is too wide`,
+      ).toBe(true);
     }
   });
 

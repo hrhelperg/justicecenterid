@@ -3618,4 +3618,716 @@ export const JUSTICE_GUIDES: readonly Guide[] = [
       },
     ],
   },
+  {
+    slug: 'which-rights-can-never-be-suspended',
+    title: 'Which rights can never be suspended',
+    shortTitle: 'Non-derogable rights',
+    question:
+      'Can a government suspend rights in an emergency, and are any of them untouchable?',
+    summary:
+      'Neither "rights are suspended" nor "rights can never be limited" survives contact with the texts. Five different architectures do this job — a list of untouchable rights, a protected core of every right, a closed list of permitted measures, a closed list of suspendable rights, and no derogation machinery at all.',
+    entityType: 'concept',
+    section: 'justice',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'what-a-state-of-emergency-changes',
+      'limits-on-public-power',
+      'detention-under-emergency-powers',
+    ],
+    sources: [
+      'iccpr',
+      'echr-convention',
+      'za-constitution',
+      'ke-constitution',
+      'ch-constitution',
+      'ca-charter-1982',
+      'us-constitution-suspension-clause',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'not-required',
+    updatedOn: '2026-08-26',
+    publishedOn: '2026-08-26',
+    reviewedOn: '2026-08-26',
+    factsVerifiedOn: '2026-08-26',
+    readingTimeMinutes: 11,
+    keyTerms: ['due-process', 'fair-trial', 'rule-of-law'],
+    countryExamples: [
+      {
+        countrySlug: 'south-africa',
+        note: 'Uses a Table of Non-Derogable Rights and adds two absolute bars that appear nowhere else in this wave: no emergency legislation may indemnify the state or any person for an unlawful act, and none may derogate from s. 37 itself.',
+      },
+      {
+        countrySlug: 'kenya',
+        note: 'Speaks of LIMITING rather than derogating, and lists four rights in Art. 25 that "shall not be limited" despite any other provision of the Constitution — freedom from torture and cruel, inhuman or degrading treatment; freedom from slavery or servitude; the right to a fair trial; and the right to an order of habeas corpus.',
+      },
+      {
+        countrySlug: 'switzerland',
+        note: 'Protects a CORE of every right instead of listing whole rights: BV Art. 36(4) provides that "Der Kerngehalt der Grundrechte ist unantastbar" — the essence of fundamental rights is inviolable — and it sits in the general limitation clause rather than in an emergency provision.',
+      },
+    ],
+    counterExamples: [
+      {
+        countrySlug: 'canada',
+        note: 'Has no domestic derogation mechanism at all. Limitation runs through the ordinary Charter s. 1 test and, for a legislature, the s. 33 declaration with its own five-year clock. The Emergencies Act preamble directs the Governor in Council to "have regard to" the ICCPR, which is a direction to consider and not an incorporation.',
+      },
+    ],
+    uncertainty: [
+      'Two treaties and four national systems are described. What any other system provides was not researched, and the treaties are not evidence of any state’s domestic law.',
+      'This page describes what the texts state. It does not indicate whether any measure anywhere was lawful, and it is not advice to anyone about their own position.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Two sentences get repeated about rights in emergencies and both are wrong. "Rights are suspended during a state of emergency" is wrong because every instrument here places something beyond reach. "Rights can never be limited during an emergency" is wrong because every instrument here permits something. What the texts actually contain is five different ways of drawing the line.',
+      },
+      {
+        kind: 'callout',
+        variant: 'safety',
+        title: 'What this page is and is not',
+        text: 'This describes the structure of rights protection in emergencies across two treaties and four national systems. It cannot indicate whether any measure was lawful, states no route of challenge, and is not legal advice. Anyone dealing with a real situation needs a lawyer in that jurisdiction.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'The case for permitting some limitation is real: a government that cannot restrict movement during an epidemic, or requisition property during a flood, has been disarmed at the moment it is most needed. The case for placing some things beyond reach is equally real, and rests on the observation that the arguments for torture and for indefinite detention are always strongest in exactly the conditions an emergency creates.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Limitation and derogation are different operations',
+        text: 'A limitation clause asks whether a restriction is justified under a standing test that applies at all times. A derogation clause asks whether a state may set an obligation aside for a period. Systems that have only the first — and several here do — are not thereby less protective; they are answering the question through a different instrument.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'The Covenant states four cumulative conditions and then a list. Article 4(1) of the ICCPR permits derogation *in time of public emergency which threatens the life of the nation and the existence of which is officially proclaimed*, only to the extent strictly required by the exigencies of the situation, provided the measures are not inconsistent with other obligations under international law and involve no discrimination solely on the ground of race, colour, sex, language, religion or social origin.',
+        claim: 'fact',
+        sources: ['iccpr'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Article 4(2) then provides that *no derogation from articles 6, 7, 8 (paragraphs 1 and 2), 11, 15, 16 and 18 may be made under this provision* — the right to life; freedom from torture and from non-consensual medical or scientific experimentation; freedom from slavery and servitude; the bar on imprisonment for inability to fulfil a contractual obligation; the prohibition of retroactive criminal law; recognition as a person before the law; and freedom of thought, conscience and religion.',
+        claim: 'fact',
+        sources: ['iccpr'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'The European Convention has the same architecture and a shorter list. Article 15(2) makes Articles 2, 3, 4(1) and 7 non-derogable — with an express carve-out on the right to life *except in respect of deaths resulting from lawful acts of war*.',
+        claim: 'fact',
+        sources: ['echr-convention'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'What is not on the European list',
+        text: 'Article 5, liberty and security, and Article 6, fair trial, are absent from Article 15(2). The Convention text therefore permits derogation from guarantees that several national constitutions on this page place beyond reach — which is why a treaty floor and a constitutional ceiling are not the same measurement.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'South Africa builds the fullest version of the list architecture. Section 37(4) allows emergency legislation to derogate from the Bill of Rights only to the extent that the derogation is strictly required by the emergency and the legislation is consistent with the Republic’s international-law obligations applicable to states of emergency. Section 37(5) then bars three things absolutely: indemnifying the state or any person for any unlawful act; derogating from section 37 itself; and derogating from the sections listed in the Table of Non-Derogable Rights, to the extent stated in the Table.',
+        claim: 'fact',
+        sources: ['za-constitution'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'The bar on indemnity is the unusual one',
+        text: 'Non-derogable rights are common; a constitutional prohibition on retrospectively excusing unlawful acts is not. It closes the gap between "you may not do this" and "and you may not be forgiven for having done it", which are separable and are separated in most systems.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Kenya uses different vocabulary for the same problem. Article 58(6) provides that emergency legislation may *limit* a right or fundamental freedom only to the extent that the limitation is strictly required by the emergency; and Article 25 provides that despite any other provision in the Constitution, four rights *shall not be limited* — freedom from torture and cruel, inhuman or degrading treatment or punishment; freedom from slavery or servitude; the right to a fair trial; and the right to an order of habeas corpus.',
+        claim: 'fact',
+        sources: ['ke-constitution'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Two of Kenya’s four are procedural',
+        text: 'A fair trial and an order of habeas corpus are not on the ICCPR or ECHR non-derogable lists. Kenya has put the routes to a court beyond reach as well as the substantive protections — a design choice with direct consequences for what a court can be asked to do during an emergency.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Switzerland does it without a list at all. Article 36(4) of the Bundesverfassung provides that *der Kerngehalt der Grundrechte ist unantastbar* — the essence of fundamental rights is inviolable — and it sits in the general limitation clause, not in an emergency provision, so it is not textually disapplied when conditions become extraordinary.',
+        claim: 'fact',
+        sources: ['ch-constitution'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Which protects less of some rights and more of others than a list does. Every right keeps a core; no right is protected in its entirety. That is a different bargain from the treaty model, and neither is a weaker version of the other.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'paragraph',
+        text: 'And a system may have no derogation machinery whatever. Canada has none: limitation of Charter rights runs through the ordinary section 1 test — such reasonable limits prescribed by law as can be demonstrably justified in a free and democratic society — and a legislature may additionally invoke section 33, whose declaration ceases to have effect five years after it comes into force.',
+        claim: 'fact',
+        sources: ['ca-charter-1982'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Why this is not a gap',
+        text: 'A system without a derogation clause has not overlooked emergencies; it has decided that the ordinary justification test is capable of handling them, so that a measure taken in a crisis is assessed by the same standard as any other and the crisis is part of the justification rather than a reason to stop asking.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'One more architecture is worth naming precisely because it is so often misdescribed. The Constitution of the United States contains a provision that permits a named legal protection to be withdrawn in an emergency: Article I, Section 9, Clause 2 provides that the privilege of the writ of habeas corpus *shall not be suspended, unless when in Cases of Rebellion or Invasion the public Safety may require it*.',
+        claim: 'fact',
+        sources: ['us-constitution-suspension-clause'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'A suspended remedy is not a derogated right',
+        text: 'The clause reaches the privilege of a writ — the route to a court — rather than an obligation the state owes. Calling it a derogation clause borrows vocabulary from the ECHR and the ICCPR that has no counterpart in United States constitutional law, and invites a reader to expect a strictly-required test, a proclamation requirement and a non-derogable list that this text does not contain. It is also stated as a prohibition with an exception rather than as a grant of power.',
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Rights are suspended during a state of emergency.',
+        reality:
+          'Not in any instrument described here. ICCPR Article 4(2) makes seven provisions non-derogable, Kenya’s Article 25 lists four rights that shall not be limited at all, and Switzerland protects an inviolable core of every fundamental right.',
+      },
+      {
+        claim: 'Rights can never be limited during an emergency.',
+        reality:
+          'Equally wrong. ICCPR Article 4(1) and ECHR Article 15(1) both permit derogation to the extent strictly required, and Canada’s Charter section 1 permits reasonable limits demonstrably justified in a free and democratic society.',
+      },
+      {
+        claim: 'Every system has a list of non-derogable rights.',
+        reality:
+          'Switzerland has no list — it protects an inviolable core of every right through the general limitation clause. Brazil approaches it from the opposite side, listing the only measures that may be taken against persons.',
+      },
+      {
+        claim:
+          'A country that has ratified the ICCPR has its derogation rules in domestic law.',
+        reality:
+          'Not necessarily. The Covenant is unincorporated in Canada, and the Emergencies Act preamble directs the Governor in Council to have regard to it — a direction to consider, not an incorporation.',
+      },
+      {
+        claim: 'The right to a fair trial is universally non-derogable.',
+        reality:
+          'Kenya places it beyond limitation, but it is absent from the ECHR Article 15(2) list. The treaty floors and the national constitutions do not draw the line in the same place.',
+      },
+      {
+        claim:
+          'A government may pass a law protecting officials who acted unlawfully in an emergency.',
+        reality:
+          'Not in South Africa. Section 37(5)(a) bars any Act authorising a declaration, and any legislation or action taken in consequence of one, from indemnifying the state or any person for an unlawful act.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Five architectures for one problem.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'A list of non-derogable provisions — ICCPR Art. 4(2); ECHR Art. 15(2); South Africa’s Table of Non-Derogable Rights; Kenya Art. 25.',
+          'A protected core of every right — Switzerland BV Art. 36(4); Germany’s Wesensgehaltsgarantie in GG Art. 19(2).',
+          'A closed list of permitted measures, so that nothing unlisted is available — Brazil CF Art. 139.',
+          'A closed list of suspendable rights, available only in the severer regimes — Spain CE Art. 55(1).',
+          'No derogation machinery at all, the ordinary limitation test doing the work — Canada; Japan; Czechia’s Listina; Norway.',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'Scope of these statements',
+        text: 'The two treaties bind the states party to them and are not evidence of any particular state’s domestic law. Each constitutional provision is the law of its own country. Nothing here supports a claim about a system not named.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'The practical value of a non-derogable list is that it removes a category of argument. Where torture is on the list, the question in an emergency is not whether the circumstances justify it — the text has answered that in advance, at a moment when nobody was under pressure to reach a different answer.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The core-content model does the same work with a different distribution. It concedes that most rights will be limited further in a crisis and insists that none may be hollowed out, which protects less at the margin and refuses to let any right disappear entirely.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'paragraph',
+        text: "Neither model is a constraint on the state's capacity to protect people. Both operate on the same premise as the emergency powers themselves — that a government facing a catastrophe will need to act, and that deciding in advance what it may not do is what allows the rest to be done with confidence.",
+        claim: 'analysis',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [what a state of emergency changes](/public-safety/what-a-state-of-emergency-changes), [limits on public power](/justice/limits-on-public-power), and [detention under emergency powers](/justice/detention-under-emergency-powers).',
+      },
+    ],
+  },
+  {
+    slug: 'reviewing-an-emergency-declaration',
+    title: 'Reviewing an emergency declaration',
+    shortTitle: 'Reviewing a declaration',
+    question:
+      'Can a court be asked whether the declaration itself was lawful, or only the measures under it?',
+    summary:
+      'Both, and systems answer them differently. South Africa lets any competent court decide the validity of a declaration, an extension, and anything done under it; Kenya narrows the forum to the Supreme Court; Spain splits it by the rank of the instrument; one constitutional court holds the declaration unreviewable.',
+    entityType: 'concept',
+    section: 'justice',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'who-can-declare-a-state-of-emergency',
+      'constitutional-review',
+      'effective-remedy',
+    ],
+    sources: [
+      'za-constitution',
+      'ke-constitution',
+      'es-tc-estados-excepcionales',
+      'es-lo-4-1981',
+      'cz-usoud-nouzovy-stav',
+      'fr-cc-etats-exception',
+      'fr-constitution-1958',
+      'nz-borrowdale-2020',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'not-required',
+    updatedOn: '2026-08-26',
+    publishedOn: '2026-08-26',
+    reviewedOn: '2026-08-26',
+    factsVerifiedOn: '2026-08-26',
+    readingTimeMinutes: 11,
+    keyTerms: ['judicial-review', 'accountability', 'rule-of-law'],
+    relatedInstitutions: ['constitutional-court'],
+    countryExamples: [
+      {
+        countrySlug: 'south-africa',
+        note: 'Decomposes the question in the constitutional text itself: s. 37(3) provides that any competent court may decide the validity of a declaration, of any extension of a declaration, and of any legislation enacted or other action taken in consequence of one — three separate objects of review, and no restriction on the forum.',
+      },
+      {
+        countrySlug: 'kenya',
+        note: 'Uses the same three-way decomposition and narrows the forum to one court: Art. 58(5) assigns validity of the declaration, of any extension, and of legislation or action taken in consequence to the SUPREME COURT.',
+      },
+      {
+        countrySlug: 'spain',
+        note: 'Splits review by the rank of the instrument. STC 83/2016 holds that a decree declaring or extending an estado de alarma has the rank or value of statute and is therefore challengeable only before the Tribunal Constitucional — while LO 4/1981 Art. 3 leaves administrative acts adopted during any of the three states challengeable in the ordinary courts.',
+      },
+    ],
+    counterExamples: [
+      {
+        countrySlug: 'czechia',
+        note: 'The counter-case. In Pl. ÚS 8/20 the plenum of the Constitutional Court held that a government resolution declaring a nouzový stav is primarily an act of applying constitutional law — an "akt vládnutí" with normative impact — which is in principle not subject to review.',
+      },
+    ],
+    uncertainty: [
+      'Six systems are described from primary text. What any other system provides was not researched, and the spread here is wide enough that nothing should be generalised from it.',
+      'This page describes what may be reviewed and by whom. It states no procedure, no time limit and no route for bringing any challenge, and it is not legal advice.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Asking whether a court can review an emergency turns out to be at least three questions with different answers. Was the declaration lawful? Was the extension lawful? Was this particular measure taken under it lawful? Several constitutions separate them expressly, and the answers are not the same even inside one system.',
+      },
+      {
+        kind: 'callout',
+        variant: 'safety',
+        title: 'What this page is and is not',
+        text: 'This describes which court may examine what. It names no procedure, no deadline and no ground of challenge, it cannot indicate whether any measure was lawful, and it is not legal advice.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'A declaration is an exercise of public power like any other, and this platform already explains that [judicial review asks whether power was exercised lawfully rather than whether the decision was right](/courts/appeal-and-judicial-review-are-different). What makes the emergency case distinctive is that the act under challenge may itself be the thing that switched on the powers — so the ordinary machinery has to answer a question about its own preconditions.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Why the decomposition matters more than the answer',
+        text: 'A system can hold the declaration unreviewable and still review every measure taken under it, or review the declaration and give the government wide latitude on the measures. Those are very different arrangements that both answer "yes" to "can a court look at this", which is why the useful question is always which of the three objects is in issue.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'South Africa writes the decomposition into the constitution and then declines to narrow the forum. Section 37(3) provides that *any competent court* may decide on the validity of a declaration of a state of emergency, of any extension of a declaration, and of any legislation enacted or other action taken in consequence of a declaration.',
+        claim: 'fact',
+        sources: ['za-constitution'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Kenya uses an almost identical three-way structure and makes the opposite choice about who hears it. Article 58(5) provides that *the Supreme Court* may decide on the validity of a declaration, of any extension, and of any legislation enacted or other action taken in consequence of a declaration.',
+        claim: 'fact',
+        sources: ['ke-constitution'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'The same three objects, two different forums',
+        text: 'These provisions are close enough in wording that the difference cannot be accidental. One system decided the question should be answerable wherever it arises; the other decided it should be answered once, at the top. Both are decisions about access as much as about review.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Spain divides by the rank of the instrument rather than by the object. In STC 83/2016 the Tribunal Constitucional held that decrees declaring or extending an *estado de alarma* possess *rango o valor de ley*, so they escape the administrative-law courts — and the Court was explicit that this does not make them immune from all judicial control, but channels it to the constitutional route.',
+        claim: 'fact',
+        sources: ['es-tc-estados-excepcionales'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'The ordinary courts keep the rest. Article 3 of Ley Orgánica 4/1981 provides that acts and provisions of the public administration adopted during any of the three states are challengeable in the courts, with a right to compensation for those harmed in their person, rights or property by acts not attributable to their own conduct.',
+        claim: 'fact',
+        sources: ['es-lo-4-1981'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Czechia is the counter-case, and it is a constitutional court that supplies it. In Pl. ÚS 8/20 the plenum held that a government resolution declaring a *nouzový stav* is primarily an act of applying constitutional law — an *akt vládnutí*, an act of governing with normative impact — which in principle is not subject to review.',
+        claim: 'fact',
+        sources: ['cz-usoud-nouzovy-stav'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'What that decision does and does not settle',
+        text: 'It is about the declaration. It is not authority that measures taken under a declaration are beyond review, which is a different question that the decision distinguishes. A reader who took it for the broader proposition would be attributing to the Court something it did not decide.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'France builds a clock into the constitution and then supplies ordinary routes beneath it. Since the 2008 revision, Article 16 provides that after thirty days of the exercise of exceptional powers the Conseil constitutionnel may be seised by the President of the National Assembly, the President of the Senate, sixty deputies or sixty senators, to examine whether the conditions for those powers remain met.',
+        claim: 'fact',
+        sources: ['fr-constitution-1958'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Beneath that, the ordinary judge does the work. In décision n° 2015-527 QPC the Conseil constitutionnel held that an *assignation à résidence* under the state of emergency, its duration, its conditions of application and any supplementary obligations must be justified and proportionate to the reasons that motivated the measure, under the control of the administrative judge — and in décision n° 2020-800 DC it imposed a reservation of interpretation requiring prior judicial authorisation before a quarantine or isolation measure prohibiting departure could continue beyond fourteen days.',
+        claim: 'fact',
+        sources: ['fr-cc-etats-exception'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'A conceptual difference worth noticing',
+        text: 'The Conseil constitutionnel treats the emergency regime not as a derogation from the Constitution but as an exercise of the legislature’s ordinary competence, subject to a duty to reconcile the prevention of disorder with constitutional rights. That framing makes ordinary proportionality review the natural tool rather than an exception to be argued for.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'New Zealand shows the same instinct in a common-law system with no written emergency clause. In *Borrowdale v Director-General of Health* the High Court reviewed emergency measures on ordinary administrative-law and Bill of Rights grounds and concluded that for nine days there had been an unlawful limitation of certain rights and freedoms, while placing that in the context of a rapidly developing situation.',
+        claim: 'fact',
+        sources: ['nz-borrowdale-2020'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Which is worth stating plainly because of how it is often reported. A court finding part of an emergency measure unlawful is the system working as designed, not a constitutional crisis — and the same judgment upheld the rest.',
+        claim: 'analysis',
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Emergency powers are never reviewable by courts.',
+        reality:
+          'South Africa’s s. 37(3) lets any competent court decide the validity of a declaration, an extension, and anything done in consequence; Kenya’s Art. 58(5) assigns the same three questions to the Supreme Court.',
+      },
+      {
+        claim: 'If a court can review an emergency, it can review everything about it.',
+        reality:
+          'Not in Spain, where a declaring decree has the rank of statute and is challengeable only before the Tribunal Constitucional while administrative acts under it go to the ordinary courts.',
+      },
+      {
+        claim: 'Every constitutional court will examine whether a declaration was lawful.',
+        reality:
+          'The Czech Constitutional Court held in Pl. ÚS 8/20 that a government resolution declaring a nouzový stav is an act of governing which in principle is not subject to review.',
+      },
+      {
+        claim: 'A declaration being unreviewable means the measures under it are too.',
+        reality:
+          'They are separate questions, and the Czech decision distinguishes them. Nothing in it holds that measures taken under a declaration escape review.',
+      },
+      {
+        claim: 'Judicial review works the same way everywhere during an emergency.',
+        reality:
+          'It does not. One system opens it to any court, one confines it to the apex court, one splits it by the rank of the instrument, one holds the declaration in principle unreviewable, and one runs it through ordinary administrative law.',
+      },
+      {
+        claim:
+          'A court holding part of an emergency measure unlawful means the system has broken down.',
+        reality:
+          'It is the system operating. In Borrowdale the High Court found an unlawful limitation for nine days, situated it in a rapidly developing situation, and upheld the remainder.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Six systems, five arrangements.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Any competent court, three objects of review named in the constitution — South Africa, s. 37(3).',
+          'The Supreme Court alone, the same three objects — Kenya, Art. 58(5).',
+          'Split by rank: the constitutional court for the declaring decree, the ordinary courts for administrative acts — Spain, STC 83/2016 with LO 4/1981 Art. 3.',
+          'The declaration in principle not reviewable — Czechia, Pl. ÚS 8/20.',
+          'A thirty-day constitutional clock above, proportionality review by the administrative judge below — France, Art. 16 with the Conseil constitutionnel’s decisions.',
+          'Ordinary administrative-law and Bill of Rights review — New Zealand, Borrowdale.',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'Scope of these statements',
+        text: 'Each arrangement is the law of its own country. Spain’s rango-de-ley reasoning in particular turns on a feature of Spanish constitutional law with no automatic counterpart elsewhere, and should not be carried across.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'Naming the objects of review in the constitutional text is what makes the question answerable at all. Where a text says a court may decide the validity of a declaration, of an extension, and of action taken in consequence, nobody has to argue about whether the subject matter is justiciable — the argument moves to the merits, which is where it is useful.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Asking a court whether an emergency was lawfully declared is not an attack on the government that declared it, any more than [an appeal is a criticism of the judge who decided the case](/justice/appeal-and-the-rule-of-law). It is the question the constitution itself provides for in three of these systems, and the body answering it is doing what it was constituted to do.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The systems that limit review are not thereby lawless either. Spain channels it rather than removing it, and the Czech decision reaches the declaration alone. Recording the difference precisely is the whole point: "courts can review emergency powers" is true of every system here and describes none of them accurately.',
+        claim: 'analysis',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [constitutional review](/justice/constitutional-review), [what a reviewing court can do](/courts/what-a-reviewing-court-can-do), and [courts during a state of emergency](/courts/courts-during-a-state-of-emergency).',
+      },
+    ],
+  },
+  {
+    slug: 'detention-under-emergency-powers',
+    title: 'Detention under emergency powers',
+    shortTitle: 'Emergency detention',
+    question:
+      'Can a person be held under emergency powers without being suspected of an offence?',
+    summary:
+      'Where a constitution provides for it, it usually provides conditions in the same breath. South Africa attaches eight of them to detention without trial; Brazil requires an arrest under emergency powers to be communicated to a judge immediately; one system bars discriminatory internment outright.',
+    entityType: 'concept',
+    section: 'justice',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'reviewing-detention',
+      'which-rights-can-never-be-suspended',
+      'what-a-state-of-emergency-changes',
+    ],
+    sources: [
+      'za-constitution',
+      'br-cf-1988',
+      'ca-emergencies-act',
+      'ke-constitution',
+      'fr-cc-etats-exception',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'not-required',
+    updatedOn: '2026-08-26',
+    publishedOn: '2026-08-26',
+    reviewedOn: '2026-08-26',
+    factsVerifiedOn: '2026-08-26',
+    readingTimeMinutes: 10,
+    keyTerms: ['due-process', 'fair-trial', 'accountability'],
+    countryExamples: [
+      {
+        countrySlug: 'south-africa',
+        note: 'Provides for detention without trial and then attaches eight mandatory conditions to it in s. 37(6)–(8), including notification of a family member or friend, publication of the detainee’s name in the Gazette within five days, court review within ten days and at ten-day intervals afterwards, appearance in person, legal representation at those hearings, and access to a chosen medical practitioner.',
+      },
+      {
+        countrySlug: 'brazil',
+        note: 'Does not create a detention-without-suspicion power at all under the estado de defesa. Art. 136 §3 instead constrains arrest for a crime against the State: it must be communicated immediately to the competent judge, who releases the detainee if the arrest is unlawful, and incommunicado detention is prohibited.',
+      },
+    ],
+    counterExamples: [
+      {
+        countrySlug: 'canada',
+        note: 'Places an absolute substantive bar in the statute rather than conditions on a power: Emergencies Act s. 4(b) provides that nothing in the Act confers power to make orders or regulations providing for the detention, imprisonment or internment of Canadian citizens or permanent residents on the basis of race, national or ethnic origin, colour, religion, sex, age or mental or physical disability.',
+      },
+    ],
+    uncertainty: [
+      'Five systems are described from primary text. What any other system permits was not researched.',
+      'This page describes constitutional and statutory conditions. It cannot indicate whether any detention anywhere is or was lawful, states no route of challenge and no time limit applicable to anyone, and is not legal advice. Anyone dealing with a real detention needs a lawyer in that jurisdiction immediately.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Ordinary detention rests on suspicion of an offence, and this platform already describes [how systems allow a court to be asked whether someone may lawfully be held](/justice/reviewing-detention). Emergency detention raises a prior question that page does not reach: whether a person may be held at all when the ordinary ground is absent — and, where the answer is yes, what the same instrument requires in exchange.',
+      },
+      {
+        kind: 'callout',
+        variant: 'safety',
+        title: 'What this page is and is not',
+        text: 'This describes what five instruments provide. It names no procedure, no deadline applicable to anyone, and no route of challenge; it cannot indicate whether any detention is lawful; and it is not legal advice. Anyone dealing with a real detention needs a lawyer in that jurisdiction immediately.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'Detention is the exercise of public power whose subject cannot walk away to complain about it, which is why it attracts more procedural protection than anything else a state does. An emergency is precisely the condition in which the arguments for holding someone without the ordinary ground are strongest — and therefore the condition in which written conditions do the most work.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Conditions in the same breath as the power',
+        text: 'The instruments that permit the most also specify the most. That is not a coincidence: a drafter willing to authorise detention without trial is a drafter who has thought about what it would mean, and the enumeration is where that thinking is recorded.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'South Africa authorises detention without trial in consequence of a derogation and then makes eight conditions mandatory. Section 37(6) requires that an adult family member or friend be contacted as soon as reasonably possible; that the detainee’s name and place of detention be published in the national Gazette within five days; that a court review the detention as soon as reasonably possible and in any event within ten days, and again at ten-day intervals; and that the detainee be allowed to appear in person before any court considering the detention, to be represented by a legal practitioner at those hearings and to make representations.',
+        claim: 'fact',
+        sources: ['za-constitution'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'It also requires that the detainee be allowed to choose and be visited at any reasonable time by a medical practitioner and by a legal representative.',
+        claim: 'fact',
+        sources: ['za-constitution'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Why publication in the Gazette is on the list',
+        text: 'The other conditions protect the detainee. Publishing the name and place of detention protects against the thing detention without trial has historically been used for — holding someone whose whereabouts nobody outside can establish. It is a condition addressed to the public rather than to the person.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Brazil takes a different route: its milder emergency regime does not create a detention-without-suspicion power at all, and constrains the arrest power it does touch. Article 136 §3 provides that during an *estado de defesa*, arrest for a crime against the State ordered by the executor of the measure must be communicated immediately to the competent judge, who releases the detainee if the arrest is unlawful; that the detainee may request a forensic medical examination; that incommunicado detention is prohibited; and that detention for such an offence may not exceed ten days unless authorised by the Judiciary.',
+        claim: 'fact',
+        sources: ['br-cf-1988'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Two designs, two different guarantees',
+        text: 'South Africa permits detention without trial and buys back protection through review and publicity. Brazil declines to permit it in that regime and keeps a judge in the loop from the first hours. Both are answers to the same worry, and neither is a weaker version of the other.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Canada does something neither of the others does: it bars a category of detention outright in the enabling statute. Section 4(b) of the Emergencies Act provides that nothing in the Act confers power to make orders or regulations providing for the detention, imprisonment or internment of Canadian citizens or permanent residents on the basis of race, national or ethnic origin, colour, religion, sex, age or mental or physical disability.',
+        claim: 'fact',
+        sources: ['ca-emergencies-act'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'That provision has an obvious history behind it and does not depend on knowing it. As a piece of drafting it is a limit on what the Act can ever be read to authorise, rather than a condition on the exercise of a power the Act grants.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Kenya places the routes themselves beyond reach. Article 25 provides that despite any other provision in the Constitution, the right to a fair trial and the right to an order of habeas corpus shall not be limited — and Article 58(6) permits emergency legislation to limit a right only to the extent strictly required by the emergency.',
+        claim: 'fact',
+        sources: ['ke-constitution'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'A non-limitable remedy is a strong form of protection',
+        text: 'Placing habeas corpus itself beyond limitation means the question of whether a person may be held remains answerable by a court however the emergency develops. It protects the route rather than the outcome, which is the more durable of the two.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'France shows a constitutional court drawing the line during an emergency rather than in advance. In décision n° 2020-800 DC the Conseil constitutionnel imposed a reservation of interpretation on health-emergency confinement: quarantine or isolation measures prohibiting the person from leaving the place of quarantine cannot continue beyond fourteen days without prior authorisation by a judge.',
+        claim: 'fact',
+        sources: ['fr-cc-etats-exception'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'And in décision n° 2015-527 QPC it held the other side of the same line, finding that an *assignation à résidence* under the state of emergency is an administrative-police measure which, by its object and scope, does not amount to a deprivation of individual liberty within Article 66 — while still requiring it to be justified and proportionate under the control of the administrative judge.',
+        claim: 'fact',
+        sources: ['fr-cc-etats-exception'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Where the constitutional threshold sits is the whole question',
+        text: 'One measure crosses into deprivation of liberty and pulls in the judicial guarantee; the other does not and is controlled by proportionality instead. A page that treated every emergency restriction on movement as detention would collapse a distinction the court took care to draw.',
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'A state of emergency allows anyone to be detained indefinitely.',
+        reality:
+          'Not under these instruments. South Africa requires court review within ten days and again at ten-day intervals; Brazil limits detention for a crime against the State during an estado de defesa to ten days unless the Judiciary authorises more.',
+      },
+      {
+        claim: 'Emergency detention means no lawyer and no court.',
+        reality:
+          'South Africa’s s. 37(6) requires that the detainee be allowed to appear in person before any court considering the detention, to be represented by a legal practitioner at those hearings, and to be visited by a legal representative and a chosen medical practitioner.',
+      },
+      {
+        claim: 'Every emergency regime creates a power to detain without suspicion.',
+        reality:
+          'Brazil’s estado de defesa does not. Article 136 §3 constrains arrest for a crime against the State and requires immediate communication to a judge; it creates no detention power resting on something other than an offence.',
+      },
+      {
+        claim: 'Habeas corpus can always be suspended in an emergency.',
+        reality:
+          'Kenya’s Article 25 places the right to an order of habeas corpus among the rights that shall not be limited, despite any other provision in the Constitution.',
+      },
+      {
+        claim: 'Any emergency restriction on where a person may be is a detention.',
+        reality:
+          'The Conseil constitutionnel held otherwise for an assignation à résidence, treating it as an administrative-police measure not amounting to a deprivation of liberty under Article 66 — while requiring quarantine that prohibits departure to have prior judicial authorisation beyond fourteen days.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Five instruments, four techniques.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Authorise it, and attach eight mandatory conditions including periodic court review and publication of the name — South Africa, s. 37(6)–(8).',
+          'Do not create the power, and keep a judge in the loop from the first hours — Brazil, CF Art. 136 §3.',
+          'Bar a category of detention outright in the enabling statute — Canada, Emergencies Act s. 4(b).',
+          'Place the remedy itself beyond limitation — Kenya, Art. 25 with Art. 58(6).',
+          'Draw the constitutional threshold case by case, with judicial authorisation beyond a stated period — France, Conseil constitutionnel décisions 2015-527 QPC and 2020-800 DC.',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'Scope of these statements',
+        text: 'Each provision is the law of its own country. The periods and conditions stated are features of those texts, not rules applicable anywhere else, and none is described here as a model.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'The recurring feature is that the strongest protections are procedural rather than substantive. Publishing a name, requiring a court to look again in ten days, forbidding incommunicado detention — none of these decides whether a person should be held, and all of them make the question answerable by someone other than the person holding them.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'paragraph',
+        text: 'That is also what makes them enforceable. A requirement that detention be justified invites an argument; a requirement that a court review it within ten days is either met or not.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'paragraph',
+        text: 'None of this implies that a state facing an insurrection or a catastrophe should be unable to hold anyone. The constitutions that provide these conditions provide the powers too, in the same sections — the conditions are what a system attaches to a power it has decided is necessary, not an argument that it is not.',
+        claim: 'analysis',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [reviewing detention](/justice/reviewing-detention), [which rights can never be suspended](/justice/which-rights-can-never-be-suspended), and [courts during a state of emergency](/courts/courts-during-a-state-of-emergency).',
+      },
+    ],
+  },
 ];
