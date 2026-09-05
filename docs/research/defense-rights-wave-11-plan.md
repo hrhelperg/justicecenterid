@@ -80,6 +80,19 @@ lawyer–client confidentiality.
 witnesses; self-representation and waiver; defence rights on appeal; defence rights at trial as a
 distinct page; effective assistance of counsel; bar associations; conflicts of interest.
 
+> **Amended by Wave 21 (2026-09-05).** The equality-of-arms deferral is lifted, and only that one.
+> Its stated ground was source access rather than ownership, and the source was obtained: the
+> Convention text is now content-confirmed from the official Dutch treaty database as
+> `echr-convention`, carrying Arts. 6(3)(b) and 6(3)(d) verbatim, and the Czech Charter was added
+> as `cz-listina`, carrying Art. 37(3) — "All parties to such proceedings are equal", the only
+> statement of the principle itself found in any constitutional text read across both waves.
+> `/defence/equality-of-arms` is published on those two records plus ICCPR Art. 14(3)(e),
+> ZA s. 35(3)(b) and (i), GG Art. 103(1), JP Art. 37 and CE Art. 24(1). The Wave 11 guard in
+> `tests/content/wave11-defence.test.ts` keeps every other deferred slug forbidden, and a
+> companion test now pins the route to the two records that lifted the deferral, so the route
+> cannot survive their removal. Wave 21 obtained no evidence for the other deferrals and did not
+> revisit them.
+
 ## Method
 
 Structure first, label second. For each system: who may have counsel and from when; what triggers

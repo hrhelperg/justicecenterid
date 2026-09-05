@@ -1151,4 +1151,676 @@ export const INVESTIGATIONS_GUIDES: readonly Guide[] = [
       },
     ],
   },
+  /* ==========================================================================
+     WAVE 21 — investigation as a rights problem
+     ==========================================================================
+     Before this wave /investigations was entirely institutional: who investigates,
+     which body is competent, what an investigating judge is. It said nothing about
+     what protected interest an investigative act touches or what authorisation it
+     needs — `seizure` appeared zero times in the whole corpus and `privacy` twice,
+     both incidental.
+
+     These three pages are deliberately NOT called "search and seizure". That title
+     was rejected in the cannibalization audit on Part B grounds, and rejecting it
+     is what produced the wave's central finding: two of the constitutions here
+     reach searches through privacy and never state a warrant rule, two state a
+     warrant rule and never use the word privacy, and one requires a judge for
+     communications but not, textually, for the home — the reverse emphasis from
+     its neighbour.
+
+     SAFETY. Every page here describes legal architecture and nothing operational.
+     None of them describes how a search is conducted, how any authorisation is
+     obtained or resisted, how evidence is handled, or anything a person could use
+     to frustrate a lawful investigative act. The Wave 16 anti-forensics guard
+     applies to this cluster and is re-asserted in the Wave 21 test file.
+     ========================================================================== */
+  {
+    slug: 'what-privacy-protects-in-law',
+    title: 'What privacy protects in law',
+    shortTitle: 'What privacy protects',
+    question: 'What exactly does a legal system protect when it protects privacy?',
+    summary:
+      'Not one interest but several, bundled differently in each text. Switzerland puts private life, the home, mail and telecommunications in one article; South Africa defines privacy by the searches it forbids; Brazil separates intimacy from the house and both from communications.',
+    entityType: 'concept',
+    section: 'investigations',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'searching-a-home',
+      'intercepting-communications',
+      'what-is-a-criminal-investigation',
+    ],
+    sources: [
+      'ch-constitution',
+      'de-grundgesetz',
+      'nl-constitution',
+      'es-constitution',
+      'br-cf-1988',
+      'cz-listina',
+      'za-constitution',
+      'ke-constitution',
+      'ca-charter-1982',
+      'us-bill-of-rights',
+      'echr-convention',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-05',
+    publishedOn: '2026-09-05',
+    reviewedOn: '2026-09-05',
+    factsVerifiedOn: '2026-09-05',
+    readingTimeMinutes: 10,
+    uncertainty: [
+      'Every statement here is constitutional or treaty text. No case law was researched, and in several of these systems the operative content of the right is judicial.',
+      'Data-protection statutes are outside this page. Several texts direct the legislature to make rules about personal data; what those rules say was not researched.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: '"Privacy" is a single English word covering interests that constitutions treat as distinct. Reading across the texts, the recurring components are a person’s private and family life, the place they live, what they say to other people, their reputation and image, and information recorded about them — and no two instruments bundle those the same way.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This explains what constitutional and treaty texts protect under the heading of privacy. It describes no investigative technique, states no country’s procedure, is not data-protection law, and is not legal advice.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'An investigation works by finding out things people have not volunteered. That is not an incidental feature of investigation; it is what investigation is. A legal system that wanted crimes solved and also wanted people left alone therefore has to say which parts of a life are protected, and what has to happen before an investigator may reach into them.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Naming the interest is what makes the authorisation rule possible',
+        text: 'A system cannot require judicial authorisation for entering a home unless it has first said that a home is protected. This is why the privacy articles and the search articles are usually the same article, or adjacent ones: the protected interest defines what counts as an interference, and the authorisation rule then says who may commit one.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'Switzerland bundles the widest set into one provision. Article 13(1) of the Bundesverfassung: "Jede Person hat Anspruch auf Achtung ihres Privat- und Familienlebens, ihrer Wohnung sowie ihres Brief-, Post- und Fernmeldeverkehrs" — every person is entitled to respect for their private and family life, their home, and their mail, post and telecommunications. Article 13(2) adds a second interest: protection against the misuse of personal data.',
+        claim: 'fact',
+        sources: ['ch-constitution'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'The European Convention groups the same four in one sentence at Article 8(1): "Everyone has the right to respect for his private and family life, his home and his correspondence."',
+        claim: 'fact',
+        sources: ['echr-convention'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Where a text draws the bundle changes what a single decision settles',
+        text: 'Where private life, the home and correspondence sit in one provision, a question about any of them is a question about that provision. Where they sit in three provisions with three different authorisation rules — as they do in Germany and in Brazil — the answer for one does not carry to the others. That is a structural difference, not a stylistic one.',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'South Africa — privacy defined by what may not be done',
+            description:
+              'Section 14 does not describe an interest and then protect it. It reads: "Everyone has the right to privacy, which includes the right not to have — (a) their person or home searched; (b) their property searched; (c) their possessions seized; or (d) the privacy of their communications infringed." Search and seizure are stated as components of privacy rather than as a separate guarantee.',
+          },
+          {
+            term: 'Kenya — the same structure, with an information limb',
+            description:
+              'Article 31 uses South Africa’s shape and adds one: "(c) information relating to their family or private affairs unnecessarily required or revealed". The word doing the work there is "unnecessarily", and it appears in the definition of the right rather than in a limitation clause.',
+          },
+          {
+            term: 'Brazil — three separate incisos, three different rules',
+            description:
+              'Article 5º X protects intimacy, private life, honour and image, and attaches a right to indemnity for material or moral damage from their violation. Article 5º XI protects the house as the inviolable asylum of the individual. Article 5º XII protects the secrecy of correspondence and of telegraphic, data and telephone communications. Each carries its own exceptions.',
+          },
+          {
+            term: 'Czechia — the person, the private life, the data, the dwelling and the letters, in four articles',
+            description:
+              'Article 7(1) guarantees the inviolability of the person and of her privacy; Article 10(2) protection from unauthorized intrusion into private and family life and 10(3) from the unauthorized gathering, public revelation or other misuse of personal data; Article 12 the dwelling; Article 13 the confidentiality of letters, papers and records and of telephone and telegraph communications.',
+          },
+        ],
+      },
+      {
+        kind: 'paragraph',
+        text: 'The Netherlands puts the limitation inside the right rather than in a separate clause. Article 10(1) of the Grondwet reads: "Ieder heeft, behoudens bij of krachtens de wet te stellen beperkingen, recht op eerbiediging van zijn persoonlijke levenssfeer" — everyone has, subject to restrictions laid down by or pursuant to statute, the right to respect for their personal sphere of life. Article 10(2) and 10(3) then direct the legislature to make rules protecting that sphere in relation to the recording and supplying of personal data, and rules on access to and correction of recorded data.',
+        claim: 'fact',
+        sources: ['nl-constitution'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Two texts protect the searches without naming privacy',
+        text: 'Neither the Fourth Amendment nor section 8 of the Canadian Charter uses the word. The Fourth Amendment secures "the right of the people to be secure in their persons, houses, papers, and effects, against unreasonable searches and seizures"; section 8 states that "Everyone has the right to be secure against unreasonable search or seizure". They reach the subject from the opposite end from South Africa and Kenya, which name privacy and define it by the searches it excludes.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Germany names neither a general privacy right nor a search-and-seizure right in the provisions read for this wave. It states two inviolabilities without naming a holder: Article 10(1), "Das Briefgeheimnis sowie das Post- und Fernmeldegeheimnis sind unverletzlich", and Article 13(1), "Die Wohnung ist unverletzlich". Spain does the reverse and names the interests directly: Article 18(1) guarantees the rights to honour, to personal and family intimacy, and to one’s own image.',
+        claim: 'fact',
+        sources: ['de-grundgesetz', 'es-constitution'],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Privacy means one thing, and legal systems protect more or less of it.',
+        reality:
+          'They protect differently shaped bundles. Switzerland and the European Convention put private life, the home and communications in one provision; Brazil splits them across three incisos with different exceptions; Czechia across four articles.',
+      },
+      {
+        claim: 'A constitution that does not use the word "privacy" does not protect it.',
+        reality:
+          'The Fourth Amendment and section 8 of the Canadian Charter never use the word and are the provisions those systems’ search rules rest on. Germany states two inviolabilities — of the home and of the secrecy of communications — without a general privacy article in the provisions read here.',
+      },
+      {
+        claim: 'Search and seizure is a separate subject from privacy.',
+        reality:
+          'In two of these constitutions it is a component of it. South Africa’s section 14 and Kenya’s Article 31 both define the right to privacy as including the right not to have one’s person, home or property searched or possessions seized.',
+        note: 'Which is why this site does not carry a page called "search and seizure": the phrase adopts one family of texts as the taxonomy for all of them.',
+      },
+      {
+        claim: 'Protecting privacy means the state may not gather information about people.',
+        reality:
+          'Every text here contemplates lawful interference. Kenya’s Article 31(c) protects against information being "unnecessarily" required or revealed, which presupposes that requiring it is sometimes necessary; the Dutch Article 10(1) states the right "behoudens bij of krachtens de wet te stellen beperkingen".',
+      },
+      {
+        claim: 'Data protection and constitutional privacy are the same thing.',
+        reality:
+          'Several texts separate them expressly. Switzerland’s Article 13(2) is a distinct paragraph on misuse of personal data; the Dutch Article 10(2) and 10(3) direct the legislature to make data rules; Czechia states data misuse in Article 10(3), separately from private life in 10(2).',
+        note: 'What any of those statutes contain was not researched for this page.',
+      },
+      {
+        claim: 'A violation of privacy is remedied the same way everywhere.',
+        reality:
+          'Brazil states a remedy in the right itself: Article 5º X assures "o direito a indenização pelo dano material ou moral decorrente de sua violação". None of the other provisions read here names a remedy inside the privacy article.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Four ways to organise the same subject.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'One provision covering private life, the home and communications together — Switzerland, BV Art. 13; European Convention, Art. 8(1).',
+          'A named right to privacy defined by the searches and seizures it excludes — South Africa, s. 14; Kenya, Art. 31, which adds an information limb.',
+          'Separate provisions for separate interests, each with its own exceptions — Brazil, CF Art. 5º X, XI and XII; Czechia, Listina Arts. 7, 10, 12 and 13; Germany, GG Arts. 10 and 13.',
+          'A search-and-seizure provision that never uses the word privacy — United States, Amendment IV; Canada, Charter s. 8.',
+          'The limitation written inside the right rather than in a separate clause — Netherlands, Gw Art. 10(1).',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'Scope of these statements',
+        text: 'Each constitutional provision is the law of its own country. The European Convention binds the states party to it and is not evidence of any state’s domestic law. Nothing here supports a claim about a system not named.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'What a protected interest gives an oversight body is a category to ask about. If the constitution names the home, the correspondence and the personal data separately, an investigation that touched all three engaged three provisions and may have required three different authorisations — and a review that treated it as one act would have asked one question where the text asks three.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'What has to happen before a home is entered is [searching a home](/investigations/searching-a-home); the separate question for letters and calls is [intercepting communications](/investigations/intercepting-communications). What happens to material obtained unlawfully is [what happens to unlawfully obtained evidence](/justice/what-happens-to-unlawfully-obtained-evidence).',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Several of these texts say in terms that the interference they regulate is an investigative one. Brazil’s Article 5º XII permits interference with telephone communications, by judicial order, "para fins de investigação criminal ou instrução processual penal" — for the purposes of criminal investigation or criminal procedural instruction.',
+        claim: 'fact',
+        sources: ['br-cf-1988'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'None of this makes investigation suspect. The provisions on this page exist alongside institutions that are expected to find out what happened, and the protected interest and the investigative power are drafted together, by the same drafters, in the same document.',
+        claim: 'analysis',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [searching a home](/investigations/searching-a-home), [intercepting communications](/investigations/intercepting-communications), and [what is a criminal investigation](/investigations/what-is-a-criminal-investigation).',
+      },
+    ],
+  },
+  {
+    slug: 'searching-a-home',
+    title: 'Searching a home',
+    shortTitle: 'Searching a home',
+    question: 'What has to happen before officials may enter and search someone’s home?',
+    summary:
+      'Different things in different systems, and the differences are textual. Germany and Czechia require a judge; Spain accepts consent, a judicial decision or flagrante delicto; Brazil confines judicial authorisation to daytime; the Netherlands requires identification and a written report but no judge.',
+    entityType: 'concept',
+    section: 'investigations',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'what-privacy-protects-in-law',
+      'intercepting-communications',
+      'investigative-jurisdiction',
+    ],
+    sources: [
+      'de-grundgesetz',
+      'cz-listina',
+      'es-constitution',
+      'br-cf-1988',
+      'nl-constitution',
+      'ie-constitution',
+      'jp-constitution',
+      'us-bill-of-rights',
+      'ca-charter-1982',
+      'za-constitution',
+      'ke-constitution',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-05',
+    publishedOn: '2026-09-05',
+    reviewedOn: '2026-09-05',
+    factsVerifiedOn: '2026-09-05',
+    readingTimeMinutes: 11,
+    uncertainty: [
+      'These are constitutional provisions. The procedural codes that operate under them — which is where most of the detail of any real authorisation lives — were not researched for any system here.',
+      'Nothing on this page describes how a search is carried out, and no operational detail was sought. That is a deliberate limit on the research, not a gap in it.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Almost every constitution read for this wave says something about entering the place a person lives, and the provisions are unusually specific — more specific, in several systems, than the provisions about liberty. What they specify is who may authorise the entry, and on what.',
+      },
+      {
+        kind: 'callout',
+        variant: 'safety',
+        title: 'What this page is and is not',
+        text: 'This explains what constitutional texts require before a home may be entered and searched. It describes no search procedure, no technique, and nothing about how any authorisation is obtained, challenged, delayed or avoided. It states no country’s operational law and is not legal advice.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'Investigators need to be able to enter premises, because a great deal of evidence is in places its owner would prefer they did not look. Occupants need the entry to be bounded, because a power to enter a home at will is a power over everything and everyone inside it. Every provision on this page is an attempt to hold both propositions at once.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Why so many texts reach for a judge',
+        text: 'The recurring answer is to move the decision to somebody who is not conducting the investigation. That is the same design principle as the clock before a judge in a detention case: not that the investigator’s judgement is worthless, but that a decision made by the only interested party leaves no record that anyone else was persuaded.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'Germany states the strongest and most detailed version. Article 13(1) of the Grundgesetz: "Die Wohnung ist unverletzlich." Article 13(2) then sets the authorisation rule: "Durchsuchungen dürfen nur durch den Richter, bei Gefahr im Verzuge auch durch die in den Gesetzen vorgesehenen anderen Organe angeordnet und nur in der dort vorgeschriebenen Form durchgeführt werden" — searches may be ordered only by a judge, or where time is of the essence by other authorities designated by the laws, and carried out only in the prescribed form.',
+        claim: 'fact',
+        sources: ['de-grundgesetz'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'The same article then does something no other text here does: it grades the authorisation by the severity of the measure. Technical acoustic surveillance of a home under Article 13(3) requires particular facts justifying suspicion of an especially serious crime specifically defined by a law, is available only where alternative methods would be disproportionately difficult or unproductive, must be for a limited time, and must be ordered by a panel of three judges — a single judge only where time is of the essence. Article 13(6) requires the Federal Government to report annually to the Bundestag, and an elected panel to exercise parliamentary oversight on that basis.',
+        claim: 'fact',
+        sources: ['de-grundgesetz'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'One judge, three judges, and a report to parliament',
+        text: 'Article 13 treats "who authorises this" as a scale rather than a switch. An ordinary search needs a judge; listening inside the home needs three, plus a time limit and a threshold about the offence; and the whole category is reported annually to a parliamentary panel. A summary that recorded only "Germany requires a warrant" would have described the least interesting thing the article does.',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'Czechia — a written, reasoned judicial warrant, and only for a criminal proceeding',
+            description:
+              'Article 12(1) of the Listina makes the dwelling inviolable and bars entry without the permission of the person living there. Article 12(2): "A dwelling may be searched only for the purposes of a criminal proceeding on the basis of a search warrant issued by a judge in writing and giving the reasons therefore." Article 12(3) then handles everything that is not a criminal search separately, permitting other encroachments by law only where "necessary in a democratic society" for the life or health of individuals, the rights and freedoms of others, or to avert a serious threat to public security and order.',
+          },
+          {
+            term: 'Spain — three gateways, stated as a closed set',
+            description:
+              'Article 18(2): "El domicilio es inviolable. Ninguna entrada o registro podrá hacerse en él sin consentimiento del titular o resolución judicial, salvo en caso de flagrante delito." Consent of the holder, a judicial decision, or flagrante delicto — and the sentence admits nothing else.',
+          },
+          {
+            term: 'Brazil — the only text here that fixes the time of day',
+            description:
+              'Article 5º XI: "a casa é asilo inviolável do indivíduo, ninguém nela podendo penetrar sem consentimento do morador, salvo em caso de flagrante delito ou desastre, ou para prestar socorro, ou, durante o dia, por determinação judicial." Consent, flagrante delicto, disaster, or to render assistance — and judicial determination, expressly during the day.',
+          },
+          {
+            term: 'Ireland — inviolability with the rule left to statute',
+            description:
+              'Article 40.5: "The dwelling of every citizen is inviolable and shall not be forcibly entered save in accordance with law." The constitution states the protection and refers the conditions to law rather than setting them.',
+          },
+        ],
+      },
+      {
+        kind: 'paragraph',
+        text: 'The Netherlands is the case that makes the comparison worth drawing, because it does not require a judge and does require things nobody else does. Article 12(1) of the Grondwet permits entry without the occupant’s consent only in cases laid down by or pursuant to statute, by persons designated by or pursuant to statute. Article 12(2) requires prior identification and a statement of the purpose of the entry. Article 12(3) requires that the occupant be given a written report of the entry as soon as possible — deferrable, under statutory rules, where the entry was in the interest of national security or of criminal procedure.',
+        claim: 'fact',
+        sources: ['nl-constitution'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Two safeguards doing the same job by opposite routes',
+        text: 'A judicial-warrant rule puts an independent decision before the entry. The Dutch rule puts an identified official and a written record around it. One protects by requiring someone else to agree in advance; the other by making the entry documented and attributable afterwards. Calling only the first a safeguard would misdescribe what Article 12 is for.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Japan and the United States both state a warrant rule, and their texts are not the same. The Fourth Amendment secures the people against unreasonable searches and seizures of "their persons, houses, papers, and effects", and provides that no warrants shall issue but upon probable cause, supported by oath or affirmation, and particularly describing the place to be searched and the persons or things to be seized. Article 35 of the Constitution of Japan protects "the right of all persons to be secure in their homes, papers and effects" — the list does not include persons — and adds a requirement with no American counterpart: "Each search or seizure shall be made upon separate warrant issued by a competent judicial officer."',
+        claim: 'fact',
+        sources: ['us-bill-of-rights', 'jp-constitution'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'And three constitutions state no authorisation rule for the home at all. Canada’s section 8 reads in its entirety: "Everyone has the right to be secure against unreasonable search or seizure." South Africa’s section 14 and Kenya’s Article 31 list the searches privacy excludes and say nothing about who may authorise one; in both, the answer runs through the general limitation clause and whatever statute the legislature has enacted under it.',
+        claim: 'fact',
+        sources: ['ca-charter-1982', 'za-constitution', 'ke-constitution'],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'A warrant is required to search a home.',
+        reality:
+          'It depends on the text. Germany and Czechia require a judicial order; Spain accepts consent or flagrante delicto as alternatives to one; the Dutch Article 12 requires no judicial authorisation at all; and Canada’s section 8 states only that a search must not be unreasonable.',
+      },
+      {
+        claim: 'Warrant rules are essentially the same wherever they exist.',
+        reality:
+          'Japan requires a separate warrant for each search or seizure, which the Fourth Amendment does not. Czechia confines its judicial search warrant to the purposes of a criminal proceeding. Germany requires three judges rather than one for acoustic surveillance of a home.',
+      },
+      {
+        claim: 'If there is no judge in the provision, the entry is unregulated.',
+        reality:
+          'The Dutch Article 12 requires statutory authority, statutorily designated officials, prior identification, a statement of purpose, and a written report to the occupant. That is four requirements, none of which is judicial authorisation.',
+      },
+      {
+        claim: 'The American search-and-seizure model is the standard other systems vary from.',
+        reality:
+          'It is one of several. Two constitutions here reach searches through a right to privacy and never state a warrant rule; one states inviolability and refers the conditions to statute; one requires a written reasoned judicial warrant and confines it to criminal proceedings.',
+        note: 'This site does not use "search and seizure" as its own heading for this subject, because the phrase adopts one family of texts as the taxonomy for all of them.',
+      },
+      {
+        claim: 'A home may only be entered to investigate a crime.',
+        reality:
+          'Brazil’s Article 5º XI permits entry in case of disaster or to render assistance. Czechia’s Article 12(3) permits other encroachments where necessary in a democratic society for the life or health of individuals or to avert a serious threat to public security and order. Germany’s Article 13(4) permits technical surveillance to avert acute dangers to public safety.',
+        note: 'Several of these provisions are about rescue and danger rather than about evidence.',
+      },
+      {
+        claim:
+          'Constitutional protection of the home means the same thing for everyone in the country.',
+        reality:
+          'The wording differs. Ireland’s Article 40.5 protects "the dwelling of every citizen"; Germany’s Article 13(1) states that the dwelling is inviolable without naming a holder; South Africa and Kenya word their privacy provisions for everyone and every person.',
+        note: 'What any court has made of those words was not researched.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Six authorisation architectures, and the axis is who decides rather than how strict the standard is.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'A judge, with the requirement graded by the severity of the measure — Germany, GG Art. 13(2)–(4): one judge for a search, three for acoustic surveillance, with annual reporting to the Bundestag.',
+          'A written, reasoned judicial warrant, confined to criminal proceedings — Czechia, Listina Art. 12(2), with non-criminal encroachments handled separately in Art. 12(3).',
+          'A closed set of gateways of which a judicial decision is one — Spain, CE Art. 18(2); Brazil, CF Art. 5º XI, which additionally confines the judicial route to daytime.',
+          'No judicial requirement; statutory authority, identified officials, prior notice of purpose and a written report to the occupant — Netherlands, Gw Art. 12.',
+          'A warrant rule stated in the constitution itself — United States, Amendment IV; Japan, Art. 35, which adds a separate-warrant-per-measure requirement.',
+          'No authorisation rule stated at all — Canada, Charter s. 8; South Africa, s. 14; Kenya, Art. 31; Ireland, Art. 40.5, which refers the conditions to law.',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'Scope of these statements',
+        text: 'Each constitutional provision is the law of its own country. The procedural codes operating under them were not researched, and no statement here describes how any search is actually conducted anywhere.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'Three of these texts build the record into the requirement rather than leaving it to practice. Czechia requires the judicial warrant to be in writing and to give reasons. The Netherlands requires a written report of the entry to be given to the occupant. Germany requires annual reporting to the Bundestag on the use of technical means under Article 13(3) to (5), with a parliamentary panel exercising oversight on the basis of that report.',
+        claim: 'fact',
+        sources: ['cz-listina', 'nl-constitution', 'de-grundgesetz'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Parliamentary oversight of a category, not of a case',
+        text: 'The German annual report is unusual in that its audience is a legislature rather than a court, and its subject is the aggregate use of a power rather than one exercise of it. Judicial authorisation asks whether this measure was justified; a reporting duty asks how often the power is being used at all, which is a question no individual case can answer.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'What follows from an unlawful entry is a separate question with its own page, and the answers differ as much as the authorisation rules do: Brazil states in Article 5º LVI that evidence obtained by illicit means is inadmissible, while section 24(2) of the Canadian Charter excludes evidence only where its admission would bring the administration of justice into disrepute.',
+        claim: 'fact',
+        sources: ['br-cf-1988', 'ca-charter-1982'],
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [what privacy protects in law](/investigations/what-privacy-protects-in-law), [intercepting communications](/investigations/intercepting-communications), and [what happens to unlawfully obtained evidence](/justice/what-happens-to-unlawfully-obtained-evidence).',
+      },
+    ],
+  },
+  {
+    slug: 'intercepting-communications',
+    title: 'Intercepting communications',
+    shortTitle: 'Intercepting communications',
+    question:
+      'Is reading someone’s letters or listening to their calls treated like searching their home?',
+    summary:
+      'Not in the same way, and two neighbouring systems answer in opposite directions. The Netherlands requires a judge for communications but not for the home; Germany requires a judge for the home and, for some communications cases, replaces court recourse with parliamentary review.',
+    entityType: 'concept',
+    section: 'investigations',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'searching-a-home',
+      'what-privacy-protects-in-law',
+      'what-is-a-criminal-investigation',
+    ],
+    sources: [
+      'de-grundgesetz',
+      'nl-constitution',
+      'es-constitution',
+      'br-cf-1988',
+      'cz-listina',
+      'ch-constitution',
+      'za-constitution',
+      'ke-constitution',
+      'echr-convention',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-05',
+    publishedOn: '2026-09-05',
+    reviewedOn: '2026-09-05',
+    factsVerifiedOn: '2026-09-05',
+    readingTimeMinutes: 10,
+    uncertainty: [
+      'These are constitutional provisions. The interception statutes operating under them were not researched, and in every system here the operative detail is statutory.',
+      'Nothing on this page describes any interception technique, any means of avoiding one, or anything about how communications are secured or examined. That is a deliberate limit on the research.',
+      'Whether any of these texts reaches a form of communication that did not exist when it was drafted is a question of interpretation, not of text, and was not researched.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Most constitutions that protect the home also protect what a person says to somebody else — letters, post, telephone calls, telegraph, and in some texts data. What almost none of them do is protect the two in the same way, and the differences are sharper here than anywhere else in this wave.',
+      },
+      {
+        kind: 'callout',
+        variant: 'safety',
+        title: 'What this page is and is not',
+        text: 'This explains what constitutional texts require before communications may be intercepted. It describes no technique, no system, no means of interception and nothing about avoiding, detecting or defeating one. It states no country’s operational law and is not legal advice.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'A conversation has at least two parties, happens somewhere the state can reach without entering anyone’s house, and — unlike a search — can be listened to for weeks without the person ever knowing. Those three features are why systems that treat the home and communications under one heading still tend to write different rules for them.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'The absence of notice is the structural problem',
+        text: 'A person whose home is searched knows it happened and can complain about it. A person whose calls were listened to may never find out, which means the ordinary route of challenge is not available to them by default. That is why the interception provisions in several of these texts are unusually preoccupied with who authorises, who reviews, and whether anyone is told.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'The Netherlands requires a judge for communications and, in the article immediately before, requires none for the home. Article 13(1) of the Grondwet: "Ieder heeft recht op eerbiediging van zijn brief- en telecommunicatiegeheim." Article 13(2): restriction is possible in cases laid down by statute "met machtiging van de rechter" — with the authorisation of the court — or, in the interest of national security, by or with the authorisation of those designated for the purpose by statute.',
+        claim: 'fact',
+        sources: ['nl-constitution'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Germany runs the comparison in reverse. Article 13(2) requires a judge to order a search of the home. Article 10(2), for the secrecy of correspondence, posts and telecommunications, requires only that restrictions be ordered pursuant to a law — and then adds that where the restriction serves to protect the free democratic basic order or the existence or security of the Federation or of a Land, the law may provide that the person affected shall not be informed, and that recourse to the courts shall be replaced by review by agencies and auxiliary agencies appointed by the legislature. Article 19(4), which opens the courts to anyone whose rights are violated by public authority, expressly leaves that second sentence unaffected.',
+        claim: 'fact',
+        sources: ['de-grundgesetz'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Two neighbours, opposite emphases, and one substitution',
+        text: 'The Dutch text puts the judge on communications and not on the home; the German text puts the judge on the home and, in one category of communications case, substitutes a legislature-appointed reviewer for the court entirely. That substitution is what makes Article 10(2) worth reading closely: it does not remove review, it changes who conducts it and removes the notification that would normally trigger it.',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'Spain — judicial decision, with no other route stated',
+            description:
+              'Article 18(3): "Se garantiza el secreto de las comunicaciones y, en especial, de las postales, telegráficas y telefónicas, salvo resolución judicial." The exception is a judicial decision and the text names no alternative — not consent, not urgency, and not a national-security route of the kind the Dutch and German provisions contain.',
+          },
+          {
+            term: 'Brazil — one category, one authority, one purpose',
+            description:
+              'Article 5º XII protects the secrecy of correspondence and of telegraphic, data and telephone communications, "salvo, no último caso, por ordem judicial, nas hipóteses e na forma que a lei estabelecer para fins de investigação criminal ou instrução processual penal". The exception reaches the last-named category only, requires a judicial order, and is confined to criminal investigation or criminal procedural instruction.',
+          },
+          {
+            term: 'Czechia — the same protection for old and new means',
+            description:
+              'Article 13 of the Listina bars violating the confidentiality of letters or of other papers or records, whether privately kept or sent by post or by some other means, except in the cases and manner designated by law — and then adds that "The confidentiality of communications sent by telephone, telegraph, or by other similar devices is guaranteed in the same way."',
+          },
+          {
+            term: 'Switzerland — inside the general privacy provision',
+            description:
+              'Article 13(1) of the Bundesverfassung entitles every person to respect for their "Brief-, Post- und Fernmeldeverkehr" in the same sentence as their private and family life and their home. The authorisation question is therefore answered by the general limitation clause at Article 36 rather than by a rule specific to communications.',
+          },
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Brazil’s exception is the narrowest read in this wave',
+        text: 'Three limits operate at once in one sentence: only telephone communications, only on judicial order, and only for criminal investigation or criminal procedural instruction. A measure that satisfied two of those and not the third would not be within the exception as written.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'South Africa and Kenya, consistent with how they treat searches, state the interest and not the authorisation. Section 14(d) makes the privacy of a person’s communications a component of the right to privacy; Article 31(d) does the same. Neither states who may authorise an interference, which is left to the general limitation clause and to statute.',
+        claim: 'fact',
+        sources: ['za-constitution', 'ke-constitution'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'The European Convention places correspondence alongside private life and the home in Article 8(1) and applies the same limitation clause to all of them: an interference must be in accordance with the law and necessary in a democratic society for one of the aims Article 8(2) lists.',
+        claim: 'fact',
+        sources: ['echr-convention'],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Interception is treated the same as a search of a home.',
+        reality:
+          'In most of these texts it is not. The Dutch Article 13(2) requires judicial authorisation where Article 12 does not; the German Article 10(2) requires only a legal basis where Article 13(2) requires a judge; Brazil’s Article 5º XII confines the exception to telephone communications and to criminal investigation.',
+      },
+      {
+        claim: 'A judge must authorise interception.',
+        reality:
+          'Spain and Brazil require a judicial decision. The Netherlands requires one except in the interest of national security, where statutorily designated persons may authorise. Germany’s Article 10(2) requires a law rather than a judge, and in one category replaces court recourse with review by legislature-appointed agencies.',
+      },
+      {
+        claim: 'A person whose communications were intercepted will be told.',
+        reality:
+          'Article 10(2) of the Grundgesetz expressly permits a law to provide that the person affected shall not be informed, in the cases it identifies. None of the other provisions read here states a notification duty for interception.',
+        note: 'What the statutes operating under these provisions require was not researched.',
+      },
+      {
+        claim: 'If a text protects "correspondence", it protects every form of communication.',
+        reality:
+          'The texts differ in what they enumerate. Brazil lists correspondence and telegraphic, data and telephone communications, and confines the exception to the last. Czechia lists letters, papers and records and adds telephone, telegraph "or other similar devices". Whether an enumeration reaches a technology invented later is interpretation, not text.',
+      },
+      {
+        claim: 'Replacing a court with another reviewer means there is no review.',
+        reality:
+          'Article 10(2) substitutes review by agencies and auxiliary agencies appointed by the legislature. That is a different reviewer with a different relationship to the person affected — and Article 19(4) preserves the substitution expressly — but it is not an absence of review.',
+        note: 'This page describes what the provision establishes and does not assess how the substituted review operates.',
+      },
+      {
+        claim: 'Constitutions bar the state from ever intercepting communications.',
+        reality:
+          'Every provision read here contains an exception. Brazil’s exists specifically "para fins de investigação criminal ou instrução processual penal" — the constitution contemplates interception as an investigative tool and states the conditions on it.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Five ways to authorise an interference with communications.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Judicial authorisation, with a national-security route to a statutorily designated authoriser — Netherlands, Gw Art. 13(2).',
+          'Judicial decision, with no alternative route stated — Spain, CE Art. 18(3).',
+          'Judicial order, confined to one category of communication and to criminal investigation or instruction — Brazil, CF Art. 5º XII.',
+          'A legal basis rather than a judge, and in one category a substitution of parliamentary-appointed review for recourse to the courts, with no notification — Germany, GG Art. 10(2) with Art. 19(4).',
+          'Cases and manner designated by law, with old and new means protected alike — Czechia, Listina Art. 13.',
+          'No specific rule; the interest sits inside the general privacy provision and the general limitation clause — Switzerland, BV Art. 13 with Art. 36; South Africa, s. 14(d); Kenya, Art. 31(d); European Convention, Art. 8.',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'Scope of these statements',
+        text: 'Each constitutional provision is the law of its own country. The European Convention binds the states party to it and is not evidence of any state’s domestic law. Interception statutes were not researched, and nothing here describes any technique.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'Where the person affected is not told, the ordinary accountability route — a complaint by the person wronged — is unavailable, and the systems that permit non-notification tend to name a substitute. Germany’s Article 10(2) names review by agencies and auxiliary agencies appointed by the legislature; the Dutch Article 13(2) keeps a judge in the ordinary case and names statutorily designated authorisers only for national security.',
+        claim: 'fact',
+        sources: ['de-grundgesetz', 'nl-constitution'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Who reviews is a design choice, not an oversight',
+        text: 'A court is well placed to decide whether one measure against one person was justified, and badly placed to notice that a power is being used ten thousand times a year. A standing parliamentary reviewer is the reverse. The texts that choose the second for communications are choosing the reviewer that fits a power exercised without the subject’s knowledge.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'It is worth restating what these provisions assume. Every one of them permits interception on conditions, because a legal system that could not read a letter or listen to a call would be unable to investigate a category of serious offences that leave no other trace. The constitutional question is not whether the power exists but who authorises it, for what, and who checks afterwards.',
+        claim: 'analysis',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [searching a home](/investigations/searching-a-home), [what privacy protects in law](/investigations/what-privacy-protects-in-law), and [what is a criminal investigation](/investigations/what-is-a-criminal-investigation).',
+      },
+    ],
+  },
 ];

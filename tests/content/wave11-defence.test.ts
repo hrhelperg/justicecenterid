@@ -212,11 +212,28 @@ describe('nothing already owned is restated', () => {
     }
   });
 
+  /*
+   * AMENDED BY WAVE 21, and the amendment is deliberately narrow.
+   *
+   * Wave 11 deferred `equality-of-arms` for one stated reason, recorded in its plan: "Deferred
+   * for want of sources (ECHR unreachable)". That was a source-ACCESS deferral, not a finding
+   * that the question belonged to another page or did not deserve one — which is why lifting it
+   * requires the source rather than a change of mind.
+   *
+   * Wave 21 obtained it. `echr-convention` is content-confirmed from the official Dutch treaty
+   * database and carries Art. 6(3)(b) and 6(3)(d) verbatim; `cz-listina` carries Listina
+   * Art. 37(3), "All parties to such proceedings are equal"; and the page additionally rests on
+   * ICCPR Art. 14(3)(e), ZA s. 35(3)(b) and (i), GG Art. 103(1), JP Art. 37 and CE Art. 24(1).
+   * The test below pins that the route exists only while those two records are cited.
+   *
+   * `equality-of-arms` is therefore removed from this list and NOTHING else is. Every other slug
+   * stays forbidden on its own Wave 11 grounds, which this wave did not revisit and did not
+   * obtain evidence for.
+   */
   it('defers the trial and appeal stages rather than absorbing them', () => {
     for (const slug of [
       'defence-rights-at-trial',
       'defence-rights-on-appeal',
-      'equality-of-arms',
       'self-representation',
       'right-to-examine-witnesses',
       'right-to-challenge-evidence',
@@ -231,6 +248,19 @@ describe('nothing already owned is restated', () => {
         PUBLIC_ROUTE_PATHS,
         `${slug} was published despite being merged or deferred`,
       ).not.toContain(`/defence/${slug}`);
+    }
+  });
+
+  it('routes equality-of-arms only with the evidence Wave 21 obtained', () => {
+    const routed = PUBLIC_ROUTE_PATHS.includes('/defence/equality-of-arms');
+    if (!routed) return;
+    const record = guide('equality-of-arms');
+    expect(record, 'the route exists but the record does not').toBeDefined();
+    for (const id of ['echr-convention', 'cz-listina']) {
+      expect(
+        record.sources,
+        `equality-of-arms is routed without ${id}, the evidence that lifted the Wave 11 deferral`,
+      ).toContain(id);
     }
   });
 

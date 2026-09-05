@@ -197,12 +197,17 @@ const MUST_404 = [
   '/legal-defense',
   // Candidates merged or deferred in docs/seo/knowledge-expansion-wave-11-cannibalization.md.
   // Nine of these failed only on source feasibility, not on intent.
+  //
+  // WAVE 21 AMENDMENT, and narrow: '/defence/equality-of-arms' is removed from this list because
+  // it is now published. Its Wave 11 ground was source feasibility — "ECHR unreachable" — and
+  // Wave 21 obtained the Convention text and the Czech Listina, which carries Art. 37(3), "All
+  // parties to such proceedings are equal". Every other slug here stays, because this wave
+  // obtained no evidence for any of them. See docs/research/defense-rights-wave-11-plan.md.
   '/defence/public-defender',
   '/defence/legal-aid',
   '/defence/court-appointed-counsel',
   '/defence/private-defence-lawyer',
   '/defence/attorney-client-privilege',
-  '/defence/equality-of-arms',
   '/defence/self-representation',
   '/defence/right-to-challenge-evidence',
   '/defence/right-to-examine-witnesses',

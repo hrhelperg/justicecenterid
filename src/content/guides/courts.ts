@@ -2990,4 +2990,220 @@ export const COURTS_GUIDES: readonly Guide[] = [
       },
     ],
   },
+  /* ==========================================================================
+     WAVE 21 — the public hearing
+     ==========================================================================
+     Every existing mention of "public hearing" in the corpus before this wave was
+     a UDHR or ICCPR recital inside another page's rights section. No page owned
+     the question, and the constitutional material turns out to be more varied
+     than the treaty formula suggests: Japan names categories that must ALWAYS be
+     public, and two systems separate the publicity of the hearing from the
+     publicity of the judgment.
+
+     The lawful-judge and extraordinary-courts material is deliberately absent
+     here: `courts-during-a-state-of-emergency` already owns GG Art. 101,
+     CF Art. 5º XXXVII and CE Art. 117(5)-(6), and duplicating it would be the
+     cannibalization this wave's audit exists to prevent.
+     ========================================================================== */
+  {
+    slug: 'why-hearings-are-public',
+    title: 'Why hearings are public',
+    shortTitle: 'Why hearings are public',
+    question: 'Why are court hearings held in public, and when may they not be?',
+    summary:
+      'Because a proceeding nobody may watch cannot be checked by anyone outside it. Every text here permits exceptions; Japan names categories that must always be public whatever the court decides, and two systems require the judgment to be public even where the hearing was not.',
+    entityType: 'concept',
+    section: 'courts',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'what-do-courts-do',
+      'why-courts-matter',
+      'equality-of-arms',
+      'why-judicial-independence-matters',
+    ],
+    sources: [
+      'jp-constitution',
+      'cz-listina',
+      'nl-constitution',
+      'echr-convention',
+      'iccpr',
+      'za-constitution',
+      'es-constitution',
+      'us-bill-of-rights',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-05',
+    publishedOn: '2026-09-05',
+    reviewedOn: '2026-09-05',
+    factsVerifiedOn: '2026-09-05',
+    readingTimeMinutes: 9,
+    keyTerms: ['fair-trial'],
+    uncertainty: [
+      'These are constitutional and treaty provisions on publicity. The rules that restrict reporting of a hearing that is itself public — contempt, reporting restrictions, anonymity orders — are a separate subject and were not researched.',
+      'Whether any system permits remote or recorded access, and on what terms, was not researched.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'A public hearing is one that a person with no connection to the case may attend. Every instrument read for this page states it as a right of the party rather than as a privilege of the public — and every one of them permits it to be displaced, on conditions the text sets out.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This compares constitutional and treaty provisions on the publicity of hearings and judgments. It states no country’s court procedure, describes no reporting rules, and is not legal advice.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'Almost every other safeguard in a legal system depends on somebody being able to see whether it was observed. Whether the accused was allowed to answer, whether the evidence was tested, whether the tribunal behaved as a tribunal — these are checkable in a room that can be entered and not otherwise.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'The right belongs to the party, and it protects more than the party',
+        text: 'Each of these texts gives the right to the accused or to a person with a dispute. But the interest it serves reaches further: a system whose hearings are open produces a record of how it actually behaves, which is what makes it possible to say anything about it from outside. That dual character is why the exceptions are drawn as narrowly as they are.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'There are also real reasons to close a hearing. The instruments name them, and they are not pretextual: children, the private lives of the parties, public order, and circumstances in which publicity would defeat the purpose of the proceeding.',
+        claim: 'analysis',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'Japan states the most unusual version, and the interesting part is not the rule but the exception to the exception. Article 82: "Trials shall be conducted and judgment declared publicly. Where a court unanimously determines publicity to be dangerous to public order or morals, a trial may be conducted privately, but trials of political offenses, offenses involving the press or cases wherein the rights of people as guaranteed in Chapter III of this Constitution are in question shall always be conducted publicly."',
+        claim: 'fact',
+        sources: ['jp-constitution'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'The three categories that can never be closed',
+        text: 'Political offences, offences involving the press, and cases about the rights guaranteed in Chapter III — that is, the fundamental-rights chapter itself. These are precisely the cases in which a government would have the strongest reason to want the doors shut, and the article removes the possibility in advance rather than leaving it to the court that would be deciding under that pressure.',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'The European Convention — the closed list, and a separate rule for the judgment',
+            description:
+              'Article 6(1) gives everyone a fair and public hearing, and provides that "Judgment shall be pronounced publicly but the press and public may be excluded from all or part of the trial in the interests of morals, public order or national security in a democratic society, where the interests of juveniles or the protection of the private life of the parties so require, or to the extent strictly necessary in the opinion of the court in special circumstances where publicity would prejudice the interests of justice."',
+          },
+          {
+            term: 'The Covenant — the same shape, with the judgment exceptions named',
+            description:
+              'Article 14(1) uses the same structure and then states the judgment rule with its own narrow exceptions: any judgment rendered in a criminal case or in a suit at law "shall be made public except where the interest of juvenile persons otherwise requires or the proceedings concern matrimonial disputes or the guardianship of children".',
+          },
+          {
+            term: 'Czechia — publicity, presence, and the right to respond to the evidence',
+            description:
+              'Article 38(2) of the Listina: "Everyone has the right to have her case considered in public, without unnecessary delay, and in her presence, as well as to express her opinion on all of the admitted evidence. The public may be excluded only in cases specified by law." Publicity appears in the same sentence as two other conditions of being able to follow a case at all.',
+          },
+          {
+            term: 'The Netherlands — publicity paired with reasons',
+            description:
+              'Article 121 of the Grondwet provides that, with the exception of cases laid down by statute, hearings take place in public and judgments state the grounds on which they rest. Two different transparency requirements, joined in one sentence: what happened in the room, and why the court decided as it did.',
+          },
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Publicity of the hearing and publicity of the reasoning are separable',
+        text: 'A hearing can be closed and the judgment still published; a hearing can be open and the reasoning unstated. The Dutch article requires both, the Convention and the Covenant separate them and give the judgment its own narrower exceptions, and Japan requires both in its first sentence — "Trials shall be conducted and judgment declared publicly".',
+      },
+      {
+        kind: 'paragraph',
+        text: 'South Africa states it as a component of the accused’s fair-trial right and adds a requirement about which court: section 35(3)(c) gives every accused person the right "to a public trial before an ordinary court". Spain states it as part of Article 24(2): "a un proceso público sin dilaciones indebidas y con todas las garantías". And the Sixth Amendment gives the accused in all criminal prosecutions "the right to a speedy and public trial, by an impartial jury of the State and district wherein the crime shall have been committed".',
+        claim: 'fact',
+        sources: ['za-constitution', 'es-constitution', 'us-bill-of-rights'],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Court hearings are always public.',
+        reality:
+          'Every text read here permits exclusion. The Convention lists morals, public order, national security, the interests of juveniles, the private life of the parties, and circumstances where publicity would prejudice the interests of justice. Czechia permits exclusion "only in cases specified by law".',
+      },
+      {
+        claim: 'A court may close a hearing whenever it considers it appropriate.',
+        reality:
+          'Japan requires a unanimous determination that publicity would be dangerous to public order or morals, and then removes three categories from the power entirely. The Convention’s grounds are a closed list. Czechia requires the case to be one specified by law.',
+      },
+      {
+        claim: 'If the hearing is closed, nothing about the case is public.',
+        reality:
+          'Article 6(1) of the Convention requires judgment to be pronounced publicly even where the press and public were excluded from the trial. Article 14(1) of the Covenant requires the judgment to be made public with two narrow exceptions of its own.',
+      },
+      {
+        claim: 'The public hearing right belongs to the public.',
+        reality:
+          'In each of these texts it is stated as a right of a party. The Convention gives "everyone" a fair and public hearing in the determination of their civil rights and obligations or of a criminal charge; South Africa gives it to "every accused person"; the Sixth Amendment to "the accused".',
+        note: 'That it serves a wider interest is analysis, not a claim about who may enforce it.',
+      },
+      {
+        claim: 'A public hearing means proceedings may be reported freely.',
+        reality:
+          'That is a different subject. Reporting restrictions, contempt and anonymity rules operate on what may be published about a hearing, and none of them was researched for this page.',
+      },
+      {
+        claim: 'Publicity requirements are a formality with no consequences.',
+        reality:
+          'Japan makes the categories that must always be public the ones most likely to involve the state as a party — political offences, offences involving the press, and cases about the fundamental-rights chapter. That is a choice about where publicity does the most work, written into the constitution.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Four structures, differing on who may close a hearing and on what survives closure.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Public hearing and public judgment in one sentence, a unanimity requirement for closure, and three categories that may never be closed — Japan, Art. 82.',
+          'Public hearing with a closed list of exclusion grounds, and public pronouncement of judgment as a separate requirement — European Convention, Art. 6(1); Covenant, Art. 14(1), which states its own narrow judgment exceptions.',
+          'Public consideration in the person’s presence, with the right to respond to all admitted evidence, and exclusion only in cases specified by law — Czechia, Listina Art. 38(2).',
+          'Public hearings and reasoned judgments required together, except in statutory cases — Netherlands, Gw Art. 121.',
+          'Stated as a component of the accused’s fair-trial right — South Africa, s. 35(3)(c), which adds "before an ordinary court"; Spain, CE Art. 24(2); United States, Amendment VI.',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'Scope of these statements',
+        text: 'Each constitutional provision is the law of its own country. The two treaties bind the states party to them and are not evidence of any state’s domestic law. Nothing here describes any court’s practice.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'Publicity is the safeguard that makes the others observable, which is why it tends to appear in the same provisions as the ones about following a case. Czechia states publicity, presence and the right to comment on the evidence in a single sentence; the Netherlands pairs the open hearing with the reasoned judgment.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'What courts are for is [what courts do](/courts/what-do-courts-do) and [why courts matter](/courts/why-courts-matter). Whether courts sit at all in an emergency, and whether a different court may try you, is [courts during a state of emergency](/courts/courts-during-a-state-of-emergency).',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The exceptions deserve the same respect as the rule. A child witness, a victim of a sexual offence, a case turning on material whose disclosure would defeat the proceeding — these are situations in which an open hearing costs something real, and the instruments say so in terms. What the texts do is require the cost to be identified before the doors close, and in several systems require the judgment to emerge whatever happened inside.',
+        claim: 'analysis',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [what courts do](/courts/what-do-courts-do), [equality of arms](/defence/equality-of-arms), and [why judicial independence matters](/courts/why-judicial-independence-matters).',
+      },
+    ],
+  },
 ];
