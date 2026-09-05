@@ -229,7 +229,7 @@ const RIGHTS_DEFEAT_AUTHORITY = [
   /rights? (?:mean|means) the (?:state|government) (?:may|can) not act/i,
   /constitutional rights prevent the (?:state|government) from exercising coercive/i,
   /(?:the state|government) may not (?:arrest|search|detain|prosecute) (?:anyone|people)/i,
-  /a right is a zone the state may never enter/i,
+  /(?:a|every|any|each) right is a zone the state may never enter/i,
   /having a right means (?:the )?government can never limit it/i,
   /(?:police|prosecutors|courts) (?:have|hold) no (?:lawful )?authority/i,
 ];
@@ -347,9 +347,38 @@ const ABSOLUTIST = [
 ];
 
 describe('rights are not absolute by default', () => {
-  it.each(ABSOLUTIST.map((p) => [p.source, p] as const))('never asserts %s', (_l, pattern) => {
-    const units = ALL_UNITS.filter((s) => pattern.test(s) && !deniesForward(s, pattern));
-    expect(units.filter((s) => !deniesClaim(s, pattern))).toEqual([]);
+  /*
+   * FORWARD-ONLY denial, and mutation proof W21-M3 is why.
+   *
+   * "All constitutional rights are absolute and every right is a zone the state may never enter"
+   * clears a strip-and-search helper, because removing the matched span leaves "and every right is
+   * a zone the state may never enter" — a clause whose own "never" is read as a denial of the
+   * stance it is actually restating. An absolutist stance is neutralised only by a negation that
+   * GOVERNS it, and in English that precedes it.
+   *
+   * This is the Wave 19 finding in a new place, and the reason it recurs is that absolutist
+   * language is made of negations, so the denial vocabulary and the stance vocabulary overlap.
+   * Wherever they overlap, strip-and-search is the wrong helper.
+   */
+  it.each(ABSOLUTIST.map((p) => [p.source, p] as const))(
+    'never asserts %s, and no trailing clause launders it',
+    (_l, pattern) => {
+      const offenders = CORPUS_UNITS.filter(
+        (u) => pattern.test(u) && !deniesForward(u, pattern),
+      );
+      expect(offenders, `absolutist stance: ${offenders[0]?.slice(0, 140)}`).toEqual([]);
+    },
+  );
+
+  it('the forward-only helper catches what strip-and-search misses', () => {
+    const planted =
+      'All constitutional rights are absolute and every right is a zone the state may never enter.';
+    const p = /all (?:constitutional )?rights are absolute/i;
+    expect(
+      deniesClaim(planted, p),
+      'strip-and-search is laundered by the trailing clause',
+    ).toBe(true);
+    expect(deniesForward(planted, p), 'forward-only must not be laundered').toBe(false);
   });
 
   it('carries the absolutist claim as a corrected misconception', () => {
