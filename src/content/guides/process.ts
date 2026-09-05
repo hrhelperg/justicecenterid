@@ -161,7 +161,7 @@ export const PROCESS_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'This guide explains what courts do. How court systems are STRUCTURED, and how much they differ, is covered by [court hierarchy](/courts/court-hierarchy), [why courts matter](/courts/why-courts-matter) and [why judicial independence matters](/courts/why-judicial-independence-matters). Related: [due process](/justice/what-is-due-process), [what a prosecutor does](/prosecution/what-does-a-prosecutor-do), and [the rule of law](/justice/what-is-the-rule-of-law). For a court system built on almost none of the components this page assumes, see [how Athenian courts worked](/history/how-athenian-courts-worked).',
+        text: 'This guide explains what courts do. How court systems are STRUCTURED, and how much they differ, is covered by [court hierarchy](/courts/court-hierarchy), [why courts matter](/courts/why-courts-matter) and [why judicial independence matters](/courts/why-judicial-independence-matters). Related: [due process](/justice/what-is-due-process), [what a prosecutor does](/prosecution/what-does-a-prosecutor-do), [why hearings are public](/courts/why-hearings-are-public), and [the rule of law](/justice/what-is-the-rule-of-law). For a court system built on almost none of the components this page assumes, see [how Athenian courts worked](/history/how-athenian-courts-worked).',
       },
     ],
   },
@@ -503,7 +503,7 @@ export const PROCESS_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'This guide explains what an investigation is. Who is legally competent to run one, and how systems differ, is covered by [who investigates crime](/investigations/who-investigates-crime), [police and prosecutor investigation](/investigations/police-vs-prosecutor-investigation) and [the investigating judge](/investigations/investigating-judge). Also related: [what a prosecutor does](/prosecution/what-does-a-prosecutor-do), [what forensic science is](/forensics/what-is-forensic-science), and [why justice systems need oversight](/justice/why-justice-systems-need-oversight).',
+        text: 'This guide explains what an investigation is. Who is legally competent to run one, and how systems differ, is covered by [who investigates crime](/investigations/who-investigates-crime), [police and prosecutor investigation](/investigations/police-vs-prosecutor-investigation) and [the investigating judge](/investigations/investigating-judge). Also related: [what a prosecutor does](/prosecution/what-does-a-prosecutor-do), [what forensic science is](/forensics/what-is-forensic-science), and [why justice systems need oversight](/justice/why-justice-systems-need-oversight). For what an investigative act touches rather than who may perform it, see [what privacy protects in law](/investigations/what-privacy-protects-in-law), [searching a home](/investigations/searching-a-home) and [intercepting communications](/investigations/intercepting-communications).',
       },
     ],
   },

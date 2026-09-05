@@ -1151,7 +1151,7 @@ export const JUSTICE_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [why government is bound by law](/justice/why-government-is-bound-by-law), [legality and non-retroactivity](/justice/legality-and-non-retroactivity), and [what due process is](/justice/what-is-due-process). For limits drafted as answers to recited abuses, see [the 1689 declarations](/history/the-1689-declarations-and-what-caused-them).',
+        text: 'Related: [why government is bound by law](/justice/why-government-is-bound-by-law), [legality and non-retroactivity](/justice/legality-and-non-retroactivity), and [what due process is](/justice/what-is-due-process). For the structure a text uses when it permits a limit rather than forbids an act, see [how a constitutional right can be limited](/justice/how-a-right-can-be-limited) and [who fundamental rights bind](/justice/who-fundamental-rights-bind). For limits drafted as answers to recited abuses, see [the 1689 declarations](/history/the-1689-declarations-and-what-caused-them).',
       },
     ],
   },
@@ -1573,7 +1573,7 @@ export const JUSTICE_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [access to justice](/justice/access-to-justice), [what justice is](/justice/what-is-justice), and [South Africa](/countries/south-africa).',
+        text: 'Related: [access to justice](/justice/access-to-justice), [what justice is](/justice/what-is-justice), and [South Africa](/countries/south-africa). Equality of the rules is a different claim from equality of the two sides within one case: that is [equality of arms](/defence/equality-of-arms).',
       },
     ],
   },
@@ -3085,7 +3085,7 @@ export const JUSTICE_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [appeal and judicial review are different](/courts/appeal-and-judicial-review-are-different), [limits on public power](/justice/limits-on-public-power), and [the constitutional court](/institutions/constitutional-court).',
+        text: 'Related: [appeal and judicial review are different](/courts/appeal-and-judicial-review-are-different), [limits on public power](/justice/limits-on-public-power), and [the constitutional court](/institutions/constitutional-court). For a system whose courts may not review statutes against the constitution but must disapply them against a treaty, see [international rights and domestic law](/justice/international-rights-and-domestic-law).',
       },
     ],
   },
@@ -3259,7 +3259,7 @@ export const JUSTICE_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [what remand detention is](/corrections/what-remand-detention-is), [effective remedy](/justice/effective-remedy), and [what the Habeas Corpus Act 1679 actually did](/history/what-the-habeas-corpus-act-1679-actually-did).',
+        text: 'Related: [what remand detention is](/corrections/what-remand-detention-is), [effective remedy](/justice/effective-remedy), and [what the Habeas Corpus Act 1679 actually did](/history/what-the-habeas-corpus-act-1679-actually-did). For the interval before that review is triggered at all, see [how soon a detained person sees a judge](/justice/how-soon-a-detained-person-sees-a-judge).',
       },
     ],
   },
@@ -3885,7 +3885,7 @@ export const JUSTICE_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [what a state of emergency changes](/public-safety/what-a-state-of-emergency-changes), [limits on public power](/justice/limits-on-public-power), and [detention under emergency powers](/justice/detention-under-emergency-powers).',
+        text: 'Related: [what a state of emergency changes](/public-safety/what-a-state-of-emergency-changes), [limits on public power](/justice/limits-on-public-power), and [detention under emergency powers](/justice/detention-under-emergency-powers). The standing test this page contrasts derogation with — the one that applies at all times — is [how a constitutional right can be limited](/justice/how-a-right-can-be-limited).',
       },
     ],
   },
@@ -4349,6 +4349,1295 @@ export const JUSTICE_GUIDES: readonly Guide[] = [
       {
         kind: 'paragraph',
         text: 'Related: [reviewing detention](/justice/reviewing-detention), [which rights can never be suspended](/justice/which-rights-can-never-be-suspended), and [courts during a state of emergency](/courts/courts-during-a-state-of-emergency).',
+      },
+    ],
+  },
+  /* ==========================================================================
+     WAVE 21 — constitutional rights, state powers and fundamental safeguards
+     ==========================================================================
+     Six pages. The wave's baseline found that the corpus already owned the rule
+     of law, legality, legal certainty, equality before the law, access to
+     justice, effective remedy, due process, the presumption of innocence,
+     detention review, constitutional review and the whole derogation
+     architecture. What it did NOT own was the ordinary limitation rule that
+     `which-rights-can-never-be-suspended` refers to and does not explain, the
+     idea of proportionality, and two scope questions nobody had asked: who a
+     right belongs to, and who it binds.
+
+     None of these pages is a rights catalogue and none asserts that a right is
+     a zone the state may never enter. The spine every one of them carries is
+     Part I's question: who may exercise what power, under what legal authority,
+     for what purpose, subject to what limits, and with what review.
+     ========================================================================== */
+  {
+    slug: 'how-a-right-can-be-limited',
+    title: 'How a constitutional right can be limited',
+    shortTitle: 'How a right can be limited',
+    question:
+      'If a right is written into a constitution, can the government still restrict it?',
+    summary:
+      'In most systems, yes — and the constitution usually says how. Six different architectures do this job, from one general clause with five named factors to no general clause at all, and three constitutions using nearly identical words mean measurably different things by them.',
+    entityType: 'concept',
+    section: 'justice',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'what-proportionality-requires',
+      'which-rights-can-never-be-suspended',
+      'limits-on-public-power',
+      'who-fundamental-rights-bind',
+    ],
+    sources: [
+      'ch-constitution',
+      'za-constitution',
+      'ke-constitution',
+      'ca-charter-1982',
+      'de-grundgesetz',
+      'es-constitution',
+      'cz-listina',
+      'echr-convention',
+      'jp-constitution',
+      'br-cf-1988',
+      'us-bill-of-rights',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-05',
+    publishedOn: '2026-09-05',
+    reviewedOn: '2026-09-05',
+    factsVerifiedOn: '2026-09-05',
+    readingTimeMinutes: 11,
+    keyTerms: ['rule-of-law', 'due-process'],
+    uncertainty: [
+      'Every statement here is constitutional text. How any court has applied a limitation clause was not researched, and the difference between a clause and its case law can be large.',
+      'The United States and Brazil appear as systems whose texts contain no general limitation clause. That is a statement about the documents, not about how rights are limited in either country — American tiers of scrutiny and Brazilian doctrine were not researched.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'A constitutional right is rarely a zone the state may never enter. In most of the systems read for this page the constitution itself says when a right may be restricted, and the interesting question is not whether limitation is permitted but what the text demands before it is.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Eleven systems were read. They produce at least six architectures, and the differences are not stylistic — a limitation that would satisfy one text would fail another on its face.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This describes how constitutional texts structure the limitation of rights. It states no country’s case law, assesses no measure, and is not legal advice. Whether any particular restriction is lawful is a question for a lawyer in that jurisdiction.',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'This is the ordinary rule, not the emergency one',
+        text: 'Limitation and derogation are different operations, and this site keeps them on different pages. A limitation clause applies at all times; derogation sets an obligation aside for a period. The emergency question is answered at [which rights can never be suspended](/justice/which-rights-can-never-be-suspended).',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'A state that could not restrict any right could not run a criminal justice system. Arrest restricts liberty. A search restricts privacy. A trial restricts the accused’s freedom of movement and, if it convicts, a great deal more. Every institution this site describes exercises powers that reduce somebody’s rights, and it exercises them because a society asked it to.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'A limitation clause is what stands between that and the proposition that a government may restrict a right whenever restriction would be useful. It converts "we had a good reason" into a set of questions with answers that can be checked: was there a legal basis, what purpose was served, was there a less restrictive route, and is there anything left of the right afterwards.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Why the clause is written into the constitution rather than left to judgement',
+        text: 'A rule written in advance is a rule written before anyone knew which case it would decide. That is the same reason a non-derogable list is drawn up in calm conditions rather than during the emergency it governs — and it is why the systems here that lack a general clause are not thereby more permissive, only differently organised.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'Switzerland writes the fullest single clause. Article 36 of the Bundesverfassung requires four things at once: a legal basis, and *significant* restrictions must be provided for in a federal act itself — "Einschränkungen von Grundrechten bedürfen einer gesetzlichen Grundlage. Schwerwiegende Einschränkungen müssen im Gesetz selbst vorgesehen sein" — with an exception only for serious, immediate danger that cannot otherwise be averted; justification by a public interest or the protection of the fundamental rights of others; proportionality; and, in Article 36(4), "Der Kerngehalt der Grundrechte ist unantastbar" — the essence of fundamental rights is inviolable.',
+        claim: 'fact',
+        sources: ['ch-constitution'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'The density requirement is the underrated half',
+        text: 'Article 36(1) does not only ask whether there is a law. It asks how important the law has to be: a serious restriction must appear in the federal act rather than in something made under it. That is a rule about who decides, not about what is decided, and it is the part of a limitation clause most often left out of summaries of one.',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'South Africa — one clause, five named factors',
+            description:
+              'Section 36(1) permits limitation "only in terms of law of general application to the extent that the limitation is reasonable and justifiable in an open and democratic society based on human dignity, equality and freedom, taking into account all relevant factors, including" the nature of the right; the importance of the purpose; the nature and extent of the limitation; the relation between the limitation and its purpose; and less restrictive means. Section 36(2) then closes the door: except under 36(1) or another constitutional provision, no law may limit any entrenched right.',
+          },
+          {
+            term: 'Kenya — the same words, and then three more requirements',
+            description:
+              'Article 24(1) uses almost South Africa’s formula and its own five factors. Article 24(2) then adds what South Africa does not have: a limiting statute enacted after the effective date "is not valid unless the legislation specifically expresses the intention to limit that right or fundamental freedom, and the nature and extent of the limitation"; it may not be construed as limiting unless clear and specific; and it "shall not limit the right or fundamental freedom so far as to derogate from its core or essential content". Article 24(3) then places the burden expressly: "The State or a person seeking to justify a particular limitation shall demonstrate to the court, tribunal or other authority that the requirements of this Article have been satisfied."',
+          },
+          {
+            term: 'Canada — the same family, with no factors in the text at all',
+            description:
+              'Section 1 of the Charter guarantees the rights it sets out "subject only to such reasonable limits prescribed by law as can be demonstrably justified in a free and democratic society". That is the whole clause. It names no factors, no core content and no onus.',
+          },
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Three systems, one phrase, three different amounts of law',
+        text: 'Canada, South Africa and Kenya all ask whether a limit is justifiable in a free or open and democratic society. Canada stops there; South Africa lists five things to weigh; Kenya lists five, requires the statute to announce itself, protects a core, and says who has to prove it. Reading the shared phrase as a shared test would flatten the three most consequential differences between them.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Germany takes the opposite structural route. There is no general limitation clause: each right that may be restricted carries its own restriction provision — assembly under Article 8(2), the secrecy of communications under Article 10(2), freedom of movement under Article 11(2), the home under Article 13(7). Article 19 then imposes two requirements on any such law: it "muß das Gesetz allgemein und nicht nur für den Einzelfall gelten" — it must be general and not merely for a single case — and it must name the basic right affected and the Article in which it appears. Article 19(2) adds the ceiling: "In keinem Falle darf ein Grundrecht in seinem Wesensgehalt angetastet werden."',
+        claim: 'fact',
+        sources: ['de-grundgesetz'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'A law that limits a right must say so',
+        text: 'The German requirement that a restricting statute name the right and the Article is a formal rule with a substantive point: a legislature that must write down which right it is restricting cannot restrict one inadvertently, and a reader of the statute book can find the restriction. Kenya reaches the same idea from a different direction, and makes non-compliance a question of validity rather than of form.',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'Spain — regulation by ley, with an untouchable core',
+            description:
+              'Article 53(1) provides that the rights of Chapter II bind all public powers, and that their exercise may be regulated "sólo por ley, que en todo caso deberá respetar su contenido esencial" — only by statute, which must in every case respect their essential content.',
+          },
+          {
+            term: 'Czechia — generality, essence, and a bar on misuse',
+            description:
+              'Article 4 of the Listina requires limits to be by law and only under the Charter’s conditions; requires any statutory limitation to "apply in the same way to all cases which meet the specified conditions"; requires that "the essence and significance of these rights and freedoms must be preserved"; and adds a requirement no other text here contains — "Such limitations shall not be misused for purposes other than those for which they were enacted."',
+          },
+          {
+            term: 'The European Convention — per-right clauses with a closed list of aims',
+            description:
+              'There is no general clause. Article 8(2) permits interference with private and family life, home and correspondence only where it "is in accordance with the law and is necessary in a democratic society" in the interests of national security, public safety or the economic well-being of the country, for the prevention of disorder or crime, for the protection of health or morals, or for the protection of the rights and freedoms of others. Article 11(2) has the same shape for assembly and association. The list of aims is exhaustive; a purpose not on it is not available.',
+          },
+          {
+            term: 'Japan — the public welfare, and no clause of any of these kinds',
+            description:
+              'Article 12 provides that the people shall refrain from any abuse of their freedoms and rights and "shall always be responsible for utilizing them for the public welfare". Article 13 makes the right to life, liberty and the pursuit of happiness "the supreme consideration in legislation and in other governmental affairs" — but only "to the extent that it does not interfere with the public welfare".',
+          },
+        ],
+      },
+      {
+        kind: 'paragraph',
+        text: 'And two systems’ texts carry no general limitation clause at all. Brazil states in Article 5º § 1º that the norms defining fundamental rights and guarantees have immediate application, and puts such limits as there are inside individual incisos. The Bill of Rights of the United States contains nothing of the kind in any of its ten amendments.',
+        claim: 'fact',
+        sources: ['br-cf-1988', 'us-bill-of-rights'],
+      },
+      {
+        kind: 'callout',
+        variant: 'uncertainty',
+        title: 'What an absent clause does and does not tell you',
+        text: 'That a constitution contains no general limitation clause is a fact about the document. It is not evidence that rights in that country are unlimited, or that they are limited without structure. Both systems have extensive doctrine on the question, and neither that doctrine nor any decision applying it was researched for this page.',
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'If something is a constitutional right, the government cannot touch it.',
+        reality:
+          'Most of the texts here provide expressly for restriction. Switzerland, South Africa, Kenya, Canada, Spain and Czechia each contain a clause whose whole subject is when a right may be limited, and Germany attaches a restriction provision to individual rights.',
+      },
+      {
+        claim: 'If a right can be limited, calling it a right is empty.',
+        reality:
+          'A qualified right shifts what has to be shown and who has to show it. Kenya’s Article 24(3) puts the burden on the State or whoever seeks to justify the limitation; South Africa’s section 36(1)(e) requires less restrictive means to be considered; Switzerland’s Article 36(1) requires a serious restriction to be in a federal act rather than in a regulation. None of that is available where no right is engaged.',
+        note: 'Four of the texts read here also place something beyond limitation entirely — the Swiss Kerngehalt, the German Wesensgehalt, the Spanish contenido esencial and the Kenyan core or essential content.',
+      },
+      {
+        claim: 'Every system applies the same test, just in different words.',
+        reality:
+          'Canada names no factors; South Africa names five; Kenya names five and adds a validity rule, a core-content bar and an express onus; Germany has no general clause but two formal requirements; the European Convention uses a closed list of aims per right; Japan uses the public welfare. These are not translations of one another.',
+      },
+      {
+        claim: 'A limitation and a derogation are two words for the same thing.',
+        reality:
+          'A limitation clause asks whether a restriction is justified under a standing test that applies at all times. A derogation clause asks whether a state may set an obligation aside for a period. Several systems have the first and no second at all.',
+        note: 'The derogation half is the subject of a separate page on which rights can never be suspended.',
+      },
+      {
+        claim: 'A government can limit a right by pointing at any purpose it likes.',
+        reality:
+          'Article 8(2) of the European Convention lists the permissible aims and the list is closed. Czechia’s Article 4(4) provides that limitations "shall not be misused for purposes other than those for which they were enacted". Switzerland requires a public interest or the protection of others’ fundamental rights.',
+      },
+      {
+        claim: 'A constitution with no limitation clause protects rights more strongly.',
+        reality:
+          'It organises the question differently. A text that says nothing about limitation leaves the structure to be built elsewhere, which is a different distribution of the same work rather than a stronger or weaker version of it.',
+        note: 'This page does not rank the architectures, and the evidence read here would not support ranking them.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Six architectures for one problem, and the axis that separates them is where the text puts the work.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'One general clause, four cumulative requirements including an inviolable core — Switzerland, BV Art. 36.',
+          'One general clause with enumerated factors — South Africa, s. 36; Kenya, Art. 24, which adds a validity rule, a core-content bar and an express burden of proof.',
+          'One general clause with no factors stated — Canada, Charter s. 1.',
+          'No general clause; per-right restriction provisions plus formal requirements and a core-content ceiling — Germany, GG Arts. 8(2), 10(2), 11(2), 13(7) with Art. 19(1)–(2).',
+          'No general clause; per-right two-limb clauses with a closed list of legitimate aims — European Convention, Arts. 8(2) and 11(2).',
+          'A general standard rather than a clause — Japan, Arts. 12 and 13, the public welfare.',
+          'No general limitation clause in the text at all — Brazil, whose Art. 5º § 1º gives fundamental-rights norms immediate application; the United States Bill of Rights.',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'Scope of these statements',
+        text: 'Each constitutional provision is the law of its own country. The European Convention binds the states party to it and is not evidence of any particular state’s domestic law. Nothing here supports a claim about a system not named.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'A limitation clause is only as good as the forum that applies it, which is why the clauses that say most about proof say it in procedural terms. Kenya’s Article 24(3) directs the demonstration to "the court, tribunal or other authority"; Spain’s Article 53(2) routes a claim through the ordinary courts by a preferential and summary procedure and, where applicable, the recurso de amparo; Germany’s Article 19(4) opens the courts to any person whose rights are violated by public authority.',
+        claim: 'fact',
+        sources: ['ke-constitution', 'es-constitution', 'de-grundgesetz'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'The machinery that hears such a challenge is Wave 19’s subject, not this page’s: see [constitutional review](/justice/constitutional-review) for who decides whether a law is constitutional, and [effective remedy](/justice/effective-remedy) for what a forum can actually give.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'It is worth stating plainly what these clauses are for, because a page listing constraints can read as though constraint were the point. It is not. Every system here grants the state powers that reduce rights, and grants them because the alternative — a state that cannot arrest, search, try or detain — protects nobody. The limitation clause is the instrument that lets those powers be used with confidence: a measure that satisfies it is a measure whose legality can be defended afterwards, which is what distinguishes the exercise of authority from the assertion of it.',
+        claim: 'analysis',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [what proportionality requires](/justice/what-proportionality-requires), [limits on public power](/justice/limits-on-public-power), [who fundamental rights bind](/justice/who-fundamental-rights-bind), and, for the emergency half of the question, [which rights can never be suspended](/justice/which-rights-can-never-be-suspended).',
+      },
+    ],
+  },
+  {
+    slug: 'what-proportionality-requires',
+    title: 'What proportionality requires',
+    shortTitle: 'What proportionality requires',
+    question: 'Is there one proportionality test that legal systems apply?',
+    summary:
+      'No. The two treaties most often cited for the doctrine never use the word, three constitutions state its components without naming it, and Switzerland uses it twice in two different jobs — once for restrictions on rights, once for every act of the state.',
+    entityType: 'concept',
+    section: 'justice',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'how-a-right-can-be-limited',
+      'limits-on-public-power',
+      'police-use-of-force',
+      'legal-certainty',
+    ],
+    sources: [
+      'ch-constitution',
+      'za-constitution',
+      'ke-constitution',
+      'de-grundgesetz',
+      'cz-listina',
+      'echr-convention',
+      'iccpr',
+      'ca-charter-1982',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-05',
+    publishedOn: '2026-09-05',
+    reviewedOn: '2026-09-05',
+    factsVerifiedOn: '2026-09-05',
+    readingTimeMinutes: 10,
+    keyTerms: ['rule-of-law'],
+    uncertainty: [
+      'The statements that the word "proportionality" does not appear in the European Convention or the Covenant are statements about those texts. Both bodies of case law use the concept extensively, and neither was researched here.',
+      'No court’s formulation of a proportionality test is described. Where a system’s doctrine is judicial rather than textual, this page says only what the text contains.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Proportionality is the idea that a measure must not cost more than its purpose is worth — that the state should not use a heavier instrument where a lighter one would do, and should not pursue a real objective by means out of all relation to it.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'It is often described as though there were a single test, applied everywhere in the same steps. The texts do not support that. Some constitutions use the word and leave it undefined; some spell out components and never use the word; and the two treaties most often invoked for the doctrine do not contain it at all.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This compares what constitutional and treaty texts say. It describes no court’s formulation, assesses no measure, and is not legal advice.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'The problem proportionality answers appears the moment a state has a power it may use in more than one way. A legal basis tells an official that they may act. A legitimate purpose tells them why. Neither tells them how much.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'paragraph',
+        text: 'That gap is where most complaints about public authority actually live. The objection is rarely that the state had no business acting at all; it is that it went further than it needed to, or reached for the most severe option first. Proportionality is the name for the requirement that the answer to "how much" be defensible.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'It cuts in both directions',
+        text: 'A requirement that a measure be no heavier than necessary is also a statement that a necessary measure is available. A doctrine that asked only whether a measure restricted a right would produce a state unable to act; proportionality asks whether the restriction was worth it, which is a question with "yes" among its answers.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'Switzerland is the clearest case, and it is clear in an unexpected way: the Bundesverfassung contains proportionality twice, in two provisions doing two different jobs. Article 36(3) provides that restrictions on fundamental rights must be proportionate. Article 5(2), in the rule-of-law article at the front of the constitution, provides something wider — "Staatliches Handeln muss im öffentlichen Interesse liegen und verhältnismässig sein": state action must be in the public interest and proportionate.',
+        claim: 'fact',
+        sources: ['ch-constitution'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'The wider provision is the more interesting one',
+        text: 'Article 5(2) is not about rights. It attaches to state activity as such, which means a Swiss measure can be disproportionate without restricting anyone’s fundamental right. Treating proportionality purely as a rights doctrine — the way a reader who met it only through a rights case would — misses half of what this constitution does with it.',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'South Africa — the components, without the word',
+            description:
+              'Section 36(1) does not use "proportionate". It requires a limitation to be reasonable and justifiable, taking into account the nature of the right, the importance of the purpose of the limitation, the nature and extent of the limitation, the relation between the limitation and its purpose, and less restrictive means to achieve the purpose. Those last three are the components a proportionality analysis is usually said to have.',
+          },
+          {
+            term: 'Kenya — the same components, with the necessity limb attached to the same factor',
+            description:
+              'Article 24(1)(e) states as one factor "the relation between the limitation and its purpose and whether there are less restrictive means to achieve the purpose". Kenya keeps the fit question and the necessity question in a single clause rather than as separate steps.',
+          },
+          {
+            term: 'Germany — the word appears, but narrowly',
+            description:
+              'The Grundgesetz uses a proportionality term in Article 13(3), and it uses it as a threshold for one investigative measure: acoustic surveillance of a home is available only where alternative methods of investigating the matter "would be disproportionately difficult or unproductive". That is proportionality doing a specific job in a specific place, not a general clause.',
+          },
+          {
+            term: 'Czechia — proportionality’s work done by other words',
+            description:
+              'Article 4(4) of the Listina requires the essence and significance of a right to be preserved and forbids limitations being "misused for purposes other than those for which they were enacted". Article 12(3) permits encroachments on the dwelling beyond a criminal search only where "necessary in a democratic society" for listed purposes.',
+          },
+        ],
+      },
+      {
+        kind: 'paragraph',
+        text: 'The European Convention is where the assumption of a universal test is most often formed, and its text is where the assumption fails. The word "proportion", in any form, occurs nowhere in the Convention. Article 8(2) requires an interference to be "in accordance with the law" and "necessary in a democratic society" for one of a closed list of aims; Article 11(2) has the same structure. The International Covenant on Civil and Political Rights does not contain the word either.',
+        claim: 'fact',
+        sources: ['echr-convention', 'iccpr'],
+      },
+      {
+        kind: 'callout',
+        variant: 'uncertainty',
+        title: 'What that absence establishes, and what it does not',
+        text: 'It establishes that these treaties do not state a proportionality test. It does not establish that proportionality plays no part in how they are applied — both bodies of case law use the concept heavily, and neither was researched for this page. The finding is about the instruments, and it matters because the instruments are what people quote.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Canada shows the third possibility. Section 1 of the Charter permits "such reasonable limits prescribed by law as can be demonstrably justified in a free and democratic society", and stops. The text contains neither the word proportionality nor any of the components South Africa and Kenya enumerate.',
+        claim: 'fact',
+        sources: ['ca-charter-1982'],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Proportionality is a single test with a fixed number of steps.',
+        reality:
+          'Switzerland states it in one word and leaves the content open; South Africa and Kenya enumerate components without using the word; the European Convention and the Covenant do not contain the word at all; Canada’s section 1 states neither the word nor the components.',
+      },
+      {
+        claim: 'Proportionality comes from the European Convention on Human Rights.',
+        reality:
+          'The word "proportion", in any form, occurs zero times in the Convention text. What the Convention states is "necessary in a democratic society", coupled with a closed list of legitimate aims for each qualified right.',
+        note: 'This is a statement about the treaty text. It says nothing about the case law, which was not researched here.',
+      },
+      {
+        claim: 'Necessity and proportionality are the same requirement.',
+        reality:
+          'The texts separate them where they state both. South Africa asks about "the relation between the limitation and its purpose" and, as a distinct factor, "less restrictive means to achieve the purpose". The European Convention asks whether an interference is necessary in a democratic society, and does not ask about proportion at all.',
+        note: 'Where a text states only one of the two, this page does not supply the other.',
+      },
+      {
+        claim: 'Proportionality only matters when a right is at stake.',
+        reality:
+          'Article 5(2) of the Swiss Bundesverfassung requires all state action to be in the public interest and proportionate. It sits in the rule-of-law article, not in the fundamental-rights chapter, and it is not conditioned on a right being engaged.',
+      },
+      {
+        claim: 'A proportionate measure is a mild one.',
+        reality:
+          'Proportionality relates a measure to its purpose. A severe measure serving a sufficiently weighty purpose, where nothing lighter would achieve it, is what these clauses are designed to permit — which is why they are the mechanism by which coercive powers are exercised rather than an obstacle to exercising them.',
+        note: 'Whether any particular measure meets that description is a question for a court, not for this page.',
+      },
+      {
+        claim:
+          'If a country’s constitution does not use the word, its law has no proportionality doctrine.',
+        reality:
+          'The absence of a word from a text is a fact about the text. This page records where the word appears and where it does not, and makes no claim about the doctrine of any system whose case law it did not read.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Where the idea lives differs, and so does how much of it is written down.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Named twice, for two different jobs — Switzerland: BV Art. 36(3) for restrictions on rights, BV Art. 5(2) for all state action.',
+          'Components enumerated, word absent — South Africa, s. 36(1)(c)–(e); Kenya, Art. 24(1)(c) and (e).',
+          'Named once, as a threshold for a single investigative measure — Germany, GG Art. 13(3).',
+          'Reached through "necessary in a democratic society" and a closed list of aims — European Convention, Arts. 8(2) and 11(2); Czechia, Listina Art. 12(3), which imports the same formula for one right.',
+          'Neither word nor components in the text — Canada, Charter s. 1; the International Covenant on Civil and Political Rights.',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'Scope of these statements',
+        text: 'Each constitutional provision is the law of its own country. The two treaties bind the states party to them and are not evidence of any state’s domestic law. Nothing here describes any court’s formulation of a test.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'One area of the corpus already turns on necessity and proportionality, and it is worth separating from this page. International policing instruments state that force must satisfy necessity, proportionality and precaution — a framework about how an official may act in a moment, applied afterwards to a specific incident. That is described at [police use of force](/law-enforcement/police-use-of-force).',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Two different objects being measured',
+        text: 'The use-of-force framework measures an action against its objective. A constitutional limitation clause measures a rule — usually a statute — against the right it restricts. The words overlap; the thing being weighed does not, and the forum that weighs it is different.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'What proportionality gives an accountability system is a question that can be put to an institution and answered with evidence: what else was available, and why was this chosen. Kenya’s Article 24(3) makes the answer someone’s burden by name. A requirement that produces a record of the alternatives considered is worth more to review than a requirement that produces a conclusion.',
+        claim: 'analysis',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [how a constitutional right can be limited](/justice/how-a-right-can-be-limited), [limits on public power](/justice/limits-on-public-power), and [police use of force](/law-enforcement/police-use-of-force).',
+      },
+    ],
+  },
+  {
+    slug: 'who-a-constitutional-right-belongs-to',
+    title: 'Who a constitutional right belongs to',
+    shortTitle: 'Who a right belongs to',
+    question: 'When a constitution says "everyone", does it mean everyone?',
+    summary:
+      'Not always, and the word chosen is doing work. Germany reserves assembly, association and movement to Germans while giving liberty and privacy to everyone; Ireland words a right for citizens and its remedy for any person; Brazil guarantees to Brazilians and resident foreigners.',
+    entityType: 'concept',
+    section: 'justice',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'who-fundamental-rights-bind',
+      'how-a-right-can-be-limited',
+      'equality-before-the-law',
+      'the-right-to-silence',
+    ],
+    sources: [
+      'de-grundgesetz',
+      'ie-constitution',
+      'br-cf-1988',
+      'es-constitution',
+      'jp-constitution',
+      'us-bill-of-rights',
+      'za-constitution',
+      'ke-constitution',
+      'ch-constitution',
+      'echr-convention',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-05',
+    publishedOn: '2026-09-05',
+    reviewedOn: '2026-09-05',
+    factsVerifiedOn: '2026-09-05',
+    readingTimeMinutes: 10,
+    keyTerms: ['rule-of-law'],
+    uncertainty: [
+      'Every statement here is about constitutional text. How any court has construed a holder term — and several have construed them more widely than the words suggest — was not researched, and no page on this site treats the textual holder as the operative holder.',
+      'Only the provisions relevant to this wave’s questions were read in each constitution. A system may word other rights differently again.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Constitutions do not use one word for the person a right belongs to. They use "everyone", "every person", "all persons", "no person", "the people", "citizens", "Germans", "Spaniards", "the accused", "an arrested person", "the detained person" — and in several instruments more than one of these, in provisions sitting a page apart.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The differences are not editorial. A right worded for citizens and a right worded for everyone are different rights, and a page that describes either as belonging to "citizens" has misdescribed at least one of them.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This compares the words constitutional texts use for the holder of a right. It is not immigration law, it does not state anyone’s legal status anywhere, it describes no court’s interpretation, and it is not legal advice.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'A constitution that guaranteed nothing to anyone in particular would be unenforceable, so every text has to say who may invoke what. The drafting choices that follow are rarely accidental, and they cluster: the rights most often tied to nationality are the ones about participating in the political community, and the rights most often given to everyone are the ones about being physically at the mercy of the state.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Why this site is careful about it',
+        text: 'The failure mode is small and constant. "Citizens have the right to remain silent" reads as a harmless summary and is wrong in most of the systems on this page, where the right belongs to an arrested person regardless of nationality. Preserving the holder is not pedantry; it is the difference between describing the provision and describing something else.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'Germany is the clearest single case, and the reason is that the Basic Law does three different things in adjacent articles. Four rights are worded for Germans: "Alle Deutschen haben das Recht, sich ohne Anmeldung oder Erlaubnis friedlich und ohne Waffen zu versammeln" (Art. 8(1), assembly); "Alle Deutschen haben das Recht, Vereine und Gesellschaften zu bilden" (Art. 9(1), association); "Alle Deutschen genießen Freizügigkeit im ganzen Bundesgebiet" (Art. 11(1), movement); and Art. 12(1), on the free choice of occupation, workplace and place of training.',
+        claim: 'fact',
+        sources: ['de-grundgesetz'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Others are worded for anyone: "Jeder hat das Recht auf die freie Entfaltung seiner Persönlichkeit" (Art. 2(1)), and "Alle Menschen sind vor dem Gesetz gleich" (Art. 3(1)). And two of the provisions this wave reads most closely name no holder at all: Article 10(1) states that "Das Briefgeheimnis sowie das Post- und Fernmeldegeheimnis sind unverletzlich", and Article 13(1) that "Die Wohnung ist unverletzlich".',
+        claim: 'fact',
+        sources: ['de-grundgesetz'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Three grammars, one constitution',
+        text: 'A right can be granted to a class of person, granted to any person, or stated as an inviolability of a thing. The third is not a weaker version of the first two — it is a different sentence about a different subject, and translating all three into "citizens have the right to…" erases the distinction the drafters made three times.',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'Ireland — the right and its remedy, worded differently in consecutive subsections',
+            description:
+              'Article 40.4.1° provides that "No citizen shall be deprived of his personal liberty save in accordance with law." Article 40.4.2°, immediately following, opens the habeas procedure to a wider class: "Upon complaint being made by or on behalf of any person to the High Court or any judge thereof alleging that such person is being unlawfully detained…" Article 40.5 returns to the narrower word: "The dwelling of every citizen is inviolable."',
+          },
+          {
+            term: 'Brazil — a residence qualifier in the opening line',
+            description:
+              'The caput of Article 5º states that all are equal before the law without distinction of any nature, "garantindo-se aos brasileiros e aos estrangeiros residentes no País a inviolabilidade do direito à vida, à liberdade, à igualdade, à segurança e à propriedade" — guaranteeing to Brazilians and to foreigners resident in the country the inviolability of the rights to life, liberty, equality, security and property.',
+          },
+          {
+            term: 'Spain — liberty for every person, movement for Spaniards',
+            description:
+              'Article 17(1) opens "Toda persona tiene derecho a la libertad y a la seguridad". Article 19, two articles later, opens "Los españoles tienen derecho a elegir libremente su residencia y a circular por el territorio nacional".',
+          },
+          {
+            term: 'Japan and the United States — a switch in the middle of the instrument',
+            description:
+              'Japan’s Chapter III speaks of "the people" (Arts. 11, 12) and "All of the people" (Arts. 13, 14); the criminal-procedure articles then switch to "No person" (Arts. 31, 33, 38) and "all persons" (Art. 35). The Bill of Rights makes the same move between two consecutive amendments: the Fourth secures "The right of the people", the Fifth provides that "No person shall be… compelled in any criminal case to be a witness against himself".',
+          },
+        ],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Spain and Germany land on the same pattern from different starting points: both give liberty and privacy to any person and reserve freedom of movement to nationals. Whether that convergence reflects a shared idea or two separate drafting histories is not something the texts can settle, and this page does not claim it does.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Three constitutions in this set use a single wide term for the rights read here. South Africa words sections 12, 14 and 35 for "Everyone", and reserves "every citizen" for political rights under section 19. Kenya words Articles 27, 29 and 31 for "Every person" and Article 49 for "An arrested person". Switzerland words Articles 10, 13, 31 and 32 for "Jede Person".',
+        claim: 'fact',
+        sources: ['za-constitution', 'ke-constitution', 'ch-constitution'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Holders need not be human',
+        text: 'Article 19(3) of the Grundgesetz provides that the basic rights also apply to domestic legal persons to the extent that the nature of such rights permits. A question about who holds a right is not only a question about which people.',
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Constitutional rights belong to citizens.',
+        reality:
+          'In most provisions read here they do not. Switzerland words the rights on this page for "Jede Person", South Africa for "Everyone", Kenya for "Every person", Spain’s liberty article for "Toda persona", and the criminal-procedure articles of both Japan and the United States for "No person" and "all persons".',
+      },
+      {
+        claim: 'Constitutional rights belong to everyone.',
+        reality:
+          'Also not reliably. Germany words assembly, association, movement and occupation for "Alle Deutschen"; Spain words residence and movement for "Los españoles"; Ireland words personal liberty, the inviolability of the dwelling and free expression for the citizen.',
+        note: 'Both of the first two misconceptions are defensible generalisations about some texts and wrong about others, which is why this page compares the words rather than stating a rule.',
+      },
+      {
+        claim: 'A right and the remedy that enforces it have the same holder.',
+        reality:
+          'Ireland’s Article 40.4 puts the two in consecutive subsections with different words: the right against deprivation of liberty is worded for the citizen, and the habeas procedure is available "by or on behalf of any person".',
+      },
+      {
+        claim: 'A constitution uses one word for the rights-holder throughout.',
+        reality:
+          'Japan uses "the people" in Articles 11 to 14 and "No person" or "all persons" in Articles 31 to 40. The United States Bill of Rights uses "the people" in the Fourth Amendment and "No person" in the Fifth. Germany uses three different grammars across Articles 8 to 13.',
+      },
+      {
+        claim: 'If the text says "citizen", non-citizens have no protection there.',
+        reality:
+          'This page reports what the texts say and stops. How the Irish courts have construed "citizen" in Article 40 was not researched, and nothing here should be read as a statement about anyone’s position in any legal system.',
+        note: 'The same caution applies to every holder term on this page.',
+      },
+      {
+        claim: 'Rights-holder wording is a drafting detail with no consequences.',
+        reality:
+          'It determines who may bring the claim. Kenya makes the point in the opposite direction at Article 24(5), which permits legislation to limit the application of named rights — privacy, association, assembly, labour relations, economic and social rights, and the rights of arrested persons — to persons serving in the Kenya Defence Forces or the National Police Service.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Five ways a text can answer the question, and several constitutions use more than one.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'A wide term throughout the rights read here — Switzerland "Jede Person"; South Africa "Everyone"; Kenya "Every person".',
+          'A nationality term for some rights and a wide term for others — Germany, "Alle Deutschen" in Arts. 8, 9, 11 and 12 against "Jeder" in Art. 2; Spain, "Los españoles" in Art. 19 against "Toda persona" in Art. 17.',
+          'A citizenship term across a rights article, with a wider term for its remedy — Ireland, Art. 40.4.1° and 40.5 against Art. 40.4.2°.',
+          'A residence qualifier — Brazil, CF Art. 5º caput.',
+          'A switch between chapters or between adjacent provisions — Japan, Arts. 11–14 against 31–40; United States, Amendment IV against Amendment V.',
+          'No holder named at all, the right stated as an inviolability — Germany, GG Arts. 10(1) and 13(1).',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'Scope of these statements',
+        text: 'Each constitutional provision is the law of its own country. Nothing here supports a claim about a system not named, and nothing here is a statement about immigration status, entitlement or treatment anywhere.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'The European Convention answers the holder question at the level of the state’s obligation rather than the individual’s nationality: the rights read here are worded for "Everyone", and the two articles most relevant to this wave — Article 5 on liberty and Article 8 on private life, home and correspondence — use that word without qualification.',
+        claim: 'fact',
+        sources: ['echr-convention'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'A treaty holder is not a domestic holder',
+        text: 'That the Convention words a right for everyone does not settle who may claim it in any national court. What a treaty does inside a legal system is a separate question, answered at [international rights and domestic law](/justice/international-rights-and-domestic-law).',
+      },
+      {
+        kind: 'paragraph',
+        text: 'For an accountability system the practical consequence is narrow and important: the holder term determines standing. A body reviewing whether a power was lawfully exercised has to know who was entitled to object, and a summary that has replaced "any person" with "citizen" has changed the answer without recording that it did.',
+        claim: 'analysis',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [who fundamental rights bind](/justice/who-fundamental-rights-bind), [equality before the law](/justice/equality-before-the-law), and [how a constitutional right can be limited](/justice/how-a-right-can-be-limited).',
+      },
+    ],
+  },
+  {
+    slug: 'who-fundamental-rights-bind',
+    title: 'Who fundamental rights bind',
+    shortTitle: 'Who rights bind',
+    question: 'Do fundamental rights only apply against the government?',
+    summary:
+      'Constitutions name their addressee, and they do not all name the same one. Germany binds the legislature, executive and judiciary as directly applicable law; Switzerland binds whoever acts on behalf of the state and directs authorities to make rights reach private relations where appropriate.',
+    entityType: 'concept',
+    section: 'justice',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'who-a-constitutional-right-belongs-to',
+      'why-government-is-bound-by-law',
+      'how-a-right-can-be-limited',
+      'international-rights-and-domestic-law',
+    ],
+    sources: [
+      'de-grundgesetz',
+      'ch-constitution',
+      'es-constitution',
+      'cz-listina',
+      'nl-constitution',
+      'br-cf-1988',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-05',
+    publishedOn: '2026-09-05',
+    reviewedOn: '2026-09-05',
+    factsVerifiedOn: '2026-09-05',
+    readingTimeMinutes: 8,
+    uncertainty: [
+      'Six constitutions were read for this question. Whether a system without an express addressee clause reaches the same results by other means was not researched.',
+      'The Swiss provision on private relations is stated here in its own words. What "where appropriate" has been held to cover is case law, and was not researched.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'A right needs somebody it runs against. Constitutions answer that in a provision separate from the rights themselves, and the answers differ in a way that changes what the rights can be used for.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This explains which bodies constitutional texts say fundamental rights bind. It is a different question from who holds a right — that is [who a constitutional right belongs to](/justice/who-a-constitutional-right-belongs-to) — and it is not legal advice.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'The obvious addressee is the executive, because the executive is what arrests, searches and detains. But a right binding only the executive would be defeated by a statute directing the executive to act, and a right binding only the legislature and the executive would be defeated by a court that declined to apply it. Naming all three closes both routes.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The harder question is whether a constitutional right has anything to say about what one private party does to another. Most of the harm people suffer is not inflicted by the state, and a constitution that ignored that would leave a large gap; a constitution that regulated private conduct directly would be a different kind of instrument altogether. The texts here take different routes between those positions.',
+        claim: 'analysis',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'Germany states the addressee in the third sentence of the constitution’s first article. Article 1(3) provides that the following basic rights bind the legislature, the executive and the judiciary as directly applicable law — all three branches, and directly, without waiting for implementing legislation.',
+        claim: 'fact',
+        sources: ['de-grundgesetz'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: '"Directly applicable" is the operative phrase',
+        text: 'A right that binds an organ only once a statute says so is a right the legislature can switch off by inaction. Article 1(3) removes that possibility, which is why it sits with human dignity rather than in the machinery chapters.',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'Switzerland — the widest addressee clause read here',
+            description:
+              'Article 35 has three paragraphs, and each does separate work. Fundamental rights must be upheld throughout the legal system. Whoever acts on behalf of the state is bound by them and is under a duty to contribute to their implementation — an obligation to act, not only to refrain. And the authorities shall ensure that fundamental rights, where appropriate, apply to relationships among private persons.',
+          },
+          {
+            term: 'Spain — all public powers, in the article that also governs limitation',
+            description:
+              'Article 53(1) opens: "Los derechos y libertades reconocidos en el Capítulo segundo del presente Título vinculan a todos los poderes públicos." The same sentence that names the addressee goes on to require that any statute regulating their exercise respect their essential content.',
+          },
+          {
+            term: 'Czechia — the addressee stated as a constraint on imposing duties',
+            description:
+              'Article 4(1) of the Listina approaches it from the other end: "Duties may be imposed only on the basis, and within the bounds, of law, and only while respecting the fundamental rights and freedoms." The subject is whoever imposes the duty.',
+          },
+          {
+            term: 'Brazil — immediate application, stated as a property of the norms',
+            description:
+              'Article 5º § 1º provides that "As normas definidoras dos direitos e garantias fundamentais têm aplicação imediata". Brazil names no addressee in that paragraph; it makes a statement about the norms instead.',
+          },
+        ],
+      },
+      {
+        kind: 'paragraph',
+        text: 'The Netherlands supplies the limiting case, and it is the reason this question is not merely theoretical. Article 120 of the Grondwet provides that "De rechter treedt niet in de beoordeling van de grondwettigheid van wetten en verdragen" — the courts shall not rule on the constitutionality of Acts of Parliament and treaties. The constitution binds the legislature; it does not authorise a Dutch court to enforce that against a statute.',
+        claim: 'fact',
+        sources: ['nl-constitution'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Being bound and being reviewable are different things',
+        text: 'A rule can bind an organ that no court may check. The Dutch arrangement separates the two cleanly, and it is what makes the treaty rule in the same constitution so consequential — see [international rights and domestic law](/justice/international-rights-and-domestic-law).',
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Fundamental rights bind the government, meaning the executive.',
+        reality:
+          'Germany’s Article 1(3) binds the legislature, the executive and the judiciary. Spain’s Article 53(1) binds "todos los poderes públicos". Switzerland’s Article 35(2) binds whoever acts on behalf of the state, which is wider than any list of organs.',
+      },
+      {
+        claim: 'Fundamental rights have nothing to say about what private parties do.',
+        reality:
+          'Article 35(3) of the Swiss Bundesverfassung directs the authorities to ensure that fundamental rights, where appropriate, apply to relationships among private persons. That is a constitutional instruction about private relations, stated in the constitution itself.',
+        note: 'What "where appropriate" covers is a question of Swiss case law, which was not researched here.',
+      },
+      {
+        claim: 'Fundamental rights only impose duties to refrain.',
+        reality:
+          'Switzerland’s Article 35(2) puts whoever acts on behalf of the state under a duty to contribute to the implementation of fundamental rights. Article 35(1) requires them to be upheld throughout the legal system.',
+      },
+      {
+        claim:
+          'If a constitution binds the legislature, a court can strike down a statute that breaches it.',
+        reality:
+          'Not necessarily. Article 120 of the Dutch Grondwet forbids the courts from ruling on the constitutionality of Acts of Parliament. Being bound and being judicially reviewable are separate constitutional choices.',
+      },
+      {
+        claim: 'A right binds an organ only once legislation implements it.',
+        reality:
+          'Germany’s Article 1(3) states that the basic rights bind all three branches "as directly applicable law", and Brazil’s Article 5º § 1º gives fundamental-rights norms immediate application.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Four ways of naming the addressee, and one system that answers the reviewability question separately.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'All three branches, as directly applicable law — Germany, GG Art. 1(3).',
+          'Whoever acts on behalf of the state, with a duty to implement and an instruction about private relations — Switzerland, BV Art. 35.',
+          'All public powers, in the same article that governs limitation — Spain, CE Art. 53(1).',
+          'Whoever imposes a duty, stated as a constraint on doing so — Czechia, Listina Art. 4(1).',
+          'No addressee named; immediate application stated as a property of the norms — Brazil, CF Art. 5º § 1º.',
+          'The legislature bound, and the courts expressly barred from reviewing its statutes against the constitution — Netherlands, Gw Art. 120.',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'Scope of these statements',
+        text: 'Each provision is the law of its own country. Nothing here supports a claim about a system not named.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'The addressee clause is what makes an accountability system possible to design, because it identifies who can be asked to answer. A right binding "whoever acts on behalf of the state" reaches a contractor performing a public function; a right binding named organs may not, and the difference is settled by the text rather than by the character of the body.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'That government is bound by law at all is the subject of [why government is bound by law](/justice/why-government-is-bound-by-law); the categories of limit on state action are at [limits on public power](/justice/limits-on-public-power). This page adds only the narrower question of whom the fundamental-rights provisions themselves name.',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [who a constitutional right belongs to](/justice/who-a-constitutional-right-belongs-to), [why government is bound by law](/justice/why-government-is-bound-by-law), and [international rights and domestic law](/justice/international-rights-and-domestic-law).',
+      },
+    ],
+  },
+  {
+    slug: 'international-rights-and-domestic-law',
+    title: 'International rights and domestic law',
+    shortTitle: 'Treaties and domestic law',
+    question: 'If a country has signed a human-rights treaty, is that treaty part of its law?',
+    summary:
+      'Constitutions answer this themselves, and they reach opposite conclusions. Ireland provides that no international agreement is part of domestic law save as the Oireachtas determines; the Netherlands requires courts to disapply a statute that conflicts with a self-executing treaty provision.',
+    entityType: 'concept',
+    section: 'justice',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'who-fundamental-rights-bind',
+      'constitutional-review',
+      'how-a-right-can-be-limited',
+      'effective-remedy',
+    ],
+    sources: [
+      'nl-constitution',
+      'ie-constitution',
+      'br-cf-1988',
+      'jp-constitution',
+      'iccpr',
+      'echr-convention',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-05',
+    publishedOn: '2026-09-05',
+    reviewedOn: '2026-09-05',
+    factsVerifiedOn: '2026-09-05',
+    readingTimeMinutes: 9,
+    keyTerms: ['rule-of-law'],
+    uncertainty: [
+      'Four constitutions were read on this question. How each provision has been applied is case law and was not researched.',
+      'What makes a treaty provision self-executing — the Dutch text says "die naar haar inhoud een ieder kunnen verbinden" — is a question this page does not answer, because answering it would require Dutch case law that was not read.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'A state can be bound by a treaty in international law and its own courts can still be unable to apply that treaty to a case. Those are two separate questions, and the second one is answered by the state’s own constitution.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'This site states the distinction on many pages in a single sentence — that an international instrument sets a standard for the states party to it and is not evidence of any state’s domestic law. This page is where the sentence is explained.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This compares what four constitutions say about the domestic effect of treaties. It does not state whether any particular treaty is enforceable in any particular country, describes no case, and is not legal advice.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'A treaty is agreed between governments. A statute is enacted by a legislature. If a treaty automatically became domestic law on signature, a government could change the law of its own country by agreement with another one, which is why almost every system puts some legislative step in the way — and why the systems differ mainly in where they put it.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'The stake is practical, not theoretical',
+        text: 'It decides what a person can actually argue. Where a treaty provision has direct effect, it is something to plead in a national court. Where it does not, it is a standard the state may be answerable for internationally and not an argument available to the individual at home.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'Ireland states one pole in a single sentence. Article 29.6 of Bunreacht na hÉireann provides: "No international agreement shall be part of the domestic law of the State save as may be determined by the Oireachtas."',
+        claim: 'fact',
+        sources: ['ie-constitution'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'The Netherlands states the other, in two articles that work together. Article 93 provides that provisions of treaties and of decisions of international organisations "die naar haar inhoud een ieder kunnen verbinden" — which by their content can be binding on everyone — have binding force once published. Article 94 then goes further than recognition: "Binnen het Koninkrijk geldende wettelijke voorschriften vinden geen toepassing, indien deze toepassing niet verenigbaar is met een ieder verbindende bepalingen van verdragen" — statutory regulations in force in the Kingdom are not applied where their application is incompatible with such treaty provisions.',
+        claim: 'fact',
+        sources: ['nl-constitution'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'The Dutch pairing produces the sharpest fact in this comparison',
+        text: 'Article 120 of the same constitution provides that the courts shall not rule on the constitutionality of Acts of Parliament. So a Dutch court may not measure a statute against its own constitution, and must decline to apply that statute where it conflicts with a self-executing treaty provision. In this one system, the treaty has more domestic bite than the constitution does.',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'Brazil — a graduated answer, by how the treaty was approved',
+            description:
+              'Article 5º § 2º provides that the rights and guarantees expressed in the Constitution do not exclude others deriving from the regime and principles it adopts, or from international treaties to which Brazil is party. Article 5º § 3º, added by Constitutional Amendment 45 of 2004, then adds a higher tier: international human-rights treaties and conventions approved in each House of the National Congress, in two rounds, by three-fifths of the votes of their members "serão equivalentes às emendas constitucionais" — shall be equivalent to constitutional amendments.',
+          },
+          {
+            term: 'Japan — an obligation of observance, stated without a mechanism',
+            description:
+              'Article 98(2) provides that "The treaties concluded by Japan and established laws of nations shall be faithfully observed." The article says what is owed; it does not state how a treaty provision is given effect in a Japanese court, and this page does not supply an answer the text does not contain.',
+          },
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Brazil’s answer depends on a vote count',
+        text: 'The same treaty can occupy two different places in Brazilian law depending on the majority by which Congress approved it. That is unusual and it is worth stating precisely: § 3º does not say human-rights treaties are equivalent to constitutional amendments, it says those approved in that specific manner are.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Both of the instruments this site cites most often are treaties of exactly this kind. The International Covenant on Civil and Political Rights carries obligations for the states party to it, including at Article 9 the right to liberty and security of person and at Article 14 the fair-hearing guarantees. The European Convention does the same for its own parties. Neither text states what effect it has inside any signatory’s legal system, because that is not a treaty’s question to answer.',
+        claim: 'fact',
+        sources: ['iccpr', 'echr-convention'],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'If a country ratified a human-rights treaty, its courts apply that treaty.',
+        reality:
+          'Article 29.6 of the Irish Constitution provides that no international agreement is part of the domestic law of the State save as may be determined by the Oireachtas. Ratification and domestic effect are separate steps in that text.',
+      },
+      {
+        claim: 'A treaty is always weaker than a constitution inside a legal system.',
+        reality:
+          'In the Netherlands, Article 94 requires statutes to be left unapplied where they conflict with self-executing treaty provisions, while Article 120 forbids the courts from reviewing statutes against the Constitution.',
+      },
+      {
+        claim: 'Every human-rights treaty has the same status within a country.',
+        reality:
+          'Brazil’s Article 5º § 3º gives constitutional-amendment equivalence only to human-rights treaties approved in each House, in two rounds, by three-fifths of the members. Approval by another route does not attract that status under the text.',
+      },
+      {
+        claim: 'A treaty provision has whatever effect the treaty says it has.',
+        reality:
+          'The Covenant and the Convention state obligations for the states party to them. Neither states what a national court must do with them; that is answered by each state’s own constitution, and the four read here answer it differently.',
+      },
+      {
+        claim:
+          'Because a treaty binds a state, it can be cited as evidence of that state’s law.',
+        reality:
+          'It cannot, and this platform enforces that: a claim about a named country requires evidence scoped to that country. A treaty establishes what its parties have undertaken, not what any one of them has enacted.',
+        note: 'That rule is why the country statements elsewhere on this site rest on constitutions and statutes rather than on the instruments quoted alongside them.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Four constitutions, four answers, and they do not sit on a single scale.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Nothing is domestic law unless the legislature so determines — Ireland, Art. 29.6.',
+          'Self-executing treaty provisions bind on publication, and conflicting statutes are not applied — Netherlands, Gw Arts. 93 and 94, alongside Art. 120 barring constitutional review of statutes.',
+          'Treaty rights supplement constitutional ones, and a treaty approved by a specified supermajority in two rounds is equivalent to a constitutional amendment — Brazil, CF Art. 5º §§ 2º and 3º.',
+          'An obligation of faithful observance, without the mechanism stated in the same provision — Japan, Art. 98(2).',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'Scope of these statements',
+        text: 'Each constitutional provision is the law of its own country. The Covenant and the Convention bind the states party to them. Nothing here supports a claim about a system not named, and nothing here states whether any treaty is enforceable in any court.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'Where a treaty has no direct effect, accountability for breaching it runs through international mechanisms rather than domestic ones — and where it has direct effect, it becomes an argument available in the ordinary courts alongside the constitution. The Dutch and Irish provisions place the same treaty in two quite different positions for the person trying to rely on it.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'Who decides whether a law is constitutional is at [constitutional review](/justice/constitutional-review); what a forum can give once a breach is found is at [effective remedy](/justice/effective-remedy).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [who fundamental rights bind](/justice/who-fundamental-rights-bind), [constitutional review](/justice/constitutional-review), and [effective remedy](/justice/effective-remedy).',
+      },
+    ],
+  },
+  {
+    slug: 'how-soon-a-detained-person-sees-a-judge',
+    title: 'How soon a detained person sees a judge',
+    shortTitle: 'The clock before a judge',
+    question:
+      'How long may someone be held before a judge decides whether the detention continues?',
+    summary:
+      'The treaties say "promptly" and leave it there. The constitutions that put a number on it choose 24, 48 and 72 hours, and Germany chooses a calendar rule rather than a number of hours at all.',
+    entityType: 'concept',
+    section: 'justice',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'reviewing-detention',
+      'arrest-and-detention',
+      'how-a-right-can-be-limited',
+      'the-right-to-silence',
+    ],
+    sources: [
+      'de-grundgesetz',
+      'cz-listina',
+      'es-constitution',
+      'za-constitution',
+      'ke-constitution',
+      'ch-constitution',
+      'nl-constitution',
+      'echr-convention',
+      'iccpr',
+      'br-cf-1988',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-05',
+    publishedOn: '2026-09-05',
+    reviewedOn: '2026-09-05',
+    factsVerifiedOn: '2026-09-05',
+    readingTimeMinutes: 10,
+    keyTerms: ['due-process'],
+    uncertainty: [
+      'These are constitutional maxima. Whether any system’s ordinary practice reaches them, and what statutory rules operate inside them, was not researched.',
+      'Several systems run different clocks for different categories of detention. Only the provisions read for this wave are described, and no page here states a complete account of any country’s detention law.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Almost every system in this comparison allows an official to deprive someone of liberty before any judge has considered it, and then requires a judge to consider it soon. The interval between those two moments is one of the few things constitutions state as a number.',
+      },
+      {
+        kind: 'callout',
+        variant: 'safety',
+        title: 'What this page is and is not',
+        text: 'This compares constitutional time limits. It states no country’s procedure, cannot indicate whether any detention was lawful, provides no route of challenge, and is not legal advice. Anyone dealing with a real situation needs a lawyer in that jurisdiction.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'The reason the interval exists at all is that an arrest is a judgement made quickly on incomplete information, and requiring judicial authorisation first would make many arrests impossible. The reason the interval is bounded is that the same feature — one party deciding, quickly, alone — is what makes an unjustified detention easy to prolong and hard to detect.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'The clock is the safeguard, not the arrest threshold',
+        text: 'A system can be strict about when an arrest may be made and loose about how long it may continue unreviewed, or the reverse. Setting a maximum interval is a way of protecting against the second failure without making the first decision impossible — which is why these provisions specify a time and a decision-maker rather than a standard of suspicion.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'The two treaties use the same word and supply no content for it. Article 5(3) of the European Convention requires anyone arrested or detained under Article 5(1)(c) to be brought "promptly" before a judge or other officer authorised by law to exercise judicial power. Article 9(3) of the Covenant uses the same word for anyone arrested or detained on a criminal charge, and adds that it shall not be the general rule that persons awaiting trial are detained in custody.',
+        claim: 'fact',
+        sources: ['echr-convention', 'iccpr'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'The treaties differ on something larger than the clock',
+        text: 'Article 5(1) of the Convention permits deprivation of liberty only in six lettered cases and states them exhaustively. Article 9(1) of the Covenant instead prohibits arbitrary arrest or detention and requires grounds and procedure established by law, without closing the list. A closed list and an arbitrariness standard are different instruments for the same problem, and neither is a shortened version of the other.',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'Kenya — 24 hours, with a court-day extension',
+            description:
+              'Article 49(1)(f) requires an arrested person to be brought before a court as soon as reasonably possible, and not later than 24 hours after being arrested — or, if the 24 hours end outside ordinary court hours or on a day that is not an ordinary court day, the end of the next court day.',
+          },
+          {
+            term: 'South Africa — 48 hours, with the same extension',
+            description:
+              'Section 35(1)(d) uses the identical structure with double the period: as soon as reasonably possible, but not later than 48 hours after the arrest, or the end of the first court day after the expiry of the 48 hours where they expire outside ordinary court hours or on a non-court day.',
+          },
+          {
+            term: 'Spain — 72 hours, and a stricter test inside it',
+            description:
+              'Article 17(2) provides that preventive detention may not last longer than the time strictly necessary for the enquiries tending to establish the facts, "y, en todo caso, en el plazo máximo de setenta y dos horas, el detenido deberá ser puesto en libertad o a disposición de la autoridad judicial". The 72 hours is a ceiling; the strict-necessity test operates below it.',
+          },
+          {
+            term: 'Czechia — two clocks, one after the other',
+            description:
+              'Article 8(3) of the Listina requires a detained person to be immediately informed of the grounds, questioned, and "within forty-eight hours at the latest, either released or turned over to a court". A judge must then question the person and decide "within twenty-four hours of receiving her" whether they are placed in custody or released.',
+          },
+        ],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Germany does not state a number of hours. Article 104(2) of the Grundgesetz provides that only a judge may rule on the permissibility or continuation of a deprivation of liberty, that a judicial decision must be obtained without delay where the deprivation was not based on a judicial order, and that the police may hold no one in custody on their own authority "beyond the end of the day following that of the arrest". Article 104(3) requires a person provisionally detained on suspicion of an offence to be brought before a judge no later than the day following arrest, who must inform them of the reasons, examine them, give them an opportunity to raise objections, and then either issue a written reasoned arrest warrant or order release.',
+        claim: 'fact',
+        sources: ['de-grundgesetz'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'A calendar rule and an hours rule behave differently',
+        text: 'An arrest at nine in the morning and an arrest at eleven at night attract the same deadline under a calendar rule and deadlines fourteen hours apart under an hours rule. Germany also specifies what the judge must do on arrival — inform, examine, hear objections, then decide in writing — where most of the other provisions specify only that the person must arrive.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Two systems set no period and describe the mechanism instead. Switzerland’s Article 31(3) gives a person in pre-trial detention the right to be brought before a court "without delay", and Article 31(4) gives anyone deprived of liberty by a body other than a court the right of recourse to a court at any time, with the court deciding on legality as quickly as possible. The Dutch Article 15(2) lets a person deprived of liberty otherwise than by judicial order request release, requires them to be heard within a statutorily determined period, and requires immediate release if the court judges the deprivation unlawful.',
+        claim: 'fact',
+        sources: ['ch-constitution', 'nl-constitution'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Brazil takes a third route: rather than a clock, it puts the judicial decision at the front. Article 5º LXI provides that no one shall be arrested except in flagrante delicto or by written and reasoned order of a competent judicial authority; LXII requires the arrest and the place of custody to be communicated immediately to the competent judge and to the family or a person the detainee names; and LXV requires an illegal arrest to be immediately relaxed by the judicial authority.',
+        claim: 'fact',
+        sources: ['br-cf-1988'],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'International law sets the time limit.',
+        reality:
+          'Both treaties say "promptly" and neither states a period. Every number in this comparison comes from a national constitution.',
+      },
+      {
+        claim: 'There is a standard period, usually 48 hours.',
+        reality:
+          'Kenya states 24 hours, South Africa 48, Spain a maximum of 72 with a strict-necessity test operating inside it, and Czechia runs 48 hours to the court followed by 24 more for the judge to decide. Germany states no number of hours at all.',
+      },
+      {
+        claim: 'A maximum period is a period the state is entitled to use.',
+        reality:
+          'Spain’s Article 17(2) states that preventive detention may not last longer than strictly necessary for the enquiries, and only then adds the 72-hour ceiling. Kenya and South Africa both require the person to be brought before a court "as soon as reasonably possible" and state the outer limit second.',
+      },
+      {
+        claim: 'The treaties agree about when liberty may be taken.',
+        reality:
+          'They use different architectures. Article 5(1) of the European Convention lists six permitted cases and states them exhaustively; Article 9(1) of the Covenant prohibits arbitrary arrest and requires grounds and procedure established by law, without a closed list.',
+      },
+      {
+        claim: 'Being brought before a judge is the end of the matter.',
+        reality:
+          'It is the beginning of a second question. Czechia’s Article 8(3) gives the judge 24 hours from receiving the person to decide on custody or release; Germany’s Article 104(3) requires the judge to examine the person and either issue a written reasoned warrant or order release; Article 8(5) of the Listina requires any custody to rest on a judicial decision.',
+      },
+      {
+        claim: 'Every deprivation of liberty runs on the same clock.',
+        reality:
+          'The provisions read here attach to different situations — arrest on suspicion, preventive detention, deprivation of liberty by a non-judicial body. Switzerland’s Article 31(4) covers the last of those separately, and gives recourse "at any time" rather than after a period.',
+        note: 'Only the provisions read for this wave are described. Several systems run further clocks this page does not cover.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Four ways to bound the interval, and the numbers are the least transferable part.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'A stated number of hours with a court-day extension — Kenya 24 (Art. 49(1)(f)); South Africa 48 (s. 35(1)(d)).',
+          'A stated ceiling with a stricter test operating below it — Spain, CE Art. 17(2), 72 hours and "el tiempo estrictamente necesario".',
+          'Two consecutive clocks, one to reach the court and one for the judge to decide — Czechia, Listina Art. 8(3), 48 then 24 hours.',
+          'A calendar rule rather than a number of hours, with the judge’s task specified — Germany, GG Art. 104(2)–(3).',
+          'No period stated; a right of recourse and a duty to decide quickly — Switzerland, BV Art. 31(3)–(4); Netherlands, Gw Art. 15(2).',
+          'Judicial authorisation placed before the arrest rather than after it — Brazil, CF Art. 5º LXI, LXII and LXV.',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'Scope of these statements',
+        text: 'Each constitutional provision is the law of its own country. The two treaties bind the states party to them and are not evidence of any state’s domestic law. Nothing here supports a claim about a system not named.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'A clock is only a safeguard if something happens when it runs out, and several of these texts say what. Brazil’s Article 5º LXV requires an illegal arrest to be immediately relaxed by the judicial authority. The Dutch Article 15(2) requires immediate release where the court judges the deprivation unlawful. Switzerland’s Article 31(4) requires the court to decide on legality as quickly as possible.',
+        claim: 'fact',
+        sources: ['br-cf-1988', 'nl-constitution', 'ch-constitution'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'What a court can actually do about someone being held is [reviewing detention](/justice/reviewing-detention). The institutional distinction between the act of arrest and the state of detention, and the categories of safeguard attaching to each, is [arrest and detention](/law-enforcement/arrest-and-detention). This page adds only the interval and who must close it.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'It is worth noting what these provisions do not do. None of them prevents detention; all of them assume it. What they establish is that the decision to continue it moves, within a stated period, from the body that made the arrest to a body that did not — which is the same design principle that runs through every safeguard on custody this site describes.',
+        claim: 'analysis',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [reviewing detention](/justice/reviewing-detention), [arrest and detention](/law-enforcement/arrest-and-detention), and [the right to silence](/defence/the-right-to-silence).',
       },
     ],
   },

@@ -725,7 +725,7 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [why police accountability matters](/law-enforcement/why-police-accountability-matters), [arrest and detention](/law-enforcement/arrest-and-detention), and [why societies need law enforcement](/law-enforcement/why-societies-need-law-enforcement).',
+        text: 'Related: [why police accountability matters](/law-enforcement/why-police-accountability-matters), [arrest and detention](/law-enforcement/arrest-and-detention), and [why societies need law enforcement](/law-enforcement/why-societies-need-law-enforcement). The necessity and proportionality on this page measure an action against its objective; the constitutional doctrine that measures a rule against a right is [what proportionality requires](/justice/what-proportionality-requires).',
       },
     ],
   },
@@ -914,7 +914,7 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [police use of force](/law-enforcement/police-use-of-force), [what is due process](/justice/what-is-due-process), and [what is a criminal investigation](/investigations/what-is-a-criminal-investigation).',
+        text: 'Related: [police use of force](/law-enforcement/police-use-of-force), [what is due process](/justice/what-is-due-process), and [what is a criminal investigation](/investigations/what-is-a-criminal-investigation). For the constitutional periods this page deliberately does not state, see [how soon a detained person sees a judge](/justice/how-soon-a-detained-person-sees-a-judge).',
       },
     ],
   },

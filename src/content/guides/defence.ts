@@ -392,7 +392,7 @@ export const DEFENCE_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [how defence is funded and provided](/defence/how-defence-is-funded), [what defence counsel does](/defence/what-defence-counsel-does), and [why the right to defence matters](/defence/why-the-right-to-defence-matters).',
+        text: 'Related: [how defence is funded and provided](/defence/how-defence-is-funded), [what defence counsel does](/defence/what-defence-counsel-does), and [why the right to defence matters](/defence/why-the-right-to-defence-matters). The safeguard most often stated alongside counsel in the same constitutional provision is [the right to silence](/defence/the-right-to-silence).',
       },
     ],
   },
@@ -1576,6 +1576,466 @@ export const DEFENCE_GUIDES: readonly Guide[] = [
       {
         kind: 'paragraph',
         text: 'Related: [who may act as a lawyer](/defence/who-may-act-as-a-lawyer), [the right to counsel](/defence/right-to-counsel), and [taking part in your own case](/courts/taking-part-in-your-own-case).',
+      },
+    ],
+  },
+  /* ==========================================================================
+     WAVE 21 — silence, self-incrimination and procedural equality
+     ==========================================================================
+     Two of the largest verified absences in the baseline. Across all 121 guides,
+     `self-incriminat*`, `right to silence`, `remain silent` and `equality of arms`
+     each occurred ZERO times.
+
+     Part L's instruction governs the first page: do not universalise the American
+     model, and separate the privilege against self-incrimination from the silence
+     safeguard, from notification duties, from counsel, and from evidentiary
+     consequences. The page separates them because the texts do — South Africa
+     states silence at arrest and silence at trial as different rights in different
+     subsections, and Canada compels the witness and immunises the testimony where
+     the United States lets the witness refuse.
+
+     Neither page contains interview guidance of any kind, and neither tells anyone
+     what to say or do in any encounter.
+     ========================================================================== */
+  {
+    slug: 'the-right-to-silence',
+    title: 'The right to silence',
+    shortTitle: 'The right to silence',
+    question: 'Does everyone have a right to say nothing, and does anyone have to tell them?',
+    summary:
+      'The right, where it exists, is at least four separable things, and no two systems carry the same set. Two constitutions require a warning wider than the American one; the German Basic Law contains none of it; Canada compels the witness and immunises the answer.',
+    entityType: 'concept',
+    section: 'defence',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'why-the-right-to-defence-matters',
+      'right-to-counsel',
+      'equality-of-arms',
+      'how-soon-a-detained-person-sees-a-judge',
+    ],
+    sources: [
+      'za-constitution',
+      'ke-constitution',
+      'br-cf-1988',
+      'es-constitution',
+      'cz-listina',
+      'jp-constitution',
+      'ca-charter-1982',
+      'us-bill-of-rights',
+      'de-grundgesetz',
+      'iccpr',
+      'echr-convention',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-05',
+    publishedOn: '2026-09-05',
+    reviewedOn: '2026-09-05',
+    factsVerifiedOn: '2026-09-05',
+    readingTimeMinutes: 11,
+    keyTerms: ['due-process'],
+    uncertainty: [
+      'That the Grundgesetz contains no self-incrimination provision is a statement about that document, established by exhaustive search of the authoritative German text. German law recognises the principle; where it comes from and what it covers is not constitutional text and was not researched here.',
+      'No procedural code was researched for any system. In several of these countries the operative rules on questioning are statutory, and this page does not describe them.',
+      'What evidential consequence follows from a person’s silence — an adverse inference, or none — was not researched in any system and is not stated here.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'What is usually called "the right to silence" is at least four separate things, and constitutions carry them in different combinations: a right to refuse to answer; a rule that nobody may be compelled to give evidence against themselves; a duty on officials to tell someone about the first two; and a rule about what may be done with a statement obtained anyway.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'No two texts read for this page carry the same set, and one carries none of them.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'safety',
+        title: 'What this page is and is not',
+        text: 'This compares constitutional provisions. It is not guidance for any encounter with any official, tells nobody what to say or refuse to say, describes no questioning method, and is not legal advice. Anyone in a real situation needs a lawyer in that jurisdiction.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'The problem these provisions answer is old and specific: if a case can be built out of what the accused says, then pressure applied to the accused becomes the cheapest way to build one. Every rule on this page is a way of raising that price — by permitting refusal, by barring compulsion, by requiring that the person be told, or by making the resulting statement useless.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'The rules also protect the record',
+        text: 'Japan’s Article 38 is the clearest case. It bars compelled testimony, excludes confessions made under compulsion, torture or threat or after prolonged detention, and then adds that no person may be convicted where the only proof against them is their own confession. The third rule protects nobody from pressure; it protects the finding of guilt from resting on a single kind of evidence that pressure is known to produce.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'South Africa states the fullest version, and states it as several distinct rights in different subsections. Section 35(1) gives everyone who is arrested the right (a) to remain silent; (b) to be informed promptly of the right to remain silent and of the consequences of not remaining silent; and (c) not to be compelled to make any confession or admission that could be used in evidence against that person. Section 35(3) then gives every accused person separate trial rights: (h) to be presumed innocent, to remain silent, and not to testify during the proceedings, and (j) not to be compelled to give self-incriminating evidence.',
+        claim: 'fact',
+        sources: ['za-constitution'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'The warning is wider than the American one',
+        text: 'Section 35(1)(b) requires the arrested person to be told two things: that they may remain silent, and what the consequences of not remaining silent are. Kenya’s Article 49(1)(a) requires the same two, plus the reason for the arrest, in a language the person understands. Neither is a version of a rule from another system; both are constitutional text requiring more than a bare notification of the right.',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'Kenya — the same architecture, on a shorter clock',
+            description:
+              'Article 49(1) gives an arrested person the right to be informed promptly, in a language the person understands, of the reason for the arrest, the right to remain silent and the consequences of not remaining silent; to remain silent; to communicate with an advocate and other persons whose assistance is necessary; and not to be compelled to make any confession or admission that could be used in evidence.',
+          },
+          {
+            term: 'Brazil — the notification duty and the right in one clause',
+            description:
+              'Article 5º LXIII: "o preso será informado de seus direitos, entre os quais o de permanecer calado, sendo-lhe assegurada a assistência da família e de advogado" — the arrested person shall be informed of their rights, among them that of remaining silent, with the assistance of family and of a lawyer assured. The holder is "o preso": the person under arrest.',
+          },
+          {
+            term: 'Spain — non-compulsion at detention, and again at trial',
+            description:
+              'Article 17(3) requires every detained person to be informed immediately and comprehensibly of their rights and the reasons for their detention, "no pudiendo ser obligada a declarar" — and guarantees a lawyer in police and judicial proceedings. Article 24(2) separately gives the rights "a no declarar contra sí mismos, a no confesarse culpables" — not to testify against themselves and not to confess guilt.',
+          },
+          {
+            term: 'Czechia — the widest privilege read here, and an unusually emphatic silence right',
+            description:
+              'Article 37(1) of the Listina: "Everyone has the right to refuse to give testimony if she would thereby incriminate herself or a person close to her" — the privilege extends beyond the witness. Article 40(4): "The accused has the right to refuse to give testimony; she may not be deprived of this right in any manner whatsoever."',
+          },
+        ],
+      },
+      {
+        kind: 'paragraph',
+        text: 'The two common-law systems here use opposite mechanisms, which is the single most useful comparison on this page. The Fifth Amendment provides that no person "shall be compelled in any criminal case to be a witness against himself". Canada does not give the witness that refusal: section 11(c) of the Charter makes a person charged non-compellable as a witness in proceedings against them for that offence, and section 13 then handles the witness who does testify — "A witness who testifies in any proceedings has the right not to have any incriminating evidence so given used to incriminate that witness in any other proceedings, except in a prosecution for perjury or for the giving of contradictory evidence."',
+        claim: 'fact',
+        sources: ['us-bill-of-rights', 'ca-charter-1982'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Refusal and immunity are not two spellings of one idea',
+        text: 'One system lets the person decline to answer. The other takes the answer and forbids its use against them elsewhere. The protected interest is similar; what happens in the room is not, and neither is what the court ends up with. Describing both as "the right against self-incrimination" without saying which mechanism is meant loses the whole distinction.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Japan carries the privilege and two evidentiary rules and no notification duty. Article 38: "No person shall be compelled to testify against himself. Confession made under compulsion, torture or threat, or after prolonged arrest or detention shall not be admitted in evidence. No person shall be convicted or punished in cases where the only proof against him is his own confession."',
+        claim: 'fact',
+        sources: ['jp-constitution'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'And the German Basic Law contains none of it. An exhaustive search of the authoritative German text for Selbstbelastung, schweigen, Aussage zu verweigern and Geständnis returns nothing, as does a search of the official English translation for incriminat, silent, silence, confession and witness against. What Article 104(1) does contain is a related and narrower guarantee: persons in custody may not be subjected to mental or physical mistreatment.',
+        claim: 'fact',
+        sources: ['de-grundgesetz'],
+      },
+      {
+        kind: 'callout',
+        variant: 'uncertainty',
+        title: 'An absent provision is not an absent principle',
+        text: 'The finding above is about the Grundgesetz, and only about the Grundgesetz. German law recognises the principle; this page establishes that its source is not the constitutional text read here, and does not go further, because going further would require material that was not researched.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The treaties diverge from each other too. Article 14(3)(g) of the Covenant provides the right "not to be compelled to testify against himself or to confess guilt" — with a confession limb the European Convention has no counterpart for. The words silence, self-incrimination and incriminating occur nowhere in the Convention text.',
+        claim: 'fact',
+        sources: ['iccpr', 'echr-convention'],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Everyone has a right to be told they may remain silent.',
+        reality:
+          'South Africa, Kenya, Brazil and Spain state a notification duty in their constitutions. Japan’s Article 38 states the privilege and no duty to inform anyone of it. The Fifth Amendment states no notification duty either. Canada’s section 10(b) requires the person to be informed of the right to counsel, not of a right to silence.',
+      },
+      {
+        claim: 'The American model is what other systems adopted.',
+        reality:
+          'The constitutional texts do not resemble it. South Africa and Kenya require the person to be told the consequences of not remaining silent, which the Fifth Amendment does not mention; Canada uses use-immunity rather than refusal; Czechia extends the privilege to a person close to the witness; Japan adds a rule that a conviction may not rest on the accused’s confession alone.',
+        note: 'What any of these systems requires in practice is statutory and judicial and was not researched here.',
+      },
+      {
+        claim:
+          'The privilege against self-incrimination and the right to silence are the same right.',
+        reality:
+          'South Africa separates them: section 35(1)(a) is a right to remain silent on arrest, 35(1)(c) is non-compulsion to make a confession or admission, 35(3)(h) is silence at trial, and 35(3)(j) is non-compulsion to give self-incriminating evidence. Four provisions, in two subsections, doing four jobs.',
+      },
+      {
+        claim: 'If a right is not in the constitution, the system does not have it.',
+        reality:
+          'The Grundgesetz contains no self-incrimination or silence provision. That is a fact about the text. Nothing on this page states that the principle is absent from German law, and the research done here could not establish that either way.',
+      },
+      {
+        claim: 'The privilege protects only the person being questioned.',
+        reality:
+          'Article 37(1) of the Czech Listina gives everyone the right to refuse testimony that would incriminate "herself or a person close to her". Spain’s Article 24(2) closes by providing that the law shall regulate the cases in which, by reason of kinship or professional secrecy, a person is not obliged to testify about allegedly criminal facts.',
+      },
+      {
+        claim: 'A confession settles a case.',
+        reality:
+          'Article 38(3) of the Constitution of Japan provides that no person shall be convicted or punished where the only proof against them is their own confession, and Article 38(2) excludes confessions made under compulsion, torture or threat, or after prolonged arrest or detention.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Four components, distributed differently in every text.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Silence, non-compulsion, and a warning covering both the right and the consequences of not using it — South Africa, s. 35(1)(a)–(c) and 35(3)(h),(j); Kenya, Art. 49(1)(a)–(d).',
+          'A notification duty and the silence right in one clause, worded for the arrested person — Brazil, CF Art. 5º LXIII.',
+          'Non-compulsion at detention with immediate notification, and separately at trial — Spain, CE Arts. 17(3) and 24(2).',
+          'A privilege extending to a person close to the witness, and a silence right that may not be removed "in any manner whatsoever" — Czechia, Listina Arts. 37(1) and 40(4).',
+          'The privilege plus two evidentiary rules and no notification duty — Japan, Art. 38.',
+          'Non-compellability plus use immunity rather than a right of refusal — Canada, Charter ss. 11(c) and 13.',
+          'Non-compulsion alone, with no notification duty in the text — United States, Amendment V.',
+          'Nothing in the constitutional text — Germany, Grundgesetz.',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'Scope of these statements',
+        text: 'Each constitutional provision is the law of its own country. The two treaties bind the states party to them and are not evidence of any state’s domestic law. No procedural code was researched, and nothing here describes practice anywhere.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'A notification duty is the component that is checkable from outside. Whether a person was told, and what they were told, is a fact that leaves a record; whether they felt free to refuse is not. That is a plausible reason why the constitutions that state a warning state its content — South Africa and Kenya both require the consequences of not remaining silent to be explained, which is a specific thing an official either did or did not do.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'Counsel is the safeguard these provisions most often appear beside: see [the right to counsel](/defence/right-to-counsel) and [how defence is funded](/defence/how-defence-is-funded). What happens to a statement obtained in breach of a safeguard is [what happens to unlawfully obtained evidence](/justice/what-happens-to-unlawfully-obtained-evidence).',
+      },
+      {
+        kind: 'paragraph',
+        text: 'These provisions do not prevent questioning, and none of them says an investigator may not ask. What they do is remove one route to an answer — compulsion — and in several systems require that the person be told the route is closed. An investigation that establishes what happened without relying on the accused’s own account is the outcome the whole set is designed to make normal.',
+        claim: 'analysis',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [the right to counsel](/defence/right-to-counsel), [equality of arms](/defence/equality-of-arms), and [how soon a detained person sees a judge](/justice/how-soon-a-detained-person-sees-a-judge).',
+      },
+    ],
+  },
+  {
+    slug: 'equality-of-arms',
+    title: 'Equality of arms',
+    shortTitle: 'Equality of arms',
+    question: 'Does a fair trial mean the two sides are equal?',
+    summary:
+      'Not equal in resources, which no text promises. What the instruments state is narrower and checkable: the same conditions for calling and examining witnesses, adequate time and facilities, and — in one constitution — that all parties to the proceedings are equal.',
+    entityType: 'concept',
+    section: 'defence',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'the-right-to-silence',
+      'access-to-the-case-file',
+      'defence-counsel-and-prosecutor',
+      'equality-before-the-law',
+    ],
+    sources: [
+      'cz-listina',
+      'echr-convention',
+      'iccpr',
+      'za-constitution',
+      'de-grundgesetz',
+      'jp-constitution',
+      'us-bill-of-rights',
+      'es-constitution',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-05',
+    publishedOn: '2026-09-05',
+    reviewedOn: '2026-09-05',
+    factsVerifiedOn: '2026-09-05',
+    readingTimeMinutes: 9,
+    keyTerms: ['fair-trial'],
+    uncertainty: [
+      'The phrase "equality of arms" occurs zero times in the European Convention and zero times in the Covenant. It is a term of art developed in case law that was not researched here, and this page therefore describes the textual provisions rather than the doctrine built on them.',
+      'How any system funds or resources a defence is a separate question, addressed elsewhere on this site and not researched again here.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Equality of arms is the idea that neither side of a case should be placed at a substantial disadvantage against the other in how it puts its case. It is one of the best-known phrases in fair-trial law, and it appears in neither of the treaties usually cited for it.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'What those texts state instead is a set of specific, checkable requirements — and one constitution states the principle itself in four words.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This explains what treaty and constitutional texts require about the position of the parties in a proceeding. It describes no case law, states no country’s procedure, and is not legal advice.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'A criminal case is not a contest between equals and was never designed to be. On one side is a state institution with investigative powers, access to forensic services and the ability to compel. On the other is usually one person. The point of the guarantees on this page is not to pretend that asymmetry away but to identify the parts of it that would make the proceeding unreliable, and to close those.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'What follows from that framing',
+        text: 'The provisions do not distribute resources. They distribute procedural positions: who may call a witness, on what conditions, with what time to prepare, and with what access to the material. Those are things a court can check and, if necessary, correct — which is a different and more workable project than equalising two very different institutions.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'Czechia states the principle in the constitution itself. Article 37(3) of the Listina, in a chapter of otherwise detailed provisions, reads in its entirety: "All parties to such proceedings are equal." Article 37(2) gives everyone the right to legal assistance in proceedings before courts, other State bodies and public administrative authorities "from the very beginning of such proceedings", and Article 38(2) gives everyone the right to have their case considered in their presence and "to express her opinion on all of the admitted evidence".',
+        claim: 'fact',
+        sources: ['cz-listina'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Two different equalities, and this site keeps them apart',
+        text: 'Equality before the law is a claim about the rules: the same law applied to everyone regardless of who they are. Equality within a proceeding is a claim about positions in one case. A system can be strong on the first and weak on the second, and the Czech Charter states them in different chapters — Article 1 for the first, Article 37(3) for the second.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The treaties reach the same ground through a specific clause about witnesses. Article 6(3)(d) of the European Convention gives everyone charged with a criminal offence the right "to examine or have examined witnesses against him and to obtain the attendance and examination of witnesses on his behalf under the same conditions as witnesses against him". Article 14(3)(e) of the Covenant uses the same formula. The words "equality of arms" appear in neither instrument.',
+        claim: 'fact',
+        sources: ['echr-convention', 'iccpr'],
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'Adequate time and facilities',
+            description:
+              'Article 6(3)(b) of the Convention and section 35(3)(b) of the South African Constitution both give the accused adequate time and facilities to prepare a defence. This is the provision that connects the procedural position to the practical one: a party who cannot prepare is not in the same position however the rules are written.',
+          },
+          {
+            term: 'The right to adduce and challenge',
+            description:
+              'Section 35(3)(i) of the South African Constitution gives every accused person the right "to adduce and challenge evidence" — stated as two things, because a party who may only respond to the other side’s material is not participating on the same terms as the party who chose it.',
+          },
+          {
+            term: 'The right to be heard at all',
+            description:
+              'Article 103(1) of the Grundgesetz — "Vor Gericht hat jedermann Anspruch auf rechtliches Gehör" — gives every person a hearing in accordance with law before a court. It is the floor the rest of these provisions build on.',
+          },
+          {
+            term: 'Compulsory process, and who pays for it',
+            description:
+              'Article 37 of the Constitution of Japan gives the accused full opportunity to examine all witnesses and "the right of compulsory process for obtaining witnesses on his behalf at public expense". The Sixth Amendment gives the accused compulsory process for obtaining witnesses in his favour, without the words about cost.',
+          },
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'At public expense is the operative phrase',
+        text: 'A right to compel a witness is worth what the party can afford to exercise it. Japan’s Article 37 attaches the cost to the state in the same sentence as the power; the Sixth Amendment states the power without addressing the cost. Two provisions that look alike in summary differ on exactly the point at which an asymmetry would reappear.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Spain approaches it through the prohibition of indefensión. Article 24(1) gives all persons the right to effective protection by judges and tribunals in the exercise of their rights and legitimate interests, "sin que, en ningún caso, pueda producirse indefensión" — so that in no case may defencelessness arise. Article 24(2) then lists the components, including the right "a utilizar los medios de prueba pertinentes para su defensa".',
+        claim: 'fact',
+        sources: ['es-constitution'],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Equality of arms means the defence and the prosecution have equal resources.',
+        reality:
+          'No text read here promises that. What they state is procedural: the same conditions for examining witnesses, adequate time and facilities, the right to adduce and challenge evidence, and a hearing. Resources are addressed, where they are addressed, through legal aid and cost provisions rather than through an equality guarantee.',
+      },
+      {
+        claim: 'Equality of arms is a rule in the European Convention.',
+        reality:
+          'The phrase occurs zero times in the Convention text, and zero times in the Covenant. Article 6(3)(d) requires witnesses to be examined "under the same conditions"; the term of art belongs to case law that was not researched for this page.',
+      },
+      {
+        claim: 'It is the same idea as equality before the law.',
+        reality:
+          'Equality before the law is about the rules applying to everyone alike. Equality within a proceeding is about the positions of two parties in one case. The Czech Charter states them separately, and a system can be strong on either and weak on the other.',
+        note: 'Equality before the law is the subject of its own page in the justice section.',
+      },
+      {
+        claim: 'A fair trial requires the two sides to be treated identically.',
+        reality:
+          'The provisions are asymmetric on purpose. The presumption of innocence, the privilege against self-incrimination and the right to counsel are all held by one party and not the other, because the two parties are not in comparable positions.',
+      },
+      {
+        claim: 'If the rules are the same for both sides, the requirement is satisfied.',
+        reality:
+          'Article 6(3)(b) of the Convention and section 35(3)(b) of the South African Constitution add adequate time and facilities to prepare a defence — a requirement that would be redundant if identical rules were sufficient.',
+      },
+      {
+        claim: 'The accused can only respond to the case brought against them.',
+        reality:
+          'South Africa’s section 35(3)(i) gives the right to adduce as well as to challenge evidence; Japan’s Article 37 gives compulsory process for obtaining witnesses on the accused’s behalf at public expense; Czechia’s Article 38(2) gives the right to express an opinion on all admitted evidence.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Where the idea is written down, and in what form.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Stated as a principle in the constitution — Czechia, Listina Art. 37(3): "All parties to such proceedings are equal."',
+          'Stated as a witness clause — European Convention, Art. 6(3)(d); Covenant, Art. 14(3)(e): examination "under the same conditions".',
+          'Stated as preparation — European Convention, Art. 6(3)(b); South Africa, s. 35(3)(b): adequate time and facilities.',
+          'Stated as participation — South Africa, s. 35(3)(i), to adduce and challenge evidence; Czechia, Listina Art. 38(2), to express an opinion on all admitted evidence.',
+          'Stated as a hearing — Germany, GG Art. 103(1), rechtliches Gehör for every person.',
+          'Stated as compulsory process, with the cost allocated — Japan, Art. 37, at public expense; United States, Amendment VI, without a cost provision.',
+          'Stated as a prohibition of defencelessness — Spain, CE Art. 24(1), sin que pueda producirse indefensión.',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'Scope of these statements',
+        text: 'Each constitutional provision is the law of its own country. The two treaties bind the states party to them and are not evidence of any state’s domestic law. Nothing here describes case law.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'The reason these guarantees are written as specific procedural entitlements rather than as a general standard is that specific entitlements can be checked. Whether a party had adequate time to prepare, whether they were able to call a witness on the same conditions as the other side, and whether they saw the material before responding to it are all questions with answers on the record.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'What the defence may actually see is [access to the case file](/defence/access-to-the-case-file); how the roles relate to each other is [defence counsel and prosecutor](/defence/defence-counsel-and-prosecutor); the general equality claim is [equality before the law](/justice/equality-before-the-law).',
+      },
+      {
+        kind: 'paragraph',
+        text: 'A prosecution operating under these rules is not weakened by them. A conviction obtained where the accused could not prepare, could not call a witness, or could not see the evidence is a conviction that a reviewing court can be asked to undo — which makes the guarantees part of what gives a verdict its durability rather than an obstacle to reaching one.',
+        claim: 'analysis',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [access to the case file](/defence/access-to-the-case-file), [the right to silence](/defence/the-right-to-silence), and [why hearings are public](/courts/why-hearings-are-public).',
       },
     ],
   },
