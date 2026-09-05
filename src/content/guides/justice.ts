@@ -4911,7 +4911,7 @@ export const JUSTICE_GUIDES: readonly Guide[] = [
         kind: 'callout',
         variant: 'analysis',
         title: 'Why this site is careful about it',
-        text: 'The failure mode is small and constant. "Citizens have the right to remain silent" reads as a harmless summary and is wrong in most of the systems on this page, where the right belongs to an arrested person regardless of nationality. Preserving the holder is not pedantry; it is the difference between describing the provision and describing something else.',
+        text: 'The failure mode is small and constant, and it is not a matter of emphasis: a summary saying that citizens have the right to remain silent is wrong in most of the systems on this page, where the right belongs to an arrested person regardless of nationality. Preserving the holder is not pedantry; it is the difference between describing the provision and describing something else.',
       },
     ],
     howItWorks: [

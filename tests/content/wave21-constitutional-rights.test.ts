@@ -689,6 +689,21 @@ describe('treaty text is never given automatic domestic effect', () => {
 /* -------------------------------------------------------------------------- */
 
 describe('rights-holder scope is preserved', () => {
+  /*
+   * FORWARD-ONLY, for the third time in this file, and mutation proof W21-M12 is the case that
+   * generalises the rule.
+   *
+   * "Citizens have the right to privacy in South Africa, and it reads: 'Everyone has the right to
+   * privacy, which includes the right not to have their person or home searched…'" cleared
+   * strip-and-search, because the quotation the sentence goes on to give is made of negations.
+   *
+   * Three proofs — M3, M12 and the W20-M4 finding this suite re-proves — now point at one rule
+   * rather than three exceptions: STRIP-AND-SEARCH IS THE WRONG HELPER WHENEVER THE STANCE SITS
+   * NEXT TO TEXT THAT IS ITSELF MADE OF NEGATIONS, and constitutional quotation is made of
+   * negations almost by definition, because rights are usually drafted as prohibitions. Every
+   * guard in this file that reads a sentence containing quoted constitutional text is therefore
+   * forward-only.
+   */
   it('never says citizens hold a right the cited text words more widely', () => {
     for (const pattern of [
       /citizens have the right to (?:remain silent|privacy|a fair (?:trial|hearing)|liberty)/i,
@@ -696,9 +711,24 @@ describe('rights-holder scope is preserved', () => {
       /(?:the )?right belongs to citizens/i,
       /citizens are (?:presumed innocent|entitled to counsel)/i,
     ]) {
-      const units = ALL_UNITS.filter((s) => pattern.test(s) && !deniesForward(s, pattern));
-      expect(units.filter((s) => !deniesClaim(s, pattern))).toEqual([]);
+      const offenders = CORPUS_UNITS.filter(
+        (u) => pattern.test(u) && !deniesForward(u, pattern),
+      );
+      expect(offenders, `citizen asserted as holder: ${offenders[0]?.slice(0, 150)}`).toEqual(
+        [],
+      );
     }
+  });
+
+  it('the forward-only helper survives an adjacent constitutional quotation', () => {
+    const planted =
+      'Citizens have the right to privacy in South Africa, and it reads: "Everyone has the right to privacy, which includes the right not to have their person or home searched."';
+    const p =
+      /citizens have the right to (?:remain silent|privacy|a fair (?:trial|hearing)|liberty)/i;
+    expect(deniesClaim(planted, p), 'the quoted prohibitions launder strip-and-search').toBe(
+      true,
+    );
+    expect(deniesForward(planted, p), 'forward-only must not be laundered').toBe(false);
   });
 
   /*
