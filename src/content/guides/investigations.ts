@@ -2057,7 +2057,7 @@ export const INVESTIGATIONS_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [who authorises a digital investigative measure](/investigations/who-authorises-a-digital-investigative-measure), [device seizure and device examination](/investigations/device-seizure-and-device-examination), and [what privacy protects in law](/investigations/what-privacy-protects-in-law).',
+        text: 'Related: [who authorises a digital investigative measure](/investigations/who-authorises-a-digital-investigative-measure), [device seizure and device examination](/investigations/device-seizure-and-device-examination), and [what privacy protects in law](/investigations/what-privacy-protects-in-law). Where the data is held in another country, domestic authority is not enough on its own: see [jurisdiction over foreign-held data](/investigations/jurisdiction-over-foreign-held-data).',
       },
     ],
   },
@@ -2673,7 +2673,7 @@ export const INVESTIGATIONS_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [interception and stored data](/investigations/interception-and-stored-data), [preserving data and producing it](/investigations/preserving-data-and-producing-it), and [what privacy protects in law](/investigations/what-privacy-protects-in-law).',
+        text: 'Related: [interception and stored data](/investigations/interception-and-stored-data), [preserving data and producing it](/investigations/preserving-data-and-producing-it), and [what privacy protects in law](/investigations/what-privacy-protects-in-law). These categories are defined for each instrument separately, and the international ones do not all match: see [data categories across instruments](/investigations/data-categories-across-instruments).',
       },
     ],
   },
@@ -2848,7 +2848,7 @@ export const INVESTIGATIONS_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [content and communications data](/investigations/content-and-communications-data), [scope, duration and notification](/investigations/scope-duration-and-notification), and [evidence integrity and admissibility](/forensics/evidence-integrity-and-admissibility).',
+        text: 'Related: [content and communications data](/investigations/content-and-communications-data), [scope, duration and notification](/investigations/scope-duration-and-notification), and [evidence integrity and admissibility](/forensics/evidence-integrity-and-admissibility). The same two steps across a border, where dual criminality enters at one and not the other, are [cross-border preservation and disclosure](/investigations/cross-border-preservation-and-disclosure).',
       },
     ],
   },
@@ -3066,7 +3066,7 @@ export const INVESTIGATIONS_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [legal authority and technical capability](/investigations/legal-authority-and-technical-capability), [scope, duration and notification](/investigations/scope-duration-and-notification), and [investigative jurisdiction](/investigations/investigative-jurisdiction).',
+        text: 'Related: [legal authority and technical capability](/investigations/legal-authority-and-technical-capability), [scope, duration and notification](/investigations/scope-duration-and-notification), and [investigative jurisdiction](/investigations/investigative-jurisdiction). Who may issue an order addressed to a provider in another country is [European production and preservation orders](/investigations/european-production-and-preservation-orders).',
       },
     ],
   },
@@ -3288,6 +3288,1602 @@ export const INVESTIGATIONS_GUIDES: readonly Guide[] = [
       {
         kind: 'paragraph',
         text: 'Related: [who authorises a digital investigative measure](/investigations/who-authorises-a-digital-investigative-measure), [preserving data and producing it](/investigations/preserving-data-and-producing-it), and [what happens to unlawfully obtained evidence](/justice/what-happens-to-unlawfully-obtained-evidence).',
+      },
+    ],
+  },
+  /* ==========================================================================
+     WAVE 23 — cross-border digital evidence and international cooperation
+     ==========================================================================
+     Eight pages, from forty-seven candidates. The baseline found the layer
+     absent in the most literal sense: cross-border, mutual legal assistance,
+     MLAT, Second Additional Protocol, EIO, e-Evidence, foreign provider, cloud,
+     extraterritorial, direct cooperation, emergency disclosure, international
+     cooperation, letters rogatory, dual criminality and central authority each
+     occurred ZERO times across 140 guides, and no country dossier mentioned any
+     of them.
+
+     Wave 22's own record fixed the boundary. Its Convention source was titled
+     "Articles 14-21", every one of its seven Convention citations came from
+     Chapter II Section 2 -- the DOMESTIC powers -- and its STATUS line recorded
+     that the Second Additional Protocol "was located but NOT read for this
+     wave". Chapter III, Articles 23 to 35, was untouched.
+
+     BOUNDARIES:
+       Wave 21 owns the constitutional right and its limit.
+       Wave 22 owns domestic statutory authority over digital objects.
+       Wave 23 owns what happens when the authority is here and the data, the
+         provider or the evidence is elsewhere.
+       Wave 19 owns review and remedy.
+       Wave 16 owns forensic science as evidence.
+
+     SAFETY. This cluster carries a risk the domestic layer did not: content
+     explaining where to put data, which mechanism is slowest, or which
+     jurisdiction is hardest to reach would be operationally useful to someone
+     frustrating an investigation. No page names a provider, characterises any
+     jurisdiction by its cooperativeness, or states a period a reader could use
+     to predict a window. Nine candidates were deferred rather than thinned.
+
+     TEMPORAL. Four instruments sit at four different lifecycle stages, verified
+     from primary text and stated on the pages that rely on them. No
+     ScheduledChange was added, and the reason is recorded in
+     docs/research/cross-border-digital-evidence-treaty-status.md: the schema
+     requires an ISO `effectiveOn` and an active change must carry
+     `certainty: 'enacted-with-date'`, which cannot honestly represent an
+     enacted obligation whose trigger date no source establishes.
+     ========================================================================== */
+  {
+    slug: 'jurisdiction-over-foreign-held-data',
+    title: 'Jurisdiction over foreign-held data',
+    shortTitle: 'Jurisdiction over foreign data',
+    question:
+      'Investigators are in one country and the data is in another. Whose law decides whether they may have it?',
+    summary:
+      'There is no single answer, because the instruments do not use the same connecting factor. One keys on where the data is stored, one on where the provider’s addressee is established, and one makes the data’s location expressly irrelevant.',
+    entityType: 'concept',
+    section: 'investigations',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'mutual-legal-assistance',
+      'asking-a-state-and-ordering-a-provider',
+      'legal-authority-and-technical-capability',
+      'what-privacy-protects-in-law',
+    ],
+    sources: [
+      'coe-cybercrime-convention',
+      'eu-reg-2023-1543-e-evidence',
+      'us-18usc-2713-cloud-act',
+      'us-18usc-2703-stored-communications',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-05',
+    publishedOn: '2026-09-05',
+    reviewedOn: '2026-09-05',
+    factsVerifiedOn: '2026-09-05',
+    readingTimeMinutes: 11,
+    keyTerms: ['jurisdiction'],
+    uncertainty: [
+      'Three international and supranational instruments and two United States sections were read. No national implementing legislation was read for any country, and nothing here is asserted about how any State gives effect to these instruments.',
+      'No case law was read in any system. Where a connecting factor has been construed by a court, that construction is not described here.',
+      'Nothing on this page describes where data may be held, how any measure is executed, or anything a reader could use to place data beyond a mechanism’s reach. That is a deliberate limit on the research.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'A domestic investigative power is a power a State gives its own authorities. It does not travel. When the thing an investigator wants sits in another country, or is held by a company established in one, the question stops being what the investigator may do and becomes which legal system connects them to it — and the instruments that answer that question do not agree on the connection.',
+      },
+      {
+        kind: 'callout',
+        variant: 'safety',
+        title: 'What this page is and is not',
+        text: 'This explains how legal instruments connect an authority to data held elsewhere. It describes no technique, no provider, and nothing about where data is or should be held; it states nothing a reader could use to place data beyond the reach of a lawful mechanism; and it is not legal advice.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'The problem is a mismatch of speeds. Data moves between countries in the time it takes to press a key, and legal authority moves between countries at the speed of a treaty. A system that ignored the gap would either leave ordinary offences uninvestigable whenever a service happened to be foreign, or would let each State reach into every other whenever it judged that convenient.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Neither escape is available, and that is the design',
+        text: 'The mechanisms in this section exist because both failures are unacceptable. What they disagree about is not whether a connection is needed but what should count as one — and a reader who assumes any single answer will be wrong about most of the instruments.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'The Convention on Cybercrime connects on the **territory where the data is stored**. Article 29(1) lets a Party ask another to preserve data "located within the territory of that other Party", and Article 31(1) lets it ask another to search, seize and disclose data "stored by means of a computer system located within the territory of the requested Party". The request goes where the data is.',
+        claim: 'fact',
+        sources: ['coe-cybercrime-convention'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Regulation (EU) 2023/1543 connects on **where the addressee is established**. Article 3(1) defines a European Production Order as a decision addressed "to a designated establishment or to a legal representative of a service provider offering services in the Union, where that designated establishment or legal representative is located in another Member State bound by this Regulation". The order goes to the provider’s point of contact, not to the place the data sits.',
+        claim: 'fact',
+        sources: ['eu-reg-2023-1543-e-evidence'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'United States law connects on **control, and says the data’s location is irrelevant**. Section 2713 of Title 18 provides that a provider of electronic communication service or remote computing service "shall comply with the obligations of this chapter to preserve, backup, or disclose" the contents of a communication and any record pertaining to a customer or subscriber "within such provider’s possession, custody, or control, **regardless of whether such communication, record, or other information is located within or outside of the United States**".',
+        claim: 'fact',
+        sources: ['us-18usc-2713-cloud-act'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Three instruments, three connecting factors, one subject',
+        text: 'Territory of storage, establishment of the addressee, and control by the provider. These are not three phrasings of one rule; they can point at three different countries for the same data. A page asserting that data is governed by the law of the place the server sits would be wrong about two of the three, and a page asserting the opposite would be wrong about the first.',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'What § 2713 does not say, because it is widely overstated',
+        text: 'It does not confer authority to access data anywhere. It operates on a provider already subject to the obligations of its chapter, and removes the data’s location as an answer to a demand that provider has otherwise been given. The reach is over the provider, not over the territory.',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'What a Party may do without asking anyone — and it is very little',
+            description:
+              'Article 32 of the Convention is exhaustive on its face. A Party may, without the authorisation of another Party, "access publicly available (open source) stored computer data, regardless of where the data is located geographically", or "access or receive, through a computer system in its territory, stored computer data located in another Party, if the Party obtains the lawful and voluntary consent of the person who has the lawful authority to disclose the data". Two situations. There is no third limb, and no unilateral remote-access provision.',
+          },
+          {
+            term: 'Where a conflict is expected, the instruments provide for it',
+            description:
+              'Article 17 of Regulation (EU) 2023/1543 lets an addressee that considers compliance would conflict with the law of a third country raise a reasoned objection to the issuing and enforcing authorities — while providing that the objection may not rest merely on the absence of similar provisions in that third country’s law. Section 2703(h)(2)(A) of Title 18 lets a provider, including a foreign one, move to modify or quash where it reasonably believes the customer is not a United States person and does not reside there, and that disclosure would create a material risk of violating the laws of a qualifying foreign government.',
+          },
+          {
+            term: 'And the requested State’s law governs what it will do',
+            description:
+              'Article 25(4) of the Convention provides that except as specifically provided, mutual assistance "shall be subject to the conditions provided for by the law of the requested Party or by applicable mutual assistance treaties, including the grounds on which the requested Party may refuse co-operation".',
+          },
+        ],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'A court order applies wherever the data happens to be.',
+        reality:
+          'The Convention routes a request to the Party in whose territory the data is stored, and Article 25(4) subjects the response to the requested Party’s own law including its refusal grounds. A domestic order is not a global instrument.',
+      },
+      {
+        claim: 'Data is governed by the law of the country where the server sits.',
+        reality:
+          'Only one of the three instruments read here connects that way. The EU Regulation connects on where the provider’s designated establishment or legal representative is located, and 18 U.S.C. § 2713 makes the data’s location expressly irrelevant to the provider’s obligation.',
+      },
+      {
+        claim: 'The internet has no borders, so jurisdiction does not apply to it.',
+        reality:
+          'Every instrument read here is a jurisdictional instrument. They differ on what connects an authority to the data, not on whether a connection is required.',
+      },
+      {
+        claim: 'The CLOUD Act lets the United States obtain data anywhere.',
+        reality:
+          'Section 2713 governs providers already subject to the obligations of chapter 121 of Title 18 and removes the data’s location as an answer. It creates no power over foreign territory and establishes nothing about any other country’s law.',
+        note: 'Which foreign governments qualify under § 2703(h) depends on executive agreements made under § 2523, and that coverage was not researched for this wave.',
+      },
+      {
+        claim: 'If data can be reached from a computer at home, it may be reached.',
+        reality:
+          'Article 32 of the Convention permits access without another Party’s authorisation in two situations only: publicly available data, and data accessed with the lawful and voluntary consent of the person who has lawful authority to disclose it.',
+      },
+      {
+        claim: 'Because these mechanisms are limited, foreign-held evidence is out of reach.',
+        reality:
+          'Every instrument here exists to make it reachable on terms. The Convention obliges Parties to co-operate "to the widest extent possible", and the EU Regulation creates orders addressed directly to a provider’s establishment in another Member State.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'What each instrument treats as the connection.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'The territory where the data is stored — Convention on Cybercrime, Arts. 29(1) and 31(1).',
+          'Where the provider’s designated establishment or legal representative is located — Regulation (EU) 2023/1543, Art. 3(1)–(2).',
+          'The provider’s possession, custody or control, with the data’s location expressly irrelevant — 18 U.S.C. § 2713.',
+          'No authorisation from another Party needed at all, in two situations only: publicly available data, and lawful and voluntary consent — Convention Art. 32.',
+          'And in every case, the requested Party’s own law and refusal grounds govern its response — Convention Art. 25(4).',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'Scope of these statements',
+        text: 'The two Council of Europe instruments oblige their Parties to legislate; they are not evidence of what any Party has enacted. The EU Regulation binds the Member States bound by it and is not evidence of the law of any non-EU country. The United States provisions are the law of that country only. No national implementing legislation was read for any country.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'Why the connecting factor matters beyond doctrine is that it decides which State’s safeguards attach. If the connection is the territory of storage, the requested State’s law and its refusal grounds apply. If the connection is the addressee’s establishment, a different State’s authorities may never see the order at all unless the instrument requires notification. If the connection is control, the safeguard has to come from somewhere else entirely.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'Why the state’s reach is bounded at all is [what privacy protects in law](/investigations/what-privacy-protects-in-law). What domestic authority exists in the first place is [legal authority and technical capability](/investigations/legal-authority-and-technical-capability). Who a cross-border request is addressed to is [asking a state and ordering a provider](/investigations/asking-a-state-and-ordering-a-provider).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [mutual legal assistance](/investigations/mutual-legal-assistance), [asking a state and ordering a provider](/investigations/asking-a-state-and-ordering-a-provider), and [legal authority and technical capability](/investigations/legal-authority-and-technical-capability).',
+      },
+    ],
+  },
+  {
+    slug: 'mutual-legal-assistance',
+    title: 'Mutual legal assistance',
+    shortTitle: 'Mutual legal assistance',
+    question: 'How does one state ask another for evidence?',
+    summary:
+      'Through a channel each Party designates and a body of law that mostly is not the treaty being invoked. The Convention’s own procedure applies only where no assistance treaty is in force between the two Parties, and its cooperation articles require each Party to legislate first.',
+    entityType: 'concept',
+    section: 'investigations',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'jurisdiction-over-foreign-held-data',
+      'cross-border-preservation-and-disclosure',
+      'when-a-cooperation-instrument-starts-to-operate',
+      'investigative-jurisdiction',
+    ],
+    sources: ['coe-cybercrime-convention', 'eu-dir-2014-41-eio'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-05',
+    publishedOn: '2026-09-05',
+    reviewedOn: '2026-09-05',
+    factsVerifiedOn: '2026-09-05',
+    readingTimeMinutes: 10,
+    uncertainty: [
+      'The Convention’s cooperation chapter and Article 1 of the European Investigation Order Directive were read. No bilateral mutual assistance treaty was read, and no national mutual assistance legislation was read for any country.',
+      'How long any request takes, how often requests are made, and how any State responds in practice are outside this page and were not researched. No such figure appears anywhere in this wave.',
+      'Nothing here describes how a request is prepared, transmitted or executed. That is a deliberate limit on the research.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Mutual legal assistance is the formal route by which one State asks another to do something on its territory for a criminal investigation — search a place, seize a thing, take a statement, or obtain data. It is a request between States, executed by the receiving State under its own law.',
+      },
+      {
+        kind: 'callout',
+        variant: 'safety',
+        title: 'What this page is and is not',
+        text: 'This explains the institutional shape of state-to-state assistance. It describes no procedure for preparing or transmitting a request, contains no template or channel detail, states no timing figure, and is not legal advice.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'The alternative to asking is acting, and acting on another State’s territory without its agreement is the thing the whole structure exists to avoid. Mutual assistance converts what would otherwise be an intrusion into a request that the receiving State evaluates against its own law — which is why the receiving State’s refusal grounds are part of the mechanism rather than an obstacle to it.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'The cost is time, and that is not a flaw to be engineered away',
+        text: 'A request that a second State evaluates takes longer than an order a domestic authority issues. Every faster mechanism in this section was built by narrowing what may be obtained or by moving the addressee, not by removing the evaluation.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'The Convention on Cybercrime states the general obligation in Article 25(1): Parties shall afford one another mutual assistance "to the widest extent possible" for investigations or proceedings concerning offences related to computer systems and data, or for the collection of evidence in electronic form of a criminal offence. Article 23 then says how — through this chapter, and "through the application of relevant international instruments on international co-operation in criminal matters, arrangements agreed on the basis of uniform or reciprocal legislation, and domestic laws".',
+        claim: 'fact',
+        sources: ['coe-cybercrime-convention'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'The treaty routes you to other law, including its own Parties’ law',
+        text: 'Article 23 does not create a self-contained procedure. It directs cooperation through whatever instruments and domestic laws already apply, which means the practical answer to "how does a request work" is usually found somewhere other than in the treaty being cited.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Article 27 makes that explicit. Its procedures apply only "where there is no mutual assistance treaty or arrangement on the basis of uniform or reciprocal legislation in force between the requesting and requested Parties", and expressly do not apply where such a treaty exists unless the Parties agree otherwise. The Convention’s own procedure is a fallback.',
+        claim: 'fact',
+        sources: ['coe-cybercrime-convention'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Where it does apply, Article 27(2) supplies the institutional answer: each Party designates a **central authority** "responsible for sending and answering requests for mutual assistance, the execution of such requests or their transmission to the authorities competent for their execution"; central authorities communicate directly with each other; each Party notifies the names to the Secretary General of the Council of Europe, who keeps a register.',
+        claim: 'fact',
+        sources: ['coe-cybercrime-convention'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'What a central authority is, and what the text does not say it is',
+        text: 'Article 27(2)(a) lists four functions disjunctively — sending, answering, executing, **or transmitting to the authorities competent to execute**. A central authority may therefore be the body that acts, or the body that passes the request to whoever does. Nothing in the provision makes it a court, a prosecution service or an investigating agency, and which it is in any given system depends on that system.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Alongside that formal channel the Convention creates a second, faster one. Article 35 requires each Party to designate a point of contact available twenty-four hours a day, seven days a week, to ensure immediate assistance — facilitating or, where domestic law and practice permit, directly carrying out technical advice, preservation under Articles 29 and 30, and the collection of evidence, provision of legal information and locating of suspects. Article 35(2)(b) contemplates that this point of contact may not be part of the authority responsible for mutual assistance, and requires coordination between them where it is not.',
+        claim: 'fact',
+        sources: ['coe-cybercrime-convention'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Two channels, deliberately different',
+        text: 'The Article 27 central authority is built for formality — a request evaluated under the requested State’s law. The Article 35 point of contact is built for speed, and what it may do directly is limited to what that Party’s own law and practice permit. Article 35(2)(b) exists precisely because they may be different bodies.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Within the European Union a further instrument operates between Member States. Article 1(1) of Directive 2014/41/EU defines a European Investigation Order as "a judicial decision which has been issued or validated by a judicial authority of a Member State … to have one or several specific investigative measure(s) carried out in another Member State … to obtain evidence", executed under Article 1(2) "on the basis of the principle of mutual recognition". Article 1(3) adds something unusual: the issuing of an EIO may be requested by a suspected or accused person, or by a lawyer on their behalf, within applicable defence rights.',
+        claim: 'fact',
+        sources: ['eu-dir-2014-41-eio'],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'A treaty on cooperation sets out the procedure for making a request.',
+        reality:
+          'Article 23 of the Convention directs cooperation through other international instruments, reciprocal arrangements and domestic laws. Article 27 applies only where no assistance treaty is in force between the two Parties.',
+      },
+      {
+        claim: 'A central authority is a court, or a prosecutor’s office.',
+        reality:
+          'Article 27(2)(a) describes it by function — sending, answering, executing, or transmitting to the authorities competent for execution — and not by institutional type. What it is in any system is a matter for that system.',
+      },
+      {
+        claim: 'Once a request arrives, the receiving state must carry it out.',
+        reality:
+          'Article 25(4) provides that mutual assistance is subject to the conditions provided for by the law of the requested Party or by applicable treaties, "including the grounds on which the requested Party may refuse co-operation".',
+      },
+      {
+        claim:
+          'A European Investigation Order and a request for mutual assistance are the same thing.',
+        reality:
+          'An EIO is a judicial decision executed on the principle of mutual recognition, and Article 1(3) allows a suspected or accused person to request that one be issued. Neither feature belongs to mutual assistance generally.',
+      },
+      {
+        claim: 'The 24/7 point of contact can do whatever a mutual assistance request could.',
+        reality:
+          'Article 35(1) lets it facilitate the listed measures, and carry them out directly only "if permitted by its domestic law and practice". Article 35(2)(b) contemplates that it may not even be part of the mutual assistance authority.',
+      },
+      {
+        claim: 'Cooperation between states means every state uses the same mechanism.',
+        reality:
+          'The Convention routes through existing instruments, its own Article 27 applies only as a fallback, its Article 35 creates a separate faster channel, and within the European Union the EIO and — for electronic evidence — the production and preservation orders operate as well.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Channels, and what governs each.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Through whatever instruments, reciprocal arrangements and domestic laws already apply — Convention Art. 23.',
+          'Through the Convention’s own procedure, but only where no assistance treaty is in force between the Parties — Art. 27(1).',
+          'Via a designated central authority whose functions may be to send, answer, execute or transmit — Art. 27(2)(a).',
+          'Via a 24/7 point of contact for immediate assistance, doing directly only what domestic law and practice permit — Art. 35(1), (2)(b).',
+          'Between EU Member States, by a judicial decision executed on mutual recognition, which a suspected or accused person may ask to have issued — Directive 2014/41/EU, Art. 1(1)–(3).',
+          'And in every case subject to the requested Party’s law and its refusal grounds — Art. 25(4).',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'Scope of these statements',
+        text: 'The Convention obliges its Parties; the Directive binds EU Member States bound by it. Neither is evidence of what any State has enacted. No bilateral treaty and no national assistance legislation was read for any country, and no Party list was researched.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'The refusal grounds are the safeguard that travels with the request. Because Article 25(4) subjects assistance to the requested Party’s own law, the evidence is gathered under the standards of the State where it is gathered — which is a different guarantee from the one the requesting State would have applied, and is why the two questions are worth keeping apart.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'Which institution inside one country is competent to investigate is [investigative jurisdiction](/investigations/investigative-jurisdiction). What can be frozen before a request is decided is [cross-border preservation and disclosure](/investigations/cross-border-preservation-and-disclosure). Whether the instrument being relied on operates yet is [when a cooperation instrument starts to operate](/investigations/when-a-cooperation-instrument-starts-to-operate).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [jurisdiction over foreign-held data](/investigations/jurisdiction-over-foreign-held-data), [cross-border preservation and disclosure](/investigations/cross-border-preservation-and-disclosure), and [asking a state and ordering a provider](/investigations/asking-a-state-and-ordering-a-provider).',
+      },
+    ],
+  },
+  {
+    slug: 'cross-border-preservation-and-disclosure',
+    title: 'Cross-border preservation and disclosure',
+    shortTitle: 'Preservation across borders',
+    question:
+      'Can one state ask another to freeze data before it has decided whether to ask for it?',
+    summary:
+      'Yes, and the two steps can get different answers for the same data. The Convention expressly removes dual criminality as a condition of preservation, while allowing a Party that requires it for disclosure to refuse preservation where it foresees the condition failing.',
+    entityType: 'concept',
+    section: 'investigations',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'mutual-legal-assistance',
+      'preserving-data-and-producing-it',
+      'european-production-and-preservation-orders',
+      'data-categories-across-instruments',
+    ],
+    sources: ['coe-cybercrime-convention', 'eu-reg-2023-1543-e-evidence'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-05',
+    publishedOn: '2026-09-05',
+    reviewedOn: '2026-09-05',
+    factsVerifiedOn: '2026-09-05',
+    readingTimeMinutes: 10,
+    keyTerms: ['disclosure'],
+    uncertainty: [
+      'Two instruments were read. No national preservation legislation was read for any country, and no Party’s reservations under Article 29(4) were researched.',
+      'Dual criminality is described only as these instruments treat it. Whether any State requires it, and for what, was not researched, and no general rule about it is stated here.',
+      'Nothing here states a period a reader could use to anticipate when a measure lapses, and nothing describes how data is held, moved or preserved.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Freezing data and obtaining it are two steps domestically, and they stay two steps across a border — but the border adds something. Between States the two steps are governed by different conditions, so the same data can attract a yes at the freezing stage and a no at the disclosure stage.',
+      },
+      {
+        kind: 'callout',
+        variant: 'safety',
+        title: 'What this page is and is not',
+        text: 'This explains two distinct legal mechanisms and how they relate across borders. It states no period, describes no procedure for making or answering a request, and contains nothing a reader could use to anticipate or frustrate either step. It is not legal advice.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'The reason a separate freezing step exists internationally is the same reason it exists domestically, made worse by distance: the fuller process takes time, and data that matters may be gone before it finishes. Between States the fuller process takes considerably longer, because a second legal system has to evaluate the request under its own law.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Which is why the lighter step is deliberately lighter',
+        text: 'Freezing is a smaller intrusion than reading: the holder keeps the material, the requesting State gets nothing, and whether it may have anything is answered afterwards on its own terms. That asymmetry is what allows the conditions to differ — and the Convention makes them differ.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'Article 29(1) of the Convention on Cybercrime lets a Party request another "to order or otherwise obtain the expeditious preservation of data stored by means of a computer system, located within the territory of that other Party **and in respect of which the requesting Party intends to submit a request for mutual assistance** for the search or similar access, seizure or similar securing, or disclosure of the data". Article 29(2)(f) requires the request itself to state that intention.',
+        claim: 'fact',
+        sources: ['coe-cybercrime-convention'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'The mechanism is defined by the step that has not happened yet',
+        text: 'A preservation request is not a request for the data. It is a request to keep the data available so that a different request, which the requesting Party has to say it intends to make, can be decided later. The relationship is written into the preservation provision itself.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Then comes the finding that makes the two steps genuinely different in law. Article 29(3) provides that "**For the purposes of responding to a request, dual criminality shall not be required as a condition to providing such preservation**". Article 29(4) then allows a Party that does require dual criminality for a mutual assistance request for search, seizure or disclosure to reserve the right to refuse preservation, for offences other than those the Convention establishes, "in cases where it has reasons to believe that at the time of disclosure the condition of dual criminality cannot be fulfilled".',
+        claim: 'fact',
+        sources: ['coe-cybercrime-convention'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Dual criminality is mechanism-specific here, not a general rule',
+        text: 'The Convention does not say dual criminality is or is not required for cooperation. It says it may not be required for preservation, and that a Party which requires it for disclosure may look ahead. Whether any State requires it, and for what, is a question about that State and was not researched for this wave.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Article 30 adds a narrow disclosure inside the preservation mechanism. Where, executing an Article 29 request to preserve traffic data, the requested Party discovers that a service provider in another State was involved in transmitting the communication, it must expeditiously disclose "a sufficient amount of traffic data to identify that service provider and the path through which the communication was transmitted". Article 30(2) permits that to be withheld only where the request concerns a political offence, or where execution is likely to prejudice the requested Party’s sovereignty, security, *ordre public* or other essential interests.',
+        claim: 'fact',
+        sources: ['coe-cybercrime-convention'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'A disclosure whose purpose is to find who else to ask',
+        text: 'Article 30 does not hand over the preserved material. It hands over enough routing information to establish which other provider — and therefore which other State — the investigation needs to approach. It is a step in locating the next request, not a substitute for it.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The disclosure step proper is Article 31: a Party may request another to search or similarly access, seize or similarly secure, and disclose data stored in the requested Party’s territory, "including data that has been preserved pursuant to Article 29". Article 31(3) requires an expedited response where there are grounds to believe the data is particularly vulnerable to loss or modification, or where the applicable instruments otherwise provide for expedited cooperation.',
+        claim: 'fact',
+        sources: ['coe-cybercrime-convention'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'The European Union framework keeps the same two steps and states the relationship in the same place. Article 3(2) of Regulation (EU) 2023/1543 defines a European Preservation Order as a decision "which orders the preservation of electronic evidence **for the purposes of a subsequent request for production**".',
+        claim: 'fact',
+        sources: ['eu-reg-2023-1543-e-evidence'],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'If another state has preserved the data, the requesting state has it.',
+        reality:
+          'Article 29(1) requires the requesting Party to intend a separate mutual assistance request for disclosure, and Article 29(2)(f) requires the preservation request to say so. Article 31 is the request that actually obtains the data.',
+      },
+      {
+        claim: 'Mutual legal assistance requests require dual criminality.',
+        reality:
+          'Not as a general rule, and not for this step. Article 29(3) provides that dual criminality shall not be required as a condition of providing preservation. Whether a State requires it for disclosure is a question about that State, and Article 29(4) is the provision that lets such a State look ahead.',
+        note: 'Nothing here establishes what any particular State requires.',
+      },
+      {
+        claim: 'A state that will preserve data will also disclose it.',
+        reality:
+          'The two decisions are governed differently. Article 29(4) expressly contemplates a Party preserving nothing precisely because it foresees that the disclosure condition will not be met.',
+      },
+      {
+        claim: 'Article 30 gives the requesting state the preserved data.',
+        reality:
+          'It gives a sufficient amount of traffic data to identify the service provider involved and the path of transmission — enough to work out who else must be asked.',
+      },
+      {
+        claim: 'Preservation across borders works the same way as preservation at home.',
+        reality:
+          'The mechanism is similar and the conditions are not. Domestically the question is whether the power exists and who may exercise it; internationally a second legal system evaluates the request under its own law, and dual criminality enters at one step and not the other.',
+        note: 'The domestic question is answered separately in this section.',
+      },
+      {
+        claim: 'Preservation is a way of holding material indefinitely.',
+        reality:
+          'It exists to keep a later question answerable. Both instruments read here define it by reference to the request that follows: the Convention requires the requesting Party to intend one, and the EU Regulation defines the order as being for the purposes of a subsequent request for production.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Four distinct steps, kept in four provisions.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'A request to preserve, conditioned on an intention to request disclosure and requiring that intention to be stated — Convention Art. 29(1), (2)(f).',
+          'Dual criminality expressly excluded as a condition of preservation — Art. 29(3) — with a reservation available to a Party that requires it for disclosure — Art. 29(4).',
+          'A narrow onward disclosure of routing information sufficient to identify another provider and the path — Art. 30(1), withholdable only on the Art. 30(2) grounds.',
+          'The request that actually obtains the data, expedited where it is particularly vulnerable to loss — Art. 31(1), (3).',
+          'The same two-step relationship stated inside the definition of the order — Regulation (EU) 2023/1543, Art. 3(2).',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'Scope of these statements',
+        text: 'The Convention obliges its Parties to legislate and is not evidence of what any Party has enacted; no Party’s Article 29(4) reservation was researched. The EU Regulation binds the Member States bound by it. No national preservation legislation was read for any country.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'Separating the steps is itself a safeguard, and not only a practical convenience. A State asked to freeze data has committed nothing about whether it will hand anything over, and the person whose data it is has not yet been the subject of a disclosure decision by anyone. Article 29(4) makes that explicit by letting a State decline even the lighter step where it can see the heavier one failing.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'The domestic version of the same distinction is [preserving data and producing it](/investigations/preserving-data-and-producing-it). The EU orders that carry it are [European production and preservation orders](/investigations/european-production-and-preservation-orders). The state-to-state channel these requests travel is [mutual legal assistance](/investigations/mutual-legal-assistance).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [preserving data and producing it](/investigations/preserving-data-and-producing-it), [mutual legal assistance](/investigations/mutual-legal-assistance), and [data categories across instruments](/investigations/data-categories-across-instruments).',
+      },
+    ],
+  },
+  {
+    slug: 'asking-a-state-and-ordering-a-provider',
+    title: 'Asking a state and ordering a provider',
+    shortTitle: 'State or provider',
+    question: 'Is a cross-border request made to a country or to a company?',
+    summary:
+      'Both exist and they are different instruments. Mutual assistance and the European Investigation Order run state to state; a European Production Order is addressed to a provider’s establishment in another Member State; and the Second Additional Protocol contains one of each.',
+    entityType: 'concept',
+    section: 'investigations',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'jurisdiction-over-foreign-held-data',
+      'direct-cooperation-with-foreign-providers',
+      'european-production-and-preservation-orders',
+      'mutual-legal-assistance',
+    ],
+    sources: [
+      'coe-cybercrime-convention',
+      'coe-cybercrime-second-protocol',
+      'eu-reg-2023-1543-e-evidence',
+      'eu-dir-2014-41-eio',
+      'us-18usc-2703-stored-communications',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-05',
+    publishedOn: '2026-09-05',
+    reviewedOn: '2026-09-05',
+    factsVerifiedOn: '2026-09-05',
+    readingTimeMinutes: 11,
+    uncertainty: [
+      'Five instruments were read. No national implementing legislation was read for any country, and nothing here establishes which mechanisms are available between any particular pair of States.',
+      'Which foreign governments qualify under 18 U.S.C. § 2703(h) depends on executive agreements under § 2523, and that coverage was not researched.',
+      'No provider is named anywhere in this wave, and nothing here compares how any provider or any jurisdiction responds. That is a deliberate limit on the research.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'A cross-border request has an addressee, and the addressee is the thing that changes most between mechanisms. Some go to a government, which then decides under its own law whether to act. Some go to a company, or to a person a company has been obliged to appoint. The difference determines who evaluates the request, whose law governs the evaluation, and whether a second State ever sees it.',
+      },
+      {
+        kind: 'callout',
+        variant: 'safety',
+        title: 'What this page is and is not',
+        text: 'This explains who different mechanisms are addressed to. It names no provider, compares no jurisdiction’s willingness to cooperate, describes no procedure for making a request, and is not legal advice.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'The state-to-state route is the older one and answers the sovereignty problem directly: nothing happens on another State’s territory without that State deciding it should. Its cost is that a second legal system has to be engaged for every request, however routine the material.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The provider-addressed route answers a different problem. Where a service is offered across many countries, the material sought is held by one company that could simply be asked — and requiring an inter-governmental process for an account name is disproportionate to what is being sought. The response has been to build narrow routes to the provider, and to keep the wider ones running through States.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Which is why the provider routes are the narrow ones',
+        text: 'Across the instruments read here, the more directly a mechanism reaches a company, the less it reaches. That is not a coincidence of drafting; it is the trade being made.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'The Convention on Cybercrime is entirely state-to-state. Article 25(1) obliges Parties to afford one another mutual assistance; Articles 29 and 31 are requests from one Party to another; Article 27(2) routes them through designated central authorities. Nothing in Chapter III is addressed to a company.',
+        claim: 'fact',
+        sources: ['coe-cybercrime-convention'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'The European Investigation Order is also state-to-state, and its own definition says so. Article 1(1) of Directive 2014/41/EU defines it as "a judicial decision … issued or validated by a judicial authority of a Member State … **to have one or several specific investigative measure(s) carried out in another Member State**", executed under Article 1(2) on the principle of mutual recognition. The measure is carried out by the executing State.',
+        claim: 'fact',
+        sources: ['eu-dir-2014-41-eio'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'A European Production Order is not. Article 3(1) of Regulation (EU) 2023/1543 defines it as a decision "addressed to a designated establishment or to a legal representative of a service provider offering services in the Union, where that designated establishment or legal representative is located in another Member State bound by this Regulation". The addressee is the provider’s point of contact.',
+        claim: 'fact',
+        sources: ['eu-reg-2023-1543-e-evidence'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'The distinction the EU instrument was built on',
+        text: 'Recital 8 of the Regulation gives the reason in the Union’s own words: the EIO and the Convention on Mutual Assistance in Criminal Matters both allow evidence to be requested from another Member State, but "the procedures and timelines" they provide "might not be appropriate for electronic evidence, which is more volatile and could more easily and quickly be deleted". The production order was created to address a provider directly rather than to replace the state-to-state route.',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'And it is not purely provider-addressed either',
+        text: 'Article 8(1) of the Regulation requires the issuing authority to notify the **enforcing authority** — the authority of the Member State where the addressee is — where the order seeks traffic data other than identification data, or content data. Article 8(4) gives that notification suspensive effect on the addressee’s obligations, except in emergencies. For the more sensitive categories the other State is brought back in.',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'The Second Additional Protocol contains one of each',
+            description:
+              'Article 7(1) empowers authorities "to issue an order to be submitted directly to a service provider in the territory of another Party" — provider-addressed. Article 8(1) empowers them to issue an order "to be submitted as part of a request to another Party" compelling a provider in the requested Party’s territory to produce — state-addressed, with the provider reached through the requested Party.',
+          },
+          {
+            term: 'And a third form addressed to neither',
+            description:
+              'Article 6(1) provides for a **request** — not an order — to an entity providing domain name registration services in another Party’s territory, for information identifying or contacting a registrant, which under Article 6(2) that entity may disclose "subject to reasonable conditions provided by domestic law".',
+          },
+          {
+            term: 'A fourth runs between designated contacts',
+            description:
+              'Article 9(1)(a) lets the Convention’s 24/7 point of contact transmit and receive requests seeking immediate assistance in obtaining expedited disclosure from a provider in another Party’s territory "without a request for mutual assistance".',
+          },
+          {
+            term: 'When the two obligations collide',
+            description:
+              'Article 17 of the EU Regulation lets an addressee that considers compliance would conflict with a third country’s law raise a reasoned objection, which may not rest merely on the absence of similar provisions there. Section 2703(h)(2)(A) of Title 18 lets a provider — including a foreign provider — move to modify or quash where it reasonably believes the customer is not a United States person and does not reside there, and that disclosure would create a material risk of violating the laws of a qualifying foreign government.',
+          },
+        ],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Cross-border evidence requests go from one government to another.',
+        reality:
+          'Some do and some do not. A European Production Order is addressed to a provider’s designated establishment or legal representative in another Member State, and Article 7 of the Second Additional Protocol provides for an order submitted directly to a service provider in another Party.',
+      },
+      {
+        claim: 'An order addressed to a company is a way around the other state.',
+        reality:
+          'Article 8(1) of the EU Regulation requires the enforcing authority to be notified where the order seeks traffic data other than identification data, or content data, and Article 8(4) suspends the addressee’s obligations meanwhile except in emergencies.',
+      },
+      {
+        claim:
+          'A European Investigation Order and a European Production Order are the same instrument.',
+        reality:
+          'An EIO has measures carried out in another Member State by that State, on mutual recognition. A European Production Order is addressed to a provider’s establishment or legal representative. The Regulation’s recital 8 states why both exist.',
+      },
+      {
+        claim: 'Direct routes to providers reach whatever a state-to-state request would.',
+        reality:
+          'They reach less. Article 7 of the Protocol reaches specified, stored subscriber information; traffic data requires the Article 8 route through the requested Party; content data is in neither and remains with Convention mutual assistance.',
+      },
+      {
+        claim: 'A provider faced with conflicting legal obligations simply chooses one.',
+        reality:
+          'Both instruments read here provide a route. EU Regulation Article 17 provides for a reasoned objection to the issuing and enforcing authorities; 18 U.S.C. § 2703(h)(2)(A) provides for a motion to modify or quash on stated beliefs.',
+        note: 'Which foreign governments qualify for the United States mechanism turns on executive agreements that were not researched here.',
+      },
+      {
+        claim: 'Because some routes go straight to companies, states are no longer involved.',
+        reality:
+          'Every provider-addressed mechanism read here exists inside a treaty or a regulation that States made, obliges States to legislate, and keeps a role for the other State in the more intrusive cases.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Who the request is addressed to, mechanism by mechanism.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'State to state, through central authorities — Convention on Cybercrime, Arts. 25, 27, 29, 31.',
+          'State to state, by judicial decision on mutual recognition, measures carried out by the executing State — Directive 2014/41/EU, Art. 1(1)–(2).',
+          'Authority to the provider’s designated establishment or legal representative in another Member State — Regulation (EU) 2023/1543, Art. 3(1)–(2), with the enforcing authority notified for traffic and content data under Art. 8(1).',
+          'Authority directly to a service provider in another Party — Second Additional Protocol, Art. 7(1).',
+          'Authority to another Party, which compels the provider in its own territory — Second Additional Protocol, Art. 8(1).',
+          'Authority to a domain name registration entity, by request rather than order — Second Additional Protocol, Art. 6(1)–(2).',
+          'Point of contact to point of contact, in an emergency, without a mutual assistance request — Second Additional Protocol, Art. 9(1)(a).',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'Scope of these statements',
+        text: 'The Council of Europe instruments oblige their Parties to legislate and are not evidence of what any Party has enacted. The EU instruments bind the Member States bound by them. The United States provision is the law of that country only. Nothing here establishes which mechanisms are available between any particular pair of States.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'The addressee determines who is in a position to object. A state-to-state request is evaluated by a government that may refuse it on its own grounds. A provider-addressed order is evaluated first by a company, which is why both instruments that use that route give the company a defined way to raise a conflict rather than leaving it to choose which law to break.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'What the direct-to-provider routes actually reach is [direct cooperation with foreign providers](/investigations/direct-cooperation-with-foreign-providers). What the EU orders are and whether they operate yet is [European production and preservation orders](/investigations/european-production-and-preservation-orders). The state-to-state channel is [mutual legal assistance](/investigations/mutual-legal-assistance).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [direct cooperation with foreign providers](/investigations/direct-cooperation-with-foreign-providers), [European production and preservation orders](/investigations/european-production-and-preservation-orders), and [jurisdiction over foreign-held data](/investigations/jurisdiction-over-foreign-held-data).',
+      },
+    ],
+  },
+  {
+    slug: 'direct-cooperation-with-foreign-providers',
+    title: 'Direct cooperation with foreign providers',
+    shortTitle: 'Direct provider cooperation',
+    question:
+      'Can an authority in one country order a service provider in another country directly?',
+    summary:
+      'Under the Second Additional Protocol, for one category of data. Its direct route reaches specified, stored subscriber information only; traffic data requires going through the other Party, and content data is in neither.',
+    entityType: 'concept',
+    section: 'investigations',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'asking-a-state-and-ordering-a-provider',
+      'when-a-cooperation-instrument-starts-to-operate',
+      'data-categories-across-instruments',
+      'mutual-legal-assistance',
+    ],
+    sources: ['coe-cybercrime-second-protocol', 'coe-cybercrime-convention'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-05',
+    publishedOn: '2026-09-05',
+    reviewedOn: '2026-09-05',
+    factsVerifiedOn: '2026-09-05',
+    readingTimeMinutes: 10,
+    uncertainty: [
+      'Articles 6, 7, 8 and 9 of the Protocol were read. Articles 5, 10, 11, 12, 13 and 14 — including its conditions, safeguards and personal-data provisions — were not, and nothing is asserted about them.',
+      'The Protocol’s entry into force is NOT ESTABLISHED. The official Dutch treaty database, on a page stating information valid on 5 September 2026, records its conclusion on 12 May 2022 and leaves the entry-into-force column empty. Its ratification count and Party list were NOT RESEARCHED, because the Council of Europe Treaty Office returned HTTP 403.',
+      'No provider is named here and nothing compares how any provider or jurisdiction responds. No national implementing legislation was read for any Party.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'The Second Additional Protocol to the Convention on Cybercrime creates routes that do not run through a foreign government. The most discussed of them lets an authority in one Party send an order straight to a company in another. What that route reaches is much narrower than its reputation.',
+      },
+      {
+        kind: 'callout',
+        variant: 'safety',
+        title: 'What this page is and is not',
+        text: 'This explains what an international instrument permits and what it does not. It names no provider, describes no procedure for issuing or answering an order, contains no template or channel detail, and is not legal advice.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'Mutual assistance requires a second government to evaluate a request under its own law, which is the right answer when what is sought is intrusive and the wrong answer when it is an account name. The Protocol’s premise is that the weight of the process should track the weight of what is being obtained.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'The consequence is a ladder, not a shortcut',
+        text: 'The Protocol did not make cooperation direct. It made the lightest category direct, kept the middle category running through the other Party, and left the heaviest with the Convention’s mutual assistance. Reading only the first of those produces exactly the overstatement this page exists to correct.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'Article 7(1) is the direct route. Each Party is to empower its competent authorities "to issue an order to be submitted directly to a service provider in the territory of another Party, in order to obtain the disclosure of **specified, stored subscriber information** in that service provider’s possession or control, where the subscriber information is needed for the issuing Party’s **specific criminal investigations or proceedings**". Article 7(2)(a) obliges each Party to make providers in its own territory able to disclose in response.',
+        claim: 'fact',
+        sources: ['coe-cybercrime-second-protocol'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Four limits inside one sentence',
+        text: 'The order reaches **subscriber information**, not other categories; it must be **specified**, not general; the information must be **stored**, not prospective; and it must be needed for a **specific** investigation or proceeding. Each is a limit on its face, and together they describe something much smaller than a general power to obtain data from foreign companies.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Nor does the Protocol impose a single authorisation rule for that route. Article 7(2)(b) provides that a Party may, at signature or when depositing its instrument of ratification, acceptance or approval, declare that — for orders issued to providers in its territory — "The order under Article 7, paragraph 1, must be issued by, or under the supervision of, a prosecutor or other judicial authority, or otherwise be issued under independent supervision". That is a declaration a Party may make, not a default the Protocol sets.',
+        claim: 'fact',
+        sources: ['coe-cybercrime-second-protocol'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Article 8 is the route for more than subscriber information, and it is not direct. Each Party is to empower its authorities "to issue an order to be submitted **as part of a request to another Party**" for the purpose of compelling a service provider in the **requested Party’s** territory to produce specified and stored "(a) subscriber information, and (b) traffic data". The order reaches the provider through the other Party, and reaches a category Article 7 does not.',
+        claim: 'fact',
+        sources: ['coe-cybercrime-second-protocol'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Content data is in neither',
+        text: 'Neither Article 7 nor Article 8 reaches content. Obtaining the content of communications from another Party remains a matter for the Convention’s mutual assistance provisions, where Article 34 obliges Parties to assist in the interception of content data only "to the extent permitted under their applicable treaties and domestic laws".',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'A request, not an order, for domain registration information',
+            description:
+              'Article 6(1) empowers authorities, for specific criminal investigations or proceedings, to issue a **request** to an entity providing domain name registration services in another Party’s territory, for information in its possession or control "for identifying or contacting the registrant of a domain name". Article 6(2) requires each Party to permit an entity in its territory to disclose such information "subject to reasonable conditions provided by domestic law".',
+          },
+          {
+            term: 'An emergency channel between designated contacts',
+            description:
+              'Article 9(1)(a) provides for the Convention’s Article 35 24/7 point of contact to transmit and receive requests seeking immediate assistance in obtaining, from a provider in another Party’s territory, the expedited disclosure of specified, stored computer data "without a request for mutual assistance". Article 9(1)(b) lets a Party declare that it will not execute such requests seeking only subscriber information.',
+          },
+          {
+            term: 'And every route depends on Parties legislating',
+            description:
+              'Each of Articles 6, 7, 8 and 9 opens with the same formula — each Party "shall adopt such legislative and other measures as may be necessary". The Protocol creates obligations to build these routes, not the routes themselves.',
+          },
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'uncertainty',
+        title: 'And whether it operates yet is a separate question',
+        text: 'The official Dutch treaty database records the Protocol as concluded on 12 May 2022 and, on a page stating information valid on 5 September 2026, leaves its entry-into-force column empty; every article carries a marker meaning "text without entry-into-force date". What that establishes is what that register records. The Council of Europe Treaty Office, which is the authoritative register for signatures and ratifications, was unreachable, so no ratification count is stated anywhere here.',
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'The Protocol lets police directly obtain any data from any foreign provider.',
+        reality:
+          'Article 7 reaches specified, stored subscriber information, for a specific investigation, from a provider in another Party. Traffic data requires Article 8, which runs through the requested Party. Content data is in neither and remains with Convention mutual assistance.',
+      },
+      {
+        claim: 'A direct order to a provider means no judicial or independent involvement.',
+        reality:
+          'Article 7(2)(b) allows a Party to declare that orders to providers in its territory must be issued by, or under the supervision of, a prosecutor or other judicial authority, or otherwise under independent supervision.',
+        note: 'It is a declaration a Party may make, so the answer differs between Parties and was not researched for any of them.',
+      },
+      {
+        claim:
+          'Article 6 lets authorities order a registration entity to hand over information.',
+        reality:
+          'Article 6(1) provides for a request, and Article 6(2) requires Parties to permit disclosure "subject to reasonable conditions provided by domestic law". The instrument distinguishes a request from an order, and uses each in a different article.',
+      },
+      {
+        claim: 'The emergency channel is a faster way to make an ordinary request.',
+        reality:
+          'Article 9(1)(a) operates in an emergency, between the Convention’s 24/7 points of contact, for the expedited disclosure of specified stored data. Article 9(1)(b) additionally lets a Party declare it will not execute such requests seeking only subscriber information.',
+      },
+      {
+        claim: 'Because the Protocol has been adopted, these routes are available.',
+        reality:
+          'Every one of Articles 6 to 9 requires each Party to adopt legislative and other measures. And the register consulted for this wave records the Protocol as concluded on 12 May 2022 with no entry-into-force date.',
+      },
+      {
+        claim: 'Direct provider cooperation replaces mutual legal assistance.',
+        reality:
+          'It supplements it for one category. The Protocol’s own Article 8 keeps traffic data running through the requested Party, and content data stays with the Convention.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Four channels, four different reaches — which is the Protocol’s architecture.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Authority → domain name registration entity in another Party, by request, for registrant identification or contact information — Art. 6(1)–(2).',
+          'Authority → service provider in another Party, by order, for specified stored subscriber information only — Art. 7(1), with the Art. 7(2)(b) supervision declaration available to a Party.',
+          'Authority → another Party → provider in that Party, by order in a request, for specified stored subscriber information **and traffic data** — Art. 8(1).',
+          'Point of contact → point of contact, in an emergency, for expedited disclosure of specified stored computer data without a mutual assistance request — Art. 9(1)(a), with the Art. 9(1)(b) declaration available.',
+          'Content data — in none of them; it remains with Convention mutual assistance, Arts. 31 and 34.',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'Scope of these statements',
+        text: 'The Protocol obliges its Parties to legislate. It is not evidence of what any Party has enacted, which declarations any Party has made, or whether any Party is bound by it. Articles 5 and 10 to 14 were not read.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'What the graduation protects is the proportion between the process and the material. A route that reaches an account name without engaging a second government is defensible in a way that the same route reaching the content of communications would not be — and the Protocol keeps the heavier categories on the heavier routes rather than trusting that the lighter one will be used sparingly.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'Who each mechanism is addressed to is [asking a state and ordering a provider](/investigations/asking-a-state-and-ordering-a-provider). What the data categories mean and how they differ between instruments is [data categories across instruments](/investigations/data-categories-across-instruments). Whether an instrument operates yet is [when a cooperation instrument starts to operate](/investigations/when-a-cooperation-instrument-starts-to-operate).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [asking a state and ordering a provider](/investigations/asking-a-state-and-ordering-a-provider), [mutual legal assistance](/investigations/mutual-legal-assistance), and [when a cooperation instrument starts to operate](/investigations/when-a-cooperation-instrument-starts-to-operate).',
+      },
+    ],
+  },
+  {
+    slug: 'european-production-and-preservation-orders',
+    title: 'European production and preservation orders',
+    shortTitle: 'EU production and preservation',
+    question:
+      'What does the European Union framework for electronic evidence create, and does it operate yet?',
+    summary:
+      'Two orders addressed to a provider’s establishment in another Member State, under a Regulation applying from 18 August 2026. Who may issue one depends on the data category — and a prosecutor may order content preserved but not produced.',
+    entityType: 'concept',
+    section: 'investigations',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'asking-a-state-and-ordering-a-provider',
+      'cross-border-preservation-and-disclosure',
+      'when-a-cooperation-instrument-starts-to-operate',
+      'who-authorises-a-digital-investigative-measure',
+    ],
+    sources: [
+      'eu-reg-2023-1543-e-evidence',
+      'eu-dir-2023-1544-legal-representatives',
+      'eu-dir-2014-41-eio',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-05',
+    publishedOn: '2026-09-05',
+    reviewedOn: '2026-09-05',
+    factsVerifiedOn: '2026-09-05',
+    readingTimeMinutes: 12,
+    keyTerms: ['disclosure'],
+    uncertainty: [
+      'Whether any Member State has transposed Directive (EU) 2023/1544, and whether any provider has designated an establishment or appointed a legal representative, was NOT RESEARCHED for any Member State or any provider.',
+      'The Regulation’s Article 19 obligation to use a decentralised IT system applies one year after implementing acts adopted under Article 25. Whether those acts have been adopted was not researched, so that date is not established and is not stated here.',
+      'Articles 5, 6, 7, 9, 10, 11, 12, 14, 15, 16 and 19 to 33 of the Regulation were not read in full, and no Member State’s implementing arrangements were read.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'The European Union has built a route for electronic evidence that does not run between governments. An authority in one Member State issues an order, and it is addressed to the point of contact a service provider has been obliged to maintain — which may be in a different Member State from the authority, and in a different one again from the data.',
+      },
+      {
+        kind: 'callout',
+        variant: 'safety',
+        title: 'What this page is and is not',
+        text: 'This explains what two European Union instruments establish. It applies to Member States bound by them and to no other country; it names no provider; it describes no procedure for issuing, transmitting or answering an order; and it is not legal advice.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'The Union stated the reason itself. Recital 8 of the Regulation records that Directive 2014/41/EU establishing the European Investigation Order, and the Convention on Mutual Assistance in Criminal Matters, both allow evidence to be requested from another Member State — but that "the procedures and timelines" they provide "might not be appropriate for electronic evidence, which is more volatile and could more easily and quickly be deleted".',
+        claim: 'fact',
+        sources: ['eu-reg-2023-1543-e-evidence'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'A different addressee, not a replacement instrument',
+        text: 'The EIO still exists and still runs between States. What the Regulation adds is an order that goes to the provider’s establishment, for the category of evidence whose volatility the older instruments were not built for.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'Two orders exist, and their definitions carry the distinction between them. Article 3(1) defines a **European Production Order** as a decision ordering the production of electronic evidence, issued or validated by a judicial authority of a Member State, "addressed to a designated establishment or to a legal representative of a service provider offering services in the Union, where that designated establishment or legal representative is located in another Member State bound by this Regulation". Article 3(2) defines a **European Preservation Order** identically as to addressee, but as ordering preservation "for the purposes of a subsequent request for production".',
+        claim: 'fact',
+        sources: ['eu-reg-2023-1543-e-evidence'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'The addressee exists because a second instrument requires it to. Article 3(1) of Directive (EU) 2023/1544 obliges Member States to ensure that providers offering services in the Union designate or appoint at least one addressee for the receipt of, compliance with and enforcement of such orders — a **designated establishment** where the provider is established in the Union with legal personality, and a **legal representative** where it is not established in the Union, or is established in a Member State not taking part.',
+        claim: 'fact',
+        sources: ['eu-dir-2023-1544-legal-representatives'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title:
+          'The Regulation and the Directive are not interchangeable, and neither works alone',
+        text: 'A Regulation is directly applicable; a Directive binds Member States as to the result and requires transposition. Here they are two halves of one design: the Regulation addresses orders to an addressee, and the Directive is what obliges providers to have one. Describing either as "the EU e-Evidence law" loses the half that makes the other operate.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Who may issue an order depends on what is sought. Under Article 4(1), a production order for **subscriber data**, or for data requested for the sole purpose of identifying the user, may be issued by a judge, a court, an investigating judge **or a public prosecutor** — or by another competent investigating authority, whose order must then be **validated** by one of those. Under Article 4(2), a production order for **traffic data** other than identification data, **or for content data**, may be issued only by a judge, a court or an investigating judge — **not** a public prosecutor — or validated by one of those.',
+        claim: 'fact',
+        sources: ['eu-reg-2023-1543-e-evidence'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'And Article 4(3) does something the domestic layer has no equivalent for: a **European Preservation Order for data of any category** — including content — may be issued by a judge, a court, an investigating judge **or a public prosecutor**.',
+        claim: 'fact',
+        sources: ['eu-reg-2023-1543-e-evidence'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'One article, three distinctions',
+        text: 'The data category determines the authoriser. Issuing is separable from validating, so a non-judicial investigating authority may act only with judicial confirmation. And preservation and production diverge on the same data: a prosecutor may order content preserved and may not order the same content produced. The reason is the one this section states throughout — freezing is not obtaining.',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'The other Member State is brought back in for the sensitive categories',
+            description:
+              'Article 8(1) requires the issuing authority to notify the **enforcing authority** — the authority of the Member State where the addressee is — by transmitting the order to it at the same time as to the addressee, where the order seeks traffic data other than identification data, or content data. Article 8(2) disapplies that where the issuing authority has reasonable grounds to believe both that the offence was, is being or is likely to be committed in the issuing State and that the person whose data are requested resides there. Article 8(4) gives the notification **suspensive effect** on the addressee’s obligations, except in emergencies.',
+          },
+          {
+            term: 'The person is told, with exceptions that must be recorded',
+            description:
+              'Article 13(1) requires the issuing authority to inform the person whose data are being requested, without undue delay. Article 13(2) permits delaying, restricting or omitting that under the conditions of Article 13(3) of Directive (EU) 2016/680, with reasons recorded in the case file and a short justification added to the certificate. Article 13(3) requires the information, when given, to include information about available remedies.',
+          },
+          {
+            term: 'Remedies lie in the issuing State',
+            description:
+              'Article 18(1) gives any person whose data were requested the right to effective remedies against the order, and a suspect or accused person the right to remedies during the criminal proceedings in which the data are used. Article 18(2) provides that the right is exercised "before a court in the issuing State" and includes challenging legality, "including its necessity and proportionality", without prejudice to fundamental-rights guarantees in the enforcing State.',
+          },
+          {
+            term: 'And a conflict with a third country has a defined route',
+            description:
+              'Article 17(1) lets an addressee that considers compliance would conflict with the applicable law of a third country inform the issuing and enforcing authorities by reasoned objection. Article 17(2) provides that the objection may not be based merely on the absence of similar provisions in that third country’s law.',
+          },
+        ],
+      },
+      {
+        kind: 'paragraph',
+        text: 'On timing, the instruments answer separately. Article 34(2) of the Regulation provides: "It shall apply from 18 August 2026." The same paragraph carries a later and separate trigger — the obligation to use the decentralised IT system established in Article 19 for written communication applies "from one year after the adoption of the implementing acts referred to in Article 25". Article 7(1) of the Directive required Member States to bring transposing measures into force "by 18 February 2026".',
+        claim: 'fact',
+        sources: ['eu-reg-2023-1543-e-evidence', 'eu-dir-2023-1544-legal-representatives'],
+      },
+      {
+        kind: 'callout',
+        variant: 'uncertainty',
+        title: 'What those dates do and do not establish',
+        text: 'The Regulation’s application date has passed, so the Regulation applies. The Directive’s transposition deadline has passed, which is not the same as any Member State having transposed it — that was not researched for any Member State, and nor was whether any provider has designated an addressee. The Article 19 obligation runs from a date that depends on implementing acts whose adoption was not researched, so no date for it is stated here.',
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'A European Production Order is a European Investigation Order for data.',
+        reality:
+          'An EIO is a judicial decision to have measures carried out in another Member State by that State, on mutual recognition. A European Production Order is addressed to a provider’s designated establishment or legal representative. Recital 8 of the Regulation states why both exist.',
+      },
+      {
+        claim: 'The Regulation and the Directive are two names for the same measure.',
+        reality:
+          'A Regulation is directly applicable; a Directive requires transposition. The Regulation addresses orders to an addressee, and the Directive is what obliges providers to designate or appoint one.',
+      },
+      {
+        claim: 'The same authority can issue any of these orders.',
+        reality:
+          'Article 4(1) allows a public prosecutor to issue a production order for subscriber or identification data; Article 4(2) does not allow a prosecutor to issue one for traffic data other than identification data, or for content data.',
+      },
+      {
+        claim:
+          'If a prosecutor cannot order content produced, a prosecutor cannot reach it at all.',
+        reality:
+          'Article 4(3) allows a European Preservation Order for data of any category, including content, to be issued by a public prosecutor. Preserving is not producing, and the Regulation prices them differently.',
+      },
+      {
+        claim: 'Because the order goes to a company, the other Member State is not involved.',
+        reality:
+          'Article 8(1) requires the enforcing authority to be notified where the order seeks traffic data other than identification data, or content data, and Article 8(4) suspends the addressee’s obligations meanwhile except in emergencies.',
+      },
+      {
+        claim: 'Because the Regulation applies, every part of the framework is in operation.',
+        reality:
+          'The Article 19 decentralised IT system obligation applies one year after implementing acts adopted under Article 25, and whether those acts exist was not researched. Whether Member States have transposed the Directive, and whether providers have designated addressees, was not researched either.',
+        note: 'The Regulation’s own application date, 18 August 2026, is established from Article 34(2).',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'What the framework establishes, provision by provision.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'A production order and a preservation order, both addressed to a designated establishment or legal representative in another Member State — Reg. Art. 3(1)–(2).',
+          'The obligation on providers to have such an addressee at all — Dir. (EU) 2023/1544, Art. 3(1)(a)–(c).',
+          'A prosecutor may issue a production order for subscriber or identification data — Reg. Art. 4(1) — but not for traffic data other than identification data, or content — Art. 4(2).',
+          'A prosecutor may issue a preservation order for data of any category — Reg. Art. 4(3).',
+          'The enforcing authority notified, with suspensive effect, for traffic and content data — Reg. Art. 8(1), (4), subject to the Art. 8(2) carve-out.',
+          'The person informed without undue delay, with recorded exceptions, and told their remedies — Reg. Art. 13(1)–(3).',
+          'Remedies before a court in the issuing State, covering necessity and proportionality — Reg. Art. 18(1)–(2).',
+          'A reasoned objection where compliance would conflict with a third country’s law — Reg. Art. 17(1)–(2).',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'Scope of these statements',
+        text: 'These are European Union instruments binding the Member States bound by them. Nothing here applies to a non-EU country, and nothing here establishes what any particular Member State has done or what any provider has in place.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'The framework’s safeguards do not sit in one place, which is worth noticing because the addressee is a company. Some are on the issuing side — the authorisation ladder and the duty to inform the person. Some are on the enforcing side — notification with suspensive effect for the more sensitive categories. And one is on the addressee itself, in the reasoned-objection route for conflicting obligations.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'What a remedy is and what a forum can give is Wave 19’s subject: [effective remedy](/justice/effective-remedy). Who authorises a domestic digital measure is [who authorises a digital investigative measure](/investigations/who-authorises-a-digital-investigative-measure). The preservation-before-production relationship across borders is [cross-border preservation and disclosure](/investigations/cross-border-preservation-and-disclosure).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [asking a state and ordering a provider](/investigations/asking-a-state-and-ordering-a-provider), [when a cooperation instrument starts to operate](/investigations/when-a-cooperation-instrument-starts-to-operate), and [data categories across instruments](/investigations/data-categories-across-instruments). The other instrument that addresses a provider in another country directly, and reaches a narrower category than these orders do, is [direct cooperation with foreign providers](/investigations/direct-cooperation-with-foreign-providers).',
+      },
+    ],
+  },
+  {
+    slug: 'when-a-cooperation-instrument-starts-to-operate',
+    title: 'When a cooperation instrument starts to operate',
+    shortTitle: 'When an instrument operates',
+    question: 'An international instrument has been adopted. Does it work yet?',
+    summary:
+      'Adoption, entry into force, application and national implementation are four different facts, and four instruments read for this section sit at four different points. One states in its own text that its cooperation articles require Parties to legislate first.',
+    entityType: 'concept',
+    section: 'investigations',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'mutual-legal-assistance',
+      'direct-cooperation-with-foreign-providers',
+      'european-production-and-preservation-orders',
+      'international-rights-and-domestic-law',
+    ],
+    sources: [
+      'coe-cybercrime-convention',
+      'coe-cybercrime-second-protocol',
+      'eu-reg-2023-1543-e-evidence',
+      'eu-dir-2023-1544-legal-representatives',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-05',
+    publishedOn: '2026-09-05',
+    reviewedOn: '2026-09-05',
+    factsVerifiedOn: '2026-09-05',
+    readingTimeMinutes: 10,
+    keyTerms: ['rule-of-law'],
+    uncertainty: [
+      'Every status on this page is stated as at 5 September 2026, the date the instruments were read. Legal status changes, and a reader consulting this later should check the position again.',
+      'Party lists, signature dates and ratification counts for the two Council of Europe instruments were NOT RESEARCHED. The Council of Europe Treaty Office returned HTTP 403 to three separate URL forms, and secondary summaries giving a count were deliberately not used.',
+      'No national implementing legislation and no national transposition measure was read for any country. Nothing here establishes what any State has enacted.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'An instrument existing is not the same as an instrument working. Between the two sit several distinct events — a text agreed, a State bound, the instrument in force, its provisions applicable, and a national legislature having done what the instrument told it to do — and each can be true while the next is not.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This explains the stages between an instrument being adopted and being operable, using four instruments as worked examples. It states each status as at 5 September 2026, establishes nothing about any State’s domestic law, and is not legal advice.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'The failure this distinction prevents is specific and common: reading that an instrument creates a mechanism, and concluding that the mechanism is available. Almost every cooperation instrument is written as an obligation on States to build something, and the gap between the obligation and the thing is where the practical answer lives.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'And the gap is not an oversight',
+        text: 'An instrument that operated the moment it was agreed would be one that changed a State’s internal law without that State’s legislature acting. The stages exist because cooperation is agreed between governments and executed through legal systems, and those are different things happening at different speeds.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'The Convention on Cybercrime states the point about itself. Article 25(2) provides that "Each Party shall also adopt such legislative and other measures as may be necessary to carry out the obligations set forth in Articles 27 through 35" — which is to say that its own international-cooperation articles are obligations to legislate rather than rules that operate of their own force.',
+        claim: 'fact',
+        sources: ['coe-cybercrime-convention'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'A treaty in force can still require every Party to act before anything happens',
+        text: 'Article 25(2) is not a transitional provision. It is a standing statement that Chapter III is a construction plan. A Party bound by the Convention has undertaken to build the machinery; whether it has is a question about that Party.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The Second Additional Protocol shows an earlier stage. The official treaty database of the Government of the Netherlands, on a page stating that its information is valid on 5 September 2026, records a single lifecycle entry for the Protocol — its conclusion, dated 12 May 2022 — and leaves the entry-into-force column empty. Every article of the text carries a marker meaning "text without entry-into-force date".',
+        claim: 'fact',
+        sources: ['coe-cybercrime-second-protocol'],
+      },
+      {
+        kind: 'callout',
+        variant: 'uncertainty',
+        title: 'What that establishes, stated exactly',
+        text: 'It establishes what that register records, as at that date. It is not a claim that the Protocol has no entry-into-force date anywhere, and it is not a count of ratifications — the authoritative register for signatures and ratifications is the Council of Europe Treaty Office, which was unreachable, so no count appears anywhere in this section.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The European Union instruments show two further stages, and they differ from each other by design. Article 34(2) of Regulation (EU) 2023/1543 provides: "It shall apply from 18 August 2026." A Regulation is directly applicable, so once that date arrives the Regulation applies in the Member States bound by it without any national measure being required to make it apply.',
+        claim: 'fact',
+        sources: ['eu-reg-2023-1543-e-evidence'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'A Directive is different. Article 7(1) of Directive (EU) 2023/1544 provides that "Member States shall bring into force the laws, regulations and administrative provisions necessary to comply with this Directive by 18 February 2026" — an obligation on each Member State to legislate, with a deadline. The deadline passing is a fact about the deadline, not about any Member State.',
+        claim: 'fact',
+        sources: ['eu-dir-2023-1544-legal-representatives'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'A passed deadline is not a completed transposition',
+        text: 'Whether any Member State has in fact transposed Directive (EU) 2023/1544 was not researched for any Member State. That matters here more than usual, because the Regulation addresses orders to an addressee the Directive is what obliges providers to have — so the applicable instrument depends on the transposed one.',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'One instrument can carry more than one date',
+            description:
+              'Article 34(2) of the Regulation states the application date and then, in the same paragraph, a separate and later trigger: the obligation to use the decentralised IT system established in Article 19 applies "from one year after the adoption of the implementing acts referred to in Article 25". An instrument can be applicable while an obligation inside it is not.',
+          },
+          {
+            term: 'Whether that later date has arrived is not established here',
+            description:
+              'Whether the Article 25 implementing acts have been adopted was not researched, so this section states no date for the Article 19 obligation and does not describe it as operative.',
+          },
+          {
+            term: 'The stages are not a sequence every instrument completes',
+            description:
+              'A text can be concluded and never enter into force; an instrument can be in force for some Parties and not others; and an instrument in force can still require every Party to legislate before anything works. The four instruments here illustrate four different positions on 5 September 2026.',
+          },
+        ],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'An instrument that has been adopted is in force.',
+        reality:
+          'The register consulted for this section records the Second Additional Protocol as concluded on 12 May 2022 and leaves its entry-into-force column empty, on a page stating its information is valid on 5 September 2026.',
+      },
+      {
+        claim: 'Signing an instrument makes a state bound by it.',
+        reality:
+          'The instruments read here treat signature and the deposit of an instrument of ratification, acceptance or approval as different events — the Second Additional Protocol’s Articles 7(2)(b) and 9(1)(b) allow a Party to make declarations "at the time of signature … or when depositing its instrument of ratification, acceptance or approval", which are stated as alternatives.',
+      },
+      {
+        claim: 'A treaty in force creates the mechanisms it describes.',
+        reality:
+          'Article 25(2) of the Convention on Cybercrime requires each Party to adopt such legislative and other measures as may be necessary to carry out the obligations in Articles 27 to 35. Every operative article of the Second Additional Protocol opens with the same formula.',
+      },
+      {
+        claim: 'An EU Regulation and an EU Directive work the same way.',
+        reality:
+          'The Regulation states its own application date and is directly applicable from it. The Directive obliges Member States to bring transposing measures into force by a deadline, which is an obligation on each of them.',
+      },
+      {
+        claim: 'Once a transposition deadline has passed, the Directive is implemented.',
+        reality:
+          'The deadline is a date in the Directive. Whether any Member State has transposed Directive (EU) 2023/1544 was not researched for any Member State, and nothing here asserts that any has.',
+      },
+      {
+        claim: 'If a Regulation applies, everything in it applies.',
+        reality:
+          'Article 34(2) of Regulation (EU) 2023/1543 makes the Regulation applicable from 18 August 2026 and, in the same paragraph, makes the Article 19 decentralised IT system obligation applicable one year after implementing acts adopted under Article 25.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Four instruments, four positions as at 5 September 2026.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'In force, and stating in its own text that its cooperation articles require Parties to legislate — Convention on Cybercrime, Art. 25(2).',
+          'Concluded 12 May 2022, with no entry-into-force date recorded in the register consulted, and every operative article requiring Parties to legislate — Second Additional Protocol.',
+          'Directly applicable, and applying since 18 August 2026 — Regulation (EU) 2023/1543, Art. 34(2).',
+          'Carrying a further obligation inside it that applies one year after implementing acts whose adoption was not researched — Regulation Art. 34(2), second sentence, with Art. 19 and Art. 25.',
+          'Requiring national transposition by 18 February 2026, with completion in any Member State not researched — Directive (EU) 2023/1544, Art. 7(1).',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'Scope of these statements',
+        text: 'Each status is stated as at 5 September 2026 and rests on the instrument’s own text or on an official register that timestamps its currency. No Party list, ratification count or national implementing measure was researched, and none is asserted.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'The reason this matters beyond bookkeeping is that a mechanism which does not yet operate is not a route anyone can use — and a mechanism believed to operate when it does not produces requests that fail, or worse, requests answered under a power nobody has. The stages are how a legal system keeps the difference visible.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'A different question about treaties is answered elsewhere: whether a treaty a State has joined becomes part of that State’s domestic law is [international rights and domestic law](/justice/international-rights-and-domestic-law), which compares constitutional rules on reception. This page is about the stages an instrument passes through, not about how a legal system receives one.',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [international rights and domestic law](/justice/international-rights-and-domestic-law), [direct cooperation with foreign providers](/investigations/direct-cooperation-with-foreign-providers), and [European production and preservation orders](/investigations/european-production-and-preservation-orders).',
+      },
+    ],
+  },
+  {
+    slug: 'data-categories-across-instruments',
+    title: 'Data categories across instruments',
+    shortTitle: 'Categories across instruments',
+    question: 'Does "subscriber data" mean the same thing in every instrument?',
+    summary:
+      'No. The Convention draws three categories and the European Union Regulation draws four, and the extra one is not a sub-case — it carries its own authorisation rule and its own exemption from the duty to notify the other Member State.',
+    entityType: 'concept',
+    section: 'investigations',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'content-and-communications-data',
+      'european-production-and-preservation-orders',
+      'direct-cooperation-with-foreign-providers',
+      'cross-border-preservation-and-disclosure',
+    ],
+    sources: [
+      'coe-cybercrime-convention',
+      'eu-reg-2023-1543-e-evidence',
+      'coe-cybercrime-second-protocol',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-05',
+    publishedOn: '2026-09-05',
+    reviewedOn: '2026-09-05',
+    factsVerifiedOn: '2026-09-05',
+    readingTimeMinutes: 10,
+    uncertainty: [
+      'Three instruments were read. Whether any national law adopts any of these definitions, or defines the categories differently again, was NOT RESEARCHED for any country.',
+      'The Convention’s definitions of traffic data and content data outside Article 18(3), and the Protocol’s Article 14 on personal data, were not read for this wave.',
+      'Nothing here describes what any particular provider holds, or how any category of data is generated, stored or obtained.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Cross-border mechanisms are written in terms of data categories: this route reaches subscriber information, that one reaches traffic data, another reaches content. The categories look like a shared vocabulary. They are not — each instrument defines them for itself, and one of them counts differently from the others.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This compares how international and supranational instruments define categories of data. It describes no technology, states nothing about what any provider holds, and is not legal advice. What the categories mean inside a domestic system is a separate question, answered elsewhere in this section.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'The categories carry the weight of the whole design. Which route may be used, who may authorise it, whether another State must be told, and whether the mechanism reaches at all — every one of those turns on which category the material falls into. A term that shifted meaning between instruments would shift all of those with it.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'And they do shift, which is why the mapping has to be done rather than assumed',
+        text: 'Reading two instruments as though "subscriber data" were a single agreed concept produces a confident answer that is wrong for at least one of them. The definitions are in the instruments precisely because the drafters did not assume it either.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'The Convention on Cybercrime defines its third category by excluding the other two. Article 18(3) provides that "subscriber information" means information held by a service provider relating to subscribers of its services **other than traffic or content data**, by which the type of service and period, the subscriber’s identity and contact and billing details, and information on the site of installation of communication equipment can be established.',
+        claim: 'fact',
+        sources: ['coe-cybercrime-convention'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Regulation (EU) 2023/1543 defines four. Article 3(9) defines **subscriber data** as data relating to the subscription — identity, address, billing and payment data, contact details, service type and duration and related technical data — while **expressly excluding** "passwords or other authentication means used instead of a password that are provided by a user, or created at the request of a user". Article 3(11) defines **traffic data** by enumeration, including source and destination, the location of the device, date, time, duration, size, route, format and protocol, and session log-in and log-off data. Article 3(12) defines **content data** as any data in digital format "other than subscriber data or traffic data".',
+        claim: 'fact',
+        sources: ['eu-reg-2023-1543-e-evidence'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'And Article 3(10) defines a category the Convention has no counterpart for: **"data requested for the sole purpose of identifying the user"**.',
+        claim: 'fact',
+        sources: ['eu-reg-2023-1543-e-evidence'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'The fourth category is not a label — it does work',
+        text: 'It appears twice more in the Regulation, each time changing an outcome. Article 4(1) lets a public prosecutor issue a production order for it, alongside subscriber data. Article 4(2) then carves it out of the stricter rule for traffic data, so that traffic data "except for data requested for the sole purpose of identifying the user" is the material a prosecutor may not order produced. And Article 8(1) carves it out of the duty to notify the enforcing authority. A reader working from a three-category model would get all three of those wrong.',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'The exclusions differ, and they are not decorative',
+            description:
+              'The Convention’s subscriber information is defined negatively — anything held about a subscriber that is not traffic or content data. The Regulation’s subscriber data is defined positively by enumeration and then narrowed by an express carve-out for passwords and other authentication means. An item can therefore sit inside one instrument’s subscriber category and outside the other’s.',
+          },
+          {
+            term: 'Location appears inside traffic data in the Regulation',
+            description:
+              'Article 3(11) lists "the location of the device" among the elements of traffic data, alongside source and destination, timing and session data. Where a system treats location separately, that treatment does not come from this definition.',
+          },
+          {
+            term: 'The Protocol uses the categories to divide its routes',
+            description:
+              'Article 7 of the Second Additional Protocol reaches specified, stored **subscriber information** and nothing else; Article 8 reaches specified and stored **subscriber information and traffic data**. Content data appears in neither. The categories are what separate a direct route from one that runs through the other Party.',
+          },
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'The direction of graduation is consistent even where the definitions are not',
+        text: 'Across every instrument read here, subscriber-type information attracts the lightest conditions, content the heaviest, and traffic data sits between. What differs is where each instrument draws the boundaries — and, in the Regulation’s case, how many boundaries there are.',
+      },
+    ],
+    misconceptions: [
+      {
+        claim:
+          'Subscriber data, traffic data and content mean the same thing in every instrument.',
+        reality:
+          'The Convention defines subscriber information by excluding traffic and content data. The Regulation defines subscriber data by enumeration with an express carve-out for passwords and other authentication means, and adds a fourth category the Convention does not have.',
+      },
+      {
+        claim: 'There are three categories of communications data.',
+        reality:
+          'Regulation (EU) 2023/1543 defines four. Article 3(10) creates "data requested for the sole purpose of identifying the user" as a distinct category, and Articles 4(1), 4(2) and 8(1) each treat it differently from traffic data.',
+      },
+      {
+        claim: 'A category label tells you which route may be used.',
+        reality:
+          'It tells you which route may be used under that instrument, and no further. Article 7 of the Second Additional Protocol reaches subscriber information as the Protocol uses the term; the Regulation’s categories govern the European orders; and the Convention’s govern its own articles.',
+      },
+      {
+        claim: 'Identification data is simply a kind of subscriber data.',
+        reality:
+          'The Regulation treats it separately. Article 4(2) defines the stricter authorisation rule as applying to traffic data "except for data requested for the sole purpose of identifying the user", and Article 8(1) excludes it from the notification duty on the same terms.',
+      },
+      {
+        claim:
+          'Because content is the most protected category, everything else is lightly protected.',
+        reality:
+          'The Regulation’s subscriber-data definition expressly excludes passwords and other authentication means, so material that might look like account information is outside the lightest category by definition.',
+      },
+      {
+        claim: 'These definitions tell you what the categories mean in national law.',
+        reality:
+          'They define the terms for their own instruments. Whether any national law adopts them, or defines the categories differently again, was not researched for any country.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Three instruments, two different category models.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Three categories, the third defined by excluding the other two — Convention on Cybercrime, Art. 18(3).',
+          'Four categories, enumerated, with content defined as everything that is not the other two named ones — Regulation (EU) 2023/1543, Arts. 3(9)–(12).',
+          'A fourth category that changes the authoriser — Reg. Art. 4(1)–(2) — and the notification duty — Art. 8(1).',
+          'Subscriber data expressly excluding passwords and other authentication means — Reg. Art. 3(9)(b).',
+          'Device location inside traffic data — Reg. Art. 3(11).',
+          'Categories used to divide the routes themselves — Second Additional Protocol, Art. 7 against Art. 8, with content in neither.',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'Scope of these statements',
+        text: 'Each definition governs its own instrument. The Council of Europe instruments oblige their Parties; the Regulation binds the Member States bound by it. No national definition was read for any country, and none is assumed to align.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'A category boundary is a safeguard boundary. Because the route, the authoriser and the duty to tell another State all follow the category, a disagreement about which category material falls into is a disagreement about how much protection it gets — which is why the instruments define the terms rather than leaving them to the requesting authority.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'What the categories mean inside a domestic system, and how one national code graduates them, is [content and communications data](/investigations/content-and-communications-data). How the EU orders use them is [European production and preservation orders](/investigations/european-production-and-preservation-orders). How the Protocol uses them to divide its routes is [direct cooperation with foreign providers](/investigations/direct-cooperation-with-foreign-providers).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [content and communications data](/investigations/content-and-communications-data), [European production and preservation orders](/investigations/european-production-and-preservation-orders), and [direct cooperation with foreign providers](/investigations/direct-cooperation-with-foreign-providers).',
       },
     ],
   },

@@ -3630,7 +3630,7 @@ export const JUSTICE_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [when a procedural error changes the outcome](/justice/when-a-procedural-error-changes-the-outcome), [chain of custody](/glossary/chain-of-custody), and [disclosure](/glossary/disclosure). For the notification that lets a person find out a covert measure happened at all, see [scope, duration and notification](/investigations/scope-duration-and-notification).',
+        text: 'Related: [when a procedural error changes the outcome](/justice/when-a-procedural-error-changes-the-outcome), [chain of custody](/glossary/chain-of-custody), and [disclosure](/glossary/disclosure). For the notification that lets a person find out a covert measure happened at all, see [scope, duration and notification](/investigations/scope-duration-and-notification); where the order was issued in another country, the remedy may lie there — see [European production and preservation orders](/investigations/european-production-and-preservation-orders).',
       },
     ],
   },
@@ -5430,7 +5430,7 @@ export const JUSTICE_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [who fundamental rights bind](/justice/who-fundamental-rights-bind), [constitutional review](/justice/constitutional-review), and [effective remedy](/justice/effective-remedy).',
+        text: 'Related: [who fundamental rights bind](/justice/who-fundamental-rights-bind), [constitutional review](/justice/constitutional-review), and [effective remedy](/justice/effective-remedy). A different treaty question — the stages between an instrument being adopted and being operable — is [when a cooperation instrument starts to operate](/investigations/when-a-cooperation-instrument-starts-to-operate).',
       },
     ],
   },
