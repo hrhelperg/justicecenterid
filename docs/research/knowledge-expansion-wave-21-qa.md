@@ -108,6 +108,14 @@ Twenty lenses. **6 findings survived reproduction, 14 lenses clean, 21 candidate
 | Accessibility                       | clean — see §5                                                                                                                                                                                                                                                                                                                    |
 | Performance                         | clean — 0 bytes of client JS, 0 bytes of CSS                                                                                                                                                                                                                                                                                      |
 
+**A finding the final gate produced, not the adversarial pass.** `scripts/route-matrix.mjs`
+carries a hardcoded must-404 list, and `/defence/equality-of-arms` was on it — a third place, after
+the Wave 11 test and the Wave 11 plan, where that deferral was recorded. The gate failed with
+"expected 404, got 200 — possible SPA fallback", which is the check doing exactly its job: a route
+that appears where a 404 is expected is indistinguishable, from outside, from a fallback masking a
+missing page. The entry is removed and the amendment documented in the script; every other slug on
+that list stays.
+
 **A third correction, smaller and worth naming:** the page had lowercased Spain's _Sólo por ley_
 to fit it mid-sentence, silently altering quoted constitutional text. The capital is restored.
 This is the Wave 20 diacritics finding in a new form — a quotation altered for prose flow is a
