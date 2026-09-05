@@ -546,12 +546,16 @@ describe('status statements are dated', () => {
   });
 
   it('states no ratification count for either Council of Europe instrument', () => {
-    expect(
-      offending(
-        /\b\d+ (?:Parties|States|countries) (?:have )?(?:ratified|are Parties|acceded)/i,
-        SAFETY_UNITS,
-      ),
-    ).toEqual([]);
+    /*
+     * Mutation W23M15 defeated the first form of this guard. It matched "70 Parties have ratified"
+     * and missed "has been ratified by 70 Parties" — the same fact in the other word order, and the
+     * more natural one. A count is a count wherever the number sits and however it is framed, so
+     * this runs as a raw filter on both orders rather than through the denial-aware helper: the
+     * honest way to say this is that the number was not researched, which carries no digit at all.
+     */
+    const count =
+      /\b(?:ratified|acceded to|signed|adhered to) by (?:about |around |roughly |some )?\d+\b|\b\d+ (?:States Parties|Parties|States|countries|signatories|members) (?:have |had |having )?(?:ratified|acceded|signed|are Parties)|\b\d+ ratifications?\b|\bhas \d+ (?:Parties|signatories)\b/i;
+    expect(SAFETY_UNITS.filter((u) => count.test(u))).toEqual([]);
   });
 });
 
