@@ -158,6 +158,21 @@ function deniesForward(sentence: string, pattern: RegExp): boolean {
   return /\b(?:not|never|no|nothing|neither|nor)\b|\bdoes not\b|\brather than\b/i.test(before);
 }
 
+/**
+ * CORPUS-WIDE units, for the two spine stances only.
+ *
+ * Forced by mutation proof W21-M1. The stance "constitutional rights prevent the state from
+ * exercising coercive authority" was planted in `/justice/limits-on-public-power` — a Wave 12
+ * page — and the suite passed, because a wave suite reads its own twelve pages.
+ *
+ * For most invariants that scoping is right: a wave is answerable for what it published. But the
+ * two stances below are this platform's editorial spine rather than this wave's subject, and a
+ * spine that is only defended on the newest twelve pages is not defended. These two guards
+ * therefore run against every published guide, and the cost of that is one that should be paid:
+ * a future wave cannot introduce either stance anywhere without this file failing.
+ */
+const CORPUS_UNITS = ALL_GUIDES.filter((g) => g.status === 'published').flatMap(tripwireUnits);
+
 const ALL_UNITS = WAVE_21.flatMap((slug) => tripwireUnits(guide(slug)));
 const ALL_PROSE = WAVE_21.map((slug) => prose(guide(slug))).join('\n');
 const SAFETY_UNITS = WAVE_21.flatMap((slug) => safetyUnits(guide(slug)));
@@ -230,9 +245,9 @@ const AUTHORITY_WITHOUT_LIMIT = [
 
 describe('rights are not the absence of state authority', () => {
   it.each(RIGHTS_DEFEAT_AUTHORITY.map((p) => [p.source, p] as const))(
-    'never asserts %s',
+    'no published guide anywhere in the corpus asserts %s',
     (_label, pattern) => {
-      expect(offending(pattern)).toEqual([]);
+      expect(offending(pattern, CORPUS_UNITS)).toEqual([]);
     },
   );
 
@@ -254,9 +269,9 @@ describe('rights are not the absence of state authority', () => {
 
 describe('state authority is not unlimited discretion', () => {
   it.each(AUTHORITY_WITHOUT_LIMIT.map((p) => [p.source, p] as const))(
-    'never asserts %s',
+    'no published guide anywhere in the corpus asserts %s',
     (_label, pattern) => {
-      expect(offending(pattern)).toEqual([]);
+      expect(offending(pattern, CORPUS_UNITS)).toEqual([]);
     },
   );
 
