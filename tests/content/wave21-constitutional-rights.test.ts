@@ -971,6 +971,32 @@ describe('every country claim rests on a country-scoped source', () => {
     expect(unsourced, `${slug} asserts a fact with no source`).toEqual([]);
   });
 
+  /*
+   * Found by the adversarial pass, and it is a class rather than two instances.
+   *
+   * The suite already required every `claim: 'fact'` paragraph to cite a source. It did not
+   * require a paragraph that QUOTES PRIMARY TEXT to be a fact paragraph at all — so a factual
+   * assertion about a named provision could sit in an analysis block, where no source was
+   * demanded, and pass. Two blocks did exactly that: one asserting Kenya's Art. 24(3) and one
+   * quoting Brazilian Portuguese from CF Art. 5º XII.
+   *
+   * The corpus convention is that analysis blocks carry no sources, so the fix is structural
+   * rather than cosmetic: the factual sentence moves into its own sourced fact block and the
+   * analysis keeps only the reasoning. This check enforces that going forward.
+   */
+  it.each(WAVE_21)('%s puts every quoted provision in a sourced fact block', (slug) => {
+    const PROVISION =
+      /\bArt(?:icle)?\.? \d|\bsection \d|\bs\. \d\d|\bAmendment [IVX]|§\s?\d|\bCF Art|\bBV Art|\bGG Art/;
+    const NON_ENGLISH =
+      /[ÄÖÜäöüßáéíóúñãõçêôàèùěščřžýůÉÍÓÚÑÃÇ]|Grundrecht|Wohnung|Kerngehalt|domicilio|inviolável|levenssfeer|toepassing|rechter/;
+    const offenders = allBlocks(guide(slug))
+      .filter((b): b is Extract<Block, { kind: 'paragraph' }> => b.kind === 'paragraph')
+      .filter((b) => PROVISION.test(b.text) || NON_ENGLISH.test(b.text))
+      .filter((b) => b.claim !== 'fact' || !(b.sources ?? []).length)
+      .map((b) => `[claim=${b.claim ?? 'undefined'}] ${b.text.slice(0, 90)}`);
+    expect(offenders, `${slug} states a provision outside a sourced fact block`).toEqual([]);
+  });
+
   it.each(WAVE_21)('%s backs every country example with a scoped source', (slug) => {
     const g = guide(slug);
     const scopes = new Set(g.sources.map((id) => getSource(id)?.jurisdiction));

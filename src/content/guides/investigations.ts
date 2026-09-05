@@ -1373,7 +1373,13 @@ export const INVESTIGATIONS_GUIDES: readonly Guide[] = [
       },
       {
         kind: 'paragraph',
-        text: 'None of this makes investigation suspect. The provisions on this page exist alongside institutions that are expected to find out what happened, and several of the texts say so in terms — Brazil’s Article 5º XII permits interference with telephone communications precisely "para fins de investigação criminal ou instrução processual penal". The protected interest and the investigative power are drafted together, by the same drafters, in the same document.',
+        text: 'Several of these texts say in terms that the interference they regulate is an investigative one. Brazil’s Article 5º XII permits interference with telephone communications, by judicial order, "para fins de investigação criminal ou instrução processual penal" — for the purposes of criminal investigation or criminal procedural instruction.',
+        claim: 'fact',
+        sources: ['br-cf-1988'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'None of this makes investigation suspect. The provisions on this page exist alongside institutions that are expected to find out what happened, and the protected interest and the investigative power are drafted together, by the same drafters, in the same document.',
         claim: 'analysis',
       },
     ],

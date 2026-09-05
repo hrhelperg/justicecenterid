@@ -4831,7 +4831,13 @@ export const JUSTICE_GUIDES: readonly Guide[] = [
       },
       {
         kind: 'paragraph',
-        text: 'What proportionality gives an accountability system is a question that can be put to an institution and answered with evidence: what else was available, and why was this chosen. Kenya’s Article 24(3) makes the answer someone’s burden by name. A requirement that produces a record of the alternatives considered is worth more to review than a requirement that produces a conclusion.',
+        text: 'Kenya states the burden expressly. Article 24(3) provides that the State or a person seeking to justify a particular limitation shall demonstrate to the court, tribunal or other authority that the requirements of the Article have been satisfied.',
+        claim: 'fact',
+        sources: ['ke-constitution'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'What that gives an accountability system is a question that can be put to an institution and answered with evidence: what else was available, and why was this chosen. A requirement that produces a record of the alternatives considered is worth more to review than a requirement that produces a conclusion.',
         claim: 'analysis',
       },
     ],
