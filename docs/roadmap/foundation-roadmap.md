@@ -1400,7 +1400,7 @@ legal constraint. Details in `docs/research/knowledge-expansion-wave-21-qa.md`.
   surveillance regimes, and sampling safeguards. The honest version of each needed operational
   specificity; the version avoiding it would have said nothing worth publishing.
 - **Client JS moved by zero bytes.** CSS unchanged. No component, no library, no chart.
-- Validation: 6,642 tests / 76 files; 1,088 Playwright tests passing and 4 skipped across 15 specs;
+- Validation: 6,642 tests / 76 files; 1,084 Playwright tests passing and 4 skipped across 15 specs;
   **474 routes**, 476 pages, 474 sitemap URLs; 327 sources; 0 orphans, 0 weakly linked, 0 dead
   ends. **16/16 mutation proofs valid**, three of them caught only after the fix they forced.
   Adversarial QA: 6 findings across twenty lenses, 21 candidates refuted, every finding

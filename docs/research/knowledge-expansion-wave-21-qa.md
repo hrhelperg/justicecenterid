@@ -5,23 +5,23 @@ published from forty-seven candidates.
 
 ## 1. Deltas
 
-| Metric                          | Baseline (`d588372`)        | After                       | Delta                      |
-| ------------------------------- | --------------------------- | --------------------------- | -------------------------- |
-| Public routes                   | 462                         | **474**                     | +12                        |
-| Sitemap URLs                    | 462                         | **474**                     | +12                        |
-| Exported HTML pages             | 464                         | **476**                     | +12                        |
-| Published guides                | 121                         | **133**                     | +12                        |
-| Source records                  | 325                         | **327**                     | +2 (12 extended)           |
-| Vitest files                    | 75                          | **76**                      | +1                         |
-| Vitest tests                    | 6,152                       | **6,642**                   | +490                       |
-| Playwright specs                | 14                          | **15**                      | +1                         |
-| Playwright tests                | 928                         | **1,088**                   | +160                       |
-| Client JS                       | 663,525 B / 12 files        | **663,525 B / 12 files**    | **0**                      |
-| CSS                             | 29,961 B / 1 file           | **29,961 B / 1 file**       | **0**                      |
-| `out/`                          | 118,138,759 B / 4,405 files | 131,361,836 B / 4,513 files | +13,223,077 B / +108 files |
-| Restricted-claim patterns       | 10                          | 10                          | 0                          |
-| `ScheduledChange` records       | 4                           | 4                           | 0                          |
-| Institution types / professions | 17 / 7                      | 17 / 7                      | 0                          |
+| Metric                          | Baseline (`d588372`)        | After                               | Delta                      |
+| ------------------------------- | --------------------------- | ----------------------------------- | -------------------------- |
+| Public routes                   | 462                         | **474**                             | +12                        |
+| Sitemap URLs                    | 462                         | **474**                             | +12                        |
+| Exported HTML pages             | 464                         | **476**                             | +12                        |
+| Published guides                | 121                         | **133**                             | +12                        |
+| Source records                  | 325                         | **327**                             | +2 (12 extended)           |
+| Vitest files                    | 75                          | **76**                              | +1                         |
+| Vitest tests                    | 6,152                       | **6,642**                           | +490                       |
+| Playwright specs                | 14                          | **15**                              | +1                         |
+| Playwright tests                | 928 (924 passed, 4 skipped) | **1,088 (1,084 passed, 4 skipped)** | +160                       |
+| Client JS                       | 663,525 B / 12 files        | **663,525 B / 12 files**            | **0**                      |
+| CSS                             | 29,961 B / 1 file           | **29,961 B / 1 file**               | **0**                      |
+| `out/`                          | 118,138,759 B / 4,405 files | 131,361,836 B / 4,513 files         | +13,223,077 B / +108 files |
+| Restricted-claim patterns       | 10                          | 10                                  | 0                          |
+| `ScheduledChange` records       | 4                           | 4                                   | 0                          |
+| Institution types / professions | 17 / 7                      | 17 / 7                              | 0                          |
 
 **Client JS moved by zero bytes**, and so did CSS. The `out/` growth is prerendered HTML and its
 RSC payloads for twelve new routes — nine files per route — which Part AB expressly says not to
@@ -148,18 +148,18 @@ WCAG 2.2 AA architecture preserved; no new component, no new interaction, no new
 
 Run from the final committed tree. Exit codes read directly, never through a pipe.
 
-| Command                                        | Exit | Result                                  |
-| ---------------------------------------------- | ---- | --------------------------------------- |
-| `npm ci`                                       | 0    |                                         |
-| `npm run format:check`                         | 0    |                                         |
-| `npm run lint`                                 | 0    |                                         |
-| `npm run typecheck`                            | 0    |                                         |
-| `npm test`                                     | 0    | 6,642 passed / 76 files                 |
-| `npm run build`                                | 0    |                                         |
-| `npm run verify:output`                        | 0    | 474 routes, 476 pages, 474 sitemap URLs |
-| `node scripts/route-matrix.mjs <local origin>` | 0    |                                         |
-| `npm run test:e2e`                             | 0    | 1,088 passed, 4 skipped / 15 specs      |
-| `node scripts/link-graph-audit.mjs`            | 0    | 0 orphans, 0 weakly linked, 0 dead ends |
+| Command                                        | Exit | Result                                            |
+| ---------------------------------------------- | ---- | ------------------------------------------------- |
+| `npm ci`                                       | 0    |                                                   |
+| `npm run format:check`                         | 0    |                                                   |
+| `npm run lint`                                 | 0    |                                                   |
+| `npm run typecheck`                            | 0    |                                                   |
+| `npm test`                                     | 0    | 6,642 passed / 76 files                           |
+| `npm run build`                                | 0    |                                                   |
+| `npm run verify:output`                        | 0    | 474 routes, 476 pages, 474 sitemap URLs           |
+| `node scripts/route-matrix.mjs <local origin>` | 0    | 621 checks: 474 routes + 147 must-404, 0 failures |
+| `npm run test:e2e`                             | 0    | 1,084 passed, 4 skipped / 15 specs                |
+| `node scripts/link-graph-audit.mjs`            | 0    | 0 orphans, 0 weakly linked, 0 dead ends           |
 
 Also verified: registry/sitemap parity; real 404s with no SPA fallback; canonical integrity on all
 twelve; every JSON-LD block parses, and the graph carries only `Organization`, `WebSite`,
