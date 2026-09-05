@@ -1,6 +1,5 @@
 import { describe, expect, it } from 'vitest';
 import { ALL_GUIDES, getGuide, guidePath } from '@/content/guides';
-import { PUBLISHED_DOSSIERS } from '@/content/dossiers';
 import { SOURCES, getSource } from '@/content/sources';
 import { SCHEDULED_CHANGES } from '@/content/scheduled-changes';
 import { findRestrictedPhrasing } from '@/content/restricted-claims';
