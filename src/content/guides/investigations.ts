@@ -1996,10 +1996,10 @@ export const INVESTIGATIONS_GUIDES: readonly Guide[] = [
           'Every instrument read here creates powers as well as bounding them. The Convention obliges Parties to establish the power to search computer systems, to order production of stored data, to preserve data expeditiously, to collect traffic data in real time and to intercept content data. The question these rules answer is not whether but on what terms.',
       },
       {
-        claim: 'Rules like these exist because investigators are not trusted.',
+        claim: 'Rules like these exist to restrain investigators rather than to enable them.',
         reality:
-          'They also make a completed investigation defensible. A measure taken under a named provision can be tested against that provision’s conditions afterwards; a measure taken because nothing forbade it cannot be tested against anything.',
-        note: 'That is analysis of what the provisions do, not a claim about anyone’s motives.',
+          'They do both. A measure taken under a named provision can be tested against that provision’s conditions afterwards, which is what allows a completed investigation to survive being examined; a measure taken because nothing forbade it cannot be tested against anything.',
+        note: 'That is analysis of what the provisions do, not a claim about how any institution is regarded.',
       },
     ],
     variation: [
@@ -2039,7 +2039,13 @@ export const INVESTIGATIONS_GUIDES: readonly Guide[] = [
       },
       {
         kind: 'paragraph',
-        text: 'It is worth saying plainly what these provisions assume. Each of them exists because a society wanted the offences in question investigated. Germany’s catalogues are lists of offences serious enough to justify the measure, not lists of measures the state is reluctant to permit; the Convention’s Article 14 extends the powers to the collection of evidence in electronic form of any criminal offence. The constraint and the capability were drafted together.',
+        text: 'Article 14(2) of the Convention applies the powers not only to the offences the Convention itself establishes but to other criminal offences committed by means of a computer system and to the collection of evidence in electronic form of a criminal offence.',
+        claim: 'fact',
+        sources: ['coe-cybercrime-convention'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'It is worth saying plainly what these provisions assume. Each of them exists because a society wanted the offences in question investigated, and the German catalogues are lists of offences serious enough to justify a measure rather than lists of measures the state is reluctant to permit. The constraint and the capability were drafted together.',
         claim: 'analysis',
       },
     ],
@@ -2233,7 +2239,13 @@ export const INVESTIGATIONS_GUIDES: readonly Guide[] = [
     rightsAndAccountability: [
       {
         kind: 'paragraph',
-        text: 'The safeguard German law attaches to the handover is worth noticing because it is procedural rather than substantive. § 110(2) requires the envelope to be sealed with the official seal **in the presence of the holder** — the person whose material it is witnesses the point at which it passes out of their sight. Nothing in that requirement decides whether the examination may happen; it decides whether what is examined is what was taken.',
+        text: 'The safeguard German law attaches to the handover is procedural rather than substantive: § 110(2) requires the envelope to be sealed with the official seal in the presence of the holder.',
+        claim: 'fact',
+        sources: ['de-stpo-110-durchsicht'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'That is worth noticing because of what it does and does not decide. The person whose material it is witnesses the point at which it passes out of their sight. Nothing in the requirement settles whether the examination may happen at all; it settles whether what is examined is what was taken.',
         claim: 'analysis',
       },
       {
@@ -2961,7 +2973,7 @@ export const INVESTIGATIONS_GUIDES: readonly Guide[] = [
       },
       {
         kind: 'paragraph',
-        text: 'Urgency does not remove the authoriser; in the one system where it was researched, it reorders the sequence and puts a deadline on the reordering. Under § 100e(1), where there is danger in delay a § 100a order may also be made by the prosecution office — and "soweit die Anordnung der Staatsanwaltschaft nicht binnen drei Werktagen von dem Gericht bestätigt wird, tritt sie außer Kraft": unless confirmed by the court within three working days, it lapses. Under § 100e(2) the same structure applies to § 100b measures, with the presiding judge ordering and the chamber confirming.',
+        text: 'Urgency does not remove the authoriser; in the one system where it was researched, it reorders the sequence and puts a deadline on the reordering. Under § 100e(1), where there is danger in delay a § 100a order may also be made by the prosecution office — and "Soweit die Anordnung der Staatsanwaltschaft nicht binnen drei Werktagen von dem Gericht bestätigt wird, tritt sie außer Kraft": unless confirmed by the court within three working days, it lapses. Under § 100e(2) the same structure applies to § 100b measures, with the presiding judge ordering and the chamber confirming.',
         claim: 'fact',
         sources: ['de-stpo-100e-verfahren'],
       },
