@@ -1464,3 +1464,73 @@ without treating digital space as either law-free or government-unlimited. Detai
   independently reproduced before being acted on.
 
 Delivered on `feat/knowledge-expansion-wave-22`. Not merged, not deployed.
+
+## Phase 37 — Knowledge Expansion Wave 23 (delivered 2026-09-05)
+
+Cross-border digital evidence and international cooperation. Eight guides in `/investigations`, on
+what legal mechanisms allow justice authorities to obtain digital evidence across borders without
+treating national investigative power as globally self-executing. Details in
+`docs/research/knowledge-expansion-wave-23-qa.md` and
+`docs/research/cross-border-digital-evidence-model-findings.md`.
+
+- **The baseline again found a missing layer, and Wave 22 had named it.** `mutual legal assistance`,
+  `MLAT`, `extraterritorial`, `cross-border`, `Second Additional Protocol`, `production order`,
+  `preservation order` and `e-evidence` each occurred **zero times** across the corpus. Wave 22's own
+  record closed with the Second Additional Protocol "located but NOT read for this wave", its
+  Convention source titled "Articles 14–21", and all seven of its citations drawn from Chapter II
+  Section 2. Wave 23 is Chapter III and what came after it.
+- **The instruments do not share a connecting factor, and that is the wave's finding.** The
+  Convention reaches data stored in a Party's **territory** (Arts. 29, 31); Regulation (EU)
+  2023/1543 binds an addressee by where it is **established** (Art. 3(1)); and 18 U.S.C. § 2713
+  attaches to what a provider has in its "possession, custody, or control, regardless of whether
+  such communication … is located within or outside of the United States". Three different facts
+  about the world, three different answers, one set of circumstances.
+- **A treaty in force can still build nothing.** Art. 25(2) provides that each Party "shall also
+  adopt such legislative and other measures as may be necessary to carry out the obligations set
+  forth in Articles 27 through 35". Chapter III is a construction plan, stated as such inside the
+  instrument.
+- **Four instruments sit at four lifecycle stages** as at 5 September 2026, which is this wave's own
+  failure mode and now has its own page and its own guard: the Convention in force but requiring
+  Parties to legislate; the Protocol concluded 12 May 2022 with the consulted register's
+  entry-into-force column empty; the Regulation directly applicable from 18 August 2026; the
+  Directive due for transposition by 18 February 2026, with completion in any Member State **not
+  researched**. One instrument carries two dates — Art. 34(2) also defers the Art. 19 obligation to
+  one year after implementing acts whose adoption was not researched.
+- **A prosecutor may order content preserved but not produced.** Reg. Art. 4(2) confines a
+  production order for traffic or content data to a judge, a court or an investigating judge; Art.
+  4(3) allows a Preservation Order "for data of any category" to be issued by a public prosecutor.
+  The ladder is sensitivity crossed with what the order _does_, not sensitivity alone.
+- **Four data categories where the Convention has three.** Reg. Art. 3(10) defines "data requested
+  for the sole purpose of identifying the user", which changes the authoriser (Art. 4(1) v. 4(2))
+  and is carved out of the duty to notify (Art. 8(1)). Convention Art. 18(3) defines subscriber
+  information negatively, as data "other than traffic or content data". A three-category reading
+  gets three EU outcomes wrong.
+- **Dual criminality enters at disclosure, not at preservation.** Art. 29(3): "dual criminality
+  shall not be required as a condition to providing such preservation"; Art. 29(4) reserves the
+  refusal for the disclosure stage. Wave 22's domestic preservation/production distinction reappears
+  at the border with a different variable attached.
+- **No ScheduledChange was added, on schema evidence rather than preference.** `effectiveOn` is a
+  required ISO date and an active change must carry `certainty: 'enacted-with-date'`; there is no
+  value for an enacted obligation with no date. The Art. 19 trigger could not be represented
+  honestly, so all four candidates were rejected with reasons.
+- **A mutation proof defeated a guard by changing word order.** W23M15 wrote "has been ratified by
+  70 Parties" where the guard matched only "70 Parties have ratified", and all 199 tests passed. The
+  rebuilt guard covers both orders and runs as a raw filter, because a count is a count wherever the
+  number sits.
+- **The JSON-LD guard was searching text instead of types.** It fired on six correct pages because
+  this wave's flagship instrument is called "European **Product**ion Orders". It now walks the
+  parsed JSON and tests `@type` values. Earlier waves' specs still use the substring form and are
+  recorded as a known limitation rather than rewritten.
+- **Part U and Part T hold corpus-wide.** No provider is named anywhere in the wave, no ranking of
+  providers or jurisdictions by compliance, resistance, disclosure or responsiveness exists, and the
+  scorecard guards run over every published page rather than only the new ones. **Restricted
+  quantitative claims: zero.**
+- **Client JS moved by zero bytes.** No file under `src/app`, `src/components` or `src/lib` was
+  touched. CSS unchanged.
+- Validation: 7,365 tests / 78 files; 1,322 Playwright tests passing and 4 skipped across 17 specs;
+  **489 routes**, 491 pages, 489 sitemap URLs; 344 sources; 0 orphans, 0 weakly linked, 0 dead ends;
+  route matrix 641 checks / 0 failed. **15/15 mutation proofs valid**, one caught only after the fix
+  it forced. Adversarial QA: 7 findings across twenty lenses, 21 candidates refuted, every finding
+  independently reproduced before being acted on.
+
+Delivered on `feat/knowledge-expansion-wave-23`. Not merged, not deployed.
