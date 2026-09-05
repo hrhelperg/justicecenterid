@@ -1345,3 +1345,65 @@ Details in `docs/research/knowledge-expansion-wave-20-qa.md`.
   twenty lenses, every P0 and P1 independently reproduced before being acted on.
 
 Delivered on `feat/knowledge-expansion-wave-20`. Not merged, not deployed.
+
+## Phase 35 — Knowledge Expansion Wave 21 (delivered 2026-09-05)
+
+Constitutional rights, state powers and fundamental safeguards. Twelve guides across four
+sections, on the two architectures a justice system is built from: institutional capacity and
+legal constraint. Details in `docs/research/knowledge-expansion-wave-21-qa.md`.
+
+- **The baseline reshaped the wave before a page was drafted.** Twenty of the brief's fifty-eight
+  research domains were already owned by pages that answer their reader's question well, so this
+  could not be a rights catalogue. Measured across all 121 published guides: `self-incrimination`,
+  `right to silence`, `equality of arms`, `seizure` and `freedom of expression` occurred **zero
+  times**; `privacy` twice, both incidental; every `assembly` hit was a legislature and every
+  `warrant` hit was incidental. Forty-seven candidates produced 12 publish, 8 merge, 4 alias,
+  8 defer, 15 reject — a 74% non-publication rate, which is the expected shape for a subject the
+  corpus has been building toward for nine waves.
+- **Rejecting a page title produced the wave's central finding.** `search-and-seizure` was the most
+  obvious candidate in the brief's own list. Rejecting the name while publishing the subject forced
+  the question of what the page was about, and the texts answer differently: South Africa and Kenya
+  define privacy _by_ the searches it forbids and state no warrant rule; Japan and the United States
+  state a warrant rule and never use the word privacy. The split into a home page and a
+  communications page then followed from evidence, not from a plan — **the Netherlands requires a
+  judge for communications and not for the home, and Germany does the reverse.**
+- **The corpus had the emergency exception without the ordinary rule.**
+  `which-rights-can-never-be-suspended` states that a limitation clause "asks whether a restriction
+  is justified under a standing test that applies at all times", and then does not explain that
+  test. Six limitation architectures across eleven systems now do, and the three constitutions
+  using nearly identical words mean measurably different things by them: Canada names no factors,
+  South Africa five, Kenya five plus a validity rule, a core-content bar and an express onus.
+- **Four verified negatives, each scoped to a text rather than a legal system.** The Grundgesetz
+  contains no privilege against self-incrimination (0 hits across nine searches in both languages);
+  the ECHR text contains `proportion`, `equality of arms`, `silence` and `self-incrimination` zero
+  times; the Covenant contains three of those zero times; the Canadian Charter's arrest section
+  confers no right to silence. Each record states in terms that this is a fact about the document.
+- **The Dutch pairing is the sharpest fact in the wave.** A Dutch court may not review a statute
+  against its own Constitution (Gw Art. 120) and must decline to apply it against a self-executing
+  treaty provision (Art. 94). The treaty has more domestic bite than the constitution — the exact
+  opposite of Ireland's Art. 29.6, and of the assumption.
+- **A rights-holder finding nobody had asked for.** Ireland words the right against deprivation of
+  liberty for the **citizen** (Art. 40.4.1°) and, in the next subsection, opens the habeas procedure
+  to **any person**. Germany reserves assembly, association and movement to _Alle Deutschen_ while
+  stating the home and the secrecy of correspondence as inviolabilities with no holder at all.
+- **A Wave 11 deferral lifted, narrowly and with evidence.** Wave 11 deferred `equality-of-arms`
+  for source access — "ECHR unreachable" — not for ownership. The Convention is now
+  content-confirmed and the Czech Listina supplies Art. 37(3), "All parties to such proceedings are
+  equal", the only statement of the principle itself found in any constitutional text across both
+  waves. Only that slug moved; a companion test pins the route to the two records that lifted it.
+- **A test-design finding that generalises three previous ones.** Three mutation survivals point at
+  one rule: strip-and-search denial is the wrong helper whenever the stance sits next to text made
+  of negations — and constitutional quotation is made of negations almost by definition, because
+  rights are drafted as prohibitions. Every guard reading quoted constitutional text is now
+  forward-only, with companion tests pinning both halves.
+- **Three subjects deferred on safety grounds rather than thinned**: digital investigation,
+  surveillance regimes, and sampling safeguards. The honest version of each needed operational
+  specificity; the version avoiding it would have said nothing worth publishing.
+- **Client JS moved by zero bytes.** CSS unchanged. No component, no library, no chart.
+- Validation: 6,642 tests / 76 files; 1,088 Playwright tests passing and 4 skipped across 15 specs;
+  **474 routes**, 476 pages, 474 sitemap URLs; 327 sources; 0 orphans, 0 weakly linked, 0 dead
+  ends. **16/16 mutation proofs valid**, three of them caught only after the fix they forced.
+  Adversarial QA: 6 findings across twenty lenses, 21 candidates refuted, every finding
+  independently reproduced before being acted on.
+
+Delivered on `feat/knowledge-expansion-wave-21`. Not merged, not deployed.
