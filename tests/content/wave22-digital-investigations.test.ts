@@ -756,6 +756,39 @@ describe('every country claim rests on a country-scoped source', () => {
     expect(offenders, `${slug} states a provision outside a sourced fact block`).toEqual([]);
   });
 
+  /*
+   * Found by mutation proof W22-M5, and it is a class rather than one instance.
+   *
+   * The country-scope invariant asks whether the PAGE cites a source scoped to a country it names.
+   * It does not ask whether the specific proposition does — Wave 20 recorded that this is
+   * necessary and not sufficient. Removing `de-stpo-100g-verkehrsdaten` from a page that still
+   * cited two other German records therefore passed every guard, even though the block asserting
+   * § 100g still named it at block level.
+   *
+   * The gap is that a BLOCK could cite a source the page never declared, so removing it from the
+   * page's own list broke nothing. The corpus currently satisfies this rule — 629 block-level
+   * citations across 140 guides, all declared — but nothing enforced it. This runs corpus-wide
+   * because the invariant is not this wave's subject.
+   */
+  it('no block anywhere cites a source its guide does not declare', () => {
+    const offenders: string[] = [];
+    for (const g of ALL_GUIDES.filter((x) => x.status === 'published')) {
+      const declared = new Set(g.sources);
+      for (const b of allBlocks(g)) {
+        for (const id of (b as { sources?: string[] }).sources ?? []) {
+          if (!declared.has(id)) offenders.push(`${g.slug}: block cites ${id}`);
+        }
+      }
+    }
+    expect(offenders, 'a block cites a source its page does not declare').toEqual([]);
+  });
+
+  it('the undeclared-source check is not vacuous', () => {
+    const declared = new Set(['a', 'b']);
+    const blockSources = ['a', 'c'];
+    expect(blockSources.filter((id) => !declared.has(id))).toEqual(['c']);
+  });
+
   it.each(WAVE_22)('%s quotes no foreign-language text no cited source carries', (slug) => {
     const g = guide(slug);
     const notes = g.sources.map((id) => getSource(id)?.note ?? '').join('\n');
