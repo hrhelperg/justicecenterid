@@ -1383,7 +1383,7 @@ export const FORENSICS_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [chain of custody](/glossary/chain-of-custody), [expert evidence in court](/forensics/expert-evidence-in-court), and [what a criminal investigation is](/investigations/what-is-a-criminal-investigation).',
+        text: 'Related: [chain of custody](/glossary/chain-of-custody), [expert evidence in court](/forensics/expert-evidence-in-court), and [what a criminal investigation is](/investigations/what-is-a-criminal-investigation). Whether there was legal authority to examine an item in the first place, and whose competence that is, is [device seizure and device examination](/investigations/device-seizure-and-device-examination).',
       },
     ],
   },

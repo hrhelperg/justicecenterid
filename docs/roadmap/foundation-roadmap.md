@@ -1407,3 +1407,60 @@ legal constraint. Details in `docs/research/knowledge-expansion-wave-21-qa.md`.
   independently reproduced before being acted on.
 
 Delivered on `feat/knowledge-expansion-wave-21`. Not merged, not deployed.
+
+## Phase 36 — Knowledge Expansion Wave 22 (delivered 2026-09-05)
+
+Digital investigations, surveillance and investigative authority. Seven guides in
+`/investigations`, on how justice systems authorise digital and communications investigation
+without treating digital space as either law-free or government-unlimited. Details in
+`docs/research/knowledge-expansion-wave-22-qa.md`.
+
+- **The baseline found a missing layer rather than a missing topic.** Across all 133 published
+  guides, `metadata`, `traffic data`, `subscriber`, `stored communications`, `remote access`,
+  `location data`, `digital forensics`, `encryption`, `data retention`, `computer` and
+  `device search` each occurred **zero times**. Wave 21 had published the constitutional rules on
+  privacy, the home and communications and recorded, in its own uncertainty statements, that "the
+  interception statutes operating under them were not researched" and that "the procedural codes
+  … which is where most of the detail of any real authorisation lives" had not been read. Wave 22
+  is that layer, and those sentences now link to it.
+- **Organised by legal act, never by technology.** There is no phone page, no cloud page and no
+  encryption page, because none of those is a legal act. Forty-eight candidates produced 7 publish,
+  14 merge, 4 alias, 12 defer, 11 reject — an 85% non-publication rate.
+- **There is no common place to put these powers, and that is the first finding.** Germany puts
+  them inside the general procedure code, Spain in a dedicated chapter of it, the United States
+  across separate statutory chapters, and Japan partly outside the code altogether: CCP Art. 222-2
+  provides that interception "shall be executed based upon other acts".
+- **Taking a device and reading it can belong to different institutions.** StPO § 94 governs taking
+  the object; § 110 governs the _Durchsicht_ of electronic storage media and assigns it to the
+  **Staatsanwaltschaft**, with other officials required to seal material in an envelope in the
+  holder's presence and deliver it. Part H's warning is a rule of positive law in at least one
+  system.
+- **The three-way communications line is textual.** Convention Art. 18(3) defines subscriber
+  information as data "other than traffic or content data"; US law states the boundary twice more,
+  in § 3127(3) and § 2703(c)(1).
+- **The universal-warrant assumption fails inside single systems.** US law allocates a subpoena, a
+  § 2703(d) order and a warrant to three categories in one section. German law answers "who
+  authorises" four ways in one code — a single court, a **panel** of the Landgericht with the
+  **Oberlandesgericht** taking over past six months, the prosecution office, and no judicial order
+  stated. And the Convention, written to harmonise these powers across many systems, requires
+  "judicial **or other independent** supervision".
+- **Preservation is a holding step and the treaty says so inside the power.** Art. 16(2) caps it at
+  ninety days "to enable the competent authorities to seek its disclosure" — a separate Art. 18 act.
+- **Three subjects deferred rather than thinned**: covert surveillance, because doing it honestly
+  needs an intelligence / criminal-procedure boundary this wave did not research; cross-border
+  evidence, because the Convention's Second Additional Protocol was located and not read; and
+  location tracking as a comparative page, because one jurisdiction is not a comparison.
+- **A mutation proof exposed a hole in an invariant three waves relied on.** M5 removed a German
+  source from a page that still cited two others and passed everything — because the country-scope
+  test asks whether the _page_ cites a scoped source, which Wave 20 had already recorded as
+  necessary and not sufficient. The narrower rule underneath, that **a block may cite only sources
+  its guide declares**, was satisfied by the whole corpus and enforced by nothing. It is now
+  enforced corpus-wide.
+- **Client JS moved by zero bytes.** CSS unchanged. No visualisation library, no component.
+- Validation: 7,015 tests / 77 files; 1,200 Playwright tests passing and 4 skipped across 16
+  specs; **481 routes**, 483 pages, 481 sitemap URLs; 339 sources; 0 orphans, 0 weakly linked,
+  0 dead ends. **15/15 mutation proofs valid**, two of them caught only after the fix they forced.
+  Adversarial QA: 3 findings across twenty lenses, 15 candidates refuted, every finding
+  independently reproduced before being acted on.
+
+Delivered on `feat/knowledge-expansion-wave-22`. Not merged, not deployed.

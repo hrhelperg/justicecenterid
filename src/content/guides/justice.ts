@@ -3630,7 +3630,7 @@ export const JUSTICE_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [when a procedural error changes the outcome](/justice/when-a-procedural-error-changes-the-outcome), [chain of custody](/glossary/chain-of-custody), and [disclosure](/glossary/disclosure).',
+        text: 'Related: [when a procedural error changes the outcome](/justice/when-a-procedural-error-changes-the-outcome), [chain of custody](/glossary/chain-of-custody), and [disclosure](/glossary/disclosure). For the notification that lets a person find out a covert measure happened at all, see [scope, duration and notification](/investigations/scope-duration-and-notification).',
       },
     ],
   },
