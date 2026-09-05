@@ -1010,41 +1010,39 @@ describe('every country claim rests on a country-scoped source', () => {
     }
   });
 
-  it('every non-English phrase quoted is findable in a source the page cites', () => {
-    const PHRASES: Record<string, string> = {
-      Kerngehalt: 'ch-constitution',
-      'Jede Person': 'ch-constitution',
-      'Alle Deutschen': 'de-grundgesetz',
-      'Die Wohnung ist unverletzlich': 'de-grundgesetz',
-      Wesensgehalt: 'de-grundgesetz',
-      Briefgeheimnis: 'de-grundgesetz',
-      'contenido esencial': 'es-constitution',
-      'Toda persona': 'es-constitution',
-      'Los españoles': 'es-constitution',
-      'El domicilio es inviolable': 'es-constitution',
-      'permanecer calado': 'br-cf-1988',
-      'asilo inviolável': 'br-cf-1988',
-      'aplicação imediata': 'br-cf-1988',
-      'vinden geen toepassing': 'nl-constitution',
-      'machtiging van de rechter': 'nl-constitution',
-      'persoonlijke levenssfeer': 'nl-constitution',
-      'schriftelijk verslag': 'nl-constitution',
-    };
-    for (const [phrase, sourceId] of Object.entries(PHRASES)) {
-      for (const slug of WAVE_21) {
-        const g = guide(slug);
-        if (!prose(g).includes(phrase)) continue;
-        expect(g.sources, `${slug} quotes "${phrase}" without citing ${sourceId}`).toContain(
-          sourceId,
-        );
-        const record = getSource(sourceId);
-        expect(
-          record?.note?.includes(phrase),
-          `${sourceId} does not carry the phrase "${phrase}" it is cited for`,
-        ).toBe(true);
+  /*
+   * GENERALISED by the adversarial pass. The first version of this check carried a hand-written
+   * list of seventeen phrases, which tests the phrases someone remembered rather than the
+   * invariant. It found nothing; a generic scan of the same pages found two real defects — a
+   * Spanish clause quoted on the equality-of-arms page that no cited record carried, and a claim
+   * about CE Art. 53(2) resting on a record that established only 53(1).
+   *
+   * This version scans every quotation on every Wave 21 page, keeps the ones containing
+   * non-English legal text, and requires each to be findable in the note of a source that page
+   * cites. Trailing punctuation is normalised, because a record quoting a provision and a page
+   * quoting it inside a sentence legitimately differ by a full stop.
+   */
+  it.each(WAVE_21)(
+    '%s quotes no foreign-language text that no cited source carries',
+    (slug) => {
+      const g = guide(slug);
+      const notes = g.sources.map((id) => getSource(id)?.note ?? '').join('\n');
+      const FOREIGN =
+        /[ÄÖÜäöüßáéíóúñãõçêôàèùěščřžýůÉÍÓÚÑÃÇ]|\bGrundrecht|\bWohnung|\bKerngehalt|domicilio|inviolável|levenssfeer|toepassing|\brechter\b|Deutschen|Briefgeheimnis|Freizügigkeit|verhältnism|calado|persona/;
+      const strip = (t: string) => t.replace(/[.,;:!?\s]+$/, '').trim();
+      const unverifiable: string[] = [];
+      for (const match of prose(g).matchAll(/[“"]([^“”"]{12,320})[”"]/g)) {
+        const quoted = strip(match[1] ?? '');
+        if (!FOREIGN.test(quoted)) continue;
+        const probe = strip(quoted.slice(0, 48));
+        if (!notes.includes(probe)) unverifiable.push(probe);
       }
-    }
-  });
+      expect(
+        unverifiable,
+        `${slug} quotes foreign-language text no cited source record carries`,
+      ).toEqual([]);
+    },
+  );
 });
 
 /* -------------------------------------------------------------------------- */

@@ -4510,7 +4510,7 @@ export const JUSTICE_GUIDES: readonly Guide[] = [
           {
             term: 'Spain — regulation by ley, with an untouchable core',
             description:
-              'Article 53(1) provides that the rights of Chapter II bind all public powers, and that their exercise may be regulated "sólo por ley, que en todo caso deberá respetar su contenido esencial" — only by statute, which must in every case respect their essential content.',
+              'Article 53(1) provides that the rights of Chapter II bind all public powers, and that their exercise may be regulated "Sólo por ley, que en todo caso deberá respetar su contenido esencial" — only by statute, which must in every case respect their essential content.',
           },
           {
             term: 'Czechia — generality, essence, and a bar on misuse',
