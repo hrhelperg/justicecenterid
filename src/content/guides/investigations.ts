@@ -1386,7 +1386,7 @@ export const INVESTIGATIONS_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [searching a home](/investigations/searching-a-home), [intercepting communications](/investigations/intercepting-communications), and [what is a criminal investigation](/investigations/what-is-a-criminal-investigation).',
+        text: 'Related: [searching a home](/investigations/searching-a-home), [intercepting communications](/investigations/intercepting-communications), and [what is a criminal investigation](/investigations/what-is-a-criminal-investigation). For the statutory authority that operates beneath these constitutional protections, see [legal authority and technical capability](/investigations/legal-authority-and-technical-capability).',
       },
     ],
   },
@@ -1607,7 +1607,7 @@ export const INVESTIGATIONS_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [what privacy protects in law](/investigations/what-privacy-protects-in-law), [intercepting communications](/investigations/intercepting-communications), and [what happens to unlawfully obtained evidence](/justice/what-happens-to-unlawfully-obtained-evidence).',
+        text: 'Related: [what privacy protects in law](/investigations/what-privacy-protects-in-law), [intercepting communications](/investigations/intercepting-communications), and [what happens to unlawfully obtained evidence](/justice/what-happens-to-unlawfully-obtained-evidence). The procedural codes this page records as unresearched are the subject of [device seizure and device examination](/investigations/device-seizure-and-device-examination) and [who authorises a digital investigative measure](/investigations/who-authorises-a-digital-investigative-measure).',
       },
     ],
   },
@@ -1819,7 +1819,1457 @@ export const INVESTIGATIONS_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [searching a home](/investigations/searching-a-home), [what privacy protects in law](/investigations/what-privacy-protects-in-law), and [what is a criminal investigation](/investigations/what-is-a-criminal-investigation).',
+        text: 'Related: [searching a home](/investigations/searching-a-home), [what privacy protects in law](/investigations/what-privacy-protects-in-law), and [what is a criminal investigation](/investigations/what-is-a-criminal-investigation). The interception statutes this page records as unresearched are the subject of [interception and stored data](/investigations/interception-and-stored-data) and [content and communications data](/investigations/content-and-communications-data).',
+      },
+    ],
+  },
+  /* ==========================================================================
+     WAVE 22 — digital investigation as a question of legal authority
+     ==========================================================================
+     Seven pages, from forty-eight candidates. The baseline found the corpus had
+     no digital vocabulary at all — metadata, traffic data, subscriber, stored
+     communications, remote access, location data, digital forensics, encryption,
+     data retention, computer and device search each occurred ZERO times across
+     133 guides — while Wave 21 had published the constitutional layer and
+     recorded, in its own uncertainty statements, that the statutes beneath it
+     were not researched. This wave is that layer.
+
+     BOUNDARIES, kept explicit because the cannibalization audit turned on them:
+       Wave 21 owns the constitutional right and its limit.
+       Wave 22 owns the statutory authority operating beneath it.
+       Wave 16 owns forensic science as evidence; method is out of scope in both
+         sections' declared outOfScope and appears on none of these pages.
+       Wave 19 owns review and remedy.
+
+     SAFETY. The /investigations section already declares an outOfScope list
+     naming investigative technique at operational specificity, surveillance
+     capability and anything assisting evasion. Every page here was drafted
+     against it. None describes how a measure is carried out, how data is
+     obtained or protected, how any measure could be detected, anticipated or
+     frustrated, or what any person should do in any encounter. Three candidate
+     pages were rejected on that ground rather than written in a thinned form.
+     ========================================================================== */
+  {
+    slug: 'legal-authority-and-technical-capability',
+    title: 'Legal authority and technical capability',
+    shortTitle: 'Authority and capability',
+    question:
+      'If investigators are technically able to obtain something, does that mean they may?',
+    summary:
+      'No, and two systems say so in terms. Japan’s Code permits compulsory measures only where the Code itself provides for them; Spain forbids authorising a technological measure to discover offences or to dispel suspicion that has no objective basis.',
+    entityType: 'concept',
+    section: 'investigations',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'who-authorises-a-digital-investigative-measure',
+      'device-seizure-and-device-examination',
+      'what-is-a-criminal-investigation',
+      'what-privacy-protects-in-law',
+    ],
+    sources: [
+      'jp-code-criminal-procedure',
+      'es-lecrim-medidas-tecnologicas',
+      'coe-cybercrime-convention',
+      'de-stpo-100a-tkue',
+      'de-stpo-100b-online-durchsuchung',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-05',
+    publishedOn: '2026-09-05',
+    reviewedOn: '2026-09-05',
+    factsVerifiedOn: '2026-09-05',
+    readingTimeMinutes: 9,
+    keyTerms: ['criminal-investigation'],
+    uncertainty: [
+      'Four systems and one treaty were read for this wave, all as statutory or treaty text. No case law was researched in any of them, and in several the operative content of these rules is judicial.',
+      'Nothing here describes any investigative technique, any technology, or anything about how data is obtained, held or protected. That is a deliberate limit on the research rather than a gap in it.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Digital investigation is not a legal category. It is the ordinary coercive powers of a criminal investigation, exercised on objects that did not exist when most of those powers were first written, and the question a legal system has to answer about each of them is the same question it answers about a search of a house: on what authority.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'What makes the digital case feel different is that the technical answer and the legal answer come apart so visibly. An investigator may be able to obtain something without being permitted to, and may be permitted to obtain something without being able to. Legal systems answer only the second of those, and two of the systems read for this page say so in a single provision.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'safety',
+        title: 'What this page is and is not',
+        text: 'This explains how legal systems structure authority over digital investigative measures. It describes no technique, no technology and no method; it states nothing about how any measure is carried out, detected, anticipated or frustrated; and it is not legal advice.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'The reason a system needs a rule here is that capability arrives faster than law and is distributed differently. A power written for letters does not obviously reach a message that was never posted; a power written for a filing cabinet does not obviously reach a storage medium in another country that happens to be readable from a laptop on the desk.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'paragraph',
+        text: 'A system can respond in one of two directions. It can treat the absence of a rule as permission, on the reasoning that nothing forbids it. Or it can treat the absence of a rule as prohibition, on the reasoning that a coercive act against a person requires a positive legal basis. The systems read here take the second route, and one of them states it as a general rule of its whole code.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Why the second route is the one that makes investigation defensible',
+        text: 'A measure taken because nothing forbade it cannot be defended afterwards by reference to anything. A measure taken under a named provision can be tested against that provision — its conditions, its scope, its duration — which is what allows an investigation to survive being examined.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'Japan states the rule for its entire criminal procedure in one sentence. Article 197(1) of the Code of Criminal Procedure provides that with regard to investigation, "such examination as is necessary to achieve its objective may be conducted; provided, however, that compulsory dispositions shall not be applied unless special provisions have been established in this Code."',
+        claim: 'fact',
+        sources: ['jp-code-criminal-procedure'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'The proviso is the whole rule',
+        text: 'The first half is permissive: investigators may do what the investigation needs. The second half withdraws that permission for anything compulsory, and requires a specific provision of the Code instead. Whether a measure is technically available never enters the sentence.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Spain approaches the same problem from the other end, in the chapter its Criminal Procedure Act devotes to technological investigation measures. Article 588 bis a(2) provides that the principle of especialidad requires a measure to relate to the investigation of a specific offence, and then states a prohibition: "No podrán autorizarse medidas de investigación tecnológica que tengan por objeto prevenir o descubrir delitos o despejar sospechas sin base objetiva" — technological investigation measures may not be authorised whose object is to prevent or discover offences, or to dispel suspicions without objective basis.',
+        claim: 'fact',
+        sources: ['es-lecrim-medidas-tecnologicas'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Two rules, two failure modes',
+        text: 'Japan’s provision addresses the measure that has no legal basis at all. Spain’s addresses the measure that has one and is used for something else — looking, rather than investigating a specific offence already suspected on objective grounds. A system needs both, because a power can be exceeded either by being invented or by being repurposed.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Germany shows what the first rule produces in practice. Its Code of Criminal Procedure does not contain a general digital-investigation power; it contains separate provisions for separate acts, each with its own conditions. Monitoring telecommunications under § 100a requires specific facts grounding suspicion of a serious offence from a closed catalogue, that the offence weigh seriously also in the individual case, and that other means would be substantially more difficult or futile. Intervening in an information-technology system to collect data from it under § 100b requires an especially serious offence from a **different and narrower** catalogue.',
+        claim: 'fact',
+        sources: ['de-stpo-100a-tkue', 'de-stpo-100b-online-durchsuchung'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Two digital powers, two thresholds, one code',
+        text: 'The most useful thing about the German pair is that neither is "the digital search power". They are different acts with different catalogues, and a measure lawful under one is not thereby lawful under the other. That is what a system looks like when it takes the view that each coercive act needs its own basis.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'At treaty level the same premise appears as a scope rule. Article 14 of the Convention on Cybercrime obliges Parties to establish the powers it describes "for the purpose of specific criminal investigations or proceedings", and applies them to the offences the Convention establishes, to other offences committed by means of a computer system, and to the collection of evidence in electronic form of a criminal offence. Article 15 then subjects every one of those powers to conditions and safeguards under domestic law incorporating the principle of proportionality.',
+        claim: 'fact',
+        sources: ['coe-cybercrime-convention'],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'If investigators can technically obtain something, they are allowed to.',
+        reality:
+          'Japan’s Code provides that compulsory dispositions shall not be applied unless special provisions have been established in the Code. Technical availability is not one of the conditions in any provision read for this wave.',
+      },
+      {
+        claim: 'Digital investigation is a special legal category with its own rules.',
+        reality:
+          'It is the ordinary coercive powers applied to new objects. Germany places them inside the general procedure code, Spain in a dedicated chapter of it, the United States across three separate statutory chapters, and Japan puts the interception power outside its code altogether. There is no common location and no single power.',
+      },
+      {
+        claim:
+          'A power that covers physical things automatically covers their digital equivalents.',
+        reality:
+          'The systems read here legislate specifically rather than by analogy. Germany added § 110(3) to extend the examination of papers to electronic storage media, and Spain inserted an entire chapter in 2015 for technological measures. Neither treated the existing provisions as already sufficient.',
+        note: 'Whether a given provision reaches an object it does not name is a question of interpretation, and no case law was researched for this wave.',
+      },
+      {
+        claim: 'A legal basis means investigators may use the power to look for wrongdoing.',
+        reality:
+          'Spain’s article 588 bis a(2) forbids authorising technological measures whose object is to prevent or discover offences, or to dispel suspicions without objective basis. Having the power and having a reason to use it are separate requirements.',
+      },
+      {
+        claim:
+          'Because these powers are limited, the state cannot investigate digital offences.',
+        reality:
+          'Every instrument read here creates powers as well as bounding them. The Convention obliges Parties to establish the power to search computer systems, to order production of stored data, to preserve data expeditiously, to collect traffic data in real time and to intercept content data. The question these rules answer is not whether but on what terms.',
+      },
+      {
+        claim: 'Rules like these exist because investigators are not trusted.',
+        reality:
+          'They also make a completed investigation defensible. A measure taken under a named provision can be tested against that provision’s conditions afterwards; a measure taken because nothing forbade it cannot be tested against anything.',
+        note: 'That is analysis of what the provisions do, not a claim about anyone’s motives.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Four systems, four different places to put the same powers — which is itself the first finding.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Inside the general procedure code, as separately conditioned powers — Germany, StPO §§ 94, 100a, 100b, 100g, 100j, 110.',
+          'In a dedicated chapter of the procedure code, under shared guiding principles — Spain, LECrim arts. 588 bis a and following, inserted by Ley Orgánica 13/2015 and in force from 6 December 2015.',
+          'Across separate statutory chapters, each with its own instrument — United States, 18 U.S.C. chs. 119, 121 and 206.',
+          'Partly outside the procedure code: Japan’s Art. 222-2 provides that compulsory measures for the interception of electronic communications without the consent of either party "shall be executed based upon other acts".',
+          'As a treaty obligation on Parties to establish powers in their own law, subject to Arts. 14 and 15 — Council of Europe, Convention on Cybercrime.',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'Scope of these statements',
+        text: 'Each national provision is the law of its own country. The Convention obliges its Parties to legislate; it is not evidence of what any Party has enacted, and no country claim here rests on it. Twelve of the sixteen jurisdictions this wave was asked to consider were not researched and nothing is asserted about them.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'The reason a legal basis matters to accountability is that it supplies the standard against which the measure is later judged. Article 15(2) of the Convention states what those standards must include: judicial or other independent supervision, grounds justifying application, and limitation of the scope and the duration of the power or procedure.',
+        claim: 'fact',
+        sources: ['coe-cybercrime-convention'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'Why the state’s reach is bounded at all is [what privacy protects in law](/investigations/what-privacy-protects-in-law) and [how a constitutional right can be limited](/justice/how-a-right-can-be-limited). What follows when a power was exceeded is [what happens to unlawfully obtained evidence](/justice/what-happens-to-unlawfully-obtained-evidence). This page is the layer between them: what authority exists, and where it comes from.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'It is worth saying plainly what these provisions assume. Each of them exists because a society wanted the offences in question investigated. Germany’s catalogues are lists of offences serious enough to justify the measure, not lists of measures the state is reluctant to permit; the Convention’s Article 14 extends the powers to the collection of evidence in electronic form of any criminal offence. The constraint and the capability were drafted together.',
+        claim: 'analysis',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [who authorises a digital investigative measure](/investigations/who-authorises-a-digital-investigative-measure), [device seizure and device examination](/investigations/device-seizure-and-device-examination), and [what privacy protects in law](/investigations/what-privacy-protects-in-law).',
+      },
+    ],
+  },
+  {
+    slug: 'device-seizure-and-device-examination',
+    title: 'Device seizure and device examination',
+    shortTitle: 'Seizure and examination',
+    question: 'Officials have taken a device. Does that mean they may read what is on it?',
+    summary:
+      'Taking a thing and reading it are separate legal acts, and in German law they belong to separate authorities: the examination of electronic storage media is the prosecution office’s, not the officers’ who hold the device.',
+    entityType: 'concept',
+    section: 'investigations',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'legal-authority-and-technical-capability',
+      'who-authorises-a-digital-investigative-measure',
+      'searching-a-home',
+      'evidence-integrity-and-admissibility',
+    ],
+    sources: [
+      'de-stpo-94-beschlagnahme',
+      'de-stpo-110-durchsicht',
+      'coe-cybercrime-convention',
+      'jp-code-criminal-procedure',
+      'es-lecrim-medidas-tecnologicas',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-05',
+    publishedOn: '2026-09-05',
+    reviewedOn: '2026-09-05',
+    factsVerifiedOn: '2026-09-05',
+    readingTimeMinutes: 10,
+    keyTerms: ['evidence', 'chain-of-custody'],
+    uncertainty: [
+      'Germany and the Convention are described from primary text; Japan from an official reference translation whose version indicator reflects amendments to 2006 and may lag later ones. Spain’s chapter on technological measures was read for its guiding principles only, not for the article governing seizure of storage devices.',
+      'United States device-search law rests largely on constitutional case law, which this wave did not research. Nothing here is asserted about it.',
+      'Nothing on this page describes how any examination is performed, what any tool can do, or anything about how data on a device is stored or protected. That is a deliberate limit on the research.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Two different things happen to a device in an investigation, and legal systems treat them as two different acts. One is taking it — removing it from someone’s control and holding it. The other is examining what is on it. The first is about an object; the second is about its contents, and the contents are usually where the intrusion is.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The systems read for this page keep the two apart in their text, and one of them keeps them apart institutionally as well.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'safety',
+        title: 'What this page is and is not',
+        text: 'This explains how legal systems separate taking a device from examining it. It describes no examination method, no tool and no technology; it says nothing about how data on a device is stored, protected, recovered or altered; and it is not legal advice.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'A device has to be taken before it can be examined, and the taking is often urgent — done at a scene, on the spot, by whoever is there. The examination is not urgent in the same way, is far more intrusive, and reaches material that has nothing to do with the offence: the same storage medium holds the thing being looked for and a person’s correspondence, photographs, finances and health.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Why the second act is the one that gets the safeguard',
+        text: 'If the two were one act, the urgency of the first would set the standard for the second, and a decision made in seconds at a doorstep would authorise reading everything a person has. Separating them lets a system keep the taking fast and the reading conditioned.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'German law separates the two acts across two provisions and then does something further. § 94(1) of the Strafprozessordnung provides that objects which may be of significance as evidence are to be taken into custody or otherwise secured; § 94(2) provides that where the objects are in a person’s custody and are not surrendered voluntarily, "so bedarf es der Beschlagnahme" — seizure is required. That is the taking.',
+        claim: 'fact',
+        sources: ['de-stpo-94-beschlagnahme'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'The examination is § 110, and it belongs to someone else. § 110(1) provides that the *Durchsicht* of the papers of the person affected by the search "steht der Staatsanwaltschaft und auf deren Anordnung ihren Ermittlungspersonen" — belongs to the public prosecution office and, on its order, its investigators. § 110(2) provides that other officials may examine found papers only where the holder consents; failing that, they must place the papers they consider it necessary to examine in an envelope, seal it with the official seal **in the holder’s presence**, and deliver them to the prosecution office. § 110(3) applies the same regime to electronic storage media.',
+        claim: 'fact',
+        sources: ['de-stpo-110-durchsicht'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'The distinction is institutional, not just conceptual',
+        text: 'In this system the officers who may hold the device are not, by that fact, the officials to whom reading it belongs. The sealed envelope in § 110(2) exists precisely to move the material from one to the other without either the reading happening early or the material being lost. A summary that said "the police seized the phone and searched it" would have described two acts and one authority where the code provides for two of each.',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'The Convention enumerates the powers separately',
+            description:
+              'Article 19 of the Convention on Cybercrime lists them one by one. Article 19(1) is the power to search or similarly access a computer system or a computer-data storage medium. Article 19(3) is the power to seize or similarly secure, and it contains four distinct sub-powers: to seize or similarly secure the system or medium; to make and retain a copy of the data; to maintain the integrity of the stored data; and to render inaccessible or remove the data in the accessed system.',
+          },
+          {
+            term: 'Copying is its own power',
+            description:
+              'Article 19(3)(b) states the power to "make and retain a copy of those computer data" separately from the power to seize the medium in 19(3)(a). A system that has authorised one has not thereby authorised the other, and the Convention obliges Parties to provide for both because they do different things.',
+          },
+          {
+            term: 'Japan distinguishes them inside the warrant',
+            description:
+              'Article 218(1) of the Code of Criminal Procedure permits search, seizure or inspection upon a warrant issued by a judge. Article 219(1) then requires the warrant to state the name of the suspect or accused, the charged offence, **the articles to be seized** and, separately, the place, body or articles to be searched — together with a valid period, after which the measure may not be commenced and the warrant is returned to the court.',
+          },
+          {
+            term: 'Spain conditions the whole family at once',
+            description:
+              'Rather than separating the acts provision by provision, the LECrim chapter on technological measures subjects all of them to the same guiding principles in article 588 bis a — especialidad, idoneidad, excepcionalidad, necesidad and proporcionalidad — with idoneidad defining the objective and subjective scope of any measure by reference to its usefulness.',
+          },
+        ],
+      },
+      {
+        kind: 'paragraph',
+        text: 'One further question arises only in the digital case: what happens when the material sought is reachable from the device but is not on it. German law answers narrowly. The second sentence of § 110(3) permits the examination to be extended to spatially separated storage media, but only so far as they can be accessed from the electronic storage medium **and** only where the loss of the sought data would otherwise be feared. Article 19(2) of the Convention permits a comparable extension where the further data is "lawfully accessible from or available to the initial system".',
+        claim: 'fact',
+        sources: ['de-stpo-110-durchsicht', 'coe-cybercrime-convention'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'An extension is not a new power',
+        text: 'Both provisions extend an examination that was already authorised, on stated conditions, to material the authorised examination can reach. Neither creates a free-standing power to reach into a system from a distance. Germany has such a power and it is a different provision with a much higher threshold — § 100b, discussed under [who authorises a digital investigative measure](/investigations/who-authorises-a-digital-investigative-measure).',
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'If officials have lawfully taken a device, they may examine what is on it.',
+        reality:
+          'German law treats these as separate acts under separate provisions, and assigns the examination of electronic storage media to the public prosecution office rather than to whoever holds the device. Officials without that competence may examine found material only with the holder’s consent, and must otherwise seal it in the holder’s presence and deliver it.',
+      },
+      {
+        claim: 'Seizing a device and copying its data are the same thing.',
+        reality:
+          'Article 19(3) of the Convention on Cybercrime lists them as separate powers: to seize or similarly secure the system or medium at (a), and to make and retain a copy of the data at (b). Parties are obliged to provide for both.',
+      },
+      {
+        claim: 'A warrant to search a place covers examining any device found there.',
+        reality:
+          'Japan’s Article 219(1) requires the warrant to state the articles to be seized and, separately, the place, body or articles to be searched. The two are specified as different things within one instrument.',
+        note: 'What any particular warrant covers is a question about that warrant, and no case law was researched here.',
+      },
+      {
+        claim: 'Examining a device is the same thing as forensic examination.',
+        reality:
+          'They are different questions with different owners on this site. Whether there is legal authority to examine, and whose competence it is, is what this page describes. What an examination can scientifically establish, and whether a court may receive the result, is forensic science, and the forensics section owns it.',
+      },
+      {
+        claim: 'Data that can be reached from a seized device is covered by the seizure.',
+        reality:
+          'German law permits extending the examination to spatially separated storage media only where they are accessible from the medium being examined and where the loss of the sought data would otherwise be feared. The Convention’s Article 19(2) requires the further data to be lawfully accessible from the initial system. Both are conditioned extensions of an authorised act.',
+      },
+      {
+        claim: 'Because examination is conditioned, devices cannot be examined.',
+        reality:
+          'Every instrument read here provides for it. The Convention obliges Parties to establish the power to search or similarly access a computer system and to seize, copy and preserve data found there; German law provides for the Durchsicht of electronic storage media and permits data of significance to be secured.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Four ways of keeping the acts apart.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Separate provisions and separate authorities — Germany, StPO § 94 for taking the object, § 110 for the examination, which belongs to the Staatsanwaltschaft.',
+          'Separately enumerated powers in one article — Council of Europe, Convention Art. 19(1) access, 19(3)(a) seizure of the medium, 19(3)(b) making and retaining a copy, 19(3)(c) maintaining integrity, 19(3)(d) rendering data inaccessible.',
+          'Separately specified within one warrant, with a valid period — Japan, CCP Arts. 218(1) and 219(1).',
+          'A single set of guiding principles governing the whole family of technological measures — Spain, LECrim art. 588 bis a.',
+          'Conditioned extension to storage not on the device — Germany, § 110(3) second sentence; Convention Art. 19(2).',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'Scope of these statements',
+        text: 'Each national provision is the law of its own country. The Convention obliges Parties to legislate and is not evidence of what any Party enacted. United States device-search law was not researched and nothing is asserted about it.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'The safeguard German law attaches to the handover is worth noticing because it is procedural rather than substantive. § 110(2) requires the envelope to be sealed with the official seal **in the presence of the holder** — the person whose material it is witnesses the point at which it passes out of their sight. Nothing in that requirement decides whether the examination may happen; it decides whether what is examined is what was taken.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'What a court does with material obtained beyond the authority is [what happens to unlawfully obtained evidence](/justice/what-happens-to-unlawfully-obtained-evidence). Whether an item is what it is said to be, and whether a court may receive it, is [evidence integrity and admissibility](/forensics/evidence-integrity-and-admissibility). The constitutional protection of the place where a device is usually found is [searching a home](/investigations/searching-a-home).',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Article 19(4) of the Convention adds one power that sits oddly beside the others and is worth stating precisely: Parties shall empower their authorities to order any person who has knowledge about the functioning of the computer system, or the measures applied to protect data in it, to provide **as is reasonable** the necessary information to enable the search or access. What "as is reasonable" permits, and how it interacts with a person’s own protections against being compelled, is a question of each Party’s domestic law and was not researched.',
+        claim: 'fact',
+        sources: ['coe-cybercrime-convention'],
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [legal authority and technical capability](/investigations/legal-authority-and-technical-capability), [who authorises a digital investigative measure](/investigations/who-authorises-a-digital-investigative-measure), and [evidence integrity and admissibility](/forensics/evidence-integrity-and-admissibility).',
+      },
+    ],
+  },
+  {
+    slug: 'interception-and-stored-data',
+    title: 'Interception and stored data',
+    shortTitle: 'Interception and stored data',
+    question:
+      'Is listening to a conversation the same legal act as obtaining messages already stored?',
+    summary:
+      'No system read here treats them as one power. The Convention gives each its own article; Germany conditions them differently in the same code; and Japan’s Code excludes interception altogether, routing it to a separate Act.',
+    entityType: 'concept',
+    section: 'investigations',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'content-and-communications-data',
+      'who-authorises-a-digital-investigative-measure',
+      'intercepting-communications',
+      'preserving-data-and-producing-it',
+    ],
+    sources: [
+      'coe-cybercrime-convention',
+      'de-stpo-100a-tkue',
+      'de-stpo-110-durchsicht',
+      'jp-code-criminal-procedure',
+      'us-18usc-2703-stored-communications',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-05',
+    publishedOn: '2026-09-05',
+    reviewedOn: '2026-09-05',
+    factsVerifiedOn: '2026-09-05',
+    readingTimeMinutes: 10,
+    uncertainty: [
+      'The United States Wiretap Act was not read for this wave; only the stored-communications provisions were. Nothing here states the American standard for real-time interception.',
+      'The Japanese Act to which Article 222-2 refers was not read. That the Code excludes interception is a fact about the Code and says nothing about the content of the separate Act.',
+      'Nothing here describes any interception method, any technology, or anything about how a communication is transmitted, secured or obtained. That is a deliberate limit on the research.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'A communication can be reached at two different moments: while it is passing between the parties, and afterwards, when a copy of it is sitting somewhere. The two look similar to a reader and are not the same act in any legal system examined for this page.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The difference is not primarily technical. Interception reaches a communication that has not happened yet, for a period into the future, against a person who does not know. Obtaining stored material reaches something that already exists, in a definite quantity, usually from a third party who holds it. Those are different intrusions and they attract different rules.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'safety',
+        title: 'What this page is and is not',
+        text: 'This explains how legal systems categorise two investigative acts. It describes no method of interception or access, names no technology, and states nothing about how communications are transmitted, protected or obtained. It is not legal advice.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'The reason systems separate them is that the future tense changes what an authorisation is doing. An order to obtain stored material is an order about a known quantity of existing data. An order to intercept is a licence to collect whatever occurs during a period — including communications with people who are not suspected of anything, about subjects that have nothing to do with the investigation, which have not happened yet and therefore cannot be described in advance.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Which is why duration appears in one and not the other',
+        text: 'An authorisation to intercept has to say when it stops, because it authorises collection of something not yet in existence. An order for stored material does not need a duration in the same sense; it needs a description of what is to be handed over. The shape of the safeguard follows the shape of the act.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'The Convention on Cybercrime allocates them to different articles in different titles. Stored computer data is reached under Article 19, the power to search or similarly access a computer system or storage medium, and under Article 18, the power to order a person to submit specified stored computer data. Real-time collection is Title 5: Article 20 for traffic data, and Article 21 for content data — the latter available only "in relation to a range of serious offences to be determined by domestic law".',
+        claim: 'fact',
+        sources: ['coe-cybercrime-convention'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'The Convention says which is the narrower power',
+        text: 'Article 14(3)(a) permits a Party to restrict the real-time traffic-data power to specified offences only if the range is "not more restricted than" the range to which it applies content interception. The instrument therefore assumes content interception is the more constrained of the two and requires the other not to be constrained further.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Germany places both inside its Code of Criminal Procedure and conditions them differently. Monitoring telecommunications under § 100a requires specific facts grounding suspicion of a serious offence from the § 100a(2) catalogue, that the offence weigh seriously also in the individual case, and that investigating by other means would be substantially more difficult or futile. Material already on a seized storage medium is reached instead through the examination regime of § 110, which has no offence catalogue at all and belongs to the prosecution office.',
+        claim: 'fact',
+        sources: ['de-stpo-100a-tkue', 'de-stpo-110-durchsicht'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title:
+          'Where German law draws the boundary between them — and it is not "where the data sits"',
+        text: 'The third sentence of § 100a(1) permits content and circumstances of communication **stored on** the person’s own system to be monitored under the interception power, but only where they could also have been monitored during the ongoing transmission in the public network in encrypted form. The category is defined by what the interception power would have reached in transit, not by the data’s present location. A system can draw this line by function rather than by geography, and this one does.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Japan makes the separation structural rather than conditional. Article 218(1) of the Code of Criminal Procedure provides the general power to conduct search, seizure or inspection upon a warrant issued by a judge. Article 222-2 then provides, in a single sentence, that "compulsory measures for the interception of electronic communications without the consent of either party shall be executed based upon other acts" — the Code does not contain the interception power at all.',
+        claim: 'fact',
+        sources: ['jp-code-criminal-procedure'],
+      },
+      {
+        kind: 'callout',
+        variant: 'uncertainty',
+        title: 'What that absence establishes, and what it does not',
+        text: 'It establishes that the Code excludes interception and directs it elsewhere. It establishes nothing about the separate Act — its conditions, its authorising body, or its safeguards — which was not read for this wave. An absence from one instrument is not an absence from a legal system.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'United States law puts the two in different statutory chapters, and the stored side is graded internally. Under 18 U.S.C. § 2703(a), a governmental entity may require disclosure of the contents of a communication in electronic storage for one hundred and eighty days or less "only pursuant to a warrant"; contents held longer may be required by the means available under § 2703(b), which permit a warrant without notice, or a subpoena or court order with prior notice to the subscriber or customer, with delayed notice available under § 2705.',
+        claim: 'fact',
+        sources: ['us-18usc-2703-stored-communications'],
+      },
+    ],
+    misconceptions: [
+      {
+        claim:
+          'Interception and access to stored messages are the same power under a different name.',
+        reality:
+          'The Convention places them in different titles with different articles; Germany conditions interception on a serious-offence catalogue while reaching seized stored material through an examination regime with none; and Japan’s Code excludes interception entirely, directing it to other legislation.',
+      },
+      {
+        claim:
+          'Whether a communication is "stored" or "in transit" decides which power applies.',
+        reality:
+          'Not in every system. The third sentence of Germany’s § 100a(1) permits communication content stored on the person’s own system to be monitored under the interception power where it could also have been monitored in transit in encrypted form. The boundary there is functional, not locational.',
+      },
+      {
+        claim: 'Obtaining stored communications is the lesser intrusion, so it needs less.',
+        reality:
+          'Not uniformly. In the United States a warrant is required for contents in electronic storage for 180 days or less — a higher instrument than the court order or subpoena available for other categories in the same statute.',
+        note: 'This page states the statutory routes and does not rank intrusions.',
+      },
+      {
+        claim: 'Every legal system keeps interception in its criminal procedure code.',
+        reality:
+          'Japan’s Article 222-2 provides that compulsory measures for the interception of electronic communications without the consent of either party shall be executed based upon other acts.',
+      },
+      {
+        claim: 'Because interception is tightly conditioned, systems do not permit it.',
+        reality:
+          'Article 21 of the Convention obliges Parties to establish the power to intercept content data in relation to a range of serious offences determined by domestic law, and to compel a service provider within its existing technical capability to assist. The conditions are the terms on which it is permitted, not a refusal to permit it.',
+      },
+      {
+        claim: 'A system that intercepts a person’s communications will tell them.',
+        reality:
+          'It depends on the provision. Germany imposes a notification duty on covert measures under § 101(4) and permits it to be withheld where overriding protectable interests require. The Convention instead obliges Parties to make service providers keep the execution of Articles 20 and 21 confidential — a duty on a different party, running the other way.',
+        note: 'Notification and its deferral are the subject of a separate page on scope, duration and notification.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Four ways to keep the two apart, and they are not variations on one design.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Different articles in different titles, with content interception the narrower power — Council of Europe, Convention Arts. 18 and 19 against Arts. 20 and 21, read with Art. 14(3)(a).',
+          'The same code, different conditions: a serious-offence catalogue and a subsidiarity test for interception, an examination regime with neither for seized storage — Germany, StPO §§ 100a and 110.',
+          'A functional boundary rather than a locational one — Germany, § 100a(1) third sentence.',
+          'The interception power placed outside the procedure code entirely — Japan, CCP Art. 222-2.',
+          'Different statutory chapters, with the stored side graded by age of the material and by whether notice is given — United States, 18 U.S.C. § 2703(a) and (b).',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'Scope of these statements',
+        text: 'Each national provision is the law of its own country. The Convention obliges Parties to legislate and is not evidence of what any Party enacted. The US Wiretap Act and the Japanese interception Act were not read, and nothing is asserted about either.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'The constitutional half of this question is Wave 21’s and is not repeated here: which interest a system protects when it protects communications, and whether a judge must authorise interference with it, is answered at [intercepting communications](/investigations/intercepting-communications). What this page adds is the statutory layer beneath — that the constitutional protection is implemented by more than one power, and that the powers are not interchangeable.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'What is obtained — content, traffic data or subscriber information — is [content and communications data](/investigations/content-and-communications-data). Who may authorise each is [who authorises a digital investigative measure](/investigations/who-authorises-a-digital-investigative-measure). Freezing data without obtaining it is [preserving data and producing it](/investigations/preserving-data-and-producing-it).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [intercepting communications](/investigations/intercepting-communications), [content and communications data](/investigations/content-and-communications-data), and [who authorises a digital investigative measure](/investigations/who-authorises-a-digital-investigative-measure).',
+      },
+    ],
+  },
+  {
+    slug: 'content-and-communications-data',
+    title: 'Content and communications data',
+    shortTitle: 'Content and communications data',
+    question: 'Is who a person contacted treated the same as what they said?',
+    summary:
+      'No. Two instruments define the line in their own text — the Convention defines subscriber information as data "other than traffic or content data", and United States law excludes contents from the pen-register and subscriber-record definitions — and the three categories carry different conditions.',
+    entityType: 'concept',
+    section: 'investigations',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'interception-and-stored-data',
+      'who-authorises-a-digital-investigative-measure',
+      'preserving-data-and-producing-it',
+      'what-privacy-protects-in-law',
+    ],
+    sources: [
+      'coe-cybercrime-convention',
+      'us-18usc-2703-stored-communications',
+      'us-18usc-3127-pen-register',
+      'de-stpo-100g-verkehrsdaten',
+      'de-stpo-100j-bestandsdaten',
+      'de-stpo-100a-tkue',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-05',
+    publishedOn: '2026-09-05',
+    reviewedOn: '2026-09-05',
+    factsVerifiedOn: '2026-09-05',
+    readingTimeMinutes: 11,
+    uncertainty: [
+      'The German definitions of Bestandsdaten and Verkehrsdaten sit in the telecommunications and digital-services statutes that §§ 100g and 100j cross-refer to. Those statutes were not read, and no claim here rests on the precise German definitions.',
+      'Whether any system’s categories align with any other’s was not researched and is not assumed. The German and Convention categories are described separately for that reason.',
+      'Nothing here describes how any category of data is generated, held, transmitted or obtained.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Legal systems do not treat a communication as one undifferentiated thing. They separate what was said from the record that a communication happened, and separate both from the account details of the person who holds the service. Three categories, three sets of conditions.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Two of the instruments read here draw the line in their own definitions rather than leaving it to be inferred, which is unusual and makes the categories checkable rather than argued.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'safety',
+        title: 'What this page is and is not',
+        text: 'This explains how legal instruments categorise communications material. It describes no technology, no method of obtaining any category, and nothing about how such data is generated or held. It is not legal advice.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'The categories exist because the intrusions are different sizes and the investigative uses are different too. Establishing that a particular account belongs to a particular person is often the first step in an investigation and reveals little on its own. Establishing who contacted whom, when, and for how long reveals a great deal about associations without revealing a word of what was said. Obtaining what was said reveals the most.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'The ordering is not a claim that the middle category is minor',
+        text: 'A record of who a person contacted over months can be more revealing than one conversation, and the systems here do not treat traffic data as trivial: Germany conditions it on an offence of significant weight and on proportionality, and the Convention gives it a dedicated article. The graduation is about which conditions attach, not about which material matters.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'The Convention on Cybercrime defines the third category by excluding the other two. Article 18(3) provides that "subscriber information" means information held by a service provider relating to subscribers of its services **other than traffic or content data**, by which can be established the type of service used and the period of service; the subscriber’s identity, postal or geographic address, telephone and other access number and billing and payment information available on the basis of the service agreement; and any other information on the site of installation of communication equipment available on the same basis.',
+        claim: 'fact',
+        sources: ['coe-cybercrime-convention'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'A three-way line inside one definition',
+        text: 'The phrase "other than traffic or content data" does two things at once: it tells you what subscriber information is not, and it confirms that the drafters treated traffic and content as already-distinct categories requiring no further explanation. The Convention then gives each of the three its own power — Article 18 for subscriber information, Article 20 for traffic data, Article 21 for content.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'United States law states the same boundary twice, in definitions rather than in argument. Section 3127(3) of Title 18 defines a pen register as a device or process recording or decoding "dialing, routing, addressing, or signaling information" transmitted by an instrument or facility, "provided, however, that such information shall not include the contents of any communication". Section 2703(c)(1) permits a governmental entity to require disclosure of "a record or other information pertaining to a subscriber to or customer of such service (not including the contents of communications)".',
+        claim: 'fact',
+        sources: ['us-18usc-3127-pen-register', 'us-18usc-2703-stored-communications'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'The consequence in that statute is a ladder of instruments. Section 2703(c)(2) lists six items a provider shall disclose on an administrative, grand jury or trial **subpoena** — name; address; local and long distance telephone connection records, or records of session times and durations; length of service including start date and types of service utilised; telephone or instrument number or other subscriber number or identity, including any temporarily assigned network address; and means and source of payment. Other records under § 2703(c) require a warrant, a § 2703(d) **court order**, or the subscriber’s consent. Contents in electronic storage for 180 days or less require a **warrant**.',
+        claim: 'fact',
+        sources: ['us-18usc-2703-stored-communications'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'And the standards differ, not only the instruments',
+        text: 'A § 2703(d) order issues only if the governmental entity offers "specific and articulable facts showing that there are reasonable grounds to believe" the material is "relevant and material to an ongoing criminal investigation". That is the statute’s own standard for that route, and it is not the standard for the warrant route in the same section.',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'Germany — three provisions, three thresholds',
+            description:
+              'Subscriber-type information under § 100j may be requested where necessary to investigate the facts or determine an accused’s whereabouts. Traffic data under § 100g requires specific facts grounding suspicion of an offence of significant weight also in the individual case, or of an offence committed by means of telecommunications, and requires the collection to stand in an appropriate relationship to the significance of the matter. Content monitoring under § 100a requires a serious offence from a closed catalogue, seriousness in the individual case, and subsidiarity.',
+          },
+          {
+            term: 'And one exception that reverses the order',
+            description:
+              'Where a § 100j request reaches data by which access to terminal devices or their storage is protected, the ordinary low threshold does not apply: the information may be requested only where the statutory conditions for using those data are met, and for the digital-services limb only for the prosecution of an especially serious offence within the § 100b(2) categories. Material that is formally subscriber data is pulled up to the level of the code’s most intrusive power.',
+          },
+          {
+            term: 'Location data is a traffic-data question, and Germany splits it by time',
+            description:
+              '§ 100g(1) provides that the collection of stored — *retrograd* — location data is permitted only on the stricter conditions of § 100g(2), and that otherwise location data may be collected only for future traffic data or in real time, and only in the case of an offence of significant weight. Historical and prospective location data are not the same request in this system.',
+          },
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'uncertainty',
+        title: 'One system is not a comparative finding',
+        text: 'The historical/prospective split for location data is established for Germany. Whether any other system draws that line, or draws it differently, was not researched and is not implied here.',
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Metadata is just data about data, so obtaining it raises no real question.',
+        reality:
+          'The systems read here condition it. Germany requires specific facts grounding suspicion of an offence of significant weight also in the individual case, and requires proportionality to the significance of the matter. The Convention gives real-time traffic data its own article and its own safeguards.',
+      },
+      {
+        claim: 'Who a person contacted and what they said are legally the same material.',
+        reality:
+          'Article 18(3) of the Convention defines subscriber information as data "other than traffic or content data". Section 3127(3) of Title 18 defines a pen register as recording dialling, routing, addressing or signalling information "provided, however, that such information shall not include the contents of any communication".',
+      },
+      {
+        claim: 'Subscriber information is a category of communication content.',
+        reality:
+          'Both instruments that define it exclude content expressly. Section 2703(c)(1) covers "a record or other information pertaining to a subscriber ... (not including the contents of communications)".',
+      },
+      {
+        claim: 'Basic account details always require a court to authorise their disclosure.',
+        reality:
+          'Section 2703(c)(2) lists six items a provider shall disclose on an administrative, grand jury or trial subpoena. Germany’s § 100j states no judicial order for the ordinary subscriber-data request.',
+        note: 'Both systems then impose higher requirements for other categories in the same statute.',
+      },
+      {
+        claim: 'Because subscriber data is the least protected category, everything in it is.',
+        reality:
+          'Germany’s § 100j reverses the order for one class of material: where the request reaches data protecting access to terminal devices or their storage, the ordinary threshold does not apply and the especially-serious-offence conditions do.',
+      },
+      {
+        claim: 'The categories mean the same thing in every legal system.',
+        reality:
+          'They are defined separately in each instrument, and this page describes them separately for that reason. The German definitions sit in telecommunications and digital-services statutes that were not read for this wave, and no alignment with the Convention’s categories is assumed.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Three categories, and three different ways of making the line operative.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'By definition, excluding the other two — Council of Europe, Convention Art. 18(3): subscriber information is data "other than traffic or content data".',
+          'By statutory definition of the instrument — United States, 18 U.S.C. § 3127(3): a pen register records dialling, routing, addressing or signalling information and "shall not include the contents of any communication".',
+          'By the instrument required — United States, § 2703: subpoena for six enumerated items, § 2703(d) court order on specific and articulable facts, warrant for contents held 180 days or less.',
+          'By separate provisions with separate thresholds — Germany, StPO § 100j, § 100g and § 100a.',
+          'With an exception that inverts the graduation for access-credential data — Germany, § 100j.',
+          'With location data split into stored and prospective, on different conditions — Germany, § 100g(1).',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'Scope of these statements',
+        text: 'Each national provision is the law of its own country. The Convention obliges Parties to legislate and is not evidence of what any Party enacted. No system’s categories are assumed to align with another’s.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'What makes these categories matter for accountability is that they are the unit an authorisation is written in. An order that names a category defines what may be collected, and an order that collects a different category has exceeded itself in a way that can be identified afterwards without any argument about degree.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'What interest the law is protecting when it protects communications is [what privacy protects in law](/investigations/what-privacy-protects-in-law). Whether the material is reached in transit or at rest is [interception and stored data](/investigations/interception-and-stored-data). Who authorises each category is [who authorises a digital investigative measure](/investigations/who-authorises-a-digital-investigative-measure).',
+      },
+      {
+        kind: 'paragraph',
+        text: 'It is worth noting who the statutory subjects are, because the terms are precise and none of them is a citizenship term. United States law speaks of a "subscriber or customer" and of a "governmental entity"; the Convention of "subscribers of its services" and of a "service provider offering its services in the territory of the Party"; German law of "der Beschuldigte" and of those who commercially provide telecommunications services. The category of person a provision protects is drawn from the service relationship, not from nationality.',
+        claim: 'fact',
+        sources: [
+          'us-18usc-2703-stored-communications',
+          'coe-cybercrime-convention',
+          'de-stpo-100g-verkehrsdaten',
+        ],
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [interception and stored data](/investigations/interception-and-stored-data), [preserving data and producing it](/investigations/preserving-data-and-producing-it), and [what privacy protects in law](/investigations/what-privacy-protects-in-law).',
+      },
+    ],
+  },
+  {
+    slug: 'preserving-data-and-producing-it',
+    title: 'Preserving data and producing it',
+    shortTitle: 'Preservation and production',
+    question: 'If data has been "preserved", has anyone read it?',
+    summary:
+      'No. Preservation freezes material so that it still exists later; production hands it over. The Convention caps preservation at ninety days precisely because its purpose is to enable authorities to seek disclosure afterwards, by a separate power.',
+    entityType: 'concept',
+    section: 'investigations',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'content-and-communications-data',
+      'who-authorises-a-digital-investigative-measure',
+      'scope-duration-and-notification',
+      'evidence-integrity-and-admissibility',
+    ],
+    sources: ['coe-cybercrime-convention', 'us-18usc-2703-stored-communications'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-05',
+    publishedOn: '2026-09-05',
+    reviewedOn: '2026-09-05',
+    factsVerifiedOn: '2026-09-05',
+    readingTimeMinutes: 8,
+    keyTerms: ['disclosure'],
+    uncertainty: [
+      'This page rests mainly on one treaty. National preservation regimes were not researched in any of the four systems this wave examined, and nothing is asserted about them.',
+      'A general retention mandate — an obligation on providers to keep data about everyone for a period — is a third and different instrument. Retention regimes were not researched and this page makes no claim about any of them.',
+      'Nothing here describes how data is stored, preserved, transferred or obtained.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Preserving data and obtaining it are two steps, and a system that has taken the first has not taken the second. Preservation stops something being deleted. Production hands it over. Between them, nobody investigating has read anything.',
+      },
+      {
+        kind: 'callout',
+        variant: 'safety',
+        title: 'What this page is and is not',
+        text: 'This explains two distinct legal mechanisms. It describes no technology, no method of preserving, transferring or obtaining data, and nothing about how any provider operates. It is not legal advice.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'The problem preservation answers is timing. Data that matters to an investigation may be deleted — routinely, automatically, or deliberately — long before the process required to obtain it can be completed. If the only available step were the full one, the material would often be gone by the time it was authorised.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'paragraph',
+        text: 'A separate, lighter step solves that without solving it too generously. Freezing material is a smaller intrusion than reading it: the holder keeps it, the investigators do not get it, and the question whether they may have it is answered afterwards on its own terms.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Which is why the cap exists',
+        text: 'A preservation order that never expired would become a way of holding material indefinitely without ever satisfying the conditions for obtaining it. Capping the period forces the second question to be asked while the first answer is still live.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'Article 16 of the Convention on Cybercrime states the mechanism and its purpose in the same sentence. Parties must empower their authorities to order or similarly obtain the expeditious preservation of specified computer data, including traffic data, "in particular where there are grounds to believe that the computer data is particularly vulnerable to loss or modification". Where this is done by an order to a person, that person must preserve and maintain the integrity of the data "for a period of time as long as necessary, up to a maximum of ninety days, **to enable the competent authorities to seek its disclosure**". The order may be renewed.',
+        claim: 'fact',
+        sources: ['coe-cybercrime-convention'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'The purpose clause is what makes the distinction textual',
+        text: 'Article 16(2) does not say preservation gives authorities the data. It says preservation exists so that authorities can go and seek its disclosure — which is a different act, under a different article. The relationship between the two is stated inside the preservation power itself.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'That different act is Article 18. It obliges Parties to empower their authorities to order a person in the territory to submit specified computer data in that person’s possession or control, and to order a service provider offering services in the territory to submit subscriber information relating to those services. Article 17 adds a narrow intermediate step for traffic data: where data has been preserved under Article 16, enough traffic data must be disclosed to enable the Party to identify the service providers and the path through which the communication was transmitted.',
+        claim: 'fact',
+        sources: ['coe-cybercrime-convention'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Article 17 is a deliberately partial disclosure',
+        text: 'Its purpose is to find out who else holds relevant data when a communication passed through more than one provider. It discloses routing information sufficient to identify the providers and the path — not the preserved material itself.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Preservation also carries a confidentiality duty running the other way from the investigation. Article 16(3) obliges Parties to require the custodian or other person preserving the data to keep the undertaking of the procedure confidential for the period provided by domestic law.',
+        claim: 'fact',
+        sources: ['coe-cybercrime-convention'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'United States law shows what the production side looks like when a national statute grades it. Section 2703 of Title 18 provides different routes according to what is sought and whether notice is given: a warrant without required notice; a subpoena or a § 2703(d) court order with prior notice to the subscriber or customer, with delayed notice available under § 2705; and, for the six enumerated basic items, a subpoena with no notice requirement at all under § 2703(c)(3).',
+        claim: 'fact',
+        sources: ['us-18usc-2703-stored-communications'],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'If data has been preserved, investigators have it.',
+        reality:
+          'Article 16(2) of the Convention requires preservation for up to ninety days "to enable the competent authorities to seek its disclosure". Seeking disclosure is Article 18, a separate power with its own conditions.',
+      },
+      {
+        claim: 'A preservation order is a lighter version of a production order.',
+        reality:
+          'They do different things. Preservation obliges the holder to keep material and maintain its integrity; production obliges someone to hand material over. One can be complied with entirely without the other ever being made.',
+      },
+      {
+        claim: 'Preservation lasts as long as the investigation needs.',
+        reality:
+          'Article 16(2) caps it at a maximum of ninety days where it is effected by order to a person, though it permits a Party to provide for renewal.',
+      },
+      {
+        claim: 'A preservation order and a data-retention obligation are the same thing.',
+        reality:
+          'A preservation order concerns specified data already held, in a particular case. A retention mandate is a general obligation to keep data about everyone for a period, whether or not any investigation exists. Retention regimes were not researched for this wave and nothing here describes one.',
+      },
+      {
+        claim: 'The person whose data was preserved will be told.',
+        reality:
+          'Article 16(3) requires the opposite of the custodian: Parties must oblige the person preserving the data to keep the undertaking of the procedure confidential for the period their domestic law provides. Whether the subject is ever notified is a separate question answered by each system’s own rules.',
+      },
+      {
+        claim: 'Because these steps are separated, data is lost while the process runs.',
+        reality:
+          'Separating them is what prevents that. Preservation exists precisely because the fuller process takes time, and Article 16 directs it at data "particularly vulnerable to loss or modification".',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Four distinct mechanisms, and the Convention keeps them in four articles.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Expedited preservation of specified stored data, up to ninety days, renewable, with a confidentiality duty on the custodian — Convention Art. 16.',
+          'Expedited preservation with partial disclosure of enough traffic data to identify the providers and the path — Convention Art. 17.',
+          'A production order: specified stored computer data from a person, or subscriber information from a service provider — Convention Art. 18.',
+          'Graded national production routes differing by what is sought and whether notice is given — United States, 18 U.S.C. § 2703(b)–(c), with delayed notice under § 2705.',
+          'A general retention mandate — a different instrument entirely, NOT researched for this wave and not described here.',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'Scope of these statements',
+        text: 'The Convention obliges its Parties to establish these powers in domestic law. It is not evidence of what any Party enacted, and no country claim rests on it. The United States provisions are the law of that country only.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'Preservation is the step at which the integrity question and the authority question separate cleanly. Article 16(2) requires the person ordered to preserve to "preserve and maintain the integrity" of the data — an obligation about the material’s condition, owed while the question of who may have it is still open.',
+        claim: 'fact',
+        sources: ['coe-cybercrime-convention'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'Whether material is what it is said to be, and whether a court may receive it, is [evidence integrity and admissibility](/forensics/evidence-integrity-and-admissibility). What the categories of material are is [content and communications data](/investigations/content-and-communications-data). Who may order each step is [who authorises a digital investigative measure](/investigations/who-authorises-a-digital-investigative-measure).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [content and communications data](/investigations/content-and-communications-data), [scope, duration and notification](/investigations/scope-duration-and-notification), and [evidence integrity and admissibility](/forensics/evidence-integrity-and-admissibility).',
+      },
+    ],
+  },
+  {
+    slug: 'who-authorises-a-digital-investigative-measure',
+    title: 'Who authorises a digital investigative measure',
+    shortTitle: 'Who authorises',
+    question: 'Who decides that an investigator may take a digital investigative step?',
+    summary:
+      'Not always a judge, and not always the same judge. One German power needs a single court, another a three-judge panel with a higher court taking over after six months; United States law allocates three different instruments to three categories; and the Convention requires "judicial or other independent supervision".',
+    entityType: 'concept',
+    section: 'investigations',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'legal-authority-and-technical-capability',
+      'scope-duration-and-notification',
+      'content-and-communications-data',
+      'investigative-jurisdiction',
+    ],
+    sources: [
+      'de-stpo-100e-verfahren',
+      'de-stpo-100b-online-durchsuchung',
+      'de-stpo-100j-bestandsdaten',
+      'de-stpo-110-durchsicht',
+      'es-lecrim-medidas-tecnologicas',
+      'us-18usc-2703-stored-communications',
+      'jp-code-criminal-procedure',
+      'coe-cybercrime-convention',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-05',
+    publishedOn: '2026-09-05',
+    reviewedOn: '2026-09-05',
+    factsVerifiedOn: '2026-09-05',
+    readingTimeMinutes: 11,
+    keyTerms: ['warrant', 'jurisdiction'],
+    uncertainty: [
+      'Urgency routes were established for Germany only. Whether the other systems provide one, and on what terms, was not researched.',
+      'This page describes who may authorise, not what an applicant must show. Thresholds of suspicion are stated only where the cited provision states them, and no page on this site describes how any threshold is assessed in practice.',
+      'Intelligence-service authority was not researched in any system and is not described here. Every provision on this page is a criminal-procedure provision.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Every system read for this wave requires someone other than the investigator to authorise the more intrusive digital measures. Which someone, and how much of a someone, varies more than the shared vocabulary of "warrants" suggests — and within a single legal system it varies from power to power.',
+      },
+      {
+        kind: 'callout',
+        variant: 'safety',
+        title: 'What this page is and is not',
+        text: 'This explains which body authorises which measure. It states no threshold of suspicion beyond what a cited provision states, describes no procedure for applying, and contains nothing about how any decision could be anticipated, influenced or avoided. It is not legal advice.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'The reason authorisation is external is that the person best placed to judge whether a measure is needed is the person least placed to judge whether it is justified. An investigator has the information and the motive; what an investigator does not have is distance from the outcome.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'paragraph',
+        text: 'What follows from that is not "a judge must always decide", but something narrower: the decision has to be made by someone who is not conducting the investigation, and the intensity of that requirement can be calibrated to how intrusive the measure is. Every system here calibrates, and they calibrate differently.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Calibration is the design, not a compromise',
+        text: 'Requiring a court for every request for an account name would make routine investigation impossible; requiring nothing for the most intrusive measures would make the safeguard meaningless. A ladder lets a system put the heaviest procedure where the heaviest intrusion is.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'Germany runs the clearest ladder, and it runs it inside one code. Under § 100e(1), measures under § 100a — telecommunications monitoring — may be ordered only on application of the prosecution office **by the court**. Under § 100e(2), measures under § 100b — intervening in an information-technology system to collect data — may be ordered only on application of the prosecution office **by the chamber of the Landgericht** named in § 74a(4) of the Courts Constitution Act. Under § 100j, an ordinary request for subscriber-type information states no judicial order at all. And under § 110(1), the examination of electronic storage media belongs to the prosecution office rather than to a court.',
+        claim: 'fact',
+        sources: [
+          'de-stpo-100e-verfahren',
+          'de-stpo-100j-bestandsdaten',
+          'de-stpo-110-durchsicht',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Four different answers in one statute',
+        text: 'A panel of judges, a single court, a prosecution office, and no stated judicial order — for four powers in the same code. Any sentence beginning "in Germany, digital investigation requires…" is going to be wrong about three of them.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The German ladder also escalates over time rather than only at the outset. A § 100a order is limited to a maximum of three months and may be extended by not more than three months at a time. A § 100b order is limited to a maximum of **one** month, extendable by one month at a time — and once its duration has been extended to six months in total, further extensions are decided by the **Oberlandesgericht**, a higher court than the one that made the original order.',
+        claim: 'fact',
+        sources: ['de-stpo-100e-verfahren'],
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'Spain — always a judge, and the judge may act unprompted',
+            description:
+              'Article 588 bis a(1) of the LECrim requires judicial authorisation for the technological measures in the chapter. Article 588 bis b(1) provides that the judge may order them of his own motion or at the instance of the Ministerio Fiscal or the Policía Judicial — so the authorising body is not merely a check on an application, it can initiate.',
+          },
+          {
+            term: 'The United States — three instruments for three categories',
+            description:
+              'Section 2703 allocates: an administrative, grand jury or trial **subpoena** for the six enumerated basic subscriber items; a **§ 2703(d) court order**, which issues only on "specific and articulable facts showing that there are reasonable grounds to believe" the material is "relevant and material to an ongoing criminal investigation"; and a **warrant** for contents in electronic storage for 180 days or less. Only one of the three is a warrant.',
+          },
+          {
+            term: 'Japan — a judge’s warrant for the general power',
+            description:
+              'Article 218(1) permits a public prosecutor, a public prosecutor’s assistant officer or a judicial police official to conduct search, seizure or inspection upon a warrant issued by a judge, and Article 218(3) provides that the warrant is issued upon their request. Interception is not in the Code at all: Article 222-2 routes it to other legislation.',
+          },
+          {
+            term: 'The Convention — independent, not necessarily judicial',
+            description:
+              'Article 15(2) provides that the conditions and safeguards shall, as appropriate in view of the nature of the power, "include judicial or **other independent** supervision, grounds justifying application, and limitation of the scope and the duration of such power or procedure".',
+          },
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'The treaty text is the clearest refutation of a universal judicial rule',
+        text: 'An instrument written to harmonise these powers across many legal systems did not require a judge. It required independent supervision and left the form to domestic law — because the Parties do it differently and the drafters knew it.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Urgency does not remove the authoriser; in the one system where it was researched, it reorders the sequence and puts a deadline on the reordering. Under § 100e(1), where there is danger in delay a § 100a order may also be made by the prosecution office — and "soweit die Anordnung der Staatsanwaltschaft nicht binnen drei Werktagen von dem Gericht bestätigt wird, tritt sie außer Kraft": unless confirmed by the court within three working days, it lapses. Under § 100e(2) the same structure applies to § 100b measures, with the presiding judge ordering and the chamber confirming.',
+        claim: 'fact',
+        sources: ['de-stpo-100e-verfahren'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'What the lapse rule does',
+        text: 'It makes the confirmation the condition of continued validity rather than a formality that follows. The measure does not become lawful because it was urgent; it becomes unlawful again if the court does not agree in time. The judicial decision is deferred, not dispensed with.',
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Digital investigative measures require a warrant.',
+        reality:
+          '"Warrant" is one system’s instrument, not a universal category. In United States law it is one of three routes in a single section, alongside a subpoena and a § 2703(d) court order. German law uses no such instrument for these powers, and its § 100j states no judicial order for the ordinary subscriber-data request.',
+      },
+      {
+        claim: 'A judge must authorise digital investigative measures.',
+        reality:
+          'Article 15(2) of the Convention requires "judicial or other independent supervision". German law assigns the examination of electronic storage media to the prosecution office under § 110(1), and states no judicial order for an ordinary § 100j request.',
+      },
+      {
+        claim: 'Where a judge is required, any judge will do.',
+        reality:
+          'Germany’s § 100e(2) requires measures under § 100b to be ordered by the chamber of the Landgericht named in § 74a(4) GVG — a panel, not a single judge — and once the total duration reaches six months, further extensions are decided by the Oberlandesgericht.',
+      },
+      {
+        claim:
+          'Prosecutors authorise these measures in civil-law systems and judges in common-law ones.',
+        reality:
+          'Germany requires the court for § 100a and a chamber of the Landgericht for § 100b, on the prosecution office’s application; Spain requires the judge for the whole chapter. Meanwhile United States law permits an administrative subpoena, issued without any court, for the six enumerated subscriber items.',
+      },
+      {
+        claim: 'In an emergency, investigators may act without any authorisation.',
+        reality:
+          'Germany’s urgency route substitutes the prosecution office for the court and then requires judicial confirmation within three working days, failing which the order lapses. The authoriser changes and the sequence changes; the requirement does not disappear.',
+        note: 'Urgency routes were researched for Germany only. Nothing is asserted about the other systems.',
+      },
+      {
+        claim:
+          'Criminal-procedure authorisation rules describe what intelligence services may do.',
+        reality:
+          'They do not, and this wave did not research intelligence powers in any system. Every provision on this page is a criminal-procedure provision, and Article 14 of the Convention establishes its powers "for the purpose of specific criminal investigations or proceedings".',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Six answers to one question, four of them inside a single legal system.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'A court, on the prosecution office’s application, for up to three months — Germany, StPO § 100e(1) for § 100a measures.',
+          'A panel of the Landgericht, for up to one month, with the Oberlandesgericht deciding extensions past six months — Germany, § 100e(2) for § 100b measures.',
+          'The prosecution office itself, for the examination of electronic storage media — Germany, § 110(1).',
+          'No judicial order stated for the ordinary case — Germany, § 100j.',
+          'A judge always, who may also act of his own motion — Spain, LECrim arts. 588 bis a(1) and 588 bis b(1).',
+          'Three instruments for three categories: subpoena, § 2703(d) court order, warrant — United States, 18 U.S.C. § 2703.',
+          'A judge’s warrant for the general power, with interception routed to other legislation — Japan, CCP Arts. 218(1) and 222-2.',
+          'Judicial **or other independent** supervision, form left to domestic law — Council of Europe, Convention Art. 15(2).',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'Scope of these statements',
+        text: 'Each national provision is the law of its own country. The Convention obliges Parties to legislate and is not evidence of what any Party enacted. Twelve of the jurisdictions this wave was asked to consider were not researched.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'Authorisation is only half of what these provisions do. The other half is that they create a record: an application that had to state its grounds, and a decision by a body that had to be persuaded. That record is what a later review examines, and it exists whether or not anyone ever asks to see it.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'What the authorising decision must contain, how long it lasts and who is told afterwards is [scope, duration and notification](/investigations/scope-duration-and-notification). Which institution is competent to investigate at all is [investigative jurisdiction](/investigations/investigative-jurisdiction). Whether the constitutional right required a judge in the first place is [intercepting communications](/investigations/intercepting-communications) and [searching a home](/investigations/searching-a-home).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [legal authority and technical capability](/investigations/legal-authority-and-technical-capability), [scope, duration and notification](/investigations/scope-duration-and-notification), and [investigative jurisdiction](/investigations/investigative-jurisdiction).',
+      },
+    ],
+  },
+  {
+    slug: 'scope-duration-and-notification',
+    title: 'Scope, duration and notification',
+    shortTitle: 'Scope, duration, notification',
+    question: 'Once a measure is authorised, what bounds it — and is the person ever told?',
+    summary:
+      'German law requires the order to state the measure’s type, extent, duration and end-point, then names measure by measure who must be notified afterwards and gives them two weeks to ask a court whether it was lawful and properly executed.',
+    entityType: 'concept',
+    section: 'investigations',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'who-authorises-a-digital-investigative-measure',
+      'preserving-data-and-producing-it',
+      'reviewing-detention',
+      'what-happens-to-unlawfully-obtained-evidence',
+    ],
+    sources: [
+      'de-stpo-100e-verfahren',
+      'de-stpo-101-verdeckte-massnahmen',
+      'es-lecrim-medidas-tecnologicas',
+      'coe-cybercrime-convention',
+      'us-18usc-2703-stored-communications',
+      'jp-code-criminal-procedure',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-05',
+    publishedOn: '2026-09-05',
+    reviewedOn: '2026-09-05',
+    factsVerifiedOn: '2026-09-05',
+    readingTimeMinutes: 11,
+    uncertainty: [
+      'The notification and post-hoc review architecture is established for Germany. Whether the other systems provide comparable duties, and in what form, was not researched, and their absence from this page is not a finding about them.',
+      'Nothing here describes how a measure is executed, how compliance is monitored, or how any deadline could be anticipated or used. That is a deliberate limit on the research.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'An authorisation that said only "you may intercept this person" would authorise everything and bound nothing. What makes an authorisation a limit is that it has to specify: what kind of measure, reaching what, for how long, ending when. And what makes it reviewable is that somebody eventually finds out it happened.',
+      },
+      {
+        kind: 'callout',
+        variant: 'safety',
+        title: 'What this page is and is not',
+        text: 'This explains what an authorising decision must contain and what follows it. It describes no execution method, no technology, and nothing about how any measure or deadline could be anticipated, detected or frustrated. It is not legal advice.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'Covert measures have a structural problem no other investigative act has: the person affected cannot complain about something they do not know happened. Every ordinary safeguard — objecting at the time, asking a court, challenging the evidence — assumes knowledge that a covert measure is designed to withhold.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Notification is what closes that gap, and it closes it late by design',
+        text: 'Telling someone during the measure would defeat it. Never telling them would remove the remedy entirely. A duty to notify afterwards is the compromise, and its terms — who is told, when, and what they are told about their options — are where the compromise is actually made.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'German law writes the bounds into the order itself. § 100e(3) requires the order to be issued in writing, and requires its operative part to state, so far as possible, the name and address of the person against whom the measure is directed; the offence alleged; **the type, extent, duration and end-point of the measure**; the type of information to be collected and its significance for the proceedings; and, for § 100a measures, the number or other identifier of the connection or terminal device.',
+        claim: 'fact',
+        sources: ['de-stpo-100e-verfahren'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Spain requires the equivalent at the application stage. Article 588 bis b(2) of the LECrim requires the request to contain eight enumerated items, including the identity of the person investigated "o de cualquier otro afectado por la medida" — or of anyone else affected by it — the reasons justifying necessity under the guiding principles, the indicia, **the extension of the measure with specification of its content**, the unit of the Policía Judicial that will carry out the intervention, the form of execution, the duration sought, and the obliged subject who will carry it out.',
+        claim: 'fact',
+        sources: ['es-lecrim-medidas-tecnologicas'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Two places to put the same requirement',
+        text: 'Germany puts the specification in the decision; Spain puts it in the application. The practical effect is similar — nobody can authorise a measure whose scope has not been articulated — but they differ in who is made to do the articulating.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Duration is bounded in both. Germany limits a § 100a order to three months and a § 100b order to one, renewable in like periods only where the conditions persist "unter Berücksichtigung der gewonnenen Ermittlungsergebnisse" — in the light of the results obtained. Spain’s article 588 bis e provides that measures last the period specified for each and may not exceed the time indispensable for clarifying the facts; that extension is by **auto motivado** of the competent judge; and that once the period expires without extension the measure "cesará a todos los efectos" — ceases for all purposes.',
+        claim: 'fact',
+        sources: ['de-stpo-100e-verfahren', 'es-lecrim-medidas-tecnologicas'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Renewal is not automatic in either',
+        text: 'Germany conditions extension on the results obtained so far, which makes a fruitless measure harder to continue than to start. Spain requires a reasoned order each time. A duration limit that renewed on request would be a formality; these do not.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Germany then builds the after-the-fact architecture, in § 101. Personal data collected by covert measures must be **marked**, and the marking maintained by any body it is transmitted to (§ 101(3)). Documents concerning the most intrusive measures are kept at the prosecution office and placed on the file only when the notification conditions are met (§ 101(2)).',
+        claim: 'fact',
+        sources: ['de-stpo-101-verdeckte-massnahmen'],
+      },
+      {
+        kind: 'paragraph',
+        text: '§ 101(4) then states a notification duty measure by measure, naming the categories of person who must be told. For § 100a it is "die Beteiligten der überwachten Telekommunikation" — the participants in the monitored telecommunication. For § 100b it is "die Zielperson sowie die erheblich mitbetroffenen Personen" — the target person and significantly co-affected persons. The notification must point out the possibility of subsequent judicial protection under § 101(7) and the period provided for it. Notification is withheld where overriding protectable interests of an affected person require.',
+        claim: 'fact',
+        sources: ['de-stpo-101-verdeckte-massnahmen'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'The notification is not only that it happened — it is that a remedy exists',
+        text: 'A person told only "you were monitored" would have to discover for themselves that anything could be done about it. § 101(4) requires the notification to state the possibility of subsequent judicial protection and its deadline, which turns the notice into the trigger for the remedy rather than merely an item of information.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'And § 101(7) supplies that remedy. The persons named in § 101(4) may apply to the competent court, **even after the measure has ended** and up to two weeks after their notification, for review of "die Rechtmäßigkeit der Maßnahme sowie der Art und Weise ihres Vollzugs" — the lawfulness of the measure **and the manner of its execution**. Immediate complaint lies against the decision, and where public charges have been preferred and the accused notified, the court seised of the case decides in the decision closing the proceedings.',
+        claim: 'fact',
+        sources: ['de-stpo-101-verdeckte-massnahmen'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Two questions, not one',
+        text: 'Whether the measure should have been authorised, and whether what was done under it stayed within the authorisation, are separate questions. § 101(7) opens both, which matters because a measure can be lawfully ordered and unlawfully carried out.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Confidentiality duties run in the other direction, on the parties who assist. The Convention obliges Parties to require a custodian preserving data to keep the procedure confidential (Art. 16(3)), and to oblige a service provider to keep confidential the execution of the real-time traffic-data and content-interception powers and any information relating to it (Arts. 20(3) and 21(3)). United States law approaches notice from a third angle: § 2703(c)(3) provides that an entity receiving records under that subsection "is not required to provide notice to a subscriber or customer", and § 2703(b)(1)(B) permits prior notice with delayed notice available under § 2705.',
+        claim: 'fact',
+        sources: ['coe-cybercrime-convention', 'us-18usc-2703-stored-communications'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Japan bounds the measure through the warrant instrument instead. Article 219(1) requires the warrant to state a valid period, together with "a statement to the effect that the search, seizure or inspection of evidence shall not be commenced in any way after the lapse of such period and that in such case the warrant shall be returned to the court".',
+        claim: 'fact',
+        sources: ['jp-code-criminal-procedure'],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'An authorisation lets investigators do whatever the measure makes possible.',
+        reality:
+          'Germany’s § 100e(3) requires the order to state the type, extent, duration and end-point of the measure and the type of information to be collected. Spain’s 588 bis b(2) requires the application to specify the extension of the measure with specification of its content.',
+      },
+      {
+        claim: 'A covert measure is never disclosed to the person affected.',
+        reality:
+          'Germany’s § 101(4) states a notification duty measure by measure and names who must be told for each. It permits notification to be withheld where overriding protectable interests of an affected person require — a stated exception to a stated duty, not the absence of one.',
+      },
+      {
+        claim: 'Once a measure has ended, there is nothing to challenge.',
+        reality:
+          'Section 101(7) permits the persons entitled to notification to apply for review "even after the measure has ended", up to two weeks after notification, and to have both the lawfulness of the measure and the manner of its execution examined.',
+      },
+      {
+        claim:
+          'If the measure was properly authorised, how it was carried out is not reviewable.',
+        reality:
+          'German law opens both questions in the same provision: § 101(7) covers the lawfulness of the measure "sowie der Art und Weise ihres Vollzugs" — as well as the manner of its execution.',
+      },
+      {
+        claim: 'A time limit means the measure ends and everyone moves on.',
+        reality:
+          'Extension is available in both systems that state a limit, but neither grants it automatically. Germany requires the conditions to persist in the light of the results obtained; Spain requires a reasoned order from the competent judge and provides that on expiry without extension the measure ceases for all purposes.',
+      },
+      {
+        claim: 'Everyone affected by a measure is notified.',
+        reality:
+          'The German provision names categories rather than covering everyone: for § 100a the participants in the monitored telecommunication; for § 100b the target person and significantly co-affected persons. Who falls inside those categories is what the provision decides.',
+        note: 'The statutory terms are precise and none of them is a citizenship term.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Where each system puts the bound, and who it tells.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'In the written order: type, extent, duration and end-point, plus the connection or terminal identifier — Germany, StPO § 100e(3).',
+          'In the application: eight enumerated items including the extension of the measure and the unit that will execute it — Spain, LECrim art. 588 bis b(2).',
+          'In the warrant: a valid period, after which the measure may not be commenced and the warrant is returned — Japan, CCP Art. 219(1).',
+          'Duration capped and renewable only on stated conditions — Germany, § 100e(1)–(2); Spain, art. 588 bis e.',
+          'Data marked and the marking maintained on transmission — Germany, § 101(3).',
+          'Notification naming categories of person, stating the remedy and its deadline, withheld only on stated grounds — Germany, § 101(4).',
+          'Post-hoc review of lawfulness and of the manner of execution, available after the measure ends — Germany, § 101(7).',
+          'Confidentiality imposed on custodians and providers, and notice to the subscriber not required for certain record categories — Convention Arts. 16(3), 20(3), 21(3); United States, 18 U.S.C. § 2703(c)(3).',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'Scope of these statements',
+        text: 'The notification and review architecture is Germany’s. Its absence from the description of the other systems reflects what was researched, not a finding that they lack one. The Convention obliges Parties to legislate and is not evidence of any Party’s law.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'This is the point at which the investigative layer hands over to the review layer, and the handover is deliberate rather than incidental. A marked record, a named category of person, a notification that states the remedy, and a two-week window make the difference between a right that exists and a right that can be used.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'What a court can do once asked is Wave 19’s subject: [what happens to unlawfully obtained evidence](/justice/what-happens-to-unlawfully-obtained-evidence), [effective remedy](/justice/effective-remedy) and [when a procedural error changes the outcome](/justice/when-a-procedural-error-changes-the-outcome). Who authorised the measure in the first place is [who authorises a digital investigative measure](/investigations/who-authorises-a-digital-investigative-measure).',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The statutory subjects are worth stating exactly, because the terms are narrow and none is a citizenship term: "die Beteiligten der überwachten Telekommunikation", "die Zielperson", "die erheblich mitbetroffenen Personen", "der Beschuldigte", and in Spain "el investigado o encausado" and "cualquier otro afectado por la medida". Whom a provision protects is drawn from the person’s relationship to the measure, not from their nationality.',
+        claim: 'fact',
+        sources: ['de-stpo-101-verdeckte-massnahmen', 'es-lecrim-medidas-tecnologicas'],
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [who authorises a digital investigative measure](/investigations/who-authorises-a-digital-investigative-measure), [preserving data and producing it](/investigations/preserving-data-and-producing-it), and [what happens to unlawfully obtained evidence](/justice/what-happens-to-unlawfully-obtained-evidence).',
       },
     ],
   },
