@@ -789,6 +789,28 @@ describe('every country claim rests on a country-scoped source', () => {
     expect(blockSources.filter((id) => !declared.has(id))).toEqual(['c']);
   });
 
+  /*
+   * Found by the adversarial pass, and it closes a structural gap in the fact-block check above.
+   *
+   * That check can only reach PARAGRAPH blocks, because `list` and `callout` blocks carry no
+   * `claim` or `sources` field at all. A provision named in a variation list or a callout was
+   * therefore untraceable: two pages named StPO §§ 94, 110 and 100b without citing the records
+   * that establish them.
+   *
+   * This is page-level rather than block-level for that reason: every section number appearing
+   * anywhere in a page's prose must appear in the note of a source that page cites.
+   */
+  it.each(WAVE_22)('%s cites a record for every statutory section it names', (slug) => {
+    const g = guide(slug);
+    const notes = g.sources.map((id) => getSource(id)?.note ?? '').join('\n');
+    const named = new Set([...prose(g).matchAll(/§ (\d+[a-z]?)/g)].map((m) => m[1]));
+    const untraceable = [...named].filter((n) => !new RegExp(`§ ?${n}\\b`).test(notes));
+    expect(
+      untraceable,
+      `${slug} names § ${untraceable.join(', § ')} with no cited record`,
+    ).toEqual([]);
+  });
+
   it.each(WAVE_22)('%s quotes no foreign-language text no cited source carries', (slug) => {
     const g = guide(slug);
     const notes = g.sources.map((id) => getSource(id)?.note ?? '').join('\n');

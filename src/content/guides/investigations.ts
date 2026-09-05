@@ -1873,6 +1873,10 @@ export const INVESTIGATIONS_GUIDES: readonly Guide[] = [
       'coe-cybercrime-convention',
       'de-stpo-100a-tkue',
       'de-stpo-100b-online-durchsuchung',
+      'us-18usc-2703-stored-communications',
+      'us-18usc-3127-pen-register',
+      'de-stpo-94-beschlagnahme',
+      'de-stpo-110-durchsicht',
     ],
     status: 'published',
     review: 'fact-checked',
@@ -1886,6 +1890,7 @@ export const INVESTIGATIONS_GUIDES: readonly Guide[] = [
     uncertainty: [
       'Four systems and one treaty were read for this wave, all as statutory or treaty text. No case law was researched in any of them, and in several the operative content of these rules is judicial.',
       'Nothing here describes any investigative technique, any technology, or anything about how data is obtained, held or protected. That is a deliberate limit on the research rather than a gap in it.',
+      'The United States chapters named are the two read for this wave. The Wiretap Act, 18 U.S.C. ch. 119, was not read, and nothing here is asserted about it.',
     ],
     definition: [
       {
@@ -1975,7 +1980,7 @@ export const INVESTIGATIONS_GUIDES: readonly Guide[] = [
       {
         claim: 'Digital investigation is a special legal category with its own rules.',
         reality:
-          'It is the ordinary coercive powers applied to new objects. Germany places them inside the general procedure code, Spain in a dedicated chapter of it, the United States across three separate statutory chapters, and Japan puts the interception power outside its code altogether. There is no common location and no single power.',
+          'It is the ordinary coercive powers applied to new objects. Germany places them inside the general procedure code, Spain in a dedicated chapter of it, the United States across separate statutory chapters, and Japan puts the interception power outside its code altogether. There is no common location and no single power.',
       },
       {
         claim:
@@ -2012,7 +2017,7 @@ export const INVESTIGATIONS_GUIDES: readonly Guide[] = [
         items: [
           'Inside the general procedure code, as separately conditioned powers — Germany, StPO §§ 94, 100a, 100b, 100g, 100j, 110.',
           'In a dedicated chapter of the procedure code, under shared guiding principles — Spain, LECrim arts. 588 bis a and following, inserted by Ley Orgánica 13/2015 and in force from 6 December 2015.',
-          'Across separate statutory chapters, each with its own instrument — United States, 18 U.S.C. chs. 119, 121 and 206.',
+          'Across separate statutory chapters, each with its own instrument — United States: stored communications in 18 U.S.C. ch. 121 and pen registers in ch. 206, both read for this wave.',
           'Partly outside the procedure code: Japan’s Art. 222-2 provides that compulsory measures for the interception of electronic communications without the consent of either party "shall be executed based upon other acts".',
           'As a treaty obligation on Parties to establish powers in their own law, subject to Arts. 14 and 15 — Council of Europe, Convention on Cybercrime.',
         ],
@@ -2076,6 +2081,7 @@ export const INVESTIGATIONS_GUIDES: readonly Guide[] = [
     sources: [
       'de-stpo-94-beschlagnahme',
       'de-stpo-110-durchsicht',
+      'de-stpo-100b-online-durchsuchung',
       'coe-cybercrime-convention',
       'jp-code-criminal-procedure',
       'es-lecrim-medidas-tecnologicas',
