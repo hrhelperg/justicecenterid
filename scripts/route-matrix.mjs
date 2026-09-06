@@ -258,6 +258,17 @@ const MUST_404 = [
   '/judiciary',
   // A parallel investigation taxonomy was considered and rejected; the existing hub is used.
   '/criminal-investigation',
+  // Wave 23 examined and rejected these cross-border candidates in
+  // docs/research/cross-border-digital-evidence-cannibalization.md. A provider comparison is
+  // refused on Part U grounds — this platform does not rank providers by how they answer legal
+  // process, and tests/content/wave23-cross-border-evidence.test.ts enforces it. The other three
+  // are framing rather than questions, or restate a page that already exists under an
+  // institutional name.
+  '/investigations/provider-cooperation-comparison',
+  '/investigations/sovereignty-and-cross-border-digital-investigation',
+  '/investigations/can-police-get-your-data-from-another-country',
+  '/investigations/what-is-a-digital-investigation',
+  '/investigations/mlat',
   // Arbitrary paths.
   '/definitely-not-a-page',
   '/law-enforcement/police-use-of-force/extra',
