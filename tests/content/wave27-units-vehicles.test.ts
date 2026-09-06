@@ -423,6 +423,31 @@ describe('every claim is traceable to an institutional source', () => {
     expect(getSource('nl-politie-voertuigen')!.note).toMatch(/deliberately NOT used|not used/i);
   });
 
+  it('NO source anywhere in the registry is hosted on a retailer, marketplace or review site', () => {
+    /*
+     * Found by mutation W27M7, and it was a real hole rather than a self-containment gap. Wave 26
+     * checked its own five source ids for this; nothing checked the other 364. Any source in the
+     * registry could have been swapped for a retailer URL and no test would have noticed —
+     * confirmed by re-running the Wave 26 suite against the same mutation, which passed.
+     *
+     * The check is on the HOSTNAME, not the whole URL. A government path may legitimately contain
+     * "review" — `nist.gov/forensic-science/.../scientific-foundation-reviews` is a research
+     * programme — while a host that contains it is a different kind of thing entirely.
+     */
+    const commerceHost = /shop|store|\bbuy\b|amazon|ebay|review|deals?|market(?:place)?|cart/i;
+    const offenders = SOURCES.filter((src) => {
+      if (!src.url) return false;
+      let host: string;
+      try {
+        host = new URL(src.url).hostname;
+      } catch {
+        return true; // an unparseable URL is itself a problem
+      }
+      return commerceHost.test(host);
+    }).map((src) => `${src.id} -> ${src.url}`);
+    expect(offenders).toEqual([]);
+  });
+
   it.each(WAVE_27)('%s cites only sources it declares, block by block', (slug) => {
     const g = guide(slug);
     for (const block of allBlocks(g)) {
