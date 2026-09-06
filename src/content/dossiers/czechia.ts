@@ -511,7 +511,7 @@ export const CZECHIA: CountryDossier = {
         },
       ],
       uncertainty: [
-        'Wave 25 DEFERRED Czechia because every reachable official page redirected into an archive carrying the notice that its content may not be current. This module rests on a current page checked explicitly for that notice.',
+        'An earlier attempt to document Czech recruitment was abandoned because every reachable official page redirected into an archive carrying the notice that its content may not be current. This module rests on a current page checked explicitly for that notice.',
         'The stages and order of the přijímací řízení, and the content of any assessment, were NOT RESEARCHED.',
         'Pay and recruitment-bonus figures are published on the portal and are deliberately not reproduced here.',
         'Entry to the municipal police (obecní policie), which are separate bodies under municipal control, was NOT RESEARCHED.',

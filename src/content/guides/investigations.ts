@@ -2448,7 +2448,7 @@ export const INVESTIGATIONS_GUIDES: readonly Guide[] = [
     rightsAndAccountability: [
       {
         kind: 'paragraph',
-        text: 'The constitutional half of this question is Wave 21’s and is not repeated here: which interest a system protects when it protects communications, and whether a judge must authorise interference with it, is answered at [intercepting communications](/investigations/intercepting-communications). What this page adds is the statutory layer beneath — that the constitutional protection is implemented by more than one power, and that the powers are not interchangeable.',
+        text: 'The constitutional half of this question is answered elsewhere in the corpus and is not repeated here: which interest a system protects when it protects communications, and whether a judge must authorise interference with it, is answered at [intercepting communications](/investigations/intercepting-communications). What this page adds is the statutory layer beneath — that the constitutional protection is implemented by more than one power, and that the powers are not interchangeable.',
         claim: 'analysis',
       },
       {
@@ -3275,7 +3275,7 @@ export const INVESTIGATIONS_GUIDES: readonly Guide[] = [
         kind: 'callout',
         variant: 'note',
         title: 'Where this connects',
-        text: 'What a court can do once asked is Wave 19’s subject: [what happens to unlawfully obtained evidence](/justice/what-happens-to-unlawfully-obtained-evidence), [effective remedy](/justice/effective-remedy) and [when a procedural error changes the outcome](/justice/when-a-procedural-error-changes-the-outcome). Who authorised the measure in the first place is [who authorises a digital investigative measure](/investigations/who-authorises-a-digital-investigative-measure).',
+        text: 'What a court can do once asked belongs to the review layer in /justice: [what happens to unlawfully obtained evidence](/justice/what-happens-to-unlawfully-obtained-evidence), [effective remedy](/justice/effective-remedy) and [when a procedural error changes the outcome](/justice/when-a-procedural-error-changes-the-outcome). Who authorised the measure in the first place is [who authorises a digital investigative measure](/investigations/who-authorises-a-digital-investigative-measure).',
       },
       {
         kind: 'paragraph',
@@ -4488,7 +4488,7 @@ export const INVESTIGATIONS_GUIDES: readonly Guide[] = [
         kind: 'callout',
         variant: 'note',
         title: 'Where this connects',
-        text: 'What a remedy is and what a forum can give is Wave 19’s subject: [effective remedy](/justice/effective-remedy). Who authorises a domestic digital measure is [who authorises a digital investigative measure](/investigations/who-authorises-a-digital-investigative-measure). The preservation-before-production relationship across borders is [cross-border preservation and disclosure](/investigations/cross-border-preservation-and-disclosure).',
+        text: 'What a remedy is and what a forum can give belongs to the review layer in /justice: [effective remedy](/justice/effective-remedy). Who authorises a domestic digital measure is [who authorises a digital investigative measure](/investigations/who-authorises-a-digital-investigative-measure). The preservation-before-production relationship across borders is [cross-border preservation and disclosure](/investigations/cross-border-preservation-and-disclosure).',
       },
     ],
     furtherReading: [

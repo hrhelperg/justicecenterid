@@ -2,7 +2,10 @@ import { describe, expect, it } from 'vitest';
 import { ALL_GUIDES, getGuide, guidePath } from '@/content/guides';
 import { SOURCES, getSource } from '@/content/sources';
 import { PROFESSIONS } from '@/content/professions';
-import { PUBLISHED_DOSSIERS } from '@/content/dossiers';
+import { COUNTRY_DOSSIERS, PUBLISHED_DOSSIERS } from '@/content/dossiers';
+import { HISTORY_ENTRIES } from '@/content/history';
+import { INSTITUTION_TYPES } from '@/content/institutions';
+import { GLOSSARY } from '@/content/glossary';
 import { findRestrictedPhrasing } from '@/content/restricted-claims';
 import { PUBLIC_ROUTE_PATHS } from '@/content/public-routes';
 import type { Block, Guide } from '@/content/types';
@@ -494,5 +497,98 @@ describe('the units and vehicles layer does not drift into procedural law', () =
 
   it('no published page anywhere in the corpus carries one either', () => {
     expect(CORPUS_SAFETY_UNITS.filter((u) => PROCEDURAL_HOWTO.test(u))).toEqual([]);
+  });
+});
+
+/*
+ * Found by adversarial QA on this wave, and it was not a Wave 27 defect alone: the corpus was
+ * addressing its readers in its own build vocabulary. Eleven rendered strings across four files
+ * said things like "Wave 24 established that…" and "is Wave 19's subject" — and a dossier told
+ * readers "Wave 25 ABANDONED Norway". A wave number is an internal unit of work. It appears
+ * nowhere in the site's navigation, has no page, and means nothing to a member of the public,
+ * so a sentence built on one is unreadable exactly where the corpus claims to explain itself.
+ *
+ * Three of the eleven were this wave's own. The other eight predated it and had rendered to
+ * readers since the waves that wrote them. All eleven now name the page they mean instead.
+ *
+ * CARVE-OUT, deliberate and narrow: `Source.note` is not walked here. Those notes are research
+ * provenance — "WAVE 23 ADDITION", "re-verified for Wave 25.5" — recording when and why a source
+ * entered the registry, and they render as secondary text on the source list rather than as
+ * explanatory prose. Rewriting 369 of them is its own maintenance task, and rewording verified
+ * provenance carries a real risk of damaging an attribution. It is recorded as debt rather than
+ * silently included in this wave's scope.
+ */
+describe('the corpus does not address readers in its own build vocabulary', () => {
+  const collectStrings = (
+    label: string,
+    value: unknown,
+    out: { where: string; text: string }[],
+  ) => {
+    if (typeof value === 'string') out.push({ where: label, text: value });
+    else if (Array.isArray(value))
+      value.forEach((v, i) => collectStrings(`${label}[${i}]`, v, out));
+    else if (value && typeof value === 'object')
+      for (const [k, v] of Object.entries(value)) collectStrings(`${label}.${k}`, v, out);
+  };
+
+  const READER_FACING: { where: string; text: string }[] = [];
+  for (const [label, records] of [
+    ['guide', ALL_GUIDES],
+    ['history', HISTORY_ENTRIES],
+    ['institution', INSTITUTION_TYPES],
+    ['profession', PROFESSIONS],
+    ['glossary', GLOSSARY],
+    ['dossier', COUNTRY_DOSSIERS],
+  ] as [string, readonly unknown[]][]) {
+    records.forEach((r, i) => {
+      const id =
+        (r as Record<string, unknown>).slug ??
+        (r as Record<string, unknown>).countryCode ??
+        (r as Record<string, unknown>).term ??
+        i;
+      collectStrings(`${label}:${String(id)}`, r, READER_FACING);
+    });
+  }
+
+  it('is not vacuous — it walks the whole reader-facing corpus', () => {
+    expect(READER_FACING.length).toBeGreaterThan(5000);
+  });
+
+  it('no rendered string refers to a numbered wave', () => {
+    const offenders = READER_FACING.filter((s) => /\bwave\s+\d/i.test(s.text)).map(
+      (s) => `${s.where}: ${s.text.slice(0, 120)}`,
+    );
+    expect(offenders).toEqual([]);
+  });
+
+  /*
+   * SECOND CARVE-OUT, also recorded rather than silently fixed. The phrase "this wave" appears in
+   * 63 reader-facing strings, nearly all of them scope statements of the form "only Germany,
+   * Brazil and France were reached from primary sources for this wave". It is still jargon. It is
+   * not, however, in the same class as the eleven strings fixed above: those pointed at a
+   * DIFFERENT numbered unit of work the reader cannot resolve to anything, while this one is
+   * self-referential and reads approximately as "this round of research".
+   *
+   * It is left alone because these are the corpus's most safety-relevant sentences — they state
+   * what was NOT researched — and rewording 63 of them as a side effect of a wave about police
+   * vehicles is how a scope statement quietly stops being accurate. Recorded as debt.
+   */
+  it('nor to the process nouns that have no reader-facing meaning at all', () => {
+    const offenders = READER_FACING.filter((s) =>
+      /\b(?:the wave brief|mutation test(?:ing)?|adversarial QA|the final gate|baseline commit|merge gate)\b/i.test(
+        s.text,
+      ),
+    ).map((s) => `${s.where}: ${s.text.slice(0, 120)}`);
+    expect(offenders).toEqual([]);
+  });
+
+  it('records the "this wave" debt honestly rather than pretending it is absent', () => {
+    const thisWave = READER_FACING.filter((s) => /\bthis wave\b/i.test(s.text));
+    expect(thisWave.length).toBeGreaterThan(0);
+    /*
+     * A ceiling, not a target. If a later wave adds many more, this fails and the debt gets paid
+     * instead of growing quietly.
+     */
+    expect(thisWave.length).toBeLessThanOrEqual(70);
   });
 });

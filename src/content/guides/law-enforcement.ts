@@ -6638,7 +6638,7 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
         kind: 'callout',
         variant: 'analysis',
         title: 'And the imbalance is the same one the training data showed',
-        text: 'Wave 24 found that measured academy instruction gives more hours to law than to firearms or defensive tactics. The equipment lists point the same way: what a service issues is a better guide to what the job consists of than what fiction selects from it.',
+        text: 'Measured academy instruction gives more hours to law than to firearms or defensive tactics — see [what police recruits are taught](/law-enforcement/what-police-recruits-are-taught). The equipment lists point the same way: what a service issues is a better guide to what the job consists of than what fiction selects from it.',
       },
     ],
     howItWorks: [
@@ -7511,7 +7511,7 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
     whyItExists: [
       {
         kind: 'paragraph',
-        text: 'Wave 24 found that a substantial share of a police officer’s working day is writing, and that the record is read months later by supervisors, prosecutors, defence lawyers and courts — by people who were not there. Documentation equipment is what makes that possible, which is why it is issued rather than assumed.',
+        text: 'A substantial share of a police officer’s working day is writing — see [working life in policing](/law-enforcement/working-life-in-policing) — and the record is read months later by supervisors, prosecutors, defence lawyers and courts — by people who were not there. Documentation equipment is what makes that possible, which is why it is issued rather than assumed.',
         claim: 'analysis',
       },
       {
@@ -7857,7 +7857,7 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
     definition: [
       {
         kind: 'paragraph',
-        text: 'Wave 24 established that rank, role, specialisation and assignment are four different things. A **unit** is a fifth: an organisational body with a place in a structure, distinct from the work its members do and from the ranks they hold. Two officers doing identical work can sit in different units, and one unit can contain several ranks and more than one kind of specialist.',
+        text: 'The corpus already separates rank, role, specialisation and assignment as four different things — see [rank, role and specialisation](/law-enforcement/rank-role-and-specialisation). A **unit** is a fifth: an organisational body with a place in a structure, distinct from the work its members do and from the ranks they hold. Two officers doing identical work can sit in different units, and one unit can contain several ranks and more than one kind of specialist.',
       },
       {
         kind: 'callout',
@@ -7920,7 +7920,7 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
           {
             term: 'A unit is not a rank ladder',
             description:
-              'Units contain several ranks, and a rank exists independently of any unit. Wave 24 established this distinction for individuals; it holds for organisational bodies too.',
+              'Units contain several ranks, and a rank exists independently of any unit. The corpus draws this distinction for individuals at [rank, role and specialisation](/law-enforcement/rank-role-and-specialisation); it holds for organisational bodies too.',
           },
           {
             term: 'Some units are not operational at all',
@@ -7949,7 +7949,7 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
       {
         claim: 'A unit is a rank or a job title.',
         reality:
-          'Units contain several ranks, and ranks exist independently of units. This is the same distinction Wave 24 drew between rank, role, specialisation and assignment, applied to organisational bodies.',
+          'Units contain several ranks, and ranks exist independently of units. It is the same distinction the corpus draws between rank, role, specialisation and assignment, applied to organisational bodies.',
       },
       {
         claim: 'Police services are organised the same way.',
