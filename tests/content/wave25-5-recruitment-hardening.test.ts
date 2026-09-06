@@ -214,11 +214,15 @@ describe('England and Wales is never widened to the United Kingdom', () => {
 
   it('the England and Wales page says in terms that it is not a UK page', () => {
     const g = prose(guide(EW_PAGE));
-    expect(g).toMatch(
-      /not a United Kingdom page|England and Wales only|covers England and Wales/i,
-    );
+    /*
+     * Positive AND negative. The first form accepted any of three phrasings, which W255M9 satisfied
+     * while asserting the opposite in the same callout. A disclaimer the page can keep while
+     * contradicting it is not a disclaimer.
+     */
+    expect(g).toMatch(/not a United Kingdom page/i);
     expect(g).toMatch(/Scotland/);
     expect(g).toMatch(/Northern Ireland/);
+    expect(g).not.toMatch(/England and Wales is a sovereign/i);
   });
 
   it('states no requirement for Scotland or Northern Ireland', () => {
