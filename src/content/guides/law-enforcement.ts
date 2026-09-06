@@ -3570,7 +3570,7 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [what a police academy is](/law-enforcement/what-a-police-academy-is), [police training and police education](/law-enforcement/police-training-and-police-education), and [the patrol officer role](/professions/patrol-officer). How the education threshold sits alongside the other entry requirements in six systems is [police entry requirements across systems](/law-enforcement/police-entry-requirements-across-systems), and the criterion that varies most between systems is status: [citizenship, nationality and residency in police recruitment](/law-enforcement/citizenship-nationality-and-residency-in-police-recruitment).',
+        text: 'Related: [what a police academy is](/law-enforcement/what-a-police-academy-is), [police training and police education](/law-enforcement/police-training-and-police-education), and [the patrol officer role](/professions/patrol-officer). How the education threshold sits alongside the other entry requirements in six systems is [police entry requirements across systems](/law-enforcement/police-entry-requirements-across-systems), and the criterion that varies most between systems is status: [citizenship, nationality and residency in police recruitment](/law-enforcement/citizenship-nationality-and-residency-in-police-recruitment). The system this page quotes most often is set out in full in [police recruitment in England and Wales](/law-enforcement/police-recruitment-in-england-and-wales).',
       },
     ],
   },
@@ -5591,7 +5591,7 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [police entry requirements across systems](/law-enforcement/police-entry-requirements-across-systems), [how police selection is structured](/law-enforcement/how-police-selection-is-structured), and [what a police academy is](/law-enforcement/what-a-police-academy-is).',
+        text: 'Related: [police entry requirements across systems](/law-enforcement/police-entry-requirements-across-systems), [how police selection is structured](/law-enforcement/how-police-selection-is-structured), and [what a police academy is](/law-enforcement/what-a-police-academy-is). The system that runs a national layer and a local layer at once is set out in [police recruitment in England and Wales](/law-enforcement/police-recruitment-in-england-and-wales).',
       },
     ],
   },
@@ -5783,7 +5783,7 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [who recruits police officers](/law-enforcement/who-recruits-police-officers), [police entry requirements across systems](/law-enforcement/police-entry-requirements-across-systems), and [when a recruitment requirement is campaign-specific](/law-enforcement/when-a-recruitment-requirement-is-campaign-specific).',
+        text: 'Related: [who recruits police officers](/law-enforcement/who-recruits-police-officers), [police entry requirements across systems](/law-enforcement/police-entry-requirements-across-systems), and [when a recruitment requirement is campaign-specific](/law-enforcement/when-a-recruitment-requirement-is-campaign-specific). Two systems that require citizenship in the strict sense are [Czechia](/countries/czechia/police-recruitment) and [Norway](/countries/norway/police-recruitment).',
       },
     ],
   },
@@ -5957,7 +5957,7 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [who recruits police officers](/law-enforcement/who-recruits-police-officers), [police entry requirements across systems](/law-enforcement/police-entry-requirements-across-systems), and [police recruitment in Ireland](/countries/ireland/police-recruitment).',
+        text: 'Related: [who recruits police officers](/law-enforcement/who-recruits-police-officers), [police entry requirements across systems](/law-enforcement/police-entry-requirements-across-systems), and [police recruitment in Ireland](/countries/ireland/police-recruitment). For deadlines that recur annually rather than expiring with one competition, see [police recruitment in Norway](/countries/norway/police-recruitment).',
       },
     ],
   },
@@ -6145,7 +6145,7 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [who recruits police officers](/law-enforcement/who-recruits-police-officers), [police entry requirements across systems](/law-enforcement/police-entry-requirements-across-systems), and [physical readiness in policing careers](/law-enforcement/physical-readiness-in-policing-careers).',
+        text: 'Related: [who recruits police officers](/law-enforcement/who-recruits-police-officers), [police entry requirements across systems](/law-enforcement/police-entry-requirements-across-systems), and [physical readiness in policing careers](/law-enforcement/physical-readiness-in-policing-careers). A system whose entry conditions sit in statute rather than in recruitment policy is [Czechia](/countries/czechia/police-recruitment).',
       },
     ],
   },
@@ -6334,7 +6334,231 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [who recruits police officers](/law-enforcement/who-recruits-police-officers), [citizenship, nationality and residency](/law-enforcement/citizenship-nationality-and-residency-in-police-recruitment), and [how police selection is structured](/law-enforcement/how-police-selection-is-structured).',
+        text: 'Related: [who recruits police officers](/law-enforcement/who-recruits-police-officers), [citizenship, nationality and residency](/law-enforcement/citizenship-nationality-and-residency-in-police-recruitment), [police recruitment in England and Wales](/law-enforcement/police-recruitment-in-england-and-wales), and [how police selection is structured](/law-enforcement/how-police-selection-is-structured).',
+      },
+    ],
+  },
+  /*
+   * ==========================================================================
+   * WAVE 25.5 — recruitment coverage completion and country architecture hardening.
+   * ==========================================================================
+   *
+   * WHY THIS PAGE IS HERE AND NOT UNDER /countries.
+   *
+   * Wave 25 researched England and Wales to a publishable standard and could not publish a country
+   * recruitment module, because `CountryDossier.countryCode` is documented as ISO 3166-1 alpha-2 —
+   * a sovereign-state model. England and Wales has no alpha-2 code; GB-EWL is a subdivision code.
+   * Creating a dossier would have meant inventing a country, which is exactly the semantic
+   * corruption the brief forbids.
+   *
+   * The geographically correct container would be a United Kingdom dossier with jurisdiction
+   * records for its three police systems. That is a full country pilot — the publication gate
+   * requires six researched modules — and is recorded in the research plan as the proper future
+   * home rather than half-built here.
+   *
+   * So the page lives in the global section, following the precedent this section already set with
+   * `sheriffs-and-city-police`: "A United States page, deliberately", for a feature with no general
+   * equivalent elsewhere. `jurisdiction: ['GB']` is honest — GB is the state; the page's own text
+   * scopes to England and Wales within it, and says so in its first callout.
+   *
+   * THE SCOPE DISCIPLINE IS THE POINT. England and Wales is not the United Kingdom. Scotland and
+   * Northern Ireland have separate services and are not described. The source itself supplies that
+   * boundary: it addresses 43 forces and mentions neither.
+   */
+  {
+    slug: 'police-recruitment-in-england-and-wales',
+    title: 'Police recruitment in England and Wales',
+    shortTitle: 'Recruitment (England & Wales)',
+    question: 'How do you join the police in England and Wales?',
+    summary:
+      'National eligibility criteria that 43 separate forces each recruit under, and are each allowed to add to — so the national rules are a floor rather than the whole requirement. Scotland and Northern Ireland are separate systems.',
+    entityType: 'concept',
+    section: 'law-enforcement',
+    jurisdiction: ['GB'],
+    temporalScope: 'current',
+    related: [
+      'who-recruits-police-officers',
+      'police-entry-requirements-across-systems',
+      'citizenship-nationality-and-residency-in-police-recruitment',
+      'do-police-officers-need-a-degree',
+    ],
+    sources: ['ew-police-eligibility-criteria', 'ew-joining-police-entry-routes'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-06',
+    publishedOn: '2026-09-06',
+    reviewedOn: '2026-09-06',
+    factsVerifiedOn: '2026-09-06',
+    readingTimeMinutes: 8,
+    uncertainty: [
+      'This page covers England and Wales only. Scotland and Northern Ireland have separate police services and separate recruitment, and neither was researched. Nothing here describes either.',
+      'The national criteria were re-verified on 6 September 2026. Individual forces may add their own criteria, and NO force’s local criteria were researched.',
+      'Selection stage content, vetting criteria, medical standards and fitness standards were deliberately not researched and are not described.',
+      'This page has no country module because the corpus models countries on ISO 3166-1 alpha-2 codes and England and Wales has none. The reasoning is in docs/research/police-recruitment-research-plan.md.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'England and Wales is a single legal system policed by 43 separate territorial forces. Recruitment is neither fully national nor fully local: a set of national eligibility criteria applies across the system, and each force recruits under them while being permitted to add its own.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page covers, and what it deliberately does not',
+        text: 'England and Wales, and nothing else. **This is not a United Kingdom page.** Scotland and Northern Ireland have their own police services with their own recruitment, and neither was researched. Verified against the official national recruitment service on 6 September 2026; the current position is the one that service and the individual force publish. This platform is not affiliated with any police force and does not accept applications.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'This system sits between the two models the rest of the corpus describes, and the middle is where most misunderstanding lives. Someone reading only the national criteria has read something true and incomplete; someone reading only one force’s page has read something true and local.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'And the source says so itself, which is unusual',
+        text: 'Most recruitment material states its rules without stating their reach. This one states both: "Police forces are also allowed to apply their own local criteria in addition to the national eligibility aspects, so make sure you check your chosen force’s website for a full list of the role criteria." A page quoting the national criteria without that sentence has quietly changed what they mean.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'Two ages, not one. The official position is that "You can now apply to join the police service at age 17, though you’ll need to wait until you’re 18 before you can officially become a police officer."',
+        claim: 'fact',
+        sources: ['ew-police-eligibility-criteria'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Status is framed as permission rather than membership. An applicant may apply "providing you have no restrictions on your right to live and work in the UK". A separate residency point attaches to vetting: candidates who have lived abroad may be required to have resided in the UK for three years, and time spent on an extended holiday, or abroad while serving with the armed forces or on government service, is treated as maintaining UK residence.',
+        claim: 'fact',
+        sources: ['ew-police-eligibility-criteria'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Note what that residency point is for',
+        text: 'It is connected to vetting rather than to belonging — a background check is harder to carry out across a long period abroad. Reading it as a loyalty requirement misreads a practical one, and the distinction matters to anyone deciding whether it applies to them.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'On education the position is stated twice over. The minimum is "a Level 3 Qualification. This is defined as two A levels", with equivalents accepted — and on degrees specifically: **"No, you don’t need to have a degree before you apply."** Successful completion of the Police Constable Degree Apprenticeship then leads to a degree in professional policing practice.',
+        claim: 'fact',
+        sources: ['ew-police-eligibility-criteria', 'ew-joining-police-entry-routes'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'The award is the output, not the entry ticket',
+        text: 'This is the same arrangement the degree page sets out at greater length: the route is named for what it awards. A reader who takes "Degree Apprenticeship" as a prerequisite has inverted it, and may spend three years and considerable money on a qualification that was never a condition of entry.',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: '43 forces, one set of national criteria',
+            description:
+              'The national criteria cover age, nationality, criminal records and finances, and the process for medical, vetting and fitness testing. Each force applies them, and each may add to them.',
+          },
+          {
+            term: 'Which means "the requirement" has two layers',
+            description:
+              'The national floor, and whatever the chosen force adds. A candidate who meets the first has established that they are not excluded nationally — not that they meet the requirement for the force they are applying to.',
+          },
+          {
+            term: 'Entry routes are plural',
+            description:
+              'The Police Constable Degree Apprenticeship, the Degree Holder Entry Programme, the Police Constable Entry Programme and a pre-join professional policing degree are separate routes into the same rank. Which routes a force runs is a matter for that force.',
+          },
+          {
+            term: 'And none of this describes Scotland or Northern Ireland',
+            description:
+              'Police Scotland and the Police Service of Northern Ireland are separate services with separate recruitment. The national criteria described here are the criteria for England and Wales, and the source that publishes them does not mention either.',
+          },
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'safety',
+        title: 'What this page will not tell you',
+        text: 'It does not describe what vetting examines, what a medical assessment looks for, what any fitness test involves, or what to say at any stage. Nor can it tell any individual whether they are eligible — that depends on current national criteria, on the chosen force’s own criteria, and on circumstances this platform does not assess.',
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'These are the UK police entry requirements.',
+        reality:
+          'They are the national criteria for England and Wales. Scotland and Northern Ireland have separate police services with separate recruitment, and the official source that publishes these criteria addresses 43 forces and mentions neither.',
+      },
+      {
+        claim: 'Meeting the national criteria means you meet the requirements.',
+        reality:
+          'The official recruitment service states that forces are also allowed to apply their own local criteria in addition to the national eligibility aspects.',
+      },
+      {
+        claim: 'You need a degree to join, because the main route is a degree apprenticeship.',
+        reality:
+          'The official position is stated directly: "No, you don\'t need to have a degree before you apply." The minimum is a Level 3 qualification, and the degree is what the route awards.',
+      },
+      {
+        claim: 'You must be a British citizen.',
+        reality:
+          'The national criteria are framed as permission rather than citizenship: an applicant may apply providing there are no restrictions on their right to live and work in the UK.',
+      },
+      {
+        claim: 'You have to be 18 to apply.',
+        reality:
+          'You can apply at 17, and must wait until 18 before becoming a police officer. Applying and being appointed are separate events with separate rules.',
+      },
+      {
+        claim: 'The three-year residency point is about nationality.',
+        reality:
+          'It attaches to vetting, and applies to candidates who have lived abroad. Time on an extended holiday, or abroad with the armed forces or on government service, is treated as maintaining UK residence.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Where this system sits against the others researched.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'One national service, central competition — Ireland.',
+          'One national service, central recruitment — New Zealand.',
+          'National criteria plus force-level criteria, across 43 forces — England and Wales.',
+          'National admission to police education programmes — Netherlands.',
+          'Admission through the national university admissions service — Norway.',
+          'A statutory service relationship with conditions set in legislation — Czechia.',
+          'Separate recruitment by each Land — Germany.',
+          'Many independent employers, no national requirement — United States.',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'Scope of this comparison',
+        text: 'Each row describes the system named. The England and Wales row is the only one of the eight where a national layer and a local layer both apply to the same applicant, which is why this page states both.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'A two-layer requirement is harder to scrutinise than a single one. National criteria can be examined nationally; 43 sets of additional local criteria cannot be examined in one place. That is a real cost of local policing governance rather than an argument against it — and it is why the national service tells applicants to go and read the force’s own page.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'How recruitment is organised elsewhere is [who recruits police officers](/law-enforcement/who-recruits-police-officers). The degree question in depth is [do police officers need a degree](/law-enforcement/do-police-officers-need-a-degree). The entry routes themselves are [what a police academy is](/law-enforcement/what-a-police-academy-is).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [police entry requirements across systems](/law-enforcement/police-entry-requirements-across-systems), [citizenship, nationality and residency in police recruitment](/law-enforcement/citizenship-nationality-and-residency-in-police-recruitment), and [who recruits police officers](/law-enforcement/who-recruits-police-officers).',
       },
     ],
   },

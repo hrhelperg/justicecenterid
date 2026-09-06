@@ -430,6 +430,95 @@ export const CZECHIA: CountryDossier = {
         'Border and customs in Czechia involve the national police, the Customs Administration, and the Schengen and EU customs context, and could not be researched to the standard required here without risking an inaccurate description of a security-adjacent function.',
     },
     {
+      moduleId: 'police-recruitment',
+      title: 'Police recruitment in Czechia',
+      summary:
+        'Entry is a service relationship governed by statute, and the conditions include two that most systems do not state at all: a bar on political party membership, and defined look-back periods for previous convictions.',
+      status: 'published',
+      review: 'fact-checked',
+      safetyReview: 'cleared',
+      updatedOn: '2026-09-06',
+      reviewedOn: '2026-09-06',
+      factsVerifiedOn: '2026-09-06',
+      temporalScope: 'current',
+      sources: ['cz-police-recruitment-requirements'],
+      relatedGuides: [
+        'who-recruits-police-officers',
+        'citizenship-nationality-and-residency-in-police-recruitment',
+        'how-police-selection-is-structured',
+        'police-entry-requirements-across-systems',
+      ],
+      blocks: [
+        {
+          kind: 'callout',
+          variant: 'scope',
+          title: 'What this page covers, and when it was checked',
+          text: 'This describes entry to the Police of the Czech Republic (Policie České republiky). It does not cover the municipal police (obecní policie), which are separate bodies run by municipalities, nor any other Czech authority. Verified against the official recruitment portal on 6 September 2026; the current position is the one Policie ČR publishes.',
+        },
+        {
+          kind: 'paragraph',
+          text: 'Czechia recruits nationally into a statutory service relationship. The governing provision is § 13 odst. 1 zákona č. 361/2003 Sb., o služebním poměru příslušníků bezpečnostních sborů — the Act on the service relationship of members of the security forces — so the conditions of entry are set in legislation rather than in a recruitment policy.',
+          claim: 'fact',
+          sources: ['cz-police-recruitment-requirements'],
+        },
+        {
+          kind: 'callout',
+          variant: 'analysis',
+          title: 'Which gives the requirements a different kind of durability',
+          text: 'Where entry conditions sit in a statute, they change when the statute changes rather than when a recruitment round opens. That is the opposite end of the range from a competition booklet whose age window expires with its closing date — and it is why this page can state conditions plainly while the Ireland page cannot.',
+        },
+        {
+          kind: 'definitionList',
+          items: [
+            {
+              term: 'Citizenship and age',
+              description:
+                'Czech citizenship, and over 18. This is a citizenship requirement in the strict sense — not a nationality category, not a right to work, and not a residency alternative.',
+            },
+            {
+              term: 'Education — for most posts, not all',
+              description:
+                'The official wording is precise about its own reach: "Pro naprostou většinu policejních míst je vyžadována alespoň maturita" — for the overwhelming majority of police posts, at least the maturita (the secondary school-leaving examination) is required. "Most posts" is not "all posts", and this page does not upgrade it.',
+            },
+            {
+              term: 'Previous convictions, with stated look-back periods',
+              description:
+                'An applicant must not have been finally convicted of an intentional criminal offence in the last ten years, or of an offence committed by negligence in the last five. Most systems require disclosure without publishing how far back the assessment reaches; here the periods are stated.',
+            },
+            {
+              term: 'No political party membership',
+              description:
+                'An applicant must not be a member of any political party or political movement. This is a condition about the officer’s civic position rather than their capability, and it is unusual enough among the researched systems to be worth naming.',
+            },
+            {
+              term: 'Assessment',
+              description:
+                'The process includes psychological assessment, physical testing and a medical examination. What any of them contains is not described here.',
+            },
+          ],
+        },
+        {
+          kind: 'callout',
+          variant: 'safety',
+          title: 'What this page will not tell you',
+          text: 'It does not describe what the psychological assessment examines, what the physical testing consists of, or how a previous conviction is assessed in an individual case. Whether any particular history or condition affects an application is a question for Policie ČR, and the look-back periods stated above are conditions of the statute rather than a prediction about anyone.',
+        },
+        {
+          kind: 'callout',
+          variant: 'note',
+          title: 'Where the current requirements live',
+          text: 'With Policie ČR, on its official recruitment portal. Much of the older Czech police web now redirects into an archive that warns its content may not be current, so the live portal is the source that matters. This platform is not affiliated with Policie ČR and does not accept applications.',
+        },
+      ],
+      uncertainty: [
+        'Wave 25 DEFERRED Czechia because every reachable official page redirected into an archive carrying the notice that its content may not be current. This module rests on a current page checked explicitly for that notice.',
+        'The stages and order of the přijímací řízení, and the content of any assessment, were NOT RESEARCHED.',
+        'Pay and recruitment-bonus figures are published on the portal and are deliberately not reproduced here.',
+        'Entry to the municipal police (obecní policie), which are separate bodies under municipal control, was NOT RESEARCHED.',
+        'Whether zákon č. 361/2003 Sb. contains further conditions beyond those the portal summarises was NOT ESTABLISHED; the Act itself was not read.',
+      ],
+    },
+    {
       moduleId: 'history',
       title: 'Institutional history of Czechia',
       summary: 'Not yet researched.',
