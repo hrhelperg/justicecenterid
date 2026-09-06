@@ -630,7 +630,7 @@ export const GERMANY: CountryDossier = {
           kind: 'callout',
           variant: 'note',
           title: 'Where the current requirements live',
-          text: 'With the police of the individual Land, or with the Bundespolizei, each of which publishes its own recruitment material. There is no single national source to point to, and that is the substance of this page.',
+          text: 'With the police of the individual Land, or with the Bundespolizei, each of which publishes its own recruitment material. There is no single national source to point to, and that is the substance of this page. This platform is not affiliated with any German police force and does not accept applications.',
         },
       ],
       uncertainty: [
