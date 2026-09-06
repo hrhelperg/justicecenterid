@@ -5024,6 +5024,62 @@ export const SOURCES: readonly SourceRecord[] = [
     jurisdiction: 'US',
     note: 'SCOPE: local police departments in the United States, from the LEMAS survey, 2016 and 2020. Written by Sean E. Goodison and Connor Brooks, November 2023. Supports the body-worn camera adoption figures — 43.1% of local police departments in 2016 rising to 61.8% in 2020, and 73.3% rising to 100.0% among departments serving 1 million or more residents — and that written policy topics surveyed included body-worn cameras. Read directly as a PDF after the summariser could not decode it. Describes adoption and written policy, never capability or configuration.',
   },
+  /*
+   * WAVE 27 — police units, vehicles and organisational structure.
+   *
+   * Institutional sources only, and the boundary is the same one Wave 26 drew: what a unit IS, what
+   * a vehicle is FOR, how a service is ORGANISED — never what any unit or vehicle can do. Where a
+   * source describes operational capability, that part is deliberately unused, and the notes below
+   * say so rather than leaving the omission invisible.
+   */
+  {
+    id: 'nz-police-structure',
+    type: 'government',
+    title: 'Structure — New Zealand Police',
+    publisher: 'New Zealand Police',
+    url: 'https://www.police.govt.nz/about-us/structure',
+    accessedOn: '2026-09-07',
+    verifiedOn: '2026-09-07',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'NZ',
+    note: 'SCOPE: the organisational structure of New Zealand Police. Supports that "New Zealand Police is divided into 12 districts, 9 in the North Island and 3 in the South", and that the Commissioner of Police is the chief executive. The page does not set out in the text read what functions sit at national level or how groups relate to districts, and nothing is claimed about either from it.',
+  },
+  {
+    id: 'nz-police-teams-units',
+    type: 'government',
+    title: 'Police teams and units — New Zealand Police',
+    publisher: 'New Zealand Police',
+    url: 'https://www.police.govt.nz/about-us/structure/teams-units',
+    accessedOn: '2026-09-07',
+    verifiedOn: '2026-09-07',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'NZ',
+    note: 'SCOPE: the named teams and units of New Zealand Police. Supports the REACH statements that make this wave\u2019s structural point — that the air support unit "usually operates throughout the metropolitan Auckland area" but "may also be deployed nationally"; that the Dive Squad is "based in Wellington, but responds to requests for assistance from all over New Zealand"; that the Police Dog Section has 21 sections nationwide; and that Maritime Units are located in Auckland and Wellington. Used for the GEOGRAPHY and organisational placement of units only. Nothing about what any unit can do, how it is equipped, or how it operates is taken from this page.',
+  },
+  {
+    id: 'nl-politie-huisstijl-protection',
+    type: 'government',
+    title: 'Waarom is de politiehuisstijl wettelijk beschermd?',
+    publisher: 'Nationale Politie (Netherlands)',
+    url: 'https://www.politie.nl/informatie/waarom-is-de-politiehuisstijl-wettelijk-beschermd.html',
+    accessedOn: '2026-09-07',
+    verifiedOn: '2026-09-07',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'NL',
+    note: 'SCOPE: the legal protection of the Dutch police house style. Supports the stated reason — "De politie heeft bijzondere taken en bevoegdheden, dus moet u er op kunnen vertrouwen dat het echt om de politie gaat" — and the extent of the protection: "De rechten op het uniform van de politie, zowel het operationele uniform als representatieve uniform (tenue met het witte overhemd), zijn wettelijk beschermd. Dit geldt ook voor het politielogo en de striping op de politie voertuigen." This is the source establishing that uniform and vehicle striping are protected by the same rule. Cited as an impersonation-prevention measure; nothing here describes what any marking looks like in a way that would assist imitation.',
+  },
+  {
+    id: 'nl-politie-voertuigen',
+    type: 'government',
+    title: 'Politievoertuigen uitgelicht',
+    publisher: 'Nationale Politie (Netherlands)',
+    url: 'https://www.politie.nl/informatie/politievoertuigen-uitgelicht.html',
+    accessedOn: '2026-09-07',
+    verifiedOn: '2026-09-07',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'NL',
+    note: 'SCOPE: the categories of vehicle the Dutch police describe. Supports that the police car and van are the ordinary vehicles used for surveillance, responding to 112 calls and traffic checks; that motorcycles are used mainly on motorways and roads outside built-up areas; that the helicopter provides air support to regional units; and that training vehicles are identifiable by secondary blue-and-white striping and the inscription "trainingsvoertuig". The page ALSO describes operational uses of a rapid-intervention vehicle including pursuit and interception; that material is deliberately NOT used, because it describes capability rather than category.',
+  },
 ];
 
 const SOURCE_INDEX = new Map(SOURCES.map((source) => [source.id, source]));
