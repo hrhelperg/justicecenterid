@@ -1769,3 +1769,63 @@ about durability. **No procedural-law expansion.**
   six editorial backlinks were added.
 
 Delivered on `feat/recruitment-coverage-hardening-wave-25-5`. Not merged, not deployed.
+
+## Phase 40 — Knowledge Expansion Wave 26 (delivered 2026-09-06)
+
+Police equipment, uniforms and professional technology. Seven guides on five institutional sources.
+An equipment KNOWLEDGE foundation, not a commerce wave. Details in
+`docs/research/knowledge-expansion-wave-26-qa.md` and
+`docs/research/police-equipment-model-findings.md`.
+
+**Brief note:** the Wave 26 brief arrived truncated, ending mid-list in the general duty equipment
+cluster. It was executed on the program-level material that did arrive — mission, clusters, the hard
+commerce and safety boundary, the execution model — with the established wave pattern supplying the
+rest. Several named clusters are consequently not covered; they are listed as known limitations.
+
+The Wave 24 strategic rule holds: no procedural-law expansion, and the equipment layer routes the
+force question to the existing legal page rather than answering it.
+
+- **The line the wave is built on.** What equipment exists, why, who issues it, under what policy,
+  to what standard — **never** how anything is used, carried, configured, selected or bought. No
+  product name, brand, manufacturer, supplier, price, specification, protection level or capability
+  figure appears anywhere, for regulated and unregulated categories alike.
+- **Published equipment lists do not look like the popular picture.** An Garda Síochána's own
+  policy puts "a notebook, pen, medi-pouch" in the same sentence as its protective and restraint
+  items, with no hierarchy, and places the Personal Protective Vest _inside_ the Operational Uniform
+  rather than beside it. The same imbalance Wave 24 found in measured training hours.
+- **A uniform's first stated function is not authority.** The Dutch police put visibility and
+  recognisability first — "Zichtbaarheid en herkenbaarheid zijn daarmee de belangrijkste functies
+  van het uniform" — authority second, protection third. The common assumption reverses the first
+  two, and recognisability turns out to be an accountability function.
+- **The identification duty is asymmetric by design.** A uniformed officer in the Netherlands need
+  not identify themselves unprompted but must show the card if asked; an officer in plain clothes
+  must show it on their own initiative. The uniform has already answered part of the question, so
+  the document carries the whole load only when it cannot.
+- **Equipment standards solve a problem the buyer cannot solve**, and the NIJ regime is _voluntary_
+  — the pressure runs through procurement, not law. Its follow-up inspections are what make it mean
+  anything: certifying a submitted sample proves something about that sample; re-testing what is
+  actually being sold proves something else. Structurally identical to forensic accreditation.
+- **Adoption is not governance.** Body-worn cameras reached 100% of United States departments
+  serving a million or more residents in 2020 while the overall figure stayed at 61.8%, so the
+  question has no single answer inside one country — and the same survey treats written policy as a
+  separate question from possession.
+- **A mutation proof found a guard that existed but not here.** W26M10 inserted a step-sequenced
+  appeal procedure and survived this wave's suite. Before fixing it, the Wave 25 suite was re-run
+  against the same mutation and **caught it** — so the content was never unprotected in a full run.
+  What was missing was self-containment, since mutation proofs run per-suite.
+- **The same wrong assertion, caught a second time.** The e2e demanded that equipment pages carry no
+  outbound links, and all seven failed because every guide renders a source list of official
+  government pages. **Citation is not referral** — the identical error Wave 25 made about
+  recruitment pages. Now asserts every outbound link is an official source and none is a retailer.
+- **Three guards were over-broad on first run**, and the content was not changed for any: the
+  commerce pattern matched the legal verb "order" across most of the investigations layer; the
+  protection-level pattern matched the standards page's own denial; and `-review$` matched
+  `constitutional-review`.
+- **The self-referential cluster, again.** The graph passed at 0/0/0 while all seven pages had no
+  inbound link from any pre-existing page. Eight editorial backlinks added.
+- **Client JS +0 KB. CSS +0 bytes. No component changed.**
+- Validation: 8,353 tests / 82 files; **522 routes**, 524 pages, 522 sitemap URLs; 365 sources;
+  0 orphans, 0 weakly linked, 0 dead ends. **12/12 mutation proofs valid**, one caught only after
+  the fix it forced. Adversarial QA: 1 P1 and 3 P2, every finding independently reproduced.
+
+Delivered on `feat/police-equipment-technology-wave-26`. Not merged, not deployed.
