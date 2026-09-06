@@ -156,7 +156,20 @@ const NEGATION_WINDOW = 60;
 function deniesForward(sentence: string, pattern: RegExp): boolean {
   const match = new RegExp(pattern.source, 'i').exec(sentence);
   if (!match) return false;
-  const before = sentence.slice(Math.max(0, match.index - NEGATION_WINDOW), match.index);
+  let before = sentence.slice(Math.max(0, match.index - NEGATION_WINDOW), match.index);
+  /*
+   * A clause boundary ends the negation's reach. The window alone was not enough: W25M4's sentence
+   * read "the comparison confirms rather than complicates: police officers need a degree in every
+   * system", and "rather than" sat inside 60 characters while belonging entirely to the clause
+   * before the colon — where its own object, "complicates", already was. A negation cannot govern
+   * across a colon, semicolon or dash, so only the text after the last one counts.
+   */
+  const boundary = Math.max(
+    before.lastIndexOf(':'),
+    before.lastIndexOf(';'),
+    before.lastIndexOf('—'),
+  );
+  if (boundary >= 0) before = before.slice(boundary + 1);
   return /\b(?:not|never|no|nothing|neither|nor|cannot)\b|\bdoes not\b|\brather than\b|\bunlike\b/i.test(
     before,
   );
