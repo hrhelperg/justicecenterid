@@ -633,7 +633,7 @@ export const UNITED_STATES: CountryDossier = {
           kind: 'callout',
           variant: 'note',
           title: 'Where the current requirements live',
-          text: 'With the individual employing agency, and with the state standards body that certifies officers in that state. There is no national source, and that is the substance of this page.',
+          text: 'With the individual employing agency, and with the state standards body that certifies officers in that state. There is no single national source to point to, and that is the substance of this page. This platform is not affiliated with any United States law-enforcement employer and does not accept applications.',
         },
       ],
       uncertainty: [
