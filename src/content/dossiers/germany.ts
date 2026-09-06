@@ -554,6 +554,93 @@ export const GERMANY: CountryDossier = {
         'Oversight in Germany is itself federally divided — federal and Land parliaments, federal and Land data-protection authorities, Land-level police complaint arrangements that differ between Länder. Publishing a single national oversight page without that differentiation would imply a uniform national complaints model that does not exist, and listing bodies without establishing their powers would imply effective accountability without evidence.',
     },
     {
+      moduleId: 'police-recruitment',
+      title: 'Police recruitment in Germany',
+      summary:
+        'There is no German police recruitment. Each Land recruits separately, with its own entry tracks and its own requirements, and the federal police recruits separately again.',
+      status: 'published',
+      review: 'fact-checked',
+      safetyReview: 'cleared',
+      updatedOn: '2026-09-06',
+      reviewedOn: '2026-09-06',
+      factsVerifiedOn: '2026-09-06',
+      temporalScope: 'current',
+      sources: [
+        'de-berlin-polizei-ausbildung',
+        'de-berlin-polizei-studium',
+        'de-bayern-polizei-ausbildung',
+      ],
+      relatedGuides: [
+        'who-recruits-police-officers',
+        'police-training-and-police-education',
+        'do-police-officers-need-a-degree',
+        'when-a-recruitment-requirement-is-campaign-specific',
+      ],
+      blocks: [
+        {
+          kind: 'callout',
+          variant: 'scope',
+          title: 'What this page covers, and what it deliberately does not claim',
+          text: 'This page is about the STRUCTURE of German police recruitment, not about German requirements — because there are none at national level. Two Länder were researched, Berlin and Bavaria, and they appear here as labelled examples of separate recruiters. Nothing here describes the other fourteen Länder or the Bundespolizei. Verified on 6 September 2026.',
+        },
+        {
+          kind: 'paragraph',
+          text: 'Asking what the German police entry requirements are presupposes a single recruiter. There is not one. Policing is organised at Land level, each Land police force recruits on its own terms, and the Bundespolizei recruits separately again. A requirement established for one Land is evidence about that Land.',
+          claim: 'analysis',
+        },
+        {
+          kind: 'callout',
+          variant: 'analysis',
+          title: 'Which makes one habit especially misleading',
+          text: 'Because Berlin publishes recruitment material in an accessible form, Berlin\u2019s rules are easy to find and easy to repeat as though they were national. They are not. This page names the Land beside every fact for exactly that reason.',
+        },
+        {
+          kind: 'definitionList',
+          items: [
+            {
+              term: 'Berlin — two tracks, entered at different education levels',
+              description:
+                'The mittlerer Dienst is a Vorbereitungsdienst of "2 ½ Jahre", entered on the erweiterte Berufsbildungsreife, or on the Berufsbildungsreife together with a completed two-year vocational training and two years of work, and leading to appointment as Polizeimeisterin or Polizeimeister. The gehobener Dienst is a course of study: "Das Studium dauert 3 Jahre und ist in 15 abgeschlossene Module gegliedert", requiring "mindestens die Fachhochschulreife bzw. das Abitur" and awarding a Bachelor of Arts.',
+            },
+            {
+              term: 'Bavaria — a different structure with different names',
+              description:
+                'Bavaria organises entry by Qualifikationsebene. The 2. Qualifikationsebene Ausbildung is described as "2,5 Jahre", divided into five sections of six months. The Bavarian page consulted does not state the school qualification required, and none is claimed here.',
+            },
+            {
+              term: 'What the two examples establish together',
+              description:
+                'Not a German rule, but the absence of one: two Länder use different vocabulary, different structures and separate recruitment. The comparison is the finding.',
+            },
+          ],
+        },
+        {
+          kind: 'paragraph',
+          text: 'One point does carry across both examples: entry at the higher track is a course of study, and it is the study that awards a degree. Neither example requires a degree to enter — Berlin requires a school-leaving qualification for the gehobener Dienst and awards the Bachelor of Arts on completion.',
+          claim: 'fact',
+          sources: ['de-berlin-polizei-studium'],
+        },
+        {
+          kind: 'callout',
+          variant: 'safety',
+          title: 'What this page will not tell you',
+          text: 'It states no age, nationality, medical or fitness requirement for any Land, because none was researched. It cannot tell any individual whether they are eligible anywhere in Germany.',
+        },
+        {
+          kind: 'callout',
+          variant: 'note',
+          title: 'Where the current requirements live',
+          text: 'With the police of the individual Land, or with the Bundespolizei, each of which publishes its own recruitment material. There is no single national source to point to, and that is the substance of this page.',
+        },
+      ],
+      uncertainty: [
+        'Fourteen of the sixteen Länder were NOT RESEARCHED, and neither was the Bundespolizei. Nothing here describes them.',
+        'Age, nationality, residency, medical, fitness and vetting requirements were NOT RESEARCHED for any Land, including Berlin and Bavaria.',
+        'The Bavarian source does not state a required school qualification, so none is stated here.',
+        'Whether the Länder coordinate any minimum standard between them was NOT ESTABLISHED.',
+      ],
+    },
+    {
       moduleId: 'history',
       title: 'Institutional history of Germany',
       summary: 'Not yet researched.',
