@@ -464,7 +464,29 @@ describe('every equipment claim is traceable to an institutional source', () => 
 const PROCEDURAL_DEPTH =
   /\b(?:filing|file a motion|motions?|notice of appeal|appeal deadline|limitation period|procedural deadline|evidentiary objection|warrant application|grounds of appeal|pleadings?|service of process)\b/i;
 
+/*
+ * Carried forward from Waves 25 and 25.5. W26M10 inserted a step-sequenced appeal procedure into an
+ * equipment page and survived THIS suite, because only the proportional depth check had been
+ * carried over and one sentence sits inside its allowance.
+ *
+ * The corpus-wide guard in the Wave 25 suite does catch it — verified by re-running that suite
+ * against the same mutation — so the content was never unprotected in a full run. What was missing
+ * is self-containment: a wave's own suite should fail on a wave's own regression, because mutation
+ * proofs run per-suite and a guard that lives only in a sibling file is easy to lose in a later
+ * refactor.
+ */
+const PROCEDURAL_HOWTO =
+  /\b(?:step \d|first(?:ly)?|then|next|finally|begin by|start by)\b[^.]{0,80}\b(?:file (?:a|an|the|your) (?:notice|motion|claim|appeal|application|complaint|petition)|submit (?:a|an|the|your) (?:notice|motion|claim|appeal|application|form)|lodge (?:a|an|the|your)|apply for (?:a|an|the) (?:warrant|review|order)|appeal against|object to|serve (?:the |a )?(?:notice|pleadings?|papers|process|summons|claim))\b/i;
+
 describe('the equipment layer does not drift into procedural law', () => {
+  it('carries no step-sequenced procedural instruction', () => {
+    expect(SAFETY_UNITS.filter((u) => PROCEDURAL_HOWTO.test(u))).toEqual([]);
+  });
+
+  it('no published page anywhere in the corpus carries one either', () => {
+    expect(CORPUS_SAFETY_UNITS.filter((u) => PROCEDURAL_HOWTO.test(u))).toEqual([]);
+  });
+
   it.each(WAVE_26)('%s is not substantially about legal procedure', (slug) => {
     const units = sentences(prose(guide(slug)));
     const hits = units.filter((u) => PROCEDURAL_DEPTH.test(u));
