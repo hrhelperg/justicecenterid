@@ -450,6 +450,53 @@ describe('recruitment facts are scoped to a system and a date', () => {
     }
   });
 
+  /*
+   * Mutation W24M8 changed a country example's countrySlug from netherlands to france while
+   * leaving the Dutch note and the Dutch sources in place, and every test passed. The publication
+   * gate checks only that the example points at a PUBLISHED dossier, and France is published — so
+   * the record claimed a French example supported entirely by Dutch sources.
+   *
+   * The missing rule is the one the platform already applies to guides: a country claim needs a
+   * source scoped to that country. Asserted here for the records this wave touches.
+   */
+  it('every country example is supported by a source scoped to that country', () => {
+    const ISO: Record<string, string> = {
+      netherlands: 'NL',
+      ireland: 'IE',
+      germany: 'DE',
+      'united-states': 'US',
+      france: 'FR',
+      japan: 'JP',
+      brazil: 'BR',
+      canada: 'CA',
+      australia: 'AU',
+      spain: 'ES',
+      poland: 'PL',
+      czechia: 'CZ',
+      'new-zealand': 'NZ',
+      'south-africa': 'ZA',
+    };
+    const problems: string[] = [];
+    for (const p of [profession('emergency-dispatcher')]) {
+      for (const example of p.countryExamples ?? []) {
+        const iso = ISO[example.countrySlug];
+        if (!iso) {
+          problems.push(`${p.slug}: unmapped country ${example.countrySlug}`);
+          continue;
+        }
+        const scoped = p.sources
+          .map((id) => getSource(id))
+          .filter((src) => src?.jurisdiction === iso);
+        if (scoped.length === 0) {
+          problems.push(
+            `${p.slug}: country example "${example.countrySlug}" cites no source scoped to ${iso}`,
+          );
+        }
+      }
+    }
+    expect(problems).toEqual([]);
+  });
+
   it('every Wave 24 source is content-confirmed and carries a jurisdiction', () => {
     for (const id of WAVE_24_SOURCES) {
       const s = getSource(id);
@@ -773,8 +820,14 @@ describe('the public corpus carries nothing commercial', () => {
 const PROCEDURAL_DEPTH =
   /\b(?:filing|file a motion|motions?|notice of appeal|appeal deadline|limitation period|procedural deadline|evidentiary objection|objection to evidence|warrant application|apply for a warrant|grounds of appeal|pleadings?|service of process|interlocutory)\b/i;
 
+/*
+ * Mutation W24M6 defeated the first form of this pattern by omitting one comma. It required
+ * "first," and the injected text read "To appeal, first file a notice of appeal" — so a filing
+ * manual dropped into a career page passed every test. The sequencing word is the signal; the
+ * punctuation after it is not.
+ */
 const PROCEDURAL_HOWTO =
-  /\b(?:step \d|first(?:ly)?,|then,|next,|finally,)[^.]{0,80}\b(?:file|submit|lodge|serve|apply for|appeal|object)\b/i;
+  /\b(?:step \d|first(?:ly)?|then|next|finally|begin by|start by)\b[^.]{0,80}\b(?:file|submit|lodge|serve|apply for|appeal against|object to)\b/i;
 
 describe('the procedural-depth guard keeps career pages inside the product', () => {
   it.each(WAVE_24_GUIDES)('%s is not substantially about legal procedure', (slug) => {
@@ -785,6 +838,16 @@ describe('the procedural-depth guard keeps career pages inside the product', () 
       share,
       `${slug} is ${(share * 100).toFixed(1)}% procedural: ${hits.slice(0, 3).join(' | ')}`,
     ).toBeLessThan(0.08);
+    /*
+     * Proportion alone was not enough. W24M6 added three procedural paragraphs to a long page and
+     * stayed under the share threshold while reading as a filing guide. A career page should carry
+     * almost no procedural-depth sentences at all, so the absolute count is the tighter constraint
+     * on a long page and the proportion is the tighter one on a short page. Both apply.
+     */
+    expect(
+      hits.length,
+      `${slug} carries ${hits.length} procedural sentences: ${hits.join(' | ')}`,
+    ).toBeLessThanOrEqual(2);
   });
 
   it.each(WAVE_24_GUIDES)('%s contains no step-sequenced procedural instruction', (slug) => {
