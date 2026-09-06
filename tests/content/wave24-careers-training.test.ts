@@ -992,6 +992,56 @@ describe('the civil-protection coordination function still has no invented entit
 /* Career fields are populated and structural                                 */
 /* -------------------------------------------------------------------------- */
 
+/* -------------------------------------------------------------------------- */
+/* Reference records render their cross-references as links, not as syntax    */
+/* -------------------------------------------------------------------------- */
+
+describe('markdown in reference records resolves to a link', () => {
+  /*
+   * A defect this wave introduced and its own e2e caught. Reference records had never contained a
+   * markdown link, so `Bullets` rendered items as raw text; Wave 24's career fields cross-reference
+   * the educational guides, and the first build shipped 93 literal `[text](/path)` strings as
+   * visible syntax across eight profession pages. `InlineText` in ReferencePage now resolves them.
+   *
+   * This test guards the content half: every link target must exist, and must be internal, so the
+   * renderer never has to decide what to do with a broken or external one.
+   */
+  const LINK = /\[([^\]]+)\]\(([^)]+)\)/g;
+
+  it.each(PROFESSIONS.map((p) => p.slug))('%s links only to real internal routes', (slug) => {
+    const p = profession(slug);
+    const fields = [
+      ...(p.workingEnvironment ?? []),
+      ...(p.skills ?? []),
+      ...(p.careerProgressionShape ?? []),
+      ...(p.adjacentCareers ?? []),
+    ];
+    const problems: string[] = [];
+    for (const text of fields) {
+      for (const match of text.matchAll(LINK)) {
+        const href = match[2] ?? '';
+        if (!href.startsWith('/')) {
+          problems.push(`${slug}: external or malformed target "${href}"`);
+          continue;
+        }
+        if (!PUBLIC_ROUTE_PATHS.includes(href)) {
+          problems.push(`${slug}: link to unregistered route "${href}"`);
+        }
+      }
+    }
+    expect(problems).toEqual([]);
+  });
+
+  it('the career fields actually carry cross-references worth rendering', () => {
+    const linked = PROFESSIONS.filter((p) =>
+      [...(p.adjacentCareers ?? []), ...(p.careerProgressionShape ?? [])].some((t) =>
+        /\]\(\//.test(t),
+      ),
+    );
+    expect(linked.length, 'no profession cross-references the career layer').toBeGreaterThan(4);
+  });
+});
+
 describe('the profession records carry career orientation', () => {
   it.each(ROUTED_PROFESSIONS.map((p) => p.slug))(
     '%s describes what the work is like',

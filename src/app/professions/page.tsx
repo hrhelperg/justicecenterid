@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { ContentPage } from '@/components/pages/ContentPage';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { ROUTED_PROFESSIONS, professionPath } from '@/content/professions';
+import { SECTIONS } from '@/content/sections';
 import { buildMetadata } from '@/lib/metadata';
 
 const PATH = '/professions';
@@ -14,6 +15,16 @@ export const metadata: Metadata = buildMetadata({
   description: DESCRIPTION,
   path: PATH,
 });
+
+/**
+ * Roles grouped by the part of the system they work in, in the corpus's own section order so the
+ * hub and the navigation agree. Computed at module scope because it is derived from static
+ * content and never changes at runtime.
+ */
+const GROUPED = SECTIONS.map((section) => ({
+  section,
+  roles: ROUTED_PROFESSIONS.filter((p) => p.section === section.id),
+})).filter((group) => group.roles.length > 0);
 
 /**
  * An index, for the same reason as the institutions hub: the detail now lives on the
@@ -48,20 +59,44 @@ export default function ProfessionsPage() {
         </p>
       </div>
 
+      {/*
+       * WAVE 24. Grouped by the part of the system the role works in, rather than listed flat.
+       *
+       * A flat list of eight roles reads as eight unrelated jobs. Grouped, it shows the shape of
+       * the field — that a case passes through investigation, prosecution, courts, defence and
+       * corrections, and that each stage employs different professions. That is the first thing
+       * someone exploring these careers needs to see, and it is information the corpus already
+       * held without ever showing it.
+       *
+       * Each role also shows the reader's own question, which is what a person scanning for a
+       * career actually reads. Still a static server component: no client JS, no new dependency.
+       */}
       <div className="mt-12">
         <SectionHeading id="roles">Roles</SectionHeading>
-        <dl className="max-w-measure space-y-6">
-          {ROUTED_PROFESSIONS.map((profession) => (
-            <div key={profession.slug}>
-              <dt className="text-lg font-semibold">
-                <Link href={professionPath(profession)} className="link-inline">
-                  {profession.title}
-                </Link>
-              </dt>
-              <dd className="mt-1 text-ink-muted">{profession.summary}</dd>
-            </div>
-          ))}
-        </dl>
+        {GROUPED.map(({ section, roles }) => (
+          <section key={section.id} className="mt-8 first:mt-4">
+            <h3 className="text-sm font-semibold uppercase tracking-wide text-ink-muted">
+              {section.shortTitle}
+            </h3>
+            <dl className="mt-3 max-w-measure space-y-5">
+              {roles.map((profession) => (
+                <div key={profession.slug}>
+                  <dt className="text-lg font-semibold">
+                    <Link href={professionPath(profession)} className="link-inline">
+                      {profession.title}
+                    </Link>
+                  </dt>
+                  {profession.question ? (
+                    <dd className="mt-1 text-sm text-ink-muted italic">
+                      {profession.question}
+                    </dd>
+                  ) : null}
+                  <dd className="mt-1 text-ink-muted">{profession.summary}</dd>
+                </div>
+              ))}
+            </dl>
+          </section>
+        ))}
       </div>
     </ContentPage>
   );
