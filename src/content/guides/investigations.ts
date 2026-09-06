@@ -2057,7 +2057,7 @@ export const INVESTIGATIONS_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [who authorises a digital investigative measure](/investigations/who-authorises-a-digital-investigative-measure), [device seizure and device examination](/investigations/device-seizure-and-device-examination), and [what privacy protects in law](/investigations/what-privacy-protects-in-law). Where the data is held in another country, domestic authority is not enough on its own: see [jurisdiction over foreign-held data](/investigations/jurisdiction-over-foreign-held-data).',
+        text: 'Related: [who authorises a digital investigative measure](/investigations/who-authorises-a-digital-investigative-measure), [device seizure and device examination](/investigations/device-seizure-and-device-examination), and [what privacy protects in law](/investigations/what-privacy-protects-in-law). Where the data is held in another country, domestic authority is not enough on its own: see [jurisdiction over foreign-held data](/investigations/jurisdiction-over-foreign-held-data). For the specialist roles that carry this work as a career, see [specialist roles in policing](/law-enforcement/specialist-roles-in-policing).',
       },
     ],
   },

@@ -4717,6 +4717,131 @@ export const SOURCES: readonly SourceRecord[] = [
     authoritativeLanguage: 'en',
     note: "The Committee's own text, read directly from the UN Digital Library. ATTRIBUTION DISCIPLINE, which matters here more than usual: this is the treaty body's INTERPRETATION of Article 4, not the Covenant's text, and every claim resting on it is attributed to the Committee rather than stated as the Covenant's own words. Supports Human Rights Committee, General Comment No. 29 (CCPR/C/21/Rev.1/Add.11), para. 2: “Before a State moves to invoke article 4, two fundamental conditions must be met: the situation must amount to a public emergency which threatens the life of the nation, and the State party must have officially proclaimed a state of emergency. The latter requirement is essential for the maintenance of the principles of legality and rule of law at times when they are most needed. When proclaiming a state of emergency with consequences that could entail derogation from any provision of the Covenant, States must act within their constitutional and other provisions of law that govern such proclamation and the exercise of emergency powers”. Supports General Comment No. 29 (CCPR/C/21/Rev.1/Add.11), paras. 2 and 4: “Measures derogating from the provisions of the Covenant must be of an exceptional and temporary nature. [..] A fundamental requirement for any measures derogating from the Covenant, as set forth in article 4, paragraph 1, is that such measures are limited to the extent strictly required by the exigencies of the situation. This requirement relates to the duration, geographical coverage and material scope of the state of emergency and any measures of derogation resorted to because of the emergency.”. Supports General Comment No. 29 (CCPR/C/21/Rev.1/Add.11), para. 16; ICCPR Arts. 28 and 40: “The Committee is of the opinion that the principles of legality and the rule of law require that fundamental requirements of fair trial must be respected during a state of emergency. Only a court of law may try and convict a person for a criminal offence. The presumption of innocence must be respected. In order to protect non-derogable rights, the right to take proceedings before a court to enable the court to decide without delay on the lawfulness of detention, must not be diminished by a State party's decision to derogate from the Covenant.”. Supports General Comment No. 29 (CCPR/C/21/Rev.1/Add.11), para. 11: “States parties may in no circumstances invoke article 4 of the Covenant as justification for acting in violation of humanitarian law or peremptory norms of international law, for instance by taking hostages, by imposing collective punishments, through arbitrary deprivations of liberty or by deviating from fundamental principles of fair trial, including the presumption of innocence.”. Supports General Comment No. 29 (CCPR/C/21/Rev.1/Add.11), para. 17, construing ICCPR Art. 4(3): “Additional notifications are required if the State party subsequently takes further measures under article 4, for instance by extending the duration of a state of emergency.”. A general comment is the Committee's authoritative interpretation and is not itself a treaty provision. It is cited as the Committee's reading, never as the Covenant's text, and it is NOT evidence of any particular state's domestic law. It records no state's derogation, assesses no state's compliance on this platform, and supports no claim about any country's constitutional arrangements.",
   },
+  /*
+   * WAVE 24 — careers, training and professional pathways.
+   *
+   * All eight are Tier 1 under the wave's source standard: official police recruitment services,
+   * official police academies, and a national statistical agency. Every one was content-confirmed.
+   *
+   * Three authoritative hosts refused automated access and are recorded on the records they would
+   * have supported rather than worked around: college.police.uk (HTTP 403 on four URL forms),
+   * post.ca.gov (connection refused) and police-nationale.interieur.gouv.fr (HTTP 403). France is
+   * described nowhere in this wave as a result, and no California-specific claim appears.
+   *
+   * None of these sources is used for pay. Recruitment material states pay, and this wave
+   * deliberately publishes none of it — `compensation` is a restricted claim category.
+   */
+  {
+    id: 'ew-joining-police-entry-routes',
+    type: 'government',
+    title: 'Join the Police — entry routes into policing (England and Wales)',
+    publisher: 'Join the Police (national police recruitment service, England and Wales)',
+    url: 'https://www.joiningthepolice.co.uk/application-process/ways-in-to-policing/apprenticeship-pcda-entry-route',
+    accessedOn: '2026-09-06',
+    verifiedOn: '2026-09-06',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'GB',
+    note: 'Supports the Police Constable Degree Apprenticeship route name, its three-year duration, the Level 3 entry qualification, the Level 6 Degree in Professional Policing Practice as the OUTPUT of training, employment from the first day, and the statement "You don\u2019t need a degree to join the police." Establishes nothing about Scotland or Northern Ireland, which have separate services. The College of Policing is the authoritative body for these routes and returned HTTP 403 to four separate URL forms, so the PCEP start date is recorded as partially established rather than quoted.',
+  },
+  {
+    id: 'ie-garda-trainee-booklet-2024',
+    type: 'government',
+    title: 'Candidate Information Booklet — Garda Trainee 2024',
+    publisher: 'An Garda Síochána and the Public Appointments Service (Ireland)',
+    url: 'https://www.garda.ie/en/careers/garda-trainee-recruitment-2024-it-s-a-job-worth-doing-campaign/information-booklet-garda-trainee-2024.pdf',
+    publishedOn: '2024',
+    accessedOn: '2026-09-06',
+    verifiedOn: '2026-09-06',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'IE',
+    note: 'Supports the Foundation Training Programme phase structure, Phase I Stages 1-3 at 36 weeks, the Garda College at Templemore, attestation after 36 weeks, and the eligibility criteria. Tied to the 2024 competition and NOT a standing statement of Irish law. The booklet states a weekly allowance and a pay scale point; both are deliberately unused.',
+  },
+  {
+    id: 'ie-garda-educational-requirements',
+    type: 'government',
+    title: 'Careers FAQ — What are the educational requirements?',
+    publisher: 'An Garda Síochána (Ireland)',
+    url: 'https://www.garda.ie/en/careers/career-faqs/what-are-the-educational-requirements-.html',
+    accessedOn: '2026-09-06',
+    verifiedOn: '2026-09-06',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'IE',
+    note: 'Supports the three alternative educational routes — Leaving Certificate at grade D3 or O6 in five subjects at Ordinary Level, a Level 5 Major award of 120 credits on the National Framework of Qualifications, or a recognised comparable qualification at Level 5 or greater — and the Irish or English language requirement. Supports the absence of any degree requirement.',
+  },
+  {
+    id: 'de-berlin-polizei-ausbildung',
+    type: 'government',
+    title: 'Ausbildung — Polizistin/Polizist werden (mittlerer Dienst)',
+    publisher: 'Polizei Berlin (Germany)',
+    url: 'https://110prozent.berlin.de/einstiegsmoeglichkeiten/ausbildung-polizist-in/',
+    accessedOn: '2026-09-06',
+    verifiedOn: '2026-09-06',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'DE',
+    note: 'Supports the mittlerer Dienst track for Berlin: a Vorbereitungsdienst of "2 ½ Jahre", entry on erweiterte Berufsbildungsreife or on Berufsbildungsreife plus a completed two-year vocational training and two years of work, and appointment as Polizeimeisterin or Polizeimeister in a Beamtenverhältnis auf Probe. Establishes nothing about the other fifteen Länder or the Bundespolizei, each of which recruits separately.',
+  },
+  {
+    id: 'de-berlin-polizei-studium',
+    type: 'government',
+    title: 'Studium — Polizistin/Polizist werden (gehobener Dienst)',
+    publisher: 'Polizei Berlin (Germany)',
+    url: 'https://110prozent.berlin.de/einstiegsmoeglichkeiten/studium-polizist-in/',
+    accessedOn: '2026-09-06',
+    verifiedOn: '2026-09-06',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'DE',
+    note: 'Supports the gehobener Dienst track for Berlin: "Das Studium dauert 3 Jahre und ist in 15 abgeschlossene Module gegliedert", the award "Mit erfolgreichem Abschluss wird dir der Grad \u201eBachelor of Arts (B. A.)\u201c verliehen", and the entry requirement of "mindestens die Fachhochschulreife bzw. das Abitur". Berlin only.',
+  },
+  {
+    id: 'nl-politieacademie-basisopleidingen',
+    type: 'government',
+    title: 'Basispolitieopleidingen',
+    publisher: 'Politieacademie (Netherlands)',
+    url: 'https://www.politieacademie.nl/opleidingen/ik-wil-bij-de-politie/basispolitieopleidingen',
+    accessedOn: '2026-09-06',
+    verifiedOn: '2026-09-06',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'NL',
+    note: 'Supports the basispolitieopleiding at "niveau 4" lasting "twee jaar", taught at a Politieacademie location with practical lessons in the region of posting. Does not establish the prior qualification required for entry to any route.',
+  },
+  {
+    id: 'nl-politie-opleidingsoverzicht',
+    type: 'government',
+    title: 'Overzicht politieopleidingen',
+    publisher: 'Nationale Politie (Netherlands)',
+    url: 'https://kombijde.politie.nl/agent-worden/overzicht-opleidingen/intro',
+    accessedOn: '2026-09-06',
+    verifiedOn: '2026-09-06',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'NL',
+    note: 'Supports the five named entry programmes and their durations: politieopleiding mbo 4-niveau (2 jaar), bachelor Rechercheur (3 jaar), bachelor Politiekunde Politieagent (3 jaar), bachelor Politiekunde Wijkagent (3 jaar) and bachelor Politieleider (3 jaar). This is the source for the finding that investigative work is an entry route in the Netherlands rather than only a later assignment.',
+  },
+  {
+    id: 'us-bjs-training-academies-2022',
+    type: 'government',
+    title:
+      "State and Local Law Enforcement Training Academies' Training Topics and Instructors, 2022 — Statistical Tables (NCJ 310041)",
+    publisher: 'Bureau of Justice Statistics, U.S. Department of Justice',
+    url: 'https://bjs.ojp.gov/document/slletatti22st.pdf',
+    publishedOn: '2025-06',
+    accessedOn: '2026-09-06',
+    verifiedOn: '2026-09-06',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'US',
+    note: 'Census of Law Enforcement Training Academies, 2022. Supports the 806-hour average for core basic training, the academy-type range (681 hours state POST/equivalent, 734 sheriff\u2019s office, 969 state police/highway patrol, 759 two-year colleges), the 89.2% mandatory field training figure with a 503-hour average, and the subject-hour table. Covers state and local academies in the United States in 2022 only; establishes nothing about federal agencies or any other country. Read as a PDF after the summariser could not decode it.',
+  },
+  {
+    id: 'nl-politie-meldkamer',
+    type: 'government',
+    title: 'Werken op de meldkamer — operationeel centrum',
+    publisher: 'Nationale Politie (Netherlands)',
+    url: 'https://kombijde.politie.nl/vakgebieden/operationeel-centrum/intro',
+    accessedOn: '2026-09-06',
+    verifiedOn: '2026-09-06',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'NL',
+    note: 'Supports the official role name "centralist meldkamer" and the regional task as the page states it: "je neemt de spoedeisende meldingen (112) aan en stuurt de eenheden op straat aan". The page does NOT state whether the role is held by civilian staff or sworn officers, so no classification is asserted from it.',
+  },
 ];
 
 const SOURCE_INDEX = new Map(SOURCES.map((source) => [source.id, source]));

@@ -177,7 +177,7 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [the difference between police and law enforcement](/law-enforcement/police-and-law-enforcement-difference), [how policing institutions changed](/law-enforcement/how-policing-institutions-changed), and [why justice systems need oversight](/justice/why-justice-systems-need-oversight). For a procedure that had courts and no enforcement apparatus at all, see [Roman procedure without a police force](/history/roman-procedure-without-a-police-force).',
+        text: 'Related: [the difference between police and law enforcement](/law-enforcement/police-and-law-enforcement-difference), [how policing institutions changed](/law-enforcement/how-policing-institutions-changed), and [why justice systems need oversight](/justice/why-justice-systems-need-oversight). For a procedure that had courts and no enforcement apparatus at all, see [Roman procedure without a police force](/history/roman-procedure-without-a-police-force). For what the people who do this work actually do all day, see [working life in policing](/law-enforcement/working-life-in-policing).',
       },
     ],
   },
@@ -340,7 +340,7 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [why societies need law enforcement](/law-enforcement/why-societies-need-law-enforcement), [how policing institutions changed](/law-enforcement/how-policing-institutions-changed), and the [institution types reference](/institutions). The word itself has a history: see [when “policeman” meant something else](/history/when-policeman-meant-something-else).',
+        text: 'Related: [why societies need law enforcement](/law-enforcement/why-societies-need-law-enforcement), [how policing institutions changed](/law-enforcement/how-policing-institutions-changed), and the [institution types reference](/institutions). The word itself has a history: see [when “policeman” meant something else](/history/when-policeman-meant-something-else). A police organisation is also not composed only of people with police powers: see [civilian roles in police organisations](/law-enforcement/civilian-roles-in-police-organisations).',
       },
     ],
   },
@@ -518,7 +518,7 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [the difference between police and law enforcement](/law-enforcement/police-and-law-enforcement-difference), the [historical timeline](/timeline), and [the history section](/history). On the most repeated claim in this history, see [who wrote the principles of policing](/history/who-wrote-the-principles-of-policing).',
+        text: 'Related: [the difference between police and law enforcement](/law-enforcement/police-and-law-enforcement-difference), the [historical timeline](/timeline), [what a police academy is](/law-enforcement/what-a-police-academy-is) and [police training and police education](/law-enforcement/police-training-and-police-education) for how initial preparation is organised today, and [the history section](/history). On the most repeated claim in this history, see [who wrote the principles of policing](/history/who-wrote-the-principles-of-policing).',
       },
     ],
   },
@@ -725,7 +725,7 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [why police accountability matters](/law-enforcement/why-police-accountability-matters), [arrest and detention](/law-enforcement/arrest-and-detention), and [why societies need law enforcement](/law-enforcement/why-societies-need-law-enforcement). The necessity and proportionality on this page measure an action against its objective; the constitutional doctrine that measures a rule against a right is [what proportionality requires](/justice/what-proportionality-requires).',
+        text: 'Related: [why police accountability matters](/law-enforcement/why-police-accountability-matters), [arrest and detention](/law-enforcement/arrest-and-detention), and [why societies need law enforcement](/law-enforcement/why-societies-need-law-enforcement). The necessity and proportionality on this page measure an action against its objective; the constitutional doctrine that measures a rule against a right is [what proportionality requires](/justice/what-proportionality-requires). How much training time is measurably spent on this, and on the law that limits it, is [what police recruits are taught](/law-enforcement/what-police-recruits-are-taught).',
       },
     ],
   },
@@ -1076,7 +1076,7 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [how police are held to account](/law-enforcement/how-police-are-held-to-account), [why justice systems need oversight](/justice/why-justice-systems-need-oversight), and [police use of force](/law-enforcement/police-use-of-force).',
+        text: 'Related: [how police are held to account](/law-enforcement/how-police-are-held-to-account), [why justice systems need oversight](/justice/why-justice-systems-need-oversight), and [police use of force](/law-enforcement/police-use-of-force). What the standards ask of an individual officer, as distinct from what the machinery does afterwards, is [professional standards in policing work](/law-enforcement/professional-standards-in-policing-work).',
       },
     ],
   },
@@ -1300,7 +1300,7 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [why police accountability matters](/law-enforcement/why-police-accountability-matters), [who investigates the police](/law-enforcement/who-investigates-police), and [independent police complaints bodies](/institutions/independent-police-complaints-body).',
+        text: 'Related: [why police accountability matters](/law-enforcement/why-police-accountability-matters), [who investigates the police](/law-enforcement/who-investigates-police), and [independent police complaints bodies](/institutions/independent-police-complaints-body). Because most operational decisions are taken without a supervisor present, the standards that apply unobserved matter as much as the machinery: see [professional standards in policing work](/law-enforcement/professional-standards-in-policing-work).',
       },
     ],
   },
@@ -3151,6 +3151,2221 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
       {
         kind: 'paragraph',
         text: 'Related: [how police are held to account](/law-enforcement/how-police-are-held-to-account), [independent police complaints bodies](/institutions/independent-police-complaints-body), and [ombuds and rights institutions](/institutions/ombuds-and-rights-institution).',
+      },
+    ],
+  },
+  /*
+   * ==========================================================================
+   * WAVE 24 — law enforcement careers, training and professional pathways.
+   * ==========================================================================
+   *
+   * A different kind of wave from 21-23. Those built legal and institutional depth; this builds
+   * outward, into the layer the baseline found empty: `police academy`, `recruitment`, `career
+   * progression`, `physical fitness`, `shift work` and `report writing` each occurred ZERO times
+   * across 148 guides and every reference record.
+   *
+   * OWNERSHIP. `/professions/[slug]` owns one role — what it is, what it is like, where it leads.
+   * These pages own the questions that are NOT about one role: academies, training models, the
+   * degree question, ranks against roles, skills, working life, civilian careers. The decision and
+   * its alternatives are recorded in docs/research/careers-training-research-plan.md.
+   *
+   * THE SAFETY BOUNDARY IS THE POINT, NOT A CONSTRAINT ON IT. These pages say WHAT is trained and
+   * WHY it is trained. They never say HOW anything is done. "Recruits are instructed in defensive
+   * tactics for an average of 64 hours" is a fact about a curriculum from a government census;
+   * describing a technique would be instruction, and no page here does it.
+   *
+   * PRODUCT SCOPE. Wave 24 does not deepen procedural law. Where research met procedural material
+   * it was used only as the minimum context needed to explain a role. A procedural-depth guard in
+   * tests/content/wave24-careers-training.test.ts enforces that mechanically.
+   *
+   * EVIDENCE. Five systems, content-confirmed to Tier 1 sources: England & Wales, Ireland, Germany
+   * (Berlin), the Netherlands, and the United States. France was attempted and returned HTTP 403
+   * on every path and is described NOWHERE in this wave. Ten other systems were not researched.
+   *
+   * NO PAY. Recruitment material states pay; this wave publishes none of it. `compensation` is a
+   * restricted claim category, and Part AA of the brief defers salary to a dedicated layer.
+   */
+  {
+    slug: 'what-a-police-academy-is',
+    title: 'What a police academy is',
+    shortTitle: 'Police academies',
+    question: 'What is a police academy, and does every country have one?',
+    summary:
+      'A police academy is an institution that delivers initial police training — but the five systems researched here organise that training in five different ways, and one of them awards a university degree for it.',
+    entityType: 'concept',
+    section: 'law-enforcement',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'police-training-and-police-education',
+      'what-police-recruits-are-taught',
+      'do-police-officers-need-a-degree',
+      'how-policing-careers-develop',
+    ],
+    sources: [
+      'us-bjs-training-academies-2022',
+      'ie-garda-trainee-booklet-2024',
+      'nl-politieacademie-basisopleidingen',
+      'nl-politie-opleidingsoverzicht',
+      'de-berlin-polizei-studium',
+      'ew-joining-police-entry-routes',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-06',
+    publishedOn: '2026-09-06',
+    reviewedOn: '2026-09-06',
+    factsVerifiedOn: '2026-09-06',
+    readingTimeMinutes: 9,
+    uncertainty: [
+      'Five systems were researched: England and Wales, Ireland, Germany (Berlin only), the Netherlands and the United States. France was attempted and every official path returned HTTP 403, so France is not described here.',
+      'The German material is for Berlin only. Each of the sixteen Länder recruits separately, as does the Bundespolizei, and nothing here establishes what any other Land does.',
+      'Nothing here states any country’s entry requirements beyond what the quoted official pages say, and no page in this wave states pay.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'A police academy is an institution that delivers initial training to people entering a police service. That much is common. Almost nothing else is: whether the academy is run by the police or by a college, whether it is national or regional, how long training lasts, and whether it awards an academic qualification all differ, and they differ between neighbouring countries as much as between distant ones.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This describes how initial police training is organised in five researched systems. It is educational orientation, not recruitment advice, and it is not legal advice. It describes no technique and no operational method. Anyone considering applying should consult the official recruitment service for the country and force concerned, because requirements change and are set by the employer.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'The reason a police service trains people in an institution rather than only on the job is that the role carries legal powers from the first day it is exercised. A new officer may be the only person present when a decision has to be taken against a legal threshold, and there is no way to acquire that judgement by observation alone.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Which is also why the models differ so much',
+        text: 'Every system is solving the same problem — how do you prepare a person to exercise legal authority responsibly — and the answers reflect what each system thinks the job mainly is. A system that treats policing as a graduate profession builds a degree. A system that treats it as a public-service craft builds an apprenticeship. Both are answers to the same question.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'In the United States there is no single academy and no national programme. The Bureau of Justice Statistics 2022 census of training academies found academies operated both by law enforcement agencies and by colleges and technical schools, and recorded an average of **806 hours** of core basic training across all of them.',
+        claim: 'fact',
+        sources: ['us-bjs-training-academies-2022'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'And the average conceals the finding',
+        text: 'The same census records 681 hours at state POST or equivalent academies, 734 at sheriff’s office academies, 759 at academies run by two-year colleges, and 969 at state police and highway patrol academies. The longest is roughly 40% longer than the shortest — inside one country. "How long is police training in the United States" has no single answer, and the average is the least informative way to state it.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Ireland runs one national programme at one place. The Garda Trainee 2024 information booklet describes a Foundation Training Programme whose Phase I, Stages 1 to 3 runs "for a period of 36 weeks (or such period of time as the Garda Commissioner may determine)", with Stage 1 residential at the Garda College in Templemore, Stage 2 an observational placement in an operational Garda station, and Stage 3 residential again. Trainees "attest after 36 weeks".',
+        claim: 'fact',
+        sources: ['ie-garda-trainee-booklet-2024'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'The Netherlands runs a national Politieacademie and offers several distinct programmes rather than one. The basispolitieopleiding is at "niveau 4" and lasts "twee jaar", taught at a Politieacademie location with practical lessons in the region where the student is posted. Alongside it sit four three-year hbo bachelor programmes — Politiekunde Politieagent, Politiekunde Wijkagent, Rechercheur and Politieleider.',
+        claim: 'fact',
+        sources: ['nl-politieacademie-basisopleidingen', 'nl-politie-opleidingsoverzicht'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Berlin has two separate tracks entered at different education levels. The mittlerer Dienst runs a Vorbereitungsdienst of "2 ½ Jahre". The gehobener Dienst is a course of study: "Das Studium dauert 3 Jahre und ist in 15 abgeschlossene Module gegliedert", and on completion "wird dir der Grad „Bachelor of Arts (B. A.)“ verliehen".',
+        claim: 'fact',
+        sources: ['de-berlin-polizei-studium'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'England and Wales has neither one academy nor one programme, but several parallel entry routes into the same job. The Police Constable Degree Apprenticeship "normally takes three years to complete, with the option to specialise in your third year", and an apprentice is "a police officer from your first day on the job".',
+        claim: 'fact',
+        sources: ['ew-joining-police-entry-routes'],
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'The word "academy" does not travel well',
+            description:
+              'Of the five systems here, only the United States material uses "academy" as the ordinary term. Ireland has a College, the Netherlands has an Academie that awards bachelor degrees, Berlin has a Studium, and England and Wales has apprenticeships and entry programmes delivered with higher education providers. Asking "what is the police academy like in country X" presupposes a structure that four of the five do not have.',
+          },
+          {
+            term: 'Training in an institution is usually not the whole of training',
+            description:
+              'Ireland alternates residential stages with a placement in an operational station. The Netherlands splits between academy and the region of posting. In the United States, the 2022 census found 89.2% of academies reported mandatory field training after basic training for some or all recruits, averaging 503 hours. Classroom time is one component of a longer structure in every system researched.',
+          },
+          {
+            term: 'Who runs it changes what it is',
+            description:
+              'An academy operated by an employing agency, a national institution serving one service, and a programme delivered jointly with a university are three different institutional arrangements, and they answer to different people. The United States census counted academies in both of the first two categories; the Netherlands and Ireland are national institutions; England and Wales delivers with higher education providers.',
+          },
+        ],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Every country has a police academy.',
+        reality:
+          'Of the five systems researched, one uses academies as the ordinary structure, two run national institutions under other names, one runs a course of study awarding a Bachelor of Arts, and one runs parallel entry routes delivered with higher education providers.',
+      },
+      {
+        claim: 'Police training takes about the same time everywhere.',
+        reality:
+          'Among the researched systems the initial programmes ranged from a 36-week Phase I in Ireland to two-year and three-year programmes in the Netherlands and Berlin. Within the United States alone, the 2022 census recorded academy averages from 681 to 969 hours by academy type.',
+      },
+      {
+        claim: 'Police training happens in a classroom.',
+        reality:
+          'Every researched system combines instruction with supervised practice. Ireland places trainees in an operational station between residential stages, the Netherlands splits between the Politieacademie and the region of posting, and 89.2% of United States academies reported mandatory field training after basic training.',
+      },
+      {
+        claim: 'A police academy is run by the police.',
+        reality:
+          'The 2022 United States census counted academies operated by law enforcement entities and academies operated by colleges and technical schools. In England and Wales the programmes are delivered in collaboration with higher education providers.',
+      },
+      {
+        claim: 'You are not a police officer until training ends.',
+        reality:
+          'It depends on the system. In England and Wales an apprentice is "a police officer from your first day on the job". In Ireland a trainee attests after 36 weeks and then enters a probationary period.',
+      },
+      {
+        claim: 'Police training does not lead to a qualification.',
+        reality:
+          'In Berlin the gehobener Dienst awards a Bachelor of Arts. The Dutch routes include four hbo bachelor programmes. The Police Constable Degree Apprenticeship leads to a Level 6 degree in professional policing practice.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Five systems, five structures, as researched on 6 September 2026.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Decentralised academies with no national programme, run by agencies and by colleges — United States.',
+          'One national college running a phased programme that alternates residential training with an operational placement — Ireland.',
+          'A national academy offering an mbo-level route and four bachelor routes — Netherlands.',
+          'Two separate tracks entered at different education levels, one of them a three-year degree course — Berlin.',
+          'Parallel entry routes into the same rank, delivered with higher education providers, with the recruit employed from day one — England and Wales.',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'Scope of these statements',
+        text: 'Each describes the system named and no other. Nothing here establishes what France, Czechia, Poland, Spain, Canada, Australia, New Zealand, Japan, South Africa or Brazil do — none of those was researched for this wave.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'Training is where a police service decides what kind of officer it wants, and it is one of the few places the public can see that decision written down. A curriculum that devotes measured time to law, to communication and to community interaction is making a claim about the job that can be checked against what officers actually do.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'What is actually taught is [what police recruits are taught](/law-enforcement/what-police-recruits-are-taught). Whether the qualification is education or training is [police training and police education](/law-enforcement/police-training-and-police-education). Whether a degree is needed to start is [do police officers need a degree](/law-enforcement/do-police-officers-need-a-degree).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [what police recruits are taught](/law-enforcement/what-police-recruits-are-taught), [do police officers need a degree](/law-enforcement/do-police-officers-need-a-degree), and [the patrol officer role](/professions/patrol-officer).',
+      },
+    ],
+  },
+  {
+    slug: 'do-police-officers-need-a-degree',
+    title: 'Do police officers need a degree?',
+    shortTitle: 'Degrees and policing',
+    question: 'Do you need a university degree to become a police officer?',
+    summary:
+      'In none of the five systems researched is a university degree required to enter. Two of them award one for completing training, which is a different thing and is the source of most of the confusion.',
+    entityType: 'concept',
+    section: 'law-enforcement',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'what-a-police-academy-is',
+      'police-training-and-police-education',
+      'how-policing-careers-develop',
+      'skills-that-policing-relies-on',
+    ],
+    sources: [
+      'ew-joining-police-entry-routes',
+      'ie-garda-educational-requirements',
+      'de-berlin-polizei-ausbildung',
+      'de-berlin-polizei-studium',
+      'nl-politie-opleidingsoverzicht',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-06',
+    publishedOn: '2026-09-06',
+    reviewedOn: '2026-09-06',
+    factsVerifiedOn: '2026-09-06',
+    readingTimeMinutes: 8,
+    uncertainty: [
+      'Four systems were researched for entry qualifications: England and Wales, Ireland, Germany (Berlin only) and the Netherlands. In the United States requirements are set by each state’s standards body and each employing agency, and no single national requirement exists; no United States entry requirement is stated here.',
+      'Requirements change, and are set by the employer. Every statement here is as at 6 September 2026 and is not a substitute for the official recruitment service for the force concerned.',
+      'The Dutch prior qualification required for each route was NOT RESEARCHED — only the level and duration of the programmes themselves.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'This question is asked more often than almost any other about policing careers, and it has a clear answer in the systems researched here: no. What makes it confusing is that two of those systems award a degree for completing police training — so a degree is associated with policing, without being required to start.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This describes entry qualifications in four researched systems, as at 6 September 2026. It is educational orientation, not recruitment advice, and it cannot tell any individual whether they qualify — that depends on the employer, the jurisdiction and personal circumstances this platform does not assess. It is not legal advice.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'The belief that policing requires a criminal justice degree is worth addressing directly because acting on it costs money. Someone who believes it may spend three years and considerable expense on a qualification that was never a condition of entry to the job they wanted.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Which is exactly why this page names its sources',
+        text: 'A page about education is a page with a commercial shadow: education is something that can be sold. The defence against that is to state what official recruitment services actually say, cite them, and let the answer be whatever it is. Here the answer happens to be that the expensive route is not required.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'The official recruitment service for England and Wales states it in five words: **"You don’t need a degree to join the police."** The Police Constable Degree Apprenticeship requires "a Level 3 qualification (which is two A-levels or equivalent) in at least two subjects", or equivalent relevant experience or training assessed individually.',
+        claim: 'fact',
+        sources: ['ew-joining-police-entry-routes'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'And the degree in the name is the output',
+        text: 'The apprenticeship leads to a Level 6 Degree in Professional Policing Practice, funded by the force, with the apprentice employed as a police officer from the first day. The word "degree" appears in the route’s name because the route awards one — not because one is needed to enter it. That single ambiguity probably generates more of this misunderstanding than anything else.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Ireland sets a secondary-level requirement with two alternatives. An applicant must "have obtained an Irish Leaving Certificate with a grade D3 or O6 minimum in five subjects at Ordinary Level", or "hold a minimum of a Level 5 Major award (120 Credits) on the National Framework of Qualifications (NFQ)", or "hold a recognised qualification (at Level 5 or greater), deemed comparable to the above" — and be proficient in Irish or English.',
+        claim: 'fact',
+        sources: ['ie-garda-educational-requirements'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Berlin answers the question twice, because it has two tracks. For the mittlerer Dienst the minimum is the erweiterte Berufsbildungsreife, or the Berufsbildungsreife together with a completed two-year vocational training and two years of work. For the gehobener Dienst, a candidate needs "mindestens die Fachhochschulreife bzw. das Abitur" — a school-leaving qualification, not a degree — and the three-year Studium then awards the Bachelor of Arts.',
+        claim: 'fact',
+        sources: ['de-berlin-polizei-ausbildung', 'de-berlin-polizei-studium'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'The Netherlands offers entry at two education levels: a two-year mbo-4 route, and four three-year hbo bachelor programmes. The bachelor is the programme, not the prerequisite.',
+        claim: 'fact',
+        sources: ['nl-politie-opleidingsoverzicht'],
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'Entry qualification and training award are different facts',
+            description:
+              'In England and Wales, Berlin and the Netherlands a person can enter without a degree and hold one at the end. Reading the award as the requirement inverts the arrangement completely, and it is the specific error this page exists to correct.',
+          },
+          {
+            term: 'A degree route existing does not make a degree required',
+            description:
+              'England and Wales also has a Degree Holder Entry Programme for people whose first degree is in another subject, and a pre-join professional policing degree. Those are routes for people who have a degree, offered alongside routes for people who do not.',
+          },
+          {
+            term: 'Where a higher qualification does something, it opens a different track, not the only track',
+            description:
+              'Berlin’s Fachhochschulreife or Abitur requirement is for the gehobener Dienst specifically. The mittlerer Dienst exists alongside it with a lower requirement. The higher qualification changes which track, not whether entry is possible.',
+          },
+          {
+            term: 'In some systems there is no national answer at all',
+            description:
+              'In the United States, minimum selection standards are set by each state’s peace officer standards body and by each employing agency. No single national education requirement exists, and none is stated here.',
+          },
+        ],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'You need a criminal justice degree to become a police officer.',
+        reality:
+          'No researched system requires a degree in any subject to enter. The official recruitment service for England and Wales states: "You don\'t need a degree to join the police."',
+      },
+      {
+        claim: 'The Police Constable Degree Apprenticeship requires a degree.',
+        reality:
+          'It requires a Level 3 qualification in at least two subjects, or equivalent relevant experience. The degree is what the route awards on completion.',
+      },
+      {
+        claim: 'A degree is required somewhere, so it is effectively required everywhere.',
+        reality:
+          'Ireland sets a Leaving Certificate or NFQ Level 5 requirement. Berlin’s mittlerer Dienst accepts the erweiterte Berufsbildungsreife. Neither is a degree.',
+      },
+      {
+        claim: 'Having a degree makes no difference to entry.',
+        reality:
+          'It can change which route is open. England and Wales runs a separate Degree Holder Entry Programme, and Berlin’s gehobener Dienst requires the Fachhochschulreife or Abitur, which the mittlerer Dienst does not.',
+      },
+      {
+        claim: 'Requirements are the same across a country.',
+        reality:
+          'In Germany each Land recruits separately and the material here is Berlin only. In the United States standards are set by each state body and each employing agency.',
+      },
+      {
+        claim: 'These requirements are permanent.',
+        reality:
+          'Entry requirements are set by employers and change. Everything here is stated as at 6 September 2026 and should be checked against the official recruitment service for the force concerned.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Minimum entry qualification, in the four systems where a national or regional answer exists.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Level 3 qualification in at least two subjects, or equivalent experience — England and Wales.',
+          'Leaving Certificate at grade D3 or O6 in five subjects at Ordinary Level, or an NFQ Level 5 Major award, or a comparable qualification at Level 5 or above — Ireland.',
+          'Erweiterte Berufsbildungsreife, or Berufsbildungsreife plus a completed two-year vocational training and two years of work — Berlin, mittlerer Dienst.',
+          'Mindestens die Fachhochschulreife bzw. das Abitur — Berlin, gehobener Dienst.',
+          'Entry at mbo-4 or hbo bachelor level; the specific prior qualification per route was not researched — Netherlands.',
+          'No national requirement; set by each state standards body and each employing agency — United States.',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'uncertainty',
+        title: 'What this list is not',
+        text: 'It is not a checklist of eligibility. Entry also involves selection, vetting, medical and other assessments that this wave deliberately did not research, and no page here can tell an individual whether they qualify.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'How a society sets the entry qualification for policing is a decision about who can hold public authority. A high academic threshold narrows the field in ways that may not track the qualities the work requires; a low one places more weight on training and selection. The systems here have made visibly different choices, and each is defensible on its own terms.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'What training actually consists of is [what a police academy is](/law-enforcement/what-a-police-academy-is). The distinction between being trained and being educated is [police training and police education](/law-enforcement/police-training-and-police-education). The qualities the work relies on are [skills that policing relies on](/law-enforcement/skills-that-policing-relies-on).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [what a police academy is](/law-enforcement/what-a-police-academy-is), [police training and police education](/law-enforcement/police-training-and-police-education), and [the patrol officer role](/professions/patrol-officer).',
+      },
+    ],
+  },
+  {
+    slug: 'police-training-and-police-education',
+    title: 'Police training and police education',
+    shortTitle: 'Training and education',
+    question: 'What is the difference between police training and police education?',
+    summary:
+      'Training prepares a person to do a defined thing competently; education develops judgement that transfers to situations nobody anticipated. Some systems deliver both under one programme, and whether they are the same activity is a live question that different countries have answered differently.',
+    entityType: 'concept',
+    section: 'law-enforcement',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'what-a-police-academy-is',
+      'do-police-officers-need-a-degree',
+      'what-police-recruits-are-taught',
+      'skills-that-policing-relies-on',
+    ],
+    sources: [
+      'de-berlin-polizei-studium',
+      'de-berlin-polizei-ausbildung',
+      'nl-politie-opleidingsoverzicht',
+      'ew-joining-police-entry-routes',
+      'us-bjs-training-academies-2022',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-06',
+    publishedOn: '2026-09-06',
+    reviewedOn: '2026-09-06',
+    factsVerifiedOn: '2026-09-06',
+    readingTimeMinutes: 8,
+    uncertainty: [
+      'This page draws a conceptual distinction and then tests it against four researched systems. The distinction itself is analysis, not a finding, and is presented as such.',
+      'No system researched here labels its own programmes as "training" or "education" in the terms used on this page. The German words Ausbildung and Studium are the closest, and even they are the names of two tracks rather than a theory about them.',
+      'Whether either approach produces better outcomes was NOT RESEARCHED and is not claimed. This page compares structures, not results.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Training answers "how do I do this correctly". Education answers "how do I think about a situation I have not seen before". Both matter in policing, and the interesting question is not which is better but how each system combines them — because a police officer meets defined tasks and undefined situations in the same shift.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This compares how initial preparation is structured across four researched systems, and offers a distinction for thinking about it. The distinction is this platform’s analysis, not a finding from any source. Nothing here describes technique, and this is not legal or career advice.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'The distinction matters because the two are assessed differently. You can test whether someone can perform a procedure correctly. Testing whether someone will exercise judgement well in a situation nobody has described to them is much harder, and a programme that measures only the first can look rigorous while leaving the harder question unexamined.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'And most of policing is the second kind',
+        text: 'A patrol officer arrives at a situation nobody has classified yet, involving people whose circumstances are unknown, and has to decide what is happening before deciding what to do. That is a judgement problem before it is a procedure problem, which is the case for education inside a vocational role.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'Berlin names the difference in its own structure. The mittlerer Dienst is an **Ausbildung** — a Vorbereitungsdienst of "2 ½ Jahre" leading to appointment as Polizeimeisterin or Polizeimeister. The gehobener Dienst is a **Studium**: "Das Studium dauert 3 Jahre und ist in 15 abgeschlossene Module gegliedert", awarding a Bachelor of Arts.',
+        claim: 'fact',
+        sources: ['de-berlin-polizei-ausbildung', 'de-berlin-polizei-studium'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Two tracks, not two opinions',
+        text: 'Berlin does not treat one as a superior version of the other. They are separate entry tracks with different entry qualifications leading to different parts of the service. A system can hold both models simultaneously and staff itself from both, which is a more interesting arrangement than choosing.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The Netherlands makes the same split by level rather than by name: a two-year mbo-4 route and four three-year hbo bachelor programmes, all leading into the police. England and Wales combines them inside one route — the Police Constable Degree Apprenticeship is an apprenticeship delivered with a higher education provider that awards a Level 6 degree, with the apprentice employed as an officer throughout.',
+        claim: 'fact',
+        sources: ['nl-politie-opleidingsoverzicht', 'ew-joining-police-entry-routes'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'The United States data shows the mixture measured in hours. The 2022 census records that over 97% of recruits were instructed in legal subjects, receiving an average of 51 hours in criminal and constitutional law, 26 in traffic law and 10 in juvenile justice law, alongside skills instruction. It also records that 97% of academies formally tested recruits with an average of 16 skill or proficiency assessments, and that 95% required written and physical fitness assessments.',
+        claim: 'fact',
+        sources: ['us-bjs-training-academies-2022'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Where the assessment weight sits tells you what a programme thinks it is doing',
+        text: 'Skill or proficiency assessment was the most common formal testing method in the 2022 census. That is a training instrument: it establishes that a recruit can perform something to a standard. Written assessment is the instrument that reaches understanding. A curriculum can be read, in part, from which instruments it relies on.',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'The distinction is not classroom against practical',
+            description:
+              'Scenario exercises are practical and are squarely about judgement. A written examination can test recall of procedure and nothing else. Where the learning happens does not determine which kind of learning it is.',
+          },
+          {
+            term: 'Nor is it academic against vocational',
+            description:
+              'The Police Constable Degree Apprenticeship is simultaneously an apprenticeship and a degree, and the apprentice is employed as an officer from day one. Berlin’s Studium is a university-level qualification that exists to staff a public service. The categories cut across each other.',
+          },
+          {
+            term: 'A qualification is evidence of one and not automatically the other',
+            description:
+              'A degree awarded for police study evidences education in the sense used here. Certification in a specific power evidences training. Systems issue both, and they are not interchangeable even when one programme produces both.',
+          },
+        ],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Police training and police education are the same thing.',
+        reality:
+          'Berlin runs them as two separate entry tracks with different names, different durations and different entry qualifications: a 2½-year Ausbildung and a 3-year Studium awarding a Bachelor of Arts.',
+      },
+      {
+        claim: 'Education means classroom and training means practical.',
+        reality:
+          'Scenario exercises are practical and are about judgement; a written test can examine only recall of procedure. The setting does not determine the kind of learning.',
+      },
+      {
+        claim: 'A system must choose between the two models.',
+        reality:
+          'Berlin staffs itself from both tracks simultaneously, and the Netherlands offers an mbo route alongside four bachelor routes.',
+      },
+      {
+        claim: 'An apprenticeship cannot be academic.',
+        reality:
+          'The Police Constable Degree Apprenticeship is delivered with a higher education provider and awards a Level 6 degree in professional policing practice, while the apprentice is employed as a police officer.',
+      },
+      {
+        claim: 'More education produces better policing.',
+        reality:
+          'Whether either approach produces better outcomes was not researched for this page and is not claimed. The comparison here is between structures.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'How four researched systems combine the two.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Two named tracks, Ausbildung and Studium, entered separately — Berlin.',
+          'Two education levels, mbo-4 and hbo bachelor, entered separately — Netherlands.',
+          'One route that is both, an apprenticeship awarding a degree while employed — England and Wales.',
+          'Measured hours of legal instruction alongside skills instruction, with proficiency assessment the most common formal test — United States.',
+        ],
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'This distinction reaches accountability directly. An officer who has been trained to follow a procedure can say what the procedure was. An officer who has been educated to exercise judgement can be asked why this decision, in these circumstances — and a system that expects officers to answer that question has to prepare them to.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'The institutional structures are [what a police academy is](/law-enforcement/what-a-police-academy-is). The subjects themselves are [what police recruits are taught](/law-enforcement/what-police-recruits-are-taught). What accountability asks of an officer afterwards is [why police accountability matters](/law-enforcement/why-police-accountability-matters).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [what a police academy is](/law-enforcement/what-a-police-academy-is), [what police recruits are taught](/law-enforcement/what-police-recruits-are-taught), and [do police officers need a degree](/law-enforcement/do-police-officers-need-a-degree).',
+      },
+    ],
+  },
+  {
+    slug: 'what-police-recruits-are-taught',
+    title: 'What police recruits are taught',
+    shortTitle: 'What recruits are taught',
+    question: 'What subjects are studied in police training?',
+    summary:
+      'One government census publishes the subject headings and the hours. The result is not the curriculum most people expect: legal instruction, community topics and health occupy substantial measured time alongside the skills subjects.',
+    entityType: 'concept',
+    section: 'law-enforcement',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'what-a-police-academy-is',
+      'police-training-and-police-education',
+      'skills-that-policing-relies-on',
+      'physical-readiness-in-policing-careers',
+    ],
+    sources: ['us-bjs-training-academies-2022', 'ie-garda-trainee-booklet-2024'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-06',
+    publishedOn: '2026-09-06',
+    reviewedOn: '2026-09-06',
+    factsVerifiedOn: '2026-09-06',
+    readingTimeMinutes: 8,
+    uncertainty: [
+      'The subject-hour figures are for state and local law enforcement academies in the UNITED STATES in 2022 only, from the Bureau of Justice Statistics census published June 2025. They establish nothing about federal agencies and nothing about any other country.',
+      'No comparable published subject-hour breakdown was obtained for any other researched system, so this page compares one country’s curriculum against nothing.',
+      'These are averages across academies with substantially different programme lengths. An average hour count is not a statement about any particular academy.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'A curriculum is a statement of what an organisation believes the job consists of, expressed in the only currency training has: time. Where a police service publishes the hours, that statement can be read.',
+      },
+      {
+        kind: 'callout',
+        variant: 'safety',
+        title: 'What this page describes, and what it deliberately does not',
+        text: 'This page names subjects and states how much time is spent on them. It does not describe how anything is done. There is no technique, no tactic, no procedure and no instruction of any kind here — the difference between "recruits are instructed in defensive tactics" and describing a defensive tactic is the whole boundary of this wave, and this page stays on the first side of it.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'Most people picture police training from film, where it consists of weapons and physical confrontation. The published figures are the cheapest available correction to that picture, and they matter to anyone deciding whether the job is what they think it is.',
+        claim: 'analysis',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'The Bureau of Justice Statistics 2022 census records the average hours devoted to the largest skills subjects: **73 hours** to firearms skills, **64 hours** to defensive tactics, and **56 hours** to health and fitness.',
+        claim: 'fact',
+        sources: ['us-bjs-training-academies-2022'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'It records legal instruction on a comparable scale. Over 97% of recruits were instructed in legal subjects, receiving an average of **51 hours** in criminal and constitutional law, **26 hours** in traffic law, and **10 hours** in juvenile justice law. Over 80% of recruits were trained in at least one community-related topic.',
+        claim: 'fact',
+        sources: ['us-bjs-training-academies-2022'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Add the legal subjects together',
+        text: 'Criminal and constitutional law, traffic law and juvenile justice law come to 87 average hours — more than firearms skills, and more than defensive tactics. A recruit in these academies spent more measured time learning what the law permits than learning either of the two subjects the popular image is built from.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The census also records how learning was tested. Skill or proficiency assessments were the most common formal testing method in 2022, with 97% of academies requiring an average of 16 of them. Ninety-five percent required written and physical fitness assessments as part of the basic training curriculum.',
+        claim: 'fact',
+        sources: ['us-bjs-training-academies-2022'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Where a curriculum is not published as hours, the structure still says something. The Irish Foundation Training Programme alternates residential stages at the Garda College with an observational placement in an operational Garda station — a design in which part of what is taught is what the work actually looks like.',
+        claim: 'fact',
+        sources: ['ie-garda-trainee-booklet-2024'],
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'Hours measure emphasis, not importance',
+            description:
+              'A subject can be indispensable and take little time. Ten average hours on juvenile justice law does not mean it matters less than 73 on firearms skills; some subjects are inherently longer to train to a standard than to understand.',
+          },
+          {
+            term: 'An average across academies is not a programme',
+            description:
+              'The same census records academy averages from 681 to 969 hours of core basic training by academy type. Subject averages drawn across that range describe no single academy’s timetable.',
+          },
+          {
+            term: 'Formal instruction is not the whole of preparation',
+            description:
+              'The same census found 89.2% of academies reported mandatory field training after basic training for some or all recruits, averaging 503 hours. Measured against that, classroom hours are a minority of total supervised preparation.',
+          },
+        ],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Police training is mostly weapons and physical confrontation.',
+        reality:
+          'In the 2022 United States census, firearms skills averaged 73 hours and defensive tactics 64. Criminal and constitutional law, traffic law and juvenile justice law together averaged 87.',
+      },
+      {
+        claim: 'Recruits get little legal instruction.',
+        reality:
+          'Over 97% of recruits were instructed in legal subjects, averaging 51 hours in criminal and constitutional law alone.',
+      },
+      {
+        claim: 'Community topics are an optional extra.',
+        reality:
+          'The census records that over 80% of recruits were trained in at least one community-related topic.',
+      },
+      {
+        claim: 'These figures describe police training generally.',
+        reality:
+          'They describe state and local law enforcement academies in the United States in 2022. No comparable published breakdown was obtained for any other country, and none is implied.',
+      },
+      {
+        claim: 'Training ends when the academy ends.',
+        reality:
+          '89.2% of academies reported mandatory field training after basic training for some or all recruits, averaging 503 hours.',
+      },
+      {
+        claim: 'An average hour figure tells you what a given academy teaches.',
+        reality:
+          'The same census recorded academy averages ranging from 681 to 969 hours of core basic training by academy type, so a subject average across that range describes no individual programme.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Average hours of instruction, state and local law enforcement academies, United States, 2022.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Firearms skills — 73 hours.',
+          'Defensive tactics — 64 hours.',
+          'Health and fitness — 56 hours.',
+          'Criminal and constitutional law — 51 hours.',
+          'Traffic law — 26 hours.',
+          'Juvenile justice law — 10 hours.',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'Scope of these figures',
+        text: 'Bureau of Justice Statistics, Census of Law Enforcement Training Academies, 2022, published June 2025. State and local academies in the United States only. Averages across academies of substantially different lengths.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'A published curriculum is a form of accountability that costs nothing to exercise. It lets anyone ask whether what a service says it values matches what it spends its training time on — and it lets that question be asked before anything goes wrong rather than only afterwards.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'How the training is organised is [what a police academy is](/law-enforcement/what-a-police-academy-is). What the legal instruction is about is covered across [when may police use force](/law-enforcement/police-use-of-force) and [what are arrest and detention](/law-enforcement/arrest-and-detention). The professional qualities involved are [skills that policing relies on](/law-enforcement/skills-that-policing-relies-on).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [what a police academy is](/law-enforcement/what-a-police-academy-is), [police training and police education](/law-enforcement/police-training-and-police-education), and [physical readiness in policing careers](/law-enforcement/physical-readiness-in-policing-careers).',
+      },
+    ],
+  },
+  {
+    slug: 'rank-role-and-specialisation',
+    title: 'Rank, role and specialisation',
+    shortTitle: 'Rank, role, specialisation',
+    question: 'Is "detective" a rank, a job, or something else?',
+    summary:
+      'Four different things get described with the same words: rank, role, specialisation and assignment. "Detective" is a different one of them in different countries — and in the Netherlands it is an entry route you can be admitted to from the start.',
+    entityType: 'concept',
+    section: 'law-enforcement',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'how-policing-careers-develop',
+      'specialist-roles-in-policing',
+      'civilian-roles-in-police-organisations',
+      'what-a-police-academy-is',
+    ],
+    sources: [
+      'nl-politie-opleidingsoverzicht',
+      'de-berlin-polizei-studium',
+      'de-berlin-polizei-ausbildung',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-06',
+    publishedOn: '2026-09-06',
+    reviewedOn: '2026-09-06',
+    factsVerifiedOn: '2026-09-06',
+    readingTimeMinutes: 9,
+    uncertainty: [
+      'The four-way distinction on this page is analysis. It is a way of reading arrangements that exist, not a claim any system makes about itself.',
+      'The Dutch entry routes are content-confirmed. Whether "detective" is formally a rank, a role or an assignment was NOT RESEARCHED for any individual system, including the Netherlands and Germany, and no system is described here as using one arrangement rather than another.',
+      'No rank ladder for any country is stated anywhere in this wave. Rank structures differ substantially and a general one would be wrong everywhere.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Four things are routinely described with the same vocabulary, and they come apart: **rank** is a position of authority in a hierarchy; **role** is the kind of work a person does; **specialisation** is expertise in a particular field of that work; and **assignment** is where a person is currently posted. A single officer holds all four at once, and they can change independently.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This offers a way of distinguishing four things that get confused, illustrated with researched examples. It states no country’s rank structure, because rank structures differ substantially and a general ladder would misdescribe every system. It is not career advice.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'The confusion has practical consequences. Someone who believes detective is a promotion will assume the route runs through seniority. Someone who believes it is a job will look for a vacancy. Depending on the country, either could be right — and the answer determines what a person would actually do about it.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'And the English vocabulary makes it worse',
+        text: 'English uses "detective" for all four senses without marking which. It is a rank in some services, a designation held at an ordinary rank in others, a specialisation reached by selection in others, and elsewhere the name of a separate occupational structure. The word carries no information about which arrangement is in use.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'The Netherlands supplies the clearest single counter-example to the promotion assumption. Among the national police entry routes are four three-year hbo bachelor programmes — bachelor Politiekunde Politieagent, bachelor Politiekunde Wijkagent, **bachelor Rechercheur**, and bachelor Politieleider — alongside a two-year mbo-4 route.',
+        claim: 'fact',
+        sources: ['nl-politie-opleidingsoverzicht'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Read that list again',
+        text: 'Investigator and community officer are not stages someone reaches after years in uniform. They are programmes a person can be admitted to at the start. So is police leader. In this system the branch point sits at entry, where other systems put it years later — which means "how do I become a detective" has a completely different answer depending on where it is asked.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Berlin shows a different structure again: two tracks entered at different education levels, the mittlerer Dienst through a 2½-year Vorbereitungsdienst and the gehobener Dienst through a three-year Studium awarding a Bachelor of Arts. Which track a person enters is decided at entry and is not a promotion from one to the other.',
+        claim: 'fact',
+        sources: ['de-berlin-polizei-ausbildung', 'de-berlin-polizei-studium'],
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'Rank is about authority, not about expertise',
+            description:
+              'A rank determines what a person may direct, authorise and be accountable for. Someone can hold considerable expertise at a junior rank, and a senior rank does not imply expertise in any particular field of the work.',
+          },
+          {
+            term: 'Specialisation is about expertise, not about authority',
+            description:
+              'A specialist in economic crime, digital investigation or public order has depth in a field. That is a different axis from supervisory authority, and in most systems a person can move along one without moving along the other.',
+          },
+          {
+            term: 'Role is the kind of work; assignment is the current posting',
+            description:
+              'Two officers of the same rank may do entirely different work, and the same officer may do different work next year without any change of rank. Where a system uses "detective" as a designation rather than a rank, this is the axis it sits on.',
+          },
+          {
+            term: 'Because the axes are independent, progression is not one ladder',
+            description:
+              'A career can advance by taking supervisory responsibility, or by deepening specialist expertise, or by moving between roles — and systems differ in which of these they reward, which they formalise, and whether moving along one requires moving along another.',
+          },
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'What this means for reading any job title',
+        text: 'A title alone does not tell you whether you are looking at a rank, a role, a specialisation or a posting. That is a question about the particular service, answered by that service’s own material — which is also why this page names no ladder.',
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Detective is a rank.',
+        reality:
+          'It is in some services. In others it is a designation held at an ordinary rank, or a specialisation reached by selection, or the name of a separate occupational structure. The word does not say which.',
+      },
+      {
+        claim: 'You have to serve in uniform before you can investigate.',
+        reality:
+          'In many systems that is the route. In the Netherlands, bachelor Rechercheur is one of the entry programmes into the national police, so a person may be admitted to investigative education at the start.',
+      },
+      {
+        claim: 'Rank and seniority in a specialism are the same ladder.',
+        reality:
+          'They are different axes. Rank concerns authority to direct and authorise; specialisation concerns depth of expertise in a field. Systems differ in how, and whether, movement along one requires the other.',
+      },
+      {
+        claim: 'Police ranks are broadly the same across countries.',
+        reality:
+          'Rank structures differ substantially, and this page states none. Berlin alone runs two separate service tracks entered at different education levels, which is not a rank ladder at all.',
+      },
+      {
+        claim: 'A more senior officer is a more expert investigator.',
+        reality:
+          'Seniority is authority over the direction of work. Expertise in a field of investigation is acquired separately, and a system may place deep specialists at ordinary ranks.',
+      },
+      {
+        claim: 'Community policing is a junior role people move on from.',
+        reality:
+          'In the Netherlands, bachelor Politiekunde Wijkagent is a three-year higher-professional bachelor programme and one of the named entry routes, alongside the investigator and police-leader programmes.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Where the branch point sits, in the two systems researched for this question.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'At entry, by programme — the Netherlands offers separate bachelor routes for police officer, community officer, investigator and police leader.',
+          'At entry, by service track — Berlin separates mittlerer Dienst and gehobener Dienst, entered at different education levels.',
+          'Later, by selection after service — the pattern in systems where investigation follows time in uniform. Which systems those are was not researched here.',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'uncertainty',
+        title: 'What is not claimed',
+        text: 'That the Netherlands and Berlin are typical, or that the third pattern belongs to any named country. Two systems were researched for this question and the third pattern is stated as a shape, without attribution.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'These distinctions matter to accountability as much as to careers. Knowing whether a decision was taken by someone with authority to take it requires knowing what rank means in that service — and complaints, inquiries and courts all have to make that distinction precisely, in a vocabulary that does not mark it.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'How careers move along these axes is [how policing careers develop](/law-enforcement/how-policing-careers-develop). The specialisations themselves are [specialist roles in policing](/law-enforcement/specialist-roles-in-policing). The investigator role is [detective](/professions/detective).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [how policing careers develop](/law-enforcement/how-policing-careers-develop), [specialist roles in policing](/law-enforcement/specialist-roles-in-policing), and [the detective role](/professions/detective).',
+      },
+    ],
+  },
+  {
+    slug: 'how-policing-careers-develop',
+    title: 'How policing careers develop',
+    shortTitle: 'Career development',
+    question: 'What career paths exist in policing, and how does promotion work?',
+    summary:
+      'Progression runs along more than one axis, and the systems researched here put the branch point in different places — at entry in some, after years of service in others.',
+    entityType: 'concept',
+    section: 'law-enforcement',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'rank-role-and-specialisation',
+      'specialist-roles-in-policing',
+      'civilian-roles-in-police-organisations',
+      'do-police-officers-need-a-degree',
+    ],
+    sources: [
+      'nl-politie-opleidingsoverzicht',
+      'de-berlin-polizei-studium',
+      'ew-joining-police-entry-routes',
+      'ie-garda-trainee-booklet-2024',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-06',
+    publishedOn: '2026-09-06',
+    reviewedOn: '2026-09-06',
+    factsVerifiedOn: '2026-09-06',
+    readingTimeMinutes: 8,
+    uncertainty: [
+      'No promotion system was researched for any country. This page describes where entry-stage branch points sit, using content-confirmed evidence, and describes progression in structural terms only.',
+      'No rank ladder, qualifying period, promotion examination or selection process is stated for any system, because none was researched.',
+      'Whether any of these structures produces better outcomes was not researched and is not claimed.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'A policing career can develop in several directions at once: upward into supervisory authority, sideways into a different kind of work, and downward into depth in a specialism. Which of those a system formalises, and when it makes a person choose, is where the real differences lie.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This describes structural shapes of progression, illustrated where evidence supports it. It states no promotion process, no qualifying period and no rank ladder for any country, because none was researched. It is not career advice and cannot tell any individual what their prospects are.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'People considering the career usually ask about progression in the terms of the jobs they already know: does it work like a corporate ladder. Policing does not map neatly onto that, because supervisory authority and professional expertise are separated more sharply than in most occupations.',
+        claim: 'analysis',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'Every researched system begins with a supervised period. Ireland’s trainees "attest after 36 weeks" and then enter a probationary period. In England and Wales the Police Constable Degree Apprenticeship "normally takes three years to complete, with the option to specialise in your third year", with the apprentice employed as an officer throughout.',
+        claim: 'fact',
+        sources: ['ie-garda-trainee-booklet-2024', 'ew-joining-police-entry-routes'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'The third-year specialisation option is the shape in miniature',
+        text: 'A route that is three years long and offers a choice of direction in its final year has put a branch point inside initial training. That is neither "everyone does the same thing for years" nor "you choose before you start" — it is a third arrangement, and it exists because systems disagree about when a person can sensibly choose.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The Netherlands puts the branch point at the very beginning: bachelor Politiekunde Politieagent, bachelor Politiekunde Wijkagent, bachelor Rechercheur and bachelor Politieleider are separate three-year entry programmes. A person can be admitted directly to the police-leader programme rather than reaching leadership after service.',
+        claim: 'fact',
+        sources: ['nl-politie-opleidingsoverzicht'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Berlin separates by service track at entry — mittlerer Dienst and gehobener Dienst, with the latter requiring the Fachhochschulreife or Abitur and awarding a Bachelor of Arts after three years.',
+        claim: 'fact',
+        sources: ['de-berlin-polizei-studium'],
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'Upward is not the only direction, and not always the most valued',
+            description:
+              'Moving into supervision means directing work rather than doing it. Someone who wants to investigate may find that promotion moves them away from the work they joined for, which is a genuine trade-off rather than a complaint.',
+          },
+          {
+            term: 'Specialisation can be a career in itself',
+            description:
+              'Depth in a field — economic crime, digital investigation, public order, training — is a direction of development that does not require supervisory rank, and systems differ in how formally they recognise it.',
+          },
+          {
+            term: 'Moving between roles is normal, not a failure',
+            description:
+              'Police organisations contain many kinds of work, and moving between them over a career is an ordinary pattern rather than an interruption of one.',
+          },
+          {
+            term: 'Continuing development is usually a requirement',
+            description:
+              'Periodic re-certification in specific powers and continuing professional development are standard features rather than optional additions, because legal frameworks and expectations change during a career.',
+          },
+        ],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'A policing career means climbing a rank ladder.',
+        reality:
+          'Rank is one axis. Specialisation and role are others, and in the Netherlands the choice between officer, community officer, investigator and police leader is made at entry through separate bachelor programmes.',
+      },
+      {
+        claim: 'You must serve for years before you can specialise.',
+        reality:
+          'It depends where. In England and Wales the three-year apprenticeship offers "the option to specialise in your third year", and in the Netherlands the specialisation is the entry programme.',
+      },
+      {
+        claim: 'Leadership roles are reached only after long service.',
+        reality:
+          'The Netherlands runs bachelor Politieleider as one of its named three-year entry programmes.',
+      },
+      {
+        claim: 'Promotion works about the same way in most police services.',
+        reality:
+          'No promotion system was researched for this page and none is described. What the evidence does show is that systems place the first branch point at entry, during initial training, or after service — three different arrangements.',
+      },
+      {
+        claim: 'Once trained, an officer is finished with training.',
+        reality:
+          'Continuing professional development and periodic re-certification in specific powers are standard features of the researched systems rather than optional additions.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Where the first branch point sits.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'At entry, by separate bachelor programme — Netherlands.',
+          'At entry, by service track — Berlin.',
+          'Inside initial training, as an option in the final year — England and Wales, PCDA.',
+          'After attestation and probation — Ireland, where Phase I runs 36 weeks before a probationary period.',
+        ],
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'How a service structures progression shapes what it is good at. A system that can only reward people by promoting them into supervision loses its best practitioners from practice; a system that recognises specialist depth can keep them. That is an institutional design question with public consequences, not only a career question.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'The distinction the whole page rests on is [rank, role and specialisation](/law-enforcement/rank-role-and-specialisation). The specialisations are [specialist roles in policing](/law-enforcement/specialist-roles-in-policing). The starting point is [the patrol officer role](/professions/patrol-officer).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [rank, role and specialisation](/law-enforcement/rank-role-and-specialisation), [specialist roles in policing](/law-enforcement/specialist-roles-in-policing), and [civilian roles in police organisations](/law-enforcement/civilian-roles-in-police-organisations).',
+      },
+    ],
+  },
+  {
+    slug: 'specialist-roles-in-policing',
+    title: 'Specialist roles in policing',
+    shortTitle: 'Specialist roles',
+    question: 'What specialisations exist in policing?',
+    summary:
+      'Police organisations contain many kinds of work beyond general patrol. This describes what those areas are for and what the work involves at a professional level — not how any of it is carried out.',
+    entityType: 'concept',
+    section: 'law-enforcement',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'rank-role-and-specialisation',
+      'how-policing-careers-develop',
+      'civilian-roles-in-police-organisations',
+      'working-life-in-policing',
+    ],
+    sources: ['nl-politie-opleidingsoverzicht', 'unodc-cpcj'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-06',
+    publishedOn: '2026-09-06',
+    reviewedOn: '2026-09-06',
+    factsVerifiedOn: '2026-09-06',
+    readingTimeMinutes: 8,
+    uncertainty: [
+      'Which specialisations exist in any particular service was NOT RESEARCHED. This describes areas of work that recur across police organisations generally; no service is claimed to have any specific one.',
+      'How a person enters any specialisation, what selection it involves, and what training it requires were not researched for any system.',
+      'Nothing here describes any capability, method, technique or equipment. That boundary is deliberate and is enforced by a test.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'General patrol is defined by breadth: attending whatever happens. Specialist roles are defined by depth in a particular kind of work. Both exist in most police organisations of any size, and the specialist areas are where a long career usually acquires its shape.',
+      },
+      {
+        kind: 'callout',
+        variant: 'safety',
+        title: 'What this page describes, and what it deliberately does not',
+        text: 'This says what each area of work is for and what kind of professional it suits. It describes no method, no technique, no tactic, no equipment and no capability. That is not an omission for brevity — describing operational capability would be useful to the wrong reader, and it is outside what this platform publishes.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'Specialisation exists because some work cannot be done well by someone doing everything else as well. Financial investigation, work with children, and analysis across many cases each require knowledge that takes years to build and that a generalist cannot maintain alongside general availability.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'And that has a cost the organisation has to manage',
+        text: 'Every specialist is someone not available for general demand. A service that specialises heavily gains depth and loses flexibility, which is why the balance is an institutional decision rather than a matter of individual preference.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'In the Netherlands two areas are formalised as entry routes rather than later assignments: bachelor Rechercheur for investigation and bachelor Politiekunde Wijkagent for community policing are named three-year bachelor programmes alongside the general police officer route.',
+        claim: 'fact',
+        sources: ['nl-politie-opleidingsoverzicht'],
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'Investigation',
+            description:
+              'Establishing what happened in reported offences and assembling material capable of being tested in court. Sub-specialisms are extensive — economic crime, cybercrime, serious violence, child protection — and each requires distinct knowledge. Suits people who are methodical, sceptical of their own conclusions, and comfortable with long timescales.',
+          },
+          {
+            term: 'Community policing',
+            description:
+              'Sustained work with a defined area or population, so that the relationship exists before it is needed. The work is relational and long-horizon, and its results are harder to measure than incident counts, which makes it a genuinely different professional discipline from response work.',
+          },
+          {
+            term: 'Roads and traffic policing',
+            description:
+              'Work directed at road safety and offences connected with vehicles. It combines a high volume of public contact with specialised legal and technical knowledge, and in most systems accounts for a large share of the public’s direct contact with police.',
+          },
+          {
+            term: 'Public order',
+            description:
+              'Policing of events, gatherings and demonstrations, where the professional task is to allow lawful activity to proceed safely. It is planning-intensive and coordination-intensive.',
+          },
+          {
+            term: 'Cybercrime and digital investigation',
+            description:
+              'Investigation where the evidence is digital. It requires both investigative method and technical understanding, and it is the area where the gap between what is technically possible and what is legally permitted matters most directly.',
+          },
+          {
+            term: 'Intelligence and analysis',
+            description:
+              'Working across many incidents rather than within one, to identify patterns invisible from inside a single case. Frequently a civilian professional field as much as a sworn one.',
+          },
+          {
+            term: 'Forensic support',
+            description:
+              'Recovery and handling of physical material so that it can be examined and relied on. Distinct from the laboratory science that follows, and distinct again from the investigation that commissions it.',
+          },
+          {
+            term: 'Specialist operational units',
+            description:
+              'Services maintain units for situations general patrol is not equipped for, including marine, mounted, transport, dog and firearms units. What each exists for is a matter of public record; how any of them operates is not described here.',
+          },
+          {
+            term: 'Training, supervision and professional standards',
+            description:
+              'Experienced officers move into preparing others, supervising work, and examining conduct. These are career directions in their own right rather than the end of an operational career.',
+          },
+          {
+            term: 'Public information and administration',
+            description:
+              'Communication with the public and the media, and the administrative functions any large organisation requires. Frequently civilian roles.',
+          },
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'How people reach these areas differs completely',
+        text: 'Entry may be at recruitment, by selection after a qualifying period, by application to a vacancy, or by posting. Which applies is a question about the particular service — see [rank, role and specialisation](/law-enforcement/rank-role-and-specialisation).',
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Specialist roles are senior roles.',
+        reality:
+          'Specialisation is depth of expertise; rank is supervisory authority. They are different axes, and a system may place deep specialists at ordinary ranks.',
+      },
+      {
+        claim: 'Every police service has all of these.',
+        reality:
+          'Which specialisations exist in any particular service was not researched. These are areas of work that recur across police organisations generally, and no service is claimed to have any specific one.',
+      },
+      {
+        claim: 'Specialist work means operational and tactical work.',
+        reality:
+          'Analysis, community policing, training, professional standards, public information and administration are all specialist areas, and several are commonly civilian.',
+      },
+      {
+        claim: 'You have to leave general policing to specialise.',
+        reality:
+          'In the Netherlands, investigation and community policing are entry routes — bachelor Rechercheur and bachelor Politiekunde Wijkagent — rather than departures from a general career.',
+      },
+      {
+        claim: 'Community policing is a soft version of real policing.',
+        reality:
+          'It is a distinct professional discipline with a different time horizon, formalised in the Netherlands as a three-year higher-professional bachelor programme.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'How specialist work is reached, as a set of structural possibilities.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'As an entry programme — the Netherlands formalises investigation and community policing this way.',
+          'As an option within initial training — England and Wales offers specialisation in the third year of the PCDA.',
+          'By selection after a qualifying period of general service.',
+          'By posting, where the organisation assigns rather than the individual applies.',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'uncertainty',
+        title: 'Attribution',
+        text: 'Only the first two are attributed, because only those two were researched. The last two are stated as shapes without being assigned to any country.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'Specialisation concentrates capability, and capability concentrated in a unit needs the same authorisation and review as capability exercised by anyone else. The existence of a specialist unit is not by itself an expansion of what police may lawfully do — the legal authority for a measure is the same question regardless of who carries it out.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'The authority question is [legal authority and technical capability](/investigations/legal-authority-and-technical-capability). Who reviews specialist work is [how are police held to account](/law-enforcement/how-police-are-held-to-account). Civilian specialists are [civilian roles in police organisations](/law-enforcement/civilian-roles-in-police-organisations).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [rank, role and specialisation](/law-enforcement/rank-role-and-specialisation), [civilian roles in police organisations](/law-enforcement/civilian-roles-in-police-organisations), and [the detective role](/professions/detective).',
+      },
+    ],
+  },
+  {
+    slug: 'civilian-roles-in-police-organisations',
+    title: 'Civilian roles in police organisations',
+    shortTitle: 'Civilian police roles',
+    question: 'Do you have to be a police officer to work for the police?',
+    summary:
+      'No. Police organisations employ substantial numbers of people who are not sworn officers, in roles that are professional in their own right rather than support for someone else’s.',
+    entityType: 'concept',
+    section: 'law-enforcement',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'specialist-roles-in-policing',
+      'rank-role-and-specialisation',
+      'how-policing-careers-develop',
+      'working-life-in-policing',
+    ],
+    sources: ['nl-politie-meldkamer', 'unodc-cpcj'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-06',
+    publishedOn: '2026-09-06',
+    reviewedOn: '2026-09-06',
+    factsVerifiedOn: '2026-09-06',
+    readingTimeMinutes: 7,
+    uncertainty: [
+      'No country’s civilian staffing arrangements, proportions or entry requirements were researched. No number or proportion of civilian staff is stated anywhere on this page.',
+      'Which specific roles are civilian rather than sworn differs between services and sometimes within one country. The Dutch page describing the meldkamer role does NOT state whether it is held by civilian staff or sworn officers, and that is not assumed here.',
+      'Whether civilian and sworn staff have comparable career structures within a service was NOT RESEARCHED.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'A police organisation is not composed only of people with police powers. Analysts, control-room staff, forensic personnel, technologists, records staff, trainers, legal advisers and administrators all work inside police organisations, and much of what a police service produces depends on them.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This describes kinds of work that exist inside police organisations. It states no proportion of civilian staff for any service, no entry requirement, and no vacancy. It is educational orientation, not recruitment information.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'Describing a police organisation as consisting only of sworn officers is inaccurate before it is anything else. It also misleads two audiences at once: people who assume the only way in is to become an officer, and people forming a picture of how policing actually works.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'The distinction that actually matters is powers, not status',
+        text: 'What separates a sworn officer from other staff is the possession of legal powers — to stop, to search, to arrest, to use force within limits. That is a real and important line. It is not a line about whether the work is skilled, professional, or central to what the organisation does.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'The Dutch national police describe the meldkamer role, centralist meldkamer, in a single sentence containing both halves of the job: "je neemt de spoedeisende meldingen (112) aan en stuurt de eenheden op straat aan" — you take the emergency 112 reports and direct the units on the street.',
+        claim: 'fact',
+        sources: ['nl-politie-meldkamer'],
+      },
+      {
+        kind: 'callout',
+        variant: 'uncertainty',
+        title: 'And the page does not say who holds it',
+        text: 'That official page does not state whether the role is held by civilian staff or by sworn officers, so this platform does not assert it. The example is here because it shows a decision-making role inside a police organisation that is defined by neither rank nor police powers — not because its employment classification is established.',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'Control room and contact roles',
+            description:
+              'Taking emergency and non-emergency contacts, classifying and prioritising them against published criteria, and directing or recommending a response. The classification decision is taken before any responder has seen anything — see [emergency dispatcher](/professions/emergency-dispatcher).',
+          },
+          {
+            term: 'Analysis',
+            description:
+              'Examining patterns across many incidents rather than investigating one, and producing assessments that inform decisions taken by others. Requires analytical and data skills rather than police training, and the conclusion together with its confidence level is the analyst’s own professional product.',
+          },
+          {
+            term: 'Forensic and scientific staff',
+            description:
+              'Recovery, handling and examination of material, and reporting what findings do and do not establish — see [forensic scientist](/professions/forensic-scientist).',
+          },
+          {
+            term: 'Digital and technology roles',
+            description:
+              'Building and maintaining the systems police work depends on, and supporting the examination of digital material. A field in which police organisations compete for the same people as every other employer.',
+          },
+          {
+            term: 'Records, information and data protection',
+            description:
+              'Managing information that is legally sensitive, subject to retention limits and disclosure obligations, and relied on in proceedings. Errors here have direct legal consequences.',
+          },
+          {
+            term: 'Training, legal advice and professional standards',
+            description:
+              'Preparing officers, advising the organisation, and examining conduct. Some of these roles are held by former officers and some by professionals from other fields entirely.',
+          },
+          {
+            term: 'Communication, finance, estates and human resources',
+            description:
+              'The functions any large public organisation requires, carried out in an organisation whose subject matter is unusual and often confidential.',
+          },
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'The boundary moves between services',
+        text: 'A role that is civilian in one service is sworn in another, and services change the line over time. There is no general rule about which roles are which, and none is offered here.',
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Everyone who works for the police is a police officer.',
+        reality:
+          'Police organisations employ analysts, control-room staff, forensic personnel, technologists, records staff, trainers and administrators, in roles that are not sworn.',
+      },
+      {
+        claim: 'Civilian roles are support roles.',
+        reality:
+          'An analyst’s assessment and its confidence level are that analyst’s own professional product. A control-room role classifies and prioritises incidents against published criteria before any responder arrives.',
+      },
+      {
+        claim: 'Civilian staff have police powers.',
+        reality:
+          'What distinguishes a sworn officer is the possession of legal powers such as stop, search, arrest and the use of force within limits. That is the line, and it is a line about powers rather than about skill or importance.',
+      },
+      {
+        claim: 'The same roles are civilian everywhere.',
+        reality:
+          'A role that is civilian in one service is sworn in another, and services change the line over time. No general rule is offered here.',
+      },
+      {
+        claim: 'Civilian work is a way in to becoming an officer.',
+        reality:
+          'It may be, in services that allow it, but these are careers in their own right with their own professional development. Neither framing should be assumed, and no country’s arrangements were researched.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Kinds of work inside police organisations that do not depend on police powers.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Contact and control-room work — classification and prioritisation against published criteria.',
+          'Analysis — pattern across cases rather than depth within one.',
+          'Forensic and scientific work — examination and reporting.',
+          'Digital and technology — systems, and support for digital examination.',
+          'Records, information and data protection — legally sensitive information handling.',
+          'Training, legal advice and professional standards.',
+          'Communication, finance, estates and human resources.',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What is not stated',
+        text: 'No proportion of civilian staff in any service, no entry requirement, no pay, and no claim that any named service employs any of these roles. None of that was researched.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'The sworn/civilian line matters for accountability precisely because it is a line about powers. A person without police powers cannot exercise them, and cannot be held to account for exercising them — which is why the question "who actually took this decision, and under what authority" is answered by the powers a person holds rather than by where they work.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'The control-room role in detail is [emergency dispatcher](/professions/emergency-dispatcher). The specialist areas are [specialist roles in policing](/law-enforcement/specialist-roles-in-policing). What police powers are is [what are arrest and detention](/law-enforcement/arrest-and-detention).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [emergency dispatcher](/professions/emergency-dispatcher), [specialist roles in policing](/law-enforcement/specialist-roles-in-policing), and [forensic scientist](/professions/forensic-scientist).',
+      },
+    ],
+  },
+  {
+    slug: 'skills-that-policing-relies-on',
+    title: 'Skills that policing relies on',
+    shortTitle: 'Skills in policing',
+    question: 'What skills do police officers need?',
+    summary:
+      'The measured training curriculum and the professional standards point the same way: communication, judgement and written accuracy carry more of the work than the physical capabilities the popular image is built from.',
+    entityType: 'concept',
+    section: 'law-enforcement',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'what-police-recruits-are-taught',
+      'working-life-in-policing',
+      'professional-standards-in-policing-work',
+      'physical-readiness-in-policing-careers',
+    ],
+    sources: [
+      'us-bjs-training-academies-2022',
+      'un-code-of-conduct-1979',
+      'unodc-e4j-use-of-force',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-06',
+    publishedOn: '2026-09-06',
+    reviewedOn: '2026-09-06',
+    factsVerifiedOn: '2026-09-06',
+    readingTimeMinutes: 8,
+    uncertainty: [
+      'No official competency framework for any country was researched. This page reasons from a published curriculum and from international professional standards, and says so where it is reasoning rather than reporting.',
+      'The hour figures are United States state and local academies, 2022, and support a claim about that curriculum only.',
+      'Nothing here should be read as a list of what any employer assesses. Selection processes were not researched.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Asking what skills a job needs usually produces a list nobody could disagree with. The more useful question is which skills the work actually spends its time on — and for policing there are two places to look that are harder to argue with than intuition: what training measurably devotes time to, and what professional standards require.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This reasons about professional skills from a published curriculum and international standards. It is not a competency framework, not a list of what any employer assesses, and not advice on preparing an application. It is not legal advice.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'The picture most people bring to this question comes from fiction, which selects for the rarest parts of the job because they are the most dramatic. Someone deciding whether the work suits them is better served by knowing what it consists of most of the time.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'This is also where career pages usually go wrong',
+        text: 'A skills list is the easiest place in a career page to write encouraging filler — resilience, teamwork, passion. The discipline applied here is to tie each item to something checkable: an hour count in a government census, or a professional standard in an international instrument.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'Start with the curriculum. In the 2022 United States census, criminal and constitutional law, traffic law and juvenile justice law together averaged **87 hours** against 73 for firearms skills and 64 for defensive tactics, and over 97% of recruits received legal instruction. The largest single block of measured instruction is about what the law permits.',
+        claim: 'fact',
+        sources: ['us-bjs-training-academies-2022'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Which implies a skill, not just a subject',
+        text: 'Knowing the law is knowledge. Applying a legal threshold to a situation unfolding in front of you, on incomplete information, in the time available, is a skill — and it is the one the curriculum spends most measured time preparing.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The professional standards point the same way. The United Nations Code of Conduct for Law Enforcement Officials provides that officials perform the duty imposed on them by law, and that force may be used only to the extent required for the performance of their duty. A standard framed in terms of necessity and limits describes a role in which judgement, not capability, is the operative professional quality.',
+        claim: 'fact',
+        sources: ['un-code-of-conduct-1979', 'unodc-e4j-use-of-force'],
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'Communication',
+            description:
+              'The skill used most and taught least visibly. Explaining, questioning, calming, and being understood by people who are frightened, angry, unwell or unwilling. Most incidents are resolved through it, and every incident begins with it.',
+          },
+          {
+            term: 'Judgement against a legal threshold',
+            description:
+              'Deciding whether the conditions for an action are met, on the information available, in the time available. The census figures show this is where measured training time concentrates.',
+          },
+          {
+            term: 'Observation and recall',
+            description:
+              'Noticing what is present, what is absent and what changed — and being able to account for it accurately weeks later, in a form that can be tested.',
+          },
+          {
+            term: 'Written accuracy',
+            description:
+              'The record is the durable output of most police work. It is read by supervisors, prosecutors, defence lawyers and courts, months afterwards, by people who were not there. A record that cannot be followed damages a case and the officer’s credibility.',
+          },
+          {
+            term: 'Teamwork and handover',
+            description:
+              'Incidents pass between shifts and units. Work that is not handed over accurately is work partially lost.',
+          },
+          {
+            term: 'Emotional steadiness',
+            description:
+              'Continuing to behave professionally when the other person is not, and continuing to function across repeated exposure to distress. This is a professional requirement rather than a personal virtue.',
+          },
+          {
+            term: 'Physical readiness',
+            description:
+              'Real, and one component among several. Health and fitness averaged 56 hours in the 2022 census — less than legal instruction. See [physical readiness in policing careers](/law-enforcement/physical-readiness-in-policing-careers).',
+          },
+        ],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Policing is mainly a physical job.',
+        reality:
+          'In the 2022 United States census, health and fitness averaged 56 hours while legal subjects together averaged 87, and over 97% of recruits received legal instruction.',
+      },
+      {
+        claim: 'Communication is a soft skill, secondary to the real work.',
+        reality:
+          'Most incidents are resolved through it and every incident begins with it. International standards frame the role in terms of necessity and limits, which is a judgement-and-communication description of the work.',
+      },
+      {
+        claim: 'Writing is paperwork, separate from the job.',
+        reality:
+          'The record is the durable output of most police work and is relied on by prosecutors, defence lawyers and courts months later, by people who were not present.',
+      },
+      {
+        claim: 'These skills are the same as what employers test for.',
+        reality:
+          'No selection process was researched. This page reasons from a published curriculum and international standards, not from any employer’s assessment framework.',
+      },
+      {
+        claim: 'Skills lists like this apply to every police service.',
+        reality:
+          'The curriculum evidence is United States state and local academies in 2022. The standards are international instruments. Neither establishes what any particular service requires.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Measured instruction time, United States state and local academies, 2022, as an indication of emphasis.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Legal subjects combined — 87 average hours, delivered to over 97% of recruits.',
+          'Firearms skills — 73 average hours.',
+          'Defensive tactics — 64 average hours.',
+          'Health and fitness — 56 average hours.',
+          'Community-related topics — delivered to over 80% of recruits.',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'uncertainty',
+        title: 'What hours do and do not show',
+        text: 'Hours measure how long something takes to train, not how important it is. Communication is used constantly and does not appear as a separate line in this table at all, which is a limitation of reading a curriculum this way.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'Every skill here is also a safeguard. Accurate records make review possible; judgement against a legal threshold is what keeps a power inside its limits; communication is what most often makes force unnecessary. The professional qualities and the protections are the same list read twice.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'The curriculum evidence is [what police recruits are taught](/law-enforcement/what-police-recruits-are-taught). The standards are [professional standards in policing work](/law-enforcement/professional-standards-in-policing-work). The legal limit on force is [when may police use force](/law-enforcement/police-use-of-force).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [what police recruits are taught](/law-enforcement/what-police-recruits-are-taught), [working life in policing](/law-enforcement/working-life-in-policing), and [the patrol officer role](/professions/patrol-officer).',
+      },
+    ],
+  },
+  {
+    slug: 'physical-readiness-in-policing-careers',
+    title: 'Physical readiness in policing careers',
+    shortTitle: 'Physical readiness',
+    question: 'How fit do you have to be to work in policing?',
+    summary:
+      'Fitness matters and standards exist, but they are set by each employer and differ. This explains why physical readiness is part of the job without stating a standard, prescribing a programme, or implying a universal test.',
+    entityType: 'concept',
+    section: 'law-enforcement',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'what-police-recruits-are-taught',
+      'skills-that-policing-relies-on',
+      'working-life-in-policing',
+      'what-a-police-academy-is',
+    ],
+    sources: ['us-bjs-training-academies-2022', 'ie-garda-trainee-booklet-2024'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-06',
+    publishedOn: '2026-09-06',
+    reviewedOn: '2026-09-06',
+    factsVerifiedOn: '2026-09-06',
+    readingTimeMinutes: 7,
+    uncertainty: [
+      'NO fitness standard, test content, pass mark or entry requirement is stated on this page for any country. Those are set by each employer, change over time, and publishing one invites it to be read as a target.',
+      'Whether standards differ by age, sex, role or stage of career was NOT RESEARCHED for any system.',
+      'This page contains no training programme, exercise prescription or preparation plan, and none should be inferred from it. Building preparation material would require a separate evidence and safety review.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Physical readiness in policing means being able to do the physical parts of the job safely, over a long career, including on a night shift in the eighth hour. It is a component of the work rather than its centre, and it is assessed differently by every employer that assesses it.',
+      },
+      {
+        kind: 'callout',
+        variant: 'safety',
+        title: 'What this page deliberately does not contain',
+        text: 'No fitness standard, no test description, no pass mark, no exercise, no programme and no preparation plan. Publishing a standard invites people to train to a number that may not be their employer’s, and publishing a programme means giving physical training advice to strangers whose health this platform knows nothing about. Anyone preparing for a specific process should use the official material for that employer, and anyone changing their physical activity should take advice appropriate to their own health.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'The question is asked constantly, and it is usually answered badly — either with a single invented standard, or with a training programme aimed at a test the reader may not be taking. Both are worse than explaining why fitness is part of the job and where the actual requirements live.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'And the honest answer is more useful than a number',
+        text: 'A number without an employer attached tells a reader nothing they can act on, and may tell them something wrong. What is genuinely portable is the reason fitness is assessed at all — which does transfer between systems, even though the standards do not.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'Training curricula treat physical preparation as a taught subject with measured time. The 2022 United States census records an average of **56 hours** devoted to health and fitness, and records that 95% of academies required written and physical fitness assessments as part of the basic training curriculum.',
+        claim: 'fact',
+        sources: ['us-bjs-training-academies-2022'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'The subject is called health and fitness, not fitness',
+        text: 'That framing is worth noticing. It describes something maintained across a career in a role with shift work, irregular sleep and irregular eating — not a threshold cleared once at entry.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Assessment also appears at the selection stage in some systems. The Garda Trainee 2024 process includes a Physical Competency Test, conducted at Templemore, with candidates directed to official information on the test and how to prepare for it.',
+        claim: 'fact',
+        sources: ['ie-garda-trainee-booklet-2024'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where the actual requirement lives',
+        text: 'With the employer, in its own published material for the specific process a person is entering. That is the only place a current, correct standard exists, and it is where the Irish material itself directs candidates.',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'Why endurance matters more than peak capability',
+            description:
+              'The demand is a long shift, repeated, often at night — not a single maximal effort. General cardiovascular and musculoskeletal health serves that better than any specific capability.',
+          },
+          {
+            term: 'Why it is a career-long question',
+            description:
+              'A standard met at entry is not maintained automatically across a career that includes shift work and irregular routines. Curricula treating it as health rather than as a test reflect that.',
+          },
+          {
+            term: 'Why standards differ legitimately',
+            description:
+              'Employers assess against the demands of their own role in their own context. A standard that suits one service’s duties may be irrelevant to another’s, which is one reason a universal figure does not exist.',
+          },
+          {
+            term: 'Why fitness is not the main qualification',
+            description:
+              'In the same census, health and fitness averaged 56 hours while legal subjects together averaged 87. Physical readiness is necessary and is not what most of the training time is about.',
+          },
+        ],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'There is a standard police fitness test.',
+        reality:
+          'Standards are set by each employer, differ between and within countries, and change. No standard is stated on this page for any country.',
+      },
+      {
+        claim: 'You need to be exceptionally athletic to work in policing.',
+        reality:
+          'Curricula treat this as health and fitness maintained across a career rather than as peak performance. In the 2022 United States census the subject averaged 56 hours, against 87 for legal subjects.',
+      },
+      {
+        claim: 'Fitness is assessed once, at entry.',
+        reality:
+          'The 2022 census records that 95% of academies required physical fitness assessments as part of the basic training curriculum, and the subject is framed as health and fitness rather than as a single threshold.',
+      },
+      {
+        claim: 'Policing is mainly a physical job.',
+        reality:
+          'Measured training time concentrates on legal subjects, and most incidents are resolved through communication.',
+      },
+      {
+        claim: 'A page like this can tell you whether you would pass.',
+        reality:
+          'It cannot. Requirements are set by the employer for a specific process, and no page here assesses any individual’s health, circumstances or eligibility.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Where physical assessment appears in the two systems where it was observed.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'At selection, before training — Ireland includes a Physical Competency Test in the Garda Trainee process, with official preparation information provided by the service.',
+          'During training, as an assessed subject — 95% of United States academies required physical fitness assessments within basic training in 2022, with an average of 56 hours of health and fitness instruction.',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'Scope',
+        text: 'Two systems, and no standard from either. Whether other systems assess at selection, during training, both or neither was not researched.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'Fitness standards are also a question of fair access. A requirement that is not genuinely related to the demands of the role excludes people for no good reason, which is why standards are periodically revisited and why they are properly the employer’s published business rather than folklore.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'The curriculum context is [what police recruits are taught](/law-enforcement/what-police-recruits-are-taught). The wider professional picture is [skills that policing relies on](/law-enforcement/skills-that-policing-relies-on). The working pattern that makes health a career-long question is [working life in policing](/law-enforcement/working-life-in-policing).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [skills that policing relies on](/law-enforcement/skills-that-policing-relies-on), [working life in policing](/law-enforcement/working-life-in-policing), and [what police recruits are taught](/law-enforcement/what-police-recruits-are-taught).',
+      },
+    ],
+  },
+  {
+    slug: 'working-life-in-policing',
+    title: 'Working life in policing',
+    shortTitle: 'Working life',
+    question: 'What is the working life of a police officer actually like?',
+    summary:
+      'Shift work, continuous public contact, a great deal of writing, and long periods of ordinary work punctuated by incidents that are not ordinary. The demanding parts are not always the ones people expect.',
+    entityType: 'concept',
+    section: 'law-enforcement',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'skills-that-policing-relies-on',
+      'professional-standards-in-policing-work',
+      'how-policing-careers-develop',
+      'civilian-roles-in-police-organisations',
+    ],
+    sources: ['ie-garda-trainee-booklet-2024', 'unodc-cpcj', 'un-code-of-conduct-1979'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-06',
+    publishedOn: '2026-09-06',
+    reviewedOn: '2026-09-06',
+    factsVerifiedOn: '2026-09-06',
+    readingTimeMinutes: 8,
+    uncertainty: [
+      'No employer’s shift pattern, working hours, leave arrangement or conditions of service were researched for any country. This describes the shape of the work, not any service’s terms.',
+      'What support services provide for exposure to distressing incidents was NOT RESEARCHED for any system, although the exposure itself is inherent to the role.',
+      'No pay, allowance or condition-of-service figure appears anywhere in this wave.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Working life is the part of a job that decides whether someone stays in it, and it is usually the part career descriptions leave out. For policing it is shaped by one structural fact: the function is availability, and availability has to be provided around the clock.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This describes the shape of working life in policing in general terms. It states no employer’s shift pattern, hours, leave, conditions or pay, none of which were researched. It is orientation for someone deciding whether the work suits them, not information about any particular job.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'People leave jobs over working conditions far more often than over the content of the work. Someone considering policing is better served by an honest account of shift work and documentation than by another description of incidents.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'And an honest account is not a discouraging one',
+        text: 'The point is not that the work is hard. It is that the demanding parts are frequently not the ones people anticipate — the writing, the shift rotation, and the accumulation of ordinary distress rather than the exceptional incidents.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'Shift work is the defining feature. Because the function is availability, cover has to exist at every hour, which means rotating shifts including nights, weekends and public holidays. Patterns are set by the employer, and none is described here.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'What shift work actually costs',
+        text: 'Not the hours themselves so much as their rotation. Sleep, meals, exercise and time with other people all have to be organised around a pattern that changes, and the effect is cumulative rather than immediate. It is the single most common reason the working life differs from what people expect.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Training structures show how early the working reality begins. In Ireland, Phase I Stage 1 is "a mandatory residential training component, normally conducted on a Monday to Friday basis in the Garda College", and Stage 2 is "a mandatory observational placement training component, normally conducted within a commutable distance from home in an Operational Garda Station" — residential life, then an operational station, before attestation.',
+        claim: 'fact',
+        sources: ['ie-garda-trainee-booklet-2024'],
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'Most of the work is not what the job is famous for',
+            description:
+              'Public order, road policing, missing persons, safeguarding, incidents involving mental health, and assistance to people in difficulty make up much of the demand. Serious crime investigation is a smaller part of most officers’ time than the popular picture suggests.',
+          },
+          {
+            term: 'There is a great deal of writing',
+            description:
+              'What was done and why has to be recorded in a form that can be read by a supervisor, a prosecutor, a defence lawyer and sometimes a court, months later. This is a substantial share of the working day and is not separable from the work.',
+          },
+          {
+            term: 'Contact with the public is continuous, and mostly not with suspects',
+            description:
+              'Callers, witnesses, people in distress, people who are lost or injured. The proportion of contact that involves anyone suspected of anything is smaller than expected.',
+          },
+          {
+            term: 'Decisions are often taken alone and reviewed later',
+            description:
+              'A supervisor typically reviews recorded decisions afterwards rather than directing them at the time. That is why professional standards that hold when nobody is watching matter more here than supervision does.',
+          },
+          {
+            term: 'Exposure to distress is cumulative',
+            description:
+              'The difficulty is less any single incident than the accumulation across a career. What support any employer provides was not researched, and it varies.',
+          },
+          {
+            term: 'The team is a real part of the working life',
+            description:
+              'Shift-based work with shared risk produces strong working relationships, and handover between shifts and units is part of the job rather than an administrative afterthought.',
+          },
+        ],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Police work is mostly responding to serious crime.',
+        reality:
+          'Public order, road policing, missing persons, safeguarding, mental-health incidents and public assistance make up much of the demand across many services.',
+      },
+      {
+        claim: 'Paperwork is a minor part of the job.',
+        reality:
+          'The record is the durable output of most police work, relied on by prosecutors, defence lawyers and courts months later, and writing it occupies a substantial share of the working day.',
+      },
+      {
+        claim: 'Shift work is just working different hours.',
+        reality:
+          'The rotation is what makes it demanding — sleep, meals, exercise and social life all have to be organised around a pattern that changes, and the effect accumulates.',
+      },
+      {
+        claim: 'Officers are supervised as decisions are made.',
+        reality:
+          'In much operational work a supervisor reviews recorded decisions afterwards rather than directing them at the time.',
+      },
+      {
+        claim: 'The hardest part is dangerous incidents.',
+        reality:
+          'The cumulative exposure to ordinary distress is what most accounts identify as the harder feature, and it is continuous rather than exceptional.',
+      },
+      {
+        claim: 'This describes what a particular job would be like.',
+        reality:
+          'No employer’s shift pattern, hours, leave or conditions were researched. This is the general shape of the work, not any service’s terms.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'What differs between services, and what does not.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Differs: shift patterns, hours, leave arrangements, conditions of service, and support provision — all employer-set, none researched here.',
+          'Differs: how much of a role is response, community or investigative work.',
+          'Differs: whether officers routinely carry firearms, which is set nationally.',
+          'Does not differ much: the requirement for continuous cover, the volume of documentation, the predominance of contact with people who are not suspects, and the fact that decisions are reviewed after the event.',
+        ],
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'The documentation burden that officers experience as workload is the same thing the public experiences as accountability. A record made contemporaneously is what allows a decision to be examined later — by a supervisor, a court, or a complaints body — and there is no version of the job that has the accountability without the writing.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'The professional qualities involved are [skills that policing relies on](/law-enforcement/skills-that-policing-relies-on). The standards that apply when nobody is watching are [professional standards in policing work](/law-enforcement/professional-standards-in-policing-work). The role in detail is [patrol officer](/professions/patrol-officer).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [the patrol officer role](/professions/patrol-officer), [skills that policing relies on](/law-enforcement/skills-that-policing-relies-on), and [professional standards in policing work](/law-enforcement/professional-standards-in-policing-work).',
+      },
+    ],
+  },
+  {
+    slug: 'professional-standards-in-policing-work',
+    title: 'Professional standards in policing work',
+    shortTitle: 'Professional standards',
+    question: 'What does professional conduct mean in policing?',
+    summary:
+      'International standards frame the role in terms of duty, necessity and limits. Because so many decisions are taken alone, the standards have to work when nobody is watching — which is a different requirement from being supervised.',
+    entityType: 'concept',
+    section: 'law-enforcement',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'skills-that-policing-relies-on',
+      'working-life-in-policing',
+      'why-police-accountability-matters',
+      'how-police-are-held-to-account',
+    ],
+    sources: ['un-code-of-conduct-1979', 'unodc-e4j-use-of-force', 'unodc-cpcj'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-06',
+    publishedOn: '2026-09-06',
+    reviewedOn: '2026-09-06',
+    factsVerifiedOn: '2026-09-06',
+    readingTimeMinutes: 7,
+    uncertainty: [
+      'No national code of conduct or professional standards framework was researched for any country. This page uses international instruments, which bind states in a different way and are not any service’s own code.',
+      'How standards are enforced in any particular system was NOT RESEARCHED, and enforcement is what makes a standard operative.',
+      'Nothing here assesses how any service performs against any standard. That would be an institutional-effectiveness claim, which this platform does not publish without a stated measure and a source that applies it.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Professional standards are what a role requires of a person beyond obeying the law. For policing they matter unusually much, because the role combines significant powers with decisions that are frequently taken alone, immediately, and reviewed only afterwards.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This describes what professional standards ask of an individual doing this work, using international instruments. It is not an assessment of any police service, not a national code, and not a claim about how well any system performs. The institutional machinery of accountability is covered separately.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'Supervision cannot be the primary control in a role where most decisions happen without a supervisor present. What fills that gap is a professional standard the officer applies to their own conduct — which is why these standards are framed as duties rather than as rules enforced by observation.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'This is a claim about design, not about virtue',
+        text: 'The point is structural. A system that relied on watching officers would need more watchers than officers. Recruitment, training and professional standards exist because the alternative does not scale — not because anyone assumes the people involved are unusually good or unusually bad.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'The United Nations Code of Conduct for Law Enforcement Officials sets the baseline: officials perform the duty imposed on them by law, and force may be used only to the extent required for the performance of their duty.',
+        claim: 'fact',
+        sources: ['un-code-of-conduct-1979', 'unodc-e4j-use-of-force'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Read what that formulation does',
+        text: 'It does not say force is permitted when justified in the officer’s view. It ties the permission to a duty imposed by law and then limits it to the extent required for performing that duty. Both halves are constraints, and the second constrains even where the first is satisfied.',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'Lawful authority, and only for its purpose',
+            description:
+              'A power is granted for a purpose and may be exercised for that purpose. Using a power for something else is a breach of standards even where the formal conditions for it happen to be met.',
+          },
+          {
+            term: 'Necessity and proportion',
+            description:
+              'That an action is permitted does not mean it is required. The standard asks what is needed, which frequently means acting less than the maximum the law would allow.',
+          },
+          {
+            term: 'Impartiality',
+            description:
+              'Treating people according to what they have done rather than who they are. This is a professional obligation as well as a legal one, and it is tested most where discretion is widest.',
+          },
+          {
+            term: 'Honesty in the record',
+            description:
+              'Because so much is reviewed only through what was written, the integrity of the record is close to the whole of accountability. A false or convenient record defeats every other safeguard at once.',
+          },
+          {
+            term: 'Confidentiality',
+            description:
+              'Officers hold information about people at their most vulnerable, obtained under legal authority for a purpose. Handling it accordingly is a professional duty.',
+          },
+          {
+            term: 'Behaving consistently when unobserved',
+            description:
+              'The operative test. A standard that is met only when someone is watching is not a professional standard, and in this role most of the time nobody is.',
+          },
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Standards are not the same as accountability machinery',
+        text: 'A standard states what conduct is required. Accountability is what happens when it is not met — complaints bodies, inspectorates, courts and disciplinary systems, which differ substantially between countries and are covered separately.',
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Professional standards are the same as the law.',
+        reality:
+          'The Code of Conduct requires that force be used only to the extent required for the performance of duty. That is a standard about what is necessary, which can be narrower than what is permitted.',
+      },
+      {
+        claim: 'Standards are enforced mainly by supervision.',
+        reality:
+          'Most operational decisions are taken without a supervisor present and are reviewed afterwards through the record, which is why the standards are framed as duties the officer applies to their own conduct.',
+      },
+      {
+        claim: 'All police services share the same code of conduct.',
+        reality:
+          'No national code was researched for this page. The instruments used here are international, which bind states in a different way and are not any service’s own code.',
+      },
+      {
+        claim: 'A code of conduct means conduct is good.',
+        reality:
+          'A standard states what is required. Whether it is met is an empirical question about a particular system, which this page does not assess and this platform does not assert without a stated measure and a source applying it.',
+      },
+      {
+        claim: 'If an action is lawful, it meets professional standards.',
+        reality:
+          'A power granted for a purpose may be used for that purpose, and the necessity standard asks what is needed rather than what is maximally permitted.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'What the international instruments state, and what they leave to national systems.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Stated internationally: that officials perform the duty imposed on them by law, and that force may be used only to the extent required for the performance of that duty.',
+          'Left to national systems: the code that actually binds an officer, the disciplinary process, the complaints machinery, and the sanctions available.',
+          'Not addressed here at all: how any system performs against any standard.',
+        ],
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'Professional standards and public confidence in policing are two ends of one subject. A service can only ask to be trusted with powers exercised out of sight if the people exercising them hold to standards that do not depend on being observed — and that is a claim about recruitment, training and professional culture rather than about rules.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'The institutional side is [why police accountability matters](/law-enforcement/why-police-accountability-matters) and [how are police held to account](/law-enforcement/how-police-are-held-to-account). The legal limit on force is [when may police use force](/law-enforcement/police-use-of-force). The professional qualities are [skills that policing relies on](/law-enforcement/skills-that-policing-relies-on).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [why police accountability matters](/law-enforcement/why-police-accountability-matters), [skills that policing relies on](/law-enforcement/skills-that-policing-relies-on), and [working life in policing](/law-enforcement/working-life-in-policing).',
       },
     ],
   },

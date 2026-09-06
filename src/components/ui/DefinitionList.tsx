@@ -1,6 +1,12 @@
-import { ScriptText } from '@/components/content/ScriptText';
+import { InlineText } from '@/components/content/InlineText';
 
-/** A real dl/dt/dd, not a styled table. */
+/**
+ * A real dl/dt/dd, not a styled table.
+ *
+ * WAVE 24: renders through InlineText rather than ScriptText. It had rendered content text
+ * without resolving link markers, so four pages that predate this wave were shipping literal
+ * `[text](/path)` syntax inside definition descriptions.
+ */
 export function DefinitionList({
   items,
 }: {
@@ -14,10 +20,10 @@ export function DefinitionList({
           className="grid gap-1 py-4 sm:grid-cols-[minmax(0,14rem)_1fr] sm:gap-6"
         >
           <dt className="font-semibold text-ink">
-            <ScriptText text={item.term} />
+            <InlineText text={item.term} />
           </dt>
           <dd className="text-ink-muted">
-            <ScriptText text={item.description} />
+            <InlineText text={item.description} />
           </dd>
         </div>
       ))}

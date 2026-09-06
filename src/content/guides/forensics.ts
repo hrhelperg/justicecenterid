@@ -691,7 +691,7 @@ export const FORENSICS_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [who regulates forensic science](/forensics/who-regulates-forensic-science), [who investigates a death](/forensics/who-investigates-a-death), and [the forensic scientist](/professions/forensic-scientist).',
+        text: 'Related: [who regulates forensic science](/forensics/who-regulates-forensic-science), [who investigates a death](/forensics/who-investigates-a-death), and [the forensic scientist](/professions/forensic-scientist). Forensic staff are one of several professional groups working inside justice organisations without police powers — see [civilian roles in police organisations](/law-enforcement/civilian-roles-in-police-organisations).',
       },
     ],
   },

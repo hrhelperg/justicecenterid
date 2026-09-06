@@ -1534,3 +1534,114 @@ treating national investigative power as globally self-executing. Details in
   independently reproduced before being acted on.
 
 Delivered on `feat/knowledge-expansion-wave-23`. Not merged, not deployed.
+
+---
+
+# PROGRAMME TRANSITION — Audience, Careers and Commercial Foundation
+
+**Waves 1–23 built the institutional and legal authority foundation. From Wave 24 the direction
+changes, and this is recorded here so that later prioritisation does not silently revert to it.**
+
+The corpus has a mature legal and institutional layer: 148 guides, 344 sources, 32 country dossiers,
+and comparative depth on constitutional rights, investigative powers and cross-border cooperation.
+That foundation is valuable and is preserved. It does not need to be deepened indefinitely.
+
+**The standing prioritisation rule from Wave 24 onward:**
+
+> Future expansion prioritises **breadth, accessibility, careers, education, public understanding
+> and commercial potential** over ever-deeper procedural law.
+>
+> Encountering another legal distinction is **not** by itself a reason to build a wave around it.
+> Procedural-law material met during other work is classified **OUT OF PRODUCT SCOPE** and is
+> **not** automatically logged as a future legal wave.
+
+This is enforced mechanically as well as editorially. The **procedural-depth guard** in
+`tests/content/wave24-careers-training.test.ts` fails the build if a career page becomes
+substantially about filing, deadlines, motions, warrants, evidentiary objections or interrogation
+procedure. It is proportion-aware rather than keyword-based, so legitimate sentences about a role
+survive. Product-scope control, not keyword censorship.
+
+**What the platform is:** an independent educational knowledge centre for justice, law enforcement,
+public safety, careers and professional education. Not a government agency, not affiliated with any
+public authority, not an advocacy organisation, not a law firm, and not a legal-advice service.
+
+**Commercial principles, recorded as standing rules:** paid placement is labelled; sponsorship never
+alters a factual ranking; an affiliate relationship never determines an editorial conclusion;
+official sources remain authoritative for recruitment requirements; a commercial partner cannot
+purchase a factual claim; no education provider can buy "best academy" status, because no such
+status exists; product monetisation stays structurally separate from institutional facts. Internal
+mapping is in `docs/research/careers-commercial-opportunity-map.md` and a test asserts none of it
+reaches published content.
+
+## Phase 38 — Knowledge Expansion Wave 24 (delivered 2026-09-06)
+
+Law enforcement careers, training and professional pathways. Twelve comparative guides in
+`/law-enforcement`, career orientation added to all seven existing profession records, and one new
+profession record. Details in `docs/research/knowledge-expansion-wave-24-qa.md` and
+`docs/research/careers-model-findings.md`.
+
+- **The merge gate failed first, and work stopped.** Wave 23 was reported merged; `origin/main` was
+  still at the Wave 22 merge with every element of Wave 23 absent. Nothing was stacked on the
+  unmerged branch and nothing was recreated. After the real merge the gate ran again from scratch
+  and passed substantively, not by ancestry alone.
+- **The baseline found an empty layer, measured rather than assumed.** Across 148 guides, 7
+  profession records and 17 institution records, `police academy`, `recruitment`, `career
+progression`, `physical fitness`, `shift work`, `report writing`, `criminal investigator` and
+  `dispatcher` each occurred **zero** times. The high-frequency terms — `judge` 357, `prosecutor`
+  351 — are the institutional and legal senses, not career content.
+- **Architecture: reuse `/professions`, do not create `/careers`.** A parallel family would
+  cannibalise the canonical records by construction, and the corpus is organised by function rather
+  than by audience — `/careers` would have been the first route family named after who is reading.
+  Comparative questions that are not about one role go to `/law-enforcement` instead.
+- **The finding that reorganises the comparison: in the Netherlands, investigation is an entry
+  route.** `bachelor Rechercheur` sits alongside `bachelor Politiekunde Wijkagent` and `bachelor
+Politieleider` as named three-year entry programmes. Investigator, community officer and police
+  leader are not stages reached after years in uniform; they are programmes a person is admitted to.
+  "Detective" therefore names an occupational entry route in one system and a later assignment in
+  another, which is why rank, role, specialisation and assignment needed their own page.
+- **No researched system requires a degree, and two award one.** The official recruitment service
+  for England and Wales states it in five words: "You don't need a degree to join the police." The
+  Police Constable _Degree_ Apprenticeship is named for what it **awards**, not for what it
+  requires — the ambiguity that generates most of this misunderstanding.
+- **"Police academy" does not travel.** Of five systems, only the United States material uses the
+  term ordinarily. Ireland has a College, the Netherlands an Academie awarding bachelor degrees,
+  Berlin a three-year Studium awarding a Bachelor of Arts, and England and Wales no academy at all.
+- **There is no single answer inside one country either.** The 2022 BJS census records 806 average
+  hours of basic training, concealing a range from 681 (state POST) to 969 (state police) by academy
+  type — the longest roughly 40% longer than the shortest.
+- **The curriculum refutes the popular image.** Criminal and constitutional law, traffic law and
+  juvenile justice law together average **87 hours** against 73 for firearms skills and 64 for
+  defensive tactics, with over 97% of recruits receiving legal instruction.
+- **A mutation proof defeated this wave's own central safeguard.** W24M6 inserted a filing manual
+  into a career page and passed all 187 tests: the how-to pattern required a comma after "first"
+  that the injected text lacked, and three procedural paragraphs on a long page stayed under the 8%
+  share. Fixed with a punctuation-independent pattern and an absolute count alongside the
+  proportion.
+- **A second proof found the publication gate checking the wrong thing.** W24M8 changed a country
+  example from `netherlands` to `france` while leaving Dutch sources in place and passed, because
+  the gate checks only that the example points at a published dossier. A country claim now requires
+  a source scoped to that country.
+- **A P0 the wave introduced and its own e2e caught.** Reference records had never contained a
+  Markdown link, so `Bullets` rendered raw text; the first build shipped 93 literal `[text](/path)`
+  strings across eight profession pages. `InlineText` resolves them and renders any non-internal
+  target as plain text, enforcing the no-external-links rule in the renderer rather than by review.
+- **The link-graph metric passed while the cluster was self-referential.** 0 orphans / 0 weakly
+  linked / 0 dead ends, with ten of twelve new pages having no inbound link from any pre-existing
+  page. Eleven editorial backlinks were added and a test now asserts inbound linkage specifically
+  from pages that predate the wave.
+- **`Occupation` structured data evaluated and declined.** It carries labour-market semantics —
+  `estimatedSalary`, `occupationalCategory`, `experienceRequirements` — that this wave publishes
+  none of, and the wave's whole finding is that qualifications are jurisdiction-specific. An e2e
+  test walks every `@type` and fails on `Occupation`, `JobPosting`, `Course` and
+  `EducationalOccupationalProgram`.
+- **No pay, anywhere.** Official recruitment material states it; this wave publishes none of it, and
+  four patterns including currency symbols enforce that.
+- **Client JS moved by zero bytes.** No carousel, chart, quiz or personalisation library. CSS +61
+  bytes. The one component change is a server-rendered function.
+- Validation: 7,768 tests / 79 files; 1,486 Playwright tests passing and 4 skipped across 18 specs;
+  **502 routes**, 504 pages, 502 sitemap URLs; 353 sources; 0 orphans, 0 weakly linked, 0 dead ends.
+  **15/15 mutation proofs valid**, two caught only after the fixes they forced. Adversarial QA:
+  1 P0 and 3 P2 across twenty lenses, 21 candidates refuted, every finding independently reproduced
+  before being acted on.
+
+Delivered on `feat/knowledge-expansion-wave-24`. Not merged, not deployed.
