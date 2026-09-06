@@ -498,6 +498,115 @@ export const NETHERLANDS: CountryDossier = {
         'Border and customs in the Netherlands involve the Royal Netherlands Marechaussee, the Customs administration, the Schengen and EU customs context, and the major port and airport at Rotterdam and Schiphol — a combination that must be distinguished carefully and could not be researched to that standard here.',
     },
     {
+      moduleId: 'police-recruitment',
+      title: 'Police recruitment in the Netherlands',
+      summary:
+        'Entry is admission to a police education programme rather than application to a job, and the choice of programme — including one leading directly into investigation — is made at the point of entry.',
+      status: 'published',
+      review: 'fact-checked',
+      safetyReview: 'cleared',
+      updatedOn: '2026-09-06',
+      reviewedOn: '2026-09-06',
+      factsVerifiedOn: '2026-09-06',
+      temporalScope: 'current',
+      sources: [
+        'nl-politie-toelatingseisen',
+        'nl-politie-opleidingsoverzicht',
+        'nl-politieacademie-basisopleidingen',
+      ],
+      relatedGuides: [
+        'who-recruits-police-officers',
+        'citizenship-nationality-and-residency-in-police-recruitment',
+        'rank-role-and-specialisation',
+        'what-a-police-academy-is',
+      ],
+      blocks: [
+        {
+          kind: 'callout',
+          variant: 'scope',
+          title: 'What this page covers, and when it was checked',
+          text: 'This describes entry to the Dutch national police through the politieopleiding. It does not cover the Koninklijke Marechaussee or any other Dutch body with law-enforcement functions. Verified against official sources on 6 September 2026; the current position is the one published by the Nationale Politie and the Politieacademie.',
+        },
+        {
+          kind: 'paragraph',
+          text: 'The Dutch route inverts the shape most systems use. Rather than applying for a post and being trained afterwards, a candidate is admitted to a named education programme, and the programme determines the kind of police work the person is being prepared for.',
+          claim: 'analysis',
+        },
+        {
+          kind: 'paragraph',
+          text: 'Six entry programmes are published: the politieopleiding at mbo 4-niveau lasting two years, and four three-year hbo bachelors — bachelor Politiekunde Politieagent, bachelor Politiekunde Wijkagent, bachelor Rechercheur and bachelor Politieleider.',
+          claim: 'fact',
+          sources: ['nl-politie-opleidingsoverzicht'],
+        },
+        {
+          kind: 'callout',
+          variant: 'analysis',
+          title: 'Investigation and community policing are entry routes here',
+          text: 'bachelor Rechercheur prepares an investigator and bachelor Wijkagent a community officer, and both are entered at the start rather than reached after years in uniform. That is why "how do I become a detective" has a different answer in the Netherlands than in systems where investigation follows service — see rank, role and specialisation.',
+        },
+        {
+          kind: 'definitionList',
+          items: [
+            {
+              term: 'Nationality',
+              description:
+                'Dutch nationality is required at the start of the selection procedure, and the official wording allows for it being held alongside another: "je de Nederlandse nationaliteit moet hebben. Dit mag ook je tweede nationaliteit zijn." This is a genuine nationality requirement, unlike systems that ask only for a right to work.',
+            },
+            {
+              term: 'Age',
+              description:
+                'A minimum age of 18 at the start of a police programme. No maximum was stated by the source consulted, and none is inferred here.',
+            },
+            {
+              term: 'Prior education',
+              description:
+                'A vmbo-tl/gl, mbo-3 or mbo-4 diploma, or a transfer certificate to 4 havo/vwo. A candidate without one of those may instead sit a toelatingstoets — so the qualification is a route in, not the only route in.',
+            },
+            {
+              term: 'Language',
+              description:
+                'Dutch at level B1 or above, in both written and spoken form. The level is specified rather than left to judgement.',
+            },
+            {
+              term: 'Driving licence',
+              description:
+                'A category B licence for a manual car, required within nine months after the training starts rather than before applying.',
+            },
+          ],
+        },
+        {
+          kind: 'paragraph',
+          text: 'Admission also considers mental and physical fitness, medical requirements, integrity and reliability, and neutrality. The official material lists these as areas of assessment; it is not reproduced here as criteria, and no standard is stated.',
+          claim: 'fact',
+          sources: ['nl-politie-toelatingseisen'],
+        },
+        {
+          kind: 'paragraph',
+          text: 'Teaching is split between the Politieacademie and the region where the student is posted: the two-year mbo-4 route is taught at a Politieacademie location with practical lessons in the region of posting.',
+          claim: 'fact',
+          sources: ['nl-politieacademie-basisopleidingen'],
+        },
+        {
+          kind: 'callout',
+          variant: 'safety',
+          title: 'What this page will not tell you',
+          text: 'It does not describe how the selection procedure is scored, what the medical or psychological assessment examines, or how to prepare for any stage. It cannot tell any individual whether they are eligible.',
+        },
+        {
+          kind: 'callout',
+          variant: 'note',
+          title: 'Where the current requirements live',
+          text: 'The Nationale Politie publishes the admission requirements and the programme overview, and the Politieacademie publishes the programmes themselves. This platform is not affiliated with either and does not accept applications.',
+        },
+      ],
+      uncertainty: [
+        'Which prior qualification is required for each individual bachelor route was NOT RESEARCHED; the requirements read here are the general ones for the politieopleiding.',
+        'Selection stages, their order and their content were NOT RESEARCHED beyond the areas of assessment the official page names.',
+        'Whether any maximum age applies was NOT ESTABLISHED. The absence of a stated maximum is not evidence that none exists.',
+        'Entry to the Koninklijke Marechaussee and to civilian police roles was NOT RESEARCHED.',
+      ],
+    },
+    {
       moduleId: 'history',
       title: 'Institutional history of the Netherlands',
       summary: 'Not yet researched.',

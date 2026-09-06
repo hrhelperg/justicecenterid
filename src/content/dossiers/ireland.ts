@@ -547,6 +547,117 @@ export const IRELAND: CountryDossier = {
         'Border and customs in Ireland involve a distinctive combination — the Common Travel Area with the United Kingdom, the European Union customs and Schengen context, and the land border with Northern Ireland — that must be distinguished carefully and could not be researched to that standard here. The scope-integrity risk (conflating the State with the island) is highest exactly on this topic, so it is better absent than approximated.',
     },
     {
+      moduleId: 'police-recruitment',
+      title: 'Police recruitment in Ireland',
+      summary:
+        'One national service recruits, through a central public appointments process, under Regulations that outlive any single competition — and the eligibility rules distinguish nationality from residency in a way most summaries flatten.',
+      status: 'published',
+      review: 'fact-checked',
+      safetyReview: 'cleared',
+      updatedOn: '2026-09-06',
+      reviewedOn: '2026-09-06',
+      factsVerifiedOn: '2026-09-06',
+      temporalScope: 'current',
+      sources: [
+        'ie-garda-eligibility-regulations',
+        'ie-garda-trainee-booklet-2024',
+        'ie-garda-educational-requirements',
+      ],
+      relatedGuides: [
+        'who-recruits-police-officers',
+        'citizenship-nationality-and-residency-in-police-recruitment',
+        'when-a-recruitment-requirement-is-campaign-specific',
+        'what-a-police-academy-is',
+      ],
+      blocks: [
+        {
+          kind: 'callout',
+          variant: 'scope',
+          title: 'What this page covers, and when it was checked',
+          text: 'This describes entry as a Garda Trainee in An Garda Síochána, and nothing else. It does not cover any other Irish law-enforcement or security role. The information was verified against official sources on 6 September 2026; recruitment requirements change, and the current position is always the one published by An Garda Síochána and the Public Appointments Service.',
+        },
+        {
+          kind: 'paragraph',
+          text: 'Ireland has one national police service, so it has one police recruitment route. There is no county, municipal or regional force to apply to instead. Entry is as a Garda Trainee, and the competition is run by the Public Appointments Service on behalf of the Garda Commissioner rather than by the service itself.',
+          claim: 'fact',
+          sources: ['ie-garda-trainee-booklet-2024'],
+        },
+        {
+          kind: 'callout',
+          variant: 'analysis',
+          title: 'Two documents, two different lifespans',
+          text: 'Entry is governed by the Garda Síochána (Admissions & Appointments) Regulations 2013, as amended by S.I. 602/2020, S.I. 757/2021 and S.I. 611/2023. A recruitment campaign then publishes its own booklet. The Regulations are the durable layer; the booklet is one competition. Reading a booklet term as a permanent rule is the most common way recruitment information goes wrong, and this page keeps the two apart.',
+        },
+        {
+          kind: 'paragraph',
+          text: 'The eligibility conditions are set out as a numbered list. An applicant must be of good character; be certified by a Registered Medical Practitioner nominated by the Commissioner to be "in good health, of sound constitution and suited physically and mentally to performing the duties of a member of the service"; and have passed a Physical Competence Test.',
+          claim: 'fact',
+          sources: ['ie-garda-eligibility-regulations'],
+        },
+        {
+          kind: 'definitionList',
+          items: [
+            {
+              term: 'Nationality, or international protection, or residence',
+              description:
+                'The condition is not "be an Irish citizen". It admits three alternatives: being a national of an EU Member State, an EEA State, the United Kingdom or the Swiss Confederation; or holding refugee or subsidiary protection status, or being a family member of such a person, with the declaration in force for the whole selection process; or having had one continuous year of residence in the State and, in the eight years before that, four years of total residence.',
+            },
+            {
+              term: 'Education, with three routes to the same threshold',
+              description:
+                'An Irish Leaving Certificate at grade D3 or O6 minimum in five subjects at Ordinary Level; or a Level 5 Major award of 120 credits on the National Framework of Qualifications; or a recognised qualification at Level 5 or greater assessed as comparable by Quality and Qualifications Ireland. Subjects taken at Foundation Level are not counted as equivalent.',
+            },
+            {
+              term: 'Language',
+              description:
+                'Proficiency in either or both of the Irish language and the English language. Either alone satisfies it.',
+            },
+            {
+              term: 'No degree is required',
+              description:
+                'The recruitment material states it directly: "There is no requirement to have a degree prior to entering An Garda Síochána as a Garda Trainee." It adds that a candidate in the final year of a degree may be offered flexibility on a start date.',
+            },
+          ],
+        },
+        {
+          kind: 'callout',
+          variant: 'uncertainty',
+          title: 'The age rule belongs to a competition, not to the service',
+          text: 'The 2024 booklet requires an applicant to "be 18 years of age but not yet 50 years of age at midnight on Thursday, 8th of February 2024". That window is anchored to one competition\u2019s closing date. This page therefore does not state an Irish police age requirement, because the source does not establish one that outlives that competition. Any current age rule is the one published for the current competition.',
+        },
+        {
+          kind: 'paragraph',
+          text: 'Selection is run in stages by the Public Appointments Service, and the later stages include a Physical Competence Test at Templemore, a medical examination, a substance-misuse test, and vetting. Candidates must be found suitable at each stage before being offered a place, and success at any stage is expressly not a guarantee of acceptance.',
+          claim: 'fact',
+          sources: ['ie-garda-trainee-booklet-2024'],
+        },
+        {
+          kind: 'callout',
+          variant: 'safety',
+          title: 'What this page will not tell you',
+          text: 'It does not describe how any assessment is scored, what a medical examination looks for, how vetting is carried out, or what to say at any stage. Nor can it tell any individual whether they are eligible: that depends on rules that change and on circumstances this platform does not assess. The official recruitment material is the only place that question is answered.',
+        },
+        {
+          kind: 'paragraph',
+          text: 'Training follows selection rather than preceding it. The Foundation Training Programme begins with Phase I, Stages 1 to 3, running "for a period of 36 weeks (or such period of time as the Garda Commissioner may determine)" — Stage 1 residential at the Garda College in Templemore, Stage 2 an observational placement in an operational Garda station, and Stage 3 residential again. Trainees attest after 36 weeks and then serve a probationary period.',
+          claim: 'fact',
+          sources: ['ie-garda-trainee-booklet-2024'],
+        },
+        {
+          kind: 'callout',
+          variant: 'note',
+          title: 'Where the current requirements live',
+          text: 'An Garda Síochána publishes careers information, and the Public Appointments Service runs the competitions and publishes each campaign\u2019s information booklet. Those are the authoritative sources for the position today. This platform is not affiliated with either body and does not accept applications.',
+        },
+      ],
+      uncertainty: [
+        'The age window, and any other campaign term, was read from the 2024 competition booklet and is NOT stated here as a standing requirement.',
+        'The Admissions and Appointments Regulations were named by the recruitment material but were NOT read directly, so what they provide beyond what the booklet reproduces is NOT ESTABLISHED.',
+        'Physical Competence Test standards, medical criteria and vetting criteria were deliberately not researched and are not described.',
+        'Entry to other Irish law-enforcement and security roles, and to the Garda Reserve as a separate stream, was NOT RESEARCHED.',
+      ],
+    },
+    {
       moduleId: 'history',
       title: 'Institutional history of Ireland',
       summary: 'Not yet researched.',

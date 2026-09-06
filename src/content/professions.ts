@@ -85,6 +85,7 @@ export const PROFESSIONS: readonly Profession[] = [
     adjacentCareers: [
       'Detective or investigator, for whom the patrol role is the usual route in many systems but not all — see [detective](/professions/detective).',
       'How entry, training and progression are organised across systems — see [what a police academy is](/law-enforcement/what-a-police-academy-is), [do police officers need a degree](/law-enforcement/do-police-officers-need-a-degree) and [how policing careers develop](/law-enforcement/how-policing-careers-develop).',
+      'How people actually enter the role in a given country — see [who recruits police officers](/law-enforcement/who-recruits-police-officers) and [police entry requirements across systems](/law-enforcement/police-entry-requirements-across-systems).',
       'What the work is like day to day, and the professional qualities it relies on — see [working life in policing](/law-enforcement/working-life-in-policing), [skills that policing relies on](/law-enforcement/skills-that-policing-relies-on) and [physical readiness in policing careers](/law-enforcement/physical-readiness-in-policing-careers).',
       'Emergency dispatcher, which handles the same incidents from the other end of the radio — see [emergency dispatcher](/professions/emergency-dispatcher).',
       'Corrections officer, a custodial role with comparable shift patterns and a different legal function — see [corrections officer](/professions/corrections-officer).',

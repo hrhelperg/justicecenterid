@@ -3376,7 +3376,7 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [what police recruits are taught](/law-enforcement/what-police-recruits-are-taught), [do police officers need a degree](/law-enforcement/do-police-officers-need-a-degree), and [the patrol officer role](/professions/patrol-officer).',
+        text: 'Related: [what police recruits are taught](/law-enforcement/what-police-recruits-are-taught), [do police officers need a degree](/law-enforcement/do-police-officers-need-a-degree), and [the patrol officer role](/professions/patrol-officer). Who runs the training is closely tied to who does the recruiting: see [who recruits police officers](/law-enforcement/who-recruits-police-officers), and, for the college this page names, [police recruitment in Ireland](/countries/ireland/police-recruitment).',
       },
     ],
   },
@@ -3570,7 +3570,7 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [what a police academy is](/law-enforcement/what-a-police-academy-is), [police training and police education](/law-enforcement/police-training-and-police-education), and [the patrol officer role](/professions/patrol-officer).',
+        text: 'Related: [what a police academy is](/law-enforcement/what-a-police-academy-is), [police training and police education](/law-enforcement/police-training-and-police-education), and [the patrol officer role](/professions/patrol-officer). How the education threshold sits alongside the other entry requirements in six systems is [police entry requirements across systems](/law-enforcement/police-entry-requirements-across-systems), and the criterion that varies most between systems is status: [citizenship, nationality and residency in police recruitment](/law-enforcement/citizenship-nationality-and-residency-in-police-recruitment).',
       },
     ],
   },
@@ -3746,7 +3746,7 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [what a police academy is](/law-enforcement/what-a-police-academy-is), [what police recruits are taught](/law-enforcement/what-police-recruits-are-taught), and [do police officers need a degree](/law-enforcement/do-police-officers-need-a-degree).',
+        text: 'Related: [what a police academy is](/law-enforcement/what-a-police-academy-is), [what police recruits are taught](/law-enforcement/what-police-recruits-are-taught), and [do police officers need a degree](/law-enforcement/do-police-officers-need-a-degree). The two German tracks this page contrasts are entered separately by each Land: see [police recruitment in Germany](/countries/germany/police-recruitment).',
       },
     ],
   },
@@ -4106,7 +4106,7 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [how policing careers develop](/law-enforcement/how-policing-careers-develop), [specialist roles in policing](/law-enforcement/specialist-roles-in-policing), and [the detective role](/professions/detective).',
+        text: 'Related: [how policing careers develop](/law-enforcement/how-policing-careers-develop), [specialist roles in policing](/law-enforcement/specialist-roles-in-policing), and [the detective role](/professions/detective). The Dutch entry programmes this page relies on are set out in [police recruitment in the Netherlands](/countries/netherlands/police-recruitment).',
       },
     ],
   },
@@ -4274,7 +4274,7 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [rank, role and specialisation](/law-enforcement/rank-role-and-specialisation), [specialist roles in policing](/law-enforcement/specialist-roles-in-policing), and [civilian roles in police organisations](/law-enforcement/civilian-roles-in-police-organisations).',
+        text: 'Related: [rank, role and specialisation](/law-enforcement/rank-role-and-specialisation), [specialist roles in policing](/law-enforcement/specialist-roles-in-policing), and [civilian roles in police organisations](/law-enforcement/civilian-roles-in-police-organisations). Where the branch point sits at entry, the recruitment page shows it directly: [police recruitment in the Netherlands](/countries/netherlands/police-recruitment).',
       },
     ],
   },
@@ -5016,7 +5016,7 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [skills that policing relies on](/law-enforcement/skills-that-policing-relies-on), [working life in policing](/law-enforcement/working-life-in-policing), and [what police recruits are taught](/law-enforcement/what-police-recruits-are-taught).',
+        text: 'Related: [skills that policing relies on](/law-enforcement/skills-that-policing-relies-on), [working life in policing](/law-enforcement/working-life-in-policing), and [what police recruits are taught](/law-enforcement/what-police-recruits-are-taught). Where a physical assessment sits within a recruitment process is [how police selection is structured](/law-enforcement/how-police-selection-is-structured). Standards published for one recruitment round are not necessarily standing rules — see [when a recruitment requirement is campaign-specific](/law-enforcement/when-a-recruitment-requirement-is-campaign-specific).',
       },
     ],
   },
@@ -5366,6 +5366,975 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
       {
         kind: 'paragraph',
         text: 'Related: [why police accountability matters](/law-enforcement/why-police-accountability-matters), [skills that policing relies on](/law-enforcement/skills-that-policing-relies-on), and [working life in policing](/law-enforcement/working-life-in-policing).',
+      },
+    ],
+  },
+  /*
+   * ==========================================================================
+   * WAVE 25 — country recruitment and police career entry paths.
+   * ==========================================================================
+   *
+   * These are the COMPARATIVE pages. The country-specific answers live on country modules at
+   * /countries/{country}/police-recruitment, which is where jurisdiction-specific facts belong
+   * and where the freshness field `factsVerifiedOn` is already mandatory. These pages own the
+   * questions that are not about one country.
+   *
+   * THE WAVE'S CENTRAL DISCIPLINE IS SCOPE. A Berlin source proves Berlin. A municipal department
+   * proves that department. A 2024 campaign booklet proves that campaign. Every claim below names
+   * the system it belongs to, and the guards in tests/content/wave25-police-recruitment.test.ts
+   * fail the build when a narrow source is stretched to a wide claim.
+   *
+   * ENGLAND AND WALES appears here rather than as a country module because the corpus has no
+   * England-and-Wales dossier to attach one to. That is an architectural fact, recorded rather
+   * than worked around by inventing a dossier.
+   *
+   * WHAT THESE PAGES REFUSE TO DO. They explain the official path and never how to game it. No
+   * page states a fitness standard, a medical criterion, a vetting method, or anything a reader
+   * could use to present themselves falsely. No page tells any individual whether they qualify.
+   */
+  {
+    slug: 'who-recruits-police-officers',
+    title: 'Who recruits police officers',
+    shortTitle: 'Who recruits',
+    question: 'Who actually recruits police officers?',
+    summary:
+      'In some countries one national body does, and in others the question has no single answer at all — which changes what "the entry requirements" can even mean.',
+    entityType: 'concept',
+    section: 'law-enforcement',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'police-entry-requirements-across-systems',
+      'citizenship-nationality-and-residency-in-police-recruitment',
+      'how-police-selection-is-structured',
+      'what-a-police-academy-is',
+    ],
+    sources: [
+      'ie-garda-trainee-booklet-2024',
+      'ew-police-eligibility-criteria',
+      'nz-police-eligibility',
+      'nl-politie-opleidingsoverzicht',
+      'de-berlin-polizei-studium',
+      'de-bayern-polizei-ausbildung',
+      'us-bjs-training-academies-2022',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-06',
+    publishedOn: '2026-09-06',
+    reviewedOn: '2026-09-06',
+    factsVerifiedOn: '2026-09-06',
+    readingTimeMinutes: 8,
+    uncertainty: [
+      'Six systems were researched: Ireland, England and Wales, New Zealand, the Netherlands, Germany (Berlin and Bavaria only) and the United States. Everything here is stated as at 6 September 2026.',
+      'Czechia was researched and DEFERRED: the only reachable official page redirects into an archive carrying a notice that its content may not be current, and it does not contain the conditions.',
+      'France, Poland, Spain, Canada and Australia were NOT RESEARCHED and are not described anywhere in this wave.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Before asking what the requirements are, it is worth asking whose requirements they would be. In a country with one national police service the answer is simple. In a country with hundreds of separate employers there is no single answer, and a page claiming to give one is describing something that does not exist.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This describes how recruitment is organised in six researched systems, as at 6 September 2026. It states no eligibility requirement — those are on the country pages, where each is tied to its own source and verification date. It is educational orientation, not recruitment advice, and this platform is not affiliated with any police service and accepts no applications.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'The structure determines what any answer can mean. Where one body recruits, a requirement is the requirement. Where many bodies recruit, a requirement found on one employer’s site is that employer’s, and repeating it as a national rule is the single most common error in writing about police recruitment.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'And the error is easy to make honestly',
+        text: 'Whichever employer publishes most clearly gets quoted most often. Clarity of publication is not the same as breadth of authority, and a page that does not name the recruiter beside the rule cannot tell the difference.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'Ireland is the clearest single-recruiter case. There is one national service, and the Garda Trainee competition is run by the Public Appointments Service on behalf of the Garda Commissioner rather than by the service itself — so even here, the recruiter and the employer are not the same body.',
+        claim: 'fact',
+        sources: ['ie-garda-trainee-booklet-2024'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'England and Wales sits between the two models, and the official recruitment service says so: there are national eligibility criteria, and "Police forces are also allowed to apply their own local criteria in addition to the national eligibility aspects, so make sure you check your chosen force’s website for a full list of the role criteria."',
+        claim: 'fact',
+        sources: ['ew-police-eligibility-criteria'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'That sentence is the whole problem in miniature',
+        text: 'A national criterion here is a floor, not the requirement. Someone who reads only the national criteria has read something true and incomplete, and the source itself is the thing telling you so. Any page that quotes a national criterion without that caveat has quietly changed its meaning.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Germany has no national police recruitment to describe. Each Land recruits on its own terms and the federal police recruits separately again — Berlin runs a mittlerer Dienst and a gehobener Dienst entered at different education levels, while Bavaria organises entry by Qualifikationsebene with a 2. Qualifikationsebene Ausbildung of "2,5 Jahre" in five six-month sections. Different vocabulary, different structures, separate recruiters.',
+        claim: 'fact',
+        sources: ['de-berlin-polizei-studium', 'de-bayern-polizei-ausbildung'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'The United States is the far end of the range. The Bureau of Justice Statistics 2022 census of training academies found academies operated both by law enforcement agencies and by colleges and technical schools, with average core basic training running from 681 hours at state POST or equivalent academies to 969 at state police and highway patrol academies.',
+        claim: 'fact',
+        sources: ['us-bjs-training-academies-2022'],
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'One national recruiter',
+            description:
+              'Ireland and New Zealand each have a single national police service recruiting centrally. A requirement published by that service is the requirement, for that service.',
+          },
+          {
+            term: 'National criteria plus local criteria',
+            description:
+              'England and Wales publishes national eligibility criteria and permits forces to add their own. Both layers are real, and the second is invisible to anyone reading only the first.',
+          },
+          {
+            term: 'Separate sub-national recruiters',
+            description:
+              'Germany: each Land recruits independently, with its own tracks and terminology, and the Bundespolizei separately again. There is no national layer to quote.',
+          },
+          {
+            term: 'Many independent employers',
+            description:
+              'The United States: municipal, county, state and federal employers hiring on their own terms, with academies of substantially different lengths and governance.',
+          },
+          {
+            term: 'Recruitment through an education system',
+            description:
+              'The Netherlands admits candidates to named police education programmes rather than to a post, so the entry decision and the career-direction decision are made together.',
+          },
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'A national police service is not every law-enforcement body',
+        text: 'Even where one service dominates, other bodies with enforcement functions usually recruit separately — border and customs authorities, prison services, military police and specialist investigative bodies among them. A page about joining a national police service does not describe those, and none of the country pages in this wave claims to.',
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Every country has national police entry requirements.',
+        reality:
+          'Germany has no national police recruitment at all — each Land recruits separately, as does the federal police. In the United States, employers at municipal, county, state and federal level each hire on their own terms.',
+      },
+      {
+        claim:
+          'If a country has one national police service, one set of rules covers policing there.',
+        reality:
+          'It covers that service. Border, customs, prison and specialist bodies generally recruit separately, and the country pages in this wave state their scope for that reason.',
+      },
+      {
+        claim: 'National eligibility criteria are the complete requirement.',
+        reality:
+          'In England and Wales the official recruitment service states that forces are also allowed to apply their own local criteria in addition to the national ones.',
+      },
+      {
+        claim: 'The police service always runs its own recruitment.',
+        reality:
+          'In Ireland the Garda Trainee competition is run by the Public Appointments Service on behalf of the Garda Commissioner.',
+      },
+      {
+        claim: 'A requirement found on a police website applies across that country.',
+        reality:
+          'It applies to whoever published it. A Land, a force or a department speaks for itself, and this wave names the recruiter beside every requirement for that reason.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'How recruitment is organised in the six researched systems.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'One national service, competition run by a central public appointments body — Ireland.',
+          'One national service recruiting centrally — New Zealand.',
+          'National eligibility criteria, with forces permitted to add local criteria — England and Wales.',
+          'Admission to named national police education programmes — Netherlands.',
+          'Separate recruitment by each Land, and separately again by the federal police — Germany.',
+          'Many independent employers at municipal, county, state and federal level — United States.',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'Scope of these statements',
+        text: 'Each describes the system named and no other. The German row rests on Berlin and Bavaria only; the United States row rests on a federal survey of training academies, not on any employer’s requirements.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'Who recruits is also a question about accountability. A single national recruiter can be held to one standard and examined as one process. Fragmented recruitment distributes that scrutiny across many employers, which is a genuine trade-off rather than a defect — local hiring answers to local governance, and national hiring answers to national oversight.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'The requirements themselves are on the country pages: [Ireland](/countries/ireland/police-recruitment), [the Netherlands](/countries/netherlands/police-recruitment), [New Zealand](/countries/new-zealand/police-recruitment), [Germany](/countries/germany/police-recruitment) and [the United States](/countries/united-states/police-recruitment). How policing is divided between levels of government is [how policing is divided between levels of government](/law-enforcement/how-policing-is-divided-between-levels).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [police entry requirements across systems](/law-enforcement/police-entry-requirements-across-systems), [how police selection is structured](/law-enforcement/how-police-selection-is-structured), and [what a police academy is](/law-enforcement/what-a-police-academy-is).',
+      },
+    ],
+  },
+  {
+    slug: 'citizenship-nationality-and-residency-in-police-recruitment',
+    title: 'Citizenship, nationality and residency in police recruitment',
+    shortTitle: 'Citizenship and residency',
+    question: 'Do you have to be a citizen to become a police officer?',
+    summary:
+      'Four researched systems ask four different questions — nationality, right to work, citizenship-or-residency, and nationality possibly held as a second one. Collapsing them into "you must be a citizen" is wrong in three of the four.',
+    entityType: 'concept',
+    section: 'law-enforcement',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'who-recruits-police-officers',
+      'police-entry-requirements-across-systems',
+      'when-a-recruitment-requirement-is-campaign-specific',
+      'how-police-selection-is-structured',
+    ],
+    sources: [
+      'ie-garda-eligibility-regulations',
+      'ew-police-eligibility-criteria',
+      'nz-police-eligibility',
+      'nl-politie-toelatingseisen',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-06',
+    publishedOn: '2026-09-06',
+    reviewedOn: '2026-09-06',
+    factsVerifiedOn: '2026-09-06',
+    readingTimeMinutes: 8,
+    uncertainty: [
+      'Four systems were researched for this question: Ireland, England and Wales, New Zealand and the Netherlands. Stated as at 6 September 2026.',
+      'The Irish criterion was read from a 2024 competition booklet. The underlying Admissions and Appointments Regulations were named but NOT read directly.',
+      'How any of these rules is applied in an individual case was NOT RESEARCHED, and no page here can assess anyone’s status.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Four words get used interchangeably and mean different things. **Citizenship** is a legal membership of a state. **Nationality** is often the same thing but is used in some rules as a category covering several states at once. **Residency** is lawful presence over time. **The right to work** is a permission that can exist without any of the others. Recruitment rules pick between these deliberately, and a summary that flattens them changes who is eligible.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This compares how four researched systems frame the requirement, as at 6 September 2026, using each system’s own words. It cannot tell any individual whether their status qualifies them anywhere — that depends on current rules and on personal circumstances this platform does not assess, and the recruiting authority is the only place that question is answered.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'This is one of the first questions anyone born outside the country asks, and it is answered wrongly more often than almost any other recruitment question — usually by someone paraphrasing a rule into the word they expected rather than the word the rule uses.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'The paraphrase is the failure',
+        text: 'Ireland’s rule admits nationals of a group of states, or people holding international protection, or people with a defined period of residence. Writing that as "you must be an Irish citizen" excludes, on paper, most of the people the rule actually admits. Nothing was mistranslated; a category was simply replaced with a narrower one.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'Ireland states three alternatives in one condition. An applicant must be a national of an EU Member State, an EEA State, the United Kingdom or the Swiss Confederation; **or** hold refugee or subsidiary protection status, or be a family member of such a person, with the declaration in force throughout the process; **or** have had one continuous year of residence in the State and, in the eight years before it, four years of total residence.',
+        claim: 'fact',
+        sources: ['ie-garda-eligibility-regulations'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Three different legal concepts, one requirement',
+        text: 'Nationality of a group of states, an international-protection status, and a residence history are not variations on a theme — they are separate routes to the same threshold, and a person may satisfy the condition through any one of them. This is the most structurally interesting eligibility rule read for this wave.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'England and Wales does not ask about citizenship at all in its national criteria. The official recruitment service frames it as permission: an applicant may apply "providing you have no restrictions on your right to live and work in the UK". A separate residency point exists for vetting, where candidates who have lived abroad may be required to have resided in the UK for three years.',
+        claim: 'fact',
+        sources: ['ew-police-eligibility-criteria'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'New Zealand asks for citizenship **or** residency, and counts a neighbour’s citizenship: "You must be a New Zealand or Australian citizen or have New Zealand residency or New Zealand permanent residency."',
+        claim: 'fact',
+        sources: ['nz-police-eligibility'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'The Netherlands requires nationality, and says explicitly that it need not be the only one: "je de Nederlandse nationaliteit moet hebben. Dit mag ook je tweede nationaliteit zijn" — you must have Dutch nationality, and this may also be your second nationality.',
+        claim: 'fact',
+        sources: ['nl-politie-toelatingseisen'],
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'Why the distinctions exist at all',
+            description:
+              'Police officers exercise coercive powers on behalf of a state, and states differ on how closely that should be tied to formal membership. Some tie it to nationality, some to lawful settlement, some to a permission to work. Each answer is a defensible position about what the office requires.',
+          },
+          {
+            term: 'Residency requirements often serve a different purpose',
+            description:
+              'A residence period may exist so that a background check can actually be carried out, rather than as a statement about belonging. In England and Wales the three-year point is connected to vetting.',
+          },
+          {
+            term: 'Dual nationality is treated explicitly where it is treated at all',
+            description:
+              'The Dutch rule says a second nationality is acceptable. Where a source is silent on dual nationality, this platform does not infer a position either way.',
+          },
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'safety',
+        title: 'What this page will not do',
+        text: 'It will not tell you whether your status qualifies you, will not interpret an immigration position, and will not suggest how to present one. Those questions belong to the recruiting authority, and in some cases to a qualified adviser.',
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'You have to be a citizen of the country to become a police officer.',
+        reality:
+          'Of the four researched systems, only the Netherlands requires nationality outright. England and Wales asks about the right to live and work, New Zealand accepts residency or Australian citizenship, and Ireland accepts a nationality category, an international-protection status, or a residence history.',
+      },
+      {
+        claim: 'Nationality and citizenship mean the same thing in these rules.',
+        reality:
+          'The Irish condition uses nationality as a category covering EU, EEA, UK and Swiss states at once, which is broader than the citizenship of any one of them.',
+      },
+      {
+        claim: 'Holding another nationality disqualifies you.',
+        reality:
+          'The Dutch rule states that Dutch nationality "mag ook je tweede nationaliteit zijn" — it may also be your second nationality. Where a source says nothing about dual nationality, nothing is inferred here.',
+      },
+      {
+        claim: 'Residency requirements are about loyalty.',
+        reality:
+          'They may serve a practical purpose. In England and Wales, the three-year residency point for people who have lived abroad is connected to vetting.',
+      },
+      {
+        claim: 'These rules are stable.',
+        reality:
+          'The Irish condition was read from a 2024 competition booklet, and eligibility rules are set by recruiting authorities and change. Everything here is stated as at 6 September 2026.',
+      },
+      {
+        claim: 'A page like this can tell you whether you are eligible.',
+        reality:
+          'It cannot. Eligibility depends on current rules and on individual circumstances that this platform does not assess, and the recruiting authority is the only source that answers it.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Four systems, four different questions asked.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Nationality of a group of states, OR international-protection status, OR a defined residence history — Ireland.',
+          'No restrictions on the right to live and work, with a separate residency point for vetting — England and Wales.',
+          'New Zealand or Australian citizenship, OR New Zealand residency or permanent residency — New Zealand.',
+          'Dutch nationality, which may be held as a second nationality — Netherlands.',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'uncertainty',
+        title: 'What is not claimed',
+        text: 'That these four are representative. Germany and the United States were not researched for this question, and the German and United States pages in this wave state no nationality requirement at all.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'A recruitment rule about status is also a statement about who a police service is drawn from, and services increasingly say they want to reflect the populations they police. The Irish material makes that connection explicitly, describing a commitment to reflecting the diversity of Irish society. Whether any rule achieves that is an empirical question this page does not assess.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'Each rule in full sits on its country page: [Ireland](/countries/ireland/police-recruitment), [the Netherlands](/countries/netherlands/police-recruitment) and [New Zealand](/countries/new-zealand/police-recruitment). Who sets the rule in the first place is [who recruits police officers](/law-enforcement/who-recruits-police-officers).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [who recruits police officers](/law-enforcement/who-recruits-police-officers), [police entry requirements across systems](/law-enforcement/police-entry-requirements-across-systems), and [when a recruitment requirement is campaign-specific](/law-enforcement/when-a-recruitment-requirement-is-campaign-specific).',
+      },
+    ],
+  },
+  {
+    slug: 'when-a-recruitment-requirement-is-campaign-specific',
+    title: 'When a recruitment requirement is campaign-specific',
+    shortTitle: 'Campaign-specific rules',
+    question:
+      'Is a police entry requirement permanent, or does it belong to one recruitment round?',
+    summary:
+      'Some requirements come from law and outlast every competition. Others are terms of a single campaign, anchored to its closing date. Official documents usually contain both, and rarely label which is which.',
+    entityType: 'concept',
+    section: 'law-enforcement',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'who-recruits-police-officers',
+      'citizenship-nationality-and-residency-in-police-recruitment',
+      'police-entry-requirements-across-systems',
+      'how-police-selection-is-structured',
+    ],
+    sources: [
+      'ie-garda-eligibility-regulations',
+      'ie-garda-trainee-booklet-2024',
+      'nz-police-eligibility',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-06',
+    publishedOn: '2026-09-06',
+    reviewedOn: '2026-09-06',
+    factsVerifiedOn: '2026-09-06',
+    readingTimeMinutes: 7,
+    uncertainty: [
+      'The worked example is Irish. Whether other systems separate durable and campaign terms as visibly was NOT RESEARCHED.',
+      'The Garda Síochána (Admissions & Appointments) Regulations were named by the recruitment material but NOT read directly, so what they contain beyond the booklet’s account is NOT ESTABLISHED.',
+      'This page states no current requirement for any system. It is about how to read requirements, not what they are.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'A recruitment document usually mixes two kinds of statement. Some come from law or standing policy and will still be true next year. Others are terms of the particular competition being advertised, and expire with it. Both appear in the same list, in the same tone, and the reader is left to tell them apart.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This is about how to read a recruitment source, not about any current requirement. It states no eligibility rule as applying today anywhere. It is educational, not advice.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'This distinction is why so much recruitment information on the internet is confidently wrong. A campaign term gets copied, the campaign closes, and the copy remains — presented as a standing rule long after the document it came from expired.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'And the copy is usually accurate at the moment it is made',
+        text: 'That is what makes it durable. Nobody invented anything; a true statement about one competition was simply detached from the competition it described. The error is one of scope, not of fact, which is why it survives fact-checking.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'The Irish material shows both layers in one document. It names the durable basis — entry is governed by the Garda Síochána (Admissions & Appointments) Regulations 2013, as amended by S.I. 602/2020, S.I. 757/2021 and S.I. 611/2023 — and then sets out the competition’s own terms.',
+        claim: 'fact',
+        sources: ['ie-garda-eligibility-regulations'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'One of those terms carries its expiry inside it. An applicant must "be 18 years of age but not yet 50 years of age at midnight on Thursday, 8th of February 2024". The age window is measured against one competition’s closing date.',
+        claim: 'fact',
+        sources: ['ie-garda-eligibility-regulations'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'So "the Irish police age limit is 18 to 49" is the wrong shape of sentence',
+        text: 'Not because the numbers are wrong for that competition, but because the sentence claims something the source does not support: that the window is a property of the service rather than of one round of hiring. This platform therefore states no Irish age requirement at all, and points to the current competition instead.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Contrast a statement built to outlast a campaign. New Zealand Police state that an applicant "must be at least 17 years old to apply and 18 when you start at Police College", and add "There’s no upper age limit". Nothing there is tied to a closing date, and the second sentence closes off the inference a silent source would leave open.',
+        claim: 'fact',
+        sources: ['nz-police-eligibility'],
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'Signals that a term belongs to a campaign',
+            description:
+              'A specific date, especially a closing date. A reference to "this competition". A document titled for a year. Numbers of posts. Anything measured "at" a moment rather than stated as a condition.',
+          },
+          {
+            term: 'Signals that a term is durable',
+            description:
+              'A citation to legislation or regulations. A statement framed as a standing condition of the role. Publication outside a campaign document, on a permanent careers page.',
+          },
+          {
+            term: 'Silence is not a signal either way',
+            description:
+              'A source that states a minimum age and says nothing about a maximum has not told you there is none. New Zealand says so explicitly; most sources do not, and no maximum is inferred from their silence.',
+          },
+          {
+            term: 'What follows for a reader',
+            description:
+              'Anything volatile should be taken from the current campaign, not from a summary of a past one — including this platform’s. The country pages here name the authority for that reason.',
+          },
+        ],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'An entry requirement published by a police service is a permanent rule.',
+        reality:
+          'The Irish age window is stated as applying "at midnight on Thursday, 8th of February 2024" — a term of one competition, in a document that separately names the Regulations governing admission.',
+      },
+      {
+        claim: 'If a requirement was accurate when it was written, it is safe to repeat.',
+        reality:
+          'A true statement about one competition becomes a false statement about the service when the competition closes. The error is one of scope, which is why it survives fact-checking.',
+      },
+      {
+        claim: 'A source that gives a minimum age but no maximum means there is no maximum.',
+        reality:
+          'It means the source did not say. New Zealand Police state "There’s no upper age limit" explicitly; where a source is silent, nothing is inferred here.',
+      },
+      {
+        claim: 'Legislation and campaign documents say the same things.',
+        reality:
+          'The Irish booklet names the Admissions and Appointments Regulations as governing entry and then sets out the competition’s own terms alongside them. The two layers have different lifespans.',
+      },
+      {
+        claim: 'This page tells you the current requirements.',
+        reality:
+          'It states no current requirement for any system. It is about how to read a recruitment source, and the current position is always the one the recruiting authority publishes.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Two layers, and how they were distinguishable in the sources read.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Durable: entry governed by the Garda Síochána (Admissions & Appointments) Regulations 2013 as amended — named in the campaign document itself.',
+          'Campaign: an age window measured at a stated closing date in February 2024.',
+          'Durable, and explicitly so: New Zealand’s application and college-start ages, with an express statement that no upper age limit exists.',
+          'Not determinable: any requirement published without a date, a citation, or a campaign reference — treated here as unverified rather than as either.',
+        ],
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'The distinction protects applicants. A person who plans around a copied campaign term may organise their circumstances against a rule that no longer applies, and the cost of that falls entirely on them. Publishing volatile terms without their scope transfers a maintenance problem onto the reader.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'The Irish rules in full are on [police recruitment in Ireland](/countries/ireland/police-recruitment), and the New Zealand ones on [police recruitment in New Zealand](/countries/new-zealand/police-recruitment). How the status rules differ is [citizenship, nationality and residency](/law-enforcement/citizenship-nationality-and-residency-in-police-recruitment).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [who recruits police officers](/law-enforcement/who-recruits-police-officers), [police entry requirements across systems](/law-enforcement/police-entry-requirements-across-systems), and [police recruitment in Ireland](/countries/ireland/police-recruitment).',
+      },
+    ],
+  },
+  {
+    slug: 'how-police-selection-is-structured',
+    title: 'How police selection is structured',
+    shortTitle: 'Selection stages',
+    question: 'What happens between applying to the police and starting training?',
+    summary:
+      'Selection runs in stages, and a candidate must be found suitable at each before reaching the next. This describes what the stages are for — not what any of them assesses, or how.',
+    entityType: 'concept',
+    section: 'law-enforcement',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'who-recruits-police-officers',
+      'police-entry-requirements-across-systems',
+      'when-a-recruitment-requirement-is-campaign-specific',
+      'physical-readiness-in-policing-careers',
+    ],
+    sources: [
+      'ie-garda-trainee-booklet-2024',
+      'nz-police-eligibility',
+      'nl-politie-toelatingseisen',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-06',
+    publishedOn: '2026-09-06',
+    reviewedOn: '2026-09-06',
+    factsVerifiedOn: '2026-09-06',
+    readingTimeMinutes: 7,
+    uncertainty: [
+      'Three systems informed this page: Ireland, New Zealand and the Netherlands. The order and content of stages elsewhere were NOT RESEARCHED.',
+      'No assessment content, scoring method, standard or threshold was researched for any system, and none is described. That is a deliberate limit, not a gap in the research.',
+      'How long selection takes, and what proportion of candidates proceed, were NOT RESEARCHED and are not stated.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Police selection is not one decision. It is a sequence of separate assessments, each of which a candidate must pass before the next begins, and each of which exists to establish something different about suitability for an office that carries coercive powers.',
+      },
+      {
+        kind: 'callout',
+        variant: 'safety',
+        title: 'What this page describes, and what it deliberately does not',
+        text: 'It names stages and explains why each exists. It does not describe what any assessment contains, how it is scored, what answers or performances are sought, or how to prepare. That boundary is the point of the page rather than a limitation on it: material of that kind helps a candidate present something other than themselves, which is the opposite of what selection is for.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'The stages are sequential because they are expensive in different ways. Checking a documentary criterion is cheap; a medical examination, a physical assessment and a background enquiry are not. Ordering them from cheapest to most involved is how a process handles many applicants without doing the most demanding work on all of them.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Which explains something applicants often experience as arbitrary',
+        text: 'Being told at a late stage that an early criterion was not met feels like a failure of the process. It usually reflects the ordering: documentary eligibility is often re-checked against evidence that only arrives later. The Irish material makes the standing obligation explicit — the onus is on candidates to show they continue to meet the requirements throughout, and to report changes affecting eligibility.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'The Irish process shows the shape end to end. Selection is conducted in stages by the Public Appointments Service; candidates reaching the later stages undergo a Physical Competence Test at Templemore, a medical examination and a substance-misuse test, with vetting carried out during that period. Candidates "must be found suitable on all of the grounds above" to be offered a place, and success at any stage is expressly not a guarantee of acceptance.',
+        claim: 'fact',
+        sources: ['ie-garda-trainee-booklet-2024'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'New Zealand shows the same components framed as requirements rather than as a sequence: disclosure of previous criminal and traffic convictions, police clearance for any country where the applicant has lived or worked for more than three months, at least five years of medical history, physical fitness and eyesight.',
+        claim: 'fact',
+        sources: ['nz-police-eligibility'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'The Netherlands lists what admission considers rather than the order in which it does so: mental and physical fitness, medical requirements, integrity and reliability, and neutrality.',
+        claim: 'fact',
+        sources: ['nl-politie-toelatingseisen'],
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'Eligibility screening',
+            description:
+              'Whether the documentary criteria are met at all — age, status, education, licence. Usually first, because it is the cheapest to check and disposes of applications no later stage could rescue.',
+          },
+          {
+            term: 'Assessment of aptitude',
+            description:
+              'Whether a candidate can do the reasoning, communication and judgement the role requires. Systems use written assessments, interviews and exercises in various combinations; what any of them contains is not described here.',
+          },
+          {
+            term: 'Physical assessment',
+            description:
+              'Whether a candidate meets the physical requirement the employer has set. Ireland names a Physical Competence Test; New Zealand states a fitness requirement. No standard, protocol or preparation guidance appears anywhere in this wave.',
+          },
+          {
+            term: 'Medical examination',
+            description:
+              'A professional judgement about health and suitability, made by a medical practitioner rather than by a recruiter. The Irish condition requires certification by a Registered Medical Practitioner that the candidate is in good health, of sound constitution, and suited physically and mentally to the duties.',
+          },
+          {
+            term: 'Background and integrity assessment',
+            description:
+              'Exists because the office carries powers that can be seriously misused, and because an officer’s account must be capable of being relied on in court. Why it exists is a public matter; how it is conducted is not described here.',
+          },
+          {
+            term: 'The decision itself',
+            description:
+              'Reaching a final stage is not an offer. The Irish material states plainly that success through to any stage is not a guarantee of acceptance.',
+          },
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where the medical judgement actually sits',
+        text: 'With a medical practitioner, on criteria set by the service. Whether any particular condition affects an application is not a question a website can answer, and this platform will not attempt it.',
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Police selection is an interview and a fitness test.',
+        reality:
+          'The researched systems describe eligibility screening, aptitude assessment, physical assessment, medical examination and background enquiry as separate components, each of which must be satisfied.',
+      },
+      {
+        claim: 'Passing every stage means you are in.',
+        reality:
+          'The Irish material states that candidates must be found suitable on all grounds to be offered a place, and that success through to any stage is not a guarantee of acceptance.',
+      },
+      {
+        claim: 'Eligibility is settled at the start.',
+        reality:
+          'The Irish material places the onus on candidates to provide evidence that they continue to meet the requirements throughout the process and to report changes affecting eligibility.',
+      },
+      {
+        claim: 'The recruiter decides the medical question.',
+        reality:
+          'In Ireland the condition is certification by a Registered Medical Practitioner nominated by the Commissioner. It is a professional judgement, not a recruitment one.',
+      },
+      {
+        claim: 'A page like this can help you prepare for the assessments.',
+        reality:
+          'It describes what stages are for and not what they contain. Material that helps a candidate present something other than themselves defeats the purpose of selection, and none appears here.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'What the researched systems name, without claiming a common order.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Staged selection run by a central public appointments body, with physical, medical, substance-misuse and vetting components at the later stages — Ireland.',
+          'Conviction disclosure, overseas police clearance, five years of medical history, fitness and eyesight — New Zealand.',
+          'Mental and physical fitness, medical requirements, integrity, reliability and neutrality as areas of assessment — Netherlands.',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'Scope',
+        text: 'Three systems. Nothing here describes the order, content or duration of selection in any system not named, and nothing describes what any assessment measures.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'Selection is the first point at which a justice system decides who may exercise its powers, and it is one of the few such decisions taken before anyone is accountable for anything. That is why the components are separate, why several are judged by people other than recruiters, and why the process is documented at all.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'The stages as each system sets them out are on the country pages — [Ireland](/countries/ireland/police-recruitment), [New Zealand](/countries/new-zealand/police-recruitment), [the Netherlands](/countries/netherlands/police-recruitment). Why physical readiness matters at all is [physical readiness in policing careers](/law-enforcement/physical-readiness-in-policing-careers).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [who recruits police officers](/law-enforcement/who-recruits-police-officers), [police entry requirements across systems](/law-enforcement/police-entry-requirements-across-systems), and [physical readiness in policing careers](/law-enforcement/physical-readiness-in-policing-careers).',
+      },
+    ],
+  },
+  {
+    slug: 'police-entry-requirements-across-systems',
+    title: 'Police entry requirements across systems',
+    shortTitle: 'Entry requirements compared',
+    question: 'How do police entry requirements differ between countries?',
+    summary:
+      'Six systems, compared only on the questions where the evidence is genuinely comparable — and two of the six have no national requirement to compare at all.',
+    entityType: 'concept',
+    section: 'law-enforcement',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'who-recruits-police-officers',
+      'citizenship-nationality-and-residency-in-police-recruitment',
+      'when-a-recruitment-requirement-is-campaign-specific',
+      'do-police-officers-need-a-degree',
+    ],
+    sources: [
+      'ie-garda-eligibility-regulations',
+      'ie-garda-educational-requirements',
+      'ew-police-eligibility-criteria',
+      'nz-police-eligibility',
+      'nl-politie-toelatingseisen',
+      'de-berlin-polizei-studium',
+      'us-bjs-training-academies-2022',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-06',
+    publishedOn: '2026-09-06',
+    reviewedOn: '2026-09-06',
+    factsVerifiedOn: '2026-09-06',
+    readingTimeMinutes: 9,
+    uncertainty: [
+      'Six systems, stated as at 6 September 2026. Germany is represented by Berlin and Bavaria only, and the United States by a federal survey of training academies rather than by any employer’s requirements.',
+      'The German and United States rows are deliberately empty for most questions, because no national requirement was established for either.',
+      'The Irish age entry is deliberately absent: the only figure available is anchored to one competition’s closing date.',
+      'No fitness standard, medical criterion or vetting criterion appears for any system. None was researched.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'A comparison is only useful where the things compared are genuinely comparable. This one is confined to questions where the researched sources answer the same question — and it leaves cells empty rather than filling them, because an empty cell is information and a guessed one is not.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This compares six researched systems as at 6 September 2026. It is not a ranking, and this platform does not publish one — there is no easiest system to join and no best country for a police career. It cannot tell any individual whether they qualify anywhere.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'Comparison is where false universals come from. Once four systems agree, the fifth gets assumed rather than checked, and the assumption is what ends up being repeated. Laying the evidence out with its gaps visible is the cheapest defence against that.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'The empty cells are the most useful part',
+        text: 'Germany and the United States have no national entry requirement, so their rows are mostly blank. That is not missing research — it is the finding. A table that filled those cells with one Land’s or one department’s rules would be the exact error this wave exists to prevent.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'Ireland — one national service',
+            description:
+              'Status: national of an EU, EEA, UK or Swiss state, OR international-protection status, OR a defined residence history. Education: Leaving Certificate at D3/O6 in five subjects at Ordinary Level, OR NFQ Level 5 Major award, OR a comparable Level 5+ qualification. Language: Irish or English. Degree required: no, stated expressly. Age: not stated here — the available figure belongs to one competition.',
+          },
+          {
+            term: 'England and Wales — national criteria plus force criteria',
+            description:
+              'Status: no restrictions on the right to live and work in the UK; a three-year UK residency point applies for vetting where a candidate has lived abroad. Education: Level 3 minimum, defined as two A levels or equivalent. Age: 17 to apply, 18 to become an officer. Degree required: no. And forces may add their own local criteria on top.',
+          },
+          {
+            term: 'New Zealand — one national service',
+            description:
+              'Status: New Zealand or Australian citizenship, OR New Zealand residency or permanent residency. Language: English. Age: 17 to apply, 18 at the start of Police College, with no upper age limit. Driving licence: restricted to apply, full before Police College.',
+          },
+          {
+            term: 'Netherlands — admission to an education programme',
+            description:
+              'Status: Dutch nationality, which may be a second nationality. Education: vmbo-tl/gl, mbo-3 or mbo-4, or a transfer certificate to 4 havo/vwo, or an admission test. Language: Dutch at B1 written and spoken. Age: 18 at the start of training. Driving licence: category B within nine months of starting.',
+          },
+          {
+            term: 'Germany — no national requirement exists',
+            description:
+              'Each Land recruits separately and the federal police separately again. Berlin requires the erweiterte Berufsbildungsreife for the mittlerer Dienst and "mindestens die Fachhochschulreife bzw. das Abitur" for the gehobener Dienst. That is Berlin. No status, age, language or licence requirement is stated here for Germany, because none exists nationally.',
+          },
+          {
+            term: 'United States — no national requirement established',
+            description:
+              'Many independent employers at municipal, county, state and federal level. No entry requirement appears here for any of them: none was established from a current official source, and one employer’s rules would not describe the country.',
+          },
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'What the comparable rows actually show',
+        text: 'Four systems state an education threshold, and all four set it below a degree. Four state a status requirement, and each asks a different question. Two state an application age and an appointment age as separate thresholds. Two require a driving licence, and both require it later than the application rather than before it.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'On the degree question the comparison confirms rather than complicates: no researched system requires one to enter, and Ireland says so in terms — "There is no requirement to have a degree prior to entering An Garda Síochána as a Garda Trainee."',
+        claim: 'fact',
+        sources: ['ie-garda-educational-requirements', 'ie-garda-eligibility-regulations'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'A pattern worth noticing about licences and ages',
+        text: 'Both the New Zealand licence rule and the two-age rules attach obligations to the start of training rather than to the application. A system that wants a wide applicant pool but a qualified intake can do exactly that — admit people who do not yet meet a requirement, provided they meet it before they start.',
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Police entry requirements are broadly similar across countries.',
+        reality:
+          'Of six researched systems, four state a national requirement and each frames status differently; the other two have no national requirement at all.',
+      },
+      {
+        claim: 'Every country sets a maximum age.',
+        reality:
+          'New Zealand Police state "There’s no upper age limit". The only maximum found in this research was anchored to one Irish competition’s closing date and is not stated here as a rule.',
+      },
+      {
+        claim: 'A degree is required somewhere among these systems.',
+        reality:
+          'None of the researched systems requires a degree to enter. Ireland states expressly that there is no such requirement.',
+      },
+      {
+        claim: 'A comparison table like this can tell you where it is easiest to join.',
+        reality:
+          'It cannot, and this platform does not publish rankings of that kind. Requirements differ in what they ask, not in difficulty on a single scale.',
+      },
+      {
+        claim: 'The blank cells mean the research was incomplete.',
+        reality:
+          'For Germany and the United States they mean no national requirement exists to state. Filling them with one Land’s or one department’s rules would misdescribe both countries.',
+      },
+      {
+        claim: 'These requirements will still be current when you read this.',
+        reality:
+          'They were verified on 6 September 2026 and are set by recruiting authorities that change them. The authority named on each country page is the current source.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Which questions the evidence could answer, per system.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Status, education, language, degree: answered for Ireland, England and Wales, New Zealand and the Netherlands.',
+          'Application age and appointment age as separate thresholds: answered for England and Wales and New Zealand.',
+          'Driving licence: answered for New Zealand and the Netherlands.',
+          'Education only, and for one Land: Germany, via Berlin.',
+          'No entry requirement answerable at national level: Germany and the United States.',
+          'Fitness standards, medical criteria and vetting criteria: not researched for any system, and not published for any system.',
+        ],
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'Entry requirements decide who is eligible to hold coercive public authority, which makes them a public-interest question rather than only an applicant’s question. Where they are published clearly and set out with their legal basis, that decision can be examined. Where they are fragmented across hundreds of employers, it is harder to examine — not because anything is hidden, but because there is no single thing to look at.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'Each system in full: [Ireland](/countries/ireland/police-recruitment), [the Netherlands](/countries/netherlands/police-recruitment), [New Zealand](/countries/new-zealand/police-recruitment), [Germany](/countries/germany/police-recruitment), [the United States](/countries/united-states/police-recruitment). The degree question is [do police officers need a degree](/law-enforcement/do-police-officers-need-a-degree).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [who recruits police officers](/law-enforcement/who-recruits-police-officers), [citizenship, nationality and residency](/law-enforcement/citizenship-nationality-and-residency-in-police-recruitment), and [how police selection is structured](/law-enforcement/how-police-selection-is-structured).',
       },
     ],
   },

@@ -170,6 +170,21 @@ export const COUNTRY_MODULE_IDS = [
   'corrections',
   'border-and-customs',
   'oversight',
+  /*
+   * WAVE 25. Country-level police recruitment and entry paths.
+   *
+   * A module rather than a new route family, because every fact it carries is
+   * jurisdiction-specific: who recruits, what the entry routes are, what eligibility applies,
+   * and how quickly any of it changes. Putting it under /countries/{country}/ inherits the
+   * registry that already drives routes, navigation, breadcrumbs, the sitemap and the output
+   * verifier — and inherits `factsVerifiedOn`, which is the freshness anchor this content needs
+   * more than any other content in the corpus.
+   *
+   * Deliberately NOT in REQUIRED_PUBLISHED_MODULES: 32 dossiers exist and this wave researched
+   * six. A required module would either break every unresearched country or invite thin
+   * template pages, which is exactly what the wave brief forbids.
+   */
+  'police-recruitment',
   'history',
   'timeline',
   'sources',

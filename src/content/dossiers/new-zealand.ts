@@ -424,6 +424,97 @@ export const NEW_ZEALAND: CountryDossier = {
         'Border and customs in New Zealand involve the New Zealand Customs Service and Immigration New Zealand, and could not be researched to the standard required here without risking an inaccurate description of a security-adjacent function.',
     },
     {
+      moduleId: 'police-recruitment',
+      title: 'Police recruitment in New Zealand',
+      summary:
+        'One national service, one recruitment route, and an official statement that most systems do not make: there is no upper age limit.',
+      status: 'published',
+      review: 'fact-checked',
+      safetyReview: 'cleared',
+      updatedOn: '2026-09-06',
+      reviewedOn: '2026-09-06',
+      factsVerifiedOn: '2026-09-06',
+      temporalScope: 'current',
+      sources: ['nz-police-eligibility'],
+      relatedGuides: [
+        'who-recruits-police-officers',
+        'citizenship-nationality-and-residency-in-police-recruitment',
+        'how-police-selection-is-structured',
+        'what-a-police-academy-is',
+      ],
+      blocks: [
+        {
+          kind: 'callout',
+          variant: 'scope',
+          title: 'What this page covers, and when it was checked',
+          text: 'This describes entry as a constable in New Zealand Police, the single national service. It does not cover other New Zealand agencies with enforcement functions. Verified against the official recruitment site on 6 September 2026; the current position is the one New Zealand Police publishes.',
+        },
+        {
+          kind: 'paragraph',
+          text: 'New Zealand has one national police service, and recruitment is run centrally by it. Training takes place at the Royal New Zealand Police College, and several requirements are framed around the point at which a recruit starts there rather than the point of application.',
+          claim: 'fact',
+          sources: ['nz-police-eligibility'],
+        },
+        {
+          kind: 'callout',
+          variant: 'analysis',
+          title: 'Two thresholds, not one',
+          text: 'The official statement is that a person "must be at least 17 years old to apply and 18 when you start at Police College". Applying and starting are separate events with separate rules, and the same two-stage pattern governs the driving licence. A page that collapsed them into a single "minimum age" would be wrong about both.',
+        },
+        {
+          kind: 'definitionList',
+          items: [
+            {
+              term: 'Citizenship or residency',
+              description:
+                'The requirement is stated as an alternative: "You must be a New Zealand or Australian citizen or have New Zealand residency or New Zealand permanent residency." Australian citizenship counts; so does New Zealand residency without citizenship.',
+            },
+            {
+              term: 'Age',
+              description:
+                'At least 17 to apply and 18 at the start of Police College, and the source adds explicitly: "There\u2019s no upper age limit." Where a system says this, it is worth recording — most sources are silent, and silence is not the same as an absence.',
+            },
+            {
+              term: 'Driving licence',
+              description:
+                'A restricted New Zealand licence is enough to apply, but a full licence must be obtained before starting at Police College.',
+            },
+            {
+              term: 'Language',
+              description: 'Ability to speak, read, write and listen in English.',
+            },
+            {
+              term: 'Health and fitness',
+              description:
+                'The source states that an applicant must be physically fit and have good eyesight, and requires at least five years of medical history. No standard or threshold is reproduced here.',
+            },
+            {
+              term: 'Character and history checks',
+              description:
+                'Previous criminal or traffic convictions must be disclosed, and police clearance is required for countries where the applicant has lived or worked for more than three months.',
+            },
+          ],
+        },
+        {
+          kind: 'callout',
+          variant: 'safety',
+          title: 'What this page will not tell you',
+          text: 'It does not state any fitness standard or test protocol, does not describe what a medical assessment examines, and does not explain how disclosures are assessed. Whether any particular conviction or condition affects an application is a question for New Zealand Police, not for this platform.',
+        },
+        {
+          kind: 'callout',
+          variant: 'note',
+          title: 'Where the current requirements live',
+          text: 'New Zealand Police publishes recruitment information on its New Cops site. This platform is not affiliated with New Zealand Police and does not accept applications.',
+        },
+      ],
+      uncertainty: [
+        'The selection stages, their order and their content were NOT RESEARCHED.',
+        'The duration and structure of training at the Royal New Zealand Police College were NOT RESEARCHED for this wave.',
+        'Fitness standards, medical criteria and the assessment of disclosed convictions were deliberately not researched and are not described.',
+      ],
+    },
+    {
       moduleId: 'history',
       title: 'Institutional history of New Zealand',
       summary: 'Not yet researched.',

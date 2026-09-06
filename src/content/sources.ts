@@ -4842,6 +4842,80 @@ export const SOURCES: readonly SourceRecord[] = [
     jurisdiction: 'NL',
     note: 'Supports the official role name "centralist meldkamer" and the regional task as the page states it: "je neemt de spoedeisende meldingen (112) aan en stuurt de eenheden op straat aan". The page does NOT state whether the role is held by civilian staff or sworn officers, so no classification is asserted from it.',
   },
+  /*
+   * WAVE 25 — country police recruitment and entry paths.
+   *
+   * Recruitment sources decay faster than anything else this platform cites, so each note below
+   * records THREE things beyond the usual: the geographic scope the source actually proves, whether
+   * it is campaign-specific, and what it does NOT establish.
+   *
+   * Two access findings are recorded rather than worked around. The Czech recruitment page
+   * redirects into archiv.policie.gov.cz carrying an explicit archive notice, so Czechia is
+   * deferred and appears nowhere. The New Zealand eligibility URL 307-redirects, and the
+   * DESTINATION is what is recorded here — never the original with an assumption it still resolves
+   * to the same content.
+   */
+  {
+    id: 'ie-garda-eligibility-regulations',
+    type: 'government',
+    title: 'Garda Trainee Information Booklet — Conditions for Entry and eligibility criteria',
+    publisher: 'An Garda Síochána and the Public Appointments Service (Ireland)',
+    url: 'https://www.garda.ie/en/careers/garda-trainee-recruitment-2024-it-s-a-job-worth-doing-campaign/information-booklet-garda-trainee-2024.pdf',
+    publishedOn: '2024',
+    accessedOn: '2026-09-06',
+    verifiedOn: '2026-09-06',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'IE',
+    note: 'SCOPE: An Garda Síochána, and CAMPAIGN-SPECIFIC to the 2024 Garda Trainee competition. Supports the six eligibility conditions verbatim — good character; certification by a Registered Medical Practitioner as being in good health, of sound constitution and suited physically and mentally; a passed Physical Competence Test; the age window; the nationality-or-residency alternatives; and the education alternatives. It also names the durable legal basis, the Garda Síochána (Admissions & Appointments) Regulations 2013 as amended by S.I. 602/2020, S.I. 757/2021 and S.I. 611/2023. The AGE WINDOW is anchored to "midnight on Thursday, 8th of February 2024" and must never be restated as a standing rule. Establishes nothing about any other Irish law-enforcement body.',
+  },
+  {
+    id: 'ew-police-eligibility-criteria',
+    type: 'government',
+    title: 'Join the Police — eligibility and common questions (England and Wales)',
+    publisher: 'Join the Police (national police recruitment service, England and Wales)',
+    url: 'https://www.joiningthepolice.co.uk/is-policing-right-for-me/common-questions',
+    accessedOn: '2026-09-06',
+    verifiedOn: '2026-09-06',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'GB',
+    note: 'SCOPE: the NATIONAL eligibility criteria for England and Wales, and not any individual force. Supports the application/appointment age split — "You can now apply to join the police service at age 17, though you\u2019ll need to wait until you\u2019re 18 before you can officially become a police officer" — the right-to-work formulation, the three-year UK residency point for vetting, the Level 3 minimum education, and the source\u2019s own statement that "Police forces are also allowed to apply their own local criteria in addition to the national eligibility aspects". That last sentence is why no national criterion here may be presented as the complete requirement for any force. Establishes nothing about Scotland or Northern Ireland, which have separate services.',
+  },
+  {
+    id: 'nz-police-eligibility',
+    type: 'government',
+    title: 'New Cops — What do I need? (eligibility to become a constable)',
+    publisher: 'New Zealand Police',
+    url: 'https://www.newcops.govt.nz/can-i-be-a-cop/what-do-i-need',
+    accessedOn: '2026-09-06',
+    verifiedOn: '2026-09-06',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'NZ',
+    note: 'SCOPE: New Zealand Police, nationally. Reached by following a 307 redirect from /eligibility; the destination is what is recorded, and it was re-checked to serve HTTPS 200. Supports the citizenship-or-residency formulation, the age rule including the explicit statement "There\u2019s no upper age limit", the restricted-licence-to-apply and full-licence-before-college rule, the English language requirement, and the existence of fitness, eyesight, conviction-disclosure, overseas police-clearance and medical-history requirements. NOT campaign-specific. No fitness standard or medical criterion is taken from it.',
+  },
+  {
+    id: 'nl-politie-toelatingseisen',
+    type: 'government',
+    title: 'Toelatingseisen voor de politieopleiding',
+    publisher: 'Nationale Politie (Netherlands)',
+    url: 'https://kombijde.politie.nl/agent-worden/toelatingseisen/toelatingseisen',
+    accessedOn: '2026-09-06',
+    verifiedOn: '2026-09-06',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'NL',
+    note: 'SCOPE: the Dutch national police, for entry to the politieopleiding. Supports the minimum age at the start of training, the requirement to hold Dutch nationality — "je de Nederlandse nationaliteit moet hebben. Dit mag ook je tweede nationaliteit zijn" — the vooropleiding alternatives with an admission test as a route for those without them, Dutch language at level B1 written and spoken, and the rijbewijs B within nine months of starting. NOT campaign-specific. Establishes nothing about the Koninklijke Marechaussee or any other Dutch body.',
+  },
+  {
+    id: 'de-bayern-polizei-ausbildung',
+    type: 'government',
+    title: 'Deine Ausbildung — Bayerische Polizei (2. Qualifikationsebene)',
+    publisher: 'Bayerische Polizei (Germany)',
+    url: 'https://team.polizei.bayern.de/deine-ausbildung/',
+    accessedOn: '2026-09-06',
+    verifiedOn: '2026-09-06',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'DE',
+    note: 'SCOPE: BAVARIA ONLY. Supports the 2. Qualifikationsebene Ausbildung lasting "2,5 Jahre" and structured in five sections of six months. The page does NOT state the school qualification required, and none is claimed from it. Used alongside the Berlin sources solely to establish that German Länder recruit and train separately; it proves nothing about any other Land, about the Bundespolizei, or about Germany as a whole.',
+  },
 ];
 
 const SOURCE_INDEX = new Map(SOURCES.map((source) => [source.id, source]));

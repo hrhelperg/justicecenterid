@@ -1645,3 +1645,76 @@ Politieleider` as named three-year entry programmes. Investigator, community off
   before being acted on.
 
 Delivered on `feat/knowledge-expansion-wave-24`. Not merged, not deployed.
+
+## Phase 39 — Knowledge Expansion Wave 25 (delivered 2026-09-06)
+
+Country police recruitment and entry paths. Five country recruitment modules and five comparative
+guides, on five new content-confirmed Tier 1 sources. The first content in the corpus whose truth
+depends on **who is asking and when**. Details in
+`docs/research/knowledge-expansion-wave-25-qa.md` and
+`docs/research/police-recruitment-model-findings.md`.
+
+The strategic rule from the Wave 24 transition holds: **this is not a return to procedural law.**
+Recruitment research reached legal material and it was used only to establish recruitment facts —
+the Irish Admissions and Appointments Regulations as the durable basis behind a campaign document.
+Six procedural subjects were classified OUT OF PRODUCT SCOPE and none was logged as a future legal
+wave.
+
+- **The merge gate failed twice before passing.** Wave 24 was reported merged twice while
+  `origin/main` still stood at the Wave 23 merge with every element absent. Verified three
+  independent ways each time; work stopped, nothing was stacked, nothing recreated. An early
+  per-branch probe was self-tested, found broken, and discarded rather than reported.
+- **The baseline found twelve recruitment terms at absolute zero** across 160 guides, 8 profession
+  records, 17 institution records and 32 dossiers — including `residency` and `criminal record`, the
+  two most legally consequential concepts in the subject.
+- **Architecture: a thirteenth country module**, `/countries/{country}/police-recruitment`. It
+  inherits the registry that drives routes, navigation, breadcrumbs, sitemap and the verifier, and
+  it inherits `factsVerifiedOn`, which the country publication gate already makes mandatory.
+  Deliberately **not** required, so 26 unresearched countries are not forced to fake one.
+- **"You must be a citizen" is wrong in three of the four researched systems.** Ireland admits a
+  nationality category, an international-protection status, **or** a residence history; England and
+  Wales asks only about the right to live and work; New Zealand accepts residency or Australian
+  citizenship; only the Netherlands requires nationality outright, and says it may be a second one.
+- **An age window that belongs to a competition, not to a service.** The Irish booklet requires an
+  applicant to be "18 years of age but not yet 50 years of age **at midnight on Thursday, 8th of
+  February 2024**", while separately naming the Regulations that govern admission. Two layers, two
+  lifespans, one document, unlabelled — so **this platform publishes no Irish police age
+  requirement at all**.
+- **Two of six systems have no national requirement to state.** Germany is published as Länder
+  fragmentation with Berlin and Bavaria as labelled examples; the United States states **no entry
+  requirement whatsoever**, because none was established from a current official source.
+- **A national criterion is a floor, not the requirement** — and the England and Wales source says
+  so itself: "Police forces are also allowed to apply their own local criteria in addition to the
+  national eligibility aspects."
+- **Wave 24's findings hold without regression.** No researched system requires a degree; the Dutch
+  `bachelor Rechercheur` remains an entry route rather than a promotion.
+- **A mutation proof fixed a weakness inherited from Wave 21.** W25M4 defeated `deniesForward` with
+  an incidental "rather than" in an earlier clause. A 60-character window was not enough; the fix is
+  that **a negation cannot govern across a colon, semicolon or dash**. That helper had carried the
+  flaw through Waves 23 and 24.
+- **A second proof found a scope rule that only applied to new pages.** W25M13 inserted a
+  recruitment appeal procedure into a Wave 24 page and survived. Made corpus-wide, the guards then
+  fired on "hand a **file** to a prosecutor" and on "contest a decision" in a rule-of-law sentence —
+  so `file` needs its verb sense and the appeal guard needs recruitment context.
+- **`ScheduledChange` evaluated and declined.** A campaign closing date is not a legal position
+  taking effect. Forcing campaigns into it would put the most volatile facts in the corpus into a
+  structure built for the most durable ones.
+- **`JobPosting` and `Occupation` both declined**, and the e2e parses `@type` structurally rather
+  than scanning serialised text. These pages are not vacancies and this platform is not the
+  employer.
+- **Czechia deferred and Norway abandoned on source currency.** The Czech page redirects into
+  `archiv.policie.gov.cz` carrying "Obsah zde nemusí být aktuální"; the Norwegian admission path
+  returns HTTP 404. Both recorded; neither described.
+- **England and Wales has no country module** because the corpus has no England-and-Wales dossier.
+  Recorded rather than worked around by inventing one; its evidence powers the comparative guides.
+- **No pay, no vacancy, no deadline, no place count, no ranking, no fitness standard, no medical
+  criterion, no vetting method, and no individualised eligibility conclusion anywhere.**
+- **Client JS +0 KB. CSS +0 bytes. No component changed.** The comparison is a server-rendered
+  definition list.
+- Validation: 8,016 tests / 80 files; 1,626 Playwright tests passing and 4 skipped across 19 specs;
+  **512 routes**, 514 pages, 512 sitemap URLs; 358 sources; 0 orphans, 0 weakly linked, 0 dead ends,
+  and all ten new pages linked from pages that predate the wave. **15/15 mutation proofs valid**,
+  three caught only after the fixes they forced. Adversarial QA: 2 P1 and 1 P2 across 24 lenses, 4
+  candidates refuted, every finding independently reproduced before being acted on.
+
+Delivered on `feat/knowledge-expansion-wave-25`. Not merged, not deployed.

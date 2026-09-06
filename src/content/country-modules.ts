@@ -110,6 +110,15 @@ export const COUNTRY_MODULES: readonly CountryModuleDefinition[] = [
     relatedSection: 'justice',
   },
   {
+    id: 'police-recruitment',
+    slug: 'police-recruitment',
+    title: 'Police recruitment',
+    shortTitle: 'Police recruitment',
+    purpose:
+      'Who recruits police officers here, what entry routes exist, what official eligibility applies, and where the current requirements are published.',
+    relatedSection: 'law-enforcement',
+  },
+  {
     id: 'history',
     slug: 'history',
     title: 'Institutional history',
