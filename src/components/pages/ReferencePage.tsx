@@ -277,6 +277,27 @@ export function ProfessionPage({ profession }: { profession: Profession }) {
         items={[...profession.constraints]}
       />
 
+      {/*
+       * Wave 24. Career orientation, placed after what the role does and before the standards it
+       * is held to, because a reader exploring the career asks "what is this actually like"
+       * between those two questions rather than after both.
+       */}
+      {profession.workingEnvironment && profession.workingEnvironment.length > 0 ? (
+        <Bullets
+          id="environment"
+          heading="What the work is like"
+          items={[...profession.workingEnvironment]}
+        />
+      ) : null}
+
+      {profession.skills && profession.skills.length > 0 ? (
+        <Bullets
+          id="skills"
+          heading="Skills the role relies on"
+          items={[...profession.skills]}
+        />
+      ) : null}
+
       {profession.ethicsNote ? (
         <Prose id="ethics" heading="Professional standards">
           <p>{profession.ethicsNote}</p>
@@ -289,6 +310,14 @@ export function ProfessionPage({ profession }: { profession: Profession }) {
         heading="Shape of the training route"
         items={[...profession.trainingRouteShape]}
       />
+
+      {profession.careerProgressionShape && profession.careerProgressionShape.length > 0 ? (
+        <Bullets
+          id="progression"
+          heading="How the career tends to develop"
+          items={[...profession.careerProgressionShape]}
+        />
+      ) : null}
 
       {profession.commonMisunderstandings && profession.commonMisunderstandings.length > 0 ? (
         <Bullets
@@ -303,6 +332,15 @@ export function ProfessionPage({ profession }: { profession: Profession }) {
       </Prose>
 
       <CountryExamples examples={[...(profession.countryExamples ?? [])]} />
+
+      {profession.adjacentCareers && profession.adjacentCareers.length > 0 ? (
+        <Bullets
+          id="adjacent"
+          heading="Related careers worth looking at"
+          items={[...profession.adjacentCareers]}
+        />
+      ) : null}
+
       <Connections
         institutions={profession.relatedInstitutions}
         professions={profession.relatedProfessions}

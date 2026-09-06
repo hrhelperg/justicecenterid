@@ -1170,11 +1170,25 @@ describe('the wave adds no entity, no module and no statistic', () => {
     ).toEqual([]);
   });
 
+  /*
+   * WAVE 24 AMENDMENT, and narrow. The pattern was /emergency|civil-protection|disaster/, which is
+   * broader than the reasoning above it. Wave 20's finding was about the civil-protection
+   * COORDINATION function: fourteen systems produced seven institutional forms for it, so any
+   * entity asserting a cross-country identity would be refuted by the sources. That reasoning is
+   * preserved exactly — the pattern now matches the same four terms the institution check uses.
+   *
+   * What it no longer catches is `emergency-dispatcher`, a control-room role that is not the
+   * coordination function and does not assert one: its own jurisdiction note records that whether
+   * a control room serves one service or several, and whether it is police-run, differs between
+   * systems, and the record leaves the Netherlands employment classification NOT ESTABLISHED
+   * because the official page does not state it. Wave 24 carries this guard forward in its own
+   * suite rather than only relaxing it here.
+   */
   it('introduces no profession or glossary term for it either', () => {
     expect(
-      PROFESSIONS.filter((p) => /emergency|civil-protection|disaster/i.test(p.slug)).map(
-        (p) => p.slug,
-      ),
+      PROFESSIONS.filter((p) =>
+        /civil-protection|emergency-management|disaster|emergency-coordination/i.test(p.slug),
+      ).map((p) => p.slug),
     ).toEqual([]);
     expect(
       GLOSSARY.filter((t) =>

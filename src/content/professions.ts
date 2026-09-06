@@ -59,6 +59,36 @@ export const PROFESSIONS: readonly Profession[] = [
       'That most of the work is crime investigation. Across many services the majority of demand is public order, road policing, missing persons, safeguarding, and incidents involving mental health.',
       'That an officer decides whether someone is prosecuted. In most systems that decision belongs to a prosecutor.',
     ],
+    workingEnvironment: [
+      'Shift work is the norm, because the function is availability and incidents do not keep office hours. Rotating shifts covering nights, weekends and public holidays are common, and the pattern is set by the employer rather than by any general rule.',
+      'Most of a shift is spent outside a police building — in a vehicle, on foot, or at the address of whoever called.',
+      'Work is usually done in a small crewed team or alone with radio contact, under a supervisor who reviews decisions afterwards rather than directing them at the time.',
+      'Contact with the public is continuous and mostly with people who are not suspected of anything: callers, witnesses, people in distress, people who are lost, injured, or in mental-health crisis.',
+      'A substantial part of the job is writing. What was done and why has to be recorded in a form that can be read by a supervisor, a prosecutor, a defence lawyer and sometimes a court, months later.',
+      'Some of what the role attends is distressing, and exposure to it is not occasional. Employers differ in what support they provide, and that provision was not researched.',
+    ],
+    skills: [
+      'Communication above all: explaining, de-escalating, questioning, and being understood by people who are frightened, angry, unwell or unwilling.',
+      'Observation and recall — noticing what is present, what is absent, and what changed, and being able to account for it later.',
+      'Judgement under time pressure and incomplete information, against a legal threshold rather than a hunch.',
+      "Written accuracy. A record that cannot be understood, or that does not match what happened, damages a case and the officer's credibility.",
+      'Teamwork and handover, because incidents pass between shifts and between units.',
+      'Emotional steadiness and the ability to keep behaving professionally when the other person is not.',
+    ],
+    careerProgressionShape: [
+      'The first period after training is normally probationary and supervised, whatever the system calls it.',
+      'Progression tends to run along two separate axes: rank, which is supervisory and managerial authority, and specialisation, which is a different kind of work at the same or a similar rank. They are not the same ladder, and a system may allow movement along one without the other.',
+      'Movement into investigation is treated differently between systems — in some it follows service in uniform, and in at least one it is a separate entry route from the start.',
+      'Many systems require a qualifying period, an examination, a selection process, or all three, before a specialist or supervisory role is open.',
+      'Continuing professional development and periodic re-certification in specific powers are usual, and are not optional extras.',
+    ],
+    adjacentCareers: [
+      'Detective or investigator, for whom the patrol role is the usual route in many systems but not all — see [detective](/professions/detective).',
+      'How entry, training and progression are organised across systems — see [what a police academy is](/law-enforcement/what-a-police-academy-is), [do police officers need a degree](/law-enforcement/do-police-officers-need-a-degree) and [how policing careers develop](/law-enforcement/how-policing-careers-develop).',
+      'What the work is like day to day, and the professional qualities it relies on — see [working life in policing](/law-enforcement/working-life-in-policing), [skills that policing relies on](/law-enforcement/skills-that-policing-relies-on) and [physical readiness in policing careers](/law-enforcement/physical-readiness-in-policing-careers).',
+      'Emergency dispatcher, which handles the same incidents from the other end of the radio — see [emergency dispatcher](/professions/emergency-dispatcher).',
+      'Corrections officer, a custodial role with comparable shift patterns and a different legal function — see [corrections officer](/professions/corrections-officer).',
+    ],
     jurisdictionNote:
       'Powers, training length, rank structures, and whether officers routinely carry firearms are set nationally and differ substantially, including between neighbouring countries.',
     relatedInstitutions: ['municipal-police', 'national-police', 'gendarmerie'],
@@ -133,6 +163,35 @@ export const PROFESSIONS: readonly Profession[] = [
       'That investigations move at the pace shown in fiction. Much of the elapsed time is authorisation, examination queues, and disclosure review.',
       'That a confession resolves a case. Unreliable admissions are a documented cause of wrongful conviction, and many systems require supporting evidence.',
     ],
+    workingEnvironment: [
+      'Work is organised around cases rather than shifts, though shift or on-call patterns are common where investigations must begin immediately.',
+      'More time is spent at a desk than the popular image suggests: reviewing material, planning, writing, and preparing files.',
+      'Interviews and enquiries are conducted with victims, witnesses and suspects, and the majority of contact is with people who are not suspects.',
+      'Investigations are usually team efforts with a supervisor accountable for direction, and in many systems a prosecutor or investigating judge has a formal role in that direction.',
+      'Cases can run for months, and holding several at once at different stages is normal.',
+      'Some material examined is distressing, and in some specialisms that is routine rather than exceptional.',
+    ],
+    skills: [
+      'Structured analytical thinking: building an account from incomplete material and testing it rather than confirming it.',
+      'Interviewing, which is a trained professional skill governed by law and standards in most systems.',
+      'Written communication, because the product of an investigation is a file that other professionals must be able to follow.',
+      'Organisation and disclosure discipline — knowing what exists, where it is, and what must be revealed to the defence.',
+      'Working with specialists whose findings the investigator must understand well enough to use accurately and not overstate.',
+      "Scepticism about one's own conclusions, which is the professional habit most directly protective of an innocent person.",
+    ],
+    careerProgressionShape: [
+      'Entry differs fundamentally between systems: in many, investigation is reached after service in uniform; in the Netherlands a bachelor Rechercheur is one of the entry routes into the police, so a person may be admitted to investigative training at the start.',
+      'Where investigation is reached later, a qualifying period, selection and a specialist course are typical.',
+      'Specialisation within investigation is extensive — economic crime, cybercrime, serious violence, child protection, and others.',
+      'In some systems detective is a rank; in others a designation or assignment held at an ordinary rank; and in others again a separate occupational structure — see [rank, role and specialisation](/law-enforcement/rank-role-and-specialisation).',
+      'Supervisory progression usually means managing investigations and investigators rather than conducting enquiries personally.',
+    ],
+    adjacentCareers: [
+      'Patrol officer, the route into investigation in many systems — see [patrol officer](/professions/patrol-officer).',
+      'Forensic scientist, whose findings an investigator uses but does not produce — see [forensic scientist](/professions/forensic-scientist).',
+      'Prosecutor, who in several systems directs or reviews the investigation — see [prosecutor](/professions/prosecutor).',
+      'How investigative work is reached, and how it sits against rank and specialisation — see [how policing careers develop](/law-enforcement/how-policing-careers-develop) and [specialist roles in policing](/law-enforcement/specialist-roles-in-policing).',
+    ],
     jurisdictionNote:
       'Whether investigations are led by police, directed by a prosecutor, or supervised by an investigating judge is a fundamental structural difference, and most of the rest of the role follows from it.',
     relatedInstitutions: ['federal-investigative-agency', 'national-police'],
@@ -198,6 +257,31 @@ export const PROFESSIONS: readonly Profession[] = [
     commonMisunderstandings: [
       'That the prosecutor is the victim’s lawyer. Prosecutors act in the public interest and may take decisions a victim opposes.',
       'That sufficient evidence requires a prosecution. The public-interest stage exists so that prosecution is not automatic.',
+    ],
+    workingEnvironment: [
+      'Substantially office and court based, with case files as the main material.',
+      'Caseloads are typically carried in parallel at different stages, with court dates fixed by the court rather than by the prosecutor.',
+      'The work is largely reading, assessing and writing, punctuated by hearings.',
+      'Contact is mostly with other professionals — investigators, defence lawyers, courts, and in many systems victims and witnesses directly.',
+      'Deadlines are externally imposed and often statutory, which shapes the working pattern more than in most professions.',
+    ],
+    skills: [
+      'Legal analysis applied to evidence that is incomplete, contested, or both.',
+      'Judgement about sufficiency and public interest, which is a decision the role owns.',
+      'Written and oral advocacy, addressed to a court rather than to a general audience.',
+      'Disclosure discipline, which is a professional duty owed regardless of its effect on the case.',
+      'Independence of mind, including from the investigators whose work is being assessed.',
+    ],
+    careerProgressionShape: [
+      'Entry normally requires a legal qualification, and in many systems a specific professional examination or training period beyond the law degree.',
+      'Whether prosecutors and judges form one career or two is a structural difference between systems, not a detail — in some, movement between them is a normal career step.',
+      'Progression commonly runs through case seriousness and complexity before it runs through management.',
+      'Specialisation by offence type is common in larger services.',
+    ],
+    adjacentCareers: [
+      'Judge, which in some systems is part of the same career structure — see [judge](/professions/judge).',
+      'Defence lawyer, the opposing professional function with a different duty — see [defence lawyer](/professions/defence-lawyer).',
+      'Detective or investigator, whose work the prosecutor assesses and in several systems directs — see [detective](/professions/detective).',
     ],
     jurisdictionNote:
       'One of the most structurally variable roles in any justice system. Prosecutors may be civil servants, judicial officers, political appointees, or elected officials, and the service may sit inside a ministry or be constitutionally separate.',
@@ -270,6 +354,29 @@ export const PROFESSIONS: readonly Profession[] = [
       'That security of tenure is a privilege of office. It exists so that a judge cannot be removed for deciding against the government, which is a protection for the people appearing before the court.',
       'That judges are unaccountable. Accountability is deliberately narrow — conduct and process, not the substance of decisions — because a mechanism able to punish conclusions would eliminate independence.',
     ],
+    workingEnvironment: [
+      'Court sitting time is only part of the work; reading papers before a hearing and writing decisions afterwards occupy a large share of it.',
+      'Much of the role is conducted alone, and in many systems the writing of reasons is done individually even where a panel decides.',
+      'Hearings are scheduled, so the working pattern is more predictable than in operational roles, and less flexible.',
+      'The role is deliberately insulated from the parties, which limits the ordinary professional contact other roles rely on.',
+    ],
+    skills: [
+      'Reasoned decision-making, and the ability to explain a decision so that the losing party can understand why.',
+      'Impartiality in practice, including recognising when one should not hear a case.',
+      'Listening, and managing a hearing so that both sides are genuinely heard.',
+      'Legal analysis and the discipline of deciding on the evidence and argument actually presented.',
+      "Clear writing, because in most systems the reasons are the decision's public form.",
+    ],
+    careerProgressionShape: [
+      'Entry routes differ structurally: appointment from practice after a substantial career, and career judiciaries entered by examination soon after qualification, are both established models.',
+      'Where a career judiciary exists, progression through court levels is a normal expectation; where judges are appointed from practice, it usually is not.',
+      'Specialisation by jurisdiction — criminal, civil, family, administrative — is common at all levels.',
+      'Judicial independence constrains how progression may operate, because a promotion system controlled by the executive would compromise it.',
+    ],
+    adjacentCareers: [
+      'Prosecutor, which in some systems shares a career structure with the judiciary — see [prosecutor](/professions/prosecutor).',
+      'Defence lawyer, one of the practice backgrounds judges are appointed from in many systems — see [defence lawyer](/professions/defence-lawyer).',
+    ],
     jurisdictionNote:
       'Appointment, tenure, and discipline arrangements differ fundamentally, and are frequently where the practical differences in judicial independence lie.',
     relatedInstitutions: ['prosecution-service'],
@@ -337,6 +444,30 @@ export const PROFESSIONS: readonly Profession[] = [
       'That forensic results are conclusive. Many disciplines rest on comparative judgement, and a responsible finding states its limits.',
       'That absence of a finding means nothing happened. Material may never have been present, recoverable, or examined.',
     ],
+    workingEnvironment: [
+      'Predominantly laboratory based, with formal procedures governing how material is received, handled, examined and recorded.',
+      'Some roles include scene attendance, which introduces irregular hours; many do not.',
+      'The work is methodical and documented, because the record of what was done is part of what is being produced.',
+      'Court attendance to give evidence is periodic rather than constant, and is a distinct skill from the examination itself.',
+      'Casework is usually prioritised by others, and backlogs are a normal feature of the environment.',
+    ],
+    skills: [
+      'Scientific method applied under quality-management and accreditation requirements.',
+      'Precision about what a finding does and does not establish — the single most important professional skill in the role.',
+      'Written reporting for a non-scientific audience that will rely on it.',
+      'Giving evidence: explaining a method and its limits under questioning without overstating the conclusion.',
+      'Contamination awareness and procedural discipline, since an examination that cannot be trusted is worse than none.',
+    ],
+    careerProgressionShape: [
+      'Entry normally requires a relevant scientific qualification, with the discipline determining which.',
+      'Competence in a specific examination type is usually certified separately from the underlying degree, and is what actually authorises casework.',
+      'Progression runs through discipline specialisation, reporting authority and expert-witness status rather than through supervising officers.',
+      'Movement into quality management, research or training is common at senior levels.',
+    ],
+    adjacentCareers: [
+      'Detective or investigator, who commissions and uses the examination — see [detective](/professions/detective).',
+      'Civilian analytical and support roles inside police organisations — see [civilian roles in police organisations](/law-enforcement/civilian-roles-in-police-organisations).',
+    ],
     jurisdictionNote:
       'Whether experts are court-appointed or party-instructed, and whether accreditation is mandatory, differ substantially between systems.',
     relatedInstitutions: ['national-police', 'federal-investigative-agency'],
@@ -399,6 +530,34 @@ export const PROFESSIONS: readonly Profession[] = [
     commonMisunderstandings: [
       'That the role is only security. Regime delivery, safeguarding, and support for rehabilitation are core rather than incidental.',
       'That detained people lose their rights. International standards treat them as retaining rights other than those necessarily restricted by lawful detention.',
+    ],
+    workingEnvironment: [
+      'Shift work covering nights, weekends and holidays, because a custodial institution operates continuously.',
+      'The workplace is a single secure site, and the same people are encountered daily over long periods — a relationship pattern unlike any other role in the justice system.',
+      'Most of the work is routine operation: movement, roll calls, supervision of activities, and responding to requests.',
+      'The role is relational far more than it is physical. Knowing the people held, noticing change, and defusing situations before they escalate is the substance of it.',
+      'Recording is continuous, because decisions affecting a detained person must be accountable.',
+      'The environment includes exposure to distress, self-harm and violence. Employers differ in what support they provide, and that provision was not researched.',
+    ],
+    skills: [
+      'Communication and de-escalation, used constantly and far more often than any physical intervention.',
+      'Consistency and fairness, because perceived arbitrariness is itself a source of instability.',
+      'Observation — recognising when something about a person or a landing has changed.',
+      'Procedural discipline, since security routines fail when they are performed inconsistently.',
+      "Written accuracy in records affecting a person's liberty, treatment and release.",
+      'Emotional resilience and the ability to maintain professional boundaries over long-term contact.',
+    ],
+    careerProgressionShape: [
+      'An initial training period followed by a supervised probationary period is the usual shape.',
+      'Progression runs through supervisory rank, and separately through specialist functions such as security, intelligence, offender management or training.',
+      'Movement into rehabilitation, resettlement and offender-management roles is a common direction.',
+      'Whether the service is run by a ministry, an agency, or contracted providers changes the employer and the career structure, but less often the daily work.',
+    ],
+    adjacentCareers: [
+      'Patrol officer, a comparable shift-based public-service role with a different legal function — see [patrol officer](/professions/patrol-officer).',
+      'Probation and offender-management work, which continues with the same people outside custody — see [what reintegration means](/corrections/what-reintegration-means).',
+      'Emergency dispatcher, another continuously staffed control role — see [emergency dispatcher](/professions/emergency-dispatcher).',
+      'The shift-based working pattern shared across continuously staffed public-safety roles — see [working life in policing](/law-enforcement/working-life-in-policing).',
     ],
     jurisdictionNote:
       'Prison systems, oversight arrangements, and the balance between custodial and community sentences are among the most nationally specific parts of any justice system.',
@@ -489,6 +648,30 @@ export const PROFESSIONS: readonly Profession[] = [
       'That a court-appointed or publicly funded lawyer is a state employee. Appointment assigns a lawyer to a case; employment is a relationship between a lawyer and an organisation, and the defence cluster sets out how differently systems combine the two.',
       'That because the profession is regulated, it answers to the government. In the systems described here admission and discipline sit with a professional body, and Brazilian statute states expressly that the body maintains no functional or hierarchical link with public administration.',
     ],
+    workingEnvironment: [
+      'A mixture of office work, custodial visits, and court attendance, with the balance depending on the stage of the case.',
+      'Attendance at a police station can be required at short notice, including at night, where the system provides for it.',
+      'Multiple cases are carried in parallel, with court listing controlling the diary.',
+      'Contact with clients is direct and often at the worst point in their lives, which shapes the working experience of the role.',
+      'Whether the work is salaried, contracted or privately instructed changes the working pattern considerably.',
+    ],
+    skills: [
+      'Legal analysis directed at testing the prosecution case rather than constructing one.',
+      'Client communication — explaining law, options and consequences to someone under acute stress.',
+      'Advocacy, written and oral.',
+      'Judgement about what to challenge and what not to, which is where experience shows most.',
+      'Confidentiality and independence, which are professional duties rather than preferences.',
+    ],
+    careerProgressionShape: [
+      'Entry requires a legal qualification and, in most systems, a further professional stage before independent practice.',
+      'Early practice is normally supervised, whatever the system calls the arrangement.',
+      'Progression runs through case seriousness and rights of audience before higher courts, and separately through practice management or a salaried defender structure.',
+      'Whether defence is organised as private practice, a public defender service, or a mixed model changes the career shape substantially.',
+    ],
+    adjacentCareers: [
+      'Prosecutor, the opposing function with a different professional duty — see [prosecutor](/professions/prosecutor).',
+      'Judge, appointed from practice in many systems — see [judge](/professions/judge).',
+    ],
     jurisdictionNote:
       'What a defence lawyer may do, what they are called, who admits them and what they are constituted as differ in every system. England and Wales does not constitute lawyers as a status at all — the Legal Services Act reserves six named activities and determines entitlement by authorisation or exemption for each. Nothing in this record should be read as describing a system it does not name.',
     uncertainty: [
@@ -523,6 +706,114 @@ export const PROFESSIONS: readonly Profession[] = [
     updatedOn: '2026-08-26',
     reviewedOn: '2026-08-26',
     factsVerifiedOn: '2026-08-26',
+  },
+  /*
+   * WAVE 24. Two civilian records, added because the corpus portrayed police organisations as
+   * consisting only of sworn officers — `dispatcher` occurred ZERO times across the whole corpus
+   * and `analyst` once, in a forensic-science aside. Part T of the wave brief treats that as an
+   * accuracy problem before it is an audience problem: a police organisation that is described
+   * as entirely sworn is described wrongly.
+   *
+   * Neither record states any country's entry requirements, for the reason given at the top of
+   * this file.
+   */
+  {
+    slug: 'emergency-dispatcher',
+    title: 'Emergency dispatcher',
+    shortTitle: 'Dispatcher',
+    summary:
+      'The person who answers an emergency call, works out what is happening and who should go, and passes on what responders need — a decision taken before anyone has seen the incident.',
+    section: 'public-safety',
+    question: 'What does an emergency dispatcher do?',
+    purpose:
+      'Someone has to convert an incomplete, often frightened account into a decision about what to send and how urgently. That decision is made before any responder has seen anything, which is why it is a distinct profession rather than an administrative step.',
+    institutionalContext:
+      'Employed in control rooms that may serve one service or several. Whether a control room handles police alone, or police, fire and ambulance together, and whether it is run by the police organisation or by a separate authority, differs between systems and sometimes within one country.',
+    ethicsNote:
+      'The role holds information about people at their most vulnerable and makes decisions that allocate scarce resources. Confidentiality, impartiality between callers, and accurate recording are professional obligations, not preferences — the recording of a call is frequently examined afterwards.',
+    responsibilities: [
+      'Answering emergency and non-emergency contacts and establishing what is happening',
+      'Classifying and prioritising an incident against the service\u2019s own criteria',
+      'Deciding or recommending what resource is sent, and passing the information responders need',
+      'Giving instructions to a caller where the service provides for it, including safety and first-aid guidance',
+      'Maintaining a live picture of an incident and of which units are committed',
+      'Creating the record on which everything that follows depends',
+    ],
+    decisionAuthority: [
+      'How an incident is classified and how urgently it is treated, within the service\u2019s criteria',
+      'What is dispatched, or what is recommended to a supervisor where dispatch is separately controlled',
+      'When to escalate to a supervisor or to another service',
+    ],
+    constraints: [
+      'Classification and dispatch follow published criteria rather than personal judgement alone',
+      'Calls and dispatch decisions are recorded and are routinely reviewed afterwards',
+      'The role does not attend incidents and does not exercise police powers',
+      'Information handling is governed by data-protection and confidentiality rules',
+    ],
+    oversight: [
+      'Supervisory review of recorded calls and dispatch decisions',
+      'Service-level performance monitoring of the control room as a whole',
+      'Examination of call recordings in complaints, inquests and criminal proceedings',
+    ],
+    trainingRouteShape: [
+      'An initial training period covering call handling, classification criteria, systems and legal duties',
+      'A supervised period taking live calls before working unsupervised',
+      'Separate certification for specific functions, such as giving pre-arrival medical instructions, where the service provides them',
+      'Continuing training as criteria and systems change',
+    ],
+    workingEnvironment: [
+      'Control-room based, seated, at a workstation with multiple screens and a radio channel.',
+      'Continuous shift coverage including nights, weekends and holidays, because emergency contact does not stop.',
+      'The work is auditory and verbal almost entirely — the dispatcher never sees the incident.',
+      'Sustained concentration across a shift, with calls arriving in unpredictable bursts.',
+      'Exposure to distressing calls is routine rather than exceptional, and the caller often cannot be helped in the way they want.',
+      'Colleagues are physically present in the same room, which makes the role more team-based than it appears from outside.',
+    ],
+    skills: [
+      'Listening for the information that matters while a caller is giving information in the order it occurs to them.',
+      'Questioning that is structured and calm without sounding indifferent.',
+      'Rapid classification against criteria, under time pressure, on incomplete information.',
+      'Simultaneous working: talking, typing and reading a live resource picture at once.',
+      'Emotional control, and the professional discipline of staying useful to a caller who is not.',
+      'Accurate, fast written recording, because the responder acts on what was typed rather than what was heard.',
+    ],
+    careerProgressionShape: [
+      'An initial supervised period is standard before working independently.',
+      'Progression commonly runs through call handling to dispatch to supervisory control-room roles, though services organise these differently and some combine them.',
+      'Specialisation exists in training, quality assurance, systems, and major-incident coordination.',
+      'Movement into other roles within the same organisation is a normal path, including into analysis and, where a person is eligible and chooses to apply, into sworn roles.',
+    ],
+    adjacentCareers: [
+      'Patrol officer, who is at the other end of the radio and acts on the dispatcher\u2019s classification — see [patrol officer](/professions/patrol-officer).',
+      'Civilian analytical and support roles inside police organisations — see [civilian roles in police organisations](/law-enforcement/civilian-roles-in-police-organisations).',
+      'Corrections officer, a comparable continuously staffed public-service role — see [corrections officer](/professions/corrections-officer).',
+    ],
+    commonMisunderstandings: [
+      'That the role simply passes calls on. Classification and prioritisation are decisions, made against criteria, and they determine what happens next.',
+      'That the role is simply a telephone job. Classification and prioritisation are decisions taken against published criteria before any responder has seen anything.',
+      'That call handling and dispatch are one job. Many services separate them, and a large control room may have people doing only one.',
+    ],
+    jurisdictionNote:
+      'Whether a control room serves one emergency service or several, whether it is operated by the police or by a separate authority, whether call handling and dispatch are separate roles, and what emergency number reaches it, are all set nationally or locally and differ substantially. No entry requirement is stated here for any country.',
+    countryExamples: [
+      {
+        countrySlug: 'netherlands',
+        note: 'The Dutch national police call the role centralist meldkamer, and describe the regional meldkamer task in one sentence that contains both halves of the job: "je neemt de spoedeisende meldingen (112) aan en stuurt de eenheden op straat aan" — you take the emergency 112 reports and direct the units on the street. Taking the call and directing the response are named together, which is not how every service divides the work.',
+      },
+    ],
+    relatedInstitutions: ['national-police', 'municipal-police'],
+    relatedProfessions: ['patrol-officer'],
+    uncertainty: [
+      'Only the Netherlands was researched for this role, and only the published description of the function. No country\u2019s entry requirements, selection process, training length or working conditions were researched.',
+      'Whether and how services provide psychological support for exposure to distressing calls was NOT RESEARCHED, though the exposure itself is inherent to the role.',
+      'Whether the role is held by civilian staff or by sworn officers was NOT ESTABLISHED for the Netherlands: the official page describing the work does not state the employment classification, and it is not assumed here.',
+    ],
+    sources: ['nl-politie-meldkamer', 'nl-politie-opleidingsoverzicht', 'unodc-cpcj'],
+    status: 'published',
+    review: 'fact-checked',
+    updatedOn: '2026-09-06',
+    reviewedOn: '2026-09-06',
+    factsVerifiedOn: '2026-09-06',
   },
 ];
 

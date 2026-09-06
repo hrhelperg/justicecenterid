@@ -883,6 +883,28 @@ export interface Profession {
   oversight: string[];
   /** Structural description only — never country-specific entry requirements. */
   trainingRouteShape: string[];
+  /*
+   * WAVE 24 — career orientation.
+   *
+   * Added because the corpus had a mature institutional layer and no career layer: `police
+   * academy`, `recruitment`, `career progression`, `physical fitness`, `shift work` and
+   * `report writing` each occurred ZERO times across 148 guides and every reference record.
+   * These four fields answer what the role is actually like, which the record could not.
+   *
+   * All four are STRUCTURAL and comparative, in the same sense as `trainingRouteShape`. The
+   * prior decision recorded at the top of professions.ts — no salary, no staffing, no
+   * country-specific entry requirements, because those are "the most common site of
+   * fabrication" — survives unchanged. A country's requirements belong on a country module
+   * with a jurisdiction and a dated official source, not here.
+   */
+  /** What the work setting is actually like: hours, teams, place, contact with the public. */
+  workingEnvironment?: string[];
+  /** Professional skills the role relies on, tied to standards rather than motivation. */
+  skills?: string[];
+  /** How careers in this role tend to be structured. Never a universal ladder. */
+  careerProgressionShape?: string[];
+  /** Adjacent roles a reader exploring this one should also look at, with why. */
+  adjacentCareers?: string[];
   /** Professional ethics: the standards the role is held to beyond the law. */
   ethicsNote?: string;
   commonMisunderstandings?: string[];
