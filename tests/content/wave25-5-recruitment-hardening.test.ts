@@ -237,6 +237,37 @@ describe('England and Wales is never widened to the United Kingdom', () => {
     }
   });
 
+  /*
+   * HOLE FOUND BY W255M8. The patterns above guard the widening everyone expects — England and
+   * Wales to the United Kingdom. They did not guard the widening one level DOWN, which is the one
+   * the source itself warns about: "Police forces are also allowed to apply their own local
+   * criteria in addition to the national eligibility aspects."
+   *
+   * A single force proves that force. The mutation wrote "One force requires applicants to hold a
+   * full driving licence, so England and Wales police require a full driving licence" and every
+   * test passed. Source scope must cover claim scope at every level, not only the national one.
+   */
+  it('a single force is never generalised to England and Wales', () => {
+    const forceWidening =
+      /\b(?:one|a|some|certain|individual|this) forces?\b[^.]{0,120}\bso\b[^.]{0,80}\b(?:England and Wales|all forces|every force)\b/i;
+    const bareClaim =
+      /\bEngland and Wales police (?:require|must|need)\b|\ball 43 forces (?:require|must|need)\b/i;
+    expect(offending(forceWidening, RECRUITMENT_UNITS)).toEqual([]);
+    expect(offending(bareClaim, RECRUITMENT_UNITS)).toEqual([]);
+  });
+
+  /*
+   * HOLE FOUND BY W255M9, and kept alongside the strengthened self-description check below. What
+   * matters is not what the page says about itself but that England and Wales is never described as
+   * a sovereign state — that is the whole reason it has no dossier, and the reason the entity model
+   * was not bent to give it one.
+   */
+  it('no jurisdiction in the recruitment layer is upgraded to a sovereign state', () => {
+    const sovereign =
+      /\b(?:England and Wales|Berlin|Bavaria|Scotland|Northern Ireland) is an? (?:sovereign |independent )?(?:country|state|nation)\b/i;
+    expect(offending(sovereign, RECRUITMENT_UNITS)).toEqual([]);
+  });
+
   it('the England and Wales page is tagged to a real jurisdiction and scoped in its text', () => {
     const g = guide(EW_PAGE);
     expect(g.jurisdiction).toEqual(['GB']);
