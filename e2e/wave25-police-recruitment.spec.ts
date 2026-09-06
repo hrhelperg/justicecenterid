@@ -242,13 +242,22 @@ test.describe('the recruitment layer is joined to the corpus', () => {
   });
 
   test('rejected recruitment routes really 404, with no fallback masking', async ({ page }) => {
+    /*
+     * WAVE 25.5 AMENDMENT. `/countries/czechia/police-recruitment` was on this list because Wave 25
+     * DEFERRED Czechia: every reachable official page redirected into an archive warning its
+     * content may not be current. Wave 25.5 retried it from scratch, found the recruitment portal's
+     * own live path, and published it — so the route now exists and must not 404.
+     *
+     * The rule this list enforces is unchanged: a country deferred for want of a current source
+     * must not have a route. France, still unresearched, stays.
+     */
     for (const rejected of [
       '/careers',
       '/police-recruitment',
       '/law-enforcement/how-to-become-a-police-officer-in-ireland',
       '/law-enforcement/police-salary',
-      '/countries/czechia/police-recruitment',
       '/countries/france/police-recruitment',
+      '/countries/spain/police-recruitment',
     ]) {
       const response = await page.goto(rejected);
       expect(response?.status(), `${rejected} did not 404`).toBe(404);
