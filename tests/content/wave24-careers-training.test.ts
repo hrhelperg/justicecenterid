@@ -996,36 +996,57 @@ describe('the civil-protection coordination function still has no invented entit
 /* Reference records render their cross-references as links, not as syntax    */
 /* -------------------------------------------------------------------------- */
 
-describe('markdown in reference records resolves to a link', () => {
+describe('link markers in reference records resolve on every surface', () => {
   /*
-   * A defect this wave introduced and its own e2e caught. Reference records had never contained a
-   * markdown link, so `Bullets` rendered items as raw text; Wave 24's career fields cross-reference
-   * the educational guides, and the first build shipped 93 literal `[text](/path)` strings as
-   * visible syntax across eight profession pages. `InlineText` in ReferencePage now resolves them.
+   * Wave 24 found FOUR surfaces rendering content text without resolving `[text](/path)`:
+   * reference bullets (introduced by this wave), DefinitionList descriptions and terms, and both
+   * country-example renderers. The first shipped 93 literal strings across eight profession pages;
+   * the others had been shipping them from pages that predate this wave.
    *
-   * This test guards the content half: every link target must exist, and must be internal, so the
-   * renderer never has to decide what to do with a broken or external one.
+   * The fix was one shared `InlineText`. This test guards the content side of it: every link
+   * marker anywhere in a reference record must point at a route that exists, so a renderer never
+   * has to decide what to do with a broken target, and any surface that still renders raw will
+   * show up as visible syntax rather than as a silently dead link.
    */
   const LINK = /\[([^\]]+)\]\(([^)]+)\)/g;
 
-  it.each(PROFESSIONS.map((p) => p.slug))('%s links only to real internal routes', (slug) => {
-    const p = profession(slug);
-    const fields = [
-      ...(p.workingEnvironment ?? []),
-      ...(p.skills ?? []),
-      ...(p.careerProgressionShape ?? []),
-      ...(p.adjacentCareers ?? []),
-    ];
+  function recordText(record: unknown): string[] {
+    const out: string[] = [];
+    const walk = (node: unknown): void => {
+      if (typeof node === 'string') return void out.push(node);
+      if (Array.isArray(node)) return node.forEach(walk);
+      if (node && typeof node === 'object') Object.values(node).forEach(walk);
+    };
+    walk(record);
+    return out;
+  }
+
+  it.each(PROFESSIONS.map((p) => p.slug))('%s links only to registered routes', (slug) => {
     const problems: string[] = [];
-    for (const text of fields) {
+    for (const text of recordText(profession(slug))) {
       for (const match of text.matchAll(LINK)) {
         const href = match[2] ?? '';
         if (!href.startsWith('/')) {
-          problems.push(`${slug}: external or malformed target "${href}"`);
-          continue;
+          problems.push(`${slug}: non-internal target "${href}"`);
+        } else if (!PUBLIC_ROUTE_PATHS.includes(href)) {
+          problems.push(`${slug}: unregistered route "${href}"`);
         }
-        if (!PUBLIC_ROUTE_PATHS.includes(href)) {
-          problems.push(`${slug}: link to unregistered route "${href}"`);
+      }
+    }
+    expect(problems).toEqual([]);
+  });
+
+  it('every institution record links only to registered routes', () => {
+    const problems: string[] = [];
+    for (const institution of INSTITUTION_TYPES) {
+      for (const text of recordText(institution)) {
+        for (const match of text.matchAll(LINK)) {
+          const href = match[2] ?? '';
+          if (!href.startsWith('/')) {
+            problems.push(`${institution.slug}: non-internal target "${href}"`);
+          } else if (!PUBLIC_ROUTE_PATHS.includes(href)) {
+            problems.push(`${institution.slug}: unregistered route "${href}"`);
+          }
         }
       }
     }

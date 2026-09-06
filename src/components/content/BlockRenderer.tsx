@@ -1,9 +1,6 @@
-import Link from 'next/link';
-import { Fragment } from 'react';
-import { ScriptText } from '@/components/content/ScriptText';
+import { InlineText } from '@/components/content/InlineText';
 import { Callout } from '@/components/ui/Callout';
 import { DefinitionList } from '@/components/ui/DefinitionList';
-import { parseInline } from '@/lib/content';
 import type { Block, ClaimType } from '@/content/types';
 
 const CLAIM_LABELS: Partial<Record<ClaimType, string>> = {
@@ -12,36 +9,6 @@ const CLAIM_LABELS: Partial<Record<ClaimType, string>> = {
   uncertain: 'Uncertain',
   disputed: 'Disputed',
 };
-
-/**
- * Resolves `[text](/route)` link markers and `**strong**` / `*em*` emphasis markers written in
- * content into real elements. A segment never carries both — emphasis is not parsed inside a
- * link label — so the two cases are exclusive.
- */
-function InlineText({ text }: { text: string }) {
-  return (
-    <>
-      {parseInline(text).map((segment, index) => {
-        const content = <ScriptText text={segment.text} />;
-        return (
-          <Fragment key={index}>
-            {segment.href ? (
-              <Link href={segment.href} className="link-inline">
-                {content}
-              </Link>
-            ) : segment.emphasis === 'strong' ? (
-              <strong className="font-semibold">{content}</strong>
-            ) : segment.emphasis === 'em' ? (
-              <em>{content}</em>
-            ) : (
-              content
-            )}
-          </Fragment>
-        );
-      })}
-    </>
-  );
-}
 
 function BlockItem({ block }: { block: Block }) {
   switch (block.kind) {

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import type { ReactNode } from 'react';
+import { InlineText } from '@/components/content/InlineText';
 import { Callout } from '@/components/ui/Callout';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { ReviewMeta } from '@/components/content/ReviewMeta';
@@ -56,40 +57,6 @@ function Prose({
   );
 }
 
-/**
- * Inline `[label](/path)` links inside reference bullet text.
- *
- * WAVE 24, and it fixes a defect this wave introduced. Reference records had never contained a
- * markdown link, so `Bullets` rendered its items as raw text and nothing noticed. Wave 24's career
- * fields cross-reference the educational guides — which is the point of them, and what the
- * knowledge graph is built from — and without this the pages shipped 93 literal `[text](/path)`
- * strings as visible syntax across eight profession pages.
- *
- * INTERNAL PATHS ONLY. A target that does not begin with `/` renders as plain text rather than as
- * a link, so the "no external links from reference pages" rule is enforced by the renderer rather
- * than by review. Anything that is not a well-formed link is left exactly as written.
- */
-const INLINE_LINK = /\[([^\]]+)\]\((\/[^)\s]*)\)/g;
-
-function InlineText({ text }: { text: string }): ReactNode {
-  const nodes: ReactNode[] = [];
-  let cursor = 0;
-  for (const match of text.matchAll(INLINE_LINK)) {
-    const [full, label, href] = match;
-    const start = match.index ?? 0;
-    if (start > cursor) nodes.push(text.slice(cursor, start));
-    nodes.push(
-      <Link key={`${href}-${start}`} href={href as string} className="link-inline">
-        {label}
-      </Link>,
-    );
-    cursor = start + full.length;
-  }
-  if (cursor === 0) return text;
-  if (cursor < text.length) nodes.push(text.slice(cursor));
-  return nodes;
-}
-
 function Bullets({ id, heading, items }: { id: string; heading: string; items: string[] }) {
   if (items.length === 0) return null;
   return (
@@ -136,7 +103,9 @@ function CountryExamples({ examples }: { examples: CountryExample[] }) {
                 {dossier!.name}
               </Link>
             </dt>
-            <dd className="mt-1 text-ink-muted">{example.note}</dd>
+            <dd className="mt-1 text-ink-muted">
+              <InlineText text={example.note} />
+            </dd>
           </div>
         ))}
       </dl>
@@ -422,7 +391,9 @@ function CounterExamples({ examples }: { examples: CountryExample[] }) {
                 {dossier!.name}
               </Link>
             </dt>
-            <dd className="mt-1 text-ink-muted">{example.note}</dd>
+            <dd className="mt-1 text-ink-muted">
+              <InlineText text={example.note} />
+            </dd>
           </div>
         ))}
       </dl>
