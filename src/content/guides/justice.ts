@@ -4612,7 +4612,7 @@ export const JUSTICE_GUIDES: readonly Guide[] = [
         kind: 'callout',
         variant: 'note',
         title: 'Where this connects',
-        text: 'The machinery that hears such a challenge is Wave 19’s subject, not this page’s: see [constitutional review](/justice/constitutional-review) for who decides whether a law is constitutional, and [effective remedy](/justice/effective-remedy) for what a forum can actually give.',
+        text: 'The machinery that hears such a challenge is not this page’s subject: see [constitutional review](/justice/constitutional-review) for who decides whether a law is constitutional, and [effective remedy](/justice/effective-remedy) for what a forum can actually give.',
       },
       {
         kind: 'paragraph',

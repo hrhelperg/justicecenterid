@@ -551,7 +551,7 @@ export const NORWAY: CountryDossier = {
         },
       ],
       uncertainty: [
-        'Wave 25 ABANDONED Norway when the admission path returned HTTP 404 after a redirect. This module rests on the current location, re-found and content-confirmed.',
+        'An earlier attempt to document Norwegian admission was abandoned when the published path returned HTTP 404 after a redirect. This module rests on the current location, re-found and content-confirmed.',
         'NO age requirement is stated, because the official page states none. The absence of a stated minimum or maximum is not evidence that none exists.',
         'The content of the digital tests, video interview, physical tests and suitability assessment was NOT RESEARCHED and is not described.',
         'Other routes into Norwegian policing, and civilian roles, were NOT RESEARCHED.',

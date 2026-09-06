@@ -1829,3 +1829,64 @@ force question to the existing legal page rather than answering it.
   the fix it forced. Adversarial QA: 1 P1 and 3 P2, every finding independently reproduced.
 
 Delivered on `feat/police-equipment-technology-wave-26`. Not merged, not deployed.
+
+## Phase 41 — Knowledge Expansion Wave 27 (delivered 2026-09-07)
+
+Police units, vehicles and specialisations. Four guides on four institutional sources, two services
+reached — New Zealand Police and the Netherlands' Politie. A **structure** wave: where a capability
+sits and how far it reaches, never what it can do. Details in
+`docs/research/knowledge-expansion-wave-27-qa.md` and
+`docs/research/police-units-model-findings.md`.
+
+- **"Unit" is a structural word, and reading it as an operational one misreads most of the list.**
+  New Zealand Police publishes a Dive Squad and Armed Offenders Squads in the same list as the Royal
+  New Zealand Police College, a Police Prosecution Service and Communications Centres. A college is
+  not a squad. The word describes where something sits, not what work it does — which is what makes
+  this a different question from Wave 24's "what specialisations exist".
+- **A unit's reach is its least obvious and most consequential property.** One service publishes
+  four arrangements side by side: a dog section with 21 sections nationwide; maritime units in two
+  cities; a dive squad "based in Wellington, but responds to requests for assistance from all over
+  New Zealand"; and air support that "usually operates throughout the metropolitan Auckland area"
+  but "may also be deployed nationally". A reader who assumes "they have a dive squad" means one
+  nearby is wrong in exactly the way the published wording avoids.
+- **"Responds to requests for assistance" is a coordination relationship, not a command one.** A
+  district asks and somebody decides. That is the same structural problem the corpus describes
+  _between_ agencies, appearing _inside_ one service.
+- **Uneven distribution usually reflects capability maintenance, not importance.** Specialist skill
+  is perishable and needs enough work to stay practised; outside dense areas there often is not
+  enough. Publishing the structure is what lets the public ask the question honestly.
+- **The ordinary car comes first, and a training vehicle is in the list.** Politie's published
+  vehicle categories lead with patrol, emergency response and traffic checks, and include a
+  `trainingsvoertuig`. The third appearance of the same imbalance Wave 24 found in academy hours and
+  Wave 26 found in equipment lists: what a service maintains describes the job better than fiction
+  does.
+- **Police livery is legally protected for a public-safety reason.** The Dutch house style is
+  `wettelijk beschermd` so that the public can trust a marked vehicle is what it appears to be —
+  recognisability as accountability, the same conclusion Wave 26 reached about the uniform.
+- **Researched and deliberately unused.** The Politie page also describes pursuit and interception
+  uses of a rapid-intervention vehicle. That is capability; this wave publishes category. The
+  decision is recorded in the source note so a later editor meets it rather than assuming an
+  oversight.
+- **A mutation proof found a real corpus hole, not a self-containment gap.** W27M7 repointed an
+  official source URL at a commerce host and survived. The Wave 26 suite was re-run against the same
+  mutation and **also passed** — its guard iterates its own five source ids, so 364 sources were
+  unguarded. Now corpus-wide and checked on the **hostname**, because a government path may
+  legitimately contain "review" (`nist.gov/.../scientific-foundation-reviews`) while a host that
+  does is a different kind of thing.
+- **P1: the corpus was addressing readers in its own build vocabulary.** Eleven rendered strings
+  said things like "Wave 24 established that…" and told readers "Wave 25 ABANDONED Norway". Three
+  were this wave's; **eight predated it** and had been rendering since the waves that wrote them.
+  All eleven now name the page they mean. Two carve-outs recorded as debt rather than taken
+  silently: `Source.note` provenance (369 records), and "this wave" in 63 scope statements, capped
+  by a test so it cannot grow.
+- **Citation is not referral — the third time**, and **the self-referential cluster — the fourth.**
+  The e2e again demanded pages carry no outbound links and again failed on all of them, because
+  every guide renders a source list. And the graph again passed at 0/0/0 while no pre-existing page
+  linked into the new cluster; four editorial backlinks added.
+- **Client JS +0 KB. CSS +0 bytes. No component changed.**
+- Validation: 8,494 tests / 83 files; 1,816 e2e passed; **526 routes**, 528 pages, 526 sitemap URLs;
+  route matrix 678/678; 0 orphans, 0 weakly linked, 0 dead ends; 369 sources.
+  **11/11 mutation proofs valid**, one caught only after the fix it forced. Adversarial QA: 1 P1,
+  0 P2, every finding independently reproduced.
+
+Delivered on `feat/police-units-vehicles-wave-27`. Not merged, not deployed.

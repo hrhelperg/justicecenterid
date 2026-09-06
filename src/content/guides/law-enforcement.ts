@@ -2484,7 +2484,7 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [what police jurisdiction means](/law-enforcement/police-jurisdiction), [prefectural police](/institutions/prefectural-police), and [how police are held to account](/law-enforcement/how-police-are-held-to-account).',
+        text: 'Related: [what police jurisdiction means](/law-enforcement/police-jurisdiction), [prefectural police](/institutions/prefectural-police), and [how police are held to account](/law-enforcement/how-police-are-held-to-account). Where a single specialist unit serves a whole country by request rather than by command, see [how specialist units cover a country](/law-enforcement/how-specialist-units-cover-a-country).',
       },
     ],
   },
@@ -4467,7 +4467,7 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [rank, role and specialisation](/law-enforcement/rank-role-and-specialisation), [civilian roles in police organisations](/law-enforcement/civilian-roles-in-police-organisations), and [the detective role](/professions/detective). Plain-clothes work removes the identification a uniform provides, which is why the duty shifts — see [why police wear a uniform](/law-enforcement/why-police-wear-a-uniform).',
+        text: 'Related: [rank, role and specialisation](/law-enforcement/rank-role-and-specialisation), [civilian roles in police organisations](/law-enforcement/civilian-roles-in-police-organisations), and [the detective role](/professions/detective). Plain-clothes work removes the identification a uniform provides, which is why the duty shifts — see [why police wear a uniform](/law-enforcement/why-police-wear-a-uniform). Where these areas of work sit as organisational bodies, and how far each reaches, is [what a police unit is](/law-enforcement/what-a-police-unit-is).',
       },
     ],
   },
@@ -6638,7 +6638,7 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
         kind: 'callout',
         variant: 'analysis',
         title: 'And the imbalance is the same one the training data showed',
-        text: 'Wave 24 found that measured academy instruction gives more hours to law than to firearms or defensive tactics. The equipment lists point the same way: what a service issues is a better guide to what the job consists of than what fiction selects from it.',
+        text: 'Measured academy instruction gives more hours to law than to firearms or defensive tactics — see [what police recruits are taught](/law-enforcement/what-police-recruits-are-taught). The equipment lists point the same way: what a service issues is a better guide to what the job consists of than what fiction selects from it.',
       },
     ],
     howItWorks: [
@@ -6766,7 +6766,7 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [why police wear a uniform](/law-enforcement/why-police-wear-a-uniform), [documentation equipment in policing](/law-enforcement/documentation-equipment-in-policing), and [working life in policing](/law-enforcement/working-life-in-policing).',
+        text: 'Related: [why police wear a uniform](/law-enforcement/why-police-wear-a-uniform), [documentation equipment in policing](/law-enforcement/documentation-equipment-in-policing), and [working life in policing](/law-enforcement/working-life-in-policing). The largest single category a service issues is its fleet — see [police vehicles and what they are for](/law-enforcement/police-vehicles-and-what-they-are-for).',
       },
     ],
   },
@@ -7116,7 +7116,7 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [why police wear a uniform](/law-enforcement/why-police-wear-a-uniform), [why police accountability matters](/law-enforcement/why-police-accountability-matters), and [what police equipment is for](/law-enforcement/what-police-equipment-is-for).',
+        text: 'Related: [why police wear a uniform](/law-enforcement/why-police-wear-a-uniform), [why police accountability matters](/law-enforcement/why-police-accountability-matters), and [what police equipment is for](/law-enforcement/what-police-equipment-is-for). The same question at vehicle scale is [marked vehicles and police identification](/law-enforcement/marked-vehicles-and-police-identification).',
       },
     ],
   },
@@ -7511,7 +7511,7 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
     whyItExists: [
       {
         kind: 'paragraph',
-        text: 'Wave 24 found that a substantial share of a police officer’s working day is writing, and that the record is read months later by supervisors, prosecutors, defence lawyers and courts — by people who were not there. Documentation equipment is what makes that possible, which is why it is issued rather than assumed.',
+        text: 'A substantial share of a police officer’s working day is writing — see [working life in policing](/law-enforcement/working-life-in-policing) — and the record is read months later by supervisors, prosecutors, defence lawyers and courts — by people who were not there. Documentation equipment is what makes that possible, which is why it is issued rather than assumed.',
         claim: 'analysis',
       },
       {
@@ -7795,6 +7795,744 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
       {
         kind: 'paragraph',
         text: 'Related: [documentation equipment in policing](/law-enforcement/documentation-equipment-in-policing), [what police equipment is for](/law-enforcement/what-police-equipment-is-for), and [how are police held to account](/law-enforcement/how-police-are-held-to-account).',
+      },
+    ],
+  },
+  /*
+   * ==========================================================================
+   * WAVE 27 — police units, vehicles and organisational structure.
+   * ==========================================================================
+   *
+   * THE BOUNDARY WITH WAVE 24 IS THE FIRST THING TO GET RIGHT. Wave 24 already owns "what
+   * specialisations exist" at /law-enforcement/specialist-roles-in-policing, and owns it
+   * comprehensively — investigation, community policing, traffic, public order, cybercrime,
+   * intelligence, forensic support, specialist units, training, public information. This wave does
+   * NOT re-cut that question. It takes the institutional angle Wave 24 explicitly left alone: what
+   * a unit IS as an organisational form, where it sits, how far it reaches, and what a vehicle is
+   * for.
+   *
+   * THE SAFETY BOUNDARY IS WAVE 26'S, UNCHANGED. What exists, why, and how it is organised —
+   * never what any unit or vehicle can do, how it is equipped, deployed, or used. The Dutch source
+   * describes pursuit and interception uses of one vehicle category; that material is deliberately
+   * unused. Naming a unit is institutional description; describing its capability would be
+   * exactly the "surveillance capability database" the programme forbids.
+   *
+   * THE FINDING. A unit's geography is a separate question from its existence. One service has 21
+   * dog sections nationwide, two maritime units, one dive squad based in a single city that
+   * "responds to requests for assistance from all over New Zealand", and an air support unit that
+   * usually works one metropolitan area but may be deployed nationally. "Does the police have a
+   * dive squad" and "is there one near you" are different questions with different answers.
+   */
+  {
+    slug: 'what-a-police-unit-is',
+    title: 'What a police unit is',
+    shortTitle: 'What a unit is',
+    question: 'What does it actually mean for a police service to have a "unit"?',
+    summary:
+      'A unit is an organisational form, not a job title. It has a place in a structure, a commander, and — the part most easily missed — a defined reach that may be far smaller or far larger than the service itself.',
+    entityType: 'concept',
+    section: 'law-enforcement',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'how-specialist-units-cover-a-country',
+      'specialist-roles-in-policing',
+      'rank-role-and-specialisation',
+      'police-command-and-coordination',
+    ],
+    sources: ['nz-police-structure', 'nz-police-teams-units'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-07',
+    publishedOn: '2026-09-07',
+    reviewedOn: '2026-09-07',
+    factsVerifiedOn: '2026-09-07',
+    readingTimeMinutes: 7,
+    uncertainty: [
+      'One service’s structure was researched — New Zealand Police. How any other service organises units was NOT RESEARCHED, and structures differ substantially.',
+      'What any named unit does, how it is equipped, trained or deployed was NOT RESEARCHED and is not described. That is a deliberate limit.',
+      'How units are created, funded or disbanded, and who decides, was NOT ESTABLISHED for any service.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'The corpus already separates rank, role, specialisation and assignment as four different things — see [rank, role and specialisation](/law-enforcement/rank-role-and-specialisation). A **unit** is a fifth: an organisational body with a place in a structure, distinct from the work its members do and from the ranks they hold. Two officers doing identical work can sit in different units, and one unit can contain several ranks and more than one kind of specialist.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This describes what a unit is as an organisational form, using one service’s published structure. It does not describe what any unit does operationally, how it is equipped, or how it is deployed — and it does not re-cut the question of what specialisations exist, which is [specialist roles in policing](/law-enforcement/specialist-roles-in-policing).',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'A service of any size cannot be a single undifferentiated body: someone has to be accountable for a defined set of work, and that accountability needs an organisational container. A unit is that container, which is why it has a commander and a place in a structure rather than merely a name.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'And the container is not the same as the expertise it holds',
+        text: 'Expertise can exist without a unit — a service can have officers trained in something who sit in ordinary teams. Creating a unit is a decision to make that expertise permanent, located and commanded. That is an organisational choice with costs, which is why not every specialism becomes one.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'New Zealand Police publishes its structure: the service "is divided into 12 districts, 9 in the North Island and 3 in the South", with the Commissioner of Police as chief executive.',
+        claim: 'fact',
+        sources: ['nz-police-structure'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Districts are the default container; units are what does not fit in one',
+        text: 'A geographic division works for the work that happens everywhere. Everything else — the capability needed occasionally, in one place at a time, by people who must stay practised — needs a different arrangement, and that is where named units appear.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The same service publishes a list of teams and units alongside the districts, including a Dive Squad, Police Dog Section, Police Negotiation Teams, Armed Offenders Squads, Forensics, a Financial Crime Group, Communications Centres, Search and Rescue, a Dignitary Protection Service, the Royal New Zealand Police College and a Police Prosecution Service.',
+        claim: 'fact',
+        sources: ['nz-police-teams-units'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Read that list for what it is: a range of organisational kinds',
+        text: 'It contains an operational squad, a training college, a prosecution service and a call-handling centre. "Unit" is a structural word covering all of them, which is why it tells you where something sits and not what it does.',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'A unit has a place, not just a purpose',
+            description:
+              'It sits inside a district, or alongside districts at national level, or across several. Where it sits determines who commands it and who can call on it.',
+          },
+          {
+            term: 'A unit is not a specialisation',
+            description:
+              'A specialisation is a field of expertise a person has. A unit is a body an organisation maintains. A service can have the first without the second — and often does, for capabilities used rarely.',
+          },
+          {
+            term: 'A unit is not a rank ladder',
+            description:
+              'Units contain several ranks, and a rank exists independently of any unit. The corpus draws this distinction for individuals at [rank, role and specialisation](/law-enforcement/rank-role-and-specialisation); it holds for organisational bodies too.',
+          },
+          {
+            term: 'Some units are not operational at all',
+            description:
+              'The same published list contains a police college and a prosecution service. Treating "unit" as a synonym for an operational team misreads most of the list.',
+          },
+          {
+            term: 'And a unit has a reach',
+            description:
+              'The least obvious property, and the most consequential: how much of the country a unit actually serves. See [how specialist units cover a country](/law-enforcement/how-specialist-units-cover-a-country).',
+          },
+        ],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'A police unit is a team of specialists who do one operational job.',
+        reality:
+          'The published list for one service includes a police college, a prosecution service and communications centres alongside operational squads. "Unit" is an organisational word, not an operational one.',
+      },
+      {
+        claim: 'Every specialisation has a unit.',
+        reality:
+          'Expertise can exist without a permanent body holding it. Creating a unit makes a capability permanent, located and commanded, which is an organisational decision with costs.',
+      },
+      {
+        claim: 'A unit is a rank or a job title.',
+        reality:
+          'Units contain several ranks, and ranks exist independently of units. It is the same distinction the corpus draws between rank, role, specialisation and assignment, applied to organisational bodies.',
+      },
+      {
+        claim: 'Police services are organised the same way.',
+        reality:
+          'One service’s structure was researched. Nothing here establishes how any other service divides itself, and structures differ substantially.',
+      },
+      {
+        claim: 'A page about units will tell you what each unit can do.',
+        reality:
+          'It will not. What any unit does operationally, how it is equipped and how it is deployed were not researched and are not described.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'What one published structure shows.',
+      },
+      {
+        kind: 'list',
+        items: [
+          '12 districts, 9 in the North Island and 3 in the South — New Zealand Police.',
+          'Named teams and units published alongside the districts.',
+          'Those units include operational squads, a college, a prosecution service and call-handling centres.',
+          'Not researched: how any other service is organised, and what any unit does.',
+        ],
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'Structure is an accountability question because it determines who answers for what. A capability held inside a named unit with a commander can be asked about; the same capability spread informally across a service is harder to examine, even where it is used identically. Publishing the structure is what makes the first possible.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'What specialist work consists of, as a career, is [specialist roles in policing](/law-enforcement/specialist-roles-in-policing). The individual-level distinction is [rank, role and specialisation](/law-enforcement/rank-role-and-specialisation). How services coordinate across boundaries is [command and coordination between police agencies](/law-enforcement/police-command-and-coordination).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [how specialist units cover a country](/law-enforcement/how-specialist-units-cover-a-country), [specialist roles in policing](/law-enforcement/specialist-roles-in-policing), and [rank, role and specialisation](/law-enforcement/rank-role-and-specialisation).',
+      },
+    ],
+  },
+  {
+    slug: 'how-specialist-units-cover-a-country',
+    title: 'How specialist units cover a country',
+    shortTitle: 'Unit reach',
+    question: 'If a police service has a specialist unit, is there one near you?',
+    summary:
+      'Not necessarily, and one service’s published list shows four different answers at once: a capability in 21 places, one in two places, one in a single city that serves the whole country on request, and one that usually works a single metropolitan area but can go anywhere.',
+    entityType: 'concept',
+    section: 'law-enforcement',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'what-a-police-unit-is',
+      'police-command-and-coordination',
+      'specialist-roles-in-policing',
+      'how-policing-is-divided-between-levels',
+    ],
+    sources: ['nz-police-teams-units', 'nz-police-structure'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-07',
+    publishedOn: '2026-09-07',
+    reviewedOn: '2026-09-07',
+    factsVerifiedOn: '2026-09-07',
+    readingTimeMinutes: 7,
+    uncertainty: [
+      'One service was researched — New Zealand Police. Whether other services distribute specialist capability the same way was NOT RESEARCHED.',
+      'Response times, availability, staffing levels and how a request for assistance is actually handled were NOT RESEARCHED and are not described.',
+      'Nothing here describes what any unit does, how it is equipped, or what it is capable of.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Whether a police service "has" a specialist capability and whether that capability is available where you are turn out to be different questions. The gap between them is a matter of organisational design, and one service publishes enough to see the design.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This describes how specialist units are distributed geographically in one service. It says nothing about what any unit does, how quickly anything happens, or what any capability amounts to — and it is not a guide to what is available anywhere.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'Specialist capability is expensive and perishable. It needs people who stay practised, which means enough work to stay practised on — and outside dense areas there is often not enough. That constraint, rather than any view about how important the work is, is what shapes where units sit.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'So the real design question is not whether to have it',
+        text: 'It is how thinly it can be spread before it stops working. A capability in every district is available immediately and practised rarely; one in a single place is practised constantly and has to travel. Both are defensible, and a service usually runs several of the arrangements at once.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'New Zealand Police publishes its teams and units, and the reach statements differ from one to the next. The Police Dog Section has **21 sections nationwide**. Maritime Units are located in **Auckland and Wellington**.',
+        claim: 'fact',
+        sources: ['nz-police-teams-units'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'The Dive Squad is described as "based in Wellington, but responds to requests for assistance from all over New Zealand". The air support unit "usually operates throughout the metropolitan Auckland area" and "may also be deployed nationally".',
+        claim: 'fact',
+        sources: ['nz-police-teams-units'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Four arrangements, one service, published side by side',
+        text: 'Distributed across the country; present in two cities; single-sited and nationally available on request; and normally local with a national option. A reader who assumed "the police have a dive squad" meant one near them would be wrong in the way the published wording is careful to avoid.',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'Distributed',
+            description:
+              'The capability exists in many places at once. Available locally, and each location handles a smaller share of the total work.',
+          },
+          {
+            term: 'Concentrated in a few places',
+            description:
+              'Present where demand is greatest. Elsewhere it is a journey away, and the two locations carry the national workload between them.',
+          },
+          {
+            term: 'Single-sited, nationally available',
+            description:
+              'One team, serving everywhere by request. The most practised arrangement and the least immediate — the published wording for the Dive Squad is exactly this.',
+          },
+          {
+            term: 'Locally based with a national option',
+            description:
+              'Normally works one area, deployable further when needed. This is the arrangement the air support description states.',
+          },
+          {
+            term: 'And the district structure sits underneath all of them',
+            description:
+              'Twelve districts do the work that happens everywhere. Specialist units are the exceptions layered over that, which is why their geography has to be stated separately.',
+          },
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'What "responds to requests for assistance" implies organisationally',
+        text: 'That a district cannot simply direct the unit: it asks, and someone decides. That is a coordination relationship rather than a command one, and it is the same structural problem the corpus describes between separate agencies — see [command and coordination between police agencies](/law-enforcement/police-command-and-coordination).',
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'If a police service has a specialist unit, it is available everywhere.',
+        reality:
+          'In one published structure, Maritime Units are located in Auckland and Wellington, and the Dive Squad is based in Wellington and responds to requests from all over the country.',
+      },
+      {
+        claim: 'Specialist units are spread evenly across a country.',
+        reality:
+          'The same service publishes a dog section with 21 locations nationwide alongside a single-sited dive squad. Distribution is decided capability by capability.',
+      },
+      {
+        claim: 'A national unit is commanded by whoever needs it.',
+        reality:
+          'The published wording is that the Dive Squad "responds to requests for assistance" — a coordination relationship rather than a command one.',
+      },
+      {
+        claim: 'Where a unit sits reflects how important the work is.',
+        reality:
+          'It largely reflects where there is enough work to keep a team practised. That is a capability-maintenance constraint, not a judgement about importance.',
+      },
+      {
+        claim: 'This page tells you what is available in a given place.',
+        reality:
+          'It does not. Availability, response times and staffing were not researched, and one service’s arrangements establish nothing about any other.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Reach, as one service publishes it.',
+      },
+      {
+        kind: 'list',
+        items: [
+          '21 sections nationwide — Police Dog Section.',
+          'Two locations, Auckland and Wellington — Maritime Units.',
+          'Based in Wellington, responding to requests from all over New Zealand — Dive Squad.',
+          'Usually metropolitan Auckland, deployable nationally — air support.',
+          'Twelve districts underneath all of it, 9 in the North Island and 3 in the South.',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'Scope',
+        text: 'New Zealand Police, from its own published pages. Nothing here describes how any other service distributes specialist capability, and nothing describes what any of these units does.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'Uneven distribution of specialist capability is a real question about equal service, and it is one a published structure lets the public ask. It is also a question with an honest answer that is rarely about neglect: keeping a rarely used capability practised in a thinly populated area is genuinely hard, and saying so openly is better than implying uniform coverage that does not exist.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'What a unit is as an organisational form is [what a police unit is](/law-enforcement/what-a-police-unit-is). How services coordinate when one needs another is [command and coordination between police agencies](/law-enforcement/police-command-and-coordination). How policing is split between levels of government is [how policing is divided between levels](/law-enforcement/how-policing-is-divided-between-levels).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [what a police unit is](/law-enforcement/what-a-police-unit-is), [command and coordination between police agencies](/law-enforcement/police-command-and-coordination), and [specialist roles in policing](/law-enforcement/specialist-roles-in-policing).',
+      },
+    ],
+  },
+  {
+    slug: 'police-vehicles-and-what-they-are-for',
+    title: 'Police vehicles and what they are for',
+    shortTitle: 'Police vehicles',
+    question: 'Why do police services run several kinds of vehicle?',
+    summary:
+      'Because the tasks differ. One service publishes its categories: ordinary cars and vans for patrol and calls, motorcycles for roads outside built-up areas, a helicopter supporting regional units — and vehicles used only for training.',
+    entityType: 'concept',
+    section: 'law-enforcement',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'marked-vehicles-and-police-identification',
+      'what-police-equipment-is-for',
+      'what-a-police-unit-is',
+      'issued-equipment-and-personal-equipment',
+    ],
+    sources: ['nl-politie-voertuigen'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-07',
+    publishedOn: '2026-09-07',
+    reviewedOn: '2026-09-07',
+    factsVerifiedOn: '2026-09-07',
+    readingTimeMinutes: 6,
+    uncertainty: [
+      'One service’s published vehicle categories were researched — the Dutch national police. No other service’s fleet was researched.',
+      'NO vehicle specification, performance figure, model or capability appears on this page. The source describes operational uses of one vehicle category including pursuit and interception; that material is deliberately unused.',
+      'How fleets are procured, funded, maintained or replaced was NOT RESEARCHED for any service.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'A police vehicle is equipment, in exactly the sense the equipment layer already uses: something a service provides so that officers can do the job it has given them. What makes vehicles worth their own page is that the categories are visible from the street, and each one answers a different problem.',
+      },
+      {
+        kind: 'callout',
+        variant: 'safety',
+        title: 'What this page describes, and what it deliberately does not',
+        text: 'It names categories of vehicle and what each is generally for. It gives no specification, no performance figure, no model and no capability — and where the source describes operational uses such as pursuit or interception, that material is not reproduced. Naming a category is institutional description; describing what a vehicle can do is not something this platform publishes.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'A single vehicle type would have to be good at incompatible things: carrying people and equipment, moving on motorways, working in narrow streets, and being seen. Services solve that by running categories, and the categories are a readable statement of what the service expects to be doing.',
+        claim: 'analysis',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'The Dutch national police describe the car and the van as the ordinary vehicles — used for patrol, for responding to 112 calls, and for traffic checks. These are the vehicles most people see.',
+        claim: 'fact',
+        sources: ['nl-politie-voertuigen'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Motorcycles are described as used mainly on motorways and on roads outside built-up areas, for patrol, dealing with traffic collisions and traffic checks. The helicopter is described as providing air support to the regional police units.',
+        claim: 'fact',
+        sources: ['nl-politie-voertuigen'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Air support belongs to the reach question, not the vehicle question',
+        text: 'A helicopter supporting *regional* units is the same organisational pattern as a single-sited specialist unit serving a whole country: a capability held centrally and made available outward. Where it is based matters more than what it is — see [how specialist units cover a country](/law-enforcement/how-specialist-units-cover-a-country).',
+      },
+      {
+        kind: 'paragraph',
+        text: 'And there is a category that exists to be distinguishable from the others. Training vehicles are identifiable by what the service calls secondary striping — blue and white — and the inscription "trainingsvoertuig".',
+        claim: 'fact',
+        sources: ['nl-politie-voertuigen'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'That is an identification decision, not a fleet decision',
+        text: 'A training vehicle marked so that nobody mistakes it for an operational one is the vehicle equivalent of the identification problem the uniform solves. The service went to the trouble of a distinct marking and a written word on the side, which tells you how seriously the recognisability question is taken — see [marked vehicles and police identification](/law-enforcement/marked-vehicles-and-police-identification).',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'The ordinary vehicles are the ones that matter most',
+            description:
+              'Cars and vans do patrol, emergency response and traffic checks. They are the least remarkable category and the one nearly all public contact happens through.',
+          },
+          {
+            term: 'Some categories exist because of the road, not the incident',
+            description:
+              'Motorcycles are described for motorways and roads outside built-up areas. The vehicle follows the environment.',
+          },
+          {
+            term: 'Air support is a shared resource',
+            description:
+              'Described as supporting the regional units rather than belonging to one, which makes it an organisational arrangement as much as a vehicle.',
+          },
+          {
+            term: 'And one category exists to be told apart',
+            description:
+              'Training vehicles carry different striping and a written label so that they are not mistaken for operational vehicles.',
+          },
+        ],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Police vehicles are mostly fast pursuit cars.',
+        reality:
+          'The published categories put the ordinary car and van first, used for patrol, responding to emergency calls and traffic checks — the vehicles nearly all public contact happens through.',
+      },
+      {
+        claim: 'A helicopter belongs to whichever unit needs it.',
+        reality:
+          'It is described as providing air support to the regional units, which makes it a shared central resource rather than a local one.',
+      },
+      {
+        claim: 'Every marked vehicle is an operational police vehicle.',
+        reality:
+          'Training vehicles carry distinct secondary striping and the inscription "trainingsvoertuig" specifically so they are not mistaken for operational ones.',
+      },
+      {
+        claim: 'Police fleets are broadly the same everywhere.',
+        reality:
+          'One service’s categories were researched. Nothing here establishes what any other service runs.',
+      },
+      {
+        claim: 'This page will tell you what police vehicles can do.',
+        reality:
+          'It gives no specification, performance figure, model or capability, and the operational uses the source describes for one category are deliberately not reproduced.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Categories as one service publishes them.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Car and van — patrol, 112 calls, traffic checks.',
+          'Motorcycle — mainly motorways and roads outside built-up areas.',
+          'Helicopter — air support to the regional units.',
+          'Training vehicle — secondary blue-and-white striping and the inscription "trainingsvoertuig".',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'Scope',
+        text: 'The Dutch national police, from its own published page. No specification, capability or model is described for any category, and no other service’s fleet was researched.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'A fleet is a public asset bought with public money, and its composition is a readable statement of priorities: what a service expects to be doing, where, and how visibly. Publishing the categories openly, as this service does, makes that statement checkable rather than inferred.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'Markings and recognisability are [marked vehicles and police identification](/law-enforcement/marked-vehicles-and-police-identification). Vehicles as one category among many is [what police equipment is for](/law-enforcement/what-police-equipment-is-for). Centrally held capability is [how specialist units cover a country](/law-enforcement/how-specialist-units-cover-a-country).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [marked vehicles and police identification](/law-enforcement/marked-vehicles-and-police-identification), [what police equipment is for](/law-enforcement/what-police-equipment-is-for), and [what a police unit is](/law-enforcement/what-a-police-unit-is).',
+      },
+    ],
+  },
+  {
+    slug: 'marked-vehicles-and-police-identification',
+    title: 'Marked vehicles and police identification',
+    shortTitle: 'Vehicle markings',
+    question: 'Why are police markings legally protected?',
+    summary:
+      'Because a marked vehicle does the same job as a uniform. In the Netherlands the same legal protection covers the uniform, the logo and the striping on police vehicles — and the stated reason is that people must be able to trust it really is the police.',
+    entityType: 'concept',
+    section: 'law-enforcement',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'how-police-officers-are-identified',
+      'why-police-wear-a-uniform',
+      'police-vehicles-and-what-they-are-for',
+      'why-police-accountability-matters',
+    ],
+    sources: ['nl-politie-huisstijl-protection', 'nl-politie-voertuigen'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-07',
+    publishedOn: '2026-09-07',
+    reviewedOn: '2026-09-07',
+    factsVerifiedOn: '2026-09-07',
+    readingTimeMinutes: 6,
+    uncertainty: [
+      'The legal protection described is the Netherlands’. Whether comparable protection exists elsewhere, and in what form, was NOT RESEARCHED.',
+      'Nothing here describes what any marking looks like, beyond what the service itself publishes about categories. Detail that would assist imitation is deliberately absent.',
+      'What a person should do if they doubt a vehicle is genuine is a matter for the police service concerned and was NOT RESEARCHED.',
+      'Unmarked vehicles, and the rules governing their use, were NOT RESEARCHED for any service.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'A marked police vehicle is identification equipment. It answers the same question a uniform answers — is this really the police — for a person who can see a vehicle before they can see anyone in it, and often from further away.',
+      },
+      {
+        kind: 'callout',
+        variant: 'safety',
+        title: 'What this page describes, and what it deliberately does not',
+        text: 'It describes that markings are protected and why. It does **not** describe what any marking looks like in detail, how to check one, or anything else that would assist someone attempting to imitate a police vehicle. As with the identity-card page, that omission is the point rather than a gap.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'The equipment layer established that recognisability is an accountability function as much as a convenience: it lets a person find help, and it lets them say afterwards who dealt with them. A vehicle extends that to a distance and a speed at which nothing else works.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'And it is the point at which imitation becomes worth preventing legally',
+        text: 'Anything that reliably signals police authority is worth counterfeiting to someone who wants that authority without holding it. That is a reason to protect the signal by law rather than to rely on the difficulty of copying it.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'The Dutch national police state the reason first: "De politie heeft bijzondere taken en bevoegdheden, dus moet u er op kunnen vertrouwen dat het echt om de politie gaat" — the police have special tasks and powers, so you must be able to trust that it really is the police.',
+        claim: 'fact',
+        sources: ['nl-politie-huisstijl-protection'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'And then the extent: "De rechten op het uniform van de politie, zowel het operationele uniform als representatieve uniform (tenue met het witte overhemd), zijn wettelijk beschermd. Dit geldt ook voor het politielogo en de striping op de politie voertuigen." The rights to the uniform — both the operational and the representative uniform — are legally protected, and this applies equally to the police logo and to the striping on police vehicles.',
+        claim: 'fact',
+        sources: ['nl-politie-huisstijl-protection'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'One rule, covering a garment and a vehicle',
+        text: 'That is the finding. The service does not treat the uniform as identification and the vehicle as branding — both are protected by the same provision, for the same stated reason. A marked vehicle is a uniform the size of a car.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The same logic reaches inside the fleet. Training vehicles carry secondary blue-and-white striping and the inscription "trainingsvoertuig", so that a vehicle which is genuinely the police but is not operational is still distinguishable from one that is.',
+        claim: 'fact',
+        sources: ['nl-politie-voertuigen'],
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'The signal has to be exclusive to work',
+            description:
+              'An identifier anyone may use identifies nothing. Legal protection is what makes the marking mean something, which is why the protection and the function are the same subject.',
+          },
+          {
+            term: 'It covers the whole house style, not one item',
+            description:
+              'The uniform in both its forms, the logo and the vehicle striping are named together. Protecting only some of them would leave the others available to imitate.',
+          },
+          {
+            term: 'Distance is what vehicles add',
+            description:
+              'A uniform works at conversational range. A marked vehicle works at the range at which someone decides whether to stop, approach or wait — which is usually earlier and matters more.',
+          },
+          {
+            term: 'And unmarked vehicles are outside this page',
+            description:
+              'Their existence follows from the same logic in reverse, and their governance was NOT RESEARCHED. Nothing here describes them.',
+          },
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'The same asymmetry as officers in plain clothes',
+        text: 'A uniformed officer is already identified and produces a card on request; an officer in plain clothes must produce it unprompted. A marked vehicle already identifies itself; anything unmarked cannot, and systems handle that gap in their own way. See [how police officers are identified](/law-enforcement/how-police-officers-are-identified).',
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Police markings are branding.',
+        reality:
+          'In the Netherlands the logo and vehicle striping are legally protected under the same rule as the uniform, and the stated reason is that people must be able to trust it really is the police.',
+      },
+      {
+        claim: 'Only the uniform is protected.',
+        reality:
+          'The published wording names the operational uniform, the representative uniform, the police logo and the striping on police vehicles together.',
+      },
+      {
+        claim: 'A vehicle in police markings is always an operational police vehicle.',
+        reality:
+          'Training vehicles carry different striping and the inscription "trainingsvoertuig" precisely so that they are distinguishable.',
+      },
+      {
+        claim: 'Markings are protected everywhere in the same way.',
+        reality:
+          'The protection described is the Netherlands’. Whether comparable protection exists elsewhere was not researched.',
+      },
+      {
+        claim: 'This page will help you check whether a vehicle is genuine.',
+        reality:
+          'It will not, and does not try. It describes that markings are protected and why, without describing what any marking looks like or how to verify one.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'What the Dutch rule covers, as published.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'The operational uniform.',
+          'The representative uniform.',
+          'The police logo.',
+          'The striping on police vehicles.',
+          'And, inside the fleet, a distinct marking for training vehicles.',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'Scope',
+        text: 'The Netherlands. Nothing here establishes the position in any other country, and nothing describes any marking in detail.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'Protecting the markings protects the public rather than the institution. The value of an identifier lies entirely in its being reliable, and a person deciding whether to comply with what appears to be a police vehicle is relying on exactly that reliability — usually with no time and no other means of checking.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'The person-level version is [how police officers are identified](/law-enforcement/how-police-officers-are-identified) and [why police wear a uniform](/law-enforcement/why-police-wear-a-uniform). The vehicle categories themselves are [police vehicles and what they are for](/law-enforcement/police-vehicles-and-what-they-are-for).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [how police officers are identified](/law-enforcement/how-police-officers-are-identified), [why police wear a uniform](/law-enforcement/why-police-wear-a-uniform), and [police vehicles and what they are for](/law-enforcement/police-vehicles-and-what-they-are-for).',
       },
     ],
   },
