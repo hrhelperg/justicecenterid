@@ -139,11 +139,26 @@ function tripwireUnits(g: Guide): string[] {
   ];
 }
 
+/**
+ * A governing negation sits NEXT TO the stance, not anywhere earlier in the sentence.
+ *
+ * Mutation W25M4 defeated the first form. It injected "police officers need a degree in every
+ * system" into a sentence that opened "the comparison confirms rather than complicates" — and
+ * "rather than", scanned across the whole preceding text, neutralised a claim it had nothing to do
+ * with. Weak markers like "rather than" and "unlike" appear incidentally all the time; strong ones
+ * do too, just less often.
+ *
+ * The window is what makes the check mean anything. English puts a governing negation immediately
+ * before what it governs, so only the preceding clause is examined.
+ */
+const NEGATION_WINDOW = 60;
+
 function deniesForward(sentence: string, pattern: RegExp): boolean {
   const match = new RegExp(pattern.source, 'i').exec(sentence);
   if (!match) return false;
-  return /\b(?:not|never|no|nothing|neither|nor)\b|\bdoes not\b|\brather than\b|\bunlike\b/i.test(
-    sentence.slice(0, match.index),
+  const before = sentence.slice(Math.max(0, match.index - NEGATION_WINDOW), match.index);
+  return /\b(?:not|never|no|nothing|neither|nor|cannot)\b|\bdoes not\b|\brather than\b|\bunlike\b/i.test(
+    before,
   );
 }
 
@@ -633,7 +648,10 @@ describe('the wave makes no live-vacancy or job-board claim', () => {
 const GAMING = [
   /\bhow to (?:pass|beat|get through|clear) (?:police )?(?:vetting|the vetting|background|the medical|the fitness|the interview|selection)\b/i,
   /\b(?:vetting|background) (?:investigators|checks?) (?:usually|typically|first|will) (?:check|look at|start with)\b/i,
-  /\b(?:avoid|omit|leave out|conceal|hide|downplay) (?:mentioning|disclosing|your) (?:conviction|medical|history|condition|diagnosis)\b/i,
+  /* W25M9 slipped through "leave out disclosing ANY medical condition": the object need not follow
+   * the verb immediately, and a determiner or adjective between them changes nothing about what the
+   * sentence is advising. */
+  /\b(?:avoid|omit|leave out|conceal|hide|downplay|do not disclose|need not disclose)\b(?:\W+\w+){0,4}\W+(?:conviction|medical|history|condition|diagnosis|record)\b/i,
   /\b(?:say|answer|tell them) (?:that )?["']?[^.]{0,40}["']? when (?:asked|they ask)\b/i,
   /\bmodel answers?\b|\bwhat to say (?:at|in) (?:the )?interview\b|\binterview questions? (?:and answers|leaked)\b/i,
   /\b(?:minimum|least) (?:effort|preparation) (?:to|needed to) pass\b/i,
@@ -747,10 +765,45 @@ const PROCEDURAL_DEPTH =
  * at serving legal process. A guard that fires on that would push honest recruitment prose out of
  * shape, which is the failure mode Wave 24 recorded for keyword guards generally.
  */
+/*
+ * `file` needs to be a VERB. Run corpus-wide, the first form matched "police investigate, then hand
+ * a FILE to a prosecutor" and "then close the FILE" — the noun, in sentences about how a case moves
+ * between institutions. `serve` needed its legal object for the same reason (W25M13's sibling), and
+ * so does this: a guard against procedural how-tos must not fire on the corpus describing procedure
+ * existing.
+ */
 const PROCEDURAL_HOWTO =
-  /\b(?:step \d|first(?:ly)?|then|next|finally|begin by|start by)\b[^.]{0,80}\b(?:file|submit|lodge|apply for|appeal against|object to|serve (?:the |a )?(?:notice|pleadings?|papers|process|summons|claim))\b/i;
+  /\b(?:step \d|first(?:ly)?|then|next|finally|begin by|start by)\b[^.]{0,80}\b(?:file (?:a|an|the|your) (?:notice|motion|claim|appeal|application|complaint|petition)|submit (?:a|an|the|your) (?:notice|motion|claim|appeal|application|form)|lodge (?:a|an|the|your)|apply for (?:a|an|the) (?:warrant|review|order)|appeal against|object to|serve (?:the |a )?(?:notice|pleadings?|papers|process|summons|claim))\b/i;
+
+/**
+ * Corpus-wide units. Mutation W25M13 inserted a recruitment appeal filing procedure into a WAVE 24
+ * page and survived, because the procedural guards ran only over Wave 25's own units. A
+ * product-scope rule that only applies to the newest pages is not a product-scope rule — the drift
+ * it exists to prevent will simply happen somewhere older.
+ */
+const CORPUS_UNITS = [
+  ...ALL_GUIDES.filter((g) => g.status === 'published').flatMap((g) => sentences(prose(g))),
+  ...PUBLISHED_DOSSIERS.flatMap((d) =>
+    d.modules.filter((m) => m.status === 'published').flatMap((m) => sentences(moduleProse(m))),
+  ),
+];
 
 describe('the recruitment layer does not drift into procedural law', () => {
+  it('no published page anywhere in the corpus carries a procedural how-to', () => {
+    expect(CORPUS_UNITS.filter((u) => PROCEDURAL_HOWTO.test(u))).toEqual([]);
+  });
+
+  it('no published page anywhere describes appealing a RECRUITMENT decision', () => {
+    /*
+     * Recruitment-scoped. Without the context requirement this matched "People are able in practice
+     * to bring a claim or contest a decision" — a rule-of-law sentence about access to justice,
+     * which is core corpus content and nothing to do with recruitment appeals.
+     */
+    const appeal =
+      /\b(?:appeal|challenge|contest) (?:a |your |the )?(?:recruitment|selection|vetting|application) (?:decision|rejection|refusal|outcome)\b/i;
+    expect(CORPUS_UNITS.filter((s) => appeal.test(s))).toEqual([]);
+  });
+
   it.each(WAVE_25_GUIDES)('%s is not substantially about legal procedure', (slug) => {
     const units = sentences(prose(guide(slug)));
     const hits = units.filter((u) => PROCEDURAL_DEPTH.test(u));
