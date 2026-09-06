@@ -43,12 +43,24 @@ const WAVE_25_GUIDES = [
   'police-entry-requirements-across-systems',
 ] as const;
 
+/*
+ * WAVE 25.5 AMENDMENT. Czechia and Norway were DEFERRED by Wave 25 on source currency — the Czech
+ * estate redirected into an archive warning its content may not be current, and the Norwegian
+ * admission path 404ed after a redirect. Both were retried from scratch in Wave 25.5 and both
+ * resolved to live official pages, so both now carry modules.
+ *
+ * The rule this list enforces is unchanged, and is the point of it: ONLY researched countries carry
+ * a recruitment module. Adding a country here without the research would fail the country-source
+ * and freshness invariants below immediately.
+ */
 const WAVE_25_COUNTRIES = [
   'ireland',
   'netherlands',
   'new-zealand',
   'germany',
   'united-states',
+  'czechia',
+  'norway',
 ] as const;
 
 const WAVE_25_SOURCES = [
@@ -266,8 +278,9 @@ describe('the Wave 25 recruitment layer exists and is routed', () => {
     expect(PUBLIC_ROUTE_PATHS).toContain(guidePath(g));
   });
 
-  it('publishes five country modules and five comparative guides', () => {
-    expect(WAVE_25_COUNTRIES.length).toBe(5);
+  it('publishes seven country modules and five comparative guides', () => {
+    /* Five from Wave 25, plus Czechia and Norway resolved in Wave 25.5. */
+    expect(WAVE_25_COUNTRIES.length).toBe(7);
     expect(WAVE_25_GUIDES.length).toBe(5);
   });
 
@@ -485,6 +498,8 @@ const COUNTRY_ISO: Record<string, string> = {
   'new-zealand': 'NZ',
   germany: 'DE',
   'united-states': 'US',
+  czechia: 'CZ',
+  norway: 'NO',
 };
 
 describe('every country claim rests on a source scoped to that country', () => {
@@ -846,10 +861,33 @@ describe('the recruitment layer does not drift into procedural law', () => {
 /* -------------------------------------------------------------------------- */
 
 describe('one canonical owner per recruitment question', () => {
-  it('no guide slug duplicates a country recruitment intent', () => {
-    const forbidden =
-      /^how-to-become-a-police-officer-in-|^police-recruitment-in-|^join-the-police-in-/;
-    expect(ALL_GUIDES.filter((g) => forbidden.test(g.slug)).map((g) => g.slug)).toEqual([]);
+  it('no guide duplicates the recruitment intent of a country that HAS a module', () => {
+    /*
+     * WAVE 25.5 AMENDMENT, and narrow. The first form forbade any guide slug beginning
+     * `police-recruitment-in-`, which was a proxy for the real rule rather than the rule itself.
+     * The real rule is that two pages must not own one country's recruitment question.
+     *
+     * England and Wales has no country module and cannot have one: `CountryDossier.countryCode` is
+     * ISO 3166-1 alpha-2 and England and Wales has no alpha-2 code. Its canonical page therefore
+     * lives in the global section, following the `sheriffs-and-city-police` precedent, and it
+     * duplicates nothing. The guard now checks against the countries that actually have modules.
+     */
+    const withModule = PUBLISHED_DOSSIERS.filter((d) =>
+      d.modules.some((m) => m.moduleId === 'police-recruitment' && m.status === 'published'),
+    ).map((d) => d.slug);
+    const collisions: string[] = [];
+    for (const country of withModule) {
+      for (const g of ALL_GUIDES) {
+        if (
+          g.slug === `police-recruitment-in-${country}` ||
+          g.slug === `how-to-become-a-police-officer-in-${country}` ||
+          g.slug === `join-the-police-in-${country}`
+        ) {
+          collisions.push(`${g.slug} duplicates /countries/${country}/police-recruitment`);
+        }
+      }
+    }
+    expect(collisions).toEqual([]);
   });
 
   it('no /careers or duplicate recruitment route family exists', () => {

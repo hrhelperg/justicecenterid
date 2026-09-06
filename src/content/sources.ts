@@ -4878,7 +4878,7 @@ export const SOURCES: readonly SourceRecord[] = [
     verifiedOn: '2026-09-06',
     verificationMethod: 'content-confirmed',
     jurisdiction: 'GB',
-    note: 'SCOPE: the NATIONAL eligibility criteria for England and Wales, and not any individual force. Supports the application/appointment age split — "You can now apply to join the police service at age 17, though you\u2019ll need to wait until you\u2019re 18 before you can officially become a police officer" — the right-to-work formulation, the three-year UK residency point for vetting, the Level 3 minimum education, and the source\u2019s own statement that "Police forces are also allowed to apply their own local criteria in addition to the national eligibility aspects". That last sentence is why no national criterion here may be presented as the complete requirement for any force. Establishes nothing about Scotland or Northern Ireland, which have separate services.',
+    note: 'SCOPE: the NATIONAL eligibility criteria for England and Wales, and not any individual force. RE-VERIFIED 2026-09-06 for Wave 25.5, and the page states its own geographic scope: it addresses the 43 forces of England and Wales, and does not mention Scotland or Northern Ireland, which have separate services. Supports the application/appointment age split — "You can now apply to join the police service at age 17, though you\u2019ll need to wait until you\u2019re 18 before you can officially become a police officer" — the right-to-work formulation, the three-year UK residency point for vetting, the Level 3 minimum education, the degree position stated directly as "No, you don\u2019t need to have a degree before you apply", and the source\u2019s own statement that "Police forces are also allowed to apply their own local criteria in addition to the national eligibility aspects". That last sentence is why no national criterion here may be presented as the complete requirement for any force, and the scope sentence is why none may be presented as a United Kingdom requirement.',
   },
   {
     id: 'nz-police-eligibility',
@@ -4915,6 +4915,40 @@ export const SOURCES: readonly SourceRecord[] = [
     verificationMethod: 'content-confirmed',
     jurisdiction: 'DE',
     note: 'SCOPE: BAVARIA ONLY. Supports the 2. Qualifikationsebene Ausbildung lasting "2,5 Jahre" and structured in five sections of six months. The page does NOT state the school qualification required, and none is claimed from it. Used alongside the Berlin sources solely to establish that German Länder recruit and train separately; it proves nothing about any other Land, about the Bundespolizei, or about Germany as a whole.',
+  },
+  /*
+   * WAVE 25.5 — the two deferrals resolved, on CURRENT official evidence.
+   *
+   * Wave 25 deferred Czechia because every reachable page redirected into archiv.policie.gov.cz
+   * carrying "Obsah zde nemusí být aktuální", and abandoned Norway because the admission path
+   * 404ed. Both were retried from scratch rather than reinstated from the earlier research, and
+   * both now resolve to live official pages. The Czech retry matters as method: most of that
+   * estate still redirects into the archive, and only the recruitment portal's own current path
+   * carries the requirements.
+   */
+  {
+    id: 'cz-police-recruitment-requirements',
+    type: 'government',
+    title: 'Nábor Policie ČR — Požadujeme (requirements for service)',
+    publisher: 'Policie České republiky',
+    url: 'https://nabor.policie.gov.cz/pozadujeme-2',
+    accessedOn: '2026-09-06',
+    verifiedOn: '2026-09-06',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'CZ',
+    note: 'SCOPE: Policie České republiky, nationally. CURRENT, not archived — checked explicitly, because Wave 25 deferred Czechia when policie.cz, policie.gov.cz and even nabor.policie.gov.cz/clanek/pozadujeme.aspx all redirected into archiv.policie.gov.cz carrying "Nacházíte se na archivní verzi webu Policie České republiky. Obsah zde nemusí být aktuální". This path carries no archive notice and a 2026 copyright. Supports Czech citizenship and a minimum age of 18; "Pro naprostou většinu policejních míst je vyžadována alespoň maturita"; the criminal-record conditions (no final conviction for an intentional offence in the last 10 years, or for a negligent offence in the last 5); the requirement not to be a member of any political party or movement; the existence of psychological, physical and medical assessment; and § 13 odst. 1 zákona č. 361/2003 Sb. as the governing provision. Pay and recruitment-bonus figures on the portal are deliberately unused. Establishes nothing about municipal police (obecní policie) or any other Czech body.',
+  },
+  {
+    id: 'no-politihogskolen-opptakskrav',
+    type: 'government',
+    title: 'Opptakskrav — Bachelor politiutdanning',
+    publisher: 'Politihøgskolen (Norwegian Police University College)',
+    url: 'https://www.politihogskolen.no/studier/politiutdanning/soknad-og-opptak/opptakskrav/',
+    accessedOn: '2026-09-06',
+    verifiedOn: '2026-09-06',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'NO',
+    note: 'SCOPE: admission to the Bachelor politiutdanning at Politihøgskolen. Reached after the Wave 25 path (phs.no) 301-redirected to politihogskolen.no and then 404ed; this is the current location. Supports Norwegian citizenship, generell studiekompetanse, a minimum grade 3 in written Norwegian hovedmål, førerkort klasse B, plettfri vandel documented by politiattest, and a legeerklæring — each attached to a deadline in the annual admission cycle (1 March for the first three, 1 August of the PRECEDING year for the licence, 20 March for documentation). CYCLE-ANCHORED rather than one-off campaign-specific: the dates recur annually. The page states NO age requirement, and none is claimed. Establishes nothing about other routes into Norwegian policing.',
   },
 ];
 

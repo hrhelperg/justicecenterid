@@ -459,6 +459,106 @@ export const NORWAY: CountryDossier = {
         "Border and customs in Norway involve the police, the customs administration (Tolletaten), and Norway's particular position in Schengen but outside the EU customs union, and could not be researched to the standard required here.",
     },
     {
+      moduleId: 'police-recruitment',
+      title: 'Police recruitment in Norway',
+      summary:
+        'You do not apply to the police. You apply through the national higher-education admissions service to a bachelor degree at the Police University College — and several requirements fall due before the year you apply.',
+      status: 'published',
+      review: 'fact-checked',
+      safetyReview: 'cleared',
+      updatedOn: '2026-09-06',
+      reviewedOn: '2026-09-06',
+      factsVerifiedOn: '2026-09-06',
+      temporalScope: 'current',
+      sources: ['no-politihogskolen-opptakskrav'],
+      relatedGuides: [
+        'who-recruits-police-officers',
+        'citizenship-nationality-and-residency-in-police-recruitment',
+        'when-a-recruitment-requirement-is-campaign-specific',
+        'police-training-and-police-education',
+      ],
+      blocks: [
+        {
+          kind: 'callout',
+          variant: 'scope',
+          title: 'What this page covers, and when it was checked',
+          text: 'This describes admission to the Bachelor politiutdanning at Politihøgskolen, the Norwegian Police University College. It does not describe other routes into Norwegian policing, and it does not describe civilian roles. Verified against the official admission-requirements page on 6 September 2026; the current position is the one Politihøgskolen publishes.',
+        },
+        {
+          kind: 'paragraph',
+          text: 'Norway organises entry as a university admission. A candidate applies through samordnaopptak, the national coordinated admissions service used for higher education generally, to a bachelor programme at Politihøgskolen — and competes for a place on a points score, as applicants to other degree programmes do.',
+          claim: 'fact',
+          sources: ['no-politihogskolen-opptakskrav'],
+        },
+        {
+          kind: 'callout',
+          variant: 'analysis',
+          title: 'That is a different thing from being recruited',
+          text: 'In most systems a person applies to a police service, which then trains them. Here the first decision is an educational admission, made through the machinery that admits everyone else to university. It is the clearest case in the corpus of the entry point sitting outside the police organisation altogether.',
+        },
+        {
+          kind: 'definitionList',
+          items: [
+            {
+              term: 'Norwegian citizenship',
+              description:
+                'Required, and required by 1 March of the year of application. A citizenship requirement in the strict sense, like Czechia and unlike England and Wales or New Zealand.',
+            },
+            {
+              term: 'Generell studiekompetanse',
+              description:
+                'The general university admission qualification, required by 1 March of the year of application. This is the ordinary Norwegian entry standard for higher education rather than a police-specific one.',
+            },
+            {
+              term: 'A grade requirement in Norwegian',
+              description:
+                'A minimum grade 3 in written Norwegian hovedmål, by 1 March of the year of application. A specified grade in a named subject, which is unusual among the systems researched.',
+            },
+            {
+              term: 'A driving licence, due before the application year',
+              description:
+                'Førerkort klasse B by 1 August of the year BEFORE the year of application. Most systems that require a licence allow it to be obtained later; this one requires it earlier than the application itself.',
+            },
+            {
+              term: 'Conduct and health documentation',
+              description:
+                'Plettfri vandel — an unblemished record — documented by politiattest, and a legeerklæring from a physician. Both have a documentation deadline of 20 March.',
+            },
+            {
+              term: 'Assessment after the paper requirements',
+              description:
+                'Applicants who meet the requirements go on to digital tests and a video interview, then physical tests, and then a suitability assessment. What any of these contains is not described here.',
+            },
+          ],
+        },
+        {
+          kind: 'callout',
+          variant: 'uncertainty',
+          title: 'These dates recur; they are not a one-off campaign',
+          text: 'The deadlines above belong to an annual admission cycle rather than to a single competition, which is a different kind of temporal scope from an Irish competition closing date. They are stated here as cycle deadlines. Any particular year’s dates are the ones Politihøgskolen publishes for that year.',
+        },
+        {
+          kind: 'callout',
+          variant: 'safety',
+          title: 'What this page will not tell you',
+          text: 'It states no age requirement, because the official page states none — and silence is not an absence. It does not describe the digital tests, the video interview, the physical tests or the suitability assessment, and it cannot tell any individual whether they would be admitted.',
+        },
+        {
+          kind: 'callout',
+          variant: 'note',
+          title: 'Where the current requirements live',
+          text: 'With Politihøgskolen for the admission requirements, and with samordnaopptak for the application itself. This platform is not affiliated with either and does not accept applications.',
+        },
+      ],
+      uncertainty: [
+        'Wave 25 ABANDONED Norway when the admission path returned HTTP 404 after a redirect. This module rests on the current location, re-found and content-confirmed.',
+        'NO age requirement is stated, because the official page states none. The absence of a stated minimum or maximum is not evidence that none exists.',
+        'The content of the digital tests, video interview, physical tests and suitability assessment was NOT RESEARCHED and is not described.',
+        'Other routes into Norwegian policing, and civilian roles, were NOT RESEARCHED.',
+        'How places are allocated on the competitive points score was NOT RESEARCHED.',
+      ],
+    },
+    {
       moduleId: 'history',
       title: 'Institutional history of Norway',
       summary: 'Not yet researched.',

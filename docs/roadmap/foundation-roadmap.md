@@ -1718,3 +1718,54 @@ wave.
   candidates refuted, every finding independently reproduced before being acted on.
 
 Delivered on `feat/knowledge-expansion-wave-25`. Not merged, not deployed.
+
+## Phase 39.5 — Wave 25.5, recruitment coverage completion and country architecture hardening (delivered 2026-09-06)
+
+Structural debt from Wave 25, resolved. Three pages, not thirty — a hardening wave rather than an
+expansion. Details in `docs/research/knowledge-expansion-wave-25-5-qa.md` and
+`docs/research/recruitment-maintenance-model.md`.
+
+The Wave 24 strategic rule holds and was tested against: recruitment research reached legal material
+— § 13 odst. 1 zákona č. 361/2003 Sb. for Czech entry conditions — and it was used only to establish
+that the conditions sit in statute rather than in recruitment policy, which is a recruitment fact
+about durability. **No procedural-law expansion.**
+
+- **England and Wales resolved without corrupting the entity model.** `CountryDossier.countryCode`
+  is documented as ISO 3166-1 alpha-2, and England and Wales has no alpha-2 code, so a dossier would
+  have meant inventing a country. The canonical page lives in the global section instead, following
+  the precedent this section already set with `sheriffs-and-city-police` — "A United States page,
+  deliberately". **A United Kingdom dossier is recorded as the correct future home**, needing
+  jurisdiction records for three police systems and a full country pilot.
+- **Both Wave 25 deferrals resolved on current official evidence**, retried from scratch rather than
+  reinstated. Czechia's recruitment portal is live where the rest of that estate still redirects
+  into an archive warning "Obsah zde nemusí být aktuální"; Norway's admission requirements were
+  re-found after the earlier path 404ed.
+- **Czechia completes the status contrast set** with a citizenship requirement in the strict sense,
+  and publishes two things most systems do not: defined look-back periods for previous convictions,
+  and a bar on political party membership.
+- **Norway is the clearest case in the corpus of an entry point outside the police organisation.**
+  Candidates apply through the national higher-education admissions service to a bachelor at
+  Politihøgskolen — and one requirement falls due the year _before_ the application year.
+- **A third temporal shape was needed.** Norway's deadlines are neither durable nor
+  campaign-specific but **cycle-anchored**, recurring annually. Collapsing that either way would
+  misstate their reliability.
+- **A mutation proof found the widening one level down.** W255M8 turned one force's requirement into
+  an England-and-Wales-wide one and survived every test — the guards covered the national widening
+  and not the local one, which is the widening the source itself warns about.
+- **A second proof found a disclaimer that could be contradicted and still pass.** W255M9 deleted
+  "This is not a United Kingdom page" and asserted the opposite in its place, satisfying a guard
+  that accepted any of three phrasings.
+- **Archive currency is now mechanical, not remembered.** No source URL anywhere in the corpus may
+  point at a known archive host, and no published module may cite one. That is the exact ground
+  Czechia was deferred on in Wave 25.
+- **The maintenance model answers a question Wave 25 could not:** which page needs re-verification
+  first. Derived from campaign exposure, verification age and published volatility — from data the
+  corpus already stores, with no new field to go stale. **The platform does not monitor requirements
+  continuously, and a test asserts no page claims it does.**
+- **Client JS +0 KB. CSS +0 bytes.**
+- Validation: 8,135 tests / 81 files; **515 routes**, 517 pages, 515 sitemap URLs; 360 sources;
+  0 orphans, 0 weakly linked, 0 dead ends. **10/10 mutation proofs valid**, two caught only after the
+  fixes they forced. The graph audit caught the new England and Wales page as weakly linked before
+  six editorial backlinks were added.
+
+Delivered on `feat/recruitment-coverage-hardening-wave-25-5`. Not merged, not deployed.
