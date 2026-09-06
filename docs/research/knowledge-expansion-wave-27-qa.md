@@ -116,9 +116,18 @@ Each page routes the career question to Wave 24 explicitly, and the e2e asserts 
 
 ## Validation
 
-- **8,494 tests / 83 files** — full suite green
-- **58 e2e tests** across both projects, green
-- **532 routes**, 528 pages; 0 orphans, 0 weakly linked, 0 dead ends
+Full gate, run end to end on a clean `npm ci`:
+
+| Step                                  | Result                                               |
+| ------------------------------------- | ---------------------------------------------------- |
+| `format:check` / `lint` / `typecheck` | clean                                                |
+| `vitest run`                          | **8,494 tests / 83 files** passed                    |
+| `next build`                          | success                                              |
+| `verify:output`                       | **526 routes**, 528 exported pages, 526 sitemap URLs |
+| `route-matrix`                        | **678 passed, 0 failed** (526 routes + 152 must-404) |
+| `playwright test`                     | **1,816 passed**, 4 skipped — 58 of them this wave's |
+| link graph                            | 0 orphans, 0 weakly linked, 0 dead ends              |
+
 - **369 sources**
 - 11/11 mutation proofs valid, one caught only after the fix it forced
 - Client JS +0 KB, CSS +0 bytes, no component changed

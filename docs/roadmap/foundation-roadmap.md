@@ -1884,7 +1884,8 @@ sits and how far it reaches, never what it can do. Details in
   every guide renders a source list. And the graph again passed at 0/0/0 while no pre-existing page
   linked into the new cluster; four editorial backlinks added.
 - **Client JS +0 KB. CSS +0 bytes. No component changed.**
-- Validation: 8,494 tests / 83 files; 0 orphans, 0 weakly linked, 0 dead ends; 369 sources.
+- Validation: 8,494 tests / 83 files; 1,816 e2e passed; **526 routes**, 528 pages, 526 sitemap URLs;
+  route matrix 678/678; 0 orphans, 0 weakly linked, 0 dead ends; 369 sources.
   **11/11 mutation proofs valid**, one caught only after the fix it forced. Adversarial QA: 1 P1,
   0 P2, every finding independently reproduced.
 
