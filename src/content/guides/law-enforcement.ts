@@ -1076,7 +1076,7 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [how police are held to account](/law-enforcement/how-police-are-held-to-account), [why justice systems need oversight](/justice/why-justice-systems-need-oversight), and [police use of force](/law-enforcement/police-use-of-force). What the standards ask of an individual officer, as distinct from what the machinery does afterwards, is [professional standards in policing work](/law-enforcement/professional-standards-in-policing-work).',
+        text: 'Related: [how police are held to account](/law-enforcement/how-police-are-held-to-account), [why justice systems need oversight](/justice/why-justice-systems-need-oversight), and [police use of force](/law-enforcement/police-use-of-force). What the standards ask of an individual officer, as distinct from what the machinery does afterwards, is [professional standards in policing work](/law-enforcement/professional-standards-in-policing-work). A complaint also depends on being able to say who was involved: see [how police officers are identified](/law-enforcement/how-police-officers-are-identified).',
       },
     ],
   },
@@ -1300,7 +1300,7 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [why police accountability matters](/law-enforcement/why-police-accountability-matters), [who investigates the police](/law-enforcement/who-investigates-police), and [independent police complaints bodies](/institutions/independent-police-complaints-body). Because most operational decisions are taken without a supervisor present, the standards that apply unobserved matter as much as the machinery: see [professional standards in policing work](/law-enforcement/professional-standards-in-policing-work).',
+        text: 'Related: [why police accountability matters](/law-enforcement/why-police-accountability-matters), [who investigates the police](/law-enforcement/who-investigates-police), and [independent police complaints bodies](/institutions/independent-police-complaints-body). Because most operational decisions are taken without a supervisor present, the standards that apply unobserved matter as much as the machinery: see [professional standards in policing work](/law-enforcement/professional-standards-in-policing-work), and, for the recording instrument adopted largely for this reason, [body-worn video as institutional equipment](/law-enforcement/body-worn-video-as-institutional-equipment).',
       },
     ],
   },
@@ -3376,7 +3376,7 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [what police recruits are taught](/law-enforcement/what-police-recruits-are-taught), [do police officers need a degree](/law-enforcement/do-police-officers-need-a-degree), and [the patrol officer role](/professions/patrol-officer). Who runs the training is closely tied to who does the recruiting: see [who recruits police officers](/law-enforcement/who-recruits-police-officers), and, for the college this page names, [police recruitment in Ireland](/countries/ireland/police-recruitment).',
+        text: 'Related: [what police recruits are taught](/law-enforcement/what-police-recruits-are-taught), [do police officers need a degree](/law-enforcement/do-police-officers-need-a-degree), and [the patrol officer role](/professions/patrol-officer). Who runs the training is closely tied to who does the recruiting: see [who recruits police officers](/law-enforcement/who-recruits-police-officers), and, for the college this page names, [police recruitment in Ireland](/countries/ireland/police-recruitment). Equipment arrives during training rather than after it — see [issued equipment and personal equipment](/law-enforcement/issued-equipment-and-personal-equipment).',
       },
     ],
   },
@@ -4467,7 +4467,7 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [rank, role and specialisation](/law-enforcement/rank-role-and-specialisation), [civilian roles in police organisations](/law-enforcement/civilian-roles-in-police-organisations), and [the detective role](/professions/detective).',
+        text: 'Related: [rank, role and specialisation](/law-enforcement/rank-role-and-specialisation), [civilian roles in police organisations](/law-enforcement/civilian-roles-in-police-organisations), and [the detective role](/professions/detective). Plain-clothes work removes the identification a uniform provides, which is why the duty shifts — see [why police wear a uniform](/law-enforcement/why-police-wear-a-uniform).',
       },
     ],
   },
@@ -4843,7 +4843,7 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [what police recruits are taught](/law-enforcement/what-police-recruits-are-taught), [working life in policing](/law-enforcement/working-life-in-policing), and [the patrol officer role](/professions/patrol-officer).',
+        text: 'Related: [what police recruits are taught](/law-enforcement/what-police-recruits-are-taught), [working life in policing](/law-enforcement/working-life-in-policing), and [the patrol officer role](/professions/patrol-officer). The means of making the record is issued equipment too: see [documentation equipment in policing](/law-enforcement/documentation-equipment-in-policing).',
       },
     ],
   },
@@ -5193,7 +5193,7 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [the patrol officer role](/professions/patrol-officer), [skills that policing relies on](/law-enforcement/skills-that-policing-relies-on), and [professional standards in policing work](/law-enforcement/professional-standards-in-policing-work).',
+        text: 'Related: [the patrol officer role](/professions/patrol-officer), [skills that policing relies on](/law-enforcement/skills-that-policing-relies-on), and [professional standards in policing work](/law-enforcement/professional-standards-in-policing-work). What a service issues for the work is [what police equipment is for](/law-enforcement/what-police-equipment-is-for).',
       },
     ],
   },
@@ -6559,6 +6559,1242 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
       {
         kind: 'paragraph',
         text: 'Related: [police entry requirements across systems](/law-enforcement/police-entry-requirements-across-systems), [citizenship, nationality and residency in police recruitment](/law-enforcement/citizenship-nationality-and-residency-in-police-recruitment), and [who recruits police officers](/law-enforcement/who-recruits-police-officers).',
+      },
+    ],
+  },
+  /*
+   * ==========================================================================
+   * WAVE 26 — police equipment, uniforms and professional technology.
+   * ==========================================================================
+   *
+   * An EQUIPMENT KNOWLEDGE FOUNDATION, not a commerce wave and not a gear guide.
+   *
+   * THE LINE THIS WAVE IS BUILT ON. These pages say WHAT equipment categories exist, WHY they
+   * exist, WHO issues them, under WHAT policy, and to WHAT standard. They never say how anything
+   * is used, carried, configured, selected or bought. Naming that a service issues a baton is
+   * institutional description of what a police service is; describing how one is used is
+   * instruction, and no page here does it.
+   *
+   * NO COMMERCE, AND NOT MERELY NONE YET. The wave brief permits informational institutional
+   * coverage of restricted categories and forbids procurement guidance, product recommendations,
+   * operational setup, performance optimisation and tactical configuration around them. There is
+   * no product name anywhere in this wave, no supplier, no price, no protection level, and no
+   * "what to buy" of any kind — for regulated and unregulated items alike.
+   *
+   * THE SOURCES ARE INSTITUTIONAL BY CONSTRUCTION. An official uniform policy, a police service's
+   * own statement of what its uniform is for, a national standards body's compliance-testing
+   * regime, and a federal survey of adoption. None is a review, a catalogue or a supplier.
+   */
+  {
+    slug: 'what-police-equipment-is-for',
+    title: 'What police equipment is for',
+    shortTitle: 'What equipment is for',
+    question: 'What equipment do police officers actually carry, and why?',
+    summary:
+      'Equipment is issued to do a job, and the job explains the categories: to be identifiable, to record what happened, to be protected, to communicate, and to deal with what a shift brings. One police service publishes its own list.',
+    entityType: 'concept',
+    section: 'law-enforcement',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'why-police-wear-a-uniform',
+      'issued-equipment-and-personal-equipment',
+      'documentation-equipment-in-policing',
+      'working-life-in-policing',
+    ],
+    sources: ['ie-garda-uniform-dress-code-policy', 'nl-politie-uniform-purpose'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-06',
+    publishedOn: '2026-09-06',
+    reviewedOn: '2026-09-06',
+    factsVerifiedOn: '2026-09-06',
+    readingTimeMinutes: 8,
+    uncertainty: [
+      'The itemised list is An Garda Síochána’s, from its own published policy. No other service’s equipment list was researched, and services differ substantially in what they issue.',
+      'Nothing here describes how any item is used, carried or configured, and that is a deliberate limit rather than a gap in the research.',
+      'Whether officers routinely carry firearms differs between and within countries and is set nationally. It was NOT RESEARCHED for this wave and is not described.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Police equipment is not a collection of gear. It is the set of things a service issues so that an officer can do the job it has given them — and because the job is mostly communication, observation and recording, most of the equipment is too.',
+      },
+      {
+        kind: 'callout',
+        variant: 'safety',
+        title: 'What this page describes, and what it deliberately does not',
+        text: 'It names categories of equipment and explains what each is for. It describes no technique, no method of use, no configuration, no specification and no product. It recommends nothing, compares nothing and links to no supplier. Where a category is regulated — and several are — the page records that a service issues it and stops there.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'The popular picture of police equipment is a belt of weapons. The published lists do not look like that: they are dominated by clothing, protection, recording and the ordinary means of being seen and reaching someone.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'And the imbalance is the same one the training data showed',
+        text: 'Wave 24 found that measured academy instruction gives more hours to law than to firearms or defensive tactics. The equipment lists point the same way: what a service issues is a better guide to what the job consists of than what fiction selects from it.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'An Garda Síochána publishes what a member takes on duty. Its Uniform and Dress Code policy states that "A member going on duty will carry the appropriate PPE, in the official utility belt, and pouches issued including extendible baton, handcuffs, incapacitant spray, anti-spit guard (where applicable), a notebook, pen, medi-pouch and general purpose safety helmet."',
+        claim: 'fact',
+        sources: ['ie-garda-uniform-dress-code-policy'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Read the list rather than skimming it',
+        text: 'A notebook and a pen sit in the same sentence as the protective and restraint items, and a medical pouch sits beside both. That is one service saying, in its own policy, that recording what happened and treating an injury are equipment questions of the same order as the rest.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The uniform itself is equipment, and the same policy divides it into three named categories — Operational, Dress and Formal — with the Operational Uniform listing items including a baseball cap, polo shirt, epaulettes, a Personal Protective Vest (Body Armour), utility trousers, a soft shell jacket, an operational gilet, waterproof jacket and over-trousers, and high-visibility summer and winter jackets.',
+        claim: 'fact',
+        sources: ['ie-garda-uniform-dress-code-policy'],
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'Identification',
+            description:
+              'The largest category by volume, and the one most easily overlooked. Uniform, insignia, epaulettes and an identity card exist so that a member of the public can tell who they are dealing with — see [why police wear a uniform](/law-enforcement/why-police-wear-a-uniform).',
+          },
+          {
+            term: 'Protection',
+            description:
+              'Protective vests, helmets and weather clothing. The Garda policy lists a Personal Protective Vest as part of the Operational Uniform rather than as an addition to it, which is a statement about how routine the category is.',
+          },
+          {
+            term: 'Documentation',
+            description:
+              'A notebook and pen, and increasingly digital equivalents. The durable output of most police work is a record, so the means of making one is core equipment — see [documentation equipment in policing](/law-enforcement/documentation-equipment-in-policing).',
+          },
+          {
+            term: 'Communication',
+            description:
+              'Radio and related equipment, which is what connects an officer to the control room that dispatched them and to everyone else working the same incident.',
+          },
+          {
+            term: 'Recording',
+            description:
+              'Body-worn video where a service uses it — a category that barely existed two decades ago and is now majority practice in at least one country. See [body-worn video as institutional equipment](/law-enforcement/body-worn-video-as-institutional-equipment).',
+          },
+          {
+            term: 'Medical',
+            description:
+              'A medical pouch is on the Garda list. An officer is frequently the first person present at an injury, which makes first-aid capability an equipment question rather than an afterthought.',
+          },
+          {
+            term: 'Restraint and force options',
+            description:
+              'Services issue items in this category, and the Garda policy names extendible baton, handcuffs and incapacitant spray among what a member carries. **What any of them is, how it is used, and when it may lawfully be used are not described here** — the legal question is [when may police use force](/law-enforcement/police-use-of-force).',
+          },
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Weather and visibility clothing is not trivial equipment',
+        text: 'The Operational Uniform list carries waterproofs and separate high-visibility summer and winter jackets. An officer works outdoors for most of a shift in whatever the weather is doing, and being visible in it is both a safety function and an identification one.',
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Police equipment is mostly weapons.',
+        reality:
+          'The published Garda list for a member going on duty includes a notebook, pen, medi-pouch and safety helmet alongside protective and restraint items, and the Operational Uniform itself is a list of clothing and protection.',
+      },
+      {
+        claim: 'The uniform is clothing rather than equipment.',
+        reality:
+          'The Garda policy defines uniform as items "issued to Garda Personnel to wear for the purpose of carrying out their duties", and lists the Personal Protective Vest as part of the Operational Uniform.',
+      },
+      {
+        claim: 'Every police service issues the same things.',
+        reality:
+          'Only one service’s list was researched for this page. Services differ substantially in what they issue, and whether officers routinely carry firearms is set nationally and was not researched.',
+      },
+      {
+        claim: 'Officers choose their own equipment.',
+        reality:
+          'Equipment is issued under policy. The Garda document is a policy approved by the Garda Executive with a named policy owner and an effective date.',
+      },
+      {
+        claim: 'A page about equipment will tell you what to buy.',
+        reality:
+          'This one names no product, no supplier, no specification and no price, for regulated and unregulated categories alike. It describes what services issue and why.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'What the researched evidence establishes, and what it does not.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Established: one service’s published categories of uniform, and the items a member carries on duty — An Garda Síochána.',
+          'Established: the stated purpose of a uniform in one other service — the Netherlands.',
+          'Not established: what any other service issues.',
+          'Not researched: firearms carriage, which is set nationally and differs sharply.',
+          'Not described anywhere: how any item is used, carried, configured or obtained.',
+        ],
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'Equipment is a public question because it is issued with public authority and used in public. A service that publishes its uniform policy openly — as this one does, marked unrestricted — lets anyone see what its officers are equipped to do, which is a modest but real form of accountability that costs nothing to exercise.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'The identification function is [why police wear a uniform](/law-enforcement/why-police-wear-a-uniform). Who owns and replaces equipment is [issued equipment and personal equipment](/law-enforcement/issued-equipment-and-personal-equipment). The legal limit on force is [when may police use force](/law-enforcement/police-use-of-force).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [why police wear a uniform](/law-enforcement/why-police-wear-a-uniform), [documentation equipment in policing](/law-enforcement/documentation-equipment-in-policing), and [working life in policing](/law-enforcement/working-life-in-policing).',
+      },
+    ],
+  },
+  {
+    slug: 'why-police-wear-a-uniform',
+    title: 'Why police wear a uniform',
+    shortTitle: 'Why a uniform',
+    question: 'What is a police uniform actually for?',
+    summary:
+      'One police service answers in its own words: visibility and recognisability first, then the fact that the wearer represents public authority, then protection. Each function does something different, and the third is the one people forget.',
+    entityType: 'concept',
+    section: 'law-enforcement',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'what-police-equipment-is-for',
+      'how-police-officers-are-identified',
+      'issued-equipment-and-personal-equipment',
+      'professional-standards-in-policing-work',
+    ],
+    sources: ['nl-politie-uniform-purpose', 'ie-garda-uniform-dress-code-policy'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-06',
+    publishedOn: '2026-09-06',
+    reviewedOn: '2026-09-06',
+    factsVerifiedOn: '2026-09-06',
+    readingTimeMinutes: 7,
+    uncertainty: [
+      'Two services were researched: the Netherlands for the stated purpose of the uniform, and An Garda Síochána for its uniform policy. No other service’s position was researched.',
+      'Uniform design, specification, colour schemes and insignia systems were NOT RESEARCHED for any country and are not described.',
+      'Nothing here describes how a uniform or any item on it is worn in any operational sense.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'A uniform is the most visible thing a police service issues, and the only piece of equipment that works on everyone who sees it rather than on the person wearing it. That is what makes it worth asking what it is actually for.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This explains the functions two police services attribute to their own uniforms. It describes no design, specification or insignia system, and it is not about how a uniform is worn. It is not legal advice.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'The question sounds trivial and is not. A uniform decides whether a stranger approaching you at night is identifiable as a police officer, and whether you can say afterwards who it was. Both of those are conditions for the rest of the system working.',
+        claim: 'analysis',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'The Dutch national police name the primary function directly: "Zichtbaarheid en herkenbaarheid zijn daarmee de belangrijkste functies van het uniform" — visibility and recognisability are the most important functions of the uniform.',
+        claim: 'fact',
+        sources: ['nl-politie-uniform-purpose'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'The same page adds a second function that is about authority rather than sight: "Het uniform ‘zegt’ ook dat de politieagent de autoriteit is op straat. De politieagent vertegenwoordigt het gezag (de overheid)" — the uniform also says that the officer is the authority on the street, and that the officer represents public authority. And a third: "Daarnaast biedt het uniform ook veiligheid en bescherming" — it also provides safety and protection.',
+        claim: 'fact',
+        sources: ['nl-politie-uniform-purpose'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Three functions, and they can pull against each other',
+        text: 'Maximum visibility, unmistakable authority and physical protection are not automatically the same garment. High-visibility clothing serves the first; protective equipment serves the third; and a service has to decide how much of each an officer carries at once. The Garda policy resolves it by having three uniform categories rather than one.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'That policy divides the uniform into Operational, Dress and Formal categories, and defines uniform itself as any item "issued to Garda Personnel to wear for the purpose of carrying out their duties". The Operational Uniform is where the protective and weather items sit — including the Personal Protective Vest and separate high-visibility summer and winter jackets.',
+        claim: 'fact',
+        sources: ['ie-garda-uniform-dress-code-policy'],
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'Recognisability is a two-way function',
+            description:
+              'It lets a person in trouble find help quickly, and it lets a person who has been dealt with badly say who dealt with them. The second is the accountability half, and it depends on the same garment as the first.',
+          },
+          {
+            term: 'Representing authority is a claim, not just a signal',
+            description:
+              'The Dutch wording is that the officer represents the state. A uniform asserts something about the wearer’s powers, which is precisely why impersonation is treated seriously and why identification documents exist alongside the uniform.',
+          },
+          {
+            term: 'Protection is genuine but partial',
+            description:
+              'A uniform provides some protection, and specific protective equipment provides more. Treating the uniform as protective equipment in itself would overstate it; treating it as clothing would understate it.',
+          },
+          {
+            term: 'Plain clothes removes the first two functions',
+            description:
+              'An officer not in uniform is neither visible nor recognisable as one, which is why systems attach a stronger identification duty to plain-clothes work — see [how police officers are identified](/law-enforcement/how-police-officers-are-identified).',
+          },
+        ],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'A police uniform is mainly about looking authoritative.',
+        reality:
+          'The Dutch national police put visibility and recognisability first, and name authority second. The service’s own ordering is the opposite of the assumption.',
+      },
+      {
+        claim: 'The uniform is just clothing.',
+        reality:
+          'The Garda policy defines it as items issued for the purpose of carrying out duties, and places the Personal Protective Vest inside the Operational Uniform rather than outside it.',
+      },
+      {
+        claim: 'Recognisability is for the officer’s benefit.',
+        reality:
+          'It works in both directions: it lets someone find help, and it lets someone say afterwards who dealt with them. The second is what makes it an accountability function.',
+      },
+      {
+        claim: 'All police uniforms are broadly the same.',
+        reality:
+          'Only two services were researched here, and one of them divides its uniform into three named categories for different purposes. No design or specification is described for any country.',
+      },
+      {
+        claim:
+          'Officers in plain clothes are the same as officers in uniform for identification purposes.',
+        reality:
+          'They are not, and systems reflect that. In the Netherlands an officer in plain clothes must show the police identity card on their own initiative, while a uniformed officer need only show it on request.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Functions and structures, as the two researched services state them.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Visibility and recognisability as the primary functions — Netherlands.',
+          'Representing public authority — Netherlands.',
+          'Safety and protection — Netherlands.',
+          'Three uniform categories: Operational, Dress and Formal — An Garda Síochána.',
+          'Protective vest and high-visibility clothing inside the Operational Uniform — An Garda Síochána.',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'Scope',
+        text: 'Two services. Nothing here establishes what any other service’s uniform is for, how it is designed, or what its insignia mean.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'Recognisability is where a uniform stops being a matter of appearance and becomes a matter of rights. A person who cannot identify the officer who dealt with them cannot complain effectively about it, and a service that made its officers harder to identify would be reducing its own accountability whatever else it intended.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'The identification duty in detail is [how police officers are identified](/law-enforcement/how-police-officers-are-identified). What else is issued is [what police equipment is for](/law-enforcement/what-police-equipment-is-for). Why accountability needs identifiability at all is [why police accountability matters](/law-enforcement/why-police-accountability-matters).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [what police equipment is for](/law-enforcement/what-police-equipment-is-for), [how police officers are identified](/law-enforcement/how-police-officers-are-identified), and [professional standards in policing work](/law-enforcement/professional-standards-in-policing-work).',
+      },
+    ],
+  },
+  {
+    slug: 'how-police-officers-are-identified',
+    title: 'How police officers are identified',
+    shortTitle: 'Identifying an officer',
+    question: 'How can you tell someone is really a police officer?',
+    summary:
+      'Uniform, insignia and an identity card do different parts of the job — and in at least one system the duty to produce the card is stronger for an officer in plain clothes than for one in uniform.',
+    entityType: 'concept',
+    section: 'law-enforcement',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'why-police-wear-a-uniform',
+      'what-police-equipment-is-for',
+      'why-police-accountability-matters',
+      'how-police-are-held-to-account',
+    ],
+    sources: [
+      'nl-politie-legitimatiebewijs',
+      'nl-politie-uniform-purpose',
+      'ie-garda-uniform-dress-code-policy',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-06',
+    publishedOn: '2026-09-06',
+    reviewedOn: '2026-09-06',
+    factsVerifiedOn: '2026-09-06',
+    readingTimeMinutes: 7,
+    uncertainty: [
+      'The identification rules described are the Netherlands’. Identification duties differ between systems and NO other country’s rule was researched.',
+      'The security features of any identity document are described only as existing. Nothing here describes what they look like or how they are checked, and that limit is deliberate.',
+      'What a person may do if they doubt an officer’s identity is a matter for the police service concerned and was NOT RESEARCHED.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Identification is three overlapping systems doing slightly different work: a uniform that says "police" at a distance, insignia that say which officer and what rank, and a document that proves it close up. A system needs all three because each fails where the others work.',
+      },
+      {
+        kind: 'callout',
+        variant: 'safety',
+        title: 'What this page describes, and what it deliberately does not',
+        text: 'It describes that identity documents carry authenticity features and what the duty to produce one is. It does **not** describe what those features look like, how they are verified, or anything else that would assist someone attempting to imitate a police officer. That omission is the point of the page, not a gap in it.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'Every police power depends on the person exercising it actually holding it. Identification is where that is settled in practice, at the moment it matters, usually by someone who has no other way to check.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Which is why the duty is asymmetric',
+        text: 'A uniform already answers the question, so the document is a backstop. Plain clothes answers nothing, so the document becomes the whole of the answer — and the duty to produce it moves accordingly. That asymmetry is a design decision, and at least one system states it explicitly.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'The Dutch national police describe the identity card as "een kaart met de naam, het personeelsnummer en de pasfoto van de politiemedewerker" — a card carrying the officer’s name, personnel number and photograph. It also carries visible and invisible authenticity features, of which the hologram is described as the most important.',
+        claim: 'fact',
+        sources: ['nl-politie-legitimatiebewijs'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'The duty then differs by dress: "Een politiemedewerker in uniform hoeft zich niet uit zichzelf te legitimeren maar als u ernaar vraagt, moet het politielegitimatiebewijs wel getoond worden. Een politiemedewerker in ‘burgerkleding’ moet wel uit eigen beweging het politielegitimatiebewijs tonen." A uniformed officer need not identify themselves unprompted but must show the card if asked; an officer in plain clothes must show it of their own initiative.',
+        claim: 'fact',
+        sources: ['nl-politie-legitimatiebewijs'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Note what the uniformed rule still guarantees',
+        text: 'Not that identification is optional, but that the uniform has already done part of it. The card remains available on request, which means a person always has a route to a name and a number — and that is the part accountability actually needs.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The uniform carries its own identifying elements. The Garda Operational Uniform includes epaulettes, and the same policy applies dress standards to "uniformed and plain-clothes members, and Garda staff", so the identification question reaches everyone the service employs rather than only officers on patrol.',
+        claim: 'fact',
+        sources: ['ie-garda-uniform-dress-code-policy'],
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'The uniform: identification at a distance',
+            description:
+              'It works before any interaction begins, on everyone who sees it, without anyone asking. Visibility and recognisability are the functions the Dutch police name first.',
+          },
+          {
+            term: 'Insignia: which officer, and what rank',
+            description:
+              'Epaulettes and similar markings narrow "a police officer" to a particular one with a particular position. Systems differ in what they display and this wave describes no insignia system.',
+          },
+          {
+            term: 'The identity document: proof close up',
+            description:
+              'A name, a personnel number and a photograph — the elements that let an interaction be traced to a person afterwards. Its authenticity features exist and are not described here.',
+          },
+          {
+            term: 'And plain clothes, where only the third works',
+            description:
+              'No uniform, no insignia, so the document carries the whole load — which is why the duty to produce it without being asked attaches there.',
+          },
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Impersonation is the reason all of this is formalised',
+        text: 'A system that assumed good faith would need none of it. Identity documents carry authenticity features, and services publish what their officers look like, precisely because the authority a uniform asserts is worth imitating. What to do about a specific doubt is a matter for the police service concerned, and this platform does not advise on it.',
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'A police officer must always identify themselves without being asked.',
+        reality:
+          'In the Netherlands a uniformed officer need not do so unprompted, but must show the identity card if asked. An officer in plain clothes must show it of their own initiative.',
+      },
+      {
+        claim: 'The uniform is enough on its own.',
+        reality:
+          'It identifies a police officer at a distance but not which one. The identity card carries the name and personnel number, which is what an account of an interaction afterwards depends on.',
+      },
+      {
+        claim: 'Identification rules are the same everywhere.',
+        reality:
+          'Only the Dutch rule was researched. Identification duties differ between systems and none is described here for any other country.',
+      },
+      {
+        claim: 'Identification only applies to officers on patrol.',
+        reality:
+          'The Garda dress standards policy applies to uniformed and plain-clothes members and to Garda staff, so the question reaches everyone the service employs.',
+      },
+      {
+        claim: 'A page like this can help you verify a specific person.',
+        reality:
+          'It cannot, and does not try. It describes that documents carry authenticity features without describing them, and what to do about a doubt is a matter for the police service concerned.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'The three layers, and what each does alone.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Uniform — identifies a police officer, at a distance, to everyone, without being asked.',
+          'Insignia — narrows it to a rank and, where displayed, an individual.',
+          'Identity card — name, personnel number and photograph, on request or unprompted depending on dress.',
+          'Plain clothes — only the third applies, and the duty is correspondingly stronger.',
+        ],
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'Every accountability mechanism in the corpus assumes the complainant can say who they are complaining about. Identification is what makes that assumption true, and it is the point at which an abstract right to complain becomes a usable one.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'What a uniform is for is [why police wear a uniform](/law-enforcement/why-police-wear-a-uniform). What complaints machinery does with an identification is [how are police held to account](/law-enforcement/how-police-are-held-to-account). Plain-clothes work as a career reality is [specialist roles in policing](/law-enforcement/specialist-roles-in-policing).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [why police wear a uniform](/law-enforcement/why-police-wear-a-uniform), [why police accountability matters](/law-enforcement/why-police-accountability-matters), and [what police equipment is for](/law-enforcement/what-police-equipment-is-for).',
+      },
+    ],
+  },
+  {
+    slug: 'issued-equipment-and-personal-equipment',
+    title: 'Issued equipment and personal equipment',
+    shortTitle: 'Issued and personal',
+    question: 'Do police officers buy their own equipment?',
+    summary:
+      'Core equipment is issued under policy, not purchased by the officer — and the policy that issues it also governs replacement, disposal and what happens at the start of training.',
+    entityType: 'concept',
+    section: 'law-enforcement',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'what-police-equipment-is-for',
+      'why-police-wear-a-uniform',
+      'equipment-standards-and-testing',
+      'what-a-police-academy-is',
+    ],
+    sources: ['ie-garda-uniform-dress-code-policy'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-06',
+    publishedOn: '2026-09-06',
+    reviewedOn: '2026-09-06',
+    factsVerifiedOn: '2026-09-06',
+    readingTimeMinutes: 6,
+    uncertainty: [
+      'One service’s policy was researched — An Garda Síochána. Whether other services issue on the same terms was NOT RESEARCHED.',
+      'What, if anything, an officer may add at their own expense, and under what permission, was NOT ESTABLISHED for any system.',
+      'No supplier, product, specification or cost appears anywhere in this wave, and none was researched.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'The equipment that matters is issued. It belongs to the service, is governed by the service’s policy, and is replaced through the service’s process — which makes "what do officers buy" a smaller question than it sounds, and "who decides what they carry" a much larger one.',
+      },
+      {
+        kind: 'callout',
+        variant: 'safety',
+        title: 'What this page is and is not',
+        text: 'This describes how one service governs the issue of equipment. It names no supplier, no product, no specification and no price, and it offers no purchasing guidance of any kind — for personal items as much as for regulated ones. It is not advice to anyone about anything they might buy.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'If officers chose their own equipment, a service could not say what its officers were equipped to do, could not hold them to a standard, and could not answer for the consequences. Issuing is what makes equipment an institutional fact rather than a personal preference.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'And it is the same logic as the uniform',
+        text: 'A uniform only identifies if everyone wearing it has the same one. Equipment only supports accountability if the service knows what was issued to whom. Both follow from the fact that the public is dealing with an institution rather than with an individual.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'The Garda policy defines uniform as any item "issued to Garda Personnel to wear for the purpose of carrying out their duties" — the definition is framed around issue, not around ownership or purchase.',
+        claim: 'fact',
+        sources: ['ie-garda-uniform-dress-code-policy'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'The same document carries sections on the issue and replacement of uniform items to members, on the disposal of uniform, and on the issue of uniform to student and probationer Gardaí — so the lifecycle from first issue through replacement to disposal is governed by one policy, approved by the Garda Executive with a named policy owner and an effective date of 24 January 2025.',
+        claim: 'fact',
+        sources: ['ie-garda-uniform-dress-code-policy'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Disposal is in there for a reason',
+        text: 'A uniform that leaves the service without being disposed of is a uniform someone else can wear. Governing the end of the lifecycle is the same problem as governing identification at the start of it, which is why a dress-code policy carries a disposal section at all.',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'Issued during training, not on appointment',
+            description:
+              'The policy provides for issue to student and probationer Gardaí, so equipment arrives with the training rather than after it. That fits the Irish structure, where trainees attest partway through a programme.',
+          },
+          {
+            term: 'Replacement runs through a process, not a shop',
+            description:
+              'Lost or damaged items are replaced through the service’s own procedure. The point is not the paperwork but that the service knows what each member holds.',
+          },
+          {
+            term: 'The standard applies to plain clothes too',
+            description:
+              'The policy’s standards apply to uniformed and plain-clothes members and to Garda staff, so being out of uniform does not put a member outside the equipment governance.',
+          },
+          {
+            term: 'What an individual may add is a separate question',
+            description:
+              'Whether and how an officer may use anything they have obtained themselves is governed by each service, and was NOT RESEARCHED here. No page in this wave suggests anything anyone should acquire.',
+          },
+        ],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Police officers buy their own equipment.',
+        reality:
+          'The Garda policy defines uniform as items issued to personnel for carrying out their duties, and governs issue, replacement and disposal through the service.',
+      },
+      {
+        claim: 'Equipment is issued once, at the end of training.',
+        reality:
+          'The same policy provides separately for the issue of uniform to student and probationer Gardaí.',
+      },
+      {
+        claim: 'Officers in plain clothes are outside equipment policy.',
+        reality:
+          'The Garda standards apply to uniformed and plain-clothes members and to Garda staff alike.',
+      },
+      {
+        claim: 'Every police service issues equipment the same way.',
+        reality:
+          'One service’s policy was researched. Whether others issue on the same terms was not established.',
+      },
+      {
+        claim: 'A page about issued equipment will tell you what to get.',
+        reality:
+          'This one names no supplier, product, specification or price, and offers no purchasing guidance for any category.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'What one published policy governs, end to end.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Definition of uniform as items issued for carrying out duties.',
+          'Issue to student and probationer members during training.',
+          'Issue and replacement of items to serving members.',
+          'Disposal of uniform.',
+          'Standards applying to uniformed members, plain-clothes members and staff.',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'Scope',
+        text: 'An Garda Síochána, from its own published policy version 1.2, effective 24 January 2025. Nothing here describes any other service.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'Knowing what was issued to whom is a precondition of answering for what was done with it. An equipment policy is therefore part of the accountability architecture even though it reads like administration — and publishing it openly, as this one is, lets that be checked rather than assumed.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'What is issued is [what police equipment is for](/law-enforcement/what-police-equipment-is-for). How equipment is tested to a standard before a service buys it is [equipment standards and testing](/law-enforcement/equipment-standards-and-testing). When equipment arrives in a career is [what a police academy is](/law-enforcement/what-a-police-academy-is).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [what police equipment is for](/law-enforcement/what-police-equipment-is-for), [equipment standards and testing](/law-enforcement/equipment-standards-and-testing), and [why police wear a uniform](/law-enforcement/why-police-wear-a-uniform).',
+      },
+    ],
+  },
+  {
+    slug: 'equipment-standards-and-testing',
+    title: 'Equipment standards and testing',
+    shortTitle: 'Equipment standards',
+    question: 'Who decides whether police equipment actually works?',
+    summary:
+      'In the United States a national body has set voluntary standards for one category since 1972 and tests products against them — a system that exists because a service buying protective equipment cannot test it itself.',
+    entityType: 'concept',
+    section: 'law-enforcement',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'issued-equipment-and-personal-equipment',
+      'what-police-equipment-is-for',
+      'body-worn-video-as-institutional-equipment',
+      'who-regulates-forensic-science',
+    ],
+    sources: ['us-nij-body-armor-standards'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-06',
+    publishedOn: '2026-09-06',
+    reviewedOn: '2026-09-06',
+    factsVerifiedOn: '2026-09-06',
+    readingTimeMinutes: 7,
+    uncertainty: [
+      'One standards regime was researched — the United States NIJ programme for body armor. Whether comparable regimes exist elsewhere, and for which categories, was NOT RESEARCHED.',
+      'NO protection level, product, model, specification or performance figure appears on this page. The standard’s content was deliberately not reproduced, and no purchasing guidance is given.',
+      'How any service actually procures equipment, and on what terms, was NOT RESEARCHED for any country.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'A police service buying protective equipment faces a problem it cannot solve alone: it has no way to establish whether the thing works, and it will only find out when it matters. Standards and independent testing exist to move that question away from the moment of use.',
+      },
+      {
+        kind: 'callout',
+        variant: 'safety',
+        title: 'What this page describes, and what it deliberately does not',
+        text: 'It describes that a standards and compliance-testing system exists, who runs it, and how it works institutionally. It reproduces **no** performance requirement, protection level, test method, product name or model, and gives **no** guidance on selecting or buying anything. The page is about governance, not about equipment specification.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'The buyer cannot verify the product, the user finds out too late, and the manufacturer knows more than either. That combination is the classic case for an independent standard — and it is why the arrangement looks the same here as it does for forensic accreditation elsewhere in the corpus.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'And the same logic explains why it is voluntary',
+        text: 'A standard nobody is compelled to meet still works if buyers prefer products that meet it. The pressure runs through procurement rather than through law, which is a lighter instrument than regulation and depends on services actually caring what they buy.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'The National Institute of Justice states that it "has been setting voluntary body armor standards since 1972", and that "the NIJ standard is the only nationally accepted standard for the body armor worn by law enforcement and corrections officers".',
+        claim: 'fact',
+        sources: ['us-nij-body-armor-standards'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Standards alone would settle nothing, so the same body tests against them: NIJ "administers a program to test commercially available armor for compliance with the standards to determine whether the vests will perform as expected". Manufacturers take part voluntarily — registering with the programme, submitting documents, sending samples to approved laboratories, and agreeing to follow-up inspections.',
+        claim: 'fact',
+        sources: ['us-nij-body-armor-standards'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'The follow-up regime is the part that makes it mean anything',
+        text: 'A manufacturer whose model meets the standard "is subject to six follow-up inspections and testing over a five-year period". Certifying a submitted sample proves something about that sample; re-testing recently manufactured items proves something about what is actually being sold. Without the second, the first is a one-off.',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'A standard says what "works" means',
+            description:
+              'Before anything can be tested, someone has to define the performance being claimed. That definitional step is why standards bodies exist at all, and it is separate from the testing that follows.',
+          },
+          {
+            term: 'Compliance testing is independent of the seller',
+            description:
+              'Samples go to laboratories recognised by the programme rather than to the manufacturer’s own testing. The independence is the value.',
+          },
+          {
+            term: 'Voluntary does not mean optional in practice',
+            description:
+              'Where a standard is the only nationally accepted one, buyers can require it even though the law does not. The obligation arrives through purchasing decisions.',
+          },
+          {
+            term: 'Continuing surveillance, not a certificate',
+            description:
+              'Six follow-up inspections across five years treats compliance as a state to be maintained rather than a badge to be earned once.',
+          },
+          {
+            term: 'This is one category, in one country',
+            description:
+              'The regime described is for body armor in the United States. Whether other categories or other countries have equivalents was not researched, and none is claimed.',
+          },
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'The same shape appears elsewhere in the corpus',
+        text: 'Forensic science solves a structurally identical problem — a court cannot verify a laboratory’s competence itself — with accreditation and regulation. See [who regulates forensic science](/forensics/who-regulates-forensic-science). Independent verification of a claim the buyer cannot check is a recurring institutional pattern rather than a feature of one field.',
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Police equipment must meet legally mandatory standards.',
+        reality:
+          'The NIJ body armor standards are described by NIJ itself as voluntary. They carry weight because they are the only nationally accepted standard, not because the law compels them.',
+      },
+      {
+        claim: 'A standard is a test.',
+        reality:
+          'The standard defines the performance; the compliance-testing programme establishes whether a product meets it. NIJ runs both, and they are separate functions.',
+      },
+      {
+        claim: 'Certification is permanent once granted.',
+        reality:
+          'A compliant manufacturer is subject to six follow-up inspections and testing over a five-year period, including testing of recently manufactured items.',
+      },
+      {
+        claim: 'These standards apply internationally.',
+        reality:
+          'The regime described is the United States NIJ programme. Whether comparable regimes exist elsewhere was not researched, and none is described.',
+      },
+      {
+        claim: 'A page about standards will tell you which equipment is best.',
+        reality:
+          'This one names no product, model, protection level or specification, and gives no purchasing guidance. It describes how the verification system is arranged.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'What was established, and the boundaries around it.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Voluntary standards for one equipment category, set since 1972 — United States, NIJ.',
+          'Described by the body itself as the only nationally accepted standard for that category.',
+          'An administered compliance-testing programme, with manufacturers participating voluntarily.',
+          'Six follow-up inspections and testing across five years for a compliant model.',
+          'Not researched: any other category, any other country, and how any service procures.',
+        ],
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'Equipment standards protect the officer who relies on the equipment, and they protect the public interest in a service that spends public money on things that work. Both depend on someone independent of the seller being able to say so — which is the same reason courts do not take a laboratory’s word for its own competence.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'How equipment reaches an officer is [issued equipment and personal equipment](/law-enforcement/issued-equipment-and-personal-equipment). The same verification problem in another field is [who regulates forensic science](/forensics/who-regulates-forensic-science).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [issued equipment and personal equipment](/law-enforcement/issued-equipment-and-personal-equipment), [what police equipment is for](/law-enforcement/what-police-equipment-is-for), and [who regulates forensic science](/forensics/who-regulates-forensic-science).',
+      },
+    ],
+  },
+  {
+    slug: 'documentation-equipment-in-policing',
+    title: 'Documentation equipment in policing',
+    shortTitle: 'Documentation equipment',
+    question: 'Why is a notebook police equipment?',
+    summary:
+      'Because the durable output of most police work is a record, and the means of making one is issued alongside everything else — one service lists a notebook and pen in the same sentence as its protective equipment.',
+    entityType: 'concept',
+    section: 'law-enforcement',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'what-police-equipment-is-for',
+      'body-worn-video-as-institutional-equipment',
+      'working-life-in-policing',
+      'skills-that-policing-relies-on',
+    ],
+    sources: ['ie-garda-uniform-dress-code-policy'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-06',
+    publishedOn: '2026-09-06',
+    reviewedOn: '2026-09-06',
+    factsVerifiedOn: '2026-09-06',
+    readingTimeMinutes: 6,
+    uncertainty: [
+      'One service’s equipment list was researched. What documentation equipment other services issue, and how far digital devices have replaced paper, was NOT RESEARCHED.',
+      'Rules on how records are made, retained, disclosed or used in proceedings were NOT RESEARCHED and are not described — that is procedural ground this wave does not enter.',
+      'Nothing here describes what an officer writes, how, or in what form.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'A notebook is easy to overlook on an equipment list. It is also, for most of what police do, the thing that outlasts the incident — and the reason a decision taken alone at three in the morning can be examined at all.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This explains why documentation equipment is issued and what function it serves. It does not describe what officers record, how records are made, retained, disclosed or challenged, or anything about their use in proceedings. Those are procedural questions this platform deliberately does not expand into.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'Wave 24 found that a substantial share of a police officer’s working day is writing, and that the record is read months later by supervisors, prosecutors, defence lawyers and courts — by people who were not there. Documentation equipment is what makes that possible, which is why it is issued rather than assumed.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'The accountability point is exact',
+        text: 'Most operational decisions are taken without a supervisor present and reviewed afterwards through what was written. A service that issues protective equipment but not the means of recording would have equipped its officers for the incident and not for the review — and the review is where the accountability lives.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'An Garda Síochána puts it plainly in its own policy. A member going on duty carries, in the official utility belt and pouches issued, items "including extendible baton, handcuffs, incapacitant spray, anti-spit guard (where applicable), a notebook, pen, medi-pouch and general purpose safety helmet".',
+        claim: 'fact',
+        sources: ['ie-garda-uniform-dress-code-policy'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'One sentence, three categories, no hierarchy',
+        text: 'Protection, restraint, medical and documentation appear in a single list with no suggestion that one matters more. That is the service’s own ordering, and it is a more accurate picture of the job than any ranking an outsider would produce.',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'Contemporaneous recording is the point',
+            description:
+              'A record made at the time is worth more than one reconstructed later, which is why the means of making it travels with the officer rather than waiting at the station.',
+          },
+          {
+            term: 'The reader is always someone else',
+            description:
+              'Supervisors, prosecutors, defence lawyers and courts read what was written, generally without having been present. That audience is what sets the standard the record has to meet.',
+          },
+          {
+            term: 'Digital equipment sits alongside, not simply instead',
+            description:
+              'Services increasingly issue devices, and body-worn video records a different kind of account. How far any service has replaced paper was not researched here.',
+          },
+          {
+            term: 'What officers write is out of scope',
+            description:
+              'This page is about the equipment and its function. The content of records, their retention and their use in proceedings are procedural matters the corpus does not expand into.',
+          },
+        ],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'A notebook is a personal item, not equipment.',
+        reality:
+          'The Garda policy lists a notebook and pen among the items a member going on duty carries in the official utility belt and pouches issued.',
+      },
+      {
+        claim: 'Paperwork is separate from the real work.',
+        reality:
+          'The record is the durable output of most police work and is what allows a decision taken alone to be reviewed afterwards.',
+      },
+      {
+        claim: 'Body-worn video has replaced written records.',
+        reality:
+          'How far any service has replaced paper with digital equipment was not researched. The Garda policy still lists a notebook and pen among issued items.',
+      },
+      {
+        claim: 'This page will tell you what officers write in their notebooks.',
+        reality:
+          'It will not. What is recorded, how, and what happens to it afterwards are procedural questions this wave deliberately does not enter.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'What one published policy establishes.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'A notebook and pen are issued items carried on duty — An Garda Síochána.',
+          'They are listed alongside protective, restraint and medical items without distinction.',
+          'Not researched: documentation equipment in any other service.',
+          'Not described: what is recorded, or what happens to a record afterwards.',
+        ],
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'The documentation burden officers experience as workload is the same thing the public experiences as accountability. There is no version of reviewable policing that does not involve someone writing things down, and issuing the means to do it is where that begins.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'The writing itself as a professional skill is [skills that policing relies on](/law-enforcement/skills-that-policing-relies-on). The other recording technology is [body-worn video as institutional equipment](/law-enforcement/body-worn-video-as-institutional-equipment). The working reality is [working life in policing](/law-enforcement/working-life-in-policing).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [what police equipment is for](/law-enforcement/what-police-equipment-is-for), [skills that policing relies on](/law-enforcement/skills-that-policing-relies-on), and [working life in policing](/law-enforcement/working-life-in-policing).',
+      },
+    ],
+  },
+  {
+    slug: 'body-worn-video-as-institutional-equipment',
+    title: 'Body-worn video as institutional equipment',
+    shortTitle: 'Body-worn video',
+    question: 'How common are body-worn cameras, and what changed when they arrived?',
+    summary:
+      'In United States local police departments adoption rose from 43.1% to 61.8% between 2016 and 2020 — and reached 100% among departments serving a million or more people. The institutional question it raises is about written policy, not about hardware.',
+    entityType: 'concept',
+    section: 'law-enforcement',
+    jurisdiction: ['INT'],
+    temporalScope: 'current',
+    related: [
+      'documentation-equipment-in-policing',
+      'what-police-equipment-is-for',
+      'how-police-are-held-to-account',
+      'equipment-standards-and-testing',
+    ],
+    sources: ['us-bjs-local-police-technology-2020'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-06',
+    publishedOn: '2026-09-06',
+    reviewedOn: '2026-09-06',
+    factsVerifiedOn: '2026-09-06',
+    readingTimeMinutes: 7,
+    uncertainty: [
+      'The adoption figures are for LOCAL POLICE DEPARTMENTS IN THE UNITED STATES, from the LEMAS survey for 2016 and 2020. They establish nothing about federal or state agencies, and nothing about any other country.',
+      'What any policy actually requires — when cameras are activated, how footage is retained, who may access it — was NOT RESEARCHED and is not described.',
+      'Whether body-worn video changes outcomes was NOT RESEARCHED. This page describes adoption and governance, not effects.',
+      'No device, model, specification or capability is described anywhere on this page.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Body-worn video is the newest category on a police equipment list, and the only one whose main institutional question is not what it does but what rules govern it. A camera is simple; deciding when it runs, who may see the result and how long it is kept is not.',
+      },
+      {
+        kind: 'callout',
+        variant: 'safety',
+        title: 'What this page describes, and what it deliberately does not',
+        text: 'It describes how widely the equipment was adopted and that written policy governs it. It describes no device, no capability, no specification, and no rule about activation, retention or access — those were not researched, and describing capability would be equipment intelligence rather than institutional knowledge.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'Policing had a recording problem long before cameras: most decisions are taken without a supervisor present and reviewed afterwards through an account written by the person being reviewed. Body-worn video is an institutional answer to that, which is why it arrived as an accountability instrument rather than as an operational tool.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'And that explains the shape of the adoption curve',
+        text: 'Equipment adopted for accountability spreads fastest where scrutiny is greatest. The largest departments reached complete adoption first, which is what one would expect if the driver were public accountability rather than operational advantage.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'The Bureau of Justice Statistics measured adoption across local police departments in 2016 and 2020. Across all sizes, the share using body-worn cameras rose from **43.1% to 61.8%**.',
+        claim: 'fact',
+        sources: ['us-bjs-local-police-technology-2020'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'The distribution matters more than the average. Among departments serving 1 million or more residents, use rose from 73.3% in 2016 to **100.0%** in 2020 — complete adoption in the largest departments, while the overall figure remained under two-thirds.',
+        claim: 'fact',
+        sources: ['us-bjs-local-police-technology-2020'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Which means "do police wear cameras" has no single answer even in one country',
+        text: 'A resident of a large city and a resident of a small town were, in 2020, in materially different positions on this — and both were being policed under the same national framework. It is the same decentralisation the recruitment layer found, showing up in equipment.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The same survey treats body-worn cameras as a subject of **written policy**, alongside topics such as use-of-force reporting, vehicle pursuits and mass demonstrations — that is, as something a department is expected to have written rules about rather than merely to possess.',
+        claim: 'fact',
+        sources: ['us-bjs-local-police-technology-2020'],
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'Adoption is not the same as governance',
+            description:
+              'Owning cameras and having a written policy on them are separate facts, and the survey asks about both. A department with equipment and no policy has bought hardware rather than adopted an accountability instrument.',
+          },
+          {
+            term: 'The record it makes is different in kind',
+            description:
+              'A written account is the officer’s; a recording is not authored by anyone. That is what makes it valuable and also what makes the rules about access and retention contested.',
+          },
+          {
+            term: 'It does not replace the written record',
+            description:
+              'Documentation equipment remains on issue lists. A recording captures what a camera saw, not what an officer knew, decided or was told — see [documentation equipment in policing](/law-enforcement/documentation-equipment-in-policing).',
+          },
+          {
+            term: 'What the rules say is out of scope here',
+            description:
+              'Activation, retention, access and disclosure are governed by policy and in places by law. None was researched, and none is described.',
+          },
+        ],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'All police officers wear body cameras now.',
+        reality:
+          'Across United States local police departments, 61.8% used them in 2020 — up from 43.1% in 2016, but well short of universal.',
+      },
+      {
+        claim: 'Adoption is broadly even.',
+        reality:
+          'Among departments serving 1 million or more residents it reached 100.0% in 2020, while the figure across all sizes stayed under two-thirds.',
+      },
+      {
+        claim: 'These figures describe policing generally.',
+        reality:
+          'They describe local police departments in the United States, from the LEMAS survey. Nothing here establishes adoption in any other country or for federal and state agencies.',
+      },
+      {
+        claim: 'Body-worn video replaces written records.',
+        reality:
+          'Documentation equipment remains issued, and a recording captures what a camera saw rather than what an officer knew or decided.',
+      },
+      {
+        claim: 'Having cameras means having rules about them.',
+        reality:
+          'The survey treats adoption and written policy as separate questions, which is why it asks about both.',
+      },
+      {
+        claim: 'This page will tell you what body-worn cameras can do.',
+        reality:
+          'It describes no device, capability or specification. Adoption and governance are institutional facts; capability description would be something else.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'United States local police departments, LEMAS, 2016 and 2020.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'All department sizes: 43.1% in 2016, rising to 61.8% in 2020.',
+          'Departments serving 1 million or more residents: 73.3% rising to 100.0%.',
+          'Body-worn cameras surveyed as a written-policy topic alongside use-of-force reporting and vehicle pursuits.',
+          'Not established: adoption outside United States local departments, or in any other country.',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'Scope of these figures',
+        text: 'Bureau of Justice Statistics, Local Police Departments, Procedures, Policies, and Technology, 2020 — Statistical Tables, November 2023. Local police departments in the United States only.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'Body-worn video is unusual among equipment in that its principal beneficiaries are not only the officers carrying it. It produces evidence about how public authority was exercised, which is why the questions that matter about it are governance questions — and why adoption without written policy is the least useful version of it.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'The older recording instrument is [documentation equipment in policing](/law-enforcement/documentation-equipment-in-policing). What accountability machinery does with a record is [how are police held to account](/law-enforcement/how-police-are-held-to-account).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [documentation equipment in policing](/law-enforcement/documentation-equipment-in-policing), [what police equipment is for](/law-enforcement/what-police-equipment-is-for), and [how are police held to account](/law-enforcement/how-police-are-held-to-account).',
       },
     ],
   },

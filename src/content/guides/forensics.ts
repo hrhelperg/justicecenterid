@@ -535,7 +535,7 @@ export const FORENSICS_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [what forensic laboratories do](/forensics/what-forensic-laboratories-do), [expert evidence in court](/forensics/expert-evidence-in-court), and [why justice systems need oversight](/justice/why-justice-systems-need-oversight).',
+        text: 'Related: [what forensic laboratories do](/forensics/what-forensic-laboratories-do), [expert evidence in court](/forensics/expert-evidence-in-court), and [why justice systems need oversight](/justice/why-justice-systems-need-oversight). The same problem — a buyer or a court that cannot verify a claim itself — is solved the same way for police equipment: see [equipment standards and testing](/law-enforcement/equipment-standards-and-testing).',
       },
     ],
   },

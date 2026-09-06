@@ -4950,6 +4950,80 @@ export const SOURCES: readonly SourceRecord[] = [
     jurisdiction: 'NO',
     note: 'SCOPE: admission to the Bachelor politiutdanning at Politihøgskolen. Reached after the Wave 25 path (phs.no) 301-redirected to politihogskolen.no and then 404ed; this is the current location. Supports Norwegian citizenship, generell studiekompetanse, a minimum grade 3 in written Norwegian hovedmål, førerkort klasse B, plettfri vandel documented by politiattest, and a legeerklæring — each attached to a deadline in the annual admission cycle (1 March for the first three, 1 August of the PRECEDING year for the licence, 20 March for documentation). CYCLE-ANCHORED rather than one-off campaign-specific: the dates recur annually. The page states NO age requirement, and none is claimed. Establishes nothing about other routes into Norwegian policing.',
   },
+  /*
+   * WAVE 26 — police equipment, uniforms and professional technology.
+   *
+   * Every source here is INSTITUTIONAL: what equipment exists, who issues it, under what policy,
+   * to what standard, and how widely it is adopted. None describes how anything is used, carried,
+   * configured or selected, and none is a supplier, a review or a procurement guide.
+   *
+   * The Garda policy document is the wave's anchor precisely because it is an official, openly
+   * published UNRESTRICTED policy: it settles what a police service says its own uniform is for and
+   * what it issues, without anyone having to infer either.
+   */
+  {
+    id: 'ie-garda-uniform-dress-code-policy',
+    type: 'government',
+    title: 'Uniform and Dress Code within An Garda Síochána — Policy Document, Version 1.2',
+    publisher: 'An Garda Síochána (Ireland)',
+    url: 'https://www.garda.ie/en/about-us/publications/policy-documents/uniform-and-dress-code-within-an-garda-siochana-policy1.pdf',
+    publishedOn: '2025-01-24',
+    accessedOn: '2026-09-06',
+    verifiedOn: '2026-09-06',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'IE',
+    note: 'SCOPE: An Garda Síochána only. An official policy document marked "NEAMHSHRIANTA / UNRESTRICTED", effective 24 January 2025, version 1.2, approved by the Garda Executive and introduced by HQ Directive 030/2021. Supports the policy definition of uniform as items "issued to Garda Personnel to wear for the purpose of carrying out their duties"; that the standards apply to "uniformed and plain-clothes members, and Garda staff"; the three uniform categories (Operational, Dress, Formal); the composition of the Operational Uniform; and the list of PPE and items a member going on duty carries. Read directly as a PDF. Establishes nothing about any other police service, and nothing about how any item is used — the policy is cited for what is issued and under what governance, never for operational practice.',
+  },
+  {
+    id: 'nl-politie-uniform-purpose',
+    type: 'government',
+    title: 'Waarom draagt een politieagent een uniform?',
+    publisher: 'Nationale Politie (Netherlands)',
+    url: 'https://www.politie.nl/informatie/waarom-draagt-een-politieagent-een-uniform.html',
+    accessedOn: '2026-09-06',
+    verifiedOn: '2026-09-06',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'NL',
+    note: 'SCOPE: the Dutch national police, on the stated purpose of the uniform. Supports the three functions the service names for itself: "Zichtbaarheid en herkenbaarheid zijn daarmee de belangrijkste functies van het uniform"; that the uniform signals authority — "Het uniform \u2018zegt\u2019 ook dat de politieagent de autoriteit is op straat. De politieagent vertegenwoordigt het gezag (de overheid)"; and that it also provides protection — "Daarnaast biedt het uniform ook veiligheid en bescherming." A statement of institutional purpose, not a description of any garment specification.',
+  },
+  {
+    id: 'nl-politie-legitimatiebewijs',
+    type: 'government',
+    title: 'Wat is het politielegitimatiebewijs?',
+    publisher: 'Nationale Politie (Netherlands)',
+    url: 'https://www.politie.nl/informatie/wat-is-het-politielegitimatiebewijs.html',
+    accessedOn: '2026-09-06',
+    verifiedOn: '2026-09-06',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'NL',
+    note: 'SCOPE: the Dutch police identification card. Supports what the card contains — "een kaart met de naam, het personeelsnummer en de pasfoto van de politiemedewerker" — that it carries visible and invisible authenticity features with the hologram the most important, and the rule that differs by dress: "Een politiemedewerker in uniform hoeft zich niet uit zichzelf te legitimeren maar als u ernaar vraagt, moet het politielegitimatiebewijs wel getoond worden. Een politiemedewerker in \u2018burgerkleding\u2019 moet wel uit eigen beweging het politielegitimatiebewijs tonen." Cited for the identification duty, never for the security features in any detail that would assist forgery.',
+  },
+  {
+    id: 'us-nij-body-armor-standards',
+    type: 'government',
+    title: 'Body Armor — Performance Standards and Compliance Testing',
+    publisher: 'National Institute of Justice, U.S. Department of Justice',
+    url: 'https://nij.ojp.gov/topics/equipment-and-technology/body-armor/performance-standards-and-compliance-testing',
+    accessedOn: '2026-09-06',
+    verifiedOn: '2026-09-06',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'US',
+    note: 'SCOPE: the United States NIJ standards and compliance-testing programme for body armor. Supports that NIJ "has been setting voluntary body armor standards since 1972", that "the NIJ standard is the only nationally accepted standard for the body armor worn by law enforcement and corrections officers", that the standards are VOLUNTARY, that NIJ "administers a program to test commercially available armor for compliance with the standards", and that a compliant manufacturer "is subject to six follow-up inspections and testing over a five-year period". Cited for the EXISTENCE and governance of an equipment standards regime. No product, model, protection level or purchasing guidance is taken from it, and none appears anywhere in this wave.',
+  },
+  {
+    id: 'us-bjs-local-police-technology-2020',
+    type: 'government',
+    title:
+      'Local Police Departments, Procedures, Policies, and Technology, 2020 — Statistical Tables (NCJ 307405)',
+    publisher: 'Bureau of Justice Statistics, U.S. Department of Justice',
+    url: 'https://bjs.ojp.gov/document/lpdppt20st.pdf',
+    publishedOn: '2023-11',
+    accessedOn: '2026-09-06',
+    verifiedOn: '2026-09-06',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'US',
+    note: 'SCOPE: local police departments in the United States, from the LEMAS survey, 2016 and 2020. Written by Sean E. Goodison and Connor Brooks, November 2023. Supports the body-worn camera adoption figures — 43.1% of local police departments in 2016 rising to 61.8% in 2020, and 73.3% rising to 100.0% among departments serving 1 million or more residents — and that written policy topics surveyed included body-worn cameras. Read directly as a PDF after the summariser could not decode it. Describes adoption and written policy, never capability or configuration.',
+  },
 ];
 
 const SOURCE_INDEX = new Map(SOURCES.map((source) => [source.id, source]));
