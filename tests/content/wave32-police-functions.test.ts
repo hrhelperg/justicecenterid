@@ -147,6 +147,16 @@ describe('the taxonomy is not collapsed', () => {
   const EQUATES = (a: string, b: string) =>
     new RegExp(`\\b${a}\\b[^.]{0,25}\\b(?:is|are|means?|:)\\s+(?:a |an |the )?\\b${b}\\b`, 'i');
 
+  /*
+   * Mutation M1 SURVIVED the first version of this block, and the reason is worth recording.
+   *
+   * The guards were scoped to this wave's six pages. M1 collapsed rank into role on
+   * `rank-role-and-specialisation` — the page that OWNS the distinction — and nothing fired,
+   * because that page was not in the set being checked. A wave-scoped guard on a corpus-wide
+   * invariant protects the newest pages and leaves the load-bearing one exposed.
+   */
+  const TAXONOMY_SCOPE = [...WAVE_32, ...PRIOR_OWNERS, 'how-policing-careers-develop'] as const;
+
   it.each([
     ['rank', 'role'],
     ['role', 'profession'],
@@ -154,7 +164,7 @@ describe('the taxonomy is not collapsed', () => {
     ['assignment', 'rank'],
     ['specialisation', 'promotion'],
   ])('no page equates %s with %s', (a, b) => {
-    for (const slug of WAVE_32) {
+    for (const slug of TAXONOMY_SCOPE) {
       const offenders = asserted(guide(slug)).filter((s) => EQUATES(a, b).test(s));
       expect(offenders, `${slug} equates ${a} with ${b}`).toEqual([]);
     }
@@ -348,9 +358,17 @@ describe('summary, body and list agree with the cited fact', () => {
       g.misconceptions.map((m) => m.reality).join('\n'),
     ].join('\n');
     const offenders = sentences(everywhere).filter(
+      /*
+       * Mutation M4 SURVIVED the first version, which matched "dog handler" but not "dog handling".
+       * The mutation wrote "Dog handling is an entry route you can apply directly to" into the
+       * summary list while the cited paragraph above still carried the five-year precondition — the
+       * contradiction class again, defeated by one missing inflection.
+       */
       (s) =>
-        /\bdog handler|dog section|Dog Unit\b/i.test(s) &&
-        /\b(?:entry route|join directly|apply directly|straight into)\b/i.test(s) &&
+        /\bdog\s+(?:handler|handling|section|unit)\b/i.test(s) &&
+        /\b(?:entry route|join directly|apply directly|straight into|joined directly)\b/i.test(
+          s,
+        ) &&
         !DENIES.test(s),
     );
     expect(offenders, 'the page asserts dog handling is an entry route').toEqual([]);
@@ -403,6 +421,52 @@ describe('summary, body and list agree with the cited fact', () => {
 /* -------------------------------------------------------------------------- */
 /* Ownership, sourcing, linkage, characters                                   */
 /* -------------------------------------------------------------------------- */
+
+describe('a taxonomy collapse stated as a belief is actually corrected', () => {
+  /*
+   * Mutation M16 SURVIVED by rewriting a misconception CLAIM into "The maritime unit is a
+   * profession you can join", leaving beside it a `reality` that answers a different question.
+   * Every guard passed, because `assertedText` deliberately excludes claims — a claim is a belief
+   * being corrected, not something the platform asserts. That exclusion is right, and it left a
+   * hole: a claim nobody corrects is a false statement printed under a heading promising an answer.
+   *
+   * FIRST ATTEMPT, RECORDED BECAUSE IT WAS WRONG. The guard originally required a claim and its
+   * reality to share content words. Measured against the corpus, 20 of 30 existing pairs share
+   * none — because a good correction reframes rather than echoes. "Most police dogs are detection
+   * dogs" is answered by "patrol teams make up ninety per cent of the capability", which is exactly
+   * right and has no vocabulary in common. That guard was measuring prose style, not coherence,
+   * and lowering its threshold until it passed would have made it vacuous.
+   *
+   * What M16 actually did was smuggle a taxonomy collapse into the one field the taxonomy guards
+   * do not read. So the invariant is narrow and real: if a claim states one of the equations this
+   * corpus depends on being false, the reality beside it has to deny it.
+   */
+  const EQUATIONS: [string, string][] = [
+    ['unit', 'profession'],
+    ['rank', 'role'],
+    ['role', 'profession'],
+    ['assignment', 'rank'],
+  ];
+  const DENIAL = /\b(?:not|never|no|neither|nor|rather than|is a body|different)\b/i;
+
+  it.each(WAVE_32)('%s corrects any taxonomy collapse it states as a belief', (slug) => {
+    const uncorrected: string[] = [];
+    for (const m of guide(slug).misconceptions) {
+      for (const [a, b] of EQUATIONS) {
+        const states = new RegExp(
+          `\\b${a}\\b[^.]{0,25}\\b(?:is|are)\\s+(?:a |an |the )?\\b${b}\\b`,
+          'i',
+        );
+        if (states.test(m.claim) && !DENIAL.test(m.reality)) {
+          uncorrected.push(`${m.claim.slice(0, 80)} (${a}/${b})`);
+        }
+      }
+    }
+    expect(uncorrected, `${slug} states a taxonomy collapse its reality does not deny`).toEqual(
+      [],
+    );
+  });
+});
 
 describe('the wave does not re-answer what four pages already own', () => {
   it.each(PRIOR_OWNERS)('%s still exists and keeps its question', (slug) => {
