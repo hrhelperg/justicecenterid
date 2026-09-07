@@ -202,7 +202,7 @@ export const COURTS_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [what courts do](/courts/what-do-courts-do), [why judicial independence matters](/courts/why-judicial-independence-matters), and [what the rule of law is](/justice/what-is-the-rule-of-law).',
+        text: 'Related: [what courts do](/courts/what-do-courts-do), [lay participation in judging](/courts/lay-participation-in-judging), [why judicial independence matters](/courts/why-judicial-independence-matters), and [what the rule of law is](/justice/what-is-the-rule-of-law).',
       },
     ],
   },
@@ -378,7 +378,7 @@ export const COURTS_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [trial and appellate courts](/courts/trial-and-appellate-courts), [supreme courts and final appeal](/courts/supreme-courts-and-final-appeal), and [constitutional courts](/institutions/constitutional-court).',
+        text: 'Related: [trial and appellate courts](/courts/trial-and-appellate-courts), [how a lay court is composed](/courts/how-a-lay-court-is-composed), [supreme courts and final appeal](/courts/supreme-courts-and-final-appeal), and [constitutional courts](/institutions/constitutional-court).',
       },
     ],
   },
@@ -1563,7 +1563,7 @@ export const COURTS_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [judicial independence](/glossary/judicial-independence), [what a judge does](/professions/judge), [how you become a judge](/courts/how-you-become-a-judge), and [why courts matter](/courts/why-courts-matter).',
+        text: 'Related: [judicial independence](/glossary/judicial-independence), [what a judge does](/professions/judge), [how you become a judge](/courts/how-you-become-a-judge), [what a lay judge decides](/courts/what-a-lay-judge-decides), and [why courts matter](/courts/why-courts-matter).',
       },
     ],
   },
@@ -1901,7 +1901,7 @@ export const COURTS_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [court language and interpretation](/courts/court-language-and-interpretation), [representing yourself](/defence/representing-yourself), and [access to justice](/justice/access-to-justice).',
+        text: 'Related: [court language and interpretation](/courts/court-language-and-interpretation), [who may serve on a lay court](/courts/who-may-serve-on-a-lay-court), [representing yourself](/defence/representing-yourself), and [access to justice](/justice/access-to-justice).',
       },
     ],
   },
