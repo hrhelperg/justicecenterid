@@ -5386,6 +5386,81 @@ export const SOURCES: readonly SourceRecord[] = [
     jurisdiction: 'GB',
     note: 'SCOPE: England and Wales, majority verdicts, in the official revised text. NOT the United Kingdom: Scotland and Northern Ireland are not covered. Supports, in the section’s own words, that a county court jury is complete at EIGHT — a verdict may be accepted where "in a case where there is a complete jury of eight in a county court, seven of them agree on the verdict" — and that in the Crown Court or the High Court a verdict may be accepted where there are "not less than eleven jurors" and ten agree, or "ten jurors" and nine agree. CRITICALLY, IT DOES NOT SUPPORT A CROWN COURT JURY SIZE: the section governs when a majority verdict may be taken and states the thresholds for reduced panels; it nowhere states the full complement, so the number a reader expects is still NOT ESTABLISHED by anything this platform has read. Wave 30 left that hole deliberately and this record does not fill it.',
   },
+  /*
+   * WAVE 32 — police functions, described from named services.
+   *
+   * The corpus already says that specialisations exist. /law-enforcement/specialist-roles-in-policing
+   * enumerates ten areas of work and states in its own uncertainty that "which specialisations
+   * exist in any particular service was NOT RESEARCHED ... no service is claimed to have any
+   * specific one", and that how a person ENTERS a specialisation "was not researched for any
+   * system". These sources answer both, for named services, from their own published pages.
+   *
+   * BOUNDARY: every record here is institutional. Each supports what a function is for, where it
+   * sits, and who does it. None supports how any of it is carried out, and no deployment,
+   * handling, patrol or tactical detail is drawn from any of them even where the page contains it.
+   */
+  {
+    id: 'uk-btp-what-makes-us-different',
+    type: 'government',
+    title: 'What makes us different — British Transport Police',
+    publisher: 'British Transport Police',
+    url: 'https://careers.btp.police.uk/about-us/what-makes-us-different/',
+    accessedOn: '2026-09-07',
+    verifiedOn: '2026-09-07',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'GB',
+    note: 'SCOPE: British Transport Police, across England, Wales and Scotland. Supports the force’s own account of what distinguishes it: "We are the only police force in the country with a national footprint, operating across England, Wales and Scotland"; that it polices "over 10,000 miles of railway track and more than 3,000 stations, platforms and transport hubs" together with light rail and tram networks; that "BTP is uniquely positioned under the Department for Transport rather than the Home Office"; and that it is funded primarily by the rail industry rather than directly from the public purse. The citation is used for ONE structural proposition — that a police force can be defined by an estate rather than a territory. DOES NOT SUPPORT any claim about BTP’s powers, its relationship to territorial forces in a specific incident, staffing numbers, or how any of its work is carried out. Establishes nothing about transport policing in any other country.',
+  },
+  {
+    id: 'nz-police-dog-section',
+    type: 'government',
+    title: 'Police Dog Section',
+    publisher: 'New Zealand Police',
+    url: 'https://www.police.govt.nz/about-us/structure/teams-units/dog-section',
+    accessedOn: '2026-09-07',
+    verifiedOn: '2026-09-07',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'NZ',
+    note: 'SCOPE: the Police Dog Section of New Zealand Police. Supports the two-category structure and the balance between them — "Patrol dog teams (previously known as general purpose teams) operate in all dog sections and police districts and make up 90 percent of capability" — that patrol dogs "are mainly used to track and search for people", and that "Detector dog teams are trained to detect narcotics, firearms, currency and explosives". Supports that "All police dogs are trained at the Police Dog Training Centre at Trentham, Upper Hutt, near Wellington". CAREER FINDING, and the reason this record matters beyond the function itself: "All police dog handlers are officers with about five years policing experience behind them before they join the Dog Unit." DELIBERATELY UNUSED: everything the page says or implies about how a dog is deployed, handled, or worked. That is capability, and this platform does not publish it.',
+  },
+  {
+    id: 'nl-politie-wijkagent',
+    type: 'government',
+    title: 'Dit doet een wijkagent',
+    publisher: 'Nationale Politie (Netherlands)',
+    url: 'https://www.politie.nl/informatie/dit-doet-een-wijkagent.html',
+    accessedOn: '2026-09-07',
+    verifiedOn: '2026-09-07',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'NL',
+    translationStatus: 'not-a-translation',
+    authoritativeLanguage: 'nl',
+    note: 'SCOPE: the wijkagent role in the Dutch national police. Supports the service’s own one-sentence characterisation, "De wijkagent is een ervaren politieagent" — the wijkagent is an EXPERIENCED police officer, which is the seniority claim this record is principally cited for. Supports that the wijkagent works within a basisteam alongside surveillanten and rechercheurs; that the role is "een eerste aanspreekpunt in de wijk en een bekend gezicht"; that the officer refers matters that are not police business to hulpverlening or other organisations such as neighbourhood mediation; and that they meet regularly with the municipality and housing associations. TENSION TO PRESERVE, not resolve: the corpus separately records that the Politieacademie runs a three-year hbo bachelor Politiekunde Wijkagent as an entry programme. How a dedicated entry degree and a role described as held by an experienced officer fit together was NOT ESTABLISHED, and no reconciliation is asserted anywhere.',
+  },
+  {
+    id: 'nz-police-maritime-units',
+    type: 'government',
+    title: 'Maritime Units',
+    publisher: 'New Zealand Police',
+    url: 'https://www.police.govt.nz/about-us/structure/teams-units/maritime-units',
+    accessedOn: '2026-09-07',
+    verifiedOn: '2026-09-07',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'NZ',
+    note: 'SCOPE: the two Police Maritime Units of New Zealand Police, in Auckland and Wellington. Supports the categories of activity in the service’s own words — "crime and disorder - attending, investigating and reporting offences, apprehending offenders"; "protecting boaties from water-based dangers, crime and reckless behaviour"; search and rescue; "public events - overseeing aquatic events and controlling spectator craft"; and "body recovery, medical emergencies and other activities". Supports that the units conduct joint enforcement patrols with Customs, the Ministry for Primary Industries, Immigration, the Department of Conservation, Maritime New Zealand, the Ministry of Transport and regional councils; and that they support other police functions including the National Dive Squad, and transport police by sea to remote locations. DELIBERATELY UNUSED: the page also gives berth locations and unit staffing composition. Neither is published here — the first because precise operational siting is outside what this platform publishes, the second because one unit’s establishment does not describe the function.',
+  },
+  {
+    id: 'nz-police-search-and-rescue',
+    type: 'government',
+    title: 'Search and Rescue',
+    publisher: 'New Zealand Police',
+    url: 'https://www.police.govt.nz/about-us/structure/teams-units/search-rescue',
+    accessedOn: '2026-09-07',
+    verifiedOn: '2026-09-07',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'NZ',
+    note: 'SCOPE: the search and rescue responsibility of New Zealand Police. Supports the division that is the point of the citation: "Police coordinates Category One searches (land, inland waterways, subterranean and close-to-shore)", while Category Two searches — aircraft, offshore, and emergency locator beacons — are coordinated by the Rescue Coordination Centre New Zealand and NOT by Police. Supports that Police manages nearly 2,000 land and marine search and rescue incidents each year; that officers in each district are trained as search and rescue coordinators; and that the work runs through partner and volunteer organisations including Coastguard New Zealand, the New Zealand Defence Force, rescue helicopter services, Amateur Radio Emergency Communications and New Zealand Land Search and Rescue. The record is cited for COORDINATION as an institutional role. It establishes nothing about how any search is conducted.',
+  },
 ];
 
 const SOURCE_INDEX = new Map(SOURCES.map((source) => [source.id, source]));
