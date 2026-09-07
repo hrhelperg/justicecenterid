@@ -188,15 +188,43 @@ describe('system-specific roles are not flattened', () => {
     );
   });
 
-  it('Austria keeps the split that breaks the tidy story', () => {
+  it('Austria keeps the split that breaks the tidy story, in every part that states it', () => {
     /*
      * Geschworene are a separate body AND share the sentencing decision. If an
      * edit tidies that into "the jury decides guilt and the judges sentence",
      * the definition becomes neater than the evidence.
+     *
+     * A first version of this guard searched the page's whole text and a
+     * mutation survived it: flattening the Austrian country example left the
+     * same two phrases standing in `context`, so the union matched and the
+     * contradiction shipped. That is precisely the Wave 29/30 failure — one
+     * part of a page correct, another saying the opposite — so the guard now
+     * checks each part that mentions the Geschworene on its own, and asserts
+     * the flattened form appears nowhere.
      */
-    const t = allText(term('jury'));
-    expect(t).toMatch(/guilt alone/i);
-    expect(t).toMatch(/sentence[^.]{0,80}together with the professional judges/i);
+    const jury = term('jury');
+    const parts: { where: string; text: string }[] = [
+      { where: 'context', text: jury.context ?? '' },
+      ...(jury.countryExamples ?? []).map((e) => ({
+        where: `example:${e.countrySlug}`,
+        text: e.note,
+      })),
+    ];
+    const mentioning = parts.filter((p) => /Geschworen(e|en)/i.test(p.text));
+    expect(mentioning.length, 'nothing mentions the Geschworene at all').toBeGreaterThan(1);
+
+    for (const p of mentioning) {
+      expect(p.text, `${p.where} drops that guilt is decided alone`).toMatch(/guilt alone/i);
+      expect(p.text, `${p.where} drops the shared sentencing decision`).toMatch(
+        /sentence[^.]{0,100}(?:together with|with) the professional judges/i,
+      );
+    }
+
+    const FLATTENED =
+      /Geschworene decide guilt and the professional judges (?:set|fix|decide)|decide guilt[^.]{0,40}judges (?:alone )?(?:set|fix|impose) the sentence/i;
+    for (const p of parts) {
+      expect(FLATTENED.test(p.text), `${p.where} states the flattened version`).toBe(false);
+    }
   });
 });
 
