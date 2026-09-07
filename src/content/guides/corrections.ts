@@ -3167,4 +3167,190 @@ export const CORRECTIONS_GUIDES: readonly Guide[] = [
       },
     ],
   },
+  {
+    slug: 'entering-prison-work-as-a-career',
+    title: 'Entering prison work as a career',
+    shortTitle: 'Entering prison work',
+    question:
+      'What does a prison service actually require of someone who wants to work in a prison?',
+    summary:
+      'One service publishes no academic requirement at all, and instead assesses values, judgement in scenarios, and physical capacity. The absence is the finding: it says what the service believes the work depends on.',
+    entityType: 'concept',
+    section: 'corrections',
+    jurisdiction: ['GB'],
+    temporalScope: 'current',
+    related: [
+      'who-runs-prisons',
+      'who-inspects-a-prison',
+      'what-reintegration-means',
+      'what-qualifying-as-a-lawyer-requires',
+    ],
+    sources: ['ew-hmpps-prison-officer-apply'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-07',
+    publishedOn: '2026-09-07',
+    reviewedOn: '2026-09-07',
+    factsVerifiedOn: '2026-09-07',
+    readingTimeMinutes: 6,
+    uncertainty: [
+      'One service was researched — the prison service of England and Wales. What any other country requires was NOT RESEARCHED.',
+      'The source states NO academic qualification requirement. That is reported here as an absence in the published criteria, and is NOT a finding that qualifications are irrelevant, nor that none is applied at any later stage.',
+      'What the training after appointment consists of, how long it lasts and what it covers were NOT RESEARCHED.',
+      'Probation is a separate service and a separate question, and is NOT described here. Pay is published and deliberately not reproduced.',
+      'Retention, turnover, staffing levels and working conditions were NOT RESEARCHED. This page describes entry criteria only.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'A prison is staffed continuously by people whose work is neither policing nor social work and is rarely described as a profession at all. What a service asks of them at the point of entry is a published fact, and it turns out to be an unusually direct statement of what the service thinks the job consists of.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This describes published entry criteria for one role in one service. It is not a recruitment page, it describes no application step, and this platform is not affiliated with any prison service and accepts no applications. Nothing here describes how a prison operates internally, what any procedure is, or anything about security arrangements.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'Custody is the part of a justice system that runs every hour of every day, and it is delivered almost entirely through relationships between staff and prisoners rather than through decisions in the legal sense. A service recruiting for that has to select for something other than legal knowledge, and its published criteria are where it says what.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'And what a service omits is as informative as what it asks',
+        text: 'A published criterion that is absent was decided against. Where a service assesses values and scenario judgement while stating no academic threshold, it has expressed a view about what predicts competence in the role — not an oversight, and not an invitation to conclude that education is irrelevant.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'The published conditions for the prison officer role in England and Wales are a minimum age — "you will need to be at least 18 years old when you start your new role" — the right to work in the United Kingdom, and, for the highest security category of establishment, that "you must have been resident in the UK for the last 3 years".',
+        claim: 'fact',
+        sources: ['ew-hmpps-prison-officer-apply'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'The residency condition attaches to the establishment, not the person',
+        text: 'It applies to work in a category A prison rather than to the role in general. A condition that varies by posting is a vetting requirement expressed as an entry criterion, and reading it as a universal rule would overstate it.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Assessment runs in stages: a scenario-based test, a values-based assessment, an online assessment centre containing an interview, a role play and a written test, pre-employment checks, and medical and fitness testing. The service states that "you will need to pass a medical and fitness assessment as part of the application process".',
+        claim: 'fact',
+        sources: ['ew-hmpps-prison-officer-apply'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Scenarios and values, assessed before anything else',
+        text: 'The first two stages test how a candidate reasons about a situation and what they bring to it, ahead of any interview. Placing them first says the service treats those as the threshold qualities rather than as refinements applied to an otherwise qualified applicant.',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'No academic threshold is published',
+            description:
+              'The criteria state an age, a right to work, and a residency condition for one category of establishment. No qualification requirement appears among them, and none is claimed here.',
+          },
+          {
+            term: 'Physical capacity is a stated requirement',
+            description:
+              'Medical and fitness assessment is part of the published process rather than a formality after selection, which distinguishes this role from most of the justice professions.',
+          },
+          {
+            term: 'Judgement is assessed by scenario',
+            description:
+              'A scenario-based test and a role play both present a situation rather than a question. They assess a response, which is the closest an assessment gets to the work itself.',
+          },
+          {
+            term: 'Values are assessed as a separate stage',
+            description:
+              'The values-based assessment is its own step, not a section of the interview. Separating it makes it a threshold rather than one factor weighed against others.',
+          },
+          {
+            term: 'And the comparison with the legal professions is the point',
+            description:
+              'A route requiring a degree, central assessments and two years of supervised work, and a route requiring none of them, staff the same justice system. Neither is the serious one.',
+          },
+        ],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Prison work requires no selection to speak of.',
+        reality:
+          'The published process runs a scenario test, a values assessment, an assessment centre containing an interview, a role play and a written test, pre-employment checks, and medical and fitness testing.',
+      },
+      {
+        claim:
+          'A published absence of qualification requirements means qualifications do not matter.',
+        reality:
+          'It means the criteria state none. Whether qualifications are considered elsewhere in a process, or matter to progression, was not researched, and no conclusion about their value is drawn here.',
+      },
+      {
+        claim: 'The residency condition applies to everyone who applies.',
+        reality:
+          'It is published for work in the highest security category of establishment. Conditions that vary by posting are not requirements of the role in general.',
+      },
+      {
+        claim: 'Prison officers and police officers are recruited the same way.',
+        reality:
+          'They are separate services with separate published criteria. The corpus describes police entry requirements separately, and nothing about one establishes anything about the other.',
+      },
+      {
+        claim: 'This page describes what prison work is like.',
+        reality:
+          'It describes published entry criteria for one role in one service. Training, working conditions, retention and what the job involves day to day were not researched.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'One service, as it publishes itself.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'At least 18 years old on starting, and the right to work in the United Kingdom.',
+          'Three years of UK residency for the highest security category of establishment only.',
+          'Scenario-based test, then values-based assessment, then an assessment centre.',
+          'Medical and fitness assessment as part of the process, not after it.',
+          'No published academic qualification requirement.',
+          'Not researched: every other country, probation, training after appointment, and pay.',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'Scope',
+        text: 'The prison service of England and Wales. Scotland and Northern Ireland run separate services and are not described. Nothing here establishes what any other country requires.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'Who a service is willing to employ in custody is an accountability question, because the people selected hold continuous authority over others in a closed environment where oversight arrives periodically rather than continuously. Publishing the criteria makes the selection examinable; assessing values and judgement before anything else is a statement about what the service believes protects prisoners, and it can be judged against what inspection later finds.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'Who is responsible for prisons as institutions is [who runs prisons](/corrections/who-runs-prisons). Who examines them from outside is [who inspects a prison](/corrections/who-inspects-a-prison). How a prisoner raises a concern about treatment is [how a prisoner raises a complaint](/corrections/how-a-prisoner-raises-a-complaint).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [who runs prisons](/corrections/who-runs-prisons), [who inspects a prison](/corrections/who-inspects-a-prison), and [what reintegration means](/corrections/what-reintegration-means).',
+      },
+    ],
+  },
 ];

@@ -3206,4 +3206,236 @@ export const COURTS_GUIDES: readonly Guide[] = [
       },
     ],
   },
+  /*
+   * WAVE 28 — how the justice professions are entered.
+   *
+   * The corpus recorded this gap against itself in three places before this page existed: the
+   * judge profession record carries a trainingRouteShape that is structural only and names no
+   * country; the defence-lawyer record states that "qualification routes were not researched for
+   * any country"; and /defence/who-may-act-as-a-lawyer says in its own scope callout that it
+   * "does not describe qualification routes". This page and its four siblings answer the question
+   * those three deferred, from official sources, in named systems.
+   *
+   * BOUNDARY against the profession records, which is the cannibalisation risk here: a profession
+   * record describes the SHAPE of a route without naming a country, deliberately. These guides
+   * describe what two named systems actually publish. A guide that stopped naming countries would
+   * be duplicating the record above it.
+   *
+   * BOUNDARY against commerce, which is sharper in this cluster than in any before it. Legal
+   * qualification is surrounded by a preparation market — courses, tutoring, application
+   * coaching — in a way police recruitment is not. No provider is named anywhere in this wave,
+   * no route is recommended, and no published fee, salary or award figure is reproduced.
+   */
+  {
+    slug: 'how-you-become-a-judge',
+    title: 'How you become a judge',
+    shortTitle: 'Becoming a judge',
+    question:
+      'Do you become a judge by being appointed after a long career, or by passing an examination and training for the job?',
+    summary:
+      'Both, depending on the country. One model recruits by competitive examination and then trains for 31 months; the other appoints from legal practice and asks for five to seven years of it first. They are answering different questions about the same office.',
+    entityType: 'concept',
+    section: 'courts',
+    jurisdiction: ['FR', 'GB'],
+    temporalScope: 'current',
+    related: [
+      'why-judicial-independence-matters',
+      'who-runs-the-courts',
+      'judges-and-prosecutors-one-career-or-two',
+      'the-supervised-stage-in-legal-qualification',
+    ],
+    sources: [
+      'fr-lajusticerecrute-magistrat',
+      'fr-enm-concours-professionnel',
+      'ew-jac-check-eligible',
+      'ew-jac-selection-process',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-07',
+    publishedOn: '2026-09-07',
+    reviewedOn: '2026-09-07',
+    factsVerifiedOn: '2026-09-07',
+    readingTimeMinutes: 8,
+    uncertainty: [
+      'Two systems were researched — France and England and Wales. How any third country appoints or recruits judges was NOT RESEARCHED, and both models below have variants this page does not describe.',
+      'Success rates, application numbers, and the actual composition of either judiciary were NOT RESEARCHED and are not described.',
+      'The English and Welsh material covers appointments made through the Judicial Appointments Commission up to and including the High Court. Appointments above that level were NOT RESEARCHED.',
+      'What either selection process is like to go through, and how candidates prepare for it, are outside this page entirely. No preparation route, course or provider is named or implied.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'There are two established ways of filling a judicial office, and the difference is not a detail of administration. In one, judging is a career you enter near the start of a working life, by competitive examination, followed by a long period of dedicated training. In the other, judging is an office you are appointed to after establishing yourself in legal practice, and the appointment tests what you have already done.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This describes what two systems publish about entry to judicial office. It is not careers advice, it does not recommend a route, and it names no preparation course, coaching service or provider. Whether either route is open at any moment, and on what terms, is a matter for the official bodies named here — this platform is not affiliated with any of them and accepts no applications.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'Any system that gives a person the power to decide cases has to answer one question first: how do you know they can do it? There are only two honest answers. You can select for demonstrated capability, which means waiting until there is a record to examine. Or you can select for capacity and then build the capability yourself, which means testing early and training at length. Every judicial entry route is a version of one of those two answers.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Which is why the two models disagree about age without ever discussing it',
+        text: 'A system that trains its own judges needs them early enough for the training to be worth the investment. A system that appoints from practice needs them late enough to have a practice worth examining. Neither states a philosophy of judging; both state a threshold, and the thresholds point in opposite directions.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'France recruits judges and prosecutors together by competitive examination. The main route is open to holders of "un diplôme de niveau bac +4 ou équivalent"; a second route is open to public servants "exerçant depuis au moins quatre ans"; a third requires "au moins quatre années" of professional activity in a legal, administrative, economic or social field, or a doctorate in law. Those who succeed hold the status of auditeur de justice and train for 31 months, across Bordeaux and Paris.',
+        claim: 'fact',
+        sources: ['fr-lajusticerecrute-magistrat'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Thirty-one months is the number worth pausing on',
+        text: 'It is longer than most professional inductions of any kind, and it is what the first model buys with its early entry. The examination establishes that someone can be trained; the training is what actually produces a judge, and the system is explicit that this is a school.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The same country runs a separate mid-career route. It requires a "diplôme de niveau Bac + 4" and that the candidate be "âgé de moins de 57 ans au 1er janvier de l’année du concours", with experience thresholds that differ by prior profession — five years for lawyers, seven for other qualified private-sector professionals, five for greffiers, three for attachés de justice. Its training runs 12 months rather than 31.',
+        claim: 'fact',
+        sources: ['fr-enm-concours-professionnel'],
+      },
+      {
+        kind: 'callout',
+        variant: 'uncertainty',
+        title: 'Two durations, two routes, and they must not be merged',
+        text: 'The 31 months belong to the initial route and the 12 months to the mid-career one. A reader who takes either figure as the training a French judge receives will be wrong about the other. The shorter programme sits on top of years of prior professional practice; the longer one does not assume any.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'England and Wales appoints instead. Selection runs through the Judicial Appointments Commission, which requires a candidate to be "a citizen of the UK, Republic of Ireland or another Commonwealth country at the time of application", to hold a relevant legal qualification, and to have post-qualification experience — "Seven years of post-qualification experience (PQE) for Upper Tribunal, Circuit Judge and more senior positions" and "Five years of post-qualification experience (PQE) for most other legal roles". The Commission is "required by statute to select only persons of ‘good character’".',
+        claim: 'fact',
+        sources: ['ew-jac-check-eligible'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'And the experience has to have been real',
+        text: 'The published condition is not merely that years have passed since qualifying. A candidate must have spent "at least 20% of each year doing law-related activity" since the qualification. The percentage exists because a bare count of years would let a qualification earned once and unused stand in for a practice.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Selection itself is "a 3-stage selection process": an application with a self-assessment and nominated independent assessors; a shortlisting stage which may use a name-blind sift or an online test; and a selection day using role play and interview. The Selection and Character Committee "considers each candidate in order of merit and recommends candidates for appointment" to the Lady Chief Justice, the Senior President of Tribunals or the Lord Chancellor. The process "varies and can take over a year".',
+        claim: 'fact',
+        sources: ['ew-jac-selection-process'],
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'A career judiciary is entered, not reached',
+            description:
+              'Where judging is a career, the examination is the entrance to it. There is no expectation of a prior career at the bar, because the school supplies what practice would otherwise have supplied.',
+          },
+          {
+            term: 'An appointed judiciary is reached, not entered',
+            description:
+              'Where judges are appointed from practice, the qualifying period is the training. Nobody teaches the appointee to be a lawyer, because the appointment is evidence that somebody already did.',
+          },
+          {
+            term: 'Both models test character, by different instruments',
+            description:
+              'One does it through a statutory good-character condition assessed at appointment. The other does it through a long training in which a trainee is observed continuously. The question is the same; the moment it is asked is not.',
+          },
+          {
+            term: 'Merit is asserted in both, and measured differently',
+            description:
+              'Recommending candidates "in order of merit" presumes a comparable record to rank. A competitive examination produces a rank directly. Neither method escapes the difficulty of saying what merit in a judge consists of.',
+          },
+          {
+            term: 'And neither model is the beginner’s version',
+            description:
+              'The examination route is sometimes read as an easier entrance because it comes earlier. It is followed by 31 months of training; the appointment route asks for five to seven years of practice. Both are long. They spend the time in different places.',
+          },
+        ],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Judges are always former practising lawyers who were promoted.',
+        reality:
+          'In one of the two systems researched, the main route in is a competitive examination open to holders of a four-year degree, followed by 31 months of training. There is no promotion, because there was no prior practice to be promoted from.',
+      },
+      {
+        claim: 'Becoming a judge is the top of a legal career everywhere.',
+        reality:
+          'Where a career judiciary exists it is an entry rather than a summit, and a person may hold judicial office from early in a working life. The idea of judging as a capstone belongs to the appointment model, not to both.',
+      },
+      {
+        claim: 'An examination route means less preparation than an appointment route.',
+        reality:
+          'The examination is followed by 31 months of paid training in one system. The appointment route requires five to seven years of post-qualification experience in the other. Both are substantial; they place the time before or after entry.',
+      },
+      {
+        claim: 'Judicial selection is a job interview.',
+        reality:
+          'The published English and Welsh process runs three stages, may use a name-blind sift, uses role play as well as interview, and can take over a year before a committee recommends candidates in order of merit to a senior office-holder.',
+      },
+      {
+        claim: 'Any qualified lawyer with enough years can be considered.',
+        reality:
+          'The published condition requires at least 20% of each year to have been spent on law-related activity since qualifying, alongside a citizenship condition and a statutory good-character requirement. Elapsed time on its own does not satisfy it.',
+      },
+      {
+        claim: 'This page can tell you how to become a judge where you live.',
+        reality:
+          'It cannot. Two systems were researched, and the routes described belong to them. Nothing here establishes what any third country requires, and no route is recommended.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Two systems, as they publish themselves.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Competitive examination, then 31 months of training as an auditeur de justice — France, initial route.',
+          'A four-year degree for the main route; four years of public service or professional activity for the others — France.',
+          'A separate mid-career route with an upper age condition and 12 months of training — France.',
+          'Appointment from legal practice, with five or seven years of post-qualification experience — England and Wales.',
+          'A three-stage selection that can take over a year, ending in a recommendation in order of merit — England and Wales.',
+          'Not researched: every other country, and appointments above the High Court.',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'Why these two',
+        text: 'They are the clearest published instances of the two models, not a representative sample. A country that resembles neither is not an exception to a rule stated here, because no rule is stated here.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'How judges are chosen is an independence question before it is a careers question. A judiciary trained by a state school and a judiciary drawn from an independent profession are exposed to different risks: the first to the charge that it is formed by the executive that funds it, the second to the charge that it reproduces whoever the profession already contained. Publishing the criteria is what allows either charge to be examined rather than merely asserted.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'Why the office needs protecting at all is [why judicial independence matters](/courts/why-judicial-independence-matters). Who administers a court system, as distinct from who judges in it, is [who runs the courts](/courts/who-runs-the-courts). Whether judges and prosecutors form one profession or two is [judges and prosecutors: one career or two](/prosecution/judges-and-prosecutors-one-career-or-two).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [judges and prosecutors: one career or two](/prosecution/judges-and-prosecutors-one-career-or-two), [what qualifying as a lawyer requires](/defence/what-qualifying-as-a-lawyer-requires), and [why judicial independence matters](/courts/why-judicial-independence-matters).',
+      },
+    ],
+  },
 ];

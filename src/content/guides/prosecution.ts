@@ -1510,4 +1510,205 @@ export const PROSECUTION_GUIDES: readonly Guide[] = [
       },
     ],
   },
+  {
+    slug: 'judges-and-prosecutors-one-career-or-two',
+    title: 'Judges and prosecutors: one career or two',
+    shortTitle: 'One career or two',
+    question: 'Are judges and prosecutors the same profession, entered the same way?',
+    summary:
+      'In France they are one corps, recruited by one examination, and an organic law states that every magistrat has a vocation to serve in both functions during a career. In England and Wales they are separate professions, and a prosecutor is an employed lawyer.',
+    entityType: 'concept',
+    section: 'prosecution',
+    jurisdiction: ['FR', 'GB'],
+    temporalScope: 'current',
+    related: [
+      'why-prosecutorial-independence-matters',
+      'how-prosecution-systems-are-organised',
+      'how-you-become-a-judge',
+      'prosecutorial-objectivity',
+    ],
+    sources: [
+      'fr-ordonnance-58-1270-statut-magistrature',
+      'fr-lajusticerecrute-magistrat',
+      'ew-cps-prosecutor-role',
+      'ew-cps-legal-trainee-scheme',
+      'ew-jac-check-eligible',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-07',
+    publishedOn: '2026-09-07',
+    reviewedOn: '2026-09-07',
+    factsVerifiedOn: '2026-09-07',
+    readingTimeMinutes: 7,
+    uncertainty: [
+      'Two systems were researched. Whether any third country organises the two functions as one corps or two was NOT RESEARCHED.',
+      'How often a French magistrat actually moves between siège and parquet during a career was NOT ESTABLISHED. The organic law states a vocation to be appointed to both; it does not state a frequency, and none is claimed here.',
+      'The English and Welsh prosecution source states NO qualification threshold, no required years of experience and no examination. Its absence is reported as absence, and nothing here describes what that system requires of a prosecutor.',
+      'How either arrangement affects the independence of prosecution decisions in practice was NOT RESEARCHED. This page describes career structure, not the exercise of prosecutorial judgement.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Whether the person who prosecutes and the person who judges belong to the same profession is a structural question with consequences that run through a whole system. Two answers exist. In one, they are a single body entered by a single examination, and a career may pass through both roles. In the other, they are separate occupations that happen to work in the same buildings.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This describes how two systems constitute the two functions as careers. It does not describe how charging decisions are made, how any prosecutor exercises judgement, or how independence operates in any case — and it is not a route into either profession.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'The two functions share a great deal: the same law, the same courtroom, the same evidence, and a shared professional formation is an efficient way to produce both. They also differ in the one respect that matters most, which is that one decides and the other asks. A system has to choose which of those facts to build its careers around, and the choice is visible in whether there is one entrance or two.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'And the choice relocates the independence problem rather than solving it',
+        text: 'Where the two are one corps, the question becomes whether a body that supplies both can guarantee that the judging half is independent of the prosecuting half. Where they are separate, it becomes whether an employed prosecutor is independent of an employer. Neither arrangement escapes the question; each meets a different version of it.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'France answers in an organic law. The corps judiciaire comprises the magistrats du siège and du parquet of the Cour de cassation, the cours d’appel and the tribunaux, together with the auditeurs de justice — and the same article provides: "Tout magistrat a vocation à être nommé, au cours de sa carrière, à des fonctions du siège et du parquet."',
+        claim: 'fact',
+        sources: ['fr-ordonnance-58-1270-statut-magistrature'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'That sentence is the whole architecture in one line',
+        text: 'It does not say the two functions cooperate, or that movement between them is permitted. It says every magistrat has a vocation to be appointed to both. Belonging to one body is the starting position, and the division into bench and prosecution is a division of function inside it.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The recruitment follows from the constitution of the corps: the same examination routes lead to the same school, and successful candidates enter as auditeurs de justice before being appointed to a function. Entry does not require choosing between judging and prosecuting, because entry is to the corps rather than to either role.',
+        claim: 'fact',
+        sources: ['fr-lajusticerecrute-magistrat'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'England and Wales does not have this structure. Judicial office is reached by appointment through a commission that requires a legal qualification and five to seven years of post-qualification experience. A Crown Prosecutor, by contrast, is an employed lawyer: the service describes annual leave, a contributory pension and an internal lawyer training programme. There is no shared entrance, because there is no shared body to enter.',
+        claim: 'fact',
+        sources: ['ew-jac-check-eligible', 'ew-cps-prosecutor-role'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'The same service does run a structured entry scheme, addressed to "a graduate with a law degree and a Legal Practice Course (LPC) or Bar Practice Course (BPC) qualification looking to become a fully qualified solicitor or barrister", and completion carries a guaranteed role. It leads to qualification as a solicitor or barrister — the general professions — rather than to membership of anything resembling a corps.',
+        claim: 'fact',
+        sources: ['ew-cps-legal-trainee-scheme'],
+      },
+      {
+        kind: 'callout',
+        variant: 'uncertainty',
+        title: 'A route that exists is not a route that is open',
+        text: 'At the time this was checked the scheme stated that applications were closed. It is described here as part of how the service is structured, never as an opportunity — the distinction the corpus draws at [when a recruitment requirement is campaign-specific](/law-enforcement/when-a-recruitment-requirement-is-campaign-specific).',
+      },
+      {
+        kind: 'callout',
+        variant: 'uncertainty',
+        title: 'What the prosecution source does not say, stated plainly',
+        text: 'It sets out no qualification threshold, no minimum years and no examination, asking instead whether the reader is "a highly trained lawyer" without defining the phrase. That absence is why this page describes the employment relationship and stops there, rather than presenting a requirement the source never states.',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'One corps means one entrance',
+            description:
+              'Where the two functions form a single body, the examination admits to the body and the function is an assignment within it. Nobody sits a prosecutor examination, because no such examination exists.',
+          },
+          {
+            term: 'Two professions mean two labour markets',
+            description:
+              'Where the functions are separate, one is an office filled by appointment and the other is a job filled by employment. They compete for people from the same qualified pool without any structural connection.',
+          },
+          {
+            term: 'Movement is a career step in one and a career change in the other',
+            description:
+              'Being appointed from prosecution to the bench is, in the first arrangement, an expected part of a career governed by the same statute. In the second it means applying to a commission as any other qualified lawyer would.',
+          },
+          {
+            term: 'The employment relationship is the tell',
+            description:
+              'Pension terms and leave entitlement are ordinary employment facts, and they say something structural: a person on those terms holds a job in an organisation, whatever the constitutional description of the function.',
+          },
+          {
+            term: 'And neither arrangement settles independence by itself',
+            description:
+              'The corpus treats prosecutorial independence as its own question, because the answer does not follow from the career structure. Both arrangements are compatible with strong and with weak protections.',
+          },
+        ],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Judges and prosecutors are always separate professions.',
+        reality:
+          'One organic law researched here constitutes them as a single corps and provides that every magistrat has a vocation to be appointed, during a career, to functions of both the bench and the prosecution.',
+      },
+      {
+        claim: 'Where they form one body, a prosecutor can simply decide to become a judge.',
+        reality:
+          'The provision states a vocation to be appointed to both functions. Appointment is still appointment, and this page establishes nothing about how it is decided or how often it happens.',
+      },
+      {
+        claim: 'A prosecutor is a kind of civil servant everywhere.',
+        reality:
+          'In one system researched, a prosecutor is an employed lawyer on ordinary employment terms. In the other, prosecutors belong to the same judicial corps as judges. The two are not the same relationship to the state.',
+      },
+      {
+        claim: 'One shared profession means prosecution is not independent.',
+        reality:
+          'Career structure and independence are separate questions, and the corpus treats the second one separately. Neither arrangement guarantees or precludes independence on its own.',
+      },
+      {
+        claim: 'This page describes what it takes to become a prosecutor.',
+        reality:
+          'For one system it describes entry to a corps. For the other the official source states no qualification threshold at all, so nothing is claimed. The absence of a stated requirement is not a finding that none exists.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'The two arrangements, as each system states them.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'A single corps judiciaire comprising bench and prosecution magistrats, together with trainees — France.',
+          'Every magistrat has a vocation to be appointed to functions of both during a career — France, organic law.',
+          'One set of examination routes, one school, entry as auditeur de justice — France.',
+          'Judicial office by appointment on five to seven years of post-qualification experience — England and Wales.',
+          'Prosecutors employed on ordinary employment terms, with no shared entrance to judicial office — England and Wales.',
+          'Not researched: how often movement between the two French functions occurs, and every other country.',
+        ],
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'The structure matters to a defendant, not only to a career. A system in which the prosecuting magistrat and the judging magistrat trained together and may exchange roles has to work harder to demonstrate that the second is not disposed towards the first; a system of employed prosecutors has to work harder to demonstrate that charging decisions are not directed from above. Publishing the arrangement is what makes the relevant question askable in each case.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'Why the independence question exists at all is [why prosecutorial independence matters](/prosecution/why-prosecutorial-independence-matters). How services are structured is [how prosecution systems are organised](/prosecution/how-prosecution-systems-are-organised). The judicial half of the entry question is [how you become a judge](/courts/how-you-become-a-judge).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [how you become a judge](/courts/how-you-become-a-judge), [why prosecutorial independence matters](/prosecution/why-prosecutorial-independence-matters), and [prosecutorial objectivity](/prosecution/prosecutorial-objectivity).',
+      },
+    ],
+  },
 ];

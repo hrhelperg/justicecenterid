@@ -166,7 +166,20 @@ describe('Wave 17 routes exist and Wave 13 is untouched', () => {
 
   it('is not vacuous — seven routes were added to a section that had twelve', () => {
     expect(WAVE_17.length).toBe(7);
-    expect(CORRECTIONS_GUIDES.length).toBe(WAVE_13.length + WAVE_17.length);
+    /*
+     * This asserted equality until Wave 28 added a corrections guide and broke it. The equality
+     * was a closed-world claim — that /corrections contains these two waves and nothing else —
+     * which is false the moment any later wave contributes to the section, and it says nothing
+     * about whether THIS wave landed. What the check is for is non-vacuity, so it now asserts
+     * that both cohorts are fully present and that the section is at least their sum.
+     */
+    for (const slug of [...WAVE_13, ...WAVE_17]) {
+      expect(
+        CORRECTIONS_GUIDES.some((g) => g.slug === slug),
+        `${slug} is missing from /corrections`,
+      ).toBe(true);
+    }
+    expect(CORRECTIONS_GUIDES.length).toBeGreaterThanOrEqual(WAVE_13.length + WAVE_17.length);
   });
 });
 

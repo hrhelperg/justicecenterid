@@ -5080,6 +5080,142 @@ export const SOURCES: readonly SourceRecord[] = [
     jurisdiction: 'NL',
     note: 'SCOPE: the categories of vehicle the Dutch police describe. Supports that the police car and van are the ordinary vehicles used for surveillance, responding to 112 calls and traffic checks; that motorcycles are used mainly on motorways and roads outside built-up areas; that the helicopter provides air support to regional units; and that training vehicles are identifiable by secondary blue-and-white striping and the inscription "trainingsvoertuig". The page ALSO describes operational uses of a rapid-intervention vehicle including pursuit and interception; that material is deliberately NOT used, because it describes capability rather than category.',
   },
+  /*
+   * WAVE 28 â how the justice professions are entered.
+   *
+   * Every source here is INSTITUTIONAL: who may apply, what a system requires, what a training
+   * stage consists of, and who decides. None is a course provider, a preparation service, a
+   * tutoring company, a recruiter or a rankings page. That boundary is sharper here than in any
+   * previous wave, because legal qualification is surrounded by a large commercial preparation
+   * market in a way that police recruitment is not. A guide that named a provider would be
+   * advertising, whatever the sentence around it said.
+   *
+   * Two systems only — France and England and Wales — chosen because they are the clearest
+   * published instances of the two structural models, not because they are representative.
+   * Published pay, pupillage awards and trainee salaries are deliberately not reproduced, on the
+   * precedent set for Czech recruitment in Wave 25.5.
+   */
+  {
+    id: 'fr-enm-concours-professionnel',
+    type: 'government',
+    title: 'Concours professionnel — reconversion vers la magistrature',
+    publisher: 'École nationale de la magistrature (ENM)',
+    url: 'https://www.enm.justice.fr/reconversion-concours-professionnel',
+    accessedOn: '2026-09-07',
+    verifiedOn: '2026-09-07',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'FR',
+    note: 'SCOPE: the concours professionnel only — the mid-career route into the French magistrature, NOT the main student concours. Supports the shared conditions "Être titulaire d’un diplôme de niveau Bac + 4" and "Être âgé de moins de 57 ans au 1er janvier de l’année du concours", and the experience thresholds that differ by prior profession: 5 years minimum for lawyers and 10 for the second grade; 7 years for other qualified private-sector professionals and 15 for the second grade; 5 years for greffiers; 3 years for attachés de justice; and for holders of a doctorate in law, 5 years of teaching or research. Supports "12 mois de formation rémunérée" for THIS route, which is not the 31 months the initial route runs — the two figures describe different entries and must never be merged. Establishes nothing about the premier, deuxième or troisième concours, and nothing about any other country.',
+  },
+  {
+    id: 'fr-lajusticerecrute-magistrat',
+    type: 'government',
+    title: 'Magistrat / magistrate — fiche métier',
+    publisher: 'Ministère de la Justice (La Justice recrute)',
+    url: 'https://lajusticerecrute.fr/metiers/magistrat-magistrate',
+    accessedOn: '2026-09-07',
+    verifiedOn: '2026-09-07',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'FR',
+    note: 'PROVENANCE, stated because the host is not a .gouv.fr domain: this page was reached by a 301 redirect from metiers.justice.gouv.fr, the ministry’s former careers estate, which is what establishes lajusticerecrute.fr as the ministry’s current recruitment site rather than a third-party careers board. SCOPE: entry to the French magistrature. Supports the existence of four routes — the premier concours open to holders of "un diplôme de niveau bac +4 ou équivalent"; the premier concours spécial "Talents" tied to the preparatory classes and social criteria; the deuxième concours for "fonctionnaires ou agents publics exerçant depuis au moins quatre ans"; and the troisième concours requiring "au moins quatre années" of professional activity in a legal, administrative, economic or social field, or a doctorate in law. Supports that successful candidates hold the status of auditeur de justice during training, and that the training runs "31 mois" across Bordeaux and Paris. The page publishes trainee pay figures; they are deliberately not reproduced. Establishes nothing about age limits or nationality, which this page does not state, and nothing about any other country.',
+  },
+  {
+    id: 'fr-ordonnance-58-1270-statut-magistrature',
+    type: 'legislation',
+    title:
+      'Ordonnance n° 58-1270 du 22 décembre 1958 portant loi organique relative au statut de la magistrature, article 1',
+    publisher: 'République française (Légifrance)',
+    url: 'https://www.legifrance.gouv.fr/loda/id/JORFTEXT000000339259',
+    accessedOn: '2026-09-07',
+    verifiedOn: '2026-09-07',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'FR',
+    note: 'ACCESS NOTE, recorded because it corrects a limitation the corpus had previously written down: the defence-lawyer profession record states that no French source could be obtained because legifrance.gouv.fr returned HTTP 403, and the SourceRecord type comment says the same. On this access the document was reached and read. The earlier 403 was an access limitation and never evidence about French arrangements, and this record discharges it for this provision only. SCOPE: article 1 of the organic law on the status of the magistrature. Supports that the corps judiciaire comprises the magistrats du siège and du parquet of the Cour de cassation, the cours d’appel and the tribunaux together with the auditeurs de justice, and supports verbatim "Tout magistrat a vocation à être nommé, au cours de sa carrière, à des fonctions du siège et du parquet." That single sentence is the whole basis for describing France as a one-corps system; nothing here describes how often movement between the functions actually happens, which was NOT RESEARCHED.',
+  },
+  {
+    id: 'ew-jac-check-eligible',
+    type: 'government',
+    title: 'Check you’re eligible — legal roles',
+    publisher: 'Judicial Appointments Commission',
+    url: 'https://judicialappointments.gov.uk/legal-roles/check-youre-eligible/',
+    accessedOn: '2026-09-07',
+    verifiedOn: '2026-09-07',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'GB',
+    note: 'SCOPE: judicial appointments in England and Wales made through the JAC, up to and including the High Court. NOT the United Kingdom: Scotland and Northern Ireland have separate arrangements, and the page itself distinguishes roles open to those who qualified in Scotland or Northern Ireland from those open only to England and Wales qualifiers. Supports the citizenship condition — "You must be a citizen of the UK, Republic of Ireland or another Commonwealth country at the time of application" — the post-qualification experience thresholds of "Seven years of post-qualification experience (PQE) for Upper Tribunal, Circuit Judge and more senior positions" and "Five years of post-qualification experience (PQE) for most other legal roles", the requirement to have spent "at least 20% of each year doing law-related activity" since qualifying, and the statutory good-character condition, "The JAC is required by statute to select only persons of ‘good character’." Establishes nothing about appointments above the High Court, and nothing about any other country.',
+  },
+  {
+    id: 'ew-jac-selection-process',
+    type: 'government',
+    title: 'Selection process',
+    publisher: 'Judicial Appointments Commission',
+    url: 'https://judicialappointments.gov.uk/the-application-process/selection-process/',
+    accessedOn: '2026-09-07',
+    verifiedOn: '2026-09-07',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'GB',
+    note: 'SCOPE: the JAC selection process for judicial office in England and Wales. Supports that it is "a 3-stage selection process" of application with a self-assessment and nominated independent assessors, shortlisting which "may" use a name-blind sift or an online test, and a selection day using role play and interview; that "The Selection and Character Committee then considers each candidate in order of merit and recommends candidates for appointment" to the Lady Chief Justice, the Senior President of Tribunals or the Lord Chancellor; and that the process "varies and can take over a year". The conditional wording on the sift is load-bearing and is reproduced as a possibility rather than a rule. Establishes nothing about success rates, applicant numbers or the composition of the judiciary, none of which was researched.',
+  },
+  {
+    id: 'ew-sra-sqe-qualifying',
+    type: 'government',
+    title: 'Become a solicitor — the SQE route',
+    publisher: 'Solicitors Regulation Authority',
+    url: 'https://www.sra.org.uk/become-solicitor/sqe/',
+    accessedOn: '2026-09-07',
+    verifiedOn: '2026-09-07',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'GB',
+    note: 'SCOPE: qualification as a solicitor of England and Wales through the SQE. The SRA is a statutory regulator, not a course provider, and nothing on this record supports naming any preparation course. Supports the degree condition stated in its own terms — a degree "can be in any subject or an equivalent level 6 qualification" — the qualifying work experience requirement "You will need two years’ full time or equivalent", the requirement to "pass both parts - SQE1 and SQE2", and the character condition expressed as passing background checks and meeting suitability requirements. The any-subject wording is the point of the citation and must not be softened into "usually a law degree". Establishes nothing about barristers, nothing about Scotland or Northern Ireland, and nothing about cost, which is published but deliberately not reproduced.',
+  },
+  {
+    id: 'ew-bsb-becoming-a-barrister',
+    type: 'government',
+    title: 'Becoming a barrister — an overview of the three components',
+    publisher: 'Bar Standards Board',
+    url: 'https://www.barstandardsboard.org.uk/training-qualification/becoming-a-barrister.html',
+    accessedOn: '2026-09-07',
+    verifiedOn: '2026-09-07',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'GB',
+    note: 'SCOPE: qualification as a barrister of England and Wales. The BSB is the regulator, and this record supports no statement about any training provider. Supports that training has three components — academic, vocational, and pupillage or work-based learning; that the academic component is met by a law degree or by a non-law degree together with a conversion qualification; that the vocational component "covers a range of subjects to ensure that you acquire the specialist skills, knowledge of procedure and evidence, attitudes and competence to prepare you for becoming a barrister"; and that pupillage is divided into "a non-practising period, usually of six months, and a practising period, usually of six months", the second beginning only after Call to the Bar. The word "usually" is part of both quotations and is not dropped. The published minimum pupillage award is deliberately not reproduced. Establishes nothing about solicitors or about any other jurisdiction.',
+  },
+  {
+    id: 'ew-hmpps-prison-officer-apply',
+    type: 'government',
+    title: 'Prison officer — how to apply',
+    publisher: 'HM Prison and Probation Service (Prison and Probation Jobs)',
+    url: 'https://prisonandprobationjobs.gov.uk/prison-service-roles/prison-officer/how-to-apply/',
+    accessedOn: '2026-09-07',
+    verifiedOn: '2026-09-07',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'GB',
+    note: 'SCOPE: entry to the prison officer role in England and Wales. Supports the minimum age condition "you will need to be at least 18 years old when you start your new role", the right-to-work requirement, the additional condition for category A establishments that "you must have been resident in the UK for the last 3 years", the staged assessment — a scenario-based test, a values-based assessment, an online assessment centre containing an interview, a role play and a written test, pre-employment checks, and medical and fitness testing — and that "you will need to pass a medical and fitness assessment as part of the application process". NEGATIVE FINDING, and the reason this source matters comparatively: the page states NO academic qualification requirement, and none is claimed here. Absence of a stated requirement is reported as absence, never as a positive statement that qualifications are irrelevant. Establishes nothing about probation, nothing about Scotland or Northern Ireland, and nothing about pay.',
+  },
+  {
+    id: 'ew-cps-prosecutor-role',
+    type: 'government',
+    title: 'Apply to become a Crown Prosecutor or Senior Crown Prosecutor',
+    publisher: 'Crown Prosecution Service',
+    url: 'https://www.cps.gov.uk/careers/prosecutor',
+    accessedOn: '2026-09-07',
+    verifiedOn: '2026-09-07',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'GB',
+    note: 'SCOPE: the Crown Prosecution Service, England and Wales. Supports the narrow but structurally decisive point that a Crown Prosecutor is an EMPLOYED lawyer rather than a member of a judicial corps — the page describes annual leave, a contributory pension and an internal lawyer training programme, which are the terms of employment. NEGATIVE FINDING, recorded because the omission matters: this page states NO specific qualification threshold, no required years of experience and no examination. It asks whether the reader is "a highly trained lawyer" without defining the phrase. Nothing here may therefore be cited for what England and Wales requires of a prosecutor; it is cited only for the employment relationship and for the absence of a shared entry route with the judiciary. Establishes nothing about Scotland, Northern Ireland or any other prosecution service.',
+  },
+  {
+    id: 'ew-cps-legal-trainee-scheme',
+    type: 'government',
+    title: 'Apply to become a legal trainee',
+    publisher: 'Crown Prosecution Service',
+    url: 'https://www.cps.gov.uk/careers/legal-trainee',
+    accessedOn: '2026-09-07',
+    verifiedOn: '2026-09-07',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'GB',
+    note: 'SCOPE: one CPS entry scheme, England and Wales. Supports that the service runs a trainee route addressed to "a graduate with a law degree and a Legal Practice Course (LPC) or Bar Practice Course (BPC) qualification looking to become a fully qualified solicitor or barrister", and that completion carries a guaranteed role — "Be guaranteed a crown prosecutor or advocate role". CAMPAIGN-SPECIFIC, and flagged as such under the distinction the corpus draws at /law-enforcement/when-a-recruitment-requirement-is-campaign-specific: at the time of access the page stated "Applications are now closed". The scheme is therefore cited as a route that EXISTS in this service’s structure, never as a currently open opportunity, and no application step is described. Establishes nothing about whether the scheme recurs, on what cycle, or on what terms.',
+  },
 ];
 
 const SOURCE_INDEX = new Map(SOURCES.map((source) => [source.id, source]));

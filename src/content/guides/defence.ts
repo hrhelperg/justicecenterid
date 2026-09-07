@@ -2039,4 +2039,372 @@ export const DEFENCE_GUIDES: readonly Guide[] = [
       },
     ],
   },
+  {
+    slug: 'what-qualifying-as-a-lawyer-requires',
+    title: 'What qualifying as a lawyer requires',
+    shortTitle: 'Qualifying as a lawyer',
+    question: 'Do you need a law degree to become a lawyer?',
+    summary:
+      'In one system researched, expressly not: the regulator states the degree "can be in any subject". What is required instead is a sequence — knowledge, then skills, then a period of supervised work — and the sequence is more constant than the qualifications attached to it.',
+    entityType: 'concept',
+    section: 'defence',
+    jurisdiction: ['GB'],
+    temporalScope: 'current',
+    related: [
+      'who-may-act-as-a-lawyer',
+      'the-supervised-stage-in-legal-qualification',
+      'what-defence-counsel-does',
+      'how-defence-is-funded',
+    ],
+    sources: ['ew-sra-sqe-qualifying', 'ew-bsb-becoming-a-barrister'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-07',
+    publishedOn: '2026-09-07',
+    reviewedOn: '2026-09-07',
+    factsVerifiedOn: '2026-09-07',
+    readingTimeMinutes: 7,
+    uncertainty: [
+      'One system was researched — England and Wales — and within it the two principal professions. How any other country qualifies its lawyers was NOT RESEARCHED.',
+      'Scotland and Northern Ireland have separate arrangements and are NOT described. Neither regulator cited here governs them.',
+      'Cost is published by both regulators and is deliberately not reproduced. Nothing here compares the expense of any route, because doing so would require naming providers.',
+      'Pass rates, numbers qualifying, and how long qualification takes in practice were NOT RESEARCHED.',
+      'No preparation course, tutoring service or provider is named, recommended or implied anywhere on this page. The regulators cited are regulators, not teaching bodies.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Qualification is not one hurdle but a sequence, and the sequence is the durable part. A system establishes that a candidate knows the law, then that they can do the things a lawyer does, then that they have done them under supervision on real matters. What each stage is called, and which academic qualification opens it, varies far more than the order does.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This describes what two regulators of one jurisdiction publish about their qualification routes. It is not careers guidance, it does not recommend a route or a provider, it names no course, and it is not advice about anyone’s eligibility. Who is permitted to act once qualified is a different question, answered at [who may act as a lawyer](/defence/who-may-act-as-a-lawyer).',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'A client cannot assess a lawyer before instructing one, and usually cannot assess the work afterwards either. Qualification exists to make that gap survivable: it is a public guarantee, given by a body that can withdraw it, that a person has met a standard somebody else verified. The stages exist because the guarantee covers three different things, and knowing the law is only the first.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Which is why the academic stage is the one systems are willing to loosen',
+        text: 'Legal knowledge can be acquired and then tested directly, so a system that assesses it centrally does not need to care where it was learned. Judgement under supervision cannot be assessed by examination, which is why the supervised stage is the one nobody removes.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'For solicitors of England and Wales, the regulator publishes four requirements: a degree, which "can be in any subject or an equivalent level 6 qualification"; passing "both parts - SQE1 and SQE2"; qualifying work experience, for which "You will need two years’ full time or equivalent"; and satisfying background checks and suitability requirements.',
+        claim: 'fact',
+        sources: ['ew-sra-sqe-qualifying'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'The any-subject wording is the finding, and it is easy to soften by accident',
+        text: 'It would be natural to write that a law degree is "usually" required. The regulator does not say that. It says the degree can be in any subject, and states a central assessment in its place — which relocates the guarantee from the university to the examination.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'For barristers, the same jurisdiction publishes three components: an academic component, met by a law degree or by a non-law degree together with a conversion qualification; a vocational component, which "covers a range of subjects to ensure that you acquire the specialist skills, knowledge of procedure and evidence, attitudes and competence to prepare you for becoming a barrister"; and pupillage, the work-based learning component.',
+        claim: 'fact',
+        sources: ['ew-bsb-becoming-a-barrister'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Two professions, one jurisdiction, and the same three-part shape',
+        text: 'Knowledge, then skills, then supervised practice. One route assesses the first centrally and lets any degree lead into it; the other keeps the academic component attached to a recognised qualification. The architecture is the same even where the entry conditions are not.',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'The academic component establishes knowledge',
+            description:
+              'Whether by a law degree, a conversion qualification, or a central examination, this stage answers whether the candidate knows the law. It is the stage most open to alternative routes.',
+          },
+          {
+            term: 'The vocational component establishes skills',
+            description:
+              'Advocacy, procedure, evidence and professional conduct are practised rather than known. One published description lists skills, procedure, evidence, attitudes and competence together, which is a broader thing than legal knowledge.',
+          },
+          {
+            term: 'The work-based component establishes judgement',
+            description:
+              'Two years of qualifying work experience, or pupillage, exist because some of what a lawyer does can only be assessed while it is being done, on real matters, by somebody responsible for the outcome.',
+          },
+          {
+            term: 'Character is assessed separately from ability',
+            description:
+              'Background checks and suitability requirements sit alongside the assessments rather than inside them. A candidate can be capable and still not be admitted, which is the point of keeping the two apart.',
+          },
+          {
+            term: 'And admission is granted by a body that can withdraw it',
+            description:
+              'The regulator that admits is the regulator that disciplines. That continuity is what makes qualification a standing guarantee rather than a certificate about one past moment.',
+          },
+        ],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'You need a law degree to become a lawyer.',
+        reality:
+          'One regulator researched here states that the degree "can be in any subject or an equivalent level 6 qualification", with central assessments in place of a required law degree. The other accepts a non-law degree together with a conversion qualification.',
+      },
+      {
+        claim: 'Qualification is an examination you either pass or fail.',
+        reality:
+          'Both published routes require a period of work-based learning as well as assessment: two years of qualifying work experience in one, pupillage in the other. No examination substitutes for that stage.',
+      },
+      {
+        claim: 'Solicitors and barristers qualify the same way.',
+        reality:
+          'They share a three-part shape and differ in what opens each stage. One route assesses knowledge centrally and accepts any degree; the other ties the academic component to a law degree or a conversion qualification.',
+      },
+      {
+        claim: 'Once you are qualified, nobody checks anything again.',
+        reality:
+          'Admission is granted by a regulator that retains the power to act afterwards, and suitability is assessed as a condition of entry rather than as part of an examination.',
+      },
+      {
+        claim: 'A page like this can tell you which route to take.',
+        reality:
+          'It cannot and does not. One jurisdiction is described, no route is recommended, and no preparation course or provider is named. Whether any route is open to a particular person is a question for the regulators themselves.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'One jurisdiction, two professions, as their regulators publish them.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'A degree in any subject, two central assessments, two years of qualifying work experience, and suitability checks — solicitors.',
+          'An academic component by law degree or conversion, a vocational component, and pupillage — barristers.',
+          'Knowledge, then skills, then supervised practice — the shared order.',
+          'Not researched: Scotland, Northern Ireland, and every other country.',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'Scope',
+        text: 'England and Wales only, from the two regulators’ own pages. Nothing here describes how any other system qualifies a lawyer, and the corpus does not claim that this sequence is universal — only that it is what these two publish.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'Qualification rules decide who may be represented and by whom, so they are an access question as much as a professional one. A route that accepts any degree widens the pool of people who can begin; a route that requires an unpaid or scarce supervised stage can narrow it again at the end. Both effects are consequences of the same architecture, and a system that publishes its requirements makes both visible.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'What is reserved to the qualified, and who decides, is [who may act as a lawyer](/defence/who-may-act-as-a-lawyer). Why the supervised stage is the one nobody removes is [the supervised stage in legal qualification](/defence/the-supervised-stage-in-legal-qualification). What the qualified person then does is [what defence counsel does](/defence/what-defence-counsel-does).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [who may act as a lawyer](/defence/who-may-act-as-a-lawyer), [the supervised stage in legal qualification](/defence/the-supervised-stage-in-legal-qualification), and [how defence is funded](/defence/how-defence-is-funded).',
+      },
+    ],
+  },
+  {
+    slug: 'the-supervised-stage-in-legal-qualification',
+    title: 'The supervised stage in legal qualification',
+    shortTitle: 'The supervised stage',
+    question:
+      'Why does every route into legal practice end with a period of working under somebody else?',
+    summary:
+      'Because the last thing a qualification has to establish cannot be examined. Pupillage runs in two halves, one of them non-practising; qualifying work experience runs two years; a judicial school runs 31 months. All three are the same device.',
+    entityType: 'concept',
+    section: 'defence',
+    jurisdiction: ['GB', 'FR'],
+    temporalScope: 'current',
+    related: [
+      'what-qualifying-as-a-lawyer-requires',
+      'who-may-act-as-a-lawyer',
+      'how-you-become-a-judge',
+      'what-defence-counsel-does',
+    ],
+    sources: [
+      'ew-bsb-becoming-a-barrister',
+      'ew-sra-sqe-qualifying',
+      'fr-lajusticerecrute-magistrat',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-07',
+    publishedOn: '2026-09-07',
+    reviewedOn: '2026-09-07',
+    factsVerifiedOn: '2026-09-07',
+    readingTimeMinutes: 6,
+    uncertainty: [
+      'Three published arrangements were researched, in two systems. Whether a supervised stage is genuinely universal was NOT ESTABLISHED, and no claim that it is appears here.',
+      'How supervised stages are allocated, how many places exist, and how candidates obtain one were NOT RESEARCHED. Availability is the part of this subject most often asked about and it is not described.',
+      'Published minimum awards and trainee pay are deliberately not reproduced, so nothing here describes whether any supervised stage is paid or on what terms.',
+      'What supervisors actually do, how they assess, and what happens when an assessment is negative were NOT RESEARCHED.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Every route described in this corpus ends the same way: a period during which the candidate does the work while somebody already qualified is responsible for it. The names differ and the durations differ. The device does not, and it is always placed last, after the knowledge and the skills have already been tested.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This describes a structural feature of published qualification routes. It does not describe how to obtain a place on one, how many exist, or what any of them pays — and it names no chambers, firm, provider or scheme.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'An examination can establish that a candidate knows a rule and can even establish that they can perform a skill on demand. It cannot establish that they will notice which rule matters in a situation nobody framed for them, on a real matter, where the cost of being wrong falls on somebody else. That is the gap the supervised stage closes, and it is closed by making an already-qualified person answerable for the work while the candidate does it.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Which is why the responsibility, not the observation, is the mechanism',
+        text: 'A supervised stage is not primarily a person watching. It is a person carrying the consequences, which is what makes their assessment costly to give lightly and therefore worth something. Shadowing produces experience; supervision produces a judgement somebody had a reason to make carefully.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'For barristers of England and Wales, pupillage "is divided into two parts: a non-practising period, usually of six months, and a practising period, usually of six months", with the second beginning only after Call to the Bar.',
+        claim: 'fact',
+        sources: ['ew-bsb-becoming-a-barrister'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'A non-practising half is a deliberate design, not a formality',
+        text: 'For six months the pupil may not practise at all. The stage is split so that the first half can be spent doing the work without the capacity to act on it, and only then does the same person begin practising. The word "usually" is part of the published description and is not dropped here.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'For solicitors of the same jurisdiction the equivalent requirement is qualifying work experience: "You will need two years’ full time or equivalent", sitting alongside the central assessments rather than replacing any of them.',
+        claim: 'fact',
+        sources: ['ew-sra-sqe-qualifying'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'A career judiciary uses the same device on a different scale. Successful candidates in France enter as auditeurs de justice and train for 31 months across two locations, holding a status that is neither student nor magistrat while they do it.',
+        claim: 'fact',
+        sources: ['fr-lajusticerecrute-magistrat'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Three arrangements, one shape, and the durations tell you what preceded them',
+        text: 'Twelve months of pupillage follows an academic and a vocational stage. Two years of qualifying work experience accompanies central assessments. Thirty-one months follows an examination and no prior practice at all. The supervised stage is longest exactly where the least has come before it.',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'It always comes last',
+            description:
+              'Knowledge and skills are established first, because supervising someone who lacks them would waste the supervisor rather than test the candidate.',
+          },
+          {
+            term: 'It is defined by responsibility, not duration',
+            description:
+              'The lengths differ by a factor of three across the arrangements described here. What is constant is that somebody qualified answers for the work.',
+          },
+          {
+            term: 'A distinct status usually attaches to it',
+            description:
+              'Pupil, trainee, auditeur de justice. The name exists because the person is neither unqualified nor qualified, and a system that regulates entry needs a word for that condition.',
+          },
+          {
+            term: 'The transition inside it can be formal',
+            description:
+              'One published route splits the stage into a non-practising and a practising half, with an event between them. The candidate does not become qualified gradually; a specific thing happens.',
+          },
+          {
+            term: 'And it is the stage that limits how many can qualify',
+            description:
+              'An examination can be sat by anyone who registers. A supervised place requires a supervisor willing to be responsible. That asymmetry is structural, and how places are allocated was not researched here.',
+          },
+        ],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'The supervised stage is a formality once the examinations are passed.',
+        reality:
+          'It is the stage a system cannot replace with an assessment, which is why it survives in every route researched here and why one of them runs it for 31 months.',
+      },
+      {
+        claim: 'It just means watching an experienced practitioner work.',
+        reality:
+          'The mechanism is that a qualified person is answerable for the work while the candidate does it. Observation without that responsibility is a different thing and does not perform the same function.',
+      },
+      {
+        claim: 'Everyone who passes the assessments will complete it.',
+        reality:
+          'Assessments can be taken by anyone who registers; a supervised place requires somebody willing to carry responsibility for a beginner. How places are allocated was not researched and is not described.',
+      },
+      {
+        claim: 'A pupil barrister practises from the start.',
+        reality:
+          'One published route divides the period into a non-practising part, usually of six months, and a practising part, usually of six months, with the second beginning only after Call to the Bar.',
+      },
+      {
+        claim: 'A trainee judge is just a junior judge.',
+        reality:
+          'An auditeur de justice holds a distinct status during 31 months of training. Systems create a separate name for the stage precisely because the person is neither qualified nor unqualified.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'The same device, as three published routes describe it.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Two parts, a non-practising and a practising period, usually six months each — pupillage, England and Wales.',
+          'Two years full time or equivalent, alongside central assessments — qualifying work experience, England and Wales.',
+          'Thirty-one months as an auditeur de justice, after an examination and before appointment — France.',
+          'Not researched: how places are allocated, how many exist, and what any of them pays.',
+        ],
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'The supervised stage is where a qualification system is most exposed to a fairness problem it did not choose. Assessments can be made open to anyone who registers; supervised places depend on somebody agreeing to take responsibility for a particular beginner, and that is a relationship rather than a procedure. A system that publishes the requirement without publishing how places are obtained has described the standard while leaving the bottleneck undocumented.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'The full qualification sequence is [what qualifying as a lawyer requires](/defence/what-qualifying-as-a-lawyer-requires). The judicial version of the same stage is [how you become a judge](/courts/how-you-become-a-judge). What the title permits once granted is [who may act as a lawyer](/defence/who-may-act-as-a-lawyer).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [what qualifying as a lawyer requires](/defence/what-qualifying-as-a-lawyer-requires), [how you become a judge](/courts/how-you-become-a-judge), and [what defence counsel does](/defence/what-defence-counsel-does).',
+      },
+    ],
+  },
 ];
