@@ -217,8 +217,29 @@ describe('nothing in the equipment cluster sells, ranks or recommends', () => {
     );
     expect(existsSync(mapPath), 'the opportunity map is missing').toBe(true);
 
+    /*
+     * Mutation M14 SURVIVED the first version, which examined only the built `out/` directory. Two
+     * things were wrong with that. A mutation run against the unit suite does not rebuild, so the
+     * export was stale and could not contain the injected text; and the export is the LAST place a
+     * leak appears, not the first. Content is where it would arrive, so content is checked first.
+     */
+    const CLASSIFICATION =
+      /\b(?:tier [abc]\b|commerce-compatible|commercial opportunity|affiliate suitability|editorial-separation requirement|INAPPROPRIATE\b)/i;
+    const leaked: string[] = [];
+    for (const g of ALL_GUIDES) {
+      for (const s of sentences(allText(g))) {
+        if (CLASSIFICATION.test(s)) leaked.push(`${g.slug}: ${s.trim().slice(0, 100)}`);
+      }
+    }
+    for (const src of SOURCES) {
+      if (src.note && CLASSIFICATION.test(src.note)) leaked.push(`source:${src.id}`);
+    }
+    expect(leaked, 'internal commercial classification vocabulary appears in content').toEqual(
+      [],
+    );
+
     const out = join(process.cwd(), 'out');
-    if (!existsSync(out)) return; // build not present in this run; the e2e covers the rendered case
+    if (!existsSync(out)) return; // no build in this run; the content check above is the primary one
     const marker = 'commercial opportunity map';
     const offenders: string[] = [];
     const walk = (dir: string): void => {
@@ -344,11 +365,25 @@ describe('ownership and sourcing', () => {
   });
 
   it('the dated announcement is treated as dated, not as the present', () => {
+    /*
+     * Mutation M8 SURVIVED the first version, which checked only that the uncertainty list
+     * recorded the date. It said nothing about the BODY, so "The uniform was changed again last
+     * year and is the current design" passed while the page had begun asserting a present state
+     * from a 2022 announcement. Recording a temporal limit in one field does not stop another
+     * field breaking it.
+     */
     const g = guide('when-a-police-uniform-changes');
     expect((g.uncertainty ?? []).join('\n'), 'the temporal limit is not recorded').toMatch(
       /dated|2022|since was NOT RESEARCHED/i,
     );
     expect(getSource('ie-garda-new-operational-uniform-2022')?.publishedOn).toBe('2022-08-15');
+
+    const VAGUE_RECENCY =
+      /\b(?:last year|this year|recently|just changed|newly introduced|is (?:now )?the current (?:design|uniform)|at present)\b/i;
+    for (const slug of WAVE_34) {
+      const offenders = asserted(guide(slug)).filter((s) => VAGUE_RECENCY.test(s));
+      expect(offenders, `${slug} presents a dated event as the present`).toEqual([]);
+    }
   });
 
   it('pages that predate this wave link into it', () => {
