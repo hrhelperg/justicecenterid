@@ -96,9 +96,40 @@ describe('the two words stay distinct', () => {
     expect(term('lay-judge').falseFriends).toContain('jury');
   });
 
-  it('the jury is defined by separateness, and the lay judge by sitting on the bench', () => {
-    expect(allText(term('jury'))).toMatch(/separate/i);
-    expect(allText(term('lay-judge'))).toMatch(/on the bench|with the professional/i);
+  it('each definition carries its own distinguishing property, in the definition field', () => {
+    /*
+     * On the DEFINITION, not on the union of the page. M7 rewrote the lay-judge
+     * definition into "a person ... who is a professional judge for the
+     * hearing" and survived a union search, because "sits on the bench" was
+     * still true somewhere else on the page. The definition is the sentence a
+     * reader is given first and the one a snippet quotes, so it has to carry
+     * the distinction by itself.
+     */
+    expect(term('jury').definition).toMatch(/separate/i);
+    expect(term('lay-judge').definition).toMatch(
+      /sits? on the bench|sits? (?:together )?with (?:the )?professional judges/i,
+    );
+  });
+
+  it('the lay judge is never defined as being a professional judge', () => {
+    /*
+     * The distinction the whole subject rests on. A lay judge exercises the
+     * judge's office in some systems and for the length of a hearing, which is
+     * a short step from "is a professional judge" — and that step is the error.
+     */
+    const t = term('lay-judge');
+    const parts = [t.definition, t.expandedNote ?? '', t.purpose ?? '', t.context ?? ''];
+    const CLAIMS_PROFESSIONAL =
+      /\b(?:is|are|becomes?|serves? as|acts? as|counts? as)\s+(?:a |an )?professional judges?\b/i;
+    for (const text of parts) {
+      const offenders = sentences(text).filter(
+        (x) => CLAIMS_PROFESSIONAL.test(x) && !/not|never|rather than|without/i.test(x),
+      );
+      expect(offenders, 'a lay judge is defined as a professional judge').toEqual([]);
+    }
+    expect(t.definition, 'the definition drops the lack of professional training').toMatch(
+      /without professional legal training|not (?:a )?(?:legally )?(?:trained|qualified)/i,
+    );
   });
 
   it('neither term calls a mixed bench a jury', () => {
