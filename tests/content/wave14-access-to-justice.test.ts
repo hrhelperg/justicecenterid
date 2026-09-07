@@ -554,8 +554,26 @@ describe('the defence-lawyer profession is routed only on the evidence that earn
   });
 
   it('states the qualification-route gap rather than filling it', () => {
+    /*
+     * This asserted that the record said "qualification routes were not researched for any
+     * country". Wave 28 researched them for England and Wales, so the sentence stopped being
+     * true and the record was updated to point at the guides that answer it.
+     *
+     * The intent of the check is unchanged and is worth keeping: the profession record must not
+     * become the place where qualification routes are described. That job belongs to the guides,
+     * and the record must say where they are and how far they reach. The sibling test above
+     * still enforces that trainingRouteShape itself stays structural.
+     */
     const unc = (record().uncertainty ?? []).join(' ');
-    expect(unc).toMatch(/qualification routes? (?:were|was) not researched/i);
+    expect(unc, 'the record no longer says its training route is structural only').toMatch(
+      /structural only/i,
+    );
+    expect(unc, 'the record does not point at where routes are actually described').toMatch(
+      /\/defence\/what-qualifying-as-a-lawyer-requires/,
+    );
+    expect(unc, 'the record does not limit how far the researched routes reach').toMatch(
+      /no other country was researched|England and Wales/i,
+    );
   });
 
   it('records the French access limitation as an access limitation', () => {
