@@ -5519,6 +5519,75 @@ export const SOURCES: readonly SourceRecord[] = [
     jurisdiction: 'GB',
     note: 'SCOPE: one section of one Act, in the official revised text. Supports the exemption verbatim: "No statutory provision imposing a speed limit on motor vehicles shall apply to any vehicle on an occasion when it is being used for fire and rescue authority, for ambulance purposes or police purposes, if the observance of that provision would be likely to hinder the use of the vehicle for the purpose for which it is being used on that occasion." Supports that the exemption is CONDITIONAL on that likelihood rather than automatic; that later subsections extend it to emergency responses at the request of an NHS ambulance service and to National Crime Agency vehicles; and that subsection (3) requires a driver, except when training, to have completed prescribed high-speed driving instruction for National Crime Agency purposes. IMPORTANT LIMIT: this section addresses SPEED LIMITS. It establishes nothing about red lights, keep-left signs, bus lanes or any other rule, and whether other provisions exempt those was NOT RESEARCHED. No page may present this section as the whole of the exemption available in that system.',
   },
+  /*
+   * WAVE 34 — uniforms and insignia as institutional history.
+   *
+   * Wave 26 published what equipment is for, what a uniform is for, and how officers are
+   * identified, and declared in its own uncertainty that "uniform design, specification, colour
+   * schemes and insignia systems were NOT RESEARCHED for any country". These sources answer the
+   * insignia half of that, and answer it historically rather than descriptively.
+   *
+   * THE LINE THIS WAVE WILL NOT CROSS. Wave 26 established that detail assisting imitation is
+   * deliberately absent, and the image policy says insignia may appear only as documentation and
+   * never arranged so a page could be mistaken for an official communication. The Garda uniform
+   * policy publishes badge placement, chevron positions and nameplate dimensions. NONE of that is
+   * used here. What is used is when a uniform changed, why, what it took, and where the visual
+   * system came from.
+   *
+   * NO COMMERCE. No supplier, manufacturer, model, specification, price or purchasing route
+   * appears in any record below, and the published cost figures on one government page about
+   * procurement were read and deliberately not used.
+   */
+  {
+    id: 'nz-police-insignia',
+    type: 'government',
+    title: 'Police insignia',
+    publisher: 'New Zealand Police',
+    url: 'https://www.police.govt.nz/about-us/history/insignia',
+    accessedOn: '2026-09-07',
+    verifiedOn: '2026-09-07',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'NZ',
+    note: 'SCOPE: the origins of rank insignia in New Zealand Police, on the service’s own history page. Supports the service’s own account of where the system came from: "The insignia of rank worn by New Zealand police officers have their origins in our colonial past"; that "In 1846, when Governor George Grey arrived in New Zealand, such was the state of disorder that he introduced a paramilitary force to carry out both policing and military duties"; that "The uniforms drew on the insignia of rank worn by the British military"; and that "There is still a strong parallel with army ranks today". Supports that the page publishes a comparison of police ranks to army ranks, running from Commissioner to Lieutenant General and Constable to Private. DOES NOT SUPPORT any claim about a 1995 change of insignia placement or about which ranks existed at the force’s founding: those appeared in a search summary and are NOT on the page, which is why neither is published. NOTHING here describes what any badge looks like in reproducible detail.',
+  },
+  {
+    id: 'ie-garda-new-operational-uniform-2022',
+    type: 'government',
+    title:
+      'An Garda Síochána announces commencement of new Operational Uniform, 15 August 2022',
+    publisher: 'An Garda Síochána',
+    url: 'https://www.garda.ie/en/about-us/our-departments/office-of-corporate-communications/press-releases/2022/august/an-garda-siochana-announces-commencement-of-new-operational-uniform-monday-15th-august-2022.html',
+    publishedOn: '2022-08-15',
+    accessedOn: '2026-09-07',
+    verifiedOn: '2026-09-07',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'IE',
+    note: 'SCOPE: one uniform change in one service, announced by that service. TEMPORAL: the announcement is dated 15 August 2022 and is cited as a dated event, not as a description of the present. Supports the rarity claim in the service’s own words: "This change, during the 100th anniversary year of the founding of An Garda Síochána, is only the third time that An Garda Síochána has undertaken a formal change of the Garda uniform." Supports that it was "the first time that elements of the uniform, other than the uniform cap, will feature the Garda Crest". Supports the stated drivers: a finding of the internal Garda Cultural Audit 2018, which involved input from over 6,500 members, and a recommendation of the Commission on the Future of Policing in Ireland. Establishes nothing about any other service and nothing about what the uniform looks like.',
+  },
+  {
+    id: 'ie-garda-uniform-overview',
+    type: 'government',
+    title: 'Garda Uniform — organisational overview',
+    publisher: 'An Garda Síochána',
+    url: 'https://www.garda.ie/en/about-us/organisational-structure/garda-equipment/garda-uniform/',
+    accessedOn: '2026-09-07',
+    verifiedOn: '2026-09-07',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'IE',
+    note: 'SCOPE: the service’s own overview of its uniform. Supports the division into operational and formal elements at category level; that the service states the uniform "incorporates elements such as durability, protection and functionality"; and the SCALE of the change, which is the point of the citation: delivery to "approximately 13,000 members of An Garda Síochána of Garda, Sergeant and Inspector rank, in excess of 560 Garda stations across every Garda Region". DELIBERATELY UNUSED: the same estate publishes a uniform and dress code policy giving insignia placement, chevron positions and nameplate dimensions. None of it is drawn on, because reproducible detail of that kind assists imitation and the corpus has already ruled it out.',
+  },
+  {
+    id: 'nz-police-women-in-uniform',
+    type: 'government',
+    title: 'Women in Uniform — what we wore',
+    publisher: 'New Zealand Police',
+    url: 'https://www.police.govt.nz/about-us/75-years-women-police/looking-back/women-in-uniform',
+    accessedOn: '2026-09-07',
+    verifiedOn: '2026-09-07',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'NZ',
+    note: 'SCOPE: dated changes to the New Zealand Police uniform as the service records them, in material about women in policing. Supports three dated points: that "The women’s original felt hat was replaced by the forage cap in 1957"; that a policewomen’s handbag was "issued from 1976 with the introduction of the vitric blue uniform"; and the 1994 decision recorded as "Clothing common to men and women to be identical. Women’s skirts to be phased out as stocks used up. Women will have the choice of light or medium weight trousers or culottes." The 1994 entry is the one the corpus cites for the equality dimension of uniform change. DOES NOT SUPPORT a claim about trousers being introduced on trial in 1977, which appeared in a search summary and is not on the page.',
+  },
 ];
 
 const SOURCE_INDEX = new Map(SOURCES.map((source) => [source.id, source]));
