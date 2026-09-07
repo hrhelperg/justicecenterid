@@ -4840,7 +4840,7 @@ export const SOURCES: readonly SourceRecord[] = [
     verifiedOn: '2026-09-06',
     verificationMethod: 'content-confirmed',
     jurisdiction: 'NL',
-    note: 'Supports the official role name "centralist meldkamer" and the regional task as the page states it: "je neemt de spoedeisende meldingen (112) aan en stuurt de eenheden op straat aan". The page does NOT state whether the role is held by civilian staff or sworn officers, so no classification is asserted from it.',
+    note: 'Supports the official role name "centralist meldkamer" and the regional task as the page states it: "je neemt de spoedeisende meldingen (112) aan en stuurt de eenheden op straat aan". The page does NOT state whether the role is held by civilian staff or sworn officers, so no classification is asserted from it. RE-READ 2026-09-07 for the entry conditions the same page carries, rather than creating a second record for one URL: it states "mbo 3 werk- en denkniveau" as the required level, that the training is "een interne opleiding tot centralist meldkamer (die je van ons krijgt)" — provided by the service itself — and that it asks for "stressbestendigheid en mentale weerbaarheid (vanwege de heftige situaties die je kunt meemaken)". It states no age condition and no selection stages, linking to a separate selection page that was not read; neither is claimed here.',
   },
   /*
    * WAVE 25 — country police recruitment and entry paths.
@@ -5215,6 +5215,63 @@ export const SOURCES: readonly SourceRecord[] = [
     verificationMethod: 'content-confirmed',
     jurisdiction: 'GB',
     note: 'SCOPE: one CPS entry scheme, England and Wales. Supports that the service runs a trainee route addressed to "a graduate with a law degree and a Legal Practice Course (LPC) or Bar Practice Course (BPC) qualification looking to become a fully qualified solicitor or barrister", and that completion carries a guaranteed role — "Be guaranteed a crown prosecutor or advocate role". CAMPAIGN-SPECIFIC, and flagged as such under the distinction the corpus draws at /law-enforcement/when-a-recruitment-requirement-is-campaign-specific: at the time of access the page stated "Applications are now closed". The scheme is therefore cited as a route that EXISTS in this service’s structure, never as a currently open opportunity, and no application step is described. Establishes nothing about whether the scheme recurs, on what cycle, or on what terms.',
+  },
+  /*
+   * WAVE 29 — completing the professions arc: forensic science and emergency call handling.
+   *
+   * The wave's question is where a competence guarantee ATTACHES. Wave 28 established that for
+   * lawyers and judges it attaches to the person, by admission. These sources show two other
+   * answers: in forensic science it attaches to the unit and the method, with the individual
+   * assessed inside it; in emergency call handling it attaches to the employing service, which
+   * trains the person itself.
+   *
+   * REUSE OVER DUPLICATION. `uk-fsr-act-2021` already covers sections 1 to 7 of the Act and
+   * `nl-politie-meldkamer` already covers the Dutch role description, so neither is duplicated
+   * here — the first is cited as it stands and the second has its note extended to record the
+   * entry conditions the same page states.
+   *
+   * ACCESS LIMITATIONS, recorded because they bound what this wave could establish and are not
+   * evidence about the systems concerned: 911.gov returned HTTP 403 to every automated request
+   * across three paths, so the United States is NOT described; ukas.com returned HTTP 403, so
+   * UKAS's role rests on the statutory Code's own statement of it; and the Netherlands Forensic
+   * Institute's own careers page states no qualification, accreditation or competence
+   * requirement, so nothing is drawn from it.
+   */
+  {
+    id: 'uk-fsr-code-of-practice-v2',
+    type: 'government',
+    title: 'Forensic science activities: statutory code of practice — version 2',
+    publisher: 'Forensic Science Regulator (GOV.UK)',
+    url: 'https://www.gov.uk/government/publications/forensic-science-activities-statutory-code-of-practice-version-2/forensic-science-activities-statutory-code-of-practice-version-2-accessible',
+    accessedOn: '2026-09-07',
+    verifiedOn: '2026-09-07',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'GB',
+    note: 'SCOPE: forensic science activities in England and Wales, under the code the Forensic Science Regulator Act 2021 requires. This record exists to fill a gap the corpus declared against itself: /forensics/who-regulates-forensic-science states in its own uncertainty that "accreditation standards themselves — what a laboratory must demonstrate to be accredited — were not researched and are not described", and that page cites neither UKAS nor any ISO standard. Supports the definition of a forensic unit as "a legal entity or part of a legal entity that performs any part of an FSA" which "can be a team, a unit or a single practitioner"; the definition of a practitioner as "any individual who is directly involved in undertaking an FSA"; that the Regulator recognises UKAS as the sole UK national accreditation body and that "Where the Code requires accreditation, UKAS will assess forensic units undertaking FSAs against ISO/IEC 17025:2017, ISO/IEC 17020:2012 or BS EN ISO 15189:2022"; that compliance is demonstrated "by having accreditation to the standard, the Code and the sub-activities of the FSA that the organisation undertakes, on the schedule of accreditation"; that quality management includes "defining, demonstrating and testing the initial and ongoing competence of personnel"; and that "All practitioners are required to declare their compliance to the Code via a declaration in their reports". IMPORTANT LIMIT: accreditation is required for MOST but not all listed activities, and other activities may have alternative compliance routes — so no blanket statement that all forensic work requires accreditation may rest on this record. It states NOTHING about what qualification a person needs to enter forensic science, and nothing about any other country.',
+  },
+  {
+    id: 'nz-police-comms-roles',
+    type: 'government',
+    title: 'Non-sworn careers — role information for Police Communicators',
+    publisher: 'New Zealand Police',
+    url: 'https://www.police.govt.nz/careers/non-sworn-careers/role-information',
+    accessedOn: '2026-09-07',
+    verifiedOn: '2026-09-07',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'NZ',
+    note: 'SCOPE: the communicator roles in New Zealand Police Communications Centres. Supports that the service distinguishes a 105 non-emergency communicator from a 111 emergency communicator; that for the emergency role "The first six weeks of your employment will be fulltime training"; that the role requires "Outstanding communication skills, including excellent written and spoken English" and the capacity to manage shift work; and that "the roster covers 24 hours a day, 365 days including public holidays and weekends". NEGATIVE FINDING, and the comparative point of the record: the page states NO formal educational prerequisite for either role. That absence is reported as an absence and never as a statement that education is irrelevant. Establishes nothing about sworn roles, nothing about selection stages, and nothing about any other country.',
+  },
+  {
+    id: 'nz-police-communications-centres',
+    type: 'government',
+    title: 'Communications Centres',
+    publisher: 'New Zealand Police',
+    url: 'https://www.police.govt.nz/about-us/structure/police-teams-and-units/communications-centres',
+    accessedOn: '2026-09-07',
+    verifiedOn: '2026-09-07',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'NZ',
+    note: 'SCOPE: the Communications Centres of New Zealand Police, the same units named in the teams-and-units list this corpus already cites. Supports the division of labour in the service’s own words: "Communicators find out what’s happening and where, decide on the right police response and send information through to the police dispatchers who are responsible for getting police units on their way." Supports that the centres handle 111 emergency calls and non-emergency calls as separate streams. DELIBERATELY UNUSED: the page names centres in Auckland, Kāpiti, Wellington and Christchurch while also stating a total that does not match that list, so NO count of centres is published from this record and none should be added without re-reading the page. The page states nothing about how staff move between the two roles.',
   },
 ];
 

@@ -1387,4 +1387,403 @@ export const FORENSICS_GUIDES: readonly Guide[] = [
       },
     ],
   },
+  /*
+   * WAVE 29 â completing the professions arc.
+   *
+   * The corpus declared this gap against itself. /forensics/who-regulates-forensic-science says in
+   * its own uncertainty that "accreditation standards themselves â what a laboratory must
+   * demonstrate to be accredited â were not researched and are not described", and it cites
+   * neither UKAS nor any ISO standard. These two pages answer that, and stop where that page
+   * begins: it owns the regulator, the code's legal status and the evidential sanction for a
+   * breach. Nothing here re-describes enforcement.
+   *
+   * The wave's comparative question is where a competence guarantee ATTACHES. For lawyers and
+   * judges it attaches to the person, by admission from a body that can withdraw it. Here it
+   * attaches to a unit and a method, and the individual is assessed inside that â a genuinely
+   * different architecture for the same problem, and the reason these pages sit in the arc.
+   *
+   * SECTION LIMIT, restated because it binds hard: /forensics declares laboratory protocols and
+   * method detail out of scope. These pages describe the STANDARDS FRAMEWORK and say nothing
+   * about how any examination is performed.
+   */
+  {
+    slug: 'what-forensic-accreditation-requires',
+    title: 'What forensic accreditation requires',
+    shortTitle: 'Forensic accreditation',
+    question:
+      'When a forensic laboratory is called "accredited", what has actually been checked?',
+    summary:
+      'Not the laboratory in general. Accreditation is granted against named international standards, for named activities, and it is recorded on a schedule â so the useful question is never whether a unit is accredited but what it is accredited for.',
+    entityType: 'concept',
+    section: 'forensics',
+    jurisdiction: ['GB'],
+    temporalScope: 'current',
+    related: [
+      'who-regulates-forensic-science',
+      'what-forensic-laboratories-do',
+      'how-forensic-competence-is-established',
+      'evidence-integrity-and-admissibility',
+    ],
+    sources: ['uk-fsr-code-of-practice-v2', 'uk-fsr-act-2021', 'uk-fsr-about'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-07',
+    publishedOn: '2026-09-07',
+    reviewedOn: '2026-09-07',
+    factsVerifiedOn: '2026-09-07',
+    readingTimeMinutes: 7,
+    uncertainty: [
+      'One system was researched â England and Wales, under its statutory code. How forensic accreditation works anywhere else was NOT RESEARCHED.',
+      'The ISO standards named here were NOT read. They are cited as the standards the code names, not as documents this platform has examined, and nothing here describes what any of them contains.',
+      'Accreditation is required for most but NOT all of the activities the code lists, and some have alternative routes to demonstrating compliance. Which activities fall where was NOT RESEARCHED, so no blanket claim that forensic work requires accreditation appears here.',
+      'What an accreditation assessment involves in practice, how often it recurs, and what proportion of units hold it were NOT RESEARCHED. The national accreditation bodyâs own pages could not be retrieved â an access limitation, not evidence about the body.',
+      'Whether accreditation improves the quality of forensic work is an empirical question this platform has not researched and does not answer.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Accreditation is a formal statement by an independent body that an organisation has been assessed against a published standard and met it, for specified work. The word is often used as though it were a general certificate of soundness. It is not: it is granted against named standards, for named activities, and recorded in a document that says which.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This describes the accreditation framework a statutory code names in one system. It describes no laboratory procedure, no method and no examination technique, and it assesses the quality of no provider anywhere. Who enforces the code and what follows a breach is [who regulates forensic science](/forensics/who-regulates-forensic-science).',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'A court cannot inspect a laboratory, and neither can the party whose case depends on its result. Somebody has to do that work in advance, against a written standard, so that the question in the courtroom is what the result means rather than whether the laboratory was capable of producing it. Accreditation is that arrangement, and its value is entirely in being external.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Which is why the schedule matters more than the status',
+        text: 'A body assessed for one kind of examination has been assessed for that kind. The scope is written down precisely because "accredited" on its own would otherwise be read as covering everything the organisation does, and it does not.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'The statutory code names a single assessing body and three standards: the Regulator recognises UKAS as the sole national accreditation body, and "Where the Code requires accreditation, UKAS will assess forensic units undertaking FSAs against ISO/IEC 17025:2017, ISO/IEC 17020:2012 or BS EN ISO 15189:2022."',
+        claim: 'fact',
+        sources: ['uk-fsr-code-of-practice-v2'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Three standards, not one, because the activities are not alike',
+        text: 'Testing, inspection and medical laboratory work are assessed under different standards. A framework that named a single standard would be claiming the activities are the same kind of thing, and the code does not claim that.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'What is accredited is a forensic unit, defined as "a legal entity or part of a legal entity that performs any part of an FSA" â and the code is explicit that a unit "can be a team, a unit or a single practitioner".',
+        claim: 'fact',
+        sources: ['uk-fsr-code-of-practice-v2'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'A single person can be a unit, and that is the hinge of the whole design',
+        text: 'It means the framework does not depend on an organisation being large, and it means an individual expert working alone is inside the scheme rather than outside it. It also means "unit" describes a scope of responsibility rather than a building.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Compliance is demonstrated "by having accreditation to the standard, the Code and the sub-activities of the FSA that the organisation undertakes, on the schedule of accreditation". Accreditation is required for most of the activities the code lists, though not all, and some activities have other routes to demonstrating compliance.',
+        claim: 'fact',
+        sources: ['uk-fsr-code-of-practice-v2'],
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'The schedule is the document that says what is covered',
+            description:
+              'Accreditation is recorded against the standard, the code and the sub-activities the organisation actually undertakes. Reading "accredited" without reading the schedule tells you very little.',
+          },
+          {
+            term: 'Not every activity requires it',
+            description:
+              'The code requires accreditation for most listed activities and allows other compliance routes for others. A claim that all forensic work must be accredited would overstate what the code says.',
+          },
+          {
+            term: 'The assessor is external and singular',
+            description:
+              'One body is recognised as the national accreditation body. Assessment by the organisation itself, or by a customer, is a different thing and does not produce accreditation.',
+          },
+          {
+            term: 'The standards are international, the code is domestic',
+            description:
+              'Accreditation runs against ISO standards; the code adds the domestic requirements on top and is itself placed on the schedule. Both have to be satisfied.',
+          },
+          {
+            term: 'And accreditation is about capability, not about a result',
+            description:
+              'It says an organisation was assessed as able to do specified work to a standard. It says nothing about whether a particular examination in a particular case was done correctly, which is a separate question a court has to reach on its own.',
+          },
+        ],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'An accredited laboratory is accredited for everything it does.',
+        reality:
+          'Accreditation is recorded on a schedule naming the standard, the code and the sub-activities the organisation undertakes. The scope is the point of the document, and work outside it is not covered by it.',
+      },
+      {
+        claim: 'All forensic work must be accredited.',
+        reality:
+          'The statutory code researched here requires accreditation for most of the activities it lists but not all of them, and allows other routes to demonstrating compliance for some.',
+      },
+      {
+        claim: 'Accreditation means a result in a particular case is correct.',
+        reality:
+          'It is an assessment of capability against a standard, made in advance. Whether a specific examination was carried out properly is a separate question, and it is not answered by the schedule.',
+      },
+      {
+        claim: 'Only large laboratories can be accredited.',
+        reality:
+          'The code defines a forensic unit as a legal entity or part of one, and states that it can be a team, a unit or a single practitioner. Size is not what the definition turns on.',
+      },
+      {
+        claim: 'Accreditation is the same thing as regulation.',
+        reality:
+          'One is an external assessment against a standard; the other is a statutory scheme with a code and consequences for breaching it. The corpus describes the second separately.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'One statutory framework, as it states itself.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'One recognised national accreditation body â England and Wales.',
+          'Three named international standards, chosen by the kind of activity.',
+          'A forensic unit may be a team, a unit, or a single practitioner.',
+          'Compliance recorded on a schedule naming standard, code and sub-activities.',
+          'Required for most listed activities, not all.',
+          'Not researched: every other country, and what the ISO standards themselves contain.',
+        ],
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'The scope written on a schedule is what allows a party to ask a precise question instead of a rhetorical one. Without it, "the laboratory is accredited" and "the laboratory is not accredited" are both usable as debating points and neither is checkable. With it, the question becomes whether the specific work relied on falls inside the specific scope assessed â which is a question with an answer.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'Who enforces the code and what a breach leads to is [who regulates forensic science](/forensics/who-regulates-forensic-science). How an individual becomes able to do the work is [how forensic competence is established](/forensics/how-forensic-competence-is-established). What laboratories actually do is [what forensic laboratories do](/forensics/what-forensic-laboratories-do).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [who regulates forensic science](/forensics/who-regulates-forensic-science), [how forensic competence is established](/forensics/how-forensic-competence-is-established), and [evidence integrity and admissibility](/forensics/evidence-integrity-and-admissibility).',
+      },
+    ],
+  },
+  {
+    slug: 'how-forensic-competence-is-established',
+    title: 'How forensic competence is established',
+    shortTitle: 'Forensic competence',
+    question: 'A lawyer is admitted by a professional body. Who admits a forensic scientist?',
+    summary:
+      'Nobody, in the same sense. The guarantee attaches to the unit and the activity rather than to the person: competence is defined, demonstrated and tested inside an accredited unit, and the practitioner signs a declaration in the report.',
+    entityType: 'concept',
+    section: 'forensics',
+    jurisdiction: ['GB'],
+    temporalScope: 'current',
+    related: [
+      'what-forensic-accreditation-requires',
+      'expert-evidence-in-court',
+      'who-regulates-forensic-science',
+      'what-qualifying-as-a-lawyer-requires',
+    ],
+    sources: ['uk-fsr-code-of-practice-v2', 'uk-fsr-about'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-07',
+    publishedOn: '2026-09-07',
+    reviewedOn: '2026-09-07',
+    factsVerifiedOn: '2026-09-07',
+    readingTimeMinutes: 7,
+    uncertainty: [
+      'One system was researched â England and Wales. How competence is established in forensic science anywhere else was NOT RESEARCHED.',
+      'What qualification a person needs to ENTER forensic science was NOT ESTABLISHED. The statutory code governs competence for activities; it states no entry requirement, and none is claimed here.',
+      'How competence is defined, demonstrated or tested in practice â what an assessment consists of, who conducts it, how often â was NOT RESEARCHED. The code requires that it happen; this page does not describe how.',
+      'The Netherlands Forensic Instituteâs own careers page states no qualification, accreditation or competence requirement, so nothing is drawn from it. That is an absence in that page, not a finding about the institute.',
+      'Nothing here describes any examination method, protocol or technique. That is outside this section entirely.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Every profession that supplies findings to a court has to answer how anyone knows its people can do the work. The legal professions answer it by admitting individuals. Forensic science, in the system researched here, answers it differently: the assurance is built around the activity and the unit performing it, and the individual is assessed within that arrangement rather than licensed outside it.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This describes how a statutory code frames competence. It is not careers advice, it names no course, qualification provider or employer, and it describes no method or protocol. It does not state what a person needs in order to enter the field, because the source does not.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'Forensic work is not one occupation but many, each turning on a different technique, and a person competent at one may have no standing at all in another. A single admission covering "forensic scientist" would therefore certify something too coarse to be useful. Tying the assurance to activities keeps it at the resolution the work actually has.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'And that is the real difference from the legal professions',
+        text: 'Admission to practise law is general: it authorises a person, once, across a whole field. Competence here is specific and repeated, held against particular activities and tested again over time. The two designs are answers to different shapes of problem, not better and worse versions of one answer.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'The code defines the individual it applies to: a practitioner is "any individual who is directly involved in undertaking an FSA". The obligation therefore reaches people by what they do rather than by a title they hold or an examination they once passed.',
+        claim: 'fact',
+        sources: ['uk-fsr-code-of-practice-v2'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Competence sits inside the quality management the code requires, which includes "defining, demonstrating and testing the initial and ongoing competence of personnel". Initial and ongoing are both named, and so are all three verbs.',
+        claim: 'fact',
+        sources: ['uk-fsr-code-of-practice-v2'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Defining, demonstrating and testing are three separate obligations',
+        text: 'A unit has to say what competence means for the activity, show that a person has it, and check that they still do. A scheme with only the first is a policy; with only the second, an induction. The requirement that it recur is what distinguishes it from a qualification obtained once.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The individual is also made personally visible in the output: "All practitioners are required to declare their compliance to the Code via a declaration in their reports."',
+        claim: 'fact',
+        sources: ['uk-fsr-code-of-practice-v2'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title:
+          'So the person is not absent from the scheme â they are attached to it at the report',
+        text: 'A declaration in a report is where an organisational framework becomes an individual statement. It is the point at which a named person says the work met the code, and the point at which that can later be examined.',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'The unit is accredited; the person is assessed',
+            description:
+              'Accreditation is granted to a forensic unit against named standards. Competence is established for personnel within that, which is a different mechanism with a different assessor.',
+          },
+          {
+            term: 'Competence is activity-specific',
+            description:
+              'It is held against the work being done rather than against the field as a whole. Being competent in one activity establishes nothing about another.',
+          },
+          {
+            term: 'It is ongoing, not once',
+            description:
+              'The code names initial and ongoing competence together. A framework built only on entry would be blind to the case where someone qualified long ago and has not done the work since.',
+          },
+          {
+            term: 'The report carries the individual declaration',
+            description:
+              'Compliance is declared by the practitioner in the report itself, which places a personal statement inside an organisational scheme.',
+          },
+          {
+            term: 'And none of this is an entry qualification',
+            description:
+              'The code governs competence for activities. It says nothing about what a person must have studied to arrive, and this page does not supply an answer the source does not contain.',
+          },
+        ],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Forensic scientists are licensed the way lawyers are admitted.',
+        reality:
+          'In the system researched here the accreditation attaches to a forensic unit and the activity, and competence is defined, demonstrated and tested for personnel within it. There is no general admission of the individual to a profession.',
+      },
+      {
+        claim: 'A degree in forensic science is what authorises casework.',
+        reality:
+          'The statutory code researched here states no entry qualification at all. What it requires is that competence for the specific activity be defined, demonstrated and tested, which is a different thing from a qualification held once.',
+      },
+      {
+        claim: 'Competence is established once, at the start of a career.',
+        reality:
+          'The code names initial and ongoing competence together. The requirement recurs, which is precisely what a qualification obtained once cannot do.',
+      },
+      {
+        claim: 'Because the framework is organisational, no individual is accountable.',
+        reality:
+          'Every practitioner is required to declare compliance with the code in their reports. The scheme places a named personal statement inside the organisational arrangement.',
+      },
+      {
+        claim:
+          'Being a competent forensic scientist means being competent across forensic science.',
+        reality:
+          'The obligation is framed around forensic science activities. Competence is held against the activity being undertaken, and establishes nothing about a different one.',
+      },
+      {
+        claim: 'This page can tell you how to become a forensic scientist.',
+        reality:
+          'It cannot, and it does not try. One system was researched, its code states no entry requirement, and no course, provider or route is named anywhere here.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Where the guarantee attaches, across the professions this corpus has researched.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'To the person, by admission from a body that can withdraw it â solicitors and barristers.',
+          'To the person, by appointment or by entry to a corps â judges and prosecutors.',
+          'To the unit and the activity, with personnel assessed inside it â forensic science, England and Wales.',
+          'Not researched: how forensic competence is established in any other country.',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'A comparison of designs, not of rigour',
+        text: 'Nothing here ranks the arrangements. They answer differently shaped problems: a general professional authority on one side, and work that divides into many techniques on the other.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'Where a guarantee attaches decides what a party can challenge. If competence is personal and general, the question is whether this witness holds it. If it is activity-specific and held inside a unit, the questions multiply: whether the activity was within the accredited scope, whether competence for it was current, and what the declaration in the report actually covers. The second arrangement is harder to summarise and gives more to examine.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'What accreditation covers is [what forensic accreditation requires](/forensics/what-forensic-accreditation-requires). How such evidence is handled in court is [expert evidence in court](/forensics/expert-evidence-in-court). The contrasting design, where admission attaches to the person, is [what qualifying as a lawyer requires](/defence/what-qualifying-as-a-lawyer-requires).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [what forensic accreditation requires](/forensics/what-forensic-accreditation-requires), [expert evidence in court](/forensics/expert-evidence-in-court), and [what qualifying as a lawyer requires](/defence/what-qualifying-as-a-lawyer-requires).',
+      },
+    ],
+  },
 ];
