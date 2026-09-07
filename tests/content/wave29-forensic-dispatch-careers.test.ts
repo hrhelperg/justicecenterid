@@ -232,11 +232,21 @@ describe('this wave does not re-answer what the corpus already owns', () => {
     /*
      * who-regulates-forensic-science owns this: the code is admissible, and a court may take a
      * failure into account. These pages may link to it and may not restate it.
+     *
+     * Mutation W29M9 SURVIVED the first version, and the reason is a design error worth stating.
+     * That version filtered through `asserted()`, which drops any sentence containing a denial —
+     * correct for "does this page NAME a provider", where a denial is the opposite of the
+     * offence. It is wrong here. The mutation inserted "Breaching the code is not an offence, and
+     * the sanction is evidential", which is a verbatim restatement of the neighbouring page's
+     * central finding and contains "not", so the filter removed it before the pattern ran.
+     *
+     * Restating a topic is a violation however it is phrased. These guards therefore read every
+     * sentence. Denial-awareness belongs only where the denial genuinely inverts the meaning.
      */
     const ENFORCEMENT =
-      /\b(?:enforcement action|breaching the code is|is not an offence|admissible in evidence|the court may take .{0,30}into account|sanction)\b/i;
+      /\b(?:enforcement action|breaching the code|is not an offence|admissible in evidence|the court may take .{0,30}into account|the sanction is)\b/i;
     for (const slug of FORENSIC) {
-      const hits = asserted(guide(slug)).filter((s) => ENFORCEMENT.test(s));
+      const hits = sections(assertedText(guide(slug))).filter((s) => ENFORCEMENT.test(s));
       expect(hits, `${slug} restates the enforcement question`).toEqual([]);
     }
   });
@@ -248,10 +258,11 @@ describe('this wave does not re-answer what the corpus already owns', () => {
   });
 
   it('no dispatch page re-answers who is legally in charge in an emergency', () => {
+    /* Every sentence, for the reason given on the enforcement guard above. */
     const COMMAND =
       /\b(?:legally responsible for the response|assumes command|declares? a state of emergency|emergency powers)\b/i;
     for (const slug of DISPATCH) {
-      const hits = asserted(guide(slug)).filter((s) => COMMAND.test(s));
+      const hits = sections(assertedText(guide(slug))).filter((s) => COMMAND.test(s));
       expect(hits, `${slug} drifts into emergency authority`).toEqual([]);
     }
   });
@@ -260,6 +271,65 @@ describe('this wave does not re-answer what the corpus already owns', () => {
 /* -------------------------------------------------------------------------- */
 /* Section limits: method detail, and emergency instructions                  */
 /* -------------------------------------------------------------------------- */
+
+describe('a stated limit is not overstated, and a quotation is not contradicted', () => {
+  it('accreditation is never described as universally required', () => {
+    /*
+     * Found by mutation W29M2. The code requires accreditation for MOST of the activities it
+     * lists, not all, and allows other compliance routes for some. "All forensic work must be
+     * accredited" is the single most likely wrong summary of this material, and the first version
+     * of this suite had no check for it — only a misconception correcting it, which a mutation to
+     * the body text leaves untouched.
+     */
+    const g = guide('what-forensic-accreditation-requires');
+    /*
+     * REFUTATION-AWARE, and the reason is the distinction this wave had to learn twice.
+     *
+     * A guard asking "does the page ASSERT X" must ignore sentences that deny or refute X — this
+     * page says "a claim that all forensic work must be accredited would overstate what the code
+     * says", which is the prohibition, not the offence. A guard asking "does the page DISCUSS X at
+     * all", like the cannibalisation guards above, must NOT ignore them, because a restatement
+     * phrased as a denial is still a restatement. Mutation W29M9 walked through the second kind of
+     * guard built as the first.
+     */
+    const REFUTES =
+      /\b(?:overstate|would be wrong|misreads?|a claim that|is not what|not all)\b/i;
+    const overstated = sections(assertedText(g)).filter(
+      (s) =>
+        /accreditation is required for (?:all|every)|all forensic (?:work|activit).{0,40}(?:must be|require).{0,20}accredit|without exception/i.test(
+          s,
+        ) && !REFUTES.test(s),
+    );
+    expect(overstated, 'the most-but-not-all limit has been overstated').toEqual([]);
+    expect(allText(g), 'the page no longer states the limit at all').toMatch(
+      /most .{0,30}not all|though not all|but not all/i,
+    );
+  });
+
+  it('no requirement is asserted at a level its own quotation contradicts', () => {
+    /*
+     * Found by mutation W29M10, which changed "state a level rather than a subject" into "require
+     * a university degree in a relevant subject" while leaving the quoted "mbo 3 werk- en
+     * denkniveau" in place beside it. Nothing caught it: the quotation was still present and
+     * correctly attributed, and the sentence around it had become false.
+     *
+     * Neither dispatch source states a degree requirement, so a sentence that asserts one is
+     * wrong regardless of what it quotes.
+     */
+    for (const slug of DISPATCH) {
+      const claimsDegree = sections(assertedText(guide(slug))).filter((s) =>
+        /\b(?:require[sd]?|need[s]?|must have)\b[^.]{0,60}\b(?:university degree|bachelor|hbo|higher education qualification)\b/i.test(
+          s,
+        ),
+      );
+      expect(claimsDegree, `${slug} asserts a degree requirement no source states`).toEqual([]);
+    }
+    /* And the Dutch level is still described as a level. */
+    expect(allText(guide('entering-emergency-call-handling'))).toMatch(
+      /a level rather than a subject|mbo 3 werk- en denkniveau/,
+    );
+  });
+});
 
 describe('the section limits are respected', () => {
   it('no forensic page describes a method, protocol or technique', () => {
