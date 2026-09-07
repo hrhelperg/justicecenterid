@@ -1831,7 +1831,7 @@ export const PUBLIC_SAFETY_GUIDES: Guide[] = [
     ],
   },
   /*
-   * WAVE 29 â completing the professions arc.
+   * WAVE 29 — completing the professions arc.
    *
    * The emergency-dispatcher profession record states its own gap in terms: "no country's entry
    * requirements, selection process, training length or working conditions were researched". These
@@ -1841,7 +1841,7 @@ export const PUBLIC_SAFETY_GUIDES: Guide[] = [
    * SECTION LIMIT, which binds hard here. /public-safety declares out of scope "emergency
    * instructions of any kind" and "operational procedures of any public-safety body". These pages
    * describe who is employed to do the work and how two services divide it. They do not describe
-   * how to call, what to say, what happens to a call, or how any centre operates â and a reader in
+   * how to call, what to say, what happens to a call, or how any centre operates — and a reader in
    * an emergency is not an audience these pages address.
    */
   {
@@ -1871,7 +1871,7 @@ export const PUBLIC_SAFETY_GUIDES: Guide[] = [
     factsVerifiedOn: '2026-09-07',
     readingTimeMinutes: 6,
     uncertainty: [
-      'Two services were researched â the Netherlands and New Zealand. What any other service requires was NOT RESEARCHED.',
+      'Two services were researched — the Netherlands and New Zealand. What any other service requires was NOT RESEARCHED.',
       'Selection stages, age conditions and vetting were NOT ESTABLISHED for either service. Both link to separate material that was not read, and no selection process is described here.',
       'One service states NO academic requirement. That is reported as an absence in its published criteria and is NOT a finding that education is irrelevant, nor that nothing is applied at a later stage.',
       'Whether either role is held by civilian staff or by sworn officers was NOT ESTABLISHED for the Netherlands, and is not assumed.',
@@ -1887,7 +1887,7 @@ export const PUBLIC_SAFETY_GUIDES: Guide[] = [
         kind: 'callout',
         variant: 'scope',
         title: 'What this page is and is not',
-        text: 'This describes published entry conditions for one role in two services. It is not a recruitment page, describes no application step, and this platform is not affiliated with any emergency service and accepts no applications. It describes nothing about how to contact emergency services â anyone who needs help should contact their local emergency number directly.',
+        text: 'This describes published entry conditions for one role in two services. It is not a recruitment page, describes no application step, and this platform is not affiliated with any emergency service and accepts no applications. It describes nothing about how to contact emergency services — anyone who needs help should contact their local emergency number directly.',
       },
     ],
     whyItExists: [
@@ -1906,7 +1906,7 @@ export const PUBLIC_SAFETY_GUIDES: Guide[] = [
     howItWorks: [
       {
         kind: 'paragraph',
-        text: 'The Dutch national police state a level rather than a subject: "mbo 3 werk- en denkniveau". The training is explicitly the serviceâs own â "een interne opleiding tot centralist meldkamer (die je van ons krijgt)" â and among the qualities asked for is "stressbestendigheid en mentale weerbaarheid (vanwege de heftige situaties die je kunt meemaken)".',
+        text: 'The Dutch national police state a level rather than a subject: "mbo 3 werk- en denkniveau". The training is explicitly the service’s own — "een interne opleiding tot centralist meldkamer (die je van ons krijgt)" — and among the qualities asked for is "stressbestendigheid en mentale weerbaarheid (vanwege de heftige situaties die je kunt meemaken)".',
         claim: 'fact',
         sources: ['nl-politie-meldkamer'],
       },
@@ -1994,11 +1994,11 @@ export const PUBLIC_SAFETY_GUIDES: Guide[] = [
       {
         kind: 'list',
         items: [
-          'A stated mid-level working and thinking standard, with internal training provided by the service â Netherlands.',
-          'Mental resilience named as a requirement, with the reason given in the same sentence â Netherlands.',
-          'No academic requirement stated, and six weeks of full-time training at the start â New Zealand.',
-          'Separate emergency and non-emergency communicator roles â New Zealand.',
-          'Shift work across every hour of every day, published as an entry condition â New Zealand.',
+          'A stated mid-level working and thinking standard, with internal training provided by the service — Netherlands.',
+          'Mental resilience named as a requirement, with the reason given in the same sentence — Netherlands.',
+          'No academic requirement stated, and six weeks of full-time training at the start — New Zealand.',
+          'Separate emergency and non-emergency communicator roles — New Zealand.',
+          'Shift work across every hour of every day, published as an entry condition — New Zealand.',
           'Not researched: selection stages, age, vetting, pay, and every other service.',
         ],
       },
@@ -2006,7 +2006,7 @@ export const PUBLIC_SAFETY_GUIDES: Guide[] = [
     rightsAndAccountability: [
       {
         kind: 'paragraph',
-        text: 'Who a service is willing to employ on an emergency line is a public question, because the decision taken on that call allocates a scarce response and can determine what happens to someone. Publishing the criteria makes the choice examinable. Naming resilience, and naming why, is a service being candid about a cost the role imposes on the person doing it â which is also the beginning of an argument about what support it owes them.',
+        text: 'Who a service is willing to employ on an emergency line is a public question, because the decision taken on that call allocates a scarce response and can determine what happens to someone. Publishing the criteria makes the choice examinable. Naming resilience, and naming why, is a service being candid about a cost the role imposes on the person doing it — which is also the beginning of an argument about what support it owes them.',
         claim: 'analysis',
       },
       {
@@ -2051,7 +2051,7 @@ export const PUBLIC_SAFETY_GUIDES: Guide[] = [
     readingTimeMinutes: 6,
     uncertainty: [
       'Two services were researched. How any other service divides this work was NOT RESEARCHED.',
-      'How staff move between the two roles where they are separate was NOT ESTABLISHED â the page describing the roles does not say.',
+      'How staff move between the two roles where they are separate was NOT ESTABLISHED — the page describing the roles does not say.',
       'Nothing here describes how a call is handled, what is asked, how an incident is classified or prioritised, or how any centre operates. That is operational detail and is outside this section.',
       'How many centres either service runs is NOT stated here. One source names four locations while also giving a total that does not match them, so no count is published from it.',
       'Response times, workload and outcomes were NOT RESEARCHED.',
@@ -2085,7 +2085,7 @@ export const PUBLIC_SAFETY_GUIDES: Guide[] = [
     howItWorks: [
       {
         kind: 'paragraph',
-        text: 'New Zealand Police describe two roles and the movement between them in one sentence: "Communicators find out whatâs happening and where, decide on the right police response and send information through to the police dispatchers who are responsible for getting police units on their way."',
+        text: 'New Zealand Police describe two roles and the movement between them in one sentence: "Communicators find out what’s happening and where, decide on the right police response and send information through to the police dispatchers who are responsible for getting police units on their way."',
         claim: 'fact',
         sources: ['nz-police-communications-centres'],
       },
@@ -2097,7 +2097,7 @@ export const PUBLIC_SAFETY_GUIDES: Guide[] = [
       },
       {
         kind: 'paragraph',
-        text: 'The Dutch national police describe the regional task as a single role holding both halves: "je neemt de spoedeisende meldingen (112) aan en stuurt de eenheden op straat aan" â taking the emergency reports and directing the units on the street, named together.',
+        text: 'The Dutch national police describe the regional task as a single role holding both halves: "je neemt de spoedeisende meldingen (112) aan en stuurt de eenheden op straat aan" — taking the emergency reports and directing the units on the street, named together.',
         claim: 'fact',
         sources: ['nl-politie-meldkamer'],
       },
@@ -2174,9 +2174,9 @@ export const PUBLIC_SAFETY_GUIDES: Guide[] = [
       {
         kind: 'list',
         items: [
-          'Communicator decides the response, dispatcher gets units moving â New Zealand, two roles.',
-          'Emergency and non-emergency communicators described separately â New Zealand.',
-          'Taking the 112 reports and directing units named as one task â Netherlands.',
+          'Communicator decides the response, dispatcher gets units moving — New Zealand, two roles.',
+          'Emergency and non-emergency communicators described separately — New Zealand.',
+          'Taking the 112 reports and directing units named as one task — Netherlands.',
           'Not researched: how staff move between the roles, and every other service.',
         ],
       },
@@ -2190,7 +2190,7 @@ export const PUBLIC_SAFETY_GUIDES: Guide[] = [
     rightsAndAccountability: [
       {
         kind: 'paragraph',
-        text: 'When something goes wrong on an emergency call, the first question asked afterwards is usually who decided what. That question has a different shape depending on the arrangement: with one role it is about one personâs judgement under pressure, and with two it also includes what passed between them and what did not. Publishing the division is what allows a review, or a bereaved family, to ask the right version of the question.',
+        text: 'When something goes wrong on an emergency call, the first question asked afterwards is usually who decided what. That question has a different shape depending on the arrangement: with one role it is about one person’s judgement under pressure, and with two it also includes what passed between them and what did not. Publishing the division is what allows a review, or a bereaved family, to ask the right version of the question.',
         claim: 'analysis',
       },
       {

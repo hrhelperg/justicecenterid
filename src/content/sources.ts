@@ -5081,7 +5081,7 @@ export const SOURCES: readonly SourceRecord[] = [
     note: 'SCOPE: the categories of vehicle the Dutch police describe. Supports that the police car and van are the ordinary vehicles used for surveillance, responding to 112 calls and traffic checks; that motorcycles are used mainly on motorways and roads outside built-up areas; that the helicopter provides air support to regional units; and that training vehicles are identifiable by secondary blue-and-white striping and the inscription "trainingsvoertuig". The page ALSO describes operational uses of a rapid-intervention vehicle including pursuit and interception; that material is deliberately NOT used, because it describes capability rather than category.',
   },
   /*
-   * WAVE 28 â how the justice professions are entered.
+   * WAVE 28 — how the justice professions are entered.
    *
    * Every source here is INSTITUTIONAL: who may apply, what a system requires, what a training
    * stage consists of, and who decides. None is a course provider, a preparation service, a
@@ -5305,7 +5305,7 @@ export const SOURCES: readonly SourceRecord[] = [
     jurisdiction: 'DE',
     translationStatus: 'not-a-translation',
     authoritativeLanguage: 'de',
-    note: 'SCOPE: Germany, the three sections read directly at their own pages on the official consolidated text; the record’s url is § 30, the section carrying the load-bearing provision. Supports § 28: "Für die Verhandlung und Entscheidung der zur Zuständigkeit der Amtsgerichte gehörenden Strafsachen werden, soweit nicht der Strafrichter entscheidet, bei den Amtsgerichten Schöffengerichte gebildet." Supports § 29(1): "Das Schöffengericht besteht aus dem Richter beim Amtsgericht als Vorsitzenden und zwei Schöffen", and that a second professional judge may be added on the prosecution’s application when the main proceedings are opened. Supports § 30(1), the provision that matters most: Schöffen exercise during the Hauptverhandlung "das Richteramt in vollem Umfang und mit gleichem Stimmrecht wie die Richter". Supports § 30(2), the limit on that: decisions required OUTSIDE the main hearing are taken by the professional judge alone. Establishes nothing about how Schöffen are selected, nothing about courts above the Amtsgericht, and nothing about any other country.',
+    note: 'SCOPE: Germany, the three sections read directly at their own pages on the official consolidated text; the record’s url is § 30, the section carrying the load-bearing provision. Supports § 28: "Für die Verhandlung und Entscheidung der zur Zuständigkeit der Amtsgerichte gehörenden Strafsachen werden, soweit nicht der Strafrichter entscheidet, bei den Amtsgerichten Schöffengerichte gebildet." Supports § 29(1): "Das Schöffengericht besteht aus dem Richter beim Amtsgericht als Vorsitzenden und zwei Schöffen.", and that a second professional judge may be added on the prosecution’s application when the main proceedings are opened. Supports § 30(1), the provision that matters most: Schöffen exercise during the Hauptverhandlung "das Richteramt in vollem Umfang und mit gleichem Stimmrecht wie die Richter". Supports § 30(2), the limit on that: decisions required OUTSIDE the main hearing are taken by the professional judge alone. Establishes nothing about how Schöffen are selected, nothing about courts above the Amtsgericht, and nothing about any other country.',
   },
   {
     id: 'ew-juries-act-1974-s1',

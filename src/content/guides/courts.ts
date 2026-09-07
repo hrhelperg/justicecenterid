@@ -3439,13 +3439,13 @@ export const COURTS_GUIDES: readonly Guide[] = [
     ],
   },
   /*
-   * WAVE 30 â lay participation in judging.
+   * WAVE 30 — lay participation in judging.
    *
    * The corpus leaned on this concept in sixteen files before it had a page for it. This section's
    * own variationNote names "the use of juries or lay judges" as a principal axis of variation;
    * the Austria dossier states lay participation is constitutionally required; the Japan dossier
    * has to tell readers the saiban-in system is "not a jury". The glossary held no entry for lay
-   * judge, assessor, SchÃ¶ffe or saiban-in. These four pages give fifty-three existing sentences
+   * judge, assessor, Schöffe or saiban-in. These four pages give fifty-three existing sentences
    * something to link to.
    *
    * TWO DISCIPLINES BIND HARDER HERE THAN THE SUBJECT SUGGESTS.
@@ -3469,10 +3469,17 @@ export const COURTS_GUIDES: readonly Guide[] = [
     shortTitle: 'Lay participation',
     question: 'Why do people who are not lawyers decide criminal cases?',
     summary:
-      'Because most systems decided that some decisions should not belong to professionals alone. There are two ways of arranging it, and only one of them is a jury â the other seats lay members on the bench beside the judges.',
+      'Because most systems decided that some decisions should not belong to professionals alone. There are two ways of arranging it, and only one of them is a jury — the other seats lay members on the bench beside the judges.',
     entityType: 'concept',
     section: 'courts',
-    jurisdiction: ['DE', 'JP', 'GB'],
+    /*
+     * DE, JP and US — the three systems this page actually cites. It declared GB for a while,
+     * which was wrong in both directions: no England and Wales source is cited here (that system
+     * is the eligibility page's), and the Sixth Amendment source that IS cited is American.
+     * Adversarial QA found it by comparing each page's declared jurisdictions against the
+     * jurisdictions its own sources carry.
+     */
+    jurisdiction: ['DE', 'JP', 'US'],
     temporalScope: 'current',
     related: [
       'how-a-lay-court-is-composed',
@@ -3495,7 +3502,7 @@ export const COURTS_GUIDES: readonly Guide[] = [
     factsVerifiedOn: '2026-09-07',
     readingTimeMinutes: 7,
     uncertainty: [
-      'Three systems were researched â Germany, Japan, and England and Wales. How lay participation is arranged anywhere else was NOT RESEARCHED, and arrangements differ substantially even within each family described here.',
+      'Three systems are cited on this page — Germany, Japan and the United States. England and Wales is researched only for eligibility, on a separate page. How lay participation is arranged anywhere else was NOT RESEARCHED, and arrangements differ substantially even within each family described here.',
       'Austria could NOT be researched this wave. Its constitution requires lay participation, but the official legal-information system returned HTTP 503 to every automated request, so no Austrian provision is quoted or relied on. That is an access limitation and not evidence about Austrian arrangements.',
       'Whether lay participation produces better, worse or different outcomes than professional judging alone is an empirical question this platform has NOT researched and does not answer.',
       'How lay members are selected, summoned, excused or replaced was NOT RESEARCHED for any system.',
@@ -3529,7 +3536,7 @@ export const COURTS_GUIDES: readonly Guide[] = [
     howItWorks: [
       {
         kind: 'paragraph',
-        text: 'Germany builds lay participation into the ordinary criminal courts by statute: "FÃ¼r die Verhandlung und Entscheidung der zur ZustÃ¤ndigkeit der Amtsgerichte gehÃ¶renden Strafsachen werden, soweit nicht der Strafrichter entscheidet, bei den Amtsgerichten SchÃ¶ffengerichte gebildet." Lay courts are formed for the criminal business of the local courts, except where a single professional judge decides.',
+        text: 'Germany builds lay participation into the ordinary criminal courts by statute: "Für die Verhandlung und Entscheidung der zur Zuständigkeit der Amtsgerichte gehörenden Strafsachen werden, soweit nicht der Strafrichter entscheidet, bei den Amtsgerichten Schöffengerichte gebildet." Lay courts are formed for the criminal business of the local courts, except where a single professional judge decides.',
         claim: 'fact',
         sources: ['de-gvg-schoeffengericht'],
       },
@@ -3573,7 +3580,7 @@ export const COURTS_GUIDES: readonly Guide[] = [
           {
             term: 'The names are not interchangeable',
             description:
-              'SchÃ¶ffen, saiban-in and lay assessors are members of a mixed bench. Calling any of them a jury describes an arrangement their systems do not have.',
+              'Schöffen, saiban-in and lay assessors are members of a mixed bench. Calling any of them a jury describes an arrangement their systems do not have.',
           },
           {
             term: 'Lay participation can be the ordinary case or the exceptional one',
@@ -3623,9 +3630,9 @@ export const COURTS_GUIDES: readonly Guide[] = [
       {
         kind: 'list',
         items: [
-          'Lay courts formed for the criminal business of the local courts, except where a single judge decides â Germany.',
-          'A mixed panel of professional judges and lay judges for certain serious cases, since 2009 â Japan.',
-          'Trial by an impartial jury entrenched in the constitution â United States.',
+          'Lay courts formed for the criminal business of the local courts, except where a single judge decides — Germany.',
+          'A mixed panel of professional judges and lay judges for certain serious cases, since 2009 — Japan.',
+          'Trial by an impartial jury entrenched in the constitution — United States.',
           'Not researched: Austria, whose constitution requires lay participation but whose official texts could not be reached this wave, and every other country.',
         ],
       },
@@ -3662,7 +3669,7 @@ export const COURTS_GUIDES: readonly Guide[] = [
     shortTitle: 'Composition',
     question: 'When lay people sit with judges, how many of each are there?',
     summary:
-      'In both mixed systems researched here, the lay members outnumber the professionals two to one â one judge with two lay judges, and three judges with six. The ratio is written into statute, not left to practice.',
+      'In both mixed systems researched here, the lay members outnumber the professionals two to one — one judge with two lay judges, and three judges with six. The ratio is written into statute, not left to practice.',
     entityType: 'concept',
     section: 'courts',
     jurisdiction: ['DE', 'JP'],
@@ -3698,7 +3705,7 @@ export const COURTS_GUIDES: readonly Guide[] = [
         kind: 'callout',
         variant: 'scope',
         title: 'What this page is and is not',
-        text: 'This describes statutory composition in two systems. It says nothing about how a panel deliberates, how members are assigned to a case, or how any decision is actually reached â and it publishes no jury size, because none was sourced.',
+        text: 'This describes statutory composition in two systems. It says nothing about how a panel deliberates, how members are assigned to a case, or how any decision is actually reached — and it publishes no jury size, because none was sourced.',
       },
     ],
     whyItExists: [
@@ -3717,7 +3724,7 @@ export const COURTS_GUIDES: readonly Guide[] = [
     howItWorks: [
       {
         kind: 'paragraph',
-        text: 'Germany states the composition in a single sentence: "Das SchÃ¶ffengericht besteht aus dem Richter beim Amtsgericht als Vorsitzenden und zwei SchÃ¶ffen." One professional judge presides, and two lay judges sit with them. A second professional judge may be added on the prosecutionâs application when the main proceedings are opened.',
+        text: 'Germany states the composition in a single sentence: "Das Schöffengericht besteht aus dem Richter beim Amtsgericht als Vorsitzenden und zwei Schöffen." One professional judge presides, and two lay judges sit with them. A second professional judge may be added on the prosecution’s application when the main proceedings are opened.',
         claim: 'fact',
         sources: ['de-gvg-schoeffengericht'],
       },
@@ -3737,7 +3744,7 @@ export const COURTS_GUIDES: readonly Guide[] = [
         kind: 'callout',
         variant: 'analysis',
         title: 'Two systems, two scales, one ratio',
-        text: 'One judge to two lay judges, and three judges to six. The panels differ in size by a factor of three and land on exactly the same proportion â and the reduced Japanese panel, at one to four, goes further still. Whatever else these systems disagree about, they agree that lay members should outnumber professionals.',
+        text: 'One judge to two lay judges, and three judges to six. The panels differ in size by a factor of three and land on exactly the same proportion — and the reduced Japanese panel, at one to four, goes further still. Whatever else these systems disagree about, they agree that lay members should outnumber professionals.',
       },
       {
         kind: 'definitionList',
@@ -3760,7 +3767,7 @@ export const COURTS_GUIDES: readonly Guide[] = [
           {
             term: 'Composition can be varied by application',
             description:
-              'One system permits a second professional judge to be added when the main proceedings are opened, on the prosecutionâs application. The default is not always the final arrangement.',
+              'One system permits a second professional judge to be added when the main proceedings are opened, on the prosecution’s application. The default is not always the final arrangement.',
           },
           {
             term: 'And a separate lay body raises none of these questions',
@@ -3774,7 +3781,7 @@ export const COURTS_GUIDES: readonly Guide[] = [
       {
         claim: 'Lay members are a minority alongside the professional judges.',
         reality:
-          'In both mixed systems researched here they outnumber the professionals two to one â one judge with two lay judges, and three judges with six.',
+          'In both mixed systems researched here they outnumber the professionals two to one — one judge with two lay judges, and three judges with six.',
       },
       {
         claim: 'A bigger panel means a bigger professional presence.',
@@ -3805,10 +3812,10 @@ export const COURTS_GUIDES: readonly Guide[] = [
       {
         kind: 'list',
         items: [
-          'One professional judge presiding with two lay judges â Germany, at the local courts.',
-          'A second professional judge may be added on the prosecutionâs application â Germany.',
-          'Three judges and six lay judges â Japan.',
-          'One judge and four lay judges, in specified circumstances â Japan.',
+          'One professional judge presiding with two lay judges — Germany, at the local courts.',
+          'A second professional judge may be added on the prosecution’s application — Germany.',
+          'Three judges and six lay judges — Japan.',
+          'One judge and four lay judges, in specified circumstances — Japan.',
           'Not researched: jury size in the separate-body family, and every other system.',
         ],
       },
@@ -3839,7 +3846,7 @@ export const COURTS_GUIDES: readonly Guide[] = [
     shortTitle: 'What lay judges decide',
     question: 'Do lay members of a court decide guilt only, or the sentence as well?',
     summary:
-      'One system gives them the judgeâs office in full and with an equal vote â but only while the hearing lasts. Another has them decide fact, law and sentence together with the professionals. Neither is limited to the verdict.',
+      'One system gives them the judge’s office in full and with an equal vote — but only while the hearing lasts. Another has them decide fact, law and sentence together with the professionals. Neither is limited to the verdict.',
     entityType: 'concept',
     section: 'courts',
     jurisdiction: ['DE', 'JP'],
@@ -3862,14 +3869,14 @@ export const COURTS_GUIDES: readonly Guide[] = [
     uncertainty: [
       'Two mixed-panel systems were researched. What lay members decide anywhere else was NOT RESEARCHED.',
       'What a jury decides in the separate-body family, and how that work divides with the judge, was NOT RESEARCHED and is not described. The sources read here are statutes about mixed panels.',
-      'How a panel actually reaches a decision â deliberation, voting thresholds, the sequence of a discussion â was NOT RESEARCHED for either system.',
+      'How a panel actually reaches a decision — deliberation, voting thresholds, the sequence of a discussion — was NOT RESEARCHED for either system.',
       'Whether the equal vote one statute confers translates into equal influence was NOT ESTABLISHED, and could not be established from a statute.',
       'Nothing here describes any individual case or outcome.',
     ],
     definition: [
       {
         kind: 'paragraph',
-        text: 'Sitting on a court and deciding a case are not the same entitlement. A system that seats lay members has to say what they may decide â whether they reach the verdict, whether they touch the sentence, and whether their vote counts equally with a judgeâs. The two systems researched here answer generously, and one attaches a sharp limit.',
+        text: 'Sitting on a court and deciding a case are not the same entitlement. A system that seats lay members has to say what they may decide — whether they reach the verdict, whether they touch the sentence, and whether their vote counts equally with a judge’s. The two systems researched here answer generously, and one attaches a sharp limit.',
       },
       {
         kind: 'callout',
@@ -3881,7 +3888,7 @@ export const COURTS_GUIDES: readonly Guide[] = [
     whyItExists: [
       {
         kind: 'paragraph',
-        text: 'A lay member who may decide guilt but not sentence has been given the part of the job that requires no legal training and kept away from the part that does. That is a defensible division, and it is also a way of confining lay judgement to where it is least consequential â a sentence is what actually happens to a person. Where a system draws that line says what it thinks lay participation is for.',
+        text: 'A lay member who may decide guilt but not sentence has been given the part of the job that requires no legal training and kept away from the part that does. That is a defensible division, and it is also a way of confining lay judgement to where it is least consequential — a sentence is what actually happens to a person. Where a system draws that line says what it thinks lay participation is for.',
         claim: 'analysis',
       },
       {
@@ -3894,7 +3901,7 @@ export const COURTS_GUIDES: readonly Guide[] = [
     howItWorks: [
       {
         kind: 'paragraph',
-        text: 'Germany does not divide the office. During the main hearing the lay judges exercise "das Richteramt in vollem Umfang und mit gleichem Stimmrecht wie die Richter" â the judicial office in full, with the same voting right as the professional judges â and they take part in decisions made during the hearing including those not concerned with the verdict itself.',
+        text: 'Germany does not divide the office. During the main hearing the lay judges exercise "das Richteramt in vollem Umfang und mit gleichem Stimmrecht wie die Richter" — the judicial office in full, with the same voting right as the professional judges — and they take part in decisions made during the hearing including those not concerned with the verdict itself.',
         claim: 'fact',
         sources: ['de-gvg-schoeffengericht'],
       },
@@ -3914,7 +3921,7 @@ export const COURTS_GUIDES: readonly Guide[] = [
         kind: 'callout',
         variant: 'analysis',
         title: 'So the equality is real and it is bounded by the courtroom',
-        text: 'Everything decided while the hearing is running is decided by all of them equally. Everything decided before or after is the professional judgeâs. The lay judges are full members of a court that exists only when it is sitting, which is a much more specific arrangement than "lay people help decide".',
+        text: 'Everything decided while the hearing is running is decided by all of them equally. Everything decided before or after is the professional judge’s. The lay judges are full members of a court that exists only when it is sitting, which is a much more specific arrangement than "lay people help decide".',
       },
       {
         kind: 'paragraph',
@@ -3966,7 +3973,7 @@ export const COURTS_GUIDES: readonly Guide[] = [
           'That describes neither system researched here. One confers the judicial office in full with an equal vote during the hearing; the other names sentencing among the decisions lay judges take part in.',
       },
       {
-        claim: 'A lay judgeâs view is advisory.',
+        claim: 'A lay judge’s view is advisory.',
         reality:
           'One statute states that lay judges exercise the judicial office during the main hearing with the same voting right as the professional judges. Where a system means this, it says so in terms.',
       },
@@ -3994,9 +4001,9 @@ export const COURTS_GUIDES: readonly Guide[] = [
       {
         kind: 'list',
         items: [
-          'The judicial office in full, with the same voting right as the professional judges, during the main hearing â Germany.',
-          'Decisions required outside the main hearing taken by the professional judge alone â Germany.',
-          'Fact finding, application of laws and regulations, and sentencing â Japan.',
+          'The judicial office in full, with the same voting right as the professional judges, during the main hearing — Germany.',
+          'Decisions required outside the main hearing taken by the professional judge alone — Germany.',
+          'Fact finding, application of laws and regulations, and sentencing — Japan.',
           'Not researched: what a jury decides, and every other system.',
         ],
       },
@@ -4004,7 +4011,7 @@ export const COURTS_GUIDES: readonly Guide[] = [
     rightsAndAccountability: [
       {
         kind: 'paragraph',
-        text: 'What lay members are entitled to decide is the honest measure of how seriously a system takes lay participation, because it is the part that cannot be satisfied by appearances. Seating people is easy. Giving them the same vote as a professional judge, and letting that vote reach the sentence, transfers real authority to people who are not accountable in any of the ways a judge is â and systems that do it have accepted that trade deliberately.',
+        text: 'What lay members are entitled to decide is the honest measure of how seriously a system takes lay participation, because it is the part that cannot be satisfied by appearances. Seating people is easy. Giving them the same vote as a professional judge, and letting that vote reach the sentence, transfers real authority to people who are not accountable in any of the ways a judge is — and systems that do it have accepted that trade deliberately.',
         claim: 'analysis',
       },
       {
@@ -4025,9 +4032,9 @@ export const COURTS_GUIDES: readonly Guide[] = [
     slug: 'who-may-serve-on-a-lay-court',
     title: 'Who may serve on a lay court',
     shortTitle: 'Who may serve',
-    question: 'Who is allowed to be called to decide someone elseâs case?',
+    question: 'Who is allowed to be called to decide someone else’s case?',
     summary:
-      'In the one system researched, the answer is tied to the electoral roll and bounded at both ends: eighteen or over but under seventy-six, with five yearsâ residence counted from the age of thirteen.',
+      'In the one system researched, the answer is tied to the electoral roll and bounded at both ends: eighteen or over but under seventy-six, with five years’ residence counted from the age of thirteen.',
     entityType: 'concept',
     section: 'courts',
     jurisdiction: ['GB'],
@@ -4048,7 +4055,7 @@ export const COURTS_GUIDES: readonly Guide[] = [
     factsVerifiedOn: '2026-09-07',
     readingTimeMinutes: 6,
     uncertainty: [
-      'One system was researched â England and Wales, and only the qualification section of one Act. Scotland and Northern Ireland have separate arrangements and are NOT described.',
+      'One system was researched — England and Wales, and only the qualification section of one Act. Scotland and Northern Ireland have separate arrangements and are NOT described.',
       'The disqualifications are set out in a Schedule that was NOT READ. This page therefore describes who is qualified and does not describe who is disqualified.',
       'Eligibility for the mixed-panel systems described elsewhere in this cluster was NOT RESEARCHED. Nothing here establishes who may serve as a lay judge in Germany or Japan.',
       'How jurors are summoned, selected for a particular case, excused or deferred was NOT RESEARCHED, and no step a person might take is described.',
@@ -4057,7 +4064,7 @@ export const COURTS_GUIDES: readonly Guide[] = [
     definition: [
       {
         kind: 'paragraph',
-        text: 'A system that puts lay people into judging has to say which lay people. The answer is a definition of the public for this purpose, and it is made of ordinary administrative facts â a register, an age band, a period of residence â that together decide whose judgement counts.',
+        text: 'A system that puts lay people into judging has to say which lay people. The answer is a definition of the public for this purpose, and it is made of ordinary administrative facts — a register, an age band, a period of residence — that together decide whose judgement counts.',
       },
       {
         kind: 'callout',
@@ -4076,13 +4083,13 @@ export const COURTS_GUIDES: readonly Guide[] = [
         kind: 'callout',
         variant: 'analysis',
         title: 'And choosing the electoral register is a choice about who the public is',
-        text: 'Tying service to the roll of electors makes jury service an incident of the franchise. Whoever is missing from the register is missing from the jury, and the two questions stop being separable â which is a consequence of the design rather than an accident of it.',
+        text: 'Tying service to the roll of electors makes jury service an incident of the franchise. Whoever is missing from the register is missing from the jury, and the two questions stop being separable — which is a consequence of the design rather than an accident of it.',
       },
     ],
     howItWorks: [
       {
         kind: 'paragraph',
-        text: 'The qualifying conditions in England and Wales are stated together. A person is qualified if "registered as a parliamentary or local government elector and aged eighteen or over but under seventy six", and "ordinarily resident in the United Kingdom, the Channel Islands or the Isle of Man for any period of at least five years since attaining the age of thirteen" â and is not disqualified.',
+        text: 'The qualifying conditions in England and Wales are stated together. A person is qualified if "registered as a parliamentary or local government elector and aged eighteen or over but under seventy six", and "ordinarily resident in the United Kingdom, the Channel Islands or the Isle of Man for any period of at least five years since attaining the age of thirteen" — and is not disqualified.',
         claim: 'fact',
         sources: ['ew-juries-act-1974-s1'],
       },
@@ -4139,7 +4146,7 @@ export const COURTS_GUIDES: readonly Guide[] = [
       {
         claim: 'Anyone over eighteen can be called for jury service.',
         reality:
-          'The qualifying conditions researched here also require registration as an elector, an upper age limit of under seventy-six, and a residence condition â and a qualified person must additionally not be disqualified.',
+          'The qualifying conditions researched here also require registration as an elector, an upper age limit of under seventy-six, and a residence condition — and a qualified person must additionally not be disqualified.',
       },
       {
         claim: 'You have to be living in the country now to qualify.',
@@ -4164,7 +4171,7 @@ export const COURTS_GUIDES: readonly Guide[] = [
       {
         claim: 'This page tells you what to do if you are summoned.',
         reality:
-          'It does not, and it will not. Summons, excusal and deferral were not researched, and advice about anyoneâs own position is outside what this platform provides.',
+          'It does not, and it will not. Summons, excusal and deferral were not researched, and advice about anyone’s own position is outside what this platform provides.',
       },
     ],
     variation: [
@@ -4175,7 +4182,7 @@ export const COURTS_GUIDES: readonly Guide[] = [
       {
         kind: 'list',
         items: [
-          'Registered as a parliamentary or local government elector â England and Wales.',
+          'Registered as a parliamentary or local government elector — England and Wales.',
           'Aged eighteen or over but under seventy-six.',
           'Ordinarily resident for at least five years at some period since the age of thirteen.',
           'Not disqualified, the disqualifications being in a Schedule not read here.',

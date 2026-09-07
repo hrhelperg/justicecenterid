@@ -416,6 +416,74 @@ describe('sourcing', () => {
   });
 });
 
+/*
+ * A corpus-wide encoding guard, added after adversarial QA found that the previous wave had
+ * shipped corrupted text to production and this one was about to add more.
+ *
+ * The cause was a text-processing step that re-decoded UTF-8 bytes as latin-1, which turns an em
+ * dash into "â" followed by two control characters and an apostrophe into the same shape. Ninety
+ * such sequences existed across four files, thirty-three of them in rendered content already
+ * merged and live.
+ *
+ * It survived every existing check because nothing looks at characters. Tests assert what text
+ * says, not that it is well-formed; prettier, eslint and tsc all treat the bytes as valid strings,
+ * because they are — they simply spell the wrong characters. A spot-check for the cp1252 form of
+ * the corruption ("Ã¶") also missed it, because latin-1 decoding produces raw control characters
+ * instead.
+ *
+ * Characters U+0080–U+009F are C1 controls. They have no business in prose in any language, so
+ * their presence is a reliable, language-independent signal that text was decoded wrongly.
+ */
+describe('no content is character-corrupted', () => {
+  const C1 = /[\u0080-\u009F]/;
+  const MOJIBAKE = /[âÃ][\u0080-\u009F]/;
+
+  const everyString = (): { where: string; text: string }[] => {
+    const out: { where: string; text: string }[] = [];
+    const walk = (label: string, value: unknown): void => {
+      if (typeof value === 'string') out.push({ where: label, text: value });
+      else if (Array.isArray(value)) value.forEach((v, i) => walk(`${label}[${i}]`, v));
+      else if (value && typeof value === 'object')
+        for (const [k, v] of Object.entries(value)) walk(`${label}.${k}`, v);
+    };
+    ALL_GUIDES.forEach((g) => walk(`guide:${g.slug}`, g));
+    SOURCES.forEach((s) => walk(`source:${s.id}`, s));
+    COUNTRY_DOSSIERS.forEach((d) => walk(`dossier:${d.slug}`, d));
+    return out;
+  };
+
+  const STRINGS = everyString();
+
+  it('is not vacuous — it walks a large corpus that does use accented text', () => {
+    expect(STRINGS.length).toBeGreaterThan(5000);
+    expect(STRINGS.filter((s) => /[À-ÿ]/.test(s.text)).length).toBeGreaterThan(50);
+  });
+
+  it('contains no C1 control characters', () => {
+    const offenders = STRINGS.filter((s) => C1.test(s.text)).map(
+      (s) => `${s.where}: ${s.text.slice(0, 100)}`,
+    );
+    expect(offenders).toEqual([]);
+  });
+
+  it('contains no latin-1 mojibake signature', () => {
+    const offenders = STRINGS.filter((s) => MOJIBAKE.test(s.text)).map(
+      (s) => `${s.where}: ${s.text.slice(0, 100)}`,
+    );
+    expect(offenders).toEqual([]);
+  });
+
+  it('the em dash and the typographic apostrophe still render as themselves', () => {
+    /*
+     * The repair has to have restored the characters, not merely removed the broken ones. If a
+     * later fix strips punctuation instead of decoding it, this fails.
+     */
+    const joined = STRINGS.map((s) => s.text).join('');
+    expect(joined).toContain('—');
+    expect(joined).toContain('’');
+  });
+});
+
 describe('the cluster is joined to the corpus', () => {
   it('pages that predate this wave link into it', () => {
     const NEW_PATHS = WAVE_30.map((s) => guidePath(guide(s)));

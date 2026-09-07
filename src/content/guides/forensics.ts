@@ -1388,18 +1388,18 @@ export const FORENSICS_GUIDES: readonly Guide[] = [
     ],
   },
   /*
-   * WAVE 29 â completing the professions arc.
+   * WAVE 29 — completing the professions arc.
    *
    * The corpus declared this gap against itself. /forensics/who-regulates-forensic-science says in
-   * its own uncertainty that "accreditation standards themselves â what a laboratory must
-   * demonstrate to be accredited â were not researched and are not described", and it cites
+   * its own uncertainty that "accreditation standards themselves — what a laboratory must
+   * demonstrate to be accredited — were not researched and are not described", and it cites
    * neither UKAS nor any ISO standard. These two pages answer that, and stop where that page
    * begins: it owns the regulator, the code's legal status and the evidential sanction for a
    * breach. Nothing here re-describes enforcement.
    *
    * The wave's comparative question is where a competence guarantee ATTACHES. For lawyers and
    * judges it attaches to the person, by admission from a body that can withdraw it. Here it
-   * attaches to a unit and a method, and the individual is assessed inside that â a genuinely
+   * attaches to a unit and a method, and the individual is assessed inside that — a genuinely
    * different architecture for the same problem, and the reason these pages sit in the arc.
    *
    * SECTION LIMIT, restated because it binds hard: /forensics declares laboratory protocols and
@@ -1413,7 +1413,7 @@ export const FORENSICS_GUIDES: readonly Guide[] = [
     question:
       'When a forensic laboratory is called "accredited", what has actually been checked?',
     summary:
-      'Not the laboratory in general. Accreditation is granted against named international standards, for named activities, and it is recorded on a schedule â so the useful question is never whether a unit is accredited but what it is accredited for.',
+      'Not the laboratory in general. Accreditation is granted against named international standards, for named activities, and it is recorded on a schedule — so the useful question is never whether a unit is accredited but what it is accredited for.',
     entityType: 'concept',
     section: 'forensics',
     jurisdiction: ['GB'],
@@ -1434,10 +1434,10 @@ export const FORENSICS_GUIDES: readonly Guide[] = [
     factsVerifiedOn: '2026-09-07',
     readingTimeMinutes: 7,
     uncertainty: [
-      'One system was researched â England and Wales, under its statutory code. How forensic accreditation works anywhere else was NOT RESEARCHED.',
+      'One system was researched — England and Wales, under its statutory code. How forensic accreditation works anywhere else was NOT RESEARCHED.',
       'The ISO standards named here were NOT read. They are cited as the standards the code names, not as documents this platform has examined, and nothing here describes what any of them contains.',
       'Accreditation is required for most but NOT all of the activities the code lists, and some have alternative routes to demonstrating compliance. Which activities fall where was NOT RESEARCHED, so no blanket claim that forensic work requires accreditation appears here.',
-      'What an accreditation assessment involves in practice, how often it recurs, and what proportion of units hold it were NOT RESEARCHED. The national accreditation bodyâs own pages could not be retrieved â an access limitation, not evidence about the body.',
+      'What an accreditation assessment involves in practice, how often it recurs, and what proportion of units hold it were NOT RESEARCHED. The national accreditation body’s own pages could not be retrieved — an access limitation, not evidence about the body.',
       'Whether accreditation improves the quality of forensic work is an empirical question this platform has not researched and does not answer.',
     ],
     definition: [
@@ -1480,7 +1480,7 @@ export const FORENSICS_GUIDES: readonly Guide[] = [
       },
       {
         kind: 'paragraph',
-        text: 'What is accredited is a forensic unit, defined as "a legal entity or part of a legal entity that performs any part of an FSA" â and the code is explicit that a unit "can be a team, a unit or a single practitioner".',
+        text: 'What is accredited is a forensic unit, defined as "a legal entity or part of a legal entity that performs any part of an FSA" — and the code is explicit that a unit "can be a team, a unit or a single practitioner".',
         claim: 'fact',
         sources: ['uk-fsr-code-of-practice-v2'],
       },
@@ -1562,7 +1562,7 @@ export const FORENSICS_GUIDES: readonly Guide[] = [
       {
         kind: 'list',
         items: [
-          'One recognised national accreditation body â England and Wales.',
+          'One recognised national accreditation body — England and Wales.',
           'Three named international standards, chosen by the kind of activity.',
           'A forensic unit may be a team, a unit, or a single practitioner.',
           'Compliance recorded on a schedule naming standard, code and sub-activities.',
@@ -1574,7 +1574,7 @@ export const FORENSICS_GUIDES: readonly Guide[] = [
     rightsAndAccountability: [
       {
         kind: 'paragraph',
-        text: 'The scope written on a schedule is what allows a party to ask a precise question instead of a rhetorical one. Without it, "the laboratory is accredited" and "the laboratory is not accredited" are both usable as debating points and neither is checkable. With it, the question becomes whether the specific work relied on falls inside the specific scope assessed â which is a question with an answer.',
+        text: 'The scope written on a schedule is what allows a party to ask a precise question instead of a rhetorical one. Without it, "the laboratory is accredited" and "the laboratory is not accredited" are both usable as debating points and neither is checkable. With it, the question becomes whether the specific work relied on falls inside the specific scope assessed — which is a question with an answer.',
         claim: 'analysis',
       },
       {
@@ -1618,10 +1618,10 @@ export const FORENSICS_GUIDES: readonly Guide[] = [
     factsVerifiedOn: '2026-09-07',
     readingTimeMinutes: 7,
     uncertainty: [
-      'One system was researched â England and Wales. How competence is established in forensic science anywhere else was NOT RESEARCHED.',
+      'One system was researched — England and Wales. How competence is established in forensic science anywhere else was NOT RESEARCHED.',
       'What qualification a person needs to ENTER forensic science was NOT ESTABLISHED. The statutory code governs competence for activities; it states no entry requirement, and none is claimed here.',
-      'How competence is defined, demonstrated or tested in practice â what an assessment consists of, who conducts it, how often â was NOT RESEARCHED. The code requires that it happen; this page does not describe how.',
-      'The Netherlands Forensic Instituteâs own careers page states no qualification, accreditation or competence requirement, so nothing is drawn from it. That is an absence in that page, not a finding about the institute.',
+      'How competence is defined, demonstrated or tested in practice — what an assessment consists of, who conducts it, how often — was NOT RESEARCHED. The code requires that it happen; this page does not describe how.',
+      'The Netherlands Forensic Institute’s own careers page states no qualification, accreditation or competence requirement, so nothing is drawn from it. That is an absence in that page, not a finding about the institute.',
       'Nothing here describes any examination method, protocol or technique. That is outside this section entirely.',
     ],
     definition: [
@@ -1678,7 +1678,7 @@ export const FORENSICS_GUIDES: readonly Guide[] = [
         kind: 'callout',
         variant: 'analysis',
         title:
-          'So the person is not absent from the scheme â they are attached to it at the report',
+          'So the person is not absent from the scheme — they are attached to it at the report',
         text: 'A declaration in a report is where an organisational framework becomes an individual statement. It is the point at which a named person says the work met the code, and the point at which that can later be examined.',
       },
       {
@@ -1753,9 +1753,9 @@ export const FORENSICS_GUIDES: readonly Guide[] = [
       {
         kind: 'list',
         items: [
-          'To the person, by admission from a body that can withdraw it â solicitors and barristers.',
-          'To the person, by appointment or by entry to a corps â judges and prosecutors.',
-          'To the unit and the activity, with personnel assessed inside it â forensic science, England and Wales.',
+          'To the person, by admission from a body that can withdraw it — solicitors and barristers.',
+          'To the person, by appointment or by entry to a corps — judges and prosecutors.',
+          'To the unit and the activity, with personnel assessed inside it — forensic science, England and Wales.',
           'Not researched: how forensic competence is established in any other country.',
         ],
       },
