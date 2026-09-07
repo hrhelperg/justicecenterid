@@ -5588,6 +5588,52 @@ export const SOURCES: readonly SourceRecord[] = [
     jurisdiction: 'NZ',
     note: 'SCOPE: dated changes to the New Zealand Police uniform as the service records them, in material about women in policing. Supports three dated points: that "The women’s original felt hat was replaced by the forage cap in 1957"; that a policewomen’s handbag was "issued from 1976 with the introduction of the vitric blue uniform"; and the 1994 decision recorded as "Clothing common to men and women to be identical. Women’s skirts to be phased out as stocks used up. Women will have the choice of light or medium weight trousers or culottes." The 1994 entry is the one the corpus cites for the equality dimension of uniform change. DOES NOT SUPPORT a claim about trousers being introduced on trial in 1977, which appeared in a search summary and is not on the page.',
   },
+  /*
+   * WAVE 35 - police training institutions, as institutions rather than as courses.
+   *
+   * Wave 24 published what a police academy IS across five systems, and its definition list covers
+   * the word "academy", the scope of institutional training, and who runs one. What it does not
+   * reach is legal FORM - what such a body is constituted as - or the balance between training new
+   * recruits and everything else an academy does. Neither "zbo" nor any equivalent appears anywhere
+   * in the corpus before this wave.
+   *
+   * ARCHITECTURE NOTE, recorded here because it bounds what these sources are for: this wave does
+   * NOT create a TrainingInstitution entity family or an /academies route. Two institutions were
+   * verified to the standard a directory would need, and a directory with two entries misleads a
+   * reader about coverage more than it helps them. See
+   * docs/research/training-institution-architecture.md for the threshold that would change that.
+   *
+   * NO COMMERCE, NO RANKING. No institution here is compared for quality, rated, ranked or
+   * recommended, and no tuition, acceptance rate or outcome figure appears.
+   */
+  {
+    id: 'nl-politieacademie-organisatiestructuur',
+    type: 'government',
+    title: 'Organisatiestructuur van de Politieacademie',
+    publisher: 'Politieacademie (Netherlands)',
+    url: 'https://www.politieacademie.nl/over-ons/organisatiestructuur',
+    accessedOn: '2026-09-07',
+    verifiedOn: '2026-09-07',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'NL',
+    translationStatus: 'not-a-translation',
+    authoritativeLanguage: 'nl',
+    note: 'SCOPE: the constitutional position of one named training institution, on its own organisation page. Supports the pairing that is the point of the citation: "De Politieacademie is sinds 2017 onderdeel van de politie." and "Maar het is wel een zelfstandig bestuursorgaan (zbo). Dit betekent dat de Politieacademie zelf beleid maakt en haar taken uitvoert." Supports that "De Politieacademie valt direct onder het ministerie van Justitie en Veiligheid.". Supports the dual quality oversight: the Inspectie Justitie en Veiligheid "controleert de kwaliteit van onze opleidingen en examens", and the NVAO "is verantwoordelijk voor het beoordelen van de kwaliteit van het hoger onderwijs". Supports the existence of a Raad van Advies advising the director. DOES NOT SUPPORT any claim about what the zbo form legally entails beyond the page’s own gloss, about student numbers, about admission, or about any other country. No quality judgement about this institution is made or supported.',
+  },
+  {
+    id: 'no-politihogskolen-om-oss',
+    type: 'government',
+    title: 'Om oss - Politihøgskolen',
+    publisher: 'Politihøgskolen (Norwegian Police University College)',
+    url: 'https://www.politihogskolen.no/om-oss/',
+    accessedOn: '2026-09-07',
+    verifiedOn: '2026-09-07',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'NO',
+    translationStatus: 'not-a-translation',
+    authoritativeLanguage: 'no',
+    note: 'SCOPE: one named training institution, on its own about page. Supports its self-description "Politihøgskolen er politiets utdanningsinstitusjon" and its stated mandate "Vårt samfunnsoppdrag er å sikre rettssikkerhet, trygghet, lov og orden gjennom utdanning, forskning og formidling". Supports the STUDENT DISTRIBUTION, which is the point of the citation: approximately 5,190 students in total, of whom roughly 3,600 are in post- and continuing education, 1,490 in bachelor studies and 100 in master’s programmes. Supports that the institution traces its origins to 1920, when a first cohort of 24 students enrolled at Statens politiskole. IMPORTANT LIMIT: the page does NOT describe the institution as a "høgskole" in its self-description, so no degree-awarding or university-status claim rests on this record beyond the named bachelor and master programmes it reports. Establishes nothing about admission, cost or outcomes, and supports no comparison with any other institution.',
+  },
 ];
 
 const SOURCE_INDEX = new Map(SOURCES.map((source) => [source.id, source]));

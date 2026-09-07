@@ -2280,3 +2280,53 @@ SUPPORT` so the next editor knows it was checked.
   proofs valid**, two caught only after the fixes they forced. Adversarial QA: 0 P0, 0 P1, 0 P2.
 
 Delivered on `feat/police-equipment-professional-gear-wave-34`. Not merged, not deployed.
+
+## Phase 49 — Knowledge Expansion Wave 35 (delivered 2026-09-07)
+
+Police academies, colleges and training institutions, taken as institutions rather than as courses.
+Two guides on two new sources, in `/law-enforcement`. Closes the five-wave programme begun at
+Phase 45. Details in `docs/research/knowledge-expansion-wave-35-qa.md`,
+`docs/research/wave-35-training-institution-findings.md` and the internal
+`docs/research/training-institution-architecture.md`.
+
+- **The architecture question was answered on evidence, and the entity family was specified rather
+  than built.** `/institutions` is a type taxonomy — 17 category slugs, no field for a website,
+  operator or operating status — and extending it to hold named organisations would corrupt it. So a
+  named institution is genuinely a new entity. Two institutions were verified to the standard a
+  directory entry needs, against a target of 15–30; two entries is not a directory, and a route
+  family is close to permanent. The threshold that would reverse this is recorded: 12 institutions
+  across 6 systems. **The decision is tested** — a guard fails if `InstitutionType` acquires an
+  `officialWebsite` or `operatingStatus`.
+- **Access is the binding constraint, not effort.** Across Waves 33–35, `npas.police.uk`, HMICFRS,
+  `ukas.com`, `911.gov`, `rijksoverheid.nl` and `ris.bka.gv.at` all returned 403 or 404. A directory
+  whose entries cannot be re-verified on a schedule decays into the stale directory the brief
+  forbids, so freshness capability is part of the build decision.
+- **Part of the police and independent of it at once.** The Politieacademie states both in
+  consecutive sentences — "onderdeel van de politie" since 2017, and "wel een zelfstandig
+  bestuursorgaan (zbo)" making its own policy — reports past the police to the justice ministry, and
+  has its teaching judged by both a justice inspectorate and the national higher-education
+  accreditor. An institution answerable to both cannot satisfy either by satisfying the other.
+- **Most police training is not recruit training.** Politihøgskolen publishes ~3,600 students in
+  post- and continuing education against 1,490 in the bachelor. Most police teaching is for people
+  already in the police — so most of what a service can change about officer behaviour is reachable
+  long after recruitment, while public attention concentrates on the smaller half.
+- **Four mutations survived and every one was real.** The wave's own central finding was reversible
+  in a list item; a legal consequence could be inferred from a label the page says it did not
+  research; a fabricated student figure with a superlative passed because nothing checked figures
+  against sources; and a universal claim survived twice — once on a missing inflection, then again
+  by landing on the page that OWNS the question, which the guard did not cover. Every figure now
+  has to appear in a note of a cited source.
+- **Two new guards were wrong on first run, both flagging the pages' own honesty** — the zbo
+  disclaimers, and "the largest category of students in the institution", which is an internal
+  proportion and the wave's central finding rather than a comparison between institutions.
+- **No ranking, permanently.** No institution is compared, rated or recommended, and no tuition,
+  acceptance rate or outcome figure appears. The internal B2B evaluation records that verified
+  profiles and official recruitment links are the honest candidates, and that sponsored profile
+  enhancement is the model most likely to be adopted because it is easy and most likely to destroy
+  the asset.
+- **Client JS +0 KB. CSS +0 bytes. No component changed. No images. No new entity family.**
+- Validation: 9,342 tests / 93 files; 2,320 e2e passed; **554 routes**, 556 pages, 554 sitemap URLs;
+  route matrix 706/706; 0 orphans, 0 weakly linked, 0 dead ends; 402 sources. **15/15 mutation
+  proofs valid**, four caught only after the fixes they forced. Adversarial QA: 0 P0, 0 P1, 0 P2.
+
+Delivered on `feat/police-training-institutions-wave-35`. Not merged, not deployed.

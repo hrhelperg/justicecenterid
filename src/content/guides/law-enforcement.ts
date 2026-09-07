@@ -3376,7 +3376,7 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [what police recruits are taught](/law-enforcement/what-police-recruits-are-taught), [do police officers need a degree](/law-enforcement/do-police-officers-need-a-degree), and [the patrol officer role](/professions/patrol-officer). Who runs the training is closely tied to who does the recruiting: see [who recruits police officers](/law-enforcement/who-recruits-police-officers), and, for the college this page names, [police recruitment in Ireland](/countries/ireland/police-recruitment). Equipment arrives during training rather than after it — see [issued equipment and personal equipment](/law-enforcement/issued-equipment-and-personal-equipment).',
+        text: 'Related: [what a police training institution is in law](/law-enforcement/what-a-police-training-institution-is-in-law), [what police recruits are taught](/law-enforcement/what-police-recruits-are-taught), [do police officers need a degree](/law-enforcement/do-police-officers-need-a-degree), and [the patrol officer role](/professions/patrol-officer). Who runs the training is closely tied to who does the recruiting: see [who recruits police officers](/law-enforcement/who-recruits-police-officers), and, for the college this page names, [police recruitment in Ireland](/countries/ireland/police-recruitment). Equipment arrives during training rather than after it — see [issued equipment and personal equipment](/law-enforcement/issued-equipment-and-personal-equipment).',
       },
     ],
   },
@@ -3746,7 +3746,7 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [what a police academy is](/law-enforcement/what-a-police-academy-is), [what police recruits are taught](/law-enforcement/what-police-recruits-are-taught), and [do police officers need a degree](/law-enforcement/do-police-officers-need-a-degree). The two German tracks this page contrasts are entered separately by each Land: see [police recruitment in Germany](/countries/germany/police-recruitment).',
+        text: 'Related: [what a police academy is](/law-enforcement/what-a-police-academy-is), [most police training is not recruit training](/law-enforcement/most-police-training-is-not-recruit-training), [what police recruits are taught](/law-enforcement/what-police-recruits-are-taught), and [do police officers need a degree](/law-enforcement/do-police-officers-need-a-degree). The two German tracks this page contrasts are entered separately by each Land: see [police recruitment in Germany](/countries/germany/police-recruitment).',
       },
     ],
   },
@@ -10614,6 +10614,391 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
       {
         kind: 'paragraph',
         text: 'Related: [when a police uniform changes](/law-enforcement/when-a-police-uniform-changes), [why police wear a uniform](/law-enforcement/why-police-wear-a-uniform), and [police insignia and where it comes from](/law-enforcement/police-insignia-and-where-it-comes-from).',
+      },
+    ],
+  },
+  /*
+   * WAVE 35 - police training institutions, as institutions rather than as courses.
+   *
+   * OWNERSHIP. `what-a-police-academy-is` owns what an academy is across five systems: the word,
+   * the scope of institutional training, and who runs one. These pages take what it does not
+   * reach - what such a body is constituted AS in law, and what the balance of its work actually
+   * is. Neither "zbo" nor the recruit-versus-continuing split appears anywhere in the corpus
+   * before this wave.
+   *
+   * NO DIRECTORY, AND NO RANKING. Two institutions were verified to the standard a directory would
+   * need. Two entries is not a directory, and one that looks like a directory misleads a reader
+   * about coverage. Nothing here compares institutions for quality, and no tuition, acceptance
+   * rate, outcome or ranking appears - that boundary is permanent, not a scoping decision.
+   */
+  {
+    slug: 'what-a-police-training-institution-is-in-law',
+    title: 'What a police training institution is in law',
+    shortTitle: 'Training institutions in law',
+    question: 'Is a police academy part of the police?',
+    summary:
+      'In one country the answer is both. The academy is part of the police and a legally independent body at the same time, reports to the justice ministry, and has its teaching judged by the same authority that judges universities.',
+    entityType: 'institution',
+    section: 'law-enforcement',
+    jurisdiction: ['NL'],
+    temporalScope: 'current',
+    related: [
+      'what-a-police-academy-is',
+      'most-police-training-is-not-recruit-training',
+      'police-training-and-police-education',
+      'who-recruits-police-officers',
+    ],
+    sources: ['nl-politieacademie-organisatiestructuur'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-07',
+    publishedOn: '2026-09-07',
+    reviewedOn: '2026-09-07',
+    factsVerifiedOn: '2026-09-07',
+    readingTimeMinutes: 6,
+    uncertainty: [
+      'One institution was researched - the Politieacademie in the Netherlands, on its own organisation page. What any other country constitutes its training institution as was NOT RESEARCHED.',
+      'What the zbo form entails in Dutch administrative law beyond the page’s own gloss was NOT ESTABLISHED. The statute was not read, and no legal consequence is claimed from the label.',
+      'How the two supervising bodies divide their work in practice, and what either has found, were NOT RESEARCHED.',
+      'Whether this arrangement produces better or worse training than any other is an empirical question this platform has NOT researched and does not answer.',
+      'No tuition, acceptance rate, student outcome or comparison with any other institution appears here, and none was researched.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Asking whether a police academy is part of the police sounds like a question with a yes or a no. One country answers it with both at once, and the arrangement it has built to make that possible says a great deal about what police training is thought to be.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This describes the constitutional position of one named institution as that institution states it. It is not a directory, it does not assess or rank any institution, and it carries no tuition, admission or outcome information.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'A body that trains police has two masters by nature. It has to teach what the service actually needs, which argues for keeping it inside the organisation; and it has to be able to say things the organisation does not want to hear, which argues for keeping it outside. Every system resolves that tension somewhere, and the resolution is usually invisible until you look at the legal form.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Which is why the legal form is the interesting part',
+        text: 'Who runs an academy is a question the corpus already answers. What it is constituted as is a different one, and it is the part that decides whether the institution can be overruled.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'The institution states both halves in consecutive sentences: "De Politieacademie is sinds 2017 onderdeel van de politie." And then: "Maar het is wel een zelfstandig bestuursorgaan (zbo). Dit betekent dat de Politieacademie zelf beleid maakt en haar taken uitvoert."',
+        claim: 'fact',
+        sources: ['nl-politieacademie-organisatiestructuur'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Part of the police, and making its own policy',
+        text: 'Those are not obviously compatible, and the page does not treat them as a contradiction. Being inside the organisation is a fact about where the body sits; being an independent administrative body is a fact about who decides what it does.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The reporting line runs past the police entirely: "De Politieacademie valt direct onder het ministerie van Justitie en Veiligheid."',
+        claim: 'fact',
+        sources: ['nl-politieacademie-organisatiestructuur'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'Quality is judged from two directions. The Inspectie Justitie en Veiligheid "controleert de kwaliteit van onze opleidingen en examens", and the NVAO "is verantwoordelijk voor het beoordelen van de kwaliteit van het hoger onderwijs". A Raad van Advies advises the director.',
+        claim: 'fact',
+        sources: ['nl-politieacademie-organisatiestructuur'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title:
+          'A justice inspectorate and a higher-education accreditor, examining the same teaching',
+        text: 'They are asking different questions. One is asking whether the training serves justice and safety; the other is asking whether it is sound as higher education. An institution answerable to both cannot satisfy either by satisfying the other, which is an unusual amount of scrutiny for vocational training of any kind.',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'Inside the organisation and independent of it',
+            description:
+              'Part of the police since 2017, and a zelfstandig bestuursorgaan. Position and autonomy are separate facts, and this institution holds both.',
+          },
+          {
+            term: 'The reporting line goes to a ministry',
+            description:
+              'Not to the police leadership. Where a body reports is where it can be directed from, and here that is the justice ministry.',
+          },
+          {
+            term: 'Two supervisors, two questions',
+            description:
+              'A justice inspectorate examines the courses and examinations; the national higher-education accreditor assesses them as higher education.',
+          },
+          {
+            term: 'Advice is structurally separate from supervision',
+            description:
+              'An advisory council advising the director is a different mechanism from an inspectorate checking quality. The page lists them separately, and so does this one.',
+          },
+          {
+            term: 'And a label is not a legal argument',
+            description:
+              'The page glosses what zbo means for this body. What the form entails in administrative law generally was not researched, and nothing here rests on the label beyond that gloss.',
+          },
+        ],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'A police academy is simply a department of the police force.',
+        reality:
+          'The institution researched here is part of the police and a legally independent administrative body at the same time, and reports directly to the justice ministry rather than to police leadership.',
+      },
+      {
+        claim: 'If a body is inside an organisation it cannot be independent of it.',
+        reality:
+          'The page states both in consecutive sentences without treating them as a contradiction. Position and decision-making autonomy are different questions.',
+      },
+      {
+        claim: 'Police training is inspected only by policing bodies.',
+        reality:
+          'In this case the national higher-education accreditor assesses the quality of the teaching alongside a justice inspectorate. Two supervisors ask two different questions.',
+      },
+      {
+        claim: 'Every country arranges its police academy this way.',
+        reality:
+          'One institution was researched. What any other country constitutes its training institution as was not researched and is not claimed.',
+      },
+      {
+        claim: 'This page says whether this academy is any good.',
+        reality:
+          'It does not, and it will not. Nothing here assesses, ranks or compares any institution, and no outcome or admission figure appears.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'One institution, as it describes its own position.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Part of the police since 2017.',
+          'And a zelfstandig bestuursorgaan, making its own policy and carrying out its own tasks.',
+          'Reporting directly to the Ministry of Justice and Security.',
+          'Courses and examinations checked by the justice inspectorate.',
+          'Teaching quality assessed by the national higher-education accreditor.',
+          'An advisory council advising the director.',
+          'Not researched: every other country, and what the zbo form entails in law.',
+        ],
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'Where a training institution sits decides what it is able to teach when teaching it is unwelcome. A body wholly inside a service can have its curriculum adjusted by the people whose conduct that curriculum describes; a body with its own legal standing and an external accreditor has somewhere to stand. That is not a claim that this arrangement works, which was not researched. It is a claim that the arrangement is the kind of thing worth knowing about a body that trains people to use coercive power.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'What a police academy is across systems is [what a police academy is](/law-enforcement/what-a-police-academy-is). What the balance of an academy’s work actually is is [most police training is not recruit training](/law-enforcement/most-police-training-is-not-recruit-training). The difference between training and education is [police training and police education](/law-enforcement/police-training-and-police-education).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [what a police academy is](/law-enforcement/what-a-police-academy-is), [most police training is not recruit training](/law-enforcement/most-police-training-is-not-recruit-training), and [police training and police education](/law-enforcement/police-training-and-police-education).',
+      },
+    ],
+  },
+  {
+    slug: 'most-police-training-is-not-recruit-training',
+    title: 'Most police training is not recruit training',
+    shortTitle: 'Not recruit training',
+    question: 'Is a police academy mostly a place where new officers are trained?',
+    summary:
+      'Not in the one that publishes its numbers. Around 3,600 of its roughly 5,190 students are in post- and continuing education, against 1,490 in the bachelor - so most of the teaching is for people who are already police officers.',
+    entityType: 'institution',
+    section: 'law-enforcement',
+    jurisdiction: ['NO'],
+    temporalScope: 'current',
+    related: [
+      'what-a-police-academy-is',
+      'what-a-police-training-institution-is-in-law',
+      'how-policing-careers-develop',
+      'police-training-and-police-education',
+    ],
+    sources: ['no-politihogskolen-om-oss'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-07',
+    publishedOn: '2026-09-07',
+    reviewedOn: '2026-09-07',
+    factsVerifiedOn: '2026-09-07',
+    readingTimeMinutes: 6,
+    uncertainty: [
+      'One institution was researched - Politihøgskolen in Norway, on its own about page. The distribution of students anywhere else was NOT RESEARCHED, and nothing here generalises.',
+      'The figures are as the institution published them at the date of access. How they move year to year, and what counts as a student in each category, were NOT ESTABLISHED.',
+      'What any continuing course covers, how long it lasts, or who is required to take it was NOT RESEARCHED.',
+      'The page does not describe the institution as a "høgskole" in its self-description, so no degree-awarding or university-status claim is made here beyond the bachelor and master programmes it names.',
+      'No admission requirement, tuition, outcome or comparison with any other institution appears, and none was researched.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'The picture of a police academy is a place where recruits are turned into officers. One institution publishes the numbers, and they say something different: the largest part of its work is teaching people who joined the police years ago.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This reports one institution’s published student distribution at a date. It does not assess, rank or compare any institution, describes no course content, and carries no admission or tuition information.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'A police officer recruited at twenty-two may still be serving forty years later, in a job whose law, technology and public expectations will all have changed several times. Initial training cannot carry that; it can only start it. An institution that takes the whole career seriously will therefore spend most of its capacity on people already in the job, and its student numbers will show it.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Which makes the word academy slightly misleading',
+        text: 'It suggests a threshold - a place you pass through on the way in. A body where continuing students outnumber new ones by more than two to one is better described as the service’s permanent teaching institution than as its entrance.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'The institution describes itself simply: "Politihøgskolen er politiets utdanningsinstitusjon" - the police’s educational institution - with a stated mandate to "sikre rettssikkerhet, trygghet, lov og orden gjennom utdanning, forskning og formidling".',
+        claim: 'fact',
+        sources: ['no-politihogskolen-om-oss'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'The distribution is published. Of approximately 5,190 students, roughly 3,600 are in post- and continuing education, 1,490 are in bachelor studies, and 100 are in master’s programmes.',
+        claim: 'fact',
+        sources: ['no-politihogskolen-om-oss'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Continuing students outnumber bachelor students by more than two to one',
+        text: 'That is the finding. It does not say the initial programme is unimportant - it is three years long and the corpus describes it elsewhere. It says that a police training institution is mostly doing something the public picture of it leaves out entirely.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The institution also dates its own beginning: it traces its origins to 1920, when a first cohort of 24 students enrolled at Statens politiskole.',
+        claim: 'fact',
+        sources: ['no-politihogskolen-om-oss'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Twenty-four students to five thousand, in a century',
+        text: 'The growth is not only in size. A body that began as a school teaching a first cohort now runs bachelor and master programmes and a continuing-education operation several times larger than either, which is a change in what kind of institution it is rather than in how many people attend it.',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'Continuing education is the largest category',
+            description:
+              'Roughly 3,600 of about 5,190 students. The majority of the institution’s teaching is for people already in the police.',
+          },
+          {
+            term: 'Initial training is a minority of students, not a minority of importance',
+            description:
+              'The bachelor is three years and is how officers enter. Being outnumbered is a fact about volume, not about weight.',
+          },
+          {
+            term: 'A research and communication mandate sits alongside teaching',
+            description:
+              'The stated mandate names utdanning, forskning og formidling together. Teaching is one of three functions, not the whole of the institution.',
+          },
+          {
+            term: 'The institution has a dated origin',
+            description:
+              'Traced to 1920 and a first cohort of 24 students at a state police school. A century is long enough for the institution’s purpose to have changed shape.',
+          },
+          {
+            term: 'And these are one institution’s numbers',
+            description:
+              'Published by it, at a date. Whether any other training institution is distributed the same way was not researched and is not claimed.',
+          },
+        ],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'A police academy is mainly a place for training new recruits.',
+        reality:
+          'In the institution researched here, roughly 3,600 of about 5,190 students are in post- and continuing education, against 1,490 in the bachelor programme.',
+      },
+      {
+        claim: 'Continuing training is a small add-on to initial training.',
+        reality:
+          'It is the largest category of students in the institution researched here, outnumbering bachelor students by more than two to one.',
+      },
+      {
+        claim: 'A police training institution only teaches.',
+        reality:
+          'The stated mandate names education, research and communication together. Teaching is one of three functions.',
+      },
+      {
+        claim: 'These proportions are what police academies look like generally.',
+        reality:
+          'One institution was researched, and the figures are its own at a date of access. The distribution anywhere else was not researched.',
+      },
+      {
+        claim: 'This page compares this institution with others.',
+        reality:
+          'It does not. Nothing here ranks, rates or compares institutions, and no admission, tuition or outcome figure appears.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'One institution, as it publishes itself.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Approximately 5,190 students in total.',
+          'Roughly 3,600 in post- and continuing education.',
+          '1,490 in bachelor studies.',
+          '100 in master’s programmes.',
+          'A mandate naming education, research and communication together.',
+          'Origins traced to 1920 and a first cohort of 24 students.',
+          'Not researched: every other institution, and how these figures move over time.',
+        ],
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'If most police teaching happens after entry, then most of what a service can change about how its officers behave is reachable long after recruitment - and so is most of what an outside body could examine. Public attention concentrates almost entirely on selection and initial training, which the figures here suggest is the smaller half of the story. Publishing the distribution is what allows anyone to notice that.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'What a police academy is across systems is [what a police academy is](/law-enforcement/what-a-police-academy-is). What such a body is constituted as in law is [what a police training institution is in law](/law-enforcement/what-a-police-training-institution-is-in-law). How careers develop after entry is [how policing careers develop](/law-enforcement/how-policing-careers-develop).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [what a police academy is](/law-enforcement/what-a-police-academy-is), [what a police training institution is in law](/law-enforcement/what-a-police-training-institution-is-in-law), and [how policing careers develop](/law-enforcement/how-policing-careers-develop).',
       },
     ],
   },
