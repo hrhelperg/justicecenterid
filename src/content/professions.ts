@@ -677,7 +677,7 @@ export const PROFESSIONS: readonly Profession[] = [
     jurisdictionNote:
       'What a defence lawyer may do, what they are called, who admits them and what they are constituted as differ in every system. England and Wales does not constitute lawyers as a status at all — the Legal Services Act reserves six named activities and determines entitlement by authorisation or exemption for each. Nothing in this record should be read as describing a system it does not name.',
     uncertainty: [
-      'Qualification routes were not researched for any country: no source establishing examinations, training periods or entry requirements was obtained, so trainingRouteShape is structural only and names no country.',
+      'trainingRouteShape below is structural only and deliberately names no country. Sourced qualification routes for England and Wales are described at /defence/what-qualifying-as-a-lawyer-requires and /defence/the-supervised-stage-in-legal-qualification; no other country was researched.',
       'Remuneration, numbers, distribution and specialisation within the profession were not researched and are not described.',
       'Only two systems constitute the profession in the primary text read here. The English and Welsh material describes the regulation of activities, not the profession, and no French source could be obtained — legifrance.gouv.fr returned HTTP 403, which is an access limitation and not evidence about French arrangements.',
     ],
