@@ -8,15 +8,15 @@ arrangement Wave 30 recorded as unresearched.
 The brief listed ten candidate pages. Seven of them are Wave 30 pages under different
 titles:
 
-| Candidate | Already owned by |
-|---|---|
-| `do-lay-judges-decide-sentences` | `what-a-lay-judge-decides` |
-| `what-is-a-mixed-court` | `lay-participation-in-judging` + `how-a-lay-court-is-composed` |
-| `jury-vs-lay-judges` | `lay-participation-in-judging` (its whole thesis) |
-| `who-may-serve` / eligibility | `who-may-serve-on-a-lay-court` |
-| `professional-judges-and-lay-participants` | `what-a-lay-judge-decides` |
-| `why-do-citizens-participate-in-courts` | `lay-participation-in-judging` (`whyItExists`) |
-| `how-lay-participation-differs-between-countries` | `how-a-lay-court-is-composed` |
+| Candidate                                         | Already owned by                                               |
+| ------------------------------------------------- | -------------------------------------------------------------- |
+| `do-lay-judges-decide-sentences`                  | `what-a-lay-judge-decides`                                     |
+| `what-is-a-mixed-court`                           | `lay-participation-in-judging` + `how-a-lay-court-is-composed` |
+| `jury-vs-lay-judges`                              | `lay-participation-in-judging` (its whole thesis)              |
+| `who-may-serve` / eligibility                     | `who-may-serve-on-a-lay-court`                                 |
+| `professional-judges-and-lay-participants`        | `what-a-lay-judge-decides`                                     |
+| `why-do-citizens-participate-in-courts`           | `lay-participation-in-judging` (`whyItExists`)                 |
+| `how-lay-participation-differs-between-countries` | `how-a-lay-court-is-composed`                                  |
 
 Publishing them would have been duplication. The brief forbids it, and the platform
 enforces it: `GLOSSARY_OWNED_ELSEWHERE` exists precisely so a term whose intent belongs
@@ -63,17 +63,17 @@ or adds Art. 91 to the `at-bvg` note without the article having been read, the s
 
 ### What the ministry page established
 
-| Fact | Status |
-|---|---|
-| Art. 91 is the constitutional basis for lay participation | Attested, not read |
-| Lay adjudication is part of the democratic basic principle | Verbatim |
-| Geschworenengericht = 3 professional judges + 8 Geschworene | Verbatim |
-| Schöffengericht = 1 professional judge + 2 Schöffen | Verbatim |
-| Schöffengericht threshold: offence above five years | Verbatim |
-| Geschworenengericht: life, or lower limit >5y and upper >10y | Verbatim |
-| Geschworene decide guilt **alone**; sentence **jointly** | Verbatim |
-| Lay judges chosen at random from the electoral register | Verbatim (second page) |
-| Geschworenengerichte try **political** offences | **NOT SUPPORTED** |
+| Fact                                                         | Status                 |
+| ------------------------------------------------------------ | ---------------------- |
+| Art. 91 is the constitutional basis for lay participation    | Attested, not read     |
+| Lay adjudication is part of the democratic basic principle   | Verbatim               |
+| Geschworenengericht = 3 professional judges + 8 Geschworene  | Verbatim               |
+| Schöffengericht = 1 professional judge + 2 Schöffen          | Verbatim               |
+| Schöffengericht threshold: offence above five years          | Verbatim               |
+| Geschworenengericht: life, or lower limit >5y and upper >10y | Verbatim               |
+| Geschworene decide guilt **alone**; sentence **jointly**     | Verbatim               |
+| Lay judges chosen at random from the electoral register      | Verbatim (second page) |
+| Geschworenengerichte try **political** offences              | **NOT SUPPORTED**      |
 
 The last line is a correction. The dossier said Geschworene sit for "the most serious and
 political offences". Nothing read here supports the political limb, so it was removed.

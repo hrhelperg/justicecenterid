@@ -2081,3 +2081,50 @@ and confirmed before implementation.
   proofs valid**, two caught only after the fixes they forced. Adversarial QA: 1 P0, 1 P2.
 
 Delivered on `feat/lay-participation-wave-30`. Not merged, not deployed.
+
+## Phase 45 — Wave 31: public participation in justice, as terminology
+
+The last planned deep justice-system synthesis before the programme turns to professional
+and public-safety discovery. It is much smaller than the brief anticipated, and the reason
+is the ownership audit rather than a shortfall.
+
+- **Seven of the ten candidate pages were already owned by Wave 30** under different
+  titles: "do lay judges decide sentences" is `what-a-lay-judge-decides`, "what is a mixed
+  court" is the anchor plus `how-a-lay-court-is-composed`, "jury vs lay judges" is the
+  anchor's whole thesis. Publishing them would have been duplication. The brief's target
+  of 6–12 pages was explicitly conditional on canonical ownership supporting them, and it
+  did not.
+- **The corpus distinguished a jury from a Schöffengericht forty times without ever saying
+  what a jury is.** That was the real gap, and it is what this wave publishes: two routed
+  glossary terms, `/glossary/jury` and `/glossary/lay-judge`, each earning its route
+  through `validateGlossaryPublication` rather than through a flag.
+- **A historical layer was DEFERRED, not attempted.** No primary source was found this
+  wave, and the brief warns specifically against false single-origin narratives.
+- **The Austria finding is half closed, honestly.** RIS returned 503 at three addresses
+  again, so B-VG Art. 91 is still unread. What changed is that the justice ministry states
+  in its own words which article provides for lay participation, so the claim now rests on
+  a record that attests it. Attestation is not citation, the source note says so, and a
+  guard fails if a later edit blurs the two.
+- **Two corrections to the existing corpus.** The Austria dossier said Geschworene sit for
+  "the most serious and political offences"; nothing read supports the political limb, so
+  it is gone. Article 38 of the Irish Constitution extended the existing `ie-constitution`
+  record rather than duplicating it — the Wave 21 invariant caught the first attempt.
+- **Jury size: two published, the expected one still refused.** A county court jury of
+  eight in England and Wales and eight Geschworene in an Austrian Geschworenengericht, each
+  with a named proceeding and a source that states the number. The Crown Court complement
+  is still NOT ESTABLISHED, because s.17 states majority thresholds and never the full
+  number, and three guards hold that open.
+- **The character guard became a corpus invariant.** Wave 30 guarded three collections
+  inside a wave test; it now walks nine families including professions and institutions.
+  M16 planted the Wave 29 corruption in `professions` and ran it against both: the Wave 30
+  guard passed 46/46, the new one failed. The promotion was necessary, not tidy-minded.
+- **Two mutations survived and became findings.** Both were union-of-text searches that
+  could not see one part of a page contradicting another — the Wave 29/30 defect class
+  again. Both invariants were rewritten to check each part, and both mutations were re-run
+  unweakened.
+- **Client JS +0 KB. CSS +0 bytes. No component changed.**
+- Validation: 8,921 tests / 88 files; 2,074 e2e passed; 543 pages (+2); 388 sources.
+  **17/17 mutation proofs valid**, two only after the fixes they forced. Adversarial QA:
+  1 P1, 1 P2, 2 REFUTED.
+
+Delivered on `feat/public-participation-synthesis-wave-31`. Not merged, not deployed.
