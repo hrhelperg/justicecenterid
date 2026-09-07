@@ -33,12 +33,14 @@ const WAVE_35 = [
   'most-police-training-is-not-recruit-training',
 ] as const;
 
-const NEW_SOURCES = [
-  'nl-politieacademie-organisatiestructuur',
-  'no-politihogskolen-om-oss',
-] as const;
-
-/** The named institutions this wave describes. Any addition must be verified the same way. */
+/**
+ * The named institutions this wave describes, each paired with the source that establishes it.
+ *
+ * This is the single list the sourcing guards read. An earlier draft also kept a separate
+ * NEW_SOURCES array, which was redundant — the same two source ids in a second place, checked
+ * nowhere — and lint caught it on the final gate. Two lists of the same thing is how one of them
+ * ends up stale.
+ */
 const NAMED_INSTITUTIONS = [
   {
     name: 'Politieacademie',
