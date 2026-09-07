@@ -219,6 +219,76 @@ describe('no number appears that no source establishes', () => {
 /* Scope: advice, procedure, and the individual reader                        */
 /* -------------------------------------------------------------------------- */
 
+describe('the cluster does not contradict its own citations', () => {
+  it('no page asserts the verdict-only division for the systems it describes', () => {
+    /*
+     * Found by mutation W30M4, which replaced the German limit provision with "Lay judges reach
+     * the verdict and the professional judge decides the sentence" and survived. That sentence is
+     * the popular model of lay participation and it is false of both systems here: one confers the
+     * judicial office in full with an equal vote, the other names sentencing among what lay judges
+     * decide. A misconception on the page already corrected the belief; nothing guarded the body
+     * text against asserting it, which is the same lesson the previous wave learned about the
+     * difference between a misconception and a guard.
+     */
+    const VERDICT_ONLY =
+      /lay (?:judges?|members?)[^.]{0,50}\b(?:reach|decide|determine)[^.]{0,30}\b(?:verdict|guilt)\b[^.]{0,80}\bjudge\b[^.]{0,40}\bsentence\b/i;
+    for (const slug of WAVE_30) {
+      const offenders = sentences(assertedText(guide(slug))).filter((s) =>
+        VERDICT_ONLY.test(s),
+      );
+      expect(offenders, `${slug} asserts the verdict-only division`).toEqual([]);
+    }
+  });
+
+  it('every stated composition keeps the lay members in the majority', () => {
+    /*
+     * Found by mutation W30M9, which inverted the German ratio to two professional judges and one
+     * lay judge — in the summary list, while the paragraph citing the statute a few blocks above
+     * still said the opposite. Both a cited-source check and a page-wide presence check pass on
+     * that, because each looks at only one of the two places. What was missing was a check that
+     * the page agrees with itself.
+     *
+     * Every composition this cluster states has more lay members than professionals, so any
+     * sentence pairing the two counts can be read and compared directly.
+     */
+    const WORD: Record<string, number> = {
+      one: 1,
+      two: 2,
+      three: 3,
+      four: 4,
+      five: 5,
+      six: 6,
+      seven: 7,
+      eight: 8,
+      nine: 9,
+      ten: 10,
+    };
+    const count = (w: string): number => WORD[w.toLowerCase()] ?? Number(w);
+    const PAIR =
+      /\b(one|two|three|four|five|six|seven|eight|nine|ten|\d+)\s+professional\s+judges?\b[^.]{0,60}?\b(one|two|three|four|five|six|seven|eight|nine|ten|\d+)\s+lay\s+judges?\b/gi;
+    const inverted: string[] = [];
+    for (const slug of WAVE_30) {
+      for (const sentence of sentences(assertedText(guide(slug)))) {
+        for (const m of sentence.matchAll(PAIR)) {
+          if (count(m[1]!) >= count(m[2]!))
+            inverted.push(`${slug}: ${sentence.trim().slice(0, 120)}`);
+        }
+      }
+    }
+    expect(
+      inverted,
+      'a stated composition puts professionals at or above the lay members',
+    ).toEqual([]);
+  });
+
+  it('the two-to-one finding is stated, so its inversion is not merely silent', () => {
+    const t = allText(guide('how-a-lay-court-is-composed'));
+    expect(t, 'the lay-majority finding has gone').toMatch(
+      /outnumber the professionals two to one|two to one|lay majority/i,
+    );
+  });
+});
+
 describe('the cluster gives no advice and describes no procedure', () => {
   it.each(WAVE_30)('%s tells no reader what to do about a summons', (slug) => {
     const ADVICE =
