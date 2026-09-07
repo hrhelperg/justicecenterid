@@ -280,6 +280,113 @@ describe('nothing ranks, rates or fabricates', () => {
 /* Ownership, scope, linkage, characters                                     */
 /* -------------------------------------------------------------------------- */
 
+describe('the findings are not reversible, and figures are not inventable', () => {
+  it('the both-at-once finding is not contradicted in any part of its page', () => {
+    /*
+     * Mutation M8 SURVIVED. The wave's central finding — that an institution can be part of the
+     * police AND a legally independent body — was reversed in a definition list item while the
+     * cited paragraph above still carried it. This is the Wave 29/30 contradiction class again,
+     * and the page most worth protecting from it was unguarded.
+     *
+     * Checked per part rather than over the union, because a union search cannot see one part
+     * disagreeing with another.
+     */
+    const g = guide('what-a-police-training-institution-is-in-law');
+    const parts: [string, string][] = [
+      ['summary', g.summary],
+      ['definition', blockText(g.definition)],
+      ['howItWorks', blockText(g.howItWorks)],
+      ['variation', blockText(g.variation)],
+      ['misconceptions', g.misconceptions.map((m) => m.reality).join('\n')],
+    ];
+    const REVERSES =
+      /\b(?:simply a department|merely a department|no separate standing|not independent|has no autonomy|wholly (?:inside|within) the police)\b/i;
+    for (const [where, text] of parts) {
+      const offenders = sentences(text).filter((x) => REVERSES.test(x));
+      expect(offenders, `${where} reverses the both-at-once finding`).toEqual([]);
+    }
+    expect(g.summary + blockText(g.howItWorks)).toMatch(
+      /zelfstandig bestuursorgaan|independent/i,
+    );
+  });
+
+  it('no legal consequence is inferred from the zbo label', () => {
+    /*
+     * Mutation M9 SURVIVED. The page's own uncertainty says what the form entails in
+     * administrative law was NOT ESTABLISHED, and the statute was not read — but nothing stopped
+     * the body asserting a consequence anyway. Recording a limit does not enforce it.
+     */
+    const g = guide('what-a-police-training-institution-is-in-law');
+    const INFERRED =
+      /\bzbo\b[^.]{0,80}\b(?:means|entails|implies|cannot be|may not be|is protected from|guarantees)\b/i;
+    /*
+     * Disclaimer-aware. The page says "The page glosses what zbo means for this body" and "what the
+     * zbo form entails in law" was not researched. Both are the limit being STATED; a flat match
+     * read them as the limit being broken.
+     */
+    const DISCLAIMS =
+      /\b(?:glosses|not researched|NOT ESTABLISHED|was not read|beyond that label)\b/i;
+    const offenders = sentences(assertedText(g)).filter(
+      (x) => INFERRED.test(x) && !DISCLAIMS.test(x),
+    );
+    expect(offenders, 'a legal consequence is inferred from the zbo label').toEqual([]);
+  });
+
+  it('no figure appears in prose that a cited source does not carry', () => {
+    /*
+     * Mutation M15 SURVIVED by changing 5,190 students to 50,190 and adding "the largest police
+     * academy in the world". Neither a fabricated figure nor a superlative was caught: the ranking
+     * pattern did not know "largest ... in the world", and nothing checked numbers against sources.
+     *
+     * Directory data is the easiest thing in this corpus to invent convincingly, so every number a
+     * page states must appear in a note of a source that page cites.
+     */
+    for (const slug of WAVE_35) {
+      const g = guide(slug);
+      const notes = g.sources.map((id) => getSource(id)?.note ?? '').join('\n');
+      const figures = new Set<string>();
+      for (const b of [
+        ...(g.howItWorks ?? []),
+        ...(g.variation ?? []),
+        ...(g.definition ?? []),
+      ]) {
+        const text =
+          b.kind === 'paragraph' ? b.text : b.kind === 'list' ? b.items.join(' ') : '';
+        for (const m of text.matchAll(/\b(\d[\d,]{2,})\b/g)) figures.add(m[1]!);
+      }
+      const untraced = [...figures].filter((f) => !notes.includes(f));
+      expect(untraced, `${slug} states a figure no cited source carries`).toEqual([]);
+    }
+  });
+
+  it('no superlative or universal claim is made about any institution', () => {
+    /*
+     * The superlative has to be applied to an INSTITUTION, not to a proportion inside one. The
+     * first version flagged "the largest category of students" and "the largest part of its work",
+     * which are this wave's central finding about one institution's own distribution — the opposite
+     * of a comparison between institutions.
+     */
+    /*
+     * The institution word must be the superlative's HEAD NOUN, not merely nearby. A 40-character
+     * window still flagged "the largest category of students in the institution researched here",
+     * which is an internal proportion and this wave's central finding. "Largest police academy" is
+     * the offence; "largest category ... in the institution" is not.
+     */
+    const INSTITUTION_SUPERLATIVE =
+      /\b(?:largest|biggest|oldest|best|most prestigious|leading)\s+(?:\w+\s+){0,2}(?:academy|college|institution|school|university)\b|\b(?:academy|college|institution|school)\b[^.]{0,30}\b(?:in the world|in Europe|of any country|anywhere)\b/i;
+    const UNIVERSAL = /\bin every country\b|\ball countries (?:have|do)\b/i;
+    for (const slug of WAVE_35) {
+      const offenders = asserted(guide(slug)).filter(
+        (x) => INSTITUTION_SUPERLATIVE.test(x) || UNIVERSAL.test(x),
+      );
+      expect(
+        offenders,
+        `${slug} makes a superlative or universal claim about an institution`,
+      ).toEqual([]);
+    }
+  });
+});
+
 describe('ownership and sourcing', () => {
   it('what-a-police-academy-is still exists and keeps its question', () => {
     const g = getGuide('what-a-police-academy-is');
@@ -288,8 +395,13 @@ describe('ownership and sourcing', () => {
   });
 
   it('no new page re-answers what a police academy is', () => {
+    /*
+     * Mutation M12 SURVIVED the first version, which required the exact phrase "delivers initial
+     * POLICE training". The mutation wrote "delivers initial training in every country" and slipped
+     * past one missing word — the same one-inflection failure Wave 32 hit.
+     */
     const OWNED =
-      /\b(?:a police academy is an institution that delivers|the word "academy" does not travel|does every country have one)\b/i;
+      /\b(?:a police academy is an institution that delivers|delivers initial (?:police )?training|the word "academy" does not travel|does every country have one)\b/i;
     const routes = /\]\(\/law-enforcement\/what-a-police-academy-is\)/;
     for (const slug of WAVE_35) {
       const offenders = asserted(guide(slug)).filter((s) => OWNED.test(s) && !routes.test(s));
