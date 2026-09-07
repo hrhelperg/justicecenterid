@@ -2229,3 +2229,54 @@ driven. Two guides on three new sources, in `/law-enforcement`. Details in
   proofs valid, no survivors.** Adversarial QA: 1 P2, 0 P0, 0 P1.
 
 Delivered on `feat/police-vehicles-mobility-wave-33`. Not merged, not deployed.
+
+## Phase 48 — Knowledge Expansion Wave 34 (delivered 2026-09-07)
+
+Police equipment, uniforms and professional gear, taken as institutional history. Three guides on
+four new sources, in `/law-enforcement`. Details in
+`docs/research/knowledge-expansion-wave-34-qa.md` and
+`docs/research/wave-34-uniform-insignia-findings.md`.
+
+- **Three published against a target of 15–25, and the reason is the shape of what remains.** Wave
+  26 already answered the institutional questions about equipment, and the gap it declared is
+  specification-shaped — placement, colour schemes, insignia systems — which is precisely what this
+  programme forbids publishing. 74 candidates audited: 19 already owned, 24 unsourceable, 18
+  safety-rejected, 10 out of scope. The safe residue is history, and history is what was published.
+- **Architecture: no `/equipment` hub.** Ten pages across two waves does not compel a first-class
+  family, and moving the seven Wave 26 pages would churn canonicals that have been live and linked
+  since.
+- **A service naming its own colonial origin.** New Zealand Police state their insignia have
+  "origins in our colonial past", describe the 1846 paramilitary force that did policing and
+  military duties, and publish a police-to-army rank comparison they call a strong parallel today.
+  The corpus records elsewhere that policing is a civil function distinguishable from military
+  force; a service whose visual language descends from an army carries that tension, and says so.
+- **Uniform change is generational and arrives attached to a finding.** An Garda Síochána changed
+  its uniform in 2022 for "only the third time" in its first century, on a finding of an internal
+  audit of over 6,500 members and a recommendation of an external policing commission, reaching
+  approximately 13,000 members across more than 560 stations. The first appearance of the Crest
+  beyond the cap is recorded separately, because it is a different kind of decision.
+- **The year a uniform stopped differing by sex.** New Zealand Police date it 1994: "Clothing common
+  to men and women to be identical. Women's skirts to be phased out as stocks used up." Identical is
+  a stronger rule than optional, and a principle stated beside an inventory instruction is what
+  organisational change looks like from inside.
+- **The line this wave would not cross.** The Garda uniform policy publishes badge placement,
+  chevron positions and nameplate dimensions. None is used. No supplier, manufacturer, model,
+  specification, price or purchasing route appears anywhere, and cost figures on a government
+  procurement page were read and deliberately not used.
+- **The commercial classification exists and is internal.** The opportunity map was created with the
+  three tiers and a HIGH/MEDIUM/LOW/INAPPROPRIATE evaluation, and its absence from published output
+  is now asserted in content and again in rendered output rather than assumed. Its honest conclusion:
+  equipment is a good knowledge subject and a poor commerce subject for this platform, because the
+  parts people want to buy are the parts we should not rank.
+- **Two mutations survived and both were real.** A temporal limit recorded in the uncertainty list
+  did not bind the body, so a dated announcement could be presented as the present. And the leak
+  guard checked the built export, which is the last place a leak appears rather than the first.
+- **Content-confirming rejected three claims that existed only in search summaries** — a 1995
+  insignia change, the founding ranks, and a 1977 trouser trial. Each is recorded as `DOES NOT
+SUPPORT` so the next editor knows it was checked.
+- **Client JS +0 KB. CSS +0 bytes. No component changed. No images.**
+- Validation: 9,278 tests / 92 files; 2,278 e2e passed; **552 routes**, 554 pages, 552 sitemap URLs;
+  route matrix 704/704; 0 orphans, 0 weakly linked, 0 dead ends; 400 sources. **15/15 mutation
+  proofs valid**, two caught only after the fixes they forced. Adversarial QA: 0 P0, 0 P1, 0 P2.
+
+Delivered on `feat/police-equipment-professional-gear-wave-34`. Not merged, not deployed.
