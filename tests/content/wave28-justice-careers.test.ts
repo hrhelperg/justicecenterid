@@ -302,6 +302,20 @@ describe('the numbers are not merged, softened or generalised', () => {
       t,
       'the page does not warn that the two durations belong to different routes',
     ).toMatch(/must not be merged|different (?:routes|entries)|belong to different/i);
+    /*
+     * Mutation W28M2 SURVIVED the first version of this check, which asserted only that both
+     * numbers and a warning appeared somewhere on the page. They still did: the mutation added a
+     * sentence claiming French judges train for 12 months IN ALL CASES and left the rest intact.
+     * A presence check cannot see a contradiction, so the guard now also looks for one.
+     */
+    const universalised = sentences(t).filter(
+      (sentence) =>
+        /\b\d+ months\b/.test(sentence) &&
+        /\b(?:in all cases|always|every (?:French )?(?:judge|magistrat)|all French judges|regardless of route)\b/i.test(
+          sentence,
+        ),
+    );
+    expect(universalised, 'a duration has been generalised across both routes').toEqual([]);
   });
 
   it('the any-subject degree finding is not softened into "usually a law degree"', () => {
@@ -313,8 +327,25 @@ describe('the numbers are not merged, softened or generalised', () => {
   });
 
   it('the published "usually" on each half of pupillage is preserved', () => {
-    const t = allText(guide('the-supervised-stage-in-legal-qualification'));
-    expect(t).toMatch(/usually of six months/);
+    /*
+     * Mutation W28M5 SURVIVED the first version, which searched the whole page. The hedge also
+     * appears in a misconception on the same page, so stripping it from the sourced factual
+     * paragraph left the page-wide match satisfied while the actual citation had become an
+     * absolute claim the regulator does not make. The check now reads the cited block itself.
+     */
+    const g = guide('the-supervised-stage-in-legal-qualification');
+    const citing = (g.howItWorks ?? []).filter(
+      (b): b is Extract<Block, { kind: 'paragraph' }> =>
+        b.kind === 'paragraph' && (b.sources ?? []).includes('ew-bsb-becoming-a-barrister'),
+    );
+    expect(citing.length, 'no paragraph cites the Bar regulator').toBeGreaterThan(0);
+    const pupillage = citing.filter((b) => /pupillage/i.test(b.text));
+    expect(pupillage.length, 'no cited paragraph describes pupillage').toBeGreaterThan(0);
+    for (const b of pupillage) {
+      expect(b.text, 'the cited paragraph drops the regulator\u2019s "usually"').toMatch(
+        /usually of six months/,
+      );
+    }
   });
 
   it.each(WAVE_28)('%s never generalises two systems into a universal rule', (slug) => {
