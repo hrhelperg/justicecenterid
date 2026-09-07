@@ -375,7 +375,19 @@ describe('the findings are not reversible, and figures are not inventable', () =
     const INSTITUTION_SUPERLATIVE =
       /\b(?:largest|biggest|oldest|best|most prestigious|leading)\s+(?:\w+\s+){0,2}(?:academy|college|institution|school|university)\b|\b(?:academy|college|institution|school)\b[^.]{0,30}\b(?:in the world|in Europe|of any country|anywhere)\b/i;
     const UNIVERSAL = /\bin every country\b|\ball countries (?:have|do)\b/i;
-    for (const slug of WAVE_35) {
+    /*
+     * Scope includes the pages this wave depends on, not only its own. Mutation M12 put "delivers
+     * initial training in every country" onto `what-a-police-academy-is` — the page that OWNS the
+     * question — and survived, because the guard iterated the new pages alone. That is the Wave 32
+     * lesson repeating: a corpus-relevant invariant guarded only on the newest pages protects the
+     * least load-bearing ones and leaves the owner exposed.
+     */
+    const SCOPE = [
+      ...WAVE_35,
+      'what-a-police-academy-is',
+      'police-training-and-police-education',
+    ];
+    for (const slug of SCOPE) {
       const offenders = asserted(guide(slug)).filter(
         (x) => INSTITUTION_SUPERLATIVE.test(x) || UNIVERSAL.test(x),
       );
