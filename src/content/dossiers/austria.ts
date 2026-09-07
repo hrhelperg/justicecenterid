@@ -170,9 +170,19 @@ export const AUSTRIA: CountryDossier = {
       blocks: [
         {
           kind: 'paragraph',
-          text: 'The ordinary courts hear civil and criminal cases through four tiers: district courts (Bezirksgerichte), regional courts (Landesgerichte), higher regional courts (Oberlandesgerichte), and at the apex the Supreme Court of Justice (Oberster Gerichtshof), "the highest instance in civil and criminal matters" (Article 92(1)). Lay participation is constitutionally required (Article 91): jurors (Geschworene) for the most serious and political offences, lay assessors (Schöffen) otherwise.',
+          text: 'The ordinary courts hear civil and criminal cases through four tiers: district courts (Bezirksgerichte), regional courts (Landesgerichte), higher regional courts (Oberlandesgerichte), and at the apex the Supreme Court of Justice (Oberster Gerichtshof), "the highest instance in civil and criminal matters" (Article 92(1)). Lay participation is constitutionally required: the justice ministry states that the constitution provides for it in Article 91, and that lay adjudication is part of the democratic basic principle of the Austrian constitution. Jurors (Geschworene) sit for the gravest offences — those carrying life imprisonment, or a lower limit above five years and an upper limit above ten — and lay assessors (Schöffen) sit with a professional judge where the offence carries more than five years.',
           claim: 'fact',
-          sources: ['at-bvg'],
+          /*
+           * WAVE 31 CORRECTION. This block cited at-bvg alone for Article 91, and that record's note
+           * itemises Art. 10, 78a, 78b, 87, 90a, 92, 129/133, 144 and 148a — not Art. 91. The claim
+           * therefore rested on a record that did not attest it, which Wave 30 recorded as an open
+           * finding because RIS returned 503 to every request for the article. RIS is still down, so
+           * the article's own text remains UNREAD; what changed is that the ministry administering
+           * the courts states in its own words which article provides for lay participation, and
+           * that source now carries the Article 91 claim and the offence thresholds. The words "and
+           * political" were removed — nothing read here supports them.
+           */
+          sources: ['at-bvg', 'at-justiz-rechtsprechungsgrundsaetze'],
         },
         {
           kind: 'callout',
