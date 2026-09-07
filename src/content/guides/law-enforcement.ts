@@ -8349,7 +8349,7 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [marked vehicles and police identification](/law-enforcement/marked-vehicles-and-police-identification), [what police equipment is for](/law-enforcement/what-police-equipment-is-for), and [what a police unit is](/law-enforcement/what-a-police-unit-is).',
+        text: 'Related: [marked vehicles and police identification](/law-enforcement/marked-vehicles-and-police-identification), [when police may depart from traffic rules](/law-enforcement/when-police-may-depart-from-traffic-rules), [what police equipment is for](/law-enforcement/what-police-equipment-is-for), and [what a police unit is](/law-enforcement/what-a-police-unit-is).',
       },
     ],
   },
@@ -9652,6 +9652,403 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
       {
         kind: 'paragraph',
         text: 'Related: [specialist roles in policing](/law-enforcement/specialist-roles-in-policing), [rank, role and specialisation](/law-enforcement/rank-role-and-specialisation), and [police dog sections](/law-enforcement/police-dog-sections).',
+      },
+    ],
+  },
+  /*
+   * WAVE 33 — police mobility: what the law permits a police driver to do.
+   *
+   * OWNERSHIP. Wave 27 owns the vehicle CATEGORIES a service runs
+   * (`police-vehicles-and-what-they-are-for`) and why markings are legally protected
+   * (`marked-vehicles-and-police-identification`). Neither touches the driving itself, and the
+   * first records that it deliberately did not use its source's material on pursuit and
+   * interception. That boundary is unchanged: these pages describe the legal framework a police
+   * driver operates inside, never the driving.
+   *
+   * SAFETY. The programme forbids pursuit tactics, performance comparison, evasion material and
+   * anything that would help a reader defeat or predict a police vehicle. Nothing here approaches
+   * that. What a reader learns is which rules a police driver may depart from, on what conditions,
+   * and who has to authorise the signals — all of it published by the institutions themselves, and
+   * all of it a limit on the driver rather than a capability of the vehicle.
+   *
+   * NO NEW ROUTE FAMILY. Two pages cannot justify /vehicles, and the Wave 27 vehicle pages already
+   * live here. The brief warns specifically against creating a route family for neatness.
+   */
+  {
+    slug: 'when-police-may-depart-from-traffic-rules',
+    title: 'When police may depart from traffic rules',
+    shortTitle: 'Departing from traffic rules',
+    question: 'Are police cars allowed to ignore the rules of the road?',
+    summary:
+      'Not ignore — depart from, on conditions, and only some rules. One system lists red lights, hard shoulders and bus lanes and attaches three conditions. Another exempts speed limits in a single section, and only where obeying them would hinder the job.',
+    entityType: 'concept',
+    section: 'law-enforcement',
+    jurisdiction: ['NL', 'GB'],
+    temporalScope: 'current',
+    related: [
+      'who-authorises-emergency-signals',
+      'police-vehicles-and-what-they-are-for',
+      'police-use-of-force',
+      'how-police-are-held-to-account',
+    ],
+    sources: ['nl-politie-vrijstelling-verkeersregels', 'uk-rtra-1984-s87'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-07',
+    publishedOn: '2026-09-07',
+    reviewedOn: '2026-09-07',
+    factsVerifiedOn: '2026-09-07',
+    readingTimeMinutes: 7,
+    uncertainty: [
+      'Two systems were researched, and only partially. How police exemptions from traffic rules work anywhere else was NOT RESEARCHED.',
+      'For England and Wales one SECTION was read, and it addresses speed limits. Whether other provisions exempt red lights, keep-left signs, bus lanes or anything else was NOT RESEARCHED. The absence of a finding here is not a finding that no such provision exists.',
+      'What happens when an exemption is exercised badly — the disciplinary or criminal consequence — was NOT RESEARCHED for either system.',
+      'No speed, performance figure, driving technique, pursuit material or vehicle capability appears anywhere on this page. That is a deliberate boundary and it is enforced by a test.',
+      'This page describes rules that bind police drivers. It is not guidance for any other road user.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'A police vehicle answering an urgent call cannot always obey the rules written for ordinary traffic, and every system that puts one on the road has to say so in law. What it says turns out to be narrower and more conditional than the popular idea of a blanket exemption — and the two systems researched here draw the line in quite different places.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This describes what the law permits a police driver to depart from. It contains no speed figure, no performance comparison, no pursuit material and nothing about how any vehicle is driven. It is not guidance for other road users, and it is not advice about any incident.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'Traffic rules are a coordination system: they work because everyone can predict what everyone else will do. A vehicle that must arrive faster than the system allows breaks that prediction, and the cost falls on people who did nothing wrong. An exemption is therefore not a privilege granted to a driver but a decision to move a risk from one place to another, and systems that grant it tend to bound it carefully.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Which is why the conditions matter more than the exemption',
+        text: 'Almost every system will let an emergency vehicle depart from something. What distinguishes them is what has to be true first. A rule that says "may exceed the limit" and one that says "may exceed the limit where obeying it would hinder the purpose" describe very different arrangements.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'The Dutch police publish the breadth of their exemption as a list. It covers proceeding through a red light — "doorrijden bij een rood verkeerslicht" — driving on the hard shoulder, "rijden over de vluchtstrook", driving where others may not, including tram lanes, bus lanes and pavements, overtaking across a solid line, "inhalen over een doorgetrokken streep", and stopping or parking where that is prohibited to others.',
+        claim: 'fact',
+        sources: ['nl-politie-vrijstelling-verkeersregels'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'A list, not a general licence',
+        text: 'Publishing the exemption as named categories is itself a limit. It tells a reader what is covered, which also tells them what is not, and it gives anyone examining an incident a fixed thing to measure against.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The same service attaches three conditions. Road safety must not be endangered — "de verkeersveiligheid mag niet in gevaar komen"; the use of the exemption must be necessary given the situation — "het gebruik van de vrijstelling is gezien de situatie noodzakelijk"; and the driver must comply with the police traffic guideline.',
+        claim: 'fact',
+        sources: ['nl-politie-vrijstelling-verkeersregels'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'The first condition swallows a great deal',
+        text: 'An exemption that may not endanger road safety is not permission to create danger; it is permission to depart from a rule while remaining answerable for the outcome. That is a much smaller thing than the popular reading, and it is the condition most likely to be examined afterwards.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'England and Wales approaches the same problem through statute, and the section read here is about speed alone: "No statutory provision imposing a speed limit on motor vehicles shall apply to any vehicle on an occasion when it is being used for fire and rescue authority, for ambulance purposes or police purposes, if the observance of that provision would be likely to hinder the use of the vehicle for the purpose for which it is being used on that occasion."',
+        claim: 'fact',
+        sources: ['uk-rtra-1984-s87'],
+      },
+      {
+        kind: 'callout',
+        variant: 'uncertainty',
+        title: 'One section is not the whole of a legal system',
+        text: 'This section addresses speed limits. It establishes nothing about red lights, bus lanes or any other rule, and whether other provisions cover those was not researched. Reading it as the complete exemption available in that system would be exactly the mistake this corpus tries not to make.',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'The exemption is conditional in both systems',
+            description:
+              'One requires that road safety not be endangered and that use be necessary. The other applies only where obeying the limit would be likely to hinder the purpose. Neither is automatic.',
+          },
+          {
+            term: 'Breadth differs sharply',
+            description:
+              'One published exemption names red lights, hard shoulders, bus lanes, solid lines and parking. The single section read for the other addresses speed limits.',
+          },
+          {
+            term: 'It attaches to the occasion, not to the vehicle',
+            description:
+              'The statutory wording turns on the vehicle being used for the relevant purpose on that occasion. A police vehicle is not permanently exempt; a police vehicle doing a particular thing may be.',
+          },
+          {
+            term: 'Training can be a condition of the exemption',
+            description:
+              'A later subsection requires a driver, except when training, to have completed prescribed high-speed driving instruction for National Crime Agency purposes. Where a system attaches training to an exemption, the exemption belongs to a qualified driver rather than to a role.',
+          },
+          {
+            term: 'And departing from a rule is not immunity from the consequence',
+            description:
+              'Neither arrangement researched here removes responsibility for what happens. The exemption changes which rule applies; it does not settle whether the driving was acceptable.',
+          },
+        ],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Police vehicles are exempt from the rules of the road.',
+        reality:
+          'Both arrangements researched here are conditional and bounded. One names the categories it covers and attaches three conditions; the other applies to speed limits only where obeying them would be likely to hinder the purpose.',
+      },
+      {
+        claim: 'A police car is exempt whenever it is a police car.',
+        reality:
+          'The statutory wording turns on the vehicle being used for the relevant purpose on that occasion. The exemption attaches to the occasion, not permanently to the vehicle.',
+      },
+      {
+        claim: 'An exemption from a rule means nothing can go wrong legally.',
+        reality:
+          'One system states that road safety must not be endangered and that use must be necessary. Departing from a rule does not settle whether the driving was acceptable.',
+      },
+      {
+        claim: 'Every country grants the same exemptions.',
+        reality:
+          'The two researched here differ substantially in breadth. One publishes a list covering several rules; the section read for the other addresses speed limits.',
+      },
+      {
+        claim: 'Because only speed is mentioned, that system exempts nothing else.',
+        reality:
+          'One section was read, and it is about speed limits. Whether other provisions cover other rules was not researched, and an absence of research is not a finding that nothing exists.',
+      },
+      {
+        claim: 'This page will tell you how fast police vehicles may go.',
+        reality:
+          'It will not. No speed figure, performance detail or driving material appears anywhere here, and that boundary is enforced by a test.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Two systems, as each publishes itself.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Red lights, hard shoulder, tram and bus lanes, solid lines, prohibited parking — Netherlands, published as a list.',
+          'Three conditions: road safety not endangered, use necessary, guideline observed — Netherlands.',
+          'Speed limits, where observance would be likely to hinder the purpose — England and Wales, one section.',
+          'Prescribed high-speed driving instruction required of the driver in a later subsection.',
+          'Not researched: whether other provisions in England and Wales exempt other rules, and every other country.',
+        ],
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'An exemption is one of the few police powers that is exercised against people who are not suspected of anything. The pedestrian at the crossing and the driver on the roundabout have no involvement in the emergency and carry the whole of the transferred risk. That is why the conditions are the substantive part of the arrangement, and why a system that publishes them has given the public something to hold it to.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'Who has to authorise the signals is [who authorises emergency signals](/law-enforcement/who-authorises-emergency-signals). Why services run several vehicle types is [police vehicles and what they are for](/law-enforcement/police-vehicles-and-what-they-are-for). Which bodies can examine police conduct is [how police are held to account](/law-enforcement/how-police-are-held-to-account).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [who authorises emergency signals](/law-enforcement/who-authorises-emergency-signals), [police vehicles and what they are for](/law-enforcement/police-vehicles-and-what-they-are-for), and [police use of force](/law-enforcement/police-use-of-force).',
+      },
+    ],
+  },
+  {
+    slug: 'who-authorises-emergency-signals',
+    title: 'Who authorises emergency signals',
+    shortTitle: 'Emergency signals',
+    question: 'Does a police driver decide to switch on the lights and siren?',
+    summary:
+      'In one service, no. Signals may be used only with the control room’s permission, that permission ends when other services have arrived, and some urgent responses are made deliberately without them.',
+    entityType: 'concept',
+    section: 'law-enforcement',
+    jurisdiction: ['NL'],
+    temporalScope: 'current',
+    related: [
+      'when-police-may-depart-from-traffic-rules',
+      'taking-the-call-and-sending-the-unit',
+      'how-police-are-held-to-account',
+      'police-vehicles-and-what-they-are-for',
+    ],
+    sources: ['nl-politie-zwaailicht-sirene'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-07',
+    publishedOn: '2026-09-07',
+    reviewedOn: '2026-09-07',
+    factsVerifiedOn: '2026-09-07',
+    readingTimeMinutes: 6,
+    uncertainty: [
+      'One service was researched — the Dutch national police. Who authorises signals anywhere else was NOT RESEARCHED, and the arrangement is not presented as general.',
+      'What the control room applies in deciding was NOT ESTABLISHED. The service states that permission is required; it does not publish the test on this page.',
+      'How a decision is recorded, reviewed or challenged afterwards was NOT RESEARCHED.',
+      'Which other vehicles or services may use such signals, and on what basis, was NOT RESEARCHED for any system.',
+      'No speed figure, driving technique or response tactic appears here, and none is drawn from the source.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Blue lights and a siren look like a decision made in a car. In the service researched here they are not: the signals are switched on by permission, given by somebody who is not in the vehicle and who is holding the whole picture of what else is happening.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This describes who authorises the use of signals in one service. It is not guidance for other road users, it describes no response tactic, and it contains no speed or driving material.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'Signals do two things at once: they ask other traffic to give way, and they unlock the departures from ordinary rules that make speed possible. Both of those impose on people outside the incident, and both are easier to justify from a room that can see how many calls are running than from a vehicle that can see one.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Which puts the decision where the information is',
+        text: 'The officer in the car knows the road ahead. The control room knows whether anyone else is already going, whether the call has been upgraded, and what else is competing for a response. Placing the authorisation there is a judgement about which of those matters more.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'The rule is stated without qualification: "De politie mag uitsluitend met toestemming van de meldkamer gebruikmaken van optische en geluidssignalen" — the police may use optical and audible signals only with the control room’s permission.',
+        claim: 'fact',
+        sources: ['nl-politie-zwaailicht-sirene'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'The word doing the work is uitsluitend — only',
+        text: 'It is not that permission is normally sought, or sought where practicable. The formulation makes the authorisation the condition of use, which is a stronger statement than most services make about anything a crew does in a moving vehicle.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The permission is bounded rather than open-ended: it ends once other emergency services have already arrived at the incident. And urgency does not always mean signals — in some situations officers respond urgently without them.',
+        claim: 'fact',
+        sources: ['nl-politie-zwaailicht-sirene'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Signals are a tool for arriving, not a marker of seriousness',
+        text: 'A response without lights is not a less urgent response. Reading the absence of signals as evidence that nothing much is happening gets the arrangement backwards, and the service says so directly.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The service also states the limit of what permission buys: "Dit betekent niet dat politieagenten roekeloos mogen rijden, of dat ze het overige verkeer in gevaar mogen brengen" — it does not mean officers may drive recklessly or endanger other traffic. A member of the public may complain about police driving.',
+        claim: 'fact',
+        sources: ['nl-politie-zwaailicht-sirene'],
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'Authorisation sits outside the vehicle',
+            description:
+              'Permission comes from the control room. The crew asks; somebody else decides, holding information the crew does not have.',
+          },
+          {
+            term: 'Permission is bounded, not granted for a shift',
+            description:
+              'It ends when other emergency services have arrived. The authorisation attaches to a situation and expires with it.',
+          },
+          {
+            term: 'Urgency and signals are separable',
+            description:
+              'Some urgent responses are made deliberately without signals. Absence of lights does not indicate absence of urgency.',
+          },
+          {
+            term: 'Permission is not a defence to bad driving',
+            description:
+              'The service states that this does not permit reckless driving or endangering other traffic. Authorisation changes what is permitted, not what is answerable.',
+          },
+          {
+            term: 'And the arrangement is one service’s',
+            description:
+              'Who authorises signals elsewhere was not researched. Nothing here describes any other country, and no general rule is claimed.',
+          },
+        ],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'The officer driving decides when to use lights and siren.',
+        reality:
+          'In the service researched here, signals may be used only with the control room’s permission. The decision sits outside the vehicle.',
+      },
+      {
+        claim: 'Once permission is given it lasts until the job is finished.',
+        reality:
+          'The published position is that permission ends once other emergency services have already arrived at the incident.',
+      },
+      {
+        claim: 'No lights means it is not urgent.',
+        reality:
+          'The service states that in some situations officers respond urgently without signals. Absence of signals is not evidence of a lesser response.',
+      },
+      {
+        claim: 'Permission to use signals is permission to drive as fast as necessary.',
+        reality:
+          'The same page states that this does not mean officers may drive recklessly or endanger other traffic, and that a member of the public may complain about police driving.',
+      },
+      {
+        claim: 'Every police service works this way.',
+        reality:
+          'One service was researched. Who authorises signals in any other system was not researched, and no general arrangement is claimed here.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'One service, as it publishes itself.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Signals may be used only with the control room’s permission.',
+          'Permission ends once other emergency services have arrived.',
+          'Some urgent responses are made deliberately without signals.',
+          'Permission does not authorise reckless driving or endangering other traffic.',
+          'A member of the public may complain about police driving.',
+          'Not researched: every other system, and the test the control room applies.',
+        ],
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'Putting the authorisation in the control room creates a record of a decision that would otherwise exist only in a driver’s memory. Somebody asked, somebody granted, and both can be examined afterwards. That is a modest piece of accountability engineering, and it is worth noticing that it comes from the same room the corpus describes elsewhere as taking the call and sending the unit.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'What the signals unlock in law is [when police may depart from traffic rules](/law-enforcement/when-police-may-depart-from-traffic-rules). The room giving the permission is described at [taking the call and sending the unit](/public-safety/taking-the-call-and-sending-the-unit). Which bodies can examine police conduct is [how police are held to account](/law-enforcement/how-police-are-held-to-account).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [when police may depart from traffic rules](/law-enforcement/when-police-may-depart-from-traffic-rules), [taking the call and sending the unit](/public-safety/taking-the-call-and-sending-the-unit), and [police vehicles and what they are for](/law-enforcement/police-vehicles-and-what-they-are-for).',
       },
     ],
   },

@@ -2203,7 +2203,7 @@ export const PUBLIC_SAFETY_GUIDES: Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [entering emergency call handling](/public-safety/entering-emergency-call-handling), [who is in charge in an emergency](/public-safety/who-is-in-charge-in-an-emergency), and [what a police unit is](/law-enforcement/what-a-police-unit-is).',
+        text: 'Related: [entering emergency call handling](/public-safety/entering-emergency-call-handling), [who authorises emergency signals](/law-enforcement/who-authorises-emergency-signals), [who is in charge in an emergency](/public-safety/who-is-in-charge-in-an-emergency), and [what a police unit is](/law-enforcement/what-a-police-unit-is).',
       },
     ],
   },
