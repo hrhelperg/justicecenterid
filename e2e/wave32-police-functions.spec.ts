@@ -62,10 +62,20 @@ test.describe('the pages render correctly and describe themselves honestly', () 
       const types = await schemaTypes(page);
       expect(types.length, `${path} emits no structured data`).toBeGreaterThan(0);
       for (const forbidden of [
+        /*
+         * `Organization` is deliberately NOT on this list, and the gate is what established that.
+         * The site emits it twice for legitimate reasons — once for its own publisher identity at
+         * site level, and once per cited source for the body that published it. Forbidding it
+         * outright failed twelve tests and would have forbidden the corpus from naming who wrote
+         * the documents it cites.
+         *
+         * The risk actually worth guarding is narrower: a page about a police function must never
+         * be marked up as a police body, which would present this platform as an arm of a service
+         * rather than an independent description of one.
+         */
         'GovernmentOrganization',
         'PoliceStation',
         'EmergencyService',
-        'Organization',
         'JobPosting',
         'Occupation',
         'Course',
