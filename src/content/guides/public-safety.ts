@@ -186,7 +186,7 @@ export const PUBLIC_SAFETY_GUIDES: Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [what civil protection is](/public-safety/what-civil-protection-is), [who is in charge in an emergency](/public-safety/who-is-in-charge-in-an-emergency), and [police and law enforcement are not the same thing](/law-enforcement/police-and-law-enforcement-difference).',
+        text: 'Related: [what civil protection is](/public-safety/what-civil-protection-is), [entering emergency call handling](/public-safety/entering-emergency-call-handling), [who is in charge in an emergency](/public-safety/who-is-in-charge-in-an-emergency), and [police and law enforcement are not the same thing](/law-enforcement/police-and-law-enforcement-difference).',
       },
     ],
   },
@@ -610,7 +610,7 @@ export const PUBLIC_SAFETY_GUIDES: Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [national and local emergency authority](/public-safety/national-and-local-emergency-authority), [military assistance to civil authorities](/public-safety/military-assistance-to-civil-authorities), and [police command and coordination](/law-enforcement/police-command-and-coordination).',
+        text: 'Related: [national and local emergency authority](/public-safety/national-and-local-emergency-authority), [taking the call and sending the unit](/public-safety/taking-the-call-and-sending-the-unit), [military assistance to civil authorities](/public-safety/military-assistance-to-civil-authorities), and [police command and coordination](/law-enforcement/police-command-and-coordination).',
       },
     ],
   },
