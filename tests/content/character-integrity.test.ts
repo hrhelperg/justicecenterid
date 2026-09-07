@@ -1,0 +1,142 @@
+import { describe, expect, it } from 'vitest';
+import { ALL_GUIDES } from '@/content/guides';
+import { SOURCES } from '@/content/sources';
+import { COUNTRY_DOSSIERS } from '@/content/dossiers';
+import { GLOSSARY } from '@/content/glossary';
+import { PROFESSIONS } from '@/content/professions';
+import { INSTITUTION_TYPES } from '@/content/institutions';
+import { HISTORY_ENTRIES } from '@/content/history';
+import { TIMELINE } from '@/content/timeline';
+import { JURISDICTIONS } from '@/content/jurisdictions';
+
+/**
+ * A PROGRAM-WIDE INVARIANT, promoted out of Wave 30.
+ *
+ * ---------------------------------------------------------------------------
+ * WHY THIS IS NOT A WAVE TEST
+ * ---------------------------------------------------------------------------
+ * Wave 29 shipped 90 sequences of UTF-8 text that had been re-decoded as
+ * latin-1. An em dash became "a-circumflex" followed by two C1 control characters; a
+ * typographic apostrophe became the same shape. It reached production because
+ * every check the repository had was blind to it:
+ *
+ *   - the strings stayed syntactically valid, so typecheck and lint passed;
+ *   - the e2e assertions were written from the same corrupted literals, so
+ *     they matched the corruption and went green;
+ *   - formatting does not inspect character integrity;
+ *   - a spot-check for the cp1252 rendering of the fault (A-tilde + paragraph sign) missed it,
+ *     because latin-1 decoding produces raw control characters rather than
+ *     that signature.
+ *
+ * Wave 30 repaired it and guarded it — but guarded it inside a wave test, over
+ * the three collections that wave touched. That leaves the invariant scoped to
+ * a wave rather than to the corpus, and it is the corpus that has the problem:
+ * professions and institution types were never walked at all, and neither were
+ * the glossary, history, timeline or jurisdiction registries.
+ *
+ * So the guard lives here, walks everything, and is the thing new content
+ * families are added to. When units, equipment, vehicles or training
+ * institutions arrive, they are registered in CORPUS below — the coverage
+ * assertion at the bottom is what makes forgetting that a test failure rather
+ * than a silent gap.
+ */
+
+const C1 = /[\u0080-\u009F]/;
+const C0 = /[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/;
+const MOJIBAKE = /[\u00E2\u00C3\u00C2][\u0080-\u009F]/;
+const REPLACEMENT = /\uFFFD/;
+/** Unpaired surrogates — malformed Unicode that survives as a valid JS string. */
+const LONE_SURROGATE = /[\uD800-\uDBFF](?![\uDC00-\uDFFF])|(?<![\uD800-\uDBFF])[\uDC00-\uDFFF]/;
+
+type Found = { where: string; text: string };
+
+const walk = (label: string, value: unknown, out: Found[]): void => {
+  if (typeof value === 'string') out.push({ where: label, text: value });
+  else if (Array.isArray(value)) value.forEach((v, i) => walk(`${label}[${i}]`, v, out));
+  else if (value && typeof value === 'object')
+    for (const [k, v] of Object.entries(value)) walk(`${label}.${k}`, v, out);
+};
+
+/**
+ * Every content family in the corpus. A family that is not here is not checked,
+ * which is the failure mode this list exists to make visible.
+ */
+const CORPUS: readonly { name: string; records: readonly unknown[] }[] = [
+  { name: 'guides', records: ALL_GUIDES },
+  { name: 'sources', records: SOURCES },
+  { name: 'dossiers', records: COUNTRY_DOSSIERS },
+  { name: 'glossary', records: GLOSSARY },
+  { name: 'professions', records: PROFESSIONS },
+  { name: 'institution-types', records: INSTITUTION_TYPES },
+  { name: 'history', records: HISTORY_ENTRIES },
+  { name: 'timeline', records: TIMELINE },
+  { name: 'jurisdictions', records: JURISDICTIONS },
+];
+
+const STRINGS: Found[] = (() => {
+  const out: Found[] = [];
+  for (const family of CORPUS) {
+    family.records.forEach((r, i) => walk(`${family.name}[${i}]`, r, out));
+  }
+  return out;
+})();
+
+const offenders = (re: RegExp): string[] =>
+  STRINGS.filter((s) => re.test(s.text)).map((s) => `${s.where}: ${s.text.slice(0, 120)}`);
+
+describe('the corpus is character-clean', () => {
+  /*
+   * A guard that finds nothing because it is looking at nothing is worse than
+   * no guard: it reports success. These two assertions are what stop that.
+   */
+  it('is not vacuous — it walks a large corpus that genuinely uses non-ASCII text', () => {
+    expect(STRINGS.length).toBeGreaterThan(10000);
+    expect(STRINGS.filter((s) => /[\u00C0-\u00FF]/.test(s.text)).length).toBeGreaterThan(100);
+  });
+
+  it('covers every content family, so a new family cannot be added unchecked', () => {
+    for (const family of CORPUS) {
+      expect(family.records.length, `${family.name} is registered but empty`).toBeGreaterThan(
+        0,
+      );
+      expect(
+        STRINGS.some((s) => s.where.startsWith(`${family.name}[`)),
+        `${family.name} contributed no strings, so it is not really being walked`,
+      ).toBe(true);
+    }
+  });
+
+  it('contains no C1 control characters', () => {
+    expect(offenders(C1)).toEqual([]);
+  });
+
+  it('contains no stray C0 control characters', () => {
+    /* Tab, newline and carriage return are legitimate in prose blocks; nothing else is. */
+    expect(offenders(C0)).toEqual([]);
+  });
+
+  it('contains no latin-1 mojibake signature', () => {
+    expect(offenders(MOJIBAKE)).toEqual([]);
+  });
+
+  it('contains no replacement characters', () => {
+    expect(offenders(REPLACEMENT)).toEqual([]);
+  });
+
+  it('contains no malformed Unicode', () => {
+    expect(offenders(LONE_SURROGATE)).toEqual([]);
+  });
+
+  it('still spells the characters the repair restored', () => {
+    /*
+     * The repair had to decode the text, not strip it. If a later fix deletes
+     * punctuation instead of fixing it, every check above still passes and this
+     * one does not.
+     */
+    const joined = STRINGS.map((s) => s.text).join('');
+    expect(joined).toContain('\u2014');
+    expect(joined).toContain('\u2019');
+    expect(joined).toContain('\u00F6');
+    expect(joined).toContain('\u00E9');
+  });
+});

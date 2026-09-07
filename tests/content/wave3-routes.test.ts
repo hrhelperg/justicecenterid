@@ -30,6 +30,10 @@ const ROUTED_GLOSSARY_SLUGS = [
   'judicial-review',
   'chain-of-custody',
   'disclosure',
+  // Wave 31. The gate, not this list, decides routing — these two are here because they
+  // earned it, and the list is the assertion that nothing routed without being noticed.
+  'jury',
+  'lay-judge',
 ];
 
 const SUBNATIONAL = [

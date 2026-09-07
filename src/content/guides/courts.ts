@@ -3659,7 +3659,7 @@ export const COURTS_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [how a lay court is composed](/courts/how-a-lay-court-is-composed), [what a lay judge decides](/courts/what-a-lay-judge-decides), and [who may serve on a lay court](/courts/who-may-serve-on-a-lay-court).',
+        text: 'Related: [how a lay court is composed](/courts/how-a-lay-court-is-composed), [what a lay judge decides](/courts/what-a-lay-judge-decides), [who may serve on a lay court](/courts/who-may-serve-on-a-lay-court), and the definitions of [jury](/glossary/jury) and [lay judge](/glossary/lay-judge).',
       },
     ],
   },
@@ -3836,7 +3836,7 @@ export const COURTS_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [lay participation in judging](/courts/lay-participation-in-judging), [what a lay judge decides](/courts/what-a-lay-judge-decides), and [who may serve on a lay court](/courts/who-may-serve-on-a-lay-court).',
+        text: 'Related: [lay participation in judging](/courts/lay-participation-in-judging), [what a lay judge decides](/courts/what-a-lay-judge-decides), [who may serve on a lay court](/courts/who-may-serve-on-a-lay-court), and what a [jury](/glossary/jury) is.',
       },
     ],
   },
@@ -4024,7 +4024,7 @@ export const COURTS_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [lay participation in judging](/courts/lay-participation-in-judging), [how a lay court is composed](/courts/how-a-lay-court-is-composed), and [why judicial independence matters](/courts/why-judicial-independence-matters).',
+        text: 'Related: [lay participation in judging](/courts/lay-participation-in-judging), [how a lay court is composed](/courts/how-a-lay-court-is-composed), [why judicial independence matters](/courts/why-judicial-independence-matters), and what a [lay judge](/glossary/lay-judge) is.',
       },
     ],
   },
@@ -4212,7 +4212,7 @@ export const COURTS_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [lay participation in judging](/courts/lay-participation-in-judging), [what a lay judge decides](/courts/what-a-lay-judge-decides), and [how you become a judge](/courts/how-you-become-a-judge).',
+        text: 'Related: [lay participation in judging](/courts/lay-participation-in-judging), [what a lay judge decides](/courts/what-a-lay-judge-decides), [how you become a judge](/courts/how-you-become-a-judge), and the difference between a [jury](/glossary/jury) and a [lay judge](/glossary/lay-judge).',
       },
     ],
   },
