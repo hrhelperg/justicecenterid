@@ -1953,3 +1953,71 @@ professions had reference records and no careers layer at all.
   proofs valid**, two caught only after the fixes they forced. Adversarial QA: 1 P2, 0 P1.
 
 Delivered on `feat/justice-careers-wave-28`. Not merged, not deployed.
+
+## Phase 43 — Knowledge Expansion Wave 29 (delivered 2026-09-07)
+
+Completing the professions arc: forensic science and emergency call handling. Four guides on three
+new sources with two reused, landing two each in `/forensics` and `/public-safety` — the two
+thinnest sections. Details in `docs/research/knowledge-expansion-wave-29-qa.md` and
+`docs/research/professions-arc-model-findings.md`.
+
+**Scope note:** this wave arrived without a brief. The cluster was chosen against the programme's
+priorities and confirmed before implementation: six of eight profession records had a sourced entry
+route after Wave 28, and two did not.
+
+- **The arc is complete, and it is a test rather than a claim.** Every profession record now has a
+  sourced entry route, paired in a map that fails the suite if a profession is added without one.
+  Both records this wave answers had declared the gap themselves — the dispatcher record said
+  plainly that "no country's entry requirements, selection process, training length or working
+  conditions were researched".
+- **Asking one question of eight professions produced three answers.** A competence guarantee
+  attaches to the person (lawyers admitted, judges appointed or entering a corps); to the unit and
+  the activity, with personnel assessed inside it (forensic science); or to the employing service,
+  which trains the person itself (emergency call handling). None is the serious one — they suit
+  differently shaped problems, and the pages are guarded against ranking them.
+- **A single person can be a forensic unit.** The statutory code defines a unit as "a legal entity
+  or part of a legal entity" that "can be a team, a unit or a single practitioner", assessed by one
+  recognised national body against three named ISO standards chosen by kind of activity. Scope is
+  the point: compliance is recorded on a schedule, and reading "accredited" without reading the
+  schedule tells you very little.
+- **Accreditation is required for most listed activities, not all.** "All forensic work must be
+  accredited" is the most likely wrong summary of this material, and a mutation proof confirmed it
+  was the one the suite had not caught — a misconception correcting a belief is not a guard on the
+  body text.
+- **The individual appears at the report.** Competence is "defining, demonstrating and testing the
+  initial and ongoing competence of personnel", and "All practitioners are required to declare their
+  compliance to the Code via a declaration in their reports". The code states no entry qualification
+  at all, and none is claimed.
+- **One service names why, inside the requirement.** The Dutch police ask for "stressbestendigheid
+  en mentale weerbaarheid (vanwege de heftige situaties die je kunt meemaken)". Most published
+  criteria say what a person must be able to do; this one says what they must withstand, and what
+  they will meet. New Zealand states no academic requirement and puts six weeks of full-time
+  training first.
+- **A guard design error, and the correction is general.** Wave 28 established that
+  prohibition-shaped guards must ignore denials, because this corpus writes its prohibitions into
+  rendered prose. Applying that to the cannibalisation guards was the wrong lesson: W29M9 inserted a
+  verbatim restatement of a neighbouring page's finding — "Breaching the code is not an offence" —
+  and the denial filter removed it before the pattern ran. A guard asking whether a page ASSERTS
+  something must ignore denials; a guard asking whether it DISCUSSES something must not. The same
+  trap appeared a third time in the e2e, where rendered misconceptions are labelled "Common belief:"
+  and carry no denial word at all.
+- **An emergency-specific refusal, new to the corpus.** Marking a page about emergency call handling
+  as `EmergencyService`, or attaching a `ContactPoint` or telephone number, would let a search engine
+  present this platform as somewhere to contact in an emergency. Both pages now assert no such
+  markup, no `tel:` link, no telephone-shaped text and no number formatted as something to dial,
+  while still naming 111, 112 and 105 as call streams.
+- **Three more closed-world counts**, the second consecutive wave to find them: Wave 16 pinned
+  `/forensics` to its own eight guides and Wave 20 pinned `/public-safety`. And **one over-broad
+  safety pattern** — the Wave 24 sequencing guard matched "the entry conditions can be short",
+  because "entry" is also the ordinary word for getting into a profession. Narrowed to forced,
+  dynamic and effecting entry.
+- **Deliberately not used:** the United States, after 911.gov returned 403 across three paths; a
+  membership association that sells courses, which no existing guard would have caught as a source;
+  and any count of New Zealand communications centres, because the page contradicts itself.
+- **The self-referential cluster, a sixth time.** Four editorial backlinks added.
+- **Client JS +0 KB. CSS +0 bytes. No component changed.**
+- Validation: 8,764 tests / 85 files; 1,990 e2e passed; **535 routes**, 537 pages, 535 sitemap URLs;
+  route matrix 687/687; 0 orphans, 0 weakly linked, 0 dead ends; 382 sources. **10/10 mutation
+  proofs valid**, three caught only after the fixes they forced. Adversarial QA: 0 P1, 0 P2.
+
+Delivered on `feat/forensic-dispatch-careers-wave-29`. Not merged, not deployed.
