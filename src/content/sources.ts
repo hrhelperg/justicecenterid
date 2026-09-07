@@ -5081,7 +5081,7 @@ export const SOURCES: readonly SourceRecord[] = [
     note: 'SCOPE: the categories of vehicle the Dutch police describe. Supports that the police car and van are the ordinary vehicles used for surveillance, responding to 112 calls and traffic checks; that motorcycles are used mainly on motorways and roads outside built-up areas; that the helicopter provides air support to regional units; and that training vehicles are identifiable by secondary blue-and-white striping and the inscription "trainingsvoertuig". The page ALSO describes operational uses of a rapid-intervention vehicle including pursuit and interception; that material is deliberately NOT used, because it describes capability rather than category.',
   },
   /*
-   * WAVE 28 â how the justice professions are entered.
+   * WAVE 28 — how the justice professions are entered.
    *
    * Every source here is INSTITUTIONAL: who may apply, what a system requires, what a training
    * stage consists of, and who decides. None is a course provider, a preparation service, a
@@ -5272,6 +5272,67 @@ export const SOURCES: readonly SourceRecord[] = [
     verificationMethod: 'content-confirmed',
     jurisdiction: 'NZ',
     note: 'SCOPE: the Communications Centres of New Zealand Police, the same units named in the teams-and-units list this corpus already cites. Supports the division of labour in the service’s own words: "Communicators find out what’s happening and where, decide on the right police response and send information through to the police dispatchers who are responsible for getting police units on their way." Supports that the centres handle 111 emergency calls and non-emergency calls as separate streams. DELIBERATELY UNUSED: the page names centres in Auckland, Kāpiti, Wellington and Christchurch while also stating a total that does not match that list, so NO count of centres is published from this record and none should be added without re-reading the page. The page states nothing about how staff move between the two roles.',
+  },
+  /*
+   * WAVE 30 — lay participation in judging.
+   *
+   * The corpus leaned on this concept in sixteen files before it had a page for it. The /courts
+   * section's own variationNote names "the use of juries or lay judges" as a principal axis of
+   * variation; the Austria dossier states lay participation is constitutionally required; the
+   * Japan dossier has to tell readers that the saiban-in system is "not a jury". Nothing explained
+   * any of it, and the glossary held no entry for lay judge, assessor, Schöffe or saiban-in.
+   *
+   * REUSE: `us-bill-of-rights` already carries the Sixth Amendment jury clause verbatim, and
+   * `jp-courts-judicial-system` already carries the saiban-in system's start date and case scope.
+   * Neither is duplicated.
+   *
+   * ACCESS LIMITATION, and it bounds this wave in a way worth stating: ris.bka.gv.at returned HTTP
+   * 503 to every automated request across three paths, so Article 91 of the Austrian
+   * Bundes-Verfassungsgesetz could NOT be read this wave. Austria is therefore not described in
+   * any new guide, and no verbatim Article 91 text is published. See the QA record for the related
+   * finding about what the existing `at-bvg` note does and does not itemise.
+   */
+  {
+    id: 'de-gvg-schoeffengericht',
+    type: 'legislation',
+    title:
+      'Gerichtsverfassungsgesetz (GVG), §§ 28, 29 and 30 — Schöffengerichte and the office of the Schöffe',
+    publisher: 'Bundesministerium der Justiz / juris (gesetze-im-internet.de)',
+    url: 'https://www.gesetze-im-internet.de/gvg/__30.html',
+    accessedOn: '2026-09-07',
+    verifiedOn: '2026-09-07',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'DE',
+    translationStatus: 'not-a-translation',
+    authoritativeLanguage: 'de',
+    note: 'SCOPE: Germany, the three sections read directly at their own pages on the official consolidated text; the record’s url is § 30, the section carrying the load-bearing provision. Supports § 28: "Für die Verhandlung und Entscheidung der zur Zuständigkeit der Amtsgerichte gehörenden Strafsachen werden, soweit nicht der Strafrichter entscheidet, bei den Amtsgerichten Schöffengerichte gebildet." Supports § 29(1): "Das Schöffengericht besteht aus dem Richter beim Amtsgericht als Vorsitzenden und zwei Schöffen.", and that a second professional judge may be added on the prosecution’s application when the main proceedings are opened. Supports § 30(1), the provision that matters most: Schöffen exercise during the Hauptverhandlung "das Richteramt in vollem Umfang und mit gleichem Stimmrecht wie die Richter". Supports § 30(2), the limit on that: decisions required OUTSIDE the main hearing are taken by the professional judge alone. Establishes nothing about how Schöffen are selected, nothing about courts above the Amtsgericht, and nothing about any other country.',
+  },
+  {
+    id: 'ew-juries-act-1974-s1',
+    type: 'legislation',
+    title: 'Juries Act 1974, section 1 — qualification for jury service',
+    publisher: 'The National Archives (legislation.gov.uk)',
+    url: 'https://www.legislation.gov.uk/ukpga/1974/23/section/1',
+    publishedOn: '1974',
+    accessedOn: '2026-09-07',
+    verifiedOn: '2026-09-07',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'GB',
+    note: 'SCOPE: qualification for jury service in England and Wales, in the official revised text. NOT the United Kingdom: Scotland and Northern Ireland have separate arrangements and are not covered. Supports the qualifying conditions as the section states them — that a person is qualified if "registered as a parliamentary or local government elector and aged eighteen or over but under seventy six", and "ordinarily resident in the United Kingdom, the Channel Islands or the Isle of Man for any period of at least five years since attaining the age of thirteen" — and that a qualified person must also not be disqualified, the disqualifications being set out in a Schedule that was NOT read. Supports that the section addresses service in the Crown Court, the High Court and the county court. Establishes nothing about how jurors are summoned or selected, nothing about what a jury decides, and nothing about excusal or deferral, none of which was researched.',
+  },
+  {
+    id: 'jp-saiban-in-act',
+    type: 'legislation',
+    title: 'Act on Criminal Trials with the Participation of Saiban-in — articles 2 and 6',
+    publisher: 'Ministry of Justice, Japan (Japanese Law Translation)',
+    url: 'https://www.japaneselawtranslation.go.jp/en/laws/view/3474/en',
+    accessedOn: '2026-09-07',
+    verifiedOn: '2026-09-07',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'JP',
+    translationStatus: 'official-reference',
+    authoritativeLanguage: 'ja',
+    note: 'TRANSLATION STATUS, recorded because it changes how this record may be used: this is the Japanese government’s own English database, and the database states that a text marked a "Tentative translation" has "not yet been proofread or corrected by a native English speaker or legal translation expert; this data may be revised in the future". The English is therefore cited as an official reference translation and not as text having legal effect, which is the Japanese. SCOPE: two articles, read directly. Supports article 2(2), that the panel "consists of three judges and six saiban-in", with a reduced panel of "one judge and four saiban-in" available in specified circumstances. Supports article 6(1), that saiban-in participate in decisions on "fact finding; application of laws and regulations; and sentencing" — the third of which is the point of the citation, because it is what most distinguishes the arrangement from a jury. Establishes nothing about eligibility, selection, or which offences fall within the system; the corpus cites the Supreme Court’s own account for the last of those.',
   },
 ];
 

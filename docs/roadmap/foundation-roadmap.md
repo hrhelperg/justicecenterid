@@ -2021,3 +2021,63 @@ route after Wave 28, and two did not.
   proofs valid**, three caught only after the fixes they forced. Adversarial QA: 0 P1, 0 P2.
 
 Delivered on `feat/forensic-dispatch-careers-wave-29`. Not merged, not deployed.
+
+## Phase 44 — Knowledge Expansion Wave 30 (delivered 2026-09-07)
+
+Lay participation in judging. Four guides on three new sources with two reused, all in `/courts`.
+Details in `docs/research/knowledge-expansion-wave-30-qa.md` and
+`docs/research/lay-participation-model-findings.md`.
+
+**Scope note:** this wave arrived without a brief, and without a statement that Wave 29 had merged.
+The merge gate was run first and passed. The cluster was chosen against the programme's priorities
+and confirmed before implementation.
+
+- **A P0 found by adversarial QA: the previous wave shipped corrupted characters to production.** An
+  authoring step re-decoded UTF-8 as latin-1, turning every em dash and typographic apostrophe into
+  a letter followed by two C1 control characters. Ninety sequences across four files; **thirty-three
+  in rendered content already merged and live**, and forty-one more in this wave's unpushed file.
+  The German statutory quotations were among the casualties. Nothing caught it because no check
+  looked at characters — tests assert what text says, prettier and tsc accept valid strings that
+  spell the wrong characters, and my own spot-check searched for the cp1252 form of the corruption
+  while latin-1 decoding produces raw control characters. All ninety repaired by re-decoding rather
+  than deleting, and two guards added: the unit suite walks every string in guides, sources and
+  dossiers, and the e2e reads character codes off the rendered page.
+- **The corpus leaned on this concept in sixteen files before it had a page for it.** The `/courts`
+  variationNote names "the use of juries or lay judges" as a principal axis of variation; the
+  Austria dossier says lay participation is constitutionally required; the Japan dossier has to tell
+  readers the saiban-in system is "not a jury". Fifty-three sentences mentioned a jury; the glossary
+  had no entry for lay judge, assessor, Schöffe or saiban-in.
+- **"Jury" is not the general word, and the guards police it.** A jury is a separate lay body; a
+  Schöffengericht and a saiban-in panel are mixed benches. One guard reaches into the Japan dossier,
+  so that if a later edit removed its "not a jury" line these pages would stop drawing a distinction
+  the corpus no longer draws anywhere else.
+- **Both mixed systems put lay members in a two-to-one majority.** One judge with two Schöffen;
+  three judges with six saiban-in — panels differing in size by a factor of three landing on the
+  same proportion, and a reduced Japanese panel of one to four going further still.
+- **Neither confines lay members to the verdict.** Germany gives them "das Richteramt in vollem
+  Umfang und mit gleichem Stimmrecht wie die Richter" during the hearing while reserving everything
+  outside it to the professional judge — an entitlement bounded in time rather than by subject.
+  Japan names "fact finding; application of laws and regulations; and sentencing" together.
+- **Eligibility ties lay service to the franchise.** England and Wales qualifies a person who is
+  "registered as a parliamentary or local government elector and aged eighteen or over but under
+  seventy six", with five years' residence counted from the age of thirteen. Bounded at both ends,
+  unlike voting, and historical rather than current.
+- **No jury size appears anywhere in the cluster**, and a guard enforces that. It is the fact a
+  reader most expects and the one this wave could not source; another guard requires the cluster to
+  say why the number is missing rather than leave a silent hole.
+- **Both mutation survivors were internal contradictions.** W30M4 asserted the verdict-only model
+  against the statute the page cites — a misconception already corrected the belief, and **a
+  misconception is not a guard**, the same lesson as the previous wave in a new subject. W30M9
+  inverted the composition ratio in the summary list while the cited paragraph above still said the
+  opposite; a cited-source check and a page-wide check each pass, because each looks at one place.
+- **An open finding recorded rather than guessed:** the Austria dossier cites `at-bvg` for Article
+  91, and that record's note does not itemise Article 91. RIS returned 503 across three paths, so it
+  could not be resolved. The next wave that can reach RIS should read the article and then either
+  itemise it or correct the dossier.
+- **The self-referential cluster, a seventh time.** Four editorial backlinks added.
+- **Client JS +0 KB. CSS +0 bytes. No component changed.**
+- Validation: 8,875 tests / 86 files; 2,074 e2e passed; **539 routes**, 541 pages, 539 sitemap URLs;
+  route matrix 691/691; 0 orphans, 0 weakly linked, 0 dead ends; 385 sources. **11/11 mutation
+  proofs valid**, two caught only after the fixes they forced. Adversarial QA: 1 P0, 1 P2.
+
+Delivered on `feat/lay-participation-wave-30`. Not merged, not deployed.

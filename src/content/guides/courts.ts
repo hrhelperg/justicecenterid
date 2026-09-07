@@ -202,7 +202,7 @@ export const COURTS_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [what courts do](/courts/what-do-courts-do), [why judicial independence matters](/courts/why-judicial-independence-matters), and [what the rule of law is](/justice/what-is-the-rule-of-law).',
+        text: 'Related: [what courts do](/courts/what-do-courts-do), [lay participation in judging](/courts/lay-participation-in-judging), [why judicial independence matters](/courts/why-judicial-independence-matters), and [what the rule of law is](/justice/what-is-the-rule-of-law).',
       },
     ],
   },
@@ -378,7 +378,7 @@ export const COURTS_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [trial and appellate courts](/courts/trial-and-appellate-courts), [supreme courts and final appeal](/courts/supreme-courts-and-final-appeal), and [constitutional courts](/institutions/constitutional-court).',
+        text: 'Related: [trial and appellate courts](/courts/trial-and-appellate-courts), [how a lay court is composed](/courts/how-a-lay-court-is-composed), [supreme courts and final appeal](/courts/supreme-courts-and-final-appeal), and [constitutional courts](/institutions/constitutional-court).',
       },
     ],
   },
@@ -1563,7 +1563,7 @@ export const COURTS_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [judicial independence](/glossary/judicial-independence), [what a judge does](/professions/judge), [how you become a judge](/courts/how-you-become-a-judge), and [why courts matter](/courts/why-courts-matter).',
+        text: 'Related: [judicial independence](/glossary/judicial-independence), [what a judge does](/professions/judge), [how you become a judge](/courts/how-you-become-a-judge), [what a lay judge decides](/courts/what-a-lay-judge-decides), and [why courts matter](/courts/why-courts-matter).',
       },
     ],
   },
@@ -1901,7 +1901,7 @@ export const COURTS_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [court language and interpretation](/courts/court-language-and-interpretation), [representing yourself](/defence/representing-yourself), and [access to justice](/justice/access-to-justice).',
+        text: 'Related: [court language and interpretation](/courts/court-language-and-interpretation), [who may serve on a lay court](/courts/who-may-serve-on-a-lay-court), [representing yourself](/defence/representing-yourself), and [access to justice](/justice/access-to-justice).',
       },
     ],
   },
@@ -3435,6 +3435,784 @@ export const COURTS_GUIDES: readonly Guide[] = [
       {
         kind: 'paragraph',
         text: 'Related: [judges and prosecutors: one career or two](/prosecution/judges-and-prosecutors-one-career-or-two), [what qualifying as a lawyer requires](/defence/what-qualifying-as-a-lawyer-requires), and [why judicial independence matters](/courts/why-judicial-independence-matters).',
+      },
+    ],
+  },
+  /*
+   * WAVE 30 — lay participation in judging.
+   *
+   * The corpus leaned on this concept in sixteen files before it had a page for it. This section's
+   * own variationNote names "the use of juries or lay judges" as a principal axis of variation;
+   * the Austria dossier states lay participation is constitutionally required; the Japan dossier
+   * has to tell readers the saiban-in system is "not a jury". The glossary held no entry for lay
+   * judge, assessor, Schöffe or saiban-in. These four pages give fifty-three existing sentences
+   * something to link to.
+   *
+   * TWO DISCIPLINES BIND HARDER HERE THAN THE SUBJECT SUGGESTS.
+   *
+   * First, "jury" is not the general word, and using it as one is the characteristic error. A jury
+   * is a separate lay body; a mixed panel is something else, and Japan's own courts describe their
+   * arrangement as having points in common with a jury system rather than being one. Every page
+   * here uses "lay participation" as the general term and reserves "jury" for the specific thing.
+   *
+   * Second, unsourced numbers. Jury size is the fact every reader expects and the one this wave
+   * cannot supply: the section of the Juries Act read here governs qualification, not size, and no
+   * source establishing a number was obtained. No jury size appears on any of these pages.
+   *
+   * SCOPE: nothing here describes deliberation, verdict rules, jury directions, excusal, summons
+   * or what any individual should do if called. Those are procedure or advice, and this section
+   * places litigation strategy and advice on conducting a case out of scope.
+   */
+  {
+    slug: 'lay-participation-in-judging',
+    title: 'Lay participation in judging',
+    shortTitle: 'Lay participation',
+    question: 'Why do people who are not lawyers decide criminal cases?',
+    summary:
+      'Because most systems decided that some decisions should not belong to professionals alone. There are two ways of arranging it, and only one of them is a jury — the other seats lay members on the bench beside the judges.',
+    entityType: 'concept',
+    section: 'courts',
+    /*
+     * DE, JP and US — the three systems this page actually cites. It declared GB for a while,
+     * which was wrong in both directions: no England and Wales source is cited here (that system
+     * is the eligibility page's), and the Sixth Amendment source that IS cited is American.
+     * Adversarial QA found it by comparing each page's declared jurisdictions against the
+     * jurisdictions its own sources carry.
+     */
+    jurisdiction: ['DE', 'JP', 'US'],
+    temporalScope: 'current',
+    related: [
+      'how-a-lay-court-is-composed',
+      'what-a-lay-judge-decides',
+      'who-may-serve-on-a-lay-court',
+      'why-judicial-independence-matters',
+    ],
+    sources: [
+      'de-gvg-schoeffengericht',
+      'jp-saiban-in-act',
+      'jp-courts-judicial-system',
+      'us-bill-of-rights',
+    ],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-07',
+    publishedOn: '2026-09-07',
+    reviewedOn: '2026-09-07',
+    factsVerifiedOn: '2026-09-07',
+    readingTimeMinutes: 7,
+    uncertainty: [
+      'Three systems are cited on this page — Germany, Japan and the United States. England and Wales is researched only for eligibility, on a separate page. How lay participation is arranged anywhere else was NOT RESEARCHED, and arrangements differ substantially even within each family described here.',
+      'Austria could NOT be researched this wave. Its constitution requires lay participation, but the official legal-information system returned HTTP 503 to every automated request, so no Austrian provision is quoted or relied on. That is an access limitation and not evidence about Austrian arrangements.',
+      'Whether lay participation produces better, worse or different outcomes than professional judging alone is an empirical question this platform has NOT researched and does not answer.',
+      'How lay members are selected, summoned, excused or replaced was NOT RESEARCHED for any system.',
+      'Nothing here describes deliberation, verdict rules or what any person called to serve should do.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'In many systems some criminal cases are decided wholly or partly by people who are not professional judges. The arrangements fall into two families. In one, a separate body of lay people decides, sitting apart from the judge. In the other, lay members sit on the bench with professional judges and decide together with them.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This describes how three systems constitute lay participation. It is not advice to anyone called to serve, it does not describe deliberation, verdict rules, summons or excusal, and it does not assess whether any arrangement works better than another.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'A professional judiciary is expert, permanent and small. Those are the qualities that make it reliable, and they are also the qualities that make a system uneasy about letting it decide alone what a community regards as criminal. Lay participation is the structural answer: it puts people who will return to ordinary life into the decision, and it does so as a matter of institutional design rather than as a concession.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'And the two families disagree about how to do it without losing the expertise',
+        text: 'Seating lay people separately keeps their judgement uncontaminated by professional habit and gives up the chance to inform it. Seating them with judges informs their judgement and risks the professionals dominating the room. Neither arrangement escapes the trade; each chooses a side of it.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'Germany builds lay participation into the ordinary criminal courts by statute: "Für die Verhandlung und Entscheidung der zur Zuständigkeit der Amtsgerichte gehörenden Strafsachen werden, soweit nicht der Strafrichter entscheidet, bei den Amtsgerichten Schöffengerichte gebildet." Lay courts are formed for the criminal business of the local courts, except where a single professional judge decides.',
+        claim: 'fact',
+        sources: ['de-gvg-schoeffengericht'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Note the default and the exception',
+        text: 'The provision does not create lay courts as a special track for grave cases. It forms them for the ordinary criminal work of the local courts, and carves out the single-judge case. Lay participation is the arrangement, not the departure from it.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Japan places lay members on the bench with professional judges: the panel "consists of three judges and six saiban-in", and the system, which began on 21 May 2009, applies to certain serious criminal cases in the district court rather than to criminal work generally.',
+        claim: 'fact',
+        sources: ['jp-saiban-in-act', 'jp-courts-judicial-system'],
+      },
+      {
+        kind: 'callout',
+        variant: 'uncertainty',
+        title: 'Its own courts are careful not to call it a jury',
+        text: 'The Supreme Court of Japan describes the arrangement as having points in common with a jury system. It is a mixed panel, and this corpus calls it the lay judge system for that reason. Reading "jury" into it produces the wrong picture of who sits with whom.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The separate-body family is entrenched constitutionally in one system researched: the Sixth Amendment gives the accused in all criminal prosecutions "the right to a speedy and public trial, by an impartial jury of the State and district wherein the crime shall have been committed".',
+        claim: 'fact',
+        sources: ['us-bill-of-rights'],
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'A jury is a separate body',
+            description:
+              'It sits apart from the judge and reaches its own conclusion. That separation is the defining feature, and it is what the word means.',
+          },
+          {
+            term: 'A mixed panel is a single bench',
+            description:
+              'Lay members and professional judges sit together and decide together. There is no second body, and no moment at which one hands its conclusion to the other.',
+          },
+          {
+            term: 'The names are not interchangeable',
+            description:
+              'Schöffen, saiban-in and lay assessors are members of a mixed bench. Calling any of them a jury describes an arrangement their systems do not have.',
+          },
+          {
+            term: 'Lay participation can be the ordinary case or the exceptional one',
+            description:
+              'One system forms lay courts for the ordinary criminal business of its local courts; another confines its lay panels to certain serious cases. The same idea can be the default or the exception.',
+          },
+          {
+            term: 'And it can be constitutional or statutory',
+            description:
+              'Where the arrangement sits in the hierarchy of law decides how easily it can be changed. One system researched here entrenches trial by jury in its constitution; another builds its lay courts in an ordinary statute.',
+          },
+        ],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Lay participation in judging means a jury.',
+        reality:
+          'A jury is one of two arrangements. In the other, lay members sit on the bench with professional judges and decide with them, which is what Germany and Japan do in the courts described here.',
+      },
+      {
+        claim: 'Japan has a jury system.',
+        reality:
+          'Its own Supreme Court describes the saiban-in arrangement as having points in common with a jury system. The panel is a mixed bench of professional judges and lay judges sitting together, not a separate lay body.',
+      },
+      {
+        claim: 'Lay participation is reserved for the most serious cases.',
+        reality:
+          'In one system researched here lay courts are formed for the criminal business of the local courts generally, with the single-judge case as the exception. In another they are confined to certain serious offences. Both patterns exist.',
+      },
+      {
+        claim: 'Countries either have lay participation or they do not.',
+        reality:
+          'The useful questions are which family a system uses, for which cases, and what the lay members decide. Those answers differ between systems that would both be described as having lay participation.',
+      },
+      {
+        claim: 'Lay participation exists because it produces better verdicts.',
+        reality:
+          'Whether it does is an empirical question this platform has not researched. The arrangements are described here as institutional design, and no claim about outcomes is made.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Three systems, as their own texts state them.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Lay courts formed for the criminal business of the local courts, except where a single judge decides — Germany.',
+          'A mixed panel of professional judges and lay judges for certain serious cases, since 2009 — Japan.',
+          'Trial by an impartial jury entrenched in the constitution — United States.',
+          'Not researched: Austria, whose constitution requires lay participation but whose official texts could not be reached this wave, and every other country.',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'Why no jury size appears anywhere on these pages',
+        text: 'It is the fact readers most expect, and this wave could not source it. The statute read here governs who is qualified to serve, not how many sit. A number nobody verified is worse than an absence that says so.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'Lay participation is a claim about legitimacy as much as accuracy: it says that the authority to condemn should not sit entirely with people who do it for a living. That claim is worth stating plainly, because it explains why systems keep arrangements that are slower and more expensive than professional judging alone, and why the question of who is eligible to take part turns out to matter so much.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'How the benches are actually made up is [how a lay court is composed](/courts/how-a-lay-court-is-composed). What the lay members are entitled to decide is [what a lay judge decides](/courts/what-a-lay-judge-decides). Who is allowed to serve is [who may serve on a lay court](/courts/who-may-serve-on-a-lay-court). How professional judges reach the bench instead is [how you become a judge](/courts/how-you-become-a-judge).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [how a lay court is composed](/courts/how-a-lay-court-is-composed), [what a lay judge decides](/courts/what-a-lay-judge-decides), and [who may serve on a lay court](/courts/who-may-serve-on-a-lay-court).',
+      },
+    ],
+  },
+  {
+    slug: 'how-a-lay-court-is-composed',
+    title: 'How a lay court is composed',
+    shortTitle: 'Composition',
+    question: 'When lay people sit with judges, how many of each are there?',
+    summary:
+      'In both mixed systems researched here, the lay members outnumber the professionals two to one — one judge with two lay judges, and three judges with six. The ratio is written into statute, not left to practice.',
+    entityType: 'concept',
+    section: 'courts',
+    jurisdiction: ['DE', 'JP'],
+    temporalScope: 'current',
+    related: [
+      'lay-participation-in-judging',
+      'what-a-lay-judge-decides',
+      'court-hierarchy',
+      'who-may-serve-on-a-lay-court',
+    ],
+    sources: ['de-gvg-schoeffengericht', 'jp-saiban-in-act'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-07',
+    publishedOn: '2026-09-07',
+    reviewedOn: '2026-09-07',
+    factsVerifiedOn: '2026-09-07',
+    readingTimeMinutes: 6,
+    uncertainty: [
+      'Two mixed-panel systems were researched. How any other system composes a lay court was NOT RESEARCHED.',
+      'Jury size in the separate-body family was NOT ESTABLISHED. No source stating a number was obtained, and none is published here.',
+      'The composition of German courts above the Amtsgericht was NOT RESEARCHED; the provisions read here govern the local courts.',
+      'Why either system chose its particular numbers was NOT ESTABLISHED. The statutes state the composition; they do not explain it.',
+      'Nothing here describes how a panel deliberates or how its members are chosen for a particular case.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'A mixed bench has to answer a question a jury never faces: how many of each. The answer is not a detail of administration. It sets whether the lay members can be outvoted by the professionals, and both systems researched here answer it the same way.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This describes statutory composition in two systems. It says nothing about how a panel deliberates, how members are assigned to a case, or how any decision is actually reached — and it publishes no jury size, because none was sourced.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'If lay participation is meant to put non-professional judgement into a decision, the number of lay members has to be large enough that the judgement survives contact with the professionals. A single lay member beside two judges would be present without being able to affect an outcome. The ratio is therefore where the design either means something or does not.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Which is why a headcount is not the whole answer either',
+        text: 'Outnumbering the professionals settles arithmetic, not influence. The presiding judge knows the law, has done this before, and speaks first or last. A design can put the numbers on one side and the practice on the other, and nothing in a statute prevents that.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'Germany states the composition in a single sentence: "Das Schöffengericht besteht aus dem Richter beim Amtsgericht als Vorsitzenden und zwei Schöffen." One professional judge presides, and two lay judges sit with them. A second professional judge may be added on the prosecution’s application when the main proceedings are opened.',
+        claim: 'fact',
+        sources: ['de-gvg-schoeffengericht'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'The optional second judge changes the ratio, and that is the point of it',
+        text: 'One judge with two lay judges is a lay majority; two judges with two lay judges is not. A provision allowing the composition to be altered on application is a provision allowing the balance to be altered, which is worth noticing even where the reason for it is not stated.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Japan states a larger version of the same shape: the panel "consists of three judges and six saiban-in", with a reduced panel of "one judge and four saiban-in" available in specified circumstances.',
+        claim: 'fact',
+        sources: ['jp-saiban-in-act'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Two systems, two scales, one ratio',
+        text: 'One judge to two lay judges, and three judges to six. The panels differ in size by a factor of three and land on exactly the same proportion — and the reduced Japanese panel, at one to four, goes further still. Whatever else these systems disagree about, they agree that lay members should outnumber professionals.',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'The ratio is statutory',
+            description:
+              'Both compositions are stated in legislation rather than left to a court to arrange. That places the balance beyond the reach of the institution applying it.',
+          },
+          {
+            term: 'Two to one, at both scales',
+            description:
+              'One professional with two lay judges, and three with six. The proportion is identical even though the panels are not.',
+          },
+          {
+            term: 'Reduced panels exist and are not proportionate',
+            description:
+              'One system provides a smaller panel of one judge and four lay judges in specified circumstances, which is a larger lay majority rather than a smaller version of the same one.',
+          },
+          {
+            term: 'Composition can be varied by application',
+            description:
+              'One system permits a second professional judge to be added when the main proceedings are opened, on the prosecution’s application. The default is not always the final arrangement.',
+          },
+          {
+            term: 'And a separate lay body raises none of these questions',
+            description:
+              'A jury has no professionals sitting in it, so there is no ratio to set. That is a structural consequence of separation rather than a different answer to the same question.',
+          },
+        ],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Lay members are a minority alongside the professional judges.',
+        reality:
+          'In both mixed systems researched here they outnumber the professionals two to one — one judge with two lay judges, and three judges with six.',
+      },
+      {
+        claim: 'A bigger panel means a bigger professional presence.',
+        reality:
+          'The two panels differ in size by a factor of three and hold the same proportion. Scale and balance are set separately.',
+      },
+      {
+        claim: 'The composition of a court is a matter for the court.',
+        reality:
+          'Both compositions researched here are fixed by statute. One system allows a second professional judge to be added on application when proceedings are opened, which is itself a statutory provision.',
+      },
+      {
+        claim: 'Outnumbering the professional judges means controlling the outcome.',
+        reality:
+          'It settles arithmetic. The presiding judge knows the law and manages the hearing, and nothing in a composition provision determines how a discussion actually goes.',
+      },
+      {
+        claim: 'This page will tell you how many people sit on a jury.',
+        reality:
+          'It will not. No source establishing jury size was obtained this wave, and a number nobody verified is worse than an absence that says so.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Composition, as two statutes state it.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'One professional judge presiding with two lay judges — Germany, at the local courts.',
+          'A second professional judge may be added on the prosecution’s application — Germany.',
+          'Three judges and six lay judges — Japan.',
+          'One judge and four lay judges, in specified circumstances — Japan.',
+          'Not researched: jury size in the separate-body family, and every other system.',
+        ],
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'A composition rule is a quiet allocation of power, and it is one of the few that can be checked without knowing anything about a case. A system that says it values lay judgement and then seats one lay member against three professionals has said two different things. Publishing the ratio in statute is what makes the first claim testable against the second.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'What the arrangement is for is [lay participation in judging](/courts/lay-participation-in-judging). What the lay members may decide once seated is [what a lay judge decides](/courts/what-a-lay-judge-decides). How courts are arranged into levels is [court hierarchy](/courts/court-hierarchy).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [lay participation in judging](/courts/lay-participation-in-judging), [what a lay judge decides](/courts/what-a-lay-judge-decides), and [who may serve on a lay court](/courts/who-may-serve-on-a-lay-court).',
+      },
+    ],
+  },
+  {
+    slug: 'what-a-lay-judge-decides',
+    title: 'What a lay judge decides',
+    shortTitle: 'What lay judges decide',
+    question: 'Do lay members of a court decide guilt only, or the sentence as well?',
+    summary:
+      'One system gives them the judge’s office in full and with an equal vote — but only while the hearing lasts. Another has them decide fact, law and sentence together with the professionals. Neither is limited to the verdict.',
+    entityType: 'concept',
+    section: 'courts',
+    jurisdiction: ['DE', 'JP'],
+    temporalScope: 'current',
+    related: [
+      'lay-participation-in-judging',
+      'how-a-lay-court-is-composed',
+      'why-judicial-independence-matters',
+      'what-sentencing-is-for',
+    ],
+    sources: ['de-gvg-schoeffengericht', 'jp-saiban-in-act'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-07',
+    publishedOn: '2026-09-07',
+    reviewedOn: '2026-09-07',
+    factsVerifiedOn: '2026-09-07',
+    readingTimeMinutes: 6,
+    uncertainty: [
+      'Two mixed-panel systems were researched. What lay members decide anywhere else was NOT RESEARCHED.',
+      'What a jury decides in the separate-body family, and how that work divides with the judge, was NOT RESEARCHED and is not described. The sources read here are statutes about mixed panels.',
+      'How a panel actually reaches a decision — deliberation, voting thresholds, the sequence of a discussion — was NOT RESEARCHED for either system.',
+      'Whether the equal vote one statute confers translates into equal influence was NOT ESTABLISHED, and could not be established from a statute.',
+      'Nothing here describes any individual case or outcome.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Sitting on a court and deciding a case are not the same entitlement. A system that seats lay members has to say what they may decide — whether they reach the verdict, whether they touch the sentence, and whether their vote counts equally with a judge’s. The two systems researched here answer generously, and one attaches a sharp limit.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This describes what two statutes entitle lay members to decide. It does not describe deliberation, voting thresholds or how any decision is reached, and it says nothing about what a jury decides, which was not researched.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'A lay member who may decide guilt but not sentence has been given the part of the job that requires no legal training and kept away from the part that does. That is a defensible division, and it is also a way of confining lay judgement to where it is least consequential — a sentence is what actually happens to a person. Where a system draws that line says what it thinks lay participation is for.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'And the vote is the other half of the answer',
+        text: 'An entitlement to take part in a decision is worth what the vote behind it is worth. A statute that seats lay members and then makes their view advisory has arranged the appearance of participation. One of the systems here says the opposite in terms.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'Germany does not divide the office. During the main hearing the lay judges exercise "das Richteramt in vollem Umfang und mit gleichem Stimmrecht wie die Richter" — the judicial office in full, with the same voting right as the professional judges — and they take part in decisions made during the hearing including those not concerned with the verdict itself.',
+        claim: 'fact',
+        sources: ['de-gvg-schoeffengericht'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'In full, and with the same vote',
+        text: 'The provision could have given lay judges a role in the verdict and stopped there. It gives them the office. That is a stronger statement than most systems make about people who are not lawyers and will not be there next month.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The same statute states the limit precisely: decisions required outside the main hearing are taken by the professional judge alone.',
+        claim: 'fact',
+        sources: ['de-gvg-schoeffengericht'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'So the equality is real and it is bounded by the courtroom',
+        text: 'Everything decided while the hearing is running is decided by all of them equally. Everything decided before or after is the professional judge’s. The lay judges are full members of a court that exists only when it is sitting, which is a much more specific arrangement than "lay people help decide".',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Japan states the scope as a list rather than as an office. Lay judges participate in decisions on "fact finding; application of laws and regulations; and sentencing".',
+        claim: 'fact',
+        sources: ['jp-saiban-in-act'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'The third item is the one that separates this from a jury',
+        text: 'Fact-finding is what a jury does. Application of law and sentencing are not, in the systems where juries sit. A statute naming all three has placed lay members inside the parts of judging that carry legal consequence, not only the part that establishes what happened.',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'Neither system limits lay members to the verdict',
+            description:
+              'One confers the judicial office in full during the hearing; the other names fact-finding, application of law and sentencing together. The verdict-only model is not what either statute describes.',
+          },
+          {
+            term: 'An equal vote is stated, not implied',
+            description:
+              'Where a system means the votes to count alike it says so. A statute that seats lay members without addressing the vote has left the most important question open.',
+          },
+          {
+            term: 'The entitlement can be bounded in time rather than in subject',
+            description:
+              'One system limits lay judges not by what kind of question they may decide but by when: inside the hearing, everything; outside it, nothing.',
+          },
+          {
+            term: 'Sentencing is the sharpest test of the design',
+            description:
+              'It is the decision that determines what happens to a person. A system willing to let lay members take part in it has committed to lay participation more thoroughly than one that is not.',
+          },
+          {
+            term: 'And none of this describes how a decision is actually reached',
+            description:
+              'Statutes allocate entitlements. What happens in a discussion between three people who do this daily and six who do not is a different question, and it was not researched.',
+          },
+        ],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Lay members of a court decide guilt, and the judge decides the sentence.',
+        reality:
+          'That describes neither system researched here. One confers the judicial office in full with an equal vote during the hearing; the other names sentencing among the decisions lay judges take part in.',
+      },
+      {
+        claim: 'A lay judge’s view is advisory.',
+        reality:
+          'One statute states that lay judges exercise the judicial office during the main hearing with the same voting right as the professional judges. Where a system means this, it says so in terms.',
+      },
+      {
+        claim: 'Lay judges are full members of the court at all times.',
+        reality:
+          'In one system the equality is bounded by the hearing. Decisions required outside the main hearing are taken by the professional judge alone.',
+      },
+      {
+        claim: 'Deciding the sentence is always a professional matter.',
+        reality:
+          'One statute researched here names sentencing among the decisions lay judges participate in, alongside fact-finding and the application of law.',
+      },
+      {
+        claim: 'An equal vote means equal influence.',
+        reality:
+          'It means the votes count alike. Whether the discussion behind them is equally weighted is a different question, and it is not one a statute can answer.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'What the lay members may decide, as two statutes state it.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'The judicial office in full, with the same voting right as the professional judges, during the main hearing — Germany.',
+          'Decisions required outside the main hearing taken by the professional judge alone — Germany.',
+          'Fact finding, application of laws and regulations, and sentencing — Japan.',
+          'Not researched: what a jury decides, and every other system.',
+        ],
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'What lay members are entitled to decide is the honest measure of how seriously a system takes lay participation, because it is the part that cannot be satisfied by appearances. Seating people is easy. Giving them the same vote as a professional judge, and letting that vote reach the sentence, transfers real authority to people who are not accountable in any of the ways a judge is — and systems that do it have accepted that trade deliberately.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'How the benches are made up is [how a lay court is composed](/courts/how-a-lay-court-is-composed). Why the arrangement exists at all is [lay participation in judging](/courts/lay-participation-in-judging). What sentencing is trying to achieve is [what sentencing is for](/corrections/what-sentencing-is-for).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [lay participation in judging](/courts/lay-participation-in-judging), [how a lay court is composed](/courts/how-a-lay-court-is-composed), and [why judicial independence matters](/courts/why-judicial-independence-matters).',
+      },
+    ],
+  },
+  {
+    slug: 'who-may-serve-on-a-lay-court',
+    title: 'Who may serve on a lay court',
+    shortTitle: 'Who may serve',
+    question: 'Who is allowed to be called to decide someone else’s case?',
+    summary:
+      'In the one system researched, the answer is tied to the electoral roll and bounded at both ends: eighteen or over but under seventy-six, with five years’ residence counted from the age of thirteen.',
+    entityType: 'concept',
+    section: 'courts',
+    jurisdiction: ['GB'],
+    temporalScope: 'current',
+    related: [
+      'lay-participation-in-judging',
+      'how-a-lay-court-is-composed',
+      'what-a-lay-judge-decides',
+      'taking-part-in-your-own-case',
+    ],
+    sources: ['ew-juries-act-1974-s1'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-07',
+    publishedOn: '2026-09-07',
+    reviewedOn: '2026-09-07',
+    factsVerifiedOn: '2026-09-07',
+    readingTimeMinutes: 6,
+    uncertainty: [
+      'One system was researched — England and Wales, and only the qualification section of one Act. Scotland and Northern Ireland have separate arrangements and are NOT described.',
+      'The disqualifications are set out in a Schedule that was NOT READ. This page therefore describes who is qualified and does not describe who is disqualified.',
+      'Eligibility for the mixed-panel systems described elsewhere in this cluster was NOT RESEARCHED. Nothing here establishes who may serve as a lay judge in Germany or Japan.',
+      'How jurors are summoned, selected for a particular case, excused or deferred was NOT RESEARCHED, and no step a person might take is described.',
+      'Whether the qualifying conditions produce a representative body is an empirical question this platform has NOT researched.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'A system that puts lay people into judging has to say which lay people. The answer is a definition of the public for this purpose, and it is made of ordinary administrative facts — a register, an age band, a period of residence — that together decide whose judgement counts.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This describes one statutory qualification test. It is not advice to anyone called to serve, it describes no summons, excusal or deferral, and it does not describe the disqualifications, which are in a Schedule this wave did not read.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'Lay participation only means anything if the lay people are not selected by anyone with an interest in the outcome. That pushes systems towards an existing list nobody compiled for this purpose, and towards conditions that can be applied without judgement. The result is a test made of facts a clerk can check, which is a feature rather than a limitation.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'And choosing the electoral register is a choice about who the public is',
+        text: 'Tying service to the roll of electors makes jury service an incident of the franchise. Whoever is missing from the register is missing from the jury, and the two questions stop being separable — which is a consequence of the design rather than an accident of it.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'The qualifying conditions in England and Wales are stated together. A person is qualified if "registered as a parliamentary or local government elector and aged eighteen or over but under seventy six", and "ordinarily resident in the United Kingdom, the Channel Islands or the Isle of Man for any period of at least five years since attaining the age of thirteen" — and is not disqualified.',
+        claim: 'fact',
+        sources: ['ew-juries-act-1974-s1'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Bounded at both ends, which is not how most public duties work',
+        text: 'Voting has a lower age limit and no upper one. Jury service here has both. A system willing to say that people above a certain age should not be required to judge has made a judgement about the burden of the task rather than about capacity to vote.',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'And five years counted from thirteen is a strange, deliberate rule',
+        text: 'It does not ask for five recent years, or for residence now. It asks for five years at any time since a person was thirteen, which reaches back into a childhood and lets someone qualify on a connection formed long ago. The rule is about attachment to the place rather than presence in it.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The same section addresses service in the Crown Court, the High Court and the county court, so one qualification test governs jury service across all three.',
+        claim: 'fact',
+        sources: ['ew-juries-act-1974-s1'],
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'Qualification and disqualification are separate questions',
+            description:
+              'Meeting the conditions makes a person qualified. A further set of provisions, in a Schedule not read here, can remove that. Being qualified is necessary and not sufficient.',
+          },
+          {
+            term: 'The register does the selecting',
+            description:
+              'Eligibility runs through an existing list of electors rather than through any list compiled for the courts. That is what keeps the pool outside the control of the institution using it.',
+          },
+          {
+            term: 'An upper age limit exists',
+            description:
+              'The band runs from eighteen to under seventy-six. Most civic obligations have a floor and no ceiling; this one has both.',
+          },
+          {
+            term: 'Residence is historical, not current',
+            description:
+              'Five years at any point since the age of thirteen satisfies the condition. It tests a connection to the jurisdiction rather than presence in it now.',
+          },
+          {
+            term: 'And one test covers three courts',
+            description:
+              'The same qualification governs service in the Crown Court, the High Court and the county court, so the standard does not vary with what is at stake.',
+          },
+        ],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Anyone over eighteen can be called for jury service.',
+        reality:
+          'The qualifying conditions researched here also require registration as an elector, an upper age limit of under seventy-six, and a residence condition — and a qualified person must additionally not be disqualified.',
+      },
+      {
+        claim: 'You have to be living in the country now to qualify.',
+        reality:
+          'The condition is five years of ordinary residence at any period since the age of thirteen. It tests a historical connection rather than present residence.',
+      },
+      {
+        claim: 'There is no upper age limit on jury service.',
+        reality:
+          'The section researched here sets the band at eighteen or over but under seventy-six. Both ends are stated.',
+      },
+      {
+        claim: 'Different courts have different eligibility rules.',
+        reality:
+          'The section addresses the Crown Court, the High Court and the county court together. One qualification test governs service in all three.',
+      },
+      {
+        claim: 'This page describes who cannot serve.',
+        reality:
+          'It does not. The disqualifications sit in a Schedule that was not read this wave, so only the qualifying conditions are described.',
+      },
+      {
+        claim: 'This page tells you what to do if you are summoned.',
+        reality:
+          'It does not, and it will not. Summons, excusal and deferral were not researched, and advice about anyone’s own position is outside what this platform provides.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'One statutory test, as the section states it.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Registered as a parliamentary or local government elector — England and Wales.',
+          'Aged eighteen or over but under seventy-six.',
+          'Ordinarily resident for at least five years at some period since the age of thirteen.',
+          'Not disqualified, the disqualifications being in a Schedule not read here.',
+          'Not researched: Scotland, Northern Ireland, and eligibility for the mixed-panel systems.',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'Scope',
+        text: 'England and Wales, from one section of one Act. Nothing here establishes who may serve as a lay judge in Germany or Japan, which the other pages in this cluster describe in other respects but not this one.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'An eligibility rule decides whose judgement a system is willing to be bound by, which makes it one of the most consequential rules a justice system has and one of the least discussed. Tying it to the electoral register hands that decision to the machinery of registration: every reason a person is missing from the roll becomes a reason they are missing from the court. Publishing the conditions is what lets that consequence be traced rather than assumed.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'Why lay people take part at all is [lay participation in judging](/courts/lay-participation-in-judging). What they decide once seated is [what a lay judge decides](/courts/what-a-lay-judge-decides). How professional judges reach the bench instead is [how you become a judge](/courts/how-you-become-a-judge).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [lay participation in judging](/courts/lay-participation-in-judging), [what a lay judge decides](/courts/what-a-lay-judge-decides), and [how you become a judge](/courts/how-you-become-a-judge).',
       },
     ],
   },
