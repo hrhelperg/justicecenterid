@@ -5193,7 +5193,7 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [the patrol officer role](/professions/patrol-officer), [skills that policing relies on](/law-enforcement/skills-that-policing-relies-on), and [professional standards in policing work](/law-enforcement/professional-standards-in-policing-work). What a service issues for the work is [what police equipment is for](/law-enforcement/what-police-equipment-is-for).',
+        text: 'Related: [the patrol officer role](/professions/patrol-officer), [whether a uniform is the same for everyone](/law-enforcement/whether-a-uniform-is-the-same-for-everyone), [skills that policing relies on](/law-enforcement/skills-that-policing-relies-on), and [professional standards in policing work](/law-enforcement/professional-standards-in-policing-work). What a service issues for the work is [what police equipment is for](/law-enforcement/what-police-equipment-is-for).',
       },
     ],
   },
@@ -6766,7 +6766,7 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [why police wear a uniform](/law-enforcement/why-police-wear-a-uniform), [documentation equipment in policing](/law-enforcement/documentation-equipment-in-policing), and [working life in policing](/law-enforcement/working-life-in-policing). The largest single category a service issues is its fleet — see [police vehicles and what they are for](/law-enforcement/police-vehicles-and-what-they-are-for).',
+        text: 'Related: [why police wear a uniform](/law-enforcement/why-police-wear-a-uniform), [when a police uniform changes](/law-enforcement/when-a-police-uniform-changes), [documentation equipment in policing](/law-enforcement/documentation-equipment-in-policing), and [working life in policing](/law-enforcement/working-life-in-policing). The largest single category a service issues is its fleet — see [police vehicles and what they are for](/law-enforcement/police-vehicles-and-what-they-are-for).',
       },
     ],
   },
@@ -6937,7 +6937,7 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [what police equipment is for](/law-enforcement/what-police-equipment-is-for), [how police officers are identified](/law-enforcement/how-police-officers-are-identified), and [professional standards in policing work](/law-enforcement/professional-standards-in-policing-work).',
+        text: 'Related: [police insignia and where it comes from](/law-enforcement/police-insignia-and-where-it-comes-from), [what police equipment is for](/law-enforcement/what-police-equipment-is-for), [how police officers are identified](/law-enforcement/how-police-officers-are-identified), and [professional standards in policing work](/law-enforcement/professional-standards-in-policing-work).',
       },
     ],
   },
@@ -10049,6 +10049,571 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
       {
         kind: 'paragraph',
         text: 'Related: [when police may depart from traffic rules](/law-enforcement/when-police-may-depart-from-traffic-rules), [taking the call and sending the unit](/public-safety/taking-the-call-and-sending-the-unit), and [police vehicles and what they are for](/law-enforcement/police-vehicles-and-what-they-are-for).',
+      },
+    ],
+  },
+  /*
+   * WAVE 34 — uniforms and insignia as institutional history.
+   *
+   * OWNERSHIP. Wave 26 owns what equipment is for, what a uniform is for, how officers are
+   * identified, issued versus personal equipment, standards and testing, documentation equipment
+   * and body-worn video. It also declared the gap this wave fills: "uniform design, specification,
+   * colour schemes and insignia systems were NOT RESEARCHED for any country". These pages answer
+   * the insignia and the change half of that, historically.
+   *
+   * THE LINE. Wave 26 established that detail assisting imitation is deliberately absent, and the
+   * image policy permits insignia only as documentation. The Garda uniform policy publishes badge
+   * placement, chevron positions and nameplate dimensions; none of it appears here. What appears is
+   * when a uniform changed, why, what changing it took, and where the visual system came from.
+   *
+   * NO COMMERCE. No supplier, manufacturer, model, specification, price or purchasing route
+   * appears. Cost figures on a government procurement page were read and deliberately not used.
+   */
+  {
+    slug: 'police-insignia-and-where-it-comes-from',
+    title: 'Police insignia and where it comes from',
+    shortTitle: 'Police insignia',
+    question: 'Why do police ranks look so much like army ranks?',
+    summary:
+      'Because in at least one service they descend from them directly. The force began as a paramilitary body doing both jobs, its uniforms drew on British military insignia, and the service still publishes a table matching each police rank to an army one.',
+    entityType: 'concept',
+    section: 'law-enforcement',
+    jurisdiction: ['NZ'],
+    temporalScope: 'current',
+    related: [
+      'why-police-wear-a-uniform',
+      'rank-role-and-specialisation',
+      'how-policing-institutions-changed',
+      'when-a-police-uniform-changes',
+    ],
+    sources: ['nz-police-insignia'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-07',
+    publishedOn: '2026-09-07',
+    reviewedOn: '2026-09-07',
+    factsVerifiedOn: '2026-09-07',
+    readingTimeMinutes: 6,
+    uncertainty: [
+      'One service was researched — New Zealand Police, on its own history page. Where insignia systems come from anywhere else was NOT RESEARCHED, and other services have different lineages.',
+      'What any badge or rank marking looks like is NOT described, and that limit is deliberate rather than a gap in the research.',
+      'When particular insignia changed, and where they have been worn on the uniform at different times, was NOT ESTABLISHED. A search summary offered a date for one such change; it is not on the page and is therefore not published.',
+      'Whether the military parallel affects how the service behaves is an empirical question this platform has NOT researched and does not answer.',
+      'How rank insignia relate to authority is a separate question, answered elsewhere in the corpus and not repeated here.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Rank insignia are a visual language, and like any language they were inherited rather than invented. One service publishes its own account of where its version came from, and the answer is unusually direct: it came from an army, because the organisation began as something close to one.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This describes where one service says its rank insignia originate. It does not describe what any insignia look like, and it is not a guide to recognising rank. That limit is deliberate: reproducible detail about official markings assists imitation.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'A police service needs a way of showing, at a glance and to strangers, who is senior to whom. Designing such a system from nothing is hard, and every service that faced the problem in the nineteenth century had a working answer already in view: the army had solved it, and the people setting up police forces frequently came from military service themselves.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Which is why the resemblance is inheritance rather than imitation',
+        text: 'The similarity is not a service borrowing a look. It is a service that was, at the beginning, doing part of the same job with part of the same people, and never having reason to replace a system that worked.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'The service states the origin without euphemism: "The insignia of rank worn by New Zealand police officers have their origins in our colonial past." It goes on to describe the circumstances — "In 1846, when Governor George Grey arrived in New Zealand, such was the state of disorder that he introduced a paramilitary force to carry out both policing and military duties" — and that "The uniforms drew on the insignia of rank worn by the British military."',
+        claim: 'fact',
+        sources: ['nz-police-insignia'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'A service naming its own colonial origin is worth noticing',
+        text: 'Institutions describing their history often reach for continuity and service. This page names a colonial past and a paramilitary force in its first two sentences, which makes the account more useful as evidence than a more flattering one would be.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The inheritance is not presented as finished business either: the service says "There is still a strong parallel with army ranks today", and publishes a comparison of the two systems running from Commissioner to Lieutenant General at one end and Constable to Private at the other.',
+        claim: 'fact',
+        sources: ['nz-police-insignia'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Publishing the comparison is a choice, and it says something',
+        text: 'A service uneasy about the resemblance would describe its ranks on their own terms. Setting them beside army ranks in a table treats the parallel as a fact about the institution rather than an awkwardness, and lets a reader see the correspondence for themselves.',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'The lineage is institutional, not decorative',
+            description:
+              'The insignia came with the organisation. A body created to do policing and military duties at once did not need to invent a way of showing seniority.',
+          },
+          {
+            term: 'Colonial origin is stated by the service itself',
+            description:
+              'This is the institution’s own characterisation of where its system came from, not an outside interpretation of it.',
+          },
+          {
+            term: 'The parallel is presented as current',
+            description:
+              'The service does not describe the resemblance as a historical curiosity. It says the parallel is still strong today and publishes the correspondence.',
+          },
+          {
+            term: 'A visual system outlives the reason for it',
+            description:
+              'The circumstances of 1846 are long gone; the way seniority is displayed is not. Symbols are among the most durable things an institution carries.',
+          },
+          {
+            term: 'And insignia are not the same as rank',
+            description:
+              'Rank is a position with authority attached. Insignia are how it is shown. The corpus treats what rank means as a separate question, and this page does not re-answer it.',
+          },
+        ],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Police ranks resemble army ranks by coincidence.',
+        reality:
+          'In the service researched here the resemblance is descent. Its uniforms drew on British military insignia because the force began as a paramilitary body doing both policing and military duties.',
+      },
+      {
+        claim: 'The military resemblance is a thing of the past.',
+        reality:
+          'The service states that a strong parallel with army ranks remains today, and publishes a comparison of the two rank systems.',
+      },
+      {
+        claim: 'Every police service inherited its insignia from an army.',
+        reality:
+          'One service was researched, and it describes its own lineage. Where insignia systems come from elsewhere was not researched and is not claimed.',
+      },
+      {
+        claim: 'Insignia and rank are the same thing.',
+        reality:
+          'Rank is a position carrying authority; insignia are how that position is displayed. The corpus answers what rank means separately.',
+      },
+      {
+        claim: 'This page will help you recognise police rank markings.',
+        reality:
+          'It will not, and that is deliberate. Nothing here describes what any badge or marking looks like, because reproducible detail about official markings assists imitation.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'One service, as it describes its own history.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Insignia origins stated as lying in the country’s colonial past.',
+          'A paramilitary force introduced in 1846 to carry out both policing and military duties.',
+          'Uniforms drew on the insignia of rank worn by the British military.',
+          'A strong parallel with army ranks stated as continuing today.',
+          'A published comparison running from Commissioner to Lieutenant General and Constable to Private.',
+          'Not researched: every other service, and what any insignia look like.',
+        ],
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'A police service that presents itself visually as a branch of the military is making a claim about what it is, whether or not it intends to. That is worth knowing rather than worth condemning: the corpus records elsewhere that policing is a civil function distinguishable from military force, and a service whose visual language descends from an army carries a tension between the two that its own history page states plainly.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'What a uniform is for is [why police wear a uniform](/law-enforcement/why-police-wear-a-uniform). What rank actually means is [rank, role and specialisation](/law-enforcement/rank-role-and-specialisation). How policing institutions have changed is [how policing institutions changed](/law-enforcement/how-policing-institutions-changed).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [when a police uniform changes](/law-enforcement/when-a-police-uniform-changes), [why police wear a uniform](/law-enforcement/why-police-wear-a-uniform), and [rank, role and specialisation](/law-enforcement/rank-role-and-specialisation).',
+      },
+    ],
+  },
+  {
+    slug: 'when-a-police-uniform-changes',
+    title: 'When a police uniform changes',
+    shortTitle: 'Uniform change',
+    question: 'How often does a police uniform actually change?',
+    summary:
+      'Rarely enough to be an event. One service changed its uniform for only the third time in its first hundred years, on the recommendation of a policing commission and an internal audit of over six thousand members, and delivering it reached 560 stations.',
+    entityType: 'concept',
+    section: 'law-enforcement',
+    jurisdiction: ['IE'],
+    temporalScope: 'current',
+    related: [
+      'why-police-wear-a-uniform',
+      'police-insignia-and-where-it-comes-from',
+      'what-police-equipment-is-for',
+      'whether-a-uniform-is-the-same-for-everyone',
+    ],
+    sources: ['ie-garda-new-operational-uniform-2022', 'ie-garda-uniform-overview'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-07',
+    publishedOn: '2026-09-07',
+    reviewedOn: '2026-09-07',
+    factsVerifiedOn: '2026-09-07',
+    readingTimeMinutes: 6,
+    uncertainty: [
+      'One service was researched — An Garda Síochána. How often uniforms change anywhere else was NOT RESEARCHED.',
+      'The announcement is dated 15 August 2022 and is cited as a dated event. Whether anything has changed since was NOT RESEARCHED, and nothing here describes the present state of that uniform.',
+      'What the uniform looks like, what any item is, and how anything is worn are NOT described. The same service publishes a policy giving insignia placement and dimensions; none of it is used, because reproducible detail assists imitation.',
+      'What the change cost, who supplied it and how it was procured were NOT RESEARCHED. No supplier, manufacturer or price appears anywhere.',
+      'Whether the new uniform achieved what was intended was NOT RESEARCHED. This page describes a decision and its scale, not its effects.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'A police uniform is one of the most visible things a state owns, and changing it is correspondingly rare. When it happens it is not a design refresh: it is a decision taken at the top of an organisation, usually because something has been formally found to be wrong, and then executed as a national logistics operation.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This describes one uniform change as a dated institutional event. It does not describe what the uniform looks like, what any item is, or how anything is worn, and it names no supplier, manufacturer or price.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'Uniform is the part of an institution that the public actually meets, and it is worn by people who have to work in it for a whole shift. Those two demands pull apart: what reads as authority and what is comfortable to move in are different problems, and a design that has been in service for decades has usually stopped answering the second.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Which is why a change tends to arrive attached to a review',
+        text: 'Replacing a uniform is expensive and symbolically loaded, so it rarely happens because somebody wanted it to. It happens when a formal process has recorded a problem, which is also what makes the decision traceable afterwards.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'The rarity is the service’s own claim: "This change, during the 100th anniversary year of the founding of An Garda Síochána, is only the third time that An Garda Síochána has undertaken a formal change of the Garda uniform." The new operational uniform became operational on 15 August 2022.',
+        claim: 'fact',
+        sources: ['ie-garda-new-operational-uniform-2022'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Three changes in a century is the fact to hold on to',
+        text: 'It puts a uniform in a different category from equipment that is replaced on a cycle. Something worn by every member of a national service, and recognised by everyone else, is changed about once a generation.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The drivers were institutional rather than aesthetic. The service cites a finding of its internal Cultural Audit 2018, which involved input from over 6,500 members, and a recommendation of the Commission on the Future of Policing in Ireland.',
+        claim: 'fact',
+        sources: ['ie-garda-new-operational-uniform-2022'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'An audit of the people who wear it, and a commission that looked at everything',
+        text: 'One of those is the organisation asking its own members; the other is an external review of the whole of policing. A uniform change resting on both is a change that had to survive two quite different kinds of scrutiny.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Execution is a distribution problem. The service records delivery to "approximately 13,000 members of An Garda Síochána of Garda, Sergeant and Inspector rank, in excess of 560 Garda stations across every Garda Region", and describes the uniform as divided into operational and formal elements incorporating "durability, protection and functionality".',
+        claim: 'fact',
+        sources: ['ie-garda-uniform-overview'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'And the symbolic change is recorded separately from the practical one',
+        text: 'The same announcement notes it as "the first time that elements of the uniform, other than the uniform cap, will feature the Garda Crest". A practical redesign carried an identity decision with it, and the service treats the two as different things worth stating.',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'Uniform change is generational, not periodic',
+            description:
+              'Three formal changes in a service’s first century. This is not equipment on a replacement cycle.',
+          },
+          {
+            term: 'The driver is usually a finding, not a preference',
+            description:
+              'An internal audit of thousands of members and an external policing commission, rather than a decision that the old one looked dated.',
+          },
+          {
+            term: 'Delivery is a national operation',
+            description:
+              'Around 13,000 members across more than 560 stations. The logistics are a large part of why it happens rarely.',
+          },
+          {
+            term: 'Operational and formal are separate categories',
+            description:
+              'The service distinguishes what is worn to work from what is worn on formal occasions, and states durability, protection and functionality as qualities of the first.',
+          },
+          {
+            term: 'And a redesign can carry an identity decision',
+            description:
+              'Extending a crest beyond the cap is not a practical improvement. It is a statement about the organisation, made at the same moment and recorded separately.',
+          },
+        ],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Police uniforms are updated regularly.',
+        reality:
+          'The service researched here describes its 2022 change as only the third formal change of its uniform in a hundred years.',
+      },
+      {
+        claim: 'A uniform changes because somebody decides it looks old.',
+        reality:
+          'The change described here rests on a finding of an internal audit involving over 6,500 members and a recommendation of an external commission on the future of policing.',
+      },
+      {
+        claim: 'Changing a uniform is a procurement detail.',
+        reality:
+          'It reached approximately 13,000 members across more than 560 stations in a single service. The scale is part of why it happens about once a generation.',
+      },
+      {
+        claim: 'A new uniform is purely practical.',
+        reality:
+          'The same announcement records the first appearance of the Garda Crest on elements other than the cap, which is an identity decision rather than a practical one.',
+      },
+      {
+        claim: 'This page describes what the uniform looks like.',
+        reality:
+          'It does not. The service publishes a policy giving placement and dimensions, and none of it is used here, because reproducible detail about official markings assists imitation.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'One service, one dated change.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Operational from 15 August 2022, in the service’s centenary year.',
+          'Only the third formal change of the uniform in that century.',
+          'Driven by an internal cultural audit with input from over 6,500 members.',
+          'And by a recommendation of the Commission on the Future of Policing in Ireland.',
+          'Delivered to approximately 13,000 members across more than 560 stations.',
+          'First appearance of the Garda Crest on elements other than the cap.',
+          'Not researched: every other service, and anything after the date of the announcement.',
+        ],
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'A uniform is the interface between an institution and everyone who has no other contact with it, which makes changing one a public act even when it is presented as an internal matter. Attaching the decision to a published audit and an external commission leaves a trail: anyone can ask what was found, what was recommended, and whether what arrived answers it. A change made without that trail would be just as visible and far less answerable.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'What a uniform is for is [why police wear a uniform](/law-enforcement/why-police-wear-a-uniform). Where the insignia on it came from is [police insignia and where it comes from](/law-enforcement/police-insignia-and-where-it-comes-from). Whether it has always been the same for everyone wearing it is [whether a uniform is the same for everyone](/law-enforcement/whether-a-uniform-is-the-same-for-everyone).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [police insignia and where it comes from](/law-enforcement/police-insignia-and-where-it-comes-from), [why police wear a uniform](/law-enforcement/why-police-wear-a-uniform), and [what police equipment is for](/law-enforcement/what-police-equipment-is-for).',
+      },
+    ],
+  },
+  {
+    slug: 'whether-a-uniform-is-the-same-for-everyone',
+    title: 'Whether a uniform is the same for everyone',
+    shortTitle: 'The same for everyone',
+    question: 'Has a police uniform always been the same for everyone who wears it?',
+    summary:
+      'No. One service records the moment it decided otherwise: in 1994 clothing common to men and women was to be identical, and skirts were to be phased out as stocks were used up.',
+    entityType: 'concept',
+    section: 'law-enforcement',
+    jurisdiction: ['NZ'],
+    temporalScope: 'current',
+    related: [
+      'when-a-police-uniform-changes',
+      'why-police-wear-a-uniform',
+      'police-insignia-and-where-it-comes-from',
+      'working-life-in-policing',
+    ],
+    sources: ['nz-police-women-in-uniform'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-07',
+    publishedOn: '2026-09-07',
+    reviewedOn: '2026-09-07',
+    factsVerifiedOn: '2026-09-07',
+    readingTimeMinutes: 6,
+    uncertainty: [
+      'One service was researched — New Zealand Police, from its own historical material. What any other service issued, or when it changed, was NOT RESEARCHED.',
+      'What prompted the 1994 decision, who took it, and how it was implemented were NOT ESTABLISHED. The service records the decision; this page does not explain it.',
+      'Whether the change was carried through as recorded, and what officers wear now, were NOT RESEARCHED. The dates cited are historical.',
+      'A search summary offered a 1977 trial of trousers for policewomen. It is NOT on the page and is therefore not published.',
+      'Nothing here describes any garment, specification or how anything is worn.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'A uniform is supposed to make the people wearing it interchangeable to the public eye. That aim sits awkwardly with issuing different clothing to different groups of officers, and one service records the year it resolved the tension in writing.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This describes dated decisions one service records about its own uniform. It describes no garment, no specification and nothing about how anything is worn, and it does not assess the service.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'Uniform issue is where an organisation’s assumptions become physical. What a service hands somebody on their first day encodes what it expects them to do, and for a long period services issued different clothing to men and women doing the same job. Changing that is not a wardrobe decision; it is the organisation revising an assumption it had been enacting daily.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'And the phrasing of such a decision matters',
+        text: 'A rule that clothing common to both should be identical is stronger than a rule offering a choice. It removes the difference rather than making it optional, which is a different kind of commitment.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'The service records the decision in its own words: "Clothing common to men and women to be identical. Women’s skirts to be phased out as stocks used up. Women will have the choice of light or medium weight trousers or culottes." The entry is dated 1994.',
+        claim: 'fact',
+        sources: ['nz-police-women-in-uniform'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title:
+          'Phased out as stocks used up is the sentence of an institution, not a manifesto',
+        text: 'The decision is stated alongside the practical means of carrying it out. That combination — a principle and an inventory instruction in the same breath — is what organisational change actually looks like from inside.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The same material dates earlier changes, which sets the 1994 decision in a sequence rather than presenting it as a single moment: the women’s original felt hat "was replaced by the forage cap in 1957", and a policewomen’s handbag was "issued from 1976 with the introduction of the vitric blue uniform".',
+        claim: 'fact',
+        sources: ['nz-police-women-in-uniform'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Separate issue was the arrangement being changed',
+        text: 'A separately issued hat and a separately issued bag are the ordinary texture of an arrangement in which men and women were equipped differently. Reading the 1994 entry against them shows what was actually being ended.',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'Uniform issue records assumptions',
+            description:
+              'What a service hands people encodes what it expects of them. Differences in issue are differences in expectation, whether or not anyone states them.',
+          },
+          {
+            term: 'Identical is a stronger rule than optional',
+            description:
+              'The recorded decision is that common clothing be identical, not that a choice be offered. The difference is removed rather than made a preference.',
+          },
+          {
+            term: 'Change arrives with an inventory instruction',
+            description:
+              'Skirts to be phased out as stocks are used up. Institutional change is usually expressed as a transition rule, not an announcement.',
+          },
+          {
+            term: 'The decision sits in a sequence',
+            description:
+              'A hat replaced in 1957, a bag issued from 1976, common clothing made identical in 1994. Each entry is a step in the same long argument.',
+          },
+          {
+            term: 'And what happened next is a separate question',
+            description:
+              'The service records the decision. Whether it was carried through as written, and what is issued today, were not researched and are not claimed here.',
+          },
+        ],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'A police uniform has always been the same for everyone wearing it.',
+        reality:
+          'The service researched here records a decision dated 1994 that clothing common to men and women should be identical, and that skirts should be phased out. Before that they were not the same.',
+      },
+      {
+        claim: 'Equal treatment in uniform means offering people a choice.',
+        reality:
+          'The recorded decision is that common clothing be identical. A choice is offered on one item; the general rule removes the difference rather than making it optional.',
+      },
+      {
+        claim: 'Changes like this happen all at once.',
+        reality:
+          'The decision is recorded together with the means of carrying it out — skirts phased out as stocks are used up. Institutional change is usually a transition rule.',
+      },
+      {
+        claim: 'This was the first change affecting what policewomen wore.',
+        reality:
+          'The same material dates a hat replaced in 1957 and a bag issued from 1976. The 1994 entry sits in a sequence rather than beginning one.',
+      },
+      {
+        claim: 'This page describes what officers wear now.',
+        reality:
+          'It does not. The dates cited are historical, and whether the change was carried through as recorded was not researched.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'One service, as it records its own history.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'The original felt hat replaced by the forage cap in 1957.',
+          'A policewomen’s handbag issued from 1976 with the vitric blue uniform.',
+          'Clothing common to men and women to be identical, 1994.',
+          'Skirts to be phased out as stocks were used up.',
+          'A choice of light or medium weight trousers or culottes.',
+          'Not researched: every other service, and what is issued today.',
+        ],
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'Equipment decisions are rarely thought of as equality decisions, which is exactly why they are worth reading as such. A service that issued different clothing to men and women doing identical work was making a statement daily, without needing to write one down. The value of a record like this is that it dates the moment the statement was withdrawn, and lets anyone ask how long it stood and what took so long.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'How rarely a uniform changes at all is [when a police uniform changes](/law-enforcement/when-a-police-uniform-changes). What a uniform is for is [why police wear a uniform](/law-enforcement/why-police-wear-a-uniform). What the working life it is worn for involves is [working life in policing](/law-enforcement/working-life-in-policing).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [when a police uniform changes](/law-enforcement/when-a-police-uniform-changes), [why police wear a uniform](/law-enforcement/why-police-wear-a-uniform), and [police insignia and where it comes from](/law-enforcement/police-insignia-and-where-it-comes-from).',
       },
     ],
   },
