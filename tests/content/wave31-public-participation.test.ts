@@ -503,6 +503,43 @@ describe('claims do not outrun their sources', () => {
 /* ========================================================================== */
 
 describe('the wave is reachable from what preceded it', () => {
+  it('pages that predate this wave link editorially into both new routes', () => {
+    /*
+     * The glossary hub lists every routed term automatically, so a hub link
+     * proves nothing about whether the corpus actually reaches these pages. An
+     * adversarial pass found exactly that: one inbound page each, and it was
+     * the hub. The four Wave 30 pages now link to the definitions, which is
+     * also the editorially right answer — a reader on "lay participation in
+     * judging" should be able to ask what a jury is.
+     */
+    const PRE_EXISTING = [
+      'lay-participation-in-judging',
+      'how-a-lay-court-is-composed',
+      'what-a-lay-judge-decides',
+      'who-may-serve-on-a-lay-court',
+    ];
+    const linked = (slug: string): string =>
+      JSON.stringify(ALL_GUIDES.find((g) => g.slug === slug) ?? {});
+
+    for (const slug of PRE_EXISTING) {
+      const text = linked(slug);
+      expect(text.length, `${slug} is missing from the corpus`).toBeGreaterThan(2);
+      expect(
+        /\/glossary\/(jury|lay-judge)/.test(text),
+        `${slug} predates this wave but links to neither new definition`,
+      ).toBe(true);
+    }
+
+    /* Both routes, not just one, must be reachable from the older cluster. */
+    const all = PRE_EXISTING.map(linked).join('\n');
+    expect(all, 'nothing that predates this wave links to /glossary/jury').toContain(
+      '/glossary/jury',
+    );
+    expect(all, 'nothing that predates this wave links to /glossary/lay-judge').toContain(
+      '/glossary/lay-judge',
+    );
+  });
+
   it('the sources it added are actually cited by content', () => {
     const cited = new Set(
       [...GLOSSARY, ...ALL_GUIDES, ...COUNTRY_DOSSIERS].flatMap((r) =>
