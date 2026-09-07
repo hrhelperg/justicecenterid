@@ -199,6 +199,89 @@ export const GLOSSARY: readonly GlossaryTerm[] = [
     reviewedOn: '2026-08-10',
     factsVerifiedOn: '2026-08-10',
   },
+  /*
+   * WAVE 31 — the two words the subject turns on.
+   *
+   * Wave 30 built four comparative pages about lay participation and, in doing so, had to police
+   * a word: "jury" names one of two arrangements, and readers reach for it to describe both. What
+   * that wave never did was DEFINE either word as its own subject. The corpus said "a jury is not
+   * a Schöffengericht" 40 times without anywhere saying what a jury is, which is a strange thing
+   * for an encyclopedia to leave out and the specific gap this wave closes.
+   *
+   * These two entries are therefore terminology, not another comparison. The comparative pages
+   * keep their subjects — composition, decision scope, eligibility — and these say what the words
+   * mean, which is what a reader arriving from a search engine actually asked.
+   */
+  {
+    slug: 'jury',
+    term: 'Jury',
+    alternateTerms: ['Geschworenenbank', 'Geschworene'],
+    definition:
+      'A body of lay people, separate from the professional judges, brought in to decide questions the law entrusts to it in a particular trial.',
+    expandedNote:
+      'Separate is the load-bearing word. A jury sits as its own body; lay judges sit on the bench beside the professionals. That structural difference, not the presence of non-lawyers, is what makes a jury a jury.',
+    question: 'What is a jury, and how is it different from other people who are not judges but help decide a case?',
+    purpose:
+      'Systems that use juries decided that some decisions should not rest with professionals alone, and that the lay voice should be structurally separate rather than folded into the bench. Ireland put the requirement in its constitution: no one may be tried on a criminal charge without a jury, save in the three situations the constitution itself carves out.',
+    context:
+      'A jury is convened for a trial and dissolved after it, so it is a temporary institution rather than a standing one. What it is asked to decide varies: it may answer the question of guilt and nothing else, or it may share in more. Austria shows the split plainly — the Geschworene there decide guilt alone, but the sentence is fixed by them together with the professional judges, so even a separate lay body need not be separate for every purpose.',
+    jurisdictionNote:
+      'Whether a jury is used at all, for which offences, and what it decides are three different questions with three different answers. Ireland requires one by constitution for criminal charges, subject to exceptions for minor offences, special courts and military tribunals. Austria runs juries alongside mixed benches, reserving them for the gravest offences. In England and Wales the Juries Act sets out when a majority verdict may be taken and puts a county court jury complete at eight; the Crown Court complement is NOT ESTABLISHED by anything read here, because the section governs majority verdicts rather than size.',
+    falseFriends: ['lay-judge'],
+    countryExamples: [
+      {
+        countrySlug: 'ireland',
+        note: 'Article 38.5 of the Constitution: "Save in the case of the trial of offences under section 2, section 3 or section 4 of this Article no person shall be tried on any criminal charge without a jury." The three exceptions are minor offences tried summarily, special courts established where the ordinary courts are found inadequate, and military tribunals.',
+      },
+      {
+        countrySlug: 'austria',
+        note: 'A Geschworenengericht is composed of three professional judges sitting as the Schwurgerichtshof and eight Geschworene sitting as the Geschworenenbank, and is used for the gravest offences — those carrying life imprisonment, or a lower limit above five years and an upper limit above ten. The Geschworene decide guilt alone; the sentence is set by them together with the professional judges.',
+      },
+    ],
+    section: 'courts',
+    related: ['court', 'fair-trial', 'judicial-independence'],
+    sources: ['ie-constitution', 'at-justiz-rechtsprechungsgrundsaetze', 'ew-juries-act-1974-s17'],
+    status: 'published',
+    review: 'fact-checked',
+    updatedOn: '2026-09-07',
+    reviewedOn: '2026-09-07',
+    factsVerifiedOn: '2026-09-07',
+  },
+  {
+    slug: 'lay-judge',
+    term: 'Lay judge',
+    alternateTerms: ['Schöffe', 'Schöffin', 'saiban-in', 'Laienrichter'],
+    definition:
+      'A person without professional legal training who sits on the bench together with professional judges and takes part in the decision as a member of the court.',
+    expandedNote:
+      'A lay judge is not a juror sitting somewhere else in the room. The seat is on the bench, and in some systems it carries the judge’s office and vote for as long as the hearing lasts.',
+    question: 'What is a lay judge, and are they really deciding the case?',
+    purpose:
+      'The same instinct that produces juries — that professional judges should not decide alone — arranged the other way. Instead of a separate body answering separate questions, the lay members join the bench, hear what the judges hear, and vote with them. Austria treats this as part of the democratic basic principle of its constitution: lay adjudication brings about participation of the people in the administration of justice.',
+    context:
+      'Because lay judges sit with the professionals, their influence is a matter of arithmetic as much as of office: the ratio on the bench is fixed by law, and in the mixed systems researched here the lay members outnumber the professionals. What they may decide is set by law too, and it is often more than a juror decides — fact, law and sentence together with the judges rather than the question of guilt alone.',
+    jurisdictionNote:
+      'The office exists under different names and with materially different powers. Germany seats Schöffen on the Schöffengericht under the Courts Constitution Act; Japan’s saiban-in sit with professional judges and take part in sentencing; Austria seats Schöffen with one professional judge where the offence carries more than five years. Lay judges are selected differently too — in Austria at random from the electoral register. None of this generalises to systems not researched here.',
+    falseFriends: ['jury'],
+    countryExamples: [
+      {
+        countrySlug: 'austria',
+        note: 'In a Schöffengericht a professional judge decides on the verdict together with two Schöffen, and the Landesgericht sits in that formation where the offence carries more than five years’ imprisonment. Lay judges are drawn at random from the electoral register.',
+      },
+      {
+        countrySlug: 'germany',
+        note: 'The Courts Constitution Act seats Schöffen on the Schöffengericht, where they sit with the professional judge as members of the court rather than as a separate body.',
+      },
+    ],
+    section: 'courts',
+    related: ['court', 'judicial-independence', 'fair-trial'],
+    sources: ['at-justiz-rechtsprechungsgrundsaetze', 'at-oesterreich-laienrichter', 'de-gvg-schoeffengericht'],
+    status: 'published',
+    review: 'fact-checked',
+    updatedOn: '2026-09-07',
+    reviewedOn: '2026-09-07',
+    factsVerifiedOn: '2026-09-07',
+  },
   {
     slug: 'appeal',
     term: 'Appeal',
