@@ -2286,7 +2286,7 @@ export const DEFENCE_GUIDES: readonly Guide[] = [
     howItWorks: [
       {
         kind: 'paragraph',
-        text: 'For barristers of England and Wales, pupillage "is divided into two parts: a non-practising period, usually of six months, and a practising period, usually of six months", with the second beginning only after Call to the Bar.',
+        text: 'For barristers of England and Wales, pupillage is divided into two parts — "a non-practising period, usually of six months, and a practising period, usually of six months" — with the second beginning only after Call to the Bar.',
         claim: 'fact',
         sources: ['ew-bsb-becoming-a-barrister'],
       },
