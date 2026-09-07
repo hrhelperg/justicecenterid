@@ -9729,7 +9729,7 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
         kind: 'callout',
         variant: 'analysis',
         title: 'Which is why the conditions matter more than the exemption',
-        text: 'Almost every system will let an emergency vehicle depart from something. What distinguishes them is what has to be true first. A rule that says "may exceed the limit" and one that says "may exceed the limit where obeying it would hinder the purpose" describe very different arrangements.',
+        text: 'Almost every system will let an emergency vehicle depart from something. What distinguishes them is what has to be true first. A rule permitting a driver to exceed the limit, and one permitting it only where obeying the limit would hinder the purpose, describe very different arrangements, and only the second is what the section read here actually says.',
       },
     ],
     howItWorks: [
