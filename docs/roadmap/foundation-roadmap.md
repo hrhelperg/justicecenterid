@@ -2128,3 +2128,54 @@ is the ownership audit rather than a shortfall.
   1 P1, 1 P2, 2 REFUTED.
 
 Delivered on `feat/public-participation-synthesis-wave-31`. Not merged, not deployed.
+
+## Phase 46 — Knowledge Expansion Wave 32 (delivered 2026-09-07)
+
+Police units, roles and specialisations, described from named services. Six guides on five new
+sources with one reused, all in `/law-enforcement`. Details in
+`docs/research/knowledge-expansion-wave-32-qa.md` and
+`docs/research/wave-32-police-functions-findings.md`.
+
+- **The corpus declared this gap itself.** `specialist-roles-in-policing` enumerates ten areas and
+  then states that "no service is claimed to have any specific one" and that how a person enters a
+  specialisation "was not researched for any system". Both are now answered for named services from
+  their own pages, on the Wave 28 boundary: the generic page keeps the country-free shape, these
+  name systems and cite them.
+- **Architecture: no new route family.** The brief warns against `/units` and `/specialisations`
+  "simply for neatness". These are functions within policing; they sit with the other 46
+  law-enforcement pages, and a test asserts no such family exists.
+- **A police force can be defined by an estate rather than a territory.** British Transport Police
+  operates "the only national footprint" across England, Wales and Scotland — two legal systems the
+  corpus treats separately — sits "under the Department for Transport rather than the Home Office",
+  and is funded by the industry it polices.
+- **The public picture of police dogs is the reverse of the published balance.** Patrol teams "make
+  up 90 percent of capability"; detection is the minority. And handlers are "officers with about
+  five years policing experience" — a destination, not a door, which closes a career question the
+  corpus had left open.
+- **A maritime unit's published purpose is mostly not crime work**, and its enforcement runs jointly
+  with seven named agencies. **Police search and rescue is coordination** of a defined category,
+  with a separate centre holding the rest and volunteers supplying the capacity.
+- **A tension preserved rather than resolved.** The Dutch police describe the wijkagent as "een
+  ervaren politieagent" while the same system runs a three-year bachelor named for the role. Both
+  official. How they fit is NOT ESTABLISHED, and a guard fails if a later edit reconciles them
+  without evidence.
+- **Three mutations survived and all three were real.** A taxonomy guard scoped to the wave left the
+  page that _owns_ the distinction unguarded; a contradiction guard was defeated by one missing
+  inflection; and a taxonomy collapse was smuggled into a misconception claim, the one field the
+  assertion model deliberately excludes.
+- **A fix that was wrong, recorded as such.** The first repair for the third required claim and
+  reality to share content words. Measured against the corpus, 20 of 30 existing pairs share none,
+  because a good correction reframes rather than echoes. It tested prose style, not coherence.
+  Replaced with a narrow invariant that matches the defect.
+- **P1: a structured-data guard forbade `Organization` and failed twelve e2e tests.** The site emits
+  it for its own publisher identity and for each cited source's publisher. Narrowed to
+  `GovernmentOrganization`/`PoliceStation`/`EmergencyService`. Caught by the gate, never pushed.
+- **Every source read contains operational material and none is used.** Berth locations and unit
+  establishment are published by the service and deliberately not reproduced; nine tactical bodies
+  were safety-rejected.
+- **Client JS +0 KB. CSS +0 bytes. No component changed.**
+- Validation: 9,077 tests / 89 files; 2,164 e2e passed; **547 routes**, 549 pages, 547 sitemap URLs;
+  route matrix 699/699; 0 orphans, 0 weakly linked, 0 dead ends; 393 sources. **18/18 mutation
+  proofs valid**, three caught only after the fixes they forced. Adversarial QA: 1 P1, 0 P0.
+
+Delivered on `feat/police-units-specialisations-wave-32`. Not merged, not deployed.

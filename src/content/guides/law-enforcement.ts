@@ -1945,7 +1945,7 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [how policing is divided between levels of government](/law-enforcement/how-policing-is-divided-between-levels), [police command and coordination](/law-enforcement/police-command-and-coordination), and the [institution types reference](/institutions).',
+        text: 'Related: [how policing is divided between levels of government](/law-enforcement/how-policing-is-divided-between-levels), [transport and railway policing](/law-enforcement/transport-and-railway-policing), [police command and coordination](/law-enforcement/police-command-and-coordination), and the [institution types reference](/institutions).',
       },
     ],
   },
@@ -2484,7 +2484,7 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [what police jurisdiction means](/law-enforcement/police-jurisdiction), [prefectural police](/institutions/prefectural-police), and [how police are held to account](/law-enforcement/how-police-are-held-to-account). Where a single specialist unit serves a whole country by request rather than by command, see [how specialist units cover a country](/law-enforcement/how-specialist-units-cover-a-country).',
+        text: 'Related: [what police jurisdiction means](/law-enforcement/police-jurisdiction), [police search and rescue](/law-enforcement/police-search-and-rescue), [prefectural police](/institutions/prefectural-police), and [how police are held to account](/law-enforcement/how-police-are-held-to-account). Where a single specialist unit serves a whole country by request rather than by command, see [how specialist units cover a country](/law-enforcement/how-specialist-units-cover-a-country).',
       },
     ],
   },
@@ -2626,7 +2626,7 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [municipal police](/institutions/municipal-police), [local police governance](/law-enforcement/local-police-governance), and [France](/countries/france).',
+        text: 'Related: [municipal police](/institutions/municipal-police), [neighbourhood policing as a function](/law-enforcement/neighbourhood-policing-as-a-function), [local police governance](/law-enforcement/local-police-governance), and [France](/countries/france).',
       },
     ],
   },
@@ -4274,7 +4274,7 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [rank, role and specialisation](/law-enforcement/rank-role-and-specialisation), [specialist roles in policing](/law-enforcement/specialist-roles-in-policing), and [civilian roles in police organisations](/law-enforcement/civilian-roles-in-police-organisations). Where the branch point sits at entry, the recruitment page shows it directly: [police recruitment in the Netherlands](/countries/netherlands/police-recruitment).',
+        text: 'Related: [rank, role and specialisation](/law-enforcement/rank-role-and-specialisation), [when a specialisation is a later assignment](/law-enforcement/when-a-specialisation-is-a-later-assignment), [specialist roles in policing](/law-enforcement/specialist-roles-in-policing), and [civilian roles in police organisations](/law-enforcement/civilian-roles-in-police-organisations). Where the branch point sits at entry, the recruitment page shows it directly: [police recruitment in the Netherlands](/countries/netherlands/police-recruitment).',
       },
     ],
   },
@@ -4467,7 +4467,7 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [rank, role and specialisation](/law-enforcement/rank-role-and-specialisation), [civilian roles in police organisations](/law-enforcement/civilian-roles-in-police-organisations), and [the detective role](/professions/detective). Plain-clothes work removes the identification a uniform provides, which is why the duty shifts — see [why police wear a uniform](/law-enforcement/why-police-wear-a-uniform). Where these areas of work sit as organisational bodies, and how far each reaches, is [what a police unit is](/law-enforcement/what-a-police-unit-is).',
+        text: 'Related: [rank, role and specialisation](/law-enforcement/rank-role-and-specialisation), [police dog sections](/law-enforcement/police-dog-sections), [civilian roles in police organisations](/law-enforcement/civilian-roles-in-police-organisations), and [the detective role](/professions/detective). Plain-clothes work removes the identification a uniform provides, which is why the duty shifts — see [why police wear a uniform](/law-enforcement/why-police-wear-a-uniform). Where these areas of work sit as organisational bodies, and how far each reaches, is [what a police unit is](/law-enforcement/what-a-police-unit-is).',
       },
     ],
   },
@@ -8174,7 +8174,7 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [what a police unit is](/law-enforcement/what-a-police-unit-is), [command and coordination between police agencies](/law-enforcement/police-command-and-coordination), and [specialist roles in policing](/law-enforcement/specialist-roles-in-policing).',
+        text: 'Related: [what a police unit is](/law-enforcement/what-a-police-unit-is), [maritime and marine policing](/law-enforcement/maritime-and-marine-policing), [command and coordination between police agencies](/law-enforcement/police-command-and-coordination), and [specialist roles in policing](/law-enforcement/specialist-roles-in-policing).',
       },
     ],
   },
@@ -8533,6 +8533,1125 @@ export const LAW_ENFORCEMENT_GUIDES: readonly Guide[] = [
       {
         kind: 'paragraph',
         text: 'Related: [how police officers are identified](/law-enforcement/how-police-officers-are-identified), [why police wear a uniform](/law-enforcement/why-police-wear-a-uniform), and [police vehicles and what they are for](/law-enforcement/police-vehicles-and-what-they-are-for).',
+      },
+    ],
+  },
+  /*
+   * WAVE 32 — police functions, described from named services.
+   *
+   * OWNERSHIP, audited before anything was written. This cluster does NOT re-open the taxonomy.
+   * `rank-role-and-specialisation` owns the four-way distinction between rank, role,
+   * specialisation and assignment. `what-a-police-unit-is` owns what a unit is as an
+   * organisational form. `how-specialist-units-cover-a-country` owns unit geography.
+   * `specialist-roles-in-policing` owns the enumeration of areas of work.
+   *
+   * What none of them does is describe a single function as a named service actually publishes it.
+   * That page says so in its own uncertainty: "which specialisations exist in any particular
+   * service was NOT RESEARCHED ... no service is claimed to have any specific one", and "how a
+   * person enters any specialisation ... [was] not researched for any system". These pages answer
+   * both, and they answer them the way Wave 28 answered qualification routes — the generic page
+   * keeps the country-free shape, and these name systems and cite them.
+   *
+   * FUNCTIONAL ANALOGUES, NOT TRANSLATIONS. A similarly named unit in two countries may sit in a
+   * different institution, hold different powers and recruit differently. Nothing here presents a
+   * named unit in one service as the equivalent of a named unit in another.
+   *
+   * SAFETY. Every source read for this cluster contains operational material. None of it is used.
+   * These pages describe what a function is for, where it sits and who does it. They describe no
+   * deployment, handling, patrol, interception or tactical detail of any kind.
+   */
+  {
+    slug: 'transport-and-railway-policing',
+    title: 'Transport and railway policing',
+    shortTitle: 'Transport policing',
+    question: 'Why would a railway need its own police force?',
+    summary:
+      'Because a railway is not a place. One force polices an estate that crosses three national jurisdictions, answers to the transport ministry rather than the interior ministry, and is paid for by the industry it polices.',
+    entityType: 'concept',
+    section: 'law-enforcement',
+    jurisdiction: ['GB'],
+    temporalScope: 'current',
+    related: [
+      'police-jurisdiction',
+      'how-policing-is-divided-between-levels',
+      'what-a-police-unit-is',
+      'specialist-roles-in-policing',
+    ],
+    sources: ['uk-btp-what-makes-us-different'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-07',
+    publishedOn: '2026-09-07',
+    reviewedOn: '2026-09-07',
+    factsVerifiedOn: '2026-09-07',
+    readingTimeMinutes: 6,
+    uncertainty: [
+      'One force was researched — British Transport Police. How transport policing is arranged in any other country was NOT RESEARCHED, and arrangements differ substantially.',
+      'What powers the force holds, and how they relate to those of territorial forces in any particular situation, were NOT RESEARCHED. This page describes an institutional position, not a legal one.',
+      'How the funding arrangement works in detail, who decides it, and what it means for accountability were NOT ESTABLISHED.',
+      'Staffing, caseload and outcomes were NOT RESEARCHED.',
+      'Nothing here describes how the force operates, patrols, or responds to anything.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Almost every police force is defined by a territory: a city, a region, a country. A transport police force is defined by something else — a network of track, stations and interchanges that runs through many territories and belongs to none of them. That single difference reorganises everything about the institution.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This describes one force as it describes itself, to show what it means to police an estate rather than an area. It is not a description of powers, it does not describe how the force operates, and it is not a guide to reporting anything to anyone.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'A railway generates policing problems that follow the network rather than the map. A train that leaves one force area arrives in another twenty minutes later, and the problem on board arrives with it. Splitting that between the forces whose ground the track happens to cross means dividing one continuous environment among institutions that each see a fragment of it.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Which is why the estate, not the area, becomes the unit of organisation',
+        text: 'Once the thing being policed is a network, the force that polices it has to be shaped like the network. That is a genuinely different design from the geographic one the rest of the corpus describes, and it produces a genuinely different institution.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'The force states its own distinguishing feature plainly: "We are the only police force in the country with a national footprint, operating across England, Wales and Scotland." Its estate is "over 10,000 miles of railway track and more than 3,000 stations, platforms and transport hubs", together with light rail and tram networks.',
+        claim: 'fact',
+        sources: ['uk-btp-what-makes-us-different'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'A national footprint across three legal systems',
+        text: 'England and Wales and Scotland are separate legal systems, and the corpus treats them separately everywhere else. A single force operating across both is unusual enough that the force leads with it.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'It also sits somewhere different in government: "BTP is uniquely positioned under the Department for Transport rather than the Home Office", and it is funded primarily by the rail industry rather than directly from the public purse.',
+        claim: 'fact',
+        sources: ['uk-btp-what-makes-us-different'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Two consequences worth separating',
+        text: 'Reporting to a transport ministry places the force inside the department that owns the policy problem rather than the one that owns policing. Being paid for by the industry it polices raises a question about independence that a force funded from general taxation does not face. Both follow from the same choice, and neither is described here as a criticism.',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'The estate is the jurisdiction',
+            description:
+              'What defines the force is a network, not an area. Territory is where the network happens to run, not what the force is responsible for.',
+          },
+          {
+            term: 'It crosses legal systems rather than sitting inside one',
+            description:
+              'A national footprint spanning England and Wales and Scotland means operating across two legal systems the corpus otherwise treats as distinct.',
+          },
+          {
+            term: 'The reporting line follows the estate',
+            description:
+              'The force answers to the department responsible for transport rather than the one responsible for policing. Where an institution reports says what problem it was created to solve.',
+          },
+          {
+            term: 'Funding follows the estate too',
+            description:
+              'Payment primarily by the industry rather than from general taxation is a structural fact about the institution and not a detail of its budget.',
+          },
+          {
+            term: 'And none of this is a rule about transport policing',
+            description:
+              'One force was researched. Other countries police their railways through territorial forces, through a national force, or through arrangements not described here at all.',
+          },
+        ],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'A transport police force is a specialist unit inside a normal police force.',
+        reality:
+          'The force researched here is a separate force with its own national footprint, its own reporting line to a different government department, and its own funding arrangement. That is not a unit inside anything.',
+      },
+      {
+        claim: 'Every police force is defined by the area it covers.',
+        reality:
+          'This one is defined by an estate — track, stations and interchanges — that runs across areas. Territory is where the estate happens to be, not the thing being policed.',
+      },
+      {
+        claim: 'All police forces answer to the same ministry.',
+        reality:
+          'The force researched here states that it sits under the transport department rather than the interior department, which is the ministry most policing in that system answers to.',
+      },
+      {
+        claim: 'Police forces are always funded from general taxation.',
+        reality:
+          'This one is funded primarily by the industry whose network it polices. Whether that affects anything was not researched and is not claimed.',
+      },
+      {
+        claim: 'This describes how railways are policed generally.',
+        reality:
+          'It describes one force in one system. Nothing here establishes how any other country polices its railways.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'One force, as it describes itself.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'A national footprint across England, Wales and Scotland — the only force with one.',
+          'Over 10,000 miles of track and more than 3,000 stations, platforms and hubs.',
+          'Light rail and tram networks as well as mainline railway.',
+          'Under the transport department rather than the interior department.',
+          'Funded primarily by the rail industry rather than directly from the public purse.',
+          'Not researched: powers, staffing, outcomes, and every other country.',
+        ],
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'A force funded by the industry it polices sits in a position most policing does not, and the interesting question is not whether that is improper but who can examine it. The corpus treats oversight as a structural matter elsewhere, and the same reasoning applies here: an unusual funding and reporting arrangement is examinable precisely because the force publishes it, and a reader who knows the arrangement can ask the right question about it.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'What jurisdiction means, and whether two agencies can hold it at once, is [police jurisdiction](/law-enforcement/police-jurisdiction). How policing is divided between levels of government is [how policing is divided between levels](/law-enforcement/how-policing-is-divided-between-levels). What a unit is, as distinct from a force, is [what a police unit is](/law-enforcement/what-a-police-unit-is).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [police jurisdiction](/law-enforcement/police-jurisdiction), [how policing is divided between levels](/law-enforcement/how-policing-is-divided-between-levels), and [specialist roles in policing](/law-enforcement/specialist-roles-in-policing).',
+      },
+    ],
+  },
+  {
+    slug: 'police-dog-sections',
+    title: 'Police dog sections',
+    shortTitle: 'Police dogs',
+    question: 'What do police dogs actually do, and who handles them?',
+    summary:
+      'One service publishes the answer to both: two categories of dog team with one making up ninety per cent of the capability, and handlers who are officers with about five years of policing behind them before they arrive.',
+    entityType: 'concept',
+    section: 'law-enforcement',
+    jurisdiction: ['NZ'],
+    temporalScope: 'current',
+    related: [
+      'specialist-roles-in-policing',
+      'when-a-specialisation-is-a-later-assignment',
+      'what-a-police-unit-is',
+      'how-specialist-units-cover-a-country',
+    ],
+    sources: ['nz-police-dog-section', 'nz-police-teams-units'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-07',
+    publishedOn: '2026-09-07',
+    reviewedOn: '2026-09-07',
+    factsVerifiedOn: '2026-09-07',
+    readingTimeMinutes: 6,
+    uncertainty: [
+      'One service was researched — New Zealand Police. How dog sections are organised anywhere else was NOT RESEARCHED, and nothing here generalises.',
+      'How a dog or a handler is selected, assessed, trained or worked was NOT RESEARCHED and is deliberately not described. The source contains material of that kind and none of it is used.',
+      'What proportion of handlers come from any particular background, and how many apply, were NOT ESTABLISHED.',
+      'Nothing here describes what a dog team does at an incident, or what any dog is capable of.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'A police dog section is an organisational body, and like other specialist bodies it turns out to be more precisely defined than the public picture of it. One service publishes what its dog teams are divided into, how the division is weighted, and what a person must already be before they can join.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This describes a section as one service publishes it. It does not describe how a dog is trained, handled, or used at an incident, and it makes no claim about what a dog can do. That boundary is deliberate and is enforced by a test.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'A dog section is an unusually expensive capability to maintain: it needs animals, a breeding and training establishment, and officers withdrawn from other work for years at a time. A service that keeps one has decided the capability cannot be improvised, which is the same reasoning that produces any permanent specialist body.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'And it is the handler, not the dog, that makes it a career question',
+        text: 'The animal is the visible half. The organisational half is a police officer taken out of general duties, trained at length, and posted to a section — which makes a dog section a destination inside a career rather than a way into one.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'The section divides into two kinds of team, and the balance between them is published: "Patrol dog teams (previously known as general purpose teams) operate in all dog sections and police districts and make up 90 percent of capability." Patrol dogs "are mainly used to track and search for people".',
+        claim: 'fact',
+        sources: ['nz-police-dog-section'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Ninety per cent is the number worth pausing on',
+        text: 'The public picture of police dogs is dominated by detection. In this service the general-purpose team is the overwhelming majority of the capability, and the specialised detection work is the minority — the reverse of the usual assumption.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The second category is defined by what it is trained to find: "Detector dog teams are trained to detect narcotics, firearms, currency and explosives." All the service’s dogs are trained centrally, at the Police Dog Training Centre at Trentham, Upper Hutt, near Wellington.',
+        claim: 'fact',
+        sources: ['nz-police-dog-section'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'The service also publishes what a handler must already be: "All police dog handlers are officers with about five years policing experience behind them before they join the Dog Unit."',
+        claim: 'fact',
+        sources: ['nz-police-dog-section'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'That single sentence answers a career question the corpus had left open',
+        text: 'It settles, for this service, that dog handling is a later assignment rather than an entry route. Somebody joining the police cannot join the dog section; they join the police, and the section is reachable from there after several years of other work.',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'Two categories, unevenly weighted',
+            description:
+              'Patrol teams and detector teams. In this service the first makes up ninety per cent of the capability, which is the opposite of the usual public assumption.',
+          },
+          {
+            term: 'Patrol teams are distributed; the capability is not concentrated',
+            description:
+              'They operate in all dog sections and police districts. This is the distributed arrangement the corpus describes elsewhere when it discusses how specialist capability is spread.',
+          },
+          {
+            term: 'Detection is defined by category, not by technique',
+            description:
+              'The service names what detector teams are trained to find. What any of that involves is capability and is not described here.',
+          },
+          {
+            term: 'Training is central even though the sections are not',
+            description:
+              'All the service’s dogs are trained at one centre. A distributed capability with a single training establishment is a common shape for specialist work.',
+          },
+          {
+            term: 'And the handler arrives with a career behind them',
+            description:
+              'About five years of policing experience before joining. The section is a destination, not a door.',
+          },
+        ],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Most police dogs are detection dogs.',
+        reality:
+          'In the service researched here, patrol teams make up ninety per cent of the capability and detector teams are the minority. The public picture is the reverse of the published balance.',
+      },
+      {
+        claim: 'You can join the police as a dog handler.',
+        reality:
+          'The service researched here states that handlers are officers with about five years of policing experience before they join the Dog Unit. It is a later assignment, not an entry route.',
+      },
+      {
+        claim: 'A dog section is concentrated in one place like other specialist units.',
+        reality:
+          'Patrol dog teams in this service operate in all dog sections and police districts. Training is centralised; the capability is distributed.',
+      },
+      {
+        claim: 'Police dogs are a single capability.',
+        reality:
+          'The service divides them into patrol teams and detector teams, with different purposes and, for detection, different named categories of material.',
+      },
+      {
+        claim: 'This page describes what police dogs can do.',
+        reality:
+          'It does not, and it will not. Capability, handling and deployment are outside what this platform publishes, and the source material of that kind is deliberately unused.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'One service, as it publishes itself.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Patrol dog teams in all dog sections and police districts — ninety per cent of capability.',
+          'Detector dog teams trained to detect narcotics, firearms, currency and explosives.',
+          'All dogs trained at one central training centre.',
+          'Handlers are officers with about five years of policing experience.',
+          'Not researched: every other country, and everything about how any of it is done.',
+        ],
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'Publishing the composition of a capability is a modest but real form of accountability: it lets a reader see that the majority of the work is general rather than specialised, and that the people doing it are experienced officers rather than newcomers. Both are checkable claims a service has chosen to make about itself, and both would otherwise be guesswork.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'What areas of specialist work exist is [specialist roles in policing](/law-enforcement/specialist-roles-in-policing). Whether a specialisation is entered or reached is [when a specialisation is a later assignment](/law-enforcement/when-a-specialisation-is-a-later-assignment). How far a specialist capability reaches is [how specialist units cover a country](/law-enforcement/how-specialist-units-cover-a-country).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [specialist roles in policing](/law-enforcement/specialist-roles-in-policing), [when a specialisation is a later assignment](/law-enforcement/when-a-specialisation-is-a-later-assignment), and [what a police unit is](/law-enforcement/what-a-police-unit-is).',
+      },
+    ],
+  },
+  {
+    slug: 'neighbourhood-policing-as-a-function',
+    title: 'Neighbourhood policing as a function',
+    shortTitle: 'Neighbourhood policing',
+    question: 'What is a neighbourhood police officer actually for?',
+    summary:
+      'One service answers in a single sentence: the wijkagent is an experienced police officer. The role is built on being known in one place — and much of its work is deciding what is not a police problem and handing it to whoever owns it.',
+    entityType: 'concept',
+    section: 'law-enforcement',
+    jurisdiction: ['NL'],
+    temporalScope: 'current',
+    related: [
+      'specialist-roles-in-policing',
+      'when-a-specialisation-is-a-later-assignment',
+      'municipal-and-national-police',
+      'why-societies-need-law-enforcement',
+    ],
+    sources: ['nl-politie-wijkagent'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-07',
+    publishedOn: '2026-09-07',
+    reviewedOn: '2026-09-07',
+    factsVerifiedOn: '2026-09-07',
+    readingTimeMinutes: 6,
+    uncertainty: [
+      'One service was researched — the Dutch national police. How neighbourhood policing is arranged anywhere else was NOT RESEARCHED. Similar-sounding roles in other systems may sit differently and are not equated with this one.',
+      'How a person becomes a wijkagent was NOT ESTABLISHED, and there is a real tension in the evidence. The service describes the role as held by an experienced officer, while the corpus separately records a three-year bachelor programme named for the role. Whether the degree leads into it directly, or the role is reached later, is not resolved here and is not guessed.',
+      'How many wijkagenten there are, how areas are assigned, and how the role is evaluated were NOT RESEARCHED.',
+      'Nothing here describes how the officer works, what they patrol, or how any problem is handled.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Most policing functions are defined by a kind of work: investigation, traffic, public order. Neighbourhood policing is defined by a place and by continuity in it. The officer is not assigned to a category of incident but to an area, and the point of the arrangement is that the same person is there long enough to be recognised.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This describes one role as one service publishes it. It is not a description of any other country’s neighbourhood policing, it does not describe how the work is done, and it is not a route for contacting anybody about anything.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'A police service that only ever arrives after something has happened learns about a neighbourhood exclusively through its emergencies. An officer permanently attached to an area accumulates the ordinary knowledge that emergencies do not contain — who lives where, which disputes are long-running, what has been getting worse. That knowledge is the whole product of the arrangement.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Which is why continuity, not activity, is the design',
+        text: 'The role would not work if the post rotated quickly. Being a familiar face is not a pleasant side effect of the job; it is the mechanism, and it takes time that a service has to be willing to spend.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'The Dutch police open their description of the role with a statement about seniority rather than about duties: "De wijkagent is een ervaren politieagent" — the wijkagent is an experienced police officer. The officer works inside a basisteam alongside surveillanten and rechercheurs.',
+        claim: 'fact',
+        sources: ['nl-politie-wijkagent'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Leading with experience says what kind of role it is',
+        text: 'A service describing a role could begin with tasks, hours or powers. Beginning with the officer’s experience frames the post as one that requires judgement built elsewhere first.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The function itself is stated in terms of access rather than enforcement: the wijkagent is "een eerste aanspreekpunt in de wijk en een bekend gezicht" — a first point of contact in the neighbourhood and a familiar face — through whom problems can be identified early, and preferably prevented.',
+        claim: 'fact',
+        sources: ['nl-politie-wijkagent'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'A substantial part of the published description is about what the officer does NOT keep. Some matters are not police business, and the wijkagent refers them to hulpverlening or to other organisations such as neighbourhood mediation, meeting regularly with the municipality and housing associations so that the parties know what is happening.',
+        claim: 'fact',
+        sources: ['nl-politie-wijkagent'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Referral is the function, not an admission that the police cannot help',
+        text: 'A role positioned as the first point of contact will receive things that are not crimes. Knowing which body owns each of them, and being in regular contact with those bodies, is what makes the position useful rather than merely visible.',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'The assignment is a place, not a category of work',
+            description:
+              'The officer belongs to an area rather than to a kind of incident, which is the reverse of how most specialist functions are defined.',
+          },
+          {
+            term: 'Seniority is stated first',
+            description:
+              'The service introduces the role as one held by an experienced officer, before describing anything the officer does.',
+          },
+          {
+            term: 'The officer sits inside a general team',
+            description:
+              'The role works alongside patrol officers and detectives in a basisteam rather than in a separate specialist body.',
+          },
+          {
+            term: 'Referring out is part of the job',
+            description:
+              'Matters that are not police business go to support services, the municipality, housing associations or mediation. The published description gives this substantial space.',
+          },
+          {
+            term: 'And a familiar name is not a functional equivalence',
+            description:
+              'Other systems have roles that sound similar. Whether they sit in the same kind of team, carry the same seniority, or do the same work was not researched, and none is equated with this one.',
+          },
+        ],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'A neighbourhood officer is a junior post for officers starting out.',
+        reality:
+          'The service researched here introduces the role with the statement that the wijkagent is an experienced police officer, before describing any duty.',
+      },
+      {
+        claim: 'Neighbourhood policing is a softer alternative to real police work.',
+        reality:
+          'The published description places the role inside a basisteam alongside patrol officers and detectives, working towards a safe neighbourhood through both enforcement and investigation.',
+      },
+      {
+        claim: 'The officer deals with everything that happens in the area.',
+        reality:
+          'Much of the published description concerns what is referred elsewhere — to support services, the municipality, housing associations or neighbourhood mediation.',
+      },
+      {
+        claim: 'Every country has this role under a different name.',
+        reality:
+          'Roles with similar names exist elsewhere. Whether they hold the same position, seniority or function was not researched, and this page equates the Dutch role with nothing.',
+      },
+      {
+        claim: 'This page explains how to contact a neighbourhood officer.',
+        reality:
+          'It does not. It describes what the function is for in one service, and it is not a route for contacting anybody.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'One role, as one service publishes it.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Described first as an experienced police officer — Netherlands.',
+          'Works inside a basisteam alongside patrol officers and detectives.',
+          'A first point of contact in the neighbourhood and a familiar face.',
+          'Refers matters that are not police business to other organisations.',
+          'Meets regularly with the municipality and housing associations.',
+          'Not researched: how the role is entered, and every other country.',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'uncertainty',
+        title: 'An unresolved tension, left unresolved',
+        text: 'The same system runs a three-year bachelor programme named for this role, which the corpus records elsewhere, while this page describes the role as held by an experienced officer. Both are sourced. How they fit together was not established, and nothing here reconciles them.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'A role built on being known cuts both ways, and that is worth stating plainly. Continuity gives residents somebody to tell things to, and it gives a police service durable knowledge of a place it would otherwise see only in crises. The same continuity concentrates a great deal of informal discretion in one officer over a long period, which is precisely the kind of arrangement that oversight exists to be able to examine.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'What areas of policing work exist is [specialist roles in policing](/law-enforcement/specialist-roles-in-policing). How municipal and national policing divide is [municipal and national police](/law-enforcement/municipal-and-national-police). Whether a specialisation is entered or reached is [when a specialisation is a later assignment](/law-enforcement/when-a-specialisation-is-a-later-assignment).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [specialist roles in policing](/law-enforcement/specialist-roles-in-policing), [when a specialisation is a later assignment](/law-enforcement/when-a-specialisation-is-a-later-assignment), and [municipal and national police](/law-enforcement/municipal-and-national-police).',
+      },
+    ],
+  },
+  {
+    slug: 'maritime-and-marine-policing',
+    title: 'Maritime and marine policing',
+    shortTitle: 'Maritime policing',
+    question: 'What does a police maritime unit actually do?',
+    summary:
+      'Less exclusively law enforcement than the name suggests. One service publishes a list that runs from crime to safety to aquatic events to body recovery, and much of it is carried out jointly with seven other government agencies.',
+    entityType: 'concept',
+    section: 'law-enforcement',
+    jurisdiction: ['NZ'],
+    temporalScope: 'current',
+    related: [
+      'how-specialist-units-cover-a-country',
+      'police-search-and-rescue',
+      'what-a-police-unit-is',
+      'police-command-and-coordination',
+    ],
+    sources: ['nz-police-maritime-units', 'nz-police-teams-units'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-07',
+    publishedOn: '2026-09-07',
+    reviewedOn: '2026-09-07',
+    factsVerifiedOn: '2026-09-07',
+    readingTimeMinutes: 6,
+    uncertainty: [
+      'One service was researched — New Zealand Police. How marine policing is arranged anywhere else was NOT RESEARCHED.',
+      'How the units operate, patrol or respond was NOT RESEARCHED and is not described. The source contains operational material and none of it is used.',
+      'Precise berth locations and unit staffing composition are published by the service and are deliberately NOT reproduced here.',
+      'How the joint patrols are commanded, and who leads them, were NOT ESTABLISHED.',
+      'Whether two units are sufficient for the coastline concerned is not a question this platform has researched or answers.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'A maritime unit is the police answer to an environment that ordinary patrol cannot reach. What makes it interesting institutionally is not the boats: it is that the work turns out to be shared with a long list of other agencies, and that a large part of it is not enforcement at all.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This describes the published purpose of two units in one service. It describes no operation, no patrol pattern, no vessel capability and no location beyond the two cities the service names.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'Water removes most of what ordinary policing assumes: roads, addresses, the ability to walk up to something. A service that needs to reach an incident on the water needs a permanent capability with vessels and trained crews, and once it has one, that capability becomes the obvious instrument for a great many things that are only incidentally about crime.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Which is why the task list broadens once the capability exists',
+        text: 'A body that can operate on water gets asked to do everything on water. That is a general pattern in specialist capability, and this unit’s published list is an unusually clear example of it.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'The service publishes the categories of activity directly. They include "crime and disorder - attending, investigating and reporting offences, apprehending offenders"; "protecting boaties from water-based dangers, crime and reckless behaviour"; search and rescue; "public events - overseeing aquatic events and controlling spectator craft"; and "body recovery, medical emergencies and other activities".',
+        claim: 'fact',
+        sources: ['nz-police-maritime-units'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Only the first of those categories is straightforwardly law enforcement',
+        text: 'Safety, event oversight, medical emergencies and body recovery are not crime work. A unit named for policing spends a substantial part of its published purpose on things a reader would not predict from the name.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'Much of the work is not done by the police alone. The units conduct joint enforcement patrols with Customs, the Ministry for Primary Industries, Immigration, the Department of Conservation, Maritime New Zealand, the Ministry of Transport and regional councils.',
+        claim: 'fact',
+        sources: ['nz-police-maritime-units'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Seven agencies is a statement about the environment, not about the police',
+        text: 'Water is regulated by many bodies at once — fisheries, biosecurity, conservation, immigration, maritime safety. A police unit operating there necessarily works inside that crowd, which is the same coordination problem the corpus describes between police agencies, appearing between different arms of government.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The units also support other parts of the police: they assist officers on land, transport police by sea to remote locations, and support other specialist bodies including the National Dive Squad.',
+        claim: 'fact',
+        sources: ['nz-police-maritime-units', 'nz-police-teams-units'],
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'The unit is defined by an environment',
+            description:
+              'Like a transport force defined by an estate, a maritime unit is defined by where it can go rather than by a category of offence.',
+          },
+          {
+            term: 'Most of the published purpose is not crime work',
+            description:
+              'Safety, aquatic events, medical emergencies and body recovery sit alongside crime and disorder in the service’s own list.',
+          },
+          {
+            term: 'Enforcement is frequently joint',
+            description:
+              'Patrols are conducted with seven named agencies covering customs, primary industries, immigration, conservation, maritime safety, transport and regional government.',
+          },
+          {
+            term: 'It is also a transport capability for the rest of the service',
+            description:
+              'Moving officers by sea to places that cannot be reached otherwise is a published part of the function.',
+          },
+          {
+            term: 'And two units is the whole national capability here',
+            description:
+              'The corpus records elsewhere that this service maintains maritime units in two cities. Concentration is the arrangement, and it is not described as sufficient or insufficient.',
+          },
+        ],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'A police maritime unit exists to catch criminals on the water.',
+        reality:
+          'Crime and disorder is one category in the published list. Safety, aquatic events, medical emergencies, body recovery and search and rescue are others.',
+      },
+      {
+        claim: 'Marine policing is done by the police alone.',
+        reality:
+          'The service researched here conducts joint enforcement patrols with seven named agencies, covering customs, primary industries, immigration, conservation, maritime safety, transport and regional councils.',
+      },
+      {
+        claim: 'A maritime unit only works on the water.',
+        reality:
+          'The published functions include supporting police on land and transporting officers by sea to remote locations, which makes the unit a means of access as well as a presence.',
+      },
+      {
+        claim: 'Every coastal country polices its waters the same way.',
+        reality:
+          'One service was researched. Which body holds maritime enforcement, and how it divides with coastguards, navies or fisheries authorities, differs and was not researched.',
+      },
+      {
+        claim: 'This page describes where the units are based and what they operate.',
+        reality:
+          'It does not. The service publishes berth locations and staffing; neither is reproduced, and no vessel or capability is described.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'One service, as it publishes itself.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Crime and disorder — attending, investigating and reporting offences.',
+          'Protecting people from water-based dangers and reckless behaviour.',
+          'Search and rescue.',
+          'Overseeing aquatic events and controlling spectator craft.',
+          'Body recovery, medical emergencies and other activities.',
+          'Joint enforcement patrols with seven named government agencies.',
+          'Not researched: every other country, and everything about how any of it is done.',
+        ],
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'Joint patrols raise a question the published description does not answer: when several agencies with different powers operate together, whose authority is being exercised at any moment. The corpus treats that as a real problem between police agencies, and it does not become simpler when the other party is a fisheries or immigration authority. Publishing that the patrols are joint is what makes the question askable.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'How far a specialist capability reaches is [how specialist units cover a country](/law-enforcement/how-specialist-units-cover-a-country). The police role in searching for missing people is [police search and rescue](/law-enforcement/police-search-and-rescue). What happens when agencies work together is [police command and coordination](/law-enforcement/police-command-and-coordination).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [police search and rescue](/law-enforcement/police-search-and-rescue), [how specialist units cover a country](/law-enforcement/how-specialist-units-cover-a-country), and [what a police unit is](/law-enforcement/what-a-police-unit-is).',
+      },
+    ],
+  },
+  {
+    slug: 'police-search-and-rescue',
+    title: 'Police search and rescue',
+    shortTitle: 'Search and rescue',
+    question: 'If somebody is missing, are the police the ones out searching?',
+    summary:
+      'Often they are the ones coordinating rather than the ones searching. One service holds a defined category of search, hands another category to a different centre entirely, and runs the work through volunteer organisations.',
+    entityType: 'concept',
+    section: 'law-enforcement',
+    jurisdiction: ['NZ'],
+    temporalScope: 'current',
+    related: [
+      'maritime-and-marine-policing',
+      'police-command-and-coordination',
+      'specialist-roles-in-policing',
+      'what-a-police-unit-is',
+    ],
+    sources: ['nz-police-search-and-rescue', 'nz-police-teams-units'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-07',
+    publishedOn: '2026-09-07',
+    reviewedOn: '2026-09-07',
+    factsVerifiedOn: '2026-09-07',
+    readingTimeMinutes: 6,
+    uncertainty: [
+      'One service was researched — New Zealand Police. Which body holds search and rescue responsibility anywhere else was NOT RESEARCHED, and it differs substantially.',
+      'How a search is planned, conducted or resourced was NOT RESEARCHED and is not described.',
+      'How the category boundary is applied in a case that could fall either side was NOT ESTABLISHED.',
+      'The relationship between the police coordinators and the volunteer organisations — who directs whom, and on what authority — was NOT ESTABLISHED.',
+      'Nothing here is guidance for anyone reporting a missing person, or for anyone in difficulty. Emergencies are for local emergency services.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Search and rescue is one of the few things the public expects the police to do that the police may not primarily do themselves. In the service researched here the police role is defined as coordination of a named category of search, with a different organisation holding the rest and much of the effort supplied by volunteers.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This describes where an institutional responsibility sits. It is not guidance for anyone who is missing, looking for someone, or in difficulty — those are matters for local emergency services — and it describes no method of searching.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'A search is a problem of organisation before it is a problem of effort. Somebody has to decide where to look, in what order, with which resources, and when to stop, and that decision has to be made by a body with standing and a duty to make it. Supplying the people who then walk the ground is a different job, and it does not have to be done by the same organisation.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'Which is why coordination is the police contribution',
+        text: 'A permanent institution with legal standing and round-the-clock presence is well suited to holding the decision. It is poorly suited to keeping hundreds of trained searchers on hand for events that are rare in any one district. Splitting the two is the arrangement, not a shortfall in it.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'The service states the boundary of its own responsibility precisely: "Police coordinates Category One searches (land, inland waterways, subterranean and close-to-shore)."',
+        claim: 'fact',
+        sources: ['nz-police-search-and-rescue'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'The word is coordinates, and the categories are named',
+        text: 'Both halves matter. The responsibility is coordination rather than execution, and it attaches to a defined category rather than to searching in general — which means there is a category it does not attach to.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'That other category belongs elsewhere. Category Two searches — aircraft, offshore, and emergency locator beacons — are coordinated by the Rescue Coordination Centre New Zealand rather than by the police.',
+        claim: 'fact',
+        sources: ['nz-police-search-and-rescue'],
+      },
+      {
+        kind: 'paragraph',
+        text: 'The work runs through partner and volunteer organisations, including Coastguard New Zealand, the New Zealand Defence Force, rescue helicopter services, Amateur Radio Emergency Communications and New Zealand Land Search and Rescue. Officers in each district are trained as search and rescue coordinators, and the service manages nearly 2,000 land and marine incidents a year.',
+        claim: 'fact',
+        sources: ['nz-police-search-and-rescue'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'A coordinator in every district, and no searchers of its own',
+        text: 'The capability the service maintains is the trained coordinator, distributed everywhere. The searching capacity is held by organisations outside the police. That is an unusual shape: the specialist skill kept in-house is the organising, not the doing.',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'Coordination is the responsibility',
+            description:
+              'The published role is to coordinate a category of search. It is not stated as an obligation to supply the people who search.',
+          },
+          {
+            term: 'The responsibility is bounded by category',
+            description:
+              'Land, inland waterways, subterranean and close-to-shore fall to the police. Aircraft, offshore and beacon incidents do not.',
+          },
+          {
+            term: 'A different body holds the rest',
+            description:
+              'A dedicated rescue coordination centre coordinates the second category. Two organisations divide one public expectation between them.',
+          },
+          {
+            term: 'The searchers are largely volunteers',
+            description:
+              'Coastguard, land search and rescue, amateur radio emergency communications and others supply capacity the police do not hold themselves.',
+          },
+          {
+            term: 'And the coordinator role is distributed, not concentrated',
+            description:
+              'Officers in each district are trained for it, which is a different arrangement from a single national team.',
+          },
+        ],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'When somebody goes missing, the police do the searching.',
+        reality:
+          'In the service researched here the police coordinate a defined category of search, and much of the searching capacity is supplied by partner and volunteer organisations.',
+      },
+      {
+        claim: 'The police are responsible for all search and rescue.',
+        reality:
+          'Category One searches are coordinated by police. Category Two — aircraft, offshore and emergency locator beacons — are coordinated by a separate rescue coordination centre.',
+      },
+      {
+        claim: 'Search and rescue is handled by one national police unit.',
+        reality:
+          'Officers in each district are trained as search and rescue coordinators. The capability is distributed rather than held in a single team.',
+      },
+      {
+        claim: 'Volunteers assist the police as a supplement.',
+        reality:
+          'The published description places named partner and volunteer organisations at the centre of how the work is carried out, not at its margins.',
+      },
+      {
+        claim: 'This page tells you what to do if someone is missing.',
+        reality:
+          'It does not, and it is not written for that purpose. Anyone who needs help should contact their local emergency services.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'One service, as it publishes itself.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Police coordinate Category One — land, inland waterways, subterranean and close-to-shore.',
+          'A separate rescue coordination centre coordinates Category Two — aircraft, offshore and beacons.',
+          'Officers in every district are trained as search and rescue coordinators.',
+          'Named volunteer and partner organisations supply much of the capacity.',
+          'Nearly 2,000 land and marine incidents managed a year.',
+          'Not researched: every other country, and how any search is conducted.',
+        ],
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'A split responsibility is a public clarity problem as much as an organisational one: a family in the worst hours of their lives should not have to work out which of two coordinating bodies holds their case. Publishing the categories is what makes the division answerable, and it is also what allows anyone to ask whether the boundary sits in the right place.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'The maritime capability that supports this work is [maritime and marine policing](/law-enforcement/maritime-and-marine-policing). What happens when agencies must work together is [police command and coordination](/law-enforcement/police-command-and-coordination). What areas of specialist work exist is [specialist roles in policing](/law-enforcement/specialist-roles-in-policing).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [maritime and marine policing](/law-enforcement/maritime-and-marine-policing), [police command and coordination](/law-enforcement/police-command-and-coordination), and [what a police unit is](/law-enforcement/what-a-police-unit-is).',
+      },
+    ],
+  },
+  {
+    slug: 'when-a-specialisation-is-a-later-assignment',
+    title: 'When a specialisation is a later assignment',
+    shortTitle: 'Entry or later assignment',
+    question: 'Can you join the police straight into a specialist role?',
+    summary:
+      'For some roles, published answers say no — one service requires about five years of policing before a dog handler joins the section. For others the same system publishes both a dedicated entry degree and a description of the role as held by an experienced officer, and does not reconcile them.',
+    entityType: 'concept',
+    section: 'law-enforcement',
+    jurisdiction: ['NZ', 'NL'],
+    temporalScope: 'current',
+    related: [
+      'specialist-roles-in-policing',
+      'rank-role-and-specialisation',
+      'how-policing-careers-develop',
+      'police-dog-sections',
+    ],
+    sources: ['nz-police-dog-section', 'nl-politie-wijkagent'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-07',
+    publishedOn: '2026-09-07',
+    reviewedOn: '2026-09-07',
+    factsVerifiedOn: '2026-09-07',
+    readingTimeMinutes: 6,
+    uncertainty: [
+      'Two roles in two services were researched. Nothing here establishes how any other specialisation is entered, in these services or any other.',
+      'For the Dutch role the answer is NOT ESTABLISHED. The service describes the wijkagent as an experienced officer while the corpus separately records a three-year bachelor programme named for the role. Both are sourced, and this page does not reconcile them.',
+      'Selection, assessment and training for either role were NOT RESEARCHED.',
+      'How common either arrangement is, across policing generally, was NOT ESTABLISHED. Two published answers are not a distribution.',
+      'Nothing here is careers advice, and no route is recommended.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'The corpus already separates rank, role, specialisation and assignment, and already lists the areas of specialist work that recur in policing. What it left open is the question a reader actually asks: whether a specialisation is somewhere you start or somewhere you arrive. The answer is published for some roles and genuinely unclear for others.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This describes what two services publish about entry to two roles. It is not careers advice, it recommends no route, it names no course or provider, and it does not describe selection or training.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'A specialisation that can be entered directly and one that must be reached after years of other work are different propositions for anyone considering the career, and they imply different things about the work itself. A role reachable only after general service is one a system believes rests on judgement built elsewhere; a role with its own entry route is one a system believes can be taught from the start.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'And the answer is a fact about a service, not about the specialism',
+        text: 'The same kind of work can be an entry route in one system and a destination in another. Nothing about the nature of a specialism settles which, which is why the question has to be asked service by service.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'For one role the published answer is unambiguous. New Zealand Police state that "All police dog handlers are officers with about five years policing experience behind them before they join the Dog Unit."',
+        claim: 'fact',
+        sources: ['nz-police-dog-section'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'That is a destination, stated as a precondition',
+        text: 'Somebody joining that service cannot join its dog section. They join the police, do several years of other work, and the section becomes reachable from there. The requirement is published rather than inferred.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'For another role in another service the evidence points two ways at once. The Dutch police describe the neighbourhood officer with the sentence "De wijkagent is een ervaren politieagent" — an experienced police officer — while the corpus separately records that the Politieacademie runs a three-year hbo bachelor named Politiekunde Wijkagent.',
+        claim: 'fact',
+        sources: ['nl-politie-wijkagent'],
+      },
+      {
+        kind: 'callout',
+        variant: 'uncertainty',
+        title: 'Both are sourced, and this page does not resolve them',
+        text: 'A dedicated entry degree named for a role, and a description of that role as held by an experienced officer, can be reconciled in more than one way — the degree may lead to the role over time, or the role may be reached later regardless of the degree. Nothing read establishes which, so nothing is claimed.',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'A published precondition settles the question',
+            description:
+              'Where a service states the experience required before joining a body, the specialisation is a destination in that service and the matter is closed.',
+          },
+          {
+            term: 'An entry programme does not settle it by itself',
+            description:
+              'A degree named for a role establishes that the role has a dedicated preparation. It does not establish that completing it places a person in the role.',
+          },
+          {
+            term: 'The two can coexist without contradiction',
+            description:
+              'A route can prepare somebody for work they reach later. Reading a named entry programme as immediate entry is an assumption, not a finding.',
+          },
+          {
+            term: 'The answer belongs to the service, not the specialism',
+            description:
+              'Whether a kind of work is entered or reached is a design choice each service makes. It does not follow from what the work is.',
+          },
+          {
+            term: 'And two answers are not a pattern',
+            description:
+              'Two roles in two services were researched. How specialisations are entered across policing generally was not established and is not claimed here.',
+          },
+        ],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'You can apply directly to any police specialisation.',
+        reality:
+          'For one role researched here the service publishes a precondition of about five years of policing experience before joining the section.',
+      },
+      {
+        claim: 'A degree named for a police role means you enter that role on graduating.',
+        reality:
+          'It establishes that a dedicated preparation exists. Whether completing it places a person in the role was not established for the case researched here.',
+      },
+      {
+        claim: 'Specialist work is always reached later in a career.',
+        reality:
+          'That is the published answer for one role in one service. It is not established for policing generally, and systems differ in how they arrange entry.',
+      },
+      {
+        claim: 'A contradiction in the evidence means one source is wrong.',
+        reality:
+          'Both statements here are official and both may be true. Where the reconciliation is not established, this platform records the tension rather than choosing between them.',
+      },
+      {
+        claim: 'This page will tell you how to get into a specialist role.',
+        reality:
+          'It will not. It describes what two services publish about entry. It is not careers advice, and it names no course, provider or route to follow.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Two roles, two published positions.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'About five years of policing experience before joining the dog section — New Zealand.',
+          'The neighbourhood officer described as an experienced police officer — Netherlands.',
+          'A three-year bachelor programme named for that same role — Netherlands, recorded elsewhere in this corpus.',
+          'Not established: how those two Dutch facts fit together.',
+          'Not researched: every other specialisation, and every other service.',
+        ],
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'Whether a specialisation is entered or reached is an access question as well as a career one. A role reachable only after years of service is closed to anyone who cannot spend those years, and open only to people a service has already retained. Publishing the precondition is what allows that consequence to be seen; leaving it unpublished does not remove the barrier, it only removes the ability to discuss it.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'The distinction between rank, role, specialisation and assignment is [rank, role and specialisation](/law-enforcement/rank-role-and-specialisation). What areas of specialist work exist is [specialist roles in policing](/law-enforcement/specialist-roles-in-policing). How careers progress generally is [how policing careers develop](/law-enforcement/how-policing-careers-develop).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [specialist roles in policing](/law-enforcement/specialist-roles-in-policing), [rank, role and specialisation](/law-enforcement/rank-role-and-specialisation), and [police dog sections](/law-enforcement/police-dog-sections).',
       },
     ],
   },
