@@ -4509,8 +4509,7 @@ export const SOURCES: readonly SourceRecord[] = [
   {
     id: 'ie-constitution',
     type: 'legislation',
-    title:
-      'Bunreacht na hÉireann / Constitution of Ireland — Articles 15.5.2, 28.3, 38, 40.4',
+    title: 'Bunreacht na hÉireann / Constitution of Ireland — Articles 15.5.2, 28.3, 38, 40.4',
     publisher: 'Office of the Attorney General (electronic Irish Statute Book)',
     url: 'https://www.irishstatutebook.ie/eli/cons/en/html',
     publishedOn: '1937',

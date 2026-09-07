@@ -220,7 +220,8 @@ export const GLOSSARY: readonly GlossaryTerm[] = [
       'A body of lay people, separate from the professional judges, brought in to decide questions the law entrusts to it in a particular trial.',
     expandedNote:
       'Separate is the load-bearing word. A jury sits as its own body; lay judges sit on the bench beside the professionals. That structural difference, not the presence of non-lawyers, is what makes a jury a jury.',
-    question: 'What is a jury, and how is it different from other people who are not judges but help decide a case?',
+    question:
+      'What is a jury, and how is it different from other people who are not judges but help decide a case?',
     purpose:
       'Systems that use juries decided that some decisions should not rest with professionals alone, and that the lay voice should be structurally separate rather than folded into the bench. Ireland put the requirement in its constitution: no one may be tried on a criminal charge without a jury, save in the three situations the constitution itself carves out.',
     context:
@@ -240,7 +241,11 @@ export const GLOSSARY: readonly GlossaryTerm[] = [
     ],
     section: 'courts',
     related: ['court', 'fair-trial', 'judicial-independence'],
-    sources: ['ie-constitution', 'at-justiz-rechtsprechungsgrundsaetze', 'ew-juries-act-1974-s17'],
+    sources: [
+      'ie-constitution',
+      'at-justiz-rechtsprechungsgrundsaetze',
+      'ew-juries-act-1974-s17',
+    ],
     status: 'published',
     review: 'fact-checked',
     updatedOn: '2026-09-07',
@@ -275,7 +280,11 @@ export const GLOSSARY: readonly GlossaryTerm[] = [
     ],
     section: 'courts',
     related: ['court', 'judicial-independence', 'fair-trial'],
-    sources: ['at-justiz-rechtsprechungsgrundsaetze', 'at-oesterreich-laienrichter', 'de-gvg-schoeffengericht'],
+    sources: [
+      'at-justiz-rechtsprechungsgrundsaetze',
+      'at-oesterreich-laienrichter',
+      'de-gvg-schoeffengericht',
+    ],
     status: 'published',
     review: 'fact-checked',
     updatedOn: '2026-09-07',
