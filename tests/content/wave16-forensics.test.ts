@@ -148,7 +148,18 @@ function catches(patterns: RegExp[], planted: string): boolean {
 
 describe('the forensics section is populated and routed', () => {
   it('publishes exactly the eight Wave 16 guides', () => {
-    expect(FORENSICS_GUIDES.map((g) => g.slug).sort()).toEqual([...WAVE_16].sort());
+    /*
+     * This asserted set equality with the section until Wave 29 added two forensics guides. Set
+     * equality is a closed-world claim — that /forensics contains this wave and nothing else —
+     * which is false as soon as any later wave contributes, and which never tested the thing the
+     * name promises. What it is for is that all eight of THIS wave's guides are published in this
+     * section, so that is what it now asserts.
+     */
+    const inSection = new Set(FORENSICS_GUIDES.map((g) => g.slug));
+    for (const slug of WAVE_16) {
+      expect(inSection.has(slug), `${slug} is missing from /forensics`).toBe(true);
+    }
+    expect(FORENSICS_GUIDES.length).toBeGreaterThanOrEqual(WAVE_16.length);
   });
 
   it.each(WAVE_16)('%s is registered and routes under /forensics/', (slug) => {
@@ -166,10 +177,15 @@ describe('the forensics section is populated and routed', () => {
   });
 
   it('is not vacuous — the section held one guide before this wave', () => {
+    /*
+     * Same correction. The section held one guide before this wave, so the count could only be
+     * pinned exactly for as long as no later wave touched /forensics. The non-vacuity claim the
+     * name makes survives as a floor.
+     */
     const published = ALL_GUIDES.filter(
       (g) => g.status === 'published' && g.section === 'forensics',
     );
-    expect(published.length).toBe(WAVE_16.length + 1);
+    expect(published.length).toBeGreaterThanOrEqual(WAVE_16.length + 1);
   });
 });
 

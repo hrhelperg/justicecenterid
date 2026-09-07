@@ -222,9 +222,19 @@ describe('Wave 20 routes exist in the sections they belong to', () => {
   });
 
   it('turns /public-safety from a childless hub into a section', () => {
+    /*
+     * The two equalities here were closed-world and broke when Wave 29 added guides to this
+     * section. The claim the test name makes — that the hub acquired children — is a floor, not an
+     * exact count, and the guides of THIS wave being routed is what actually needs asserting.
+     */
     const routed = PUBLIC_ROUTE_PATHS.filter((p) => p.startsWith('/public-safety/'));
-    expect(routed.length).toBe(PUBLIC_SAFETY.length);
-    expect(PUBLIC_SAFETY_GUIDES.length).toBe(PUBLIC_SAFETY.length);
+    for (const slug of PUBLIC_SAFETY) {
+      expect(routed, `/public-safety/${slug} is not routed`).toContain(
+        `/public-safety/${slug}`,
+      );
+    }
+    expect(routed.length).toBeGreaterThanOrEqual(PUBLIC_SAFETY.length);
+    expect(PUBLIC_SAFETY_GUIDES.length).toBeGreaterThanOrEqual(PUBLIC_SAFETY.length);
     expect(PUBLIC_ROUTE_PATHS).toContain('/public-safety');
   });
 

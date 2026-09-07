@@ -481,7 +481,7 @@ export const PROFESSIONS: readonly Profession[] = [
       },
     ],
     uncertainty: [
-      'The two principal sources here are a United States review and a European network’s standards. Both are authoritative for the systems they address, and neither establishes how forensic science is organised or regulated outside them.',
+      'The two principal sources here are a United States review and a European network’s standards. Both are authoritative for the systems they address, and neither establishes how forensic science is organised or regulated outside them. How competence is established for an individual, and what accreditation covers, are described for one named system at /forensics/how-forensic-competence-is-established and /forensics/what-forensic-accreditation-requires; what a person needs to ENTER the field remains NOT ESTABLISHED for any country.',
     ],
     sources: ['nas-forensic-2009', 'enfsi'],
     status: 'published',
@@ -806,7 +806,7 @@ export const PROFESSIONS: readonly Profession[] = [
     relatedInstitutions: ['national-police', 'municipal-police'],
     relatedProfessions: ['patrol-officer'],
     uncertainty: [
-      'Only the Netherlands was researched for this role, and only the published description of the function. No country\u2019s entry requirements, selection process, training length or working conditions were researched.',
+      'trainingRouteShape below is structural and deliberately names no country, which is why this record states no entry requirement. Sourced entry conditions and training length for two named services are described at /public-safety/entering-emergency-call-handling, and how services divide the work between taking a call and dispatching at /public-safety/taking-the-call-and-sending-the-unit. Selection process and working conditions remain NOT RESEARCHED for any country.',
       'Whether and how services provide psychological support for exposure to distressing calls was NOT RESEARCHED, though the exposure itself is inherent to the role.',
       'Whether the role is held by civilian staff or by sworn officers was NOT ESTABLISHED for the Netherlands: the official page describing the work does not state the employment classification, and it is not assumed here.',
     ],

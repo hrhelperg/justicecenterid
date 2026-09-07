@@ -186,7 +186,7 @@ export const PUBLIC_SAFETY_GUIDES: Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [what civil protection is](/public-safety/what-civil-protection-is), [who is in charge in an emergency](/public-safety/who-is-in-charge-in-an-emergency), and [police and law enforcement are not the same thing](/law-enforcement/police-and-law-enforcement-difference).',
+        text: 'Related: [what civil protection is](/public-safety/what-civil-protection-is), [entering emergency call handling](/public-safety/entering-emergency-call-handling), [who is in charge in an emergency](/public-safety/who-is-in-charge-in-an-emergency), and [police and law enforcement are not the same thing](/law-enforcement/police-and-law-enforcement-difference).',
       },
     ],
   },
@@ -610,7 +610,7 @@ export const PUBLIC_SAFETY_GUIDES: Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [national and local emergency authority](/public-safety/national-and-local-emergency-authority), [military assistance to civil authorities](/public-safety/military-assistance-to-civil-authorities), and [police command and coordination](/law-enforcement/police-command-and-coordination).',
+        text: 'Related: [national and local emergency authority](/public-safety/national-and-local-emergency-authority), [taking the call and sending the unit](/public-safety/taking-the-call-and-sending-the-unit), [military assistance to civil authorities](/public-safety/military-assistance-to-civil-authorities), and [police command and coordination](/law-enforcement/police-command-and-coordination).',
       },
     ],
   },
@@ -1827,6 +1827,383 @@ export const PUBLIC_SAFETY_GUIDES: Guide[] = [
       {
         kind: 'paragraph',
         text: 'Related: [who can declare a state of emergency](/public-safety/who-can-declare-a-state-of-emergency), [reviewing an emergency declaration](/justice/reviewing-an-emergency-declaration), and [legal certainty](/justice/legal-certainty).',
+      },
+    ],
+  },
+  /*
+   * WAVE 29 â completing the professions arc.
+   *
+   * The emergency-dispatcher profession record states its own gap in terms: "no country's entry
+   * requirements, selection process, training length or working conditions were researched". These
+   * two pages answer the first and third of those for two named services, and leave the rest
+   * recorded as unanswered.
+   *
+   * SECTION LIMIT, which binds hard here. /public-safety declares out of scope "emergency
+   * instructions of any kind" and "operational procedures of any public-safety body". These pages
+   * describe who is employed to do the work and how two services divide it. They do not describe
+   * how to call, what to say, what happens to a call, or how any centre operates â and a reader in
+   * an emergency is not an audience these pages address.
+   */
+  {
+    slug: 'entering-emergency-call-handling',
+    title: 'Entering emergency call handling',
+    shortTitle: 'Entering call handling',
+    question: 'What does a service ask for from someone who will answer emergency calls?',
+    summary:
+      'Less on paper than most people expect, and something unusual instead. One service names a mid-level education standard and trains the person itself; another states no academic requirement at all and puts six weeks of full-time training first.',
+    entityType: 'concept',
+    section: 'public-safety',
+    jurisdiction: ['NL', 'NZ'],
+    temporalScope: 'current',
+    related: [
+      'taking-the-call-and-sending-the-unit',
+      'what-public-safety-covers',
+      'who-is-in-charge-in-an-emergency',
+      'entering-prison-work-as-a-career',
+    ],
+    sources: ['nl-politie-meldkamer', 'nz-police-comms-roles'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-07',
+    publishedOn: '2026-09-07',
+    reviewedOn: '2026-09-07',
+    factsVerifiedOn: '2026-09-07',
+    readingTimeMinutes: 6,
+    uncertainty: [
+      'Two services were researched â the Netherlands and New Zealand. What any other service requires was NOT RESEARCHED.',
+      'Selection stages, age conditions and vetting were NOT ESTABLISHED for either service. Both link to separate material that was not read, and no selection process is described here.',
+      'One service states NO academic requirement. That is reported as an absence in its published criteria and is NOT a finding that education is irrelevant, nor that nothing is applied at a later stage.',
+      'Whether either role is held by civilian staff or by sworn officers was NOT ESTABLISHED for the Netherlands, and is not assumed.',
+      'Pay, retention, staffing levels and psychological support were NOT RESEARCHED, though exposure to distressing calls is inherent to the work and is named by one service as a requirement rather than a risk.',
+      'This page describes entry conditions only. It is not a recruitment page and describes no application step.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Somebody answers when an emergency number is dialled, and that person makes decisions before anyone has seen the incident. What a service asks of them at the point of entry is published, and it turns out to describe the work more honestly than most job descriptions manage.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This describes published entry conditions for one role in two services. It is not a recruitment page, describes no application step, and this platform is not affiliated with any emergency service and accepts no applications. It describes nothing about how to contact emergency services â anyone who needs help should contact their local emergency number directly.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'The decision made on an emergency call is taken with incomplete information, under time pressure, from a caller who may be frightened, injured or unable to explain where they are. No qualification tests that. So a service recruiting for it has to select for something a certificate does not show, and its published criteria are where it says what.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'And a service that trains its own people can afford to ask for less on entry',
+        text: 'Where the training is internal and substantial, the entry standard does not have to carry the whole weight. That is a design choice rather than a low bar, and it shows up as a short list of requirements next to a long period of training.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'The Dutch national police state a level rather than a subject: "mbo 3 werk- en denkniveau". The training is explicitly the serviceâs own â "een interne opleiding tot centralist meldkamer (die je van ons krijgt)" â and among the qualities asked for is "stressbestendigheid en mentale weerbaarheid (vanwege de heftige situaties die je kunt meemaken)".',
+        claim: 'fact',
+        sources: ['nl-politie-meldkamer'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Naming the reason inside the requirement',
+        text: 'The parenthesis is doing real work. The service does not ask for resilience in the abstract; it says why, in the same sentence, by naming the situations the person will meet. That is a rare thing to publish and it makes the requirement checkable against the job.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'New Zealand Police distinguish a 105 non-emergency communicator from a 111 emergency communicator, and state that for the emergency role "The first six weeks of your employment will be fulltime training". The published requirements are "Outstanding communication skills, including excellent written and spoken English" and the capacity to manage shift work, on a roster that "covers 24 hours a day, 365 days including public holidays and weekends".',
+        claim: 'fact',
+        sources: ['nz-police-comms-roles'],
+      },
+      {
+        kind: 'callout',
+        variant: 'uncertainty',
+        title: 'And that page states no academic requirement at all',
+        text: 'Reported as an absence in the published criteria. It is not a finding that education is irrelevant to the work, and not a finding that nothing is applied later in a process this page did not research.',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'A level, not a subject',
+            description:
+              'Where an education standard is named, it is a general level of working and thinking rather than a named field of study. Nothing suggests the work is entered from a particular discipline.',
+          },
+          {
+            term: 'The training belongs to the service',
+            description:
+              'Both services train the person themselves after appointment. No external qualification has to be acquired beforehand, which is why what they ask for on entry can be short.',
+          },
+          {
+            term: 'Resilience is a stated requirement, not an aspiration',
+            description:
+              'One service lists mental resilience among what it asks for and names the reason. This is unusual: most published criteria describe what a person must be able to do rather than what they must be able to withstand.',
+          },
+          {
+            term: 'Shift work is published as a condition',
+            description:
+              'A roster covering every hour of every day is stated up front as something the candidate must be able to manage, alongside the skills requirements rather than beneath them.',
+          },
+          {
+            term: 'And the comparison with the other entry routes is the point',
+            description:
+              'A profession entered on a degree, central assessments and two years of supervised work, and a role entered on a short list of qualities and six weeks of training, both sit inside the same justice and public-safety system.',
+          },
+        ],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'Answering emergency calls is unskilled work that anyone can walk into.',
+        reality:
+          'One service puts six weeks of full-time training at the start of employment; the other provides an internal training programme and names mental resilience among its requirements. Short entry conditions are not the same as low demands.',
+      },
+      {
+        claim: 'A published absence of academic requirements means education does not matter.',
+        reality:
+          'It means the criteria state none. Whether education is considered elsewhere in a process, or matters to progression, was not researched, and no conclusion about its value is drawn here.',
+      },
+      {
+        claim: 'Emergency call handling is one job everywhere.',
+        reality:
+          'One service researched here distinguishes an emergency communicator from a non-emergency communicator as separate roles. How the work is divided is a decision each service makes.',
+      },
+      {
+        claim: 'The people who answer emergency calls are always police officers.',
+        reality:
+          'Whether the role is held by civilian staff or by sworn officers was not established for one of the two services, and is not assumed. The other describes these as non-sworn careers.',
+      },
+      {
+        claim: 'This page describes what happens when you call an emergency number.',
+        reality:
+          'It does not, and that is deliberate. It describes published entry conditions for a role. Anyone who needs emergency help should contact their local emergency number directly.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Two services, as each publishes itself.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'A stated mid-level working and thinking standard, with internal training provided by the service â Netherlands.',
+          'Mental resilience named as a requirement, with the reason given in the same sentence â Netherlands.',
+          'No academic requirement stated, and six weeks of full-time training at the start â New Zealand.',
+          'Separate emergency and non-emergency communicator roles â New Zealand.',
+          'Shift work across every hour of every day, published as an entry condition â New Zealand.',
+          'Not researched: selection stages, age, vetting, pay, and every other service.',
+        ],
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'Who a service is willing to employ on an emergency line is a public question, because the decision taken on that call allocates a scarce response and can determine what happens to someone. Publishing the criteria makes the choice examinable. Naming resilience, and naming why, is a service being candid about a cost the role imposes on the person doing it â which is also the beginning of an argument about what support it owes them.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'How services divide the work between taking a call and sending a unit is [taking the call and sending the unit](/public-safety/taking-the-call-and-sending-the-unit). Who holds legal responsibility in an emergency is [who is in charge in an emergency](/public-safety/who-is-in-charge-in-an-emergency). The comparable entry question in custody is [entering prison work as a career](/corrections/entering-prison-work-as-a-career).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [taking the call and sending the unit](/public-safety/taking-the-call-and-sending-the-unit), [what public safety covers](/public-safety/what-public-safety-covers), and [entering prison work as a career](/corrections/entering-prison-work-as-a-career).',
+      },
+    ],
+  },
+  {
+    slug: 'taking-the-call-and-sending-the-unit',
+    title: 'Taking the call and sending the unit',
+    shortTitle: 'Call taking and dispatch',
+    question: 'Is the person who answers an emergency call the same person who sends help?',
+    summary:
+      'Sometimes, and the answer is an organisational choice rather than a detail. One service names both halves in a single sentence about one role; another separates them into two roles and describes the handover between them.',
+    entityType: 'concept',
+    section: 'public-safety',
+    jurisdiction: ['NL', 'NZ'],
+    temporalScope: 'current',
+    related: [
+      'entering-emergency-call-handling',
+      'who-is-in-charge-in-an-emergency',
+      'what-public-safety-covers',
+      'national-and-local-emergency-authority',
+    ],
+    sources: ['nz-police-communications-centres', 'nl-politie-meldkamer'],
+    status: 'published',
+    review: 'fact-checked',
+    safetyReview: 'cleared',
+    updatedOn: '2026-09-07',
+    publishedOn: '2026-09-07',
+    reviewedOn: '2026-09-07',
+    factsVerifiedOn: '2026-09-07',
+    readingTimeMinutes: 6,
+    uncertainty: [
+      'Two services were researched. How any other service divides this work was NOT RESEARCHED.',
+      'How staff move between the two roles where they are separate was NOT ESTABLISHED â the page describing the roles does not say.',
+      'Nothing here describes how a call is handled, what is asked, how an incident is classified or prioritised, or how any centre operates. That is operational detail and is outside this section.',
+      'How many centres either service runs is NOT stated here. One source names four locations while also giving a total that does not match them, so no count is published from it.',
+      'Response times, workload and outcomes were NOT RESEARCHED.',
+    ],
+    definition: [
+      {
+        kind: 'paragraph',
+        text: 'Two things have to happen when an emergency call arrives: somebody has to work out what is happening, and somebody has to get a unit moving towards it. Whether those are one job or two is a question every service answers, and the answers differ.',
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'What this page is and is not',
+        text: 'This describes how two services divide a function between roles. It describes no call-handling procedure, no classification or prioritisation rule, and nothing about how any centre operates. It is not guidance for anyone contacting emergency services.',
+      },
+    ],
+    whyItExists: [
+      {
+        kind: 'paragraph',
+        text: 'The two halves make different demands. Understanding a situation from a distressed caller is a conversation; committing units to it is an allocation across everything else happening at that moment. One is done with a person, the other against a map. A service can put both in one pair of hands or split them, and either choice creates something it then has to manage.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title:
+          'Splitting the roles creates a handover; combining them creates a divided attention',
+        text: 'Two roles mean information has to pass between people, and a handover is a place where something can be lost. One role means the same person is holding a conversation and making an allocation at once. Neither arrangement removes the difficulty; each relocates it.',
+      },
+    ],
+    howItWorks: [
+      {
+        kind: 'paragraph',
+        text: 'New Zealand Police describe two roles and the movement between them in one sentence: "Communicators find out whatâs happening and where, decide on the right police response and send information through to the police dispatchers who are responsible for getting police units on their way."',
+        claim: 'fact',
+        sources: ['nz-police-communications-centres'],
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Notice where the decision sits',
+        text: 'In that description the communicator decides the response, and the dispatcher is responsible for getting units moving. The judgement and the execution are separated, and they are separated at a specific point that can be named.',
+      },
+      {
+        kind: 'paragraph',
+        text: 'The Dutch national police describe the regional task as a single role holding both halves: "je neemt de spoedeisende meldingen (112) aan en stuurt de eenheden op straat aan" â taking the emergency reports and directing the units on the street, named together.',
+        claim: 'fact',
+        sources: ['nl-politie-meldkamer'],
+      },
+      {
+        kind: 'callout',
+        variant: 'analysis',
+        title: 'One sentence each, and they do not describe the same job',
+        text: 'Both services are describing the work accurately. Read side by side, the two sentences show that "the person who answers emergency calls" is not one occupation across services, and that assuming it is will produce a wrong picture of at least one of them.',
+      },
+      {
+        kind: 'definitionList',
+        items: [
+          {
+            term: 'Understanding and allocating are separable',
+            description:
+              'Working out what is happening and committing resources to it are different activities. A service can treat them as one job or two, and both arrangements exist.',
+          },
+          {
+            term: 'Where they are split, the decision may still sit early',
+            description:
+              'In one description the role that speaks to the caller decides the response, and the second role carries it out. Separation of the roles does not automatically mean separation of the judgement.',
+          },
+          {
+            term: 'Separate call streams are a further division',
+            description:
+              'One service distinguishes emergency from non-emergency communicators. That is a second axis of division, cutting across the call-taking and dispatch split rather than replacing it.',
+          },
+          {
+            term: 'The division is invisible from outside',
+            description:
+              'A caller experiences one conversation either way. Which arrangement they have reached is not something the call reveals, which is why it has to be read from what a service publishes.',
+          },
+          {
+            term: 'And this is a structural question, not a quality one',
+            description:
+              'Nothing researched here establishes that either arrangement performs better. They are different designs, and this page compares designs.',
+          },
+        ],
+      },
+    ],
+    misconceptions: [
+      {
+        claim: 'The person who answers the call is always the person who sends help.',
+        reality:
+          'One service researched here separates the roles: communicators establish what is happening and decide the response, and dispatchers are responsible for getting units on their way.',
+      },
+      {
+        claim:
+          'Splitting the roles means the caller speaks to someone who cannot decide anything.',
+        reality:
+          'In the published description, the role that speaks to the caller decides the police response. What passes to the second role is the job of getting units moving.',
+      },
+      {
+        claim: 'Emergency and non-emergency calls are handled by the same people.',
+        reality:
+          'One service distinguishes a 111 emergency communicator from a 105 non-emergency communicator as separate roles with separate descriptions.',
+      },
+      {
+        claim: 'One arrangement is obviously better than the other.',
+        reality:
+          'Nothing researched here establishes that. Separating the roles creates a handover; combining them divides attention. Both are real costs, and neither service was assessed.',
+      },
+      {
+        claim: 'This page explains what happens to a call after it is answered.',
+        reality:
+          'It does not. How calls are handled, classified or prioritised is operational detail this section places out of scope, and none of it is described here.',
+      },
+    ],
+    variation: [
+      {
+        kind: 'paragraph',
+        text: 'Two services, two divisions of the same function.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Communicator decides the response, dispatcher gets units moving â New Zealand, two roles.',
+          'Emergency and non-emergency communicators described separately â New Zealand.',
+          'Taking the 112 reports and directing units named as one task â Netherlands.',
+          'Not researched: how staff move between the roles, and every other service.',
+        ],
+      },
+      {
+        kind: 'callout',
+        variant: 'scope',
+        title: 'Scope',
+        text: 'Two national police services, from their own published pages. Nothing here describes ambulance or fire arrangements, which are organised separately in both countries and were not researched.',
+      },
+    ],
+    rightsAndAccountability: [
+      {
+        kind: 'paragraph',
+        text: 'When something goes wrong on an emergency call, the first question asked afterwards is usually who decided what. That question has a different shape depending on the arrangement: with one role it is about one personâs judgement under pressure, and with two it also includes what passed between them and what did not. Publishing the division is what allows a review, or a bereaved family, to ask the right version of the question.',
+        claim: 'analysis',
+      },
+      {
+        kind: 'callout',
+        variant: 'note',
+        title: 'Where this connects',
+        text: 'What a service asks of the people who do this work is [entering emergency call handling](/public-safety/entering-emergency-call-handling). Who holds legal responsibility once an emergency is under way is [who is in charge in an emergency](/public-safety/who-is-in-charge-in-an-emergency). How a unit is placed inside a police service is [what a police unit is](/law-enforcement/what-a-police-unit-is).',
+      },
+    ],
+    furtherReading: [
+      {
+        kind: 'paragraph',
+        text: 'Related: [entering emergency call handling](/public-safety/entering-emergency-call-handling), [who is in charge in an emergency](/public-safety/who-is-in-charge-in-an-emergency), and [what a police unit is](/law-enforcement/what-a-police-unit-is).',
       },
     ],
   },
