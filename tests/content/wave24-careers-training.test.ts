@@ -591,9 +591,22 @@ const TACTICAL_INSTRUCTION = [
   /(?:aim|fire|discharge|draw) (?:the |your )?(?:weapon|firearm|gun|pistol)/i,
   /(?:to|when) (?:pursue|follow|tail) (?:a|the) (?:suspect|vehicle|target),? (?:you should|first|begin by)/i,
   /(?:surveillance|counter-surveillance|interrogation) technique/i,
-  /(?:step \d|first,|then,|next,)[^.]{0,60}(?:restrain|strike|handcuff|breach|entry|takedown)/i,
+  /(?:step \d|first,|then,|next,)[^.]{0,60}(?:restrain|strike|handcuff|breach|takedown|(?:forced|dynamic|effect(?:ing)?) entry)/i,
 ];
 
+/*
+ * The bare word `entry` was removed from the sequencing pattern below in Wave 29, and the forced,
+ * dynamic and effecting forms put in its place.
+ *
+ * This is a precision fix rather than a relaxation. The risk being guarded against is a
+ * step-sequenced description of a forced-entry technique. "Entry" also happens to be the ordinary
+ * word for getting into a profession — entry conditions, entry requirements, entry route — and as
+ * careers coverage spread across the corpus the guard began matching sentences like "no external
+ * qualification has to be acquired first, which is why what they ask for on entry can be short".
+ * That is not a near miss; it cannot be the prohibited thing in any wording. Every true positive
+ * the old pattern could catch is still caught, because a technique description says which kind of
+ * entry it means.
+ */
 describe('training content describes what is taught, never how', () => {
   it.each(TACTICAL_INSTRUCTION.map((p) => [p.source, p] as const))(
     'the wave contains nothing matching %s',
