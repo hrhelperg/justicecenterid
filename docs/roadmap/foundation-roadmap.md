@@ -1890,3 +1890,66 @@ sits and how far it reaches, never what it can do. Details in
   0 P2, every finding independently reproduced.
 
 Delivered on `feat/police-units-vehicles-wave-27`. Not merged, not deployed.
+
+## Phase 42 — Knowledge Expansion Wave 28 (delivered 2026-09-07)
+
+How the justice professions are entered. Five guides on ten official sources, two systems — France
+and England and Wales — spread across `courts`, `prosecution`, `defence` and `corrections` rather
+than piled into one section. Details in `docs/research/knowledge-expansion-wave-28-qa.md` and
+`docs/research/justice-careers-model-findings.md`.
+
+**Scope note:** this wave arrived without a brief. The cluster was chosen against the programme's
+stated priorities and confirmed before implementation, on the reasoning that policing had received
+28 career, recruitment, equipment and unit guides across four waves while the other seven justice
+professions had reference records and no careers layer at all.
+
+- **It closes a gap the corpus had recorded against itself three times.** The `judge` record's
+  training route is structural and names no country; the `defence-lawyer` record said qualification
+  routes "were not researched for any country"; and `who-may-act-as-a-lawyer` says in its own scope
+  callout that it "does not describe qualification routes". The boundary that follows is now
+  enforced in both directions: records describe the shape without naming a country, guides describe
+  named systems, and a test fails if either crosses.
+- **Two models, answering different questions.** France recruits by competitive examination and
+  trains for 31 months as an _auditeur de justice_; England and Wales appoints from practice on five
+  to seven years of post-qualification experience through a three-stage selection that "can take
+  over a year". One asks whether a person can be trained to judge, the other whether they have
+  already shown it. The tell is age: France's mid-career route sets an upper limit, England and
+  Wales effectively sets a lower one.
+- **One sentence settles whether judges and prosecutors are one profession.** Article 1 of the
+  Ordonnance n° 58-1270: "Tout magistrat a vocation à être nommé, au cours de sa carrière, à des
+  fonctions du siège et du parquet." Entry is to the corps; bench and prosecution are a division of
+  function inside it. England and Wales has no shared entrance, and a Crown Prosecutor is an
+  employed lawyer. The structure does not settle independence — it relocates the question.
+- **You do not need a law degree to become a solicitor.** The regulator states the degree "can be in
+  any subject", with central assessments in its place. The finding is one careless paraphrase from
+  destruction, so the source note records the prohibition and a test enforces it.
+- **Every route ends with a supervised stage, and it is the one nobody removes.** Pupillage in two
+  halves "usually of six months" each, two years of qualifying work experience, 31 months as an
+  auditeur. The mechanism is responsibility rather than observation, and the stage is longest
+  exactly where the least came before it. It is also the bottleneck: an examination can be sat by
+  anyone who registers, a supervised place needs a supervisor.
+- **A published absence is a finding.** The prison service publishes no academic requirement at all
+  and assesses scenario judgement and values before any interview. Reported as an absence, never as
+  a claim that qualifications are irrelevant — a discipline a mutation proof tested directly.
+- **Two mutation proofs survived, and both for the same reason:** the guards asserted that correct
+  wording was PRESENT somewhere on the page. That cannot see a contradiction added elsewhere
+  (W28M2 merged the two French durations) or a hedge stripped from the one block where it was
+  load-bearing (W28M5 dropped the regulator's "usually"). Both now test the specific claim rather
+  than the page.
+- **A pattern worth naming: this corpus states its prohibitions in prose.** Five guards failed on
+  first run by matching the platform's own denial — scope callouts, uncertainty lists, and source
+  notes that render inside `<main>` and say what a citation must not become. Every
+  prohibition-shaped guard in this wave now tests sentence by sentence and ignores denials. The
+  same correction was needed in each of the two preceding waves; it is structural, not accidental.
+- **Two pre-existing tests failed, both legitimately.** Wave 17 asserted `/corrections` contains
+  exactly Wave 13 plus Wave 17 — a closed-world claim that never tested whether Wave 17 landed.
+  Wave 14 asserted the defence-lawyer record says qualification routes were not researched, which
+  this wave made false. Both updated to their still-true intent.
+- **The self-referential cluster, a fifth time** — graph clean at 0/0/0 while nothing pre-existing
+  linked in; five editorial backlinks added. **Citation is not referral did not recur.**
+- **Client JS +0 KB. CSS +0 bytes. No component changed.**
+- Validation: 8,658 tests / 84 files; 1,908 e2e passed; **531 routes**, 533 pages, 531 sitemap URLs;
+  route matrix 683/683; 0 orphans, 0 weakly linked, 0 dead ends; 379 sources. **10/10 mutation
+  proofs valid**, two caught only after the fixes they forced. Adversarial QA: 1 P2, 0 P1.
+
+Delivered on `feat/justice-careers-wave-28`. Not merged, not deployed.
