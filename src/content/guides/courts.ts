@@ -1563,7 +1563,7 @@ export const COURTS_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [judicial independence](/glossary/judicial-independence), [what a judge does](/professions/judge), and [why courts matter](/courts/why-courts-matter).',
+        text: 'Related: [judicial independence](/glossary/judicial-independence), [what a judge does](/professions/judge), [how you become a judge](/courts/how-you-become-a-judge), and [why courts matter](/courts/why-courts-matter).',
       },
     ],
   },

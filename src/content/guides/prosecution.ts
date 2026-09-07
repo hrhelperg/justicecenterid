@@ -1506,7 +1506,7 @@ export const PROSECUTION_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [courts in federal systems](/courts/federal-and-state-court-systems), [why prosecutorial independence matters](/prosecution/why-prosecutorial-independence-matters), and [Brazil](/countries/brazil).',
+        text: 'Related: [courts in federal systems](/courts/federal-and-state-court-systems), [why prosecutorial independence matters](/prosecution/why-prosecutorial-independence-matters), [judges and prosecutors: one career or two](/prosecution/judges-and-prosecutors-one-career-or-two), and [Brazil](/countries/brazil).',
       },
     ],
   },

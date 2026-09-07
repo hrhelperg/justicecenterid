@@ -750,7 +750,7 @@ export const DEFENCE_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [access to the case file](/defence/access-to-the-case-file), [lawyer–client confidentiality](/defence/lawyer-client-confidentiality), and [the right to counsel](/defence/right-to-counsel).',
+        text: 'Related: [access to the case file](/defence/access-to-the-case-file), [lawyer–client confidentiality](/defence/lawyer-client-confidentiality), [the supervised stage in legal qualification](/defence/the-supervised-stage-in-legal-qualification), and [the right to counsel](/defence/right-to-counsel).',
       },
     ],
   },
@@ -1252,7 +1252,7 @@ export const DEFENCE_GUIDES: readonly Guide[] = [
     readingTimeMinutes: 9,
     keyTerms: ['accountability', 'oversight'],
     uncertainty: [
-      'Three systems are described from primary statutory text. Qualification routes, examinations, training periods and the bodies that authorise in England and Wales were not researched and are not described.',
+      'Three systems are described from primary statutory text. This page describes who may act, not how a person becomes able to act — qualification routes are the subject of [what qualifying as a lawyer requires](/defence/what-qualifying-as-a-lawyer-requires), which covers England and Wales only. For the three systems described here, the bodies that authorise were not researched.',
       'This page describes who may act. It says nothing about how to find, choose, instruct or complain about a lawyer anywhere.',
     ],
     definition: [
@@ -1264,7 +1264,7 @@ export const DEFENCE_GUIDES: readonly Guide[] = [
         kind: 'callout',
         variant: 'scope',
         title: 'What this page is and is not',
-        text: 'This describes statutory arrangements governing who may act. It is not legal advice, it does not describe qualification routes, and it is not guidance on finding or instructing anyone.',
+        text: 'This describes statutory arrangements governing who may act. It is not legal advice and it is not guidance on finding or instructing anyone. How a person comes to be qualified in the first place is [what qualifying as a lawyer requires](/defence/what-qualifying-as-a-lawyer-requires).',
       },
       {
         kind: 'callout',
@@ -1412,7 +1412,7 @@ export const DEFENCE_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [representing yourself](/defence/representing-yourself), [what defence counsel does](/defence/what-defence-counsel-does), and [the defence lawyer](/professions/defence-lawyer).',
+        text: 'Related: [what qualifying as a lawyer requires](/defence/what-qualifying-as-a-lawyer-requires), [representing yourself](/defence/representing-yourself), [what defence counsel does](/defence/what-defence-counsel-does), and [the defence lawyer](/professions/defence-lawyer).',
       },
     ],
   },
@@ -2267,7 +2267,7 @@ export const DEFENCE_GUIDES: readonly Guide[] = [
         kind: 'callout',
         variant: 'scope',
         title: 'What this page is and is not',
-        text: 'This describes a structural feature of published qualification routes. It does not describe how to obtain a place on one, how many exist, or what any of them pays — and it names no chambers, firm, provider or scheme.',
+        text: 'This describes a structural feature of published qualification routes. It is not careers advice and recommends nothing. It does not describe how to obtain a place on one, how many exist, or what any of them pays — and it names no chambers, firm, provider or scheme. This platform is not affiliated with any regulator or training body and accepts no applications.',
       },
     ],
     whyItExists: [

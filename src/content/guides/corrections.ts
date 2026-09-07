@@ -1634,7 +1634,7 @@ export const CORRECTIONS_GUIDES: readonly Guide[] = [
     furtherReading: [
       {
         kind: 'paragraph',
-        text: 'Related: [how prison capacity is measured](/corrections/how-prison-capacity-is-measured), [the correctional service](/institutions/correctional-service), and [conviction, sentence and execution](/corrections/conviction-sentence-and-execution).',
+        text: 'Related: [how prison capacity is measured](/corrections/how-prison-capacity-is-measured), [entering prison work as a career](/corrections/entering-prison-work-as-a-career), [the correctional service](/institutions/correctional-service), and [conviction, sentence and execution](/corrections/conviction-sentence-and-execution).',
       },
     ],
   },
