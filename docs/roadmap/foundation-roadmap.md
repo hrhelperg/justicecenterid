@@ -2179,3 +2179,53 @@ sources with one reused, all in `/law-enforcement`. Details in
   proofs valid**, three caught only after the fixes they forced. Adversarial QA: 1 P1, 0 P0.
 
 Delivered on `feat/police-units-specialisations-wave-32`. Not merged, not deployed.
+
+## Phase 47 — Knowledge Expansion Wave 33 (delivered 2026-09-07)
+
+Police vehicles and mobility, taken as the legal framework governing how a police vehicle may be
+driven. Two guides on three new sources, in `/law-enforcement`. Details in
+`docs/research/knowledge-expansion-wave-33-qa.md` and
+`docs/research/wave-33-police-mobility-findings.md`.
+
+- **Two published against a target of 12–20, and the reason is source access.** Three official
+  hosts returned HTTP 403 (NPAS twice, HMICFRS once), one page 404'd, and the Dutch Brancherichtlijn
+  PDF proved font-encoded rather than text-extractable. Publishing that material would have meant
+  promoting search snippets to evidence. Air support and unmarked vehicles are deferred and the
+  limitations recorded.
+- **Architecture: no `/vehicles` family.** Two pages cannot justify one and the Wave 27 vehicle
+  pages already live in `/law-enforcement`. A test asserts no such family exists.
+- **The exemption is narrower and more conditional than assumed.** The Netherlands publishes a list
+  — red light, hard shoulder, tram and bus lanes, solid lines, prohibited parking — with three
+  conditions, the first being "de verkeersveiligheid mag niet in gevaar komen". The English section
+  read addresses speed alone, and only where observance "would be likely to hinder the use of the
+  vehicle for the purpose for which it is being used on that occasion". It attaches to the occasion,
+  not permanently to the vehicle.
+- **What is deliberately not concluded:** that speed is the only English exemption. One section was
+  read; absence of research is not a negative finding, and a guard fails if a later edit makes it
+  one.
+- **The signals are not the driver's decision.** They may be used "uitsluitend met toestemming van
+  de meldkamer" — only with the control room's permission — which ends when other services arrive,
+  does not authorise reckless driving, and sits in the same room Wave 29 described.
+- **The visual-asset audit found the model already existed and nothing enforced it.** `ImageRecord`
+  is fully specified and used by zero entities; `image-policy.md` is complete and says no content
+  images ship in this phase; there is no renderer and no derivative pipeline; and the privacy page
+  publicly promises the site loads no images from other companies. **No images were shipped.** What
+  was built is the missing half: an executable form of the policy, run against a table of records
+  that must each be rejected so it is tested with an empty corpus. Writing it found two defects in
+  itself, including a hotlink check that would have rejected a legitimate Wikimedia Commons page.
+- **The character invariant caught me repeating the Wave 30 mistake.** The same `unicode_escape`
+  step introduced 8 C1 control characters while adding sources; the guard promoted in Wave 31 failed
+  immediately, before the change was committed. Repaired by re-decoding rather than deleting.
+- **Three wave guards and two helper assumptions were wrong on first run**, all found by tests
+  failing: "only where" is a condition not an exclusivity claim; routing a question to its owner is
+  correct behaviour; an access limitation does not belong in an unrelated source note; rendered
+  misconceptions put the label and the claim on separate lines, so Wave 29's filter left the claim
+  behind; and a question is not an assertion.
+- **P2: quotation marks around an illustrative formulation** that paraphrased the statute on a page
+  quoting it verbatim elsewhere. Reworded.
+- **Client JS +0 KB. CSS +0 bytes. No component changed. No images.**
+- Validation: 9,158 tests / 91 files; 2,214 e2e passed; **549 routes**, 551 pages, 549 sitemap URLs;
+  route matrix 701/701; 0 orphans, 0 weakly linked, 0 dead ends; 396 sources. **17/17 mutation
+  proofs valid, no survivors.** Adversarial QA: 1 P2, 0 P0, 0 P1.
+
+Delivered on `feat/police-vehicles-mobility-wave-33`. Not merged, not deployed.

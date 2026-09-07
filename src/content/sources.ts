@@ -5461,6 +5461,64 @@ export const SOURCES: readonly SourceRecord[] = [
     jurisdiction: 'NZ',
     note: 'SCOPE: the search and rescue responsibility of New Zealand Police. Supports the division that is the point of the citation: "Police coordinates Category One searches (land, inland waterways, subterranean and close-to-shore)", while Category Two searches — aircraft, offshore, and emergency locator beacons — are coordinated by the Rescue Coordination Centre New Zealand and NOT by Police. Supports that Police manages nearly 2,000 land and marine search and rescue incidents each year; that officers in each district are trained as search and rescue coordinators; and that the work runs through partner and volunteer organisations including Coastguard New Zealand, the New Zealand Defence Force, rescue helicopter services, Amateur Radio Emergency Communications and New Zealand Land Search and Rescue. The record is cited for COORDINATION as an institutional role. It establishes nothing about how any search is conducted.',
   },
+  /*
+   * WAVE 33 — police mobility: the legal framework governing how a police vehicle may be driven.
+   *
+   * Wave 27 published the vehicle CATEGORIES one service runs and why its markings are protected,
+   * and recorded in its own uncertainty that it deliberately did not use the source material on
+   * pursuit and interception. That boundary still holds. What these sources add is the other half
+   * of the subject and the safe half: not what a police vehicle can do, but what the law permits
+   * its driver to do and who has to authorise it.
+   *
+   * ACCESS LIMITATIONS, recorded because they bound this wave and are not evidence about the
+   * institutions concerned: npas.police.uk returned HTTP 403 on two paths and
+   * hmicfrs.justiceinspectorates.gov.uk returned HTTP 403, so police air support is NOT described;
+   * a rijksoverheid.nl page on signal permissions returned HTTP 404; and the Brancherichtlijn
+   * Politie 2023 PDF could not be text-extracted, its content being font-encoded rather than
+   * readable, so unmarked vehicles remain NOT RESEARCHED exactly as Wave 27 left them.
+   */
+  {
+    id: 'nl-politie-vrijstelling-verkeersregels',
+    type: 'government',
+    title: 'Politie heeft vrijstelling van verkeersregels',
+    publisher: 'Nationale Politie (Netherlands)',
+    url: 'https://www.politie.nl/informatie/politie-heeft-vrijstelling-van-verkeersregels.html',
+    accessedOn: '2026-09-07',
+    verifiedOn: '2026-09-07',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'NL',
+    translationStatus: 'not-a-translation',
+    authoritativeLanguage: 'nl',
+    note: 'SCOPE: the Dutch national police, on its own account of the exemption it holds from general traffic rules. Supports the BREADTH of the exemption as the page lists it — proceeding through a red light ("doorrijden bij een rood verkeerslicht"), driving on the hard shoulder ("rijden over de vluchtstrook"), driving where others may not such as tram and bus lanes and pavements, overtaking across a solid line ("inhalen over een doorgetrokken streep"), and stopping or parking where prohibited to others. Supports the three conditions the page attaches: "de verkeersveiligheid mag niet in gevaar komen"; "het gebruik van de vrijstelling is gezien de situatie noodzakelijk"; and compliance with the Brancherichtlijn Verkeer. DOES NOT SUPPORT any statement about optical or audible signals, which this page does not address, and DOES NOT SUPPORT any speed figure, driving technique or pursuit material, none of which is drawn from it.',
+  },
+  {
+    id: 'nl-politie-zwaailicht-sirene',
+    type: 'government',
+    title: 'Mag de politie te hard rijden met zwaailichten en sirene?',
+    publisher: 'Nationale Politie (Netherlands)',
+    url: 'https://www.politie.nl/informatie/mag-de-politie-te-hard-rijden-met-zwaailichten-en-sirene.html',
+    accessedOn: '2026-09-07',
+    verifiedOn: '2026-09-07',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'NL',
+    translationStatus: 'not-a-translation',
+    authoritativeLanguage: 'nl',
+    note: 'SCOPE: the Dutch national police, on the use of optical and audible signals. Supports the authorisation rule that is the point of the citation: "De politie mag uitsluitend met toestemming van de meldkamer gebruikmaken van optische en geluidssignalen" — signals may be used ONLY with the control room’s permission. Supports that the permission is bounded, ending when other emergency services have already arrived; that in some situations officers respond urgently WITHOUT signals; and the limit the page places on the whole arrangement: "Dit betekent niet dat politieagenten roekeloos mogen rijden, of dat ze het overige verkeer in gevaar mogen brengen." Supports that a member of the public may complain about police driving. NO speed figure and no driving technique is drawn from this record, and none appears on any page citing it.',
+  },
+  {
+    id: 'uk-rtra-1984-s87',
+    type: 'legislation',
+    title:
+      'Road Traffic Regulation Act 1984, section 87 — exemption of certain vehicles from speed limits',
+    publisher: 'The National Archives (legislation.gov.uk)',
+    url: 'https://www.legislation.gov.uk/ukpga/1984/27/section/87',
+    publishedOn: '1984',
+    accessedOn: '2026-09-07',
+    verifiedOn: '2026-09-07',
+    verificationMethod: 'content-confirmed',
+    jurisdiction: 'GB',
+    note: 'SCOPE: one section of one Act, in the official revised text. Supports the exemption verbatim: "No statutory provision imposing a speed limit on motor vehicles shall apply to any vehicle on an occasion when it is being used for fire and rescue authority, for ambulance purposes or police purposes, if the observance of that provision would be likely to hinder the use of the vehicle for the purpose for which it is being used on that occasion." Supports that the exemption is CONDITIONAL on that likelihood rather than automatic; that later subsections extend it to emergency responses at the request of an NHS ambulance service and to National Crime Agency vehicles; and that subsection (3) requires a driver, except when training, to have completed prescribed high-speed driving instruction for National Crime Agency purposes. IMPORTANT LIMIT: this section addresses SPEED LIMITS. It establishes nothing about red lights, keep-left signs, bus lanes or any other rule, and whether other provisions exempt those was NOT RESEARCHED. No page may present this section as the whole of the exemption available in that system.',
+  },
 ];
 
 const SOURCE_INDEX = new Map(SOURCES.map((source) => [source.id, source]));
